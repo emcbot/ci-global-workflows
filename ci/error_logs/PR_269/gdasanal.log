@@ -1,0 +1,1755 @@
+Begin anal.sh at Sat Apr 13 03:37:03 UTC 2024
++ anal.sh[7]: . /work2/noaa/stmp/CI/ORION/269/gfs/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+
+Currently Loaded Modules:
+  1) intel/2022.1.2                   40) grib-util/1.3.0
+  2) stack-intel/2022.0.2             41) g2tmpl/1.10.2
+  3) impi/2022.1.2                    42) gsi-ncdiag/1.1.2
+  4) stack-intel-oneapi-mpi/2021.5.1  43) crtm-fix/2.4.0.1_emc
+  5) gettext/0.19.8.1                 44) git-lfs/2.12.0
+  6) libxcrypt/4.4.35                 45) crtm/2.4.0.1
+  7) zlib/1.2.13                      46) openblas/0.3.24
+  8) sqlite/3.43.2                    47) py-setuptools/63.4.3
+  9) util-linux-uuid/2.38.1           48) py-numpy/1.23.4
+ 10) python/3.11.6                    49) bufr/11.7.0
+ 11) gempak/7.5.1                     50) gmake/3.82
+ 12) ncl/6.6.2                        51) wgrib2/2.0.8
+ 13) libjpeg/2.1.0                    52) py-cftime/1.0.3.4
+ 14) jasper/2.0.32                    53) py-netcdf4/1.5.8
+ 15) libpng/1.6.37                    54) libyaml/0.2.5
+ 16) openjpeg/2.3.1                   55) py-pyyaml/6.0
+ 17) eccodes/2.32.0                   56) py-markupsafe/2.1.3
+ 18) fftw/3.3.10                      57) py-jinja2/3.1.2
+ 19) nghttp2/1.57.0                   58) py-bottleneck/1.3.7
+ 20) curl/8.4.0                       59) py-numexpr/2.8.4
+ 21) proj/9.2.1                       60) py-et-xmlfile/1.0.1
+ 22) udunits/2.2.28                   61) py-openpyxl/3.1.2
+ 23) cdo/2.0.5                        62) py-pytz/2023.3
+ 24) snappy/1.1.10                    63) py-pyxlsb/1.0.10
+ 25) zstd/1.5.2                       64) py-xlrd/2.0.1
+ 26) c-blosc/1.21.5                   65) py-xlsxwriter/3.1.7
+ 27) pkg-config/0.27.1                66) py-xlwt/1.3.0
+ 28) hdf5/1.14.0                      67) py-pandas/1.5.3
+ 29) netcdf-c/4.9.2                   68) py-six/1.16.0
+ 30) netcdf-fortran/4.6.1             69) py-python-dateutil/2.8.2
+ 31) antlr/2.7.7                      70) g2c/1.6.4
+ 32) gsl/2.7.1                        71) netcdf-cxx4/4.3.1
+ 33) nco/5.0.6                        72) met/9.1.3
+ 34) bacio/2.4.1                      73) metplus/3.1.1
+ 35) w3emc/2.10.0                     74) py-packaging/23.1
+ 36) prod_util/2.1.1                  75) py-xarray/2023.7.0
+ 37) g2/3.4.5                         76) prepobs/1.0.1
+ 38) sp/2.5.0                         77) fit2obs/1.0.0
+ 39) ip/4.3.0                         78) module_base.orion
+
+ 
+
++ anal.sh[8]: status=0
++ anal.sh[9]: [[ 0 -ne 0 ]]
++ anal.sh[11]: export job=anal
++ anal.sh[11]: job=anal
++ anal.sh[12]: export jobid=anal.315227
++ anal.sh[12]: jobid=anal.315227
++ anal.sh[16]: /work2/noaa/stmp/CI/ORION/269/gfs/jobs/JGLOBAL_ATMOS_ANALYSIS
+Begin JGLOBAL_ATMOS_ANALYSIS at Sat Apr 13 03:37:08 UTC 2024
++ JGLOBAL_ATMOS_ANALYSIS[4]: source /work2/noaa/stmp/CI/ORION/269/gfs/ush/jjob_header.sh -e anal -c 'base anal'
+++ jjob_header.sh[44]: OPTIND=1
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[48]: env_job=anal
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[47]: read -ra configs
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[59]: shift 4
+++ jjob_header.sh[61]: [[ -z anal ]]
+++ jjob_header.sh[69]: export DATA=/work/noaa/stmp/mterry/RUNDIRS/C96_atm3DVar_294f060e/anal.315227
+++ jjob_header.sh[69]: DATA=/work/noaa/stmp/mterry/RUNDIRS/C96_atm3DVar_294f060e/anal.315227
+++ jjob_header.sh[70]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[71]: rm -rf /work/noaa/stmp/mterry/RUNDIRS/C96_atm3DVar_294f060e/anal.315227
+++ jjob_header.sh[73]: mkdir -p /work/noaa/stmp/mterry/RUNDIRS/C96_atm3DVar_294f060e/anal.315227
+++ jjob_header.sh[74]: cd /work/noaa/stmp/mterry/RUNDIRS/C96_atm3DVar_294f060e/anal.315227
+++ jjob_header.sh[80]: export cycle=t00z
+++ jjob_header.sh[80]: cycle=t00z
+++ jjob_header.sh[81]: setpdy.sh
+sed: can't read /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/date/t00z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[82]: source ./PDY
++++ PDY[1]: export PDYm7=20211214
++++ PDY[1]: PDYm7=20211214
++++ PDY[2]: export PDYm6=20211215
++++ PDY[2]: PDYm6=20211215
++++ PDY[3]: export PDYm5=20211216
++++ PDY[3]: PDYm5=20211216
++++ PDY[4]: export PDYm4=20211217
++++ PDY[4]: PDYm4=20211217
++++ PDY[5]: export PDYm3=20211218
++++ PDY[5]: PDYm3=20211218
++++ PDY[6]: export PDYm2=20211219
++++ PDY[6]: PDYm2=20211219
++++ PDY[7]: export PDYm1=20211220
++++ PDY[7]: PDYm1=20211220
++++ PDY[8]: export PDY=20211221
++++ PDY[8]: PDY=20211221
++++ PDY[9]: export PDYp1=20211222
++++ PDY[9]: PDYp1=20211222
++++ PDY[10]: export PDYp2=20211223
++++ PDY[10]: PDYp2=20211223
++++ PDY[11]: export PDYp3=20211224
++++ PDY[11]: PDYp3=20211224
++++ PDY[12]: export PDYp4=20211225
++++ PDY[12]: PDYp4=20211225
++++ PDY[13]: export PDYp5=20211226
++++ PDY[13]: PDYp5=20211226
++++ PDY[14]: export PDYp6=20211227
++++ PDY[14]: PDYp6=20211227
++++ PDY[15]: export PDYp7=20211228
++++ PDY[15]: PDYp7=20211228
+++ jjob_header.sh[88]: export pid=315621
+++ jjob_header.sh[88]: pid=315621
+++ jjob_header.sh[89]: export pgmout=OUTPUT.315621
+++ jjob_header.sh[89]: pgmout=OUTPUT.315621
+++ jjob_header.sh[90]: export pgmerr=errfile
+++ jjob_header.sh[90]: pgmerr=errfile
+++ jjob_header.sh[96]: export EXPDIR=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/EXPDIR/C96_atm3DVar_294f060e
+++ jjob_header.sh[96]: EXPDIR=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/EXPDIR/C96_atm3DVar_294f060e
+++ jjob_header.sh[97]: for config in '"${configs[@]:-'\'''\''}"'
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/ORION/269/RUNTESTS/EXPDIR/C96_atm3DVar_294f060e/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=ORION
++++ config.base[9]: machine=ORION
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=nems
++++ config.base[15]: ACCOUNT=nems
++++ config.base[16]: export QUEUE=batch
++++ config.base[16]: QUEUE=batch
++++ config.base[17]: export QUEUE_SERVICE=batch
++++ config.base[17]: QUEUE_SERVICE=batch
++++ config.base[18]: export PARTITION_BATCH=orion
++++ config.base[18]: PARTITION_BATCH=orion
++++ config.base[19]: export PARTITION_SERVICE=service
++++ config.base[19]: PARTITION_SERVICE=service
++++ config.base[22]: export HPSS_PROJECT=emc-global
++++ config.base[22]: HPSS_PROJECT=emc-global
++++ config.base[25]: export HOMEgfs=/work2/noaa/stmp/CI/ORION/269/gfs
++++ config.base[25]: HOMEgfs=/work2/noaa/stmp/CI/ORION/269/gfs
++++ config.base[26]: export EXECgfs=/work2/noaa/stmp/CI/ORION/269/gfs/exec
++++ config.base[26]: EXECgfs=/work2/noaa/stmp/CI/ORION/269/gfs/exec
++++ config.base[27]: export FIXgfs=/work2/noaa/stmp/CI/ORION/269/gfs/fix
++++ config.base[27]: FIXgfs=/work2/noaa/stmp/CI/ORION/269/gfs/fix
++++ config.base[28]: export PARMgfs=/work2/noaa/stmp/CI/ORION/269/gfs/parm
++++ config.base[28]: PARMgfs=/work2/noaa/stmp/CI/ORION/269/gfs/parm
++++ config.base[29]: export SCRgfs=/work2/noaa/stmp/CI/ORION/269/gfs/scripts
++++ config.base[29]: SCRgfs=/work2/noaa/stmp/CI/ORION/269/gfs/scripts
++++ config.base[30]: export USHgfs=/work2/noaa/stmp/CI/ORION/269/gfs/ush
++++ config.base[30]: USHgfs=/work2/noaa/stmp/CI/ORION/269/gfs/ush
++++ config.base[32]: export FIXam=/work2/noaa/stmp/CI/ORION/269/gfs/fix/am
++++ config.base[32]: FIXam=/work2/noaa/stmp/CI/ORION/269/gfs/fix/am
++++ config.base[33]: export FIXaer=/work2/noaa/stmp/CI/ORION/269/gfs/fix/aer
++++ config.base[33]: FIXaer=/work2/noaa/stmp/CI/ORION/269/gfs/fix/aer
++++ config.base[34]: export FIXcpl=/work2/noaa/stmp/CI/ORION/269/gfs/fix/cpl
++++ config.base[34]: FIXcpl=/work2/noaa/stmp/CI/ORION/269/gfs/fix/cpl
++++ config.base[35]: export FIXlut=/work2/noaa/stmp/CI/ORION/269/gfs/fix/lut
++++ config.base[35]: FIXlut=/work2/noaa/stmp/CI/ORION/269/gfs/fix/lut
++++ config.base[36]: export FIXorog=/work2/noaa/stmp/CI/ORION/269/gfs/fix/orog
++++ config.base[36]: FIXorog=/work2/noaa/stmp/CI/ORION/269/gfs/fix/orog
++++ config.base[37]: export FIXcice=/work2/noaa/stmp/CI/ORION/269/gfs/fix/cice
++++ config.base[37]: FIXcice=/work2/noaa/stmp/CI/ORION/269/gfs/fix/cice
++++ config.base[38]: export FIXmom=/work2/noaa/stmp/CI/ORION/269/gfs/fix/mom6
++++ config.base[38]: FIXmom=/work2/noaa/stmp/CI/ORION/269/gfs/fix/mom6
++++ config.base[39]: export FIXreg2grb2=/work2/noaa/stmp/CI/ORION/269/gfs/fix/reg2grb2
++++ config.base[39]: FIXreg2grb2=/work2/noaa/stmp/CI/ORION/269/gfs/fix/reg2grb2
++++ config.base[40]: export FIXugwd=/work2/noaa/stmp/CI/ORION/269/gfs/fix/ugwd
++++ config.base[40]: FIXugwd=/work2/noaa/stmp/CI/ORION/269/gfs/fix/ugwd
++++ config.base[41]: export FIXgdas=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gdas
++++ config.base[41]: FIXgdas=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gdas
++++ config.base[46]: export PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[46]: PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[47]: export COMROOT=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT
++++ config.base[47]: COMROOT=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT
++++ config.base[48]: export COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[48]: COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[49]: export DMPDIR=/work/noaa/rstprod/dump
++++ config.base[49]: DMPDIR=/work/noaa/rstprod/dump
++++ config.base[50]: export BASE_CPLIC=/work/noaa/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[50]: BASE_CPLIC=/work/noaa/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[54]: export COMINecmwf=/work/noaa/global/glopara/data/external_gempak/ecmwf
++++ config.base[54]: COMINecmwf=/work/noaa/global/glopara/data/external_gempak/ecmwf
++++ config.base[55]: export COMINnam=/work/noaa/global/glopara/data/external_gempak/nam
++++ config.base[55]: COMINnam=/work/noaa/global/glopara/data/external_gempak/nam
++++ config.base[56]: export COMINukmet=/work/noaa/global/glopara/data/external_gempak/ukmet
++++ config.base[56]: COMINukmet=/work/noaa/global/glopara/data/external_gempak/ukmet
++++ config.base[59]: export HOMEDIR=/work/noaa/global/mterry
++++ config.base[59]: HOMEDIR=/work/noaa/global/mterry
++++ config.base[60]: export STMP=/work/noaa/stmp/mterry
++++ config.base[60]: STMP=/work/noaa/stmp/mterry
++++ config.base[61]: export PTMP=/work/noaa/stmp/mterry
++++ config.base[61]: PTMP=/work/noaa/stmp/mterry
++++ config.base[62]: export NOSCRUB=/work/noaa/global/mterry
++++ config.base[62]: NOSCRUB=/work/noaa/global/mterry
++++ config.base[65]: export BASE_GIT=/work/noaa/global/glopara/git
++++ config.base[65]: BASE_GIT=/work/noaa/global/glopara/git
++++ config.base[68]: export DO_GOES=NO
++++ config.base[68]: DO_GOES=NO
++++ config.base[69]: export DO_BUFRSND=NO
++++ config.base[69]: DO_BUFRSND=NO
++++ config.base[70]: export DO_GEMPAK=NO
++++ config.base[70]: DO_GEMPAK=NO
++++ config.base[71]: export DO_AWIPS=NO
++++ config.base[71]: DO_AWIPS=NO
++++ config.base[72]: export DO_NPOESS=NO
++++ config.base[72]: DO_NPOESS=NO
++++ config.base[73]: export DO_TRACKER=YES
++++ config.base[73]: DO_TRACKER=YES
++++ config.base[74]: export DO_GENESIS=YES
++++ config.base[74]: DO_GENESIS=YES
++++ config.base[75]: export DO_GENESIS_FSU=NO
++++ config.base[75]: DO_GENESIS_FSU=NO
++++ config.base[76]: export DO_VERFOZN=YES
++++ config.base[76]: DO_VERFOZN=YES
++++ config.base[77]: export DO_VERFRAD=YES
++++ config.base[77]: DO_VERFRAD=YES
++++ config.base[78]: export DO_VMINMON=YES
++++ config.base[78]: DO_VMINMON=YES
++++ config.base[79]: export DO_MOS=NO
++++ config.base[79]: DO_MOS=NO
++++ config.base[85]: export REALTIME=YES
++++ config.base[85]: REALTIME=YES
++++ config.base[88]: export MODE=cycled
++++ config.base[88]: MODE=cycled
++++ config.base[97]: export FIXgsi=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi
++++ config.base[97]: FIXgsi=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi
++++ config.base[98]: export HOMEpost=/work2/noaa/stmp/CI/ORION/269/gfs
++++ config.base[98]: HOMEpost=/work2/noaa/stmp/CI/ORION/269/gfs
++++ config.base[99]: export HOMEobsproc=/work/noaa/global/glopara/git/obsproc/v1.1.2
++++ config.base[99]: HOMEobsproc=/work/noaa/global/glopara/git/obsproc/v1.1.2
++++ config.base[102]: export 'NCP=/bin/cp -p'
++++ config.base[102]: NCP='/bin/cp -p'
++++ config.base[103]: export NMV=/bin/mv
++++ config.base[103]: NMV=/bin/mv
++++ config.base[104]: export 'NLN=/bin/ln -sf'
++++ config.base[104]: NLN='/bin/ln -sf'
++++ config.base[105]: export VERBOSE=YES
++++ config.base[105]: VERBOSE=YES
++++ config.base[106]: export KEEPDATA=NO
++++ config.base[106]: KEEPDATA=NO
++++ config.base[107]: export DEBUG_POSTSCRIPT=NO
++++ config.base[107]: DEBUG_POSTSCRIPT=NO
++++ config.base[108]: export CHGRP_RSTPROD=YES
++++ config.base[108]: CHGRP_RSTPROD=YES
++++ config.base[109]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[109]: CHGRP_CMD='chgrp rstprod'
++++ config.base[110]: export NCDUMP=/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-c-4.9.2-4g3gg4n/bin/ncdump
++++ config.base[110]: NCDUMP=/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-c-4.9.2-4g3gg4n/bin/ncdump
++++ config.base[111]: export NCLEN=/work2/noaa/stmp/CI/ORION/269/gfs/ush/getncdimlen
++++ config.base[111]: NCLEN=/work2/noaa/stmp/CI/ORION/269/gfs/ush/getncdimlen
++++ config.base[114]: export BASE_ENV=/work2/noaa/stmp/CI/ORION/269/gfs/env
++++ config.base[114]: BASE_ENV=/work2/noaa/stmp/CI/ORION/269/gfs/env
++++ config.base[115]: export BASE_JOB=/work2/noaa/stmp/CI/ORION/269/gfs/jobs/rocoto
++++ config.base[115]: BASE_JOB=/work2/noaa/stmp/CI/ORION/269/gfs/jobs/rocoto
++++ config.base[118]: export SDATE=2021122018
++++ config.base[118]: SDATE=2021122018
++++ config.base[119]: export EDATE=2021122106
++++ config.base[119]: EDATE=2021122106
++++ config.base[120]: export EXP_WARM_START=.false.
++++ config.base[120]: EXP_WARM_START=.false.
++++ config.base[121]: export assim_freq=6
++++ config.base[121]: assim_freq=6
++++ config.base[122]: export PSLOT=C96_atm3DVar_294f060e
++++ config.base[122]: PSLOT=C96_atm3DVar_294f060e
++++ config.base[123]: export EXPDIR=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/EXPDIR/C96_atm3DVar_294f060e
++++ config.base[123]: EXPDIR=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/EXPDIR/C96_atm3DVar_294f060e
++++ config.base[124]: export ROTDIR=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e
++++ config.base[124]: ROTDIR=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e
++++ config.base[125]: export ROTDIR_DUMP=YES
++++ config.base[125]: ROTDIR_DUMP=YES
++++ config.base[126]: export DUMP_SUFFIX=
++++ config.base[126]: DUMP_SUFFIX=
++++ config.base[127]: [[ 2021122100 -ge 2019092100 ]]
++++ config.base[127]: [[ 2021122100 -le 2019110700 ]]
++++ config.base[130]: export DATAROOT=/work/noaa/stmp/mterry/RUNDIRS/C96_atm3DVar_294f060e
++++ config.base[130]: DATAROOT=/work/noaa/stmp/mterry/RUNDIRS/C96_atm3DVar_294f060e
++++ config.base[131]: export RUNDIR=/work/noaa/stmp/mterry/RUNDIRS/C96_atm3DVar_294f060e
++++ config.base[131]: RUNDIR=/work/noaa/stmp/mterry/RUNDIRS/C96_atm3DVar_294f060e
++++ config.base[132]: export ARCDIR=/work/noaa/global/mterry/archive/C96_atm3DVar_294f060e
++++ config.base[132]: ARCDIR=/work/noaa/global/mterry/archive/C96_atm3DVar_294f060e
++++ config.base[133]: export ATARDIR=/work/noaa/global/mterry/archive_rotdir/C96_atm3DVar_294f060e
++++ config.base[133]: ATARDIR=/work/noaa/global/mterry/archive_rotdir/C96_atm3DVar_294f060e
++++ config.base[136]: export envir=prod
++++ config.base[136]: envir=prod
++++ config.base[137]: export NET=gfs
++++ config.base[137]: NET=gfs
++++ config.base[138]: export RUN=gdas
++++ config.base[138]: RUN=gdas
++++ config.base[144]: source /work2/noaa/stmp/CI/ORION/269/RUNTESTS/EXPDIR/C96_atm3DVar_294f060e/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/input'
+++++ config.com[53]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/restart'
+++++ config.com[54]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[55]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[56]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/history'
+++++ config.com[57]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/master'
+++++ config.com[58]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[59]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[60]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[63]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[65]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[66]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[67]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[68]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[71]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/restart'
+++++ config.com[72]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/prep'
+++++ config.com[73]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/history'
+++++ config.com[74]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[75]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[76]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[77]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[79]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/history'
+++++ config.com[80]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/restart'
+++++ config.com[81]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/input'
+++++ config.com[82]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[83]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[84]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[85]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[87]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/input'
+++++ config.com[88]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/history'
+++++ config.com[89]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/restart'
+++++ config.com[90]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[91]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[92]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[94]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/chem/history'
+++++ config.com[95]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[97]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/med/restart'
++++ config.base[147]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[147]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[148]: export LOGSCRIPT=
++++ config.base[148]: LOGSCRIPT=
++++ config.base[151]: export 'REDOUT=1>'
++++ config.base[151]: REDOUT='1>'
++++ config.base[152]: export 'REDERR=2>'
++++ config.base[152]: REDERR='2>'
++++ config.base[154]: export SENDECF=NO
++++ config.base[154]: SENDECF=NO
++++ config.base[155]: export SENDSDM=NO
++++ config.base[155]: SENDSDM=NO
++++ config.base[156]: export SENDDBN_NTC=NO
++++ config.base[156]: SENDDBN_NTC=NO
++++ config.base[157]: export SENDDBN=NO
++++ config.base[157]: SENDDBN=NO
++++ config.base[158]: export DBNROOT=/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/prod-util-2.1.1-hevcp3q/fakedbn
++++ config.base[158]: DBNROOT=/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/prod-util-2.1.1-hevcp3q/fakedbn
++++ config.base[161]: export APP=ATM
++++ config.base[161]: APP=ATM
++++ config.base[163]: shopt -s extglob
++++ config.base[165]: case "${RUN}" in
++++ config.base[175]: shopt -u extglob
++++ config.base[178]: export DO_ATM=YES
++++ config.base[178]: DO_ATM=YES
++++ config.base[179]: export DO_COUPLED=NO
++++ config.base[179]: DO_COUPLED=NO
++++ config.base[180]: export DO_WAVE=NO
++++ config.base[180]: DO_WAVE=NO
++++ config.base[181]: export DO_OCN=NO
++++ config.base[181]: DO_OCN=NO
++++ config.base[182]: export DO_ICE=NO
++++ config.base[182]: DO_ICE=NO
++++ config.base[183]: export DO_AERO=NO
++++ config.base[183]: DO_AERO=NO
++++ config.base[184]: export WAVE_CDUMP=
++++ config.base[184]: WAVE_CDUMP=
++++ config.base[185]: export DOBNDPNT_WAVE=NO
++++ config.base[185]: DOBNDPNT_WAVE=NO
++++ config.base[186]: export FRAC_GRID=.true.
++++ config.base[186]: FRAC_GRID=.true.
++++ config.base[189]: export OPS_RES=C768
++++ config.base[189]: OPS_RES=C768
++++ config.base[192]: export LEVS=128
++++ config.base[192]: LEVS=128
++++ config.base[193]: export CASE=C96
++++ config.base[193]: CASE=C96
++++ config.base[194]: export CASE_ENS=@CASEENS@
++++ config.base[194]: CASE_ENS=@CASEENS@
++++ config.base[195]: export OCNRES=500
++++ config.base[195]: OCNRES=500
++++ config.base[196]: export ICERES=500
++++ config.base[196]: ICERES=500
++++ config.base[199]: case "${CASE}" in
++++ config.base[204]: export waveGRD=uglo_100km
++++ config.base[204]: waveGRD=uglo_100km
++++ config.base[218]: case "${APP}" in
++++ config.base[255]: [[ gdas =~ gdas ]]
++++ config.base[256]: export FHCYC=1
++++ config.base[256]: FHCYC=1
++++ config.base[257]: export FTSFS=10
++++ config.base[257]: FTSFS=10
++++ config.base[263]: export FHMIN=0
++++ config.base[263]: FHMIN=0
++++ config.base[264]: export FHMAX=9
++++ config.base[264]: FHMAX=9
++++ config.base[265]: export FHOUT=3
++++ config.base[265]: FHOUT=3
++++ config.base[266]: export FHOUT_OCNICE=3
++++ config.base[266]: FHOUT_OCNICE=3
++++ config.base[269]: export EUPD_CYC=gdas
++++ config.base[269]: EUPD_CYC=gdas
++++ config.base[272]: export gfs_cyc=1
++++ config.base[272]: gfs_cyc=1
++++ config.base[275]: export FHMIN_GFS=0
++++ config.base[275]: FHMIN_GFS=0
++++ config.base[276]: export FHMAX_GFS=120
++++ config.base[276]: FHMAX_GFS=120
++++ config.base[277]: export FHOUT_GFS=3
++++ config.base[277]: FHOUT_GFS=3
++++ config.base[278]: export FHMAX_HF_GFS=0
++++ config.base[278]: FHMAX_HF_GFS=0
++++ config.base[279]: export FHOUT_HF_GFS=1
++++ config.base[279]: FHOUT_HF_GFS=1
++++ config.base[280]: export FHOUT_OCNICE_GFS=6
++++ config.base[280]: FHOUT_OCNICE_GFS=6
++++ config.base[281]: ((  gfs_cyc != 0  ))
++++ config.base[282]: export STEP_GFS=24
++++ config.base[282]: STEP_GFS=24
++++ config.base[287]: export ILPOST=1
++++ config.base[287]: ILPOST=1
++++ config.base[288]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[289]: export ILPOST=3
++++ config.base[289]: ILPOST=3
++++ config.base[293]: export restart_interval_gfs=12
++++ config.base[293]: restart_interval_gfs=12
++++ config.base[298]: export QUILTING=.true.
++++ config.base[298]: QUILTING=.true.
++++ config.base[299]: export OUTPUT_GRID=gaussian_grid
++++ config.base[299]: OUTPUT_GRID=gaussian_grid
++++ config.base[300]: export WRITE_DOPOST=.true.
++++ config.base[300]: WRITE_DOPOST=.true.
++++ config.base[301]: export WRITE_NSFLIP=.true.
++++ config.base[301]: WRITE_NSFLIP=.true.
++++ config.base[304]: export DOIAU=YES
++++ config.base[304]: DOIAU=YES
++++ config.base[305]: export IAUFHRS=3,6,9
++++ config.base[305]: IAUFHRS=3,6,9
++++ config.base[306]: export IAU_FHROT=3
++++ config.base[306]: IAU_FHROT=3
++++ config.base[307]: export IAU_DELTHRS=6
++++ config.base[307]: IAU_DELTHRS=6
++++ config.base[308]: export IAU_OFFSET=6
++++ config.base[308]: IAU_OFFSET=6
++++ config.base[309]: export DOIAU_ENKF=YES
++++ config.base[309]: DOIAU_ENKF=YES
++++ config.base[310]: export IAUFHRS_ENKF=3,6,9
++++ config.base[310]: IAUFHRS_ENKF=3,6,9
++++ config.base[311]: export IAU_DELTHRS_ENKF=6
++++ config.base[311]: IAU_DELTHRS_ENKF=6
++++ config.base[314]: export lobsdiag_forenkf=.true.
++++ config.base[314]: lobsdiag_forenkf=.true.
++++ config.base[322]: export imp_physics=8
++++ config.base[322]: imp_physics=8
++++ config.base[326]: export DO_JEDIATMVAR=NO
++++ config.base[326]: DO_JEDIATMVAR=NO
++++ config.base[327]: export DO_JEDIATMENS=NO
++++ config.base[327]: DO_JEDIATMENS=NO
++++ config.base[328]: export DO_JEDIOCNVAR=NO
++++ config.base[328]: DO_JEDIOCNVAR=NO
++++ config.base[329]: export DO_JEDISNOWDA=NO
++++ config.base[329]: DO_JEDISNOWDA=NO
++++ config.base[330]: export DO_MERGENSST=NO
++++ config.base[330]: DO_MERGENSST=NO
++++ config.base[333]: export DOHYBVAR=NO
++++ config.base[333]: DOHYBVAR=NO
++++ config.base[334]: export NMEM_ENS=0
++++ config.base[334]: NMEM_ENS=0
++++ config.base[335]: export SMOOTH_ENKF=NO
++++ config.base[335]: SMOOTH_ENKF=NO
++++ config.base[336]: export l4densvar=.true.
++++ config.base[336]: l4densvar=.true.
++++ config.base[337]: export lwrite4danl=.true.
++++ config.base[337]: lwrite4danl=.true.
++++ config.base[340]: export NMEM_ENS_GFS=30
++++ config.base[340]: NMEM_ENS_GFS=30
++++ config.base[341]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[341]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[342]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[342]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[345]: [[ NO = \Y\E\S ]]
++++ config.base[359]: [[ NO == \N\O ]]
++++ config.base[359]: [[ YES == \Y\E\S ]]
++++ config.base[360]: export IAUFHRS=6
++++ config.base[360]: IAUFHRS=6
++++ config.base[361]: export IAU_FHROT=3
++++ config.base[361]: IAU_FHROT=3
++++ config.base[362]: export IAU_FILTER_INCREMENTS=.true.
++++ config.base[362]: IAU_FILTER_INCREMENTS=.true.
++++ config.base[363]: export IAUFHRS_ENKF=6
++++ config.base[363]: IAUFHRS_ENKF=6
++++ config.base[367]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[367]: [[ 2021122018 = \2\0\2\1\1\2\2\1\0\0 ]]
++++ config.base[367]: [[ YES = \N\O ]]
++++ config.base[367]: [[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[373]: [[ YES = \N\O ]]
++++ config.base[375]: export GSI_SOILANAL=NO
++++ config.base[375]: GSI_SOILANAL=NO
++++ config.base[378]: export DONST=YES
++++ config.base[378]: DONST=YES
++++ config.base[379]: [[ YES = \Y\E\S ]]
++++ config.base[379]: export 'FNTSFA=        '
++++ config.base[379]: FNTSFA='        '
++++ config.base[382]: export nst_anl=.true.
++++ config.base[382]: nst_anl=.true.
++++ config.base[385]: export MAKE_NSSTBUFR=NO
++++ config.base[385]: MAKE_NSSTBUFR=NO
++++ config.base[388]: export MAKE_ACFTBUFR=NO
++++ config.base[388]: MAKE_ACFTBUFR=NO
++++ config.base[391]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[391]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[394]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[394]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[395]: export INCVARS_EFOLD=5
++++ config.base[395]: INCVARS_EFOLD=5
++++ config.base[400]: export netcdf_diag=.true.
++++ config.base[400]: netcdf_diag=.true.
++++ config.base[401]: export binary_diag=.false.
++++ config.base[401]: binary_diag=.false.
++++ config.base[404]: export DO_METP=NO
++++ config.base[404]: DO_METP=NO
++++ config.base[405]: export DO_FIT2OBS=YES
++++ config.base[405]: DO_FIT2OBS=YES
++++ config.base[406]: export DO_VRFY_OCEANDA=NO
++++ config.base[406]: DO_VRFY_OCEANDA=NO
++++ config.base[409]: export HPSSARCH=NO
++++ config.base[409]: HPSSARCH=NO
++++ config.base[410]: export LOCALARCH=NO
++++ config.base[410]: LOCALARCH=NO
++++ config.base[411]: [[ NO = \Y\E\S ]]
++++ config.base[415]: export ARCH_CYC=00
++++ config.base[415]: ARCH_CYC=00
++++ config.base[416]: export ARCH_WARMICFREQ=4
++++ config.base[416]: ARCH_WARMICFREQ=4
++++ config.base[417]: export ARCH_FCSTICFREQ=1
++++ config.base[417]: ARCH_FCSTICFREQ=1
++++ config.base[420]: export FITSARC=YES
++++ config.base[420]: FITSARC=YES
++++ config.base[421]: export FHMAX_FITS=132
++++ config.base[421]: FHMAX_FITS=132
++++ config.base[422]: [[ 132 -gt 120 ]]
++++ config.base[422]: export FHMAX_FITS=120
++++ config.base[422]: FHMAX_FITS=120
++++ config.base[425]: [[ NO = \Y\E\S ]]
++++ config.base[431]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[97]: for config in '"${configs[@]:-'\'''\''}"'
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/ORION/269/RUNTESTS/EXPDIR/C96_atm3DVar_294f060e/config.anal
++++ config.anal[6]: echo 'BEGIN: config.anal'
+BEGIN: config.anal
++++ config.anal[9]: . /work2/noaa/stmp/CI/ORION/269/RUNTESTS/EXPDIR/C96_atm3DVar_294f060e/config.resources anal
+++++ config.resources[7]: ((  1 != 1  ))
+++++ config.resources[31]: step=anal
+++++ config.resources[33]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[35]: case ${machine} in
+++++ config.resources[38]: npe_node_max=40
+++++ config.resources[71]: export npe_node_max
+++++ config.resources[73]: case ${step} in
+++++ config.resources[470]: export wtime_anal=00:50:00
+++++ config.resources[470]: wtime_anal=00:50:00
+++++ config.resources[471]: export wtime_anal_gfs=00:40:00
+++++ config.resources[471]: wtime_anal_gfs=00:40:00
+++++ config.resources[472]: export npe_anal=780
+++++ config.resources[472]: npe_anal=780
+++++ config.resources[473]: export nth_anal=5
+++++ config.resources[473]: nth_anal=5
+++++ config.resources[474]: export npe_anal_gfs=825
+++++ config.resources[474]: npe_anal_gfs=825
+++++ config.resources[475]: export nth_anal_gfs=5
+++++ config.resources[475]: nth_anal_gfs=5
+++++ config.resources[476]: [[ ORION == \W\C\O\S\S\2 ]]
+++++ config.resources[480]: case ${CASE} in
+++++ config.resources[500]: export npe_anal=84
+++++ config.resources[500]: npe_anal=84
+++++ config.resources[501]: export npe_anal_gfs=84
+++++ config.resources[501]: npe_anal_gfs=84
+++++ config.resources[502]: [[ ORION == \S\4 ]]
+++++ config.resources[520]: export npe_node_anal=8
+++++ config.resources[520]: npe_node_anal=8
+++++ config.resources[521]: export nth_cycle=5
+++++ config.resources[521]: nth_cycle=5
+++++ config.resources[522]: export npe_node_cycle=8
+++++ config.resources[522]: npe_node_cycle=8
+++++ config.resources[523]: export is_exclusive=True
+++++ config.resources[523]: is_exclusive=True
+++++ config.resources[1214]: echo 'END: config.resources'
+END: config.resources
++++ config.anal[11]: [[ YES = \Y\E\S ]]
++++ config.anal[12]: . /work2/noaa/stmp/CI/ORION/269/RUNTESTS/EXPDIR/C96_atm3DVar_294f060e/config.nsst
+++++ config.nsst[6]: echo 'BEGIN: config.nsst'
+BEGIN: config.nsst
+++++ config.nsst[11]: export NST_MODEL=2
+++++ config.nsst[11]: NST_MODEL=2
+++++ config.nsst[14]: [[ NO == \Y\E\S ]]
+++++ config.nsst[14]: [[ NO == \Y\E\S ]]
+++++ config.nsst[19]: export NST_SPINUP=0
+++++ config.nsst[19]: NST_SPINUP=0
+++++ config.nsst[20]: cdate=2021122100
+++++ config.nsst[21]: ((  cdate < 2017072000  ))
+++++ config.nsst[26]: export NST_RESV=0
+++++ config.nsst[26]: NST_RESV=0
+++++ config.nsst[29]: export ZSEA1=0
+++++ config.nsst[29]: ZSEA1=0
+++++ config.nsst[30]: export ZSEA2=0
+++++ config.nsst[30]: ZSEA2=0
+++++ config.nsst[32]: export NST_GSI=3
+++++ config.nsst[32]: NST_GSI=3
+++++ config.nsst[36]: export NSTINFO=0
+++++ config.nsst[36]: NSTINFO=0
+++++ config.nsst[37]: ((  NST_GSI > 0  ))
+++++ config.nsst[37]: export NSTINFO=4
+++++ config.nsst[37]: NSTINFO=4
+++++ config.nsst[39]: echo 'END: config.nsst'
+END: config.nsst
++++ config.anal[15]: [[ gdas = \g\f\s ]]
++++ config.anal[22]: export npe_gsi=84
++++ config.anal[22]: npe_gsi=84
++++ config.anal[24]: [[ gdas == \g\f\s ]]
++++ config.anal[30]: [[ 128 = \1\2\8 ]]
++++ config.anal[31]: export 'GRIDOPTS=nlayers(63)=1,nlayers(64)=1,'
++++ config.anal[31]: GRIDOPTS='nlayers(63)=1,nlayers(64)=1,'
++++ config.anal[32]: export SETUP=gpstop=55,nsig_ext=45,
++++ config.anal[32]: SETUP=gpstop=55,nsig_ext=45,
++++ config.anal[36]: export lobsdiag_forenkf=.false.
++++ config.anal[36]: lobsdiag_forenkf=.false.
++++ config.anal[40]: export GSNDBF=/dev/null
++++ config.anal[40]: GSNDBF=/dev/null
++++ config.anal[41]: export AMSREBF=/dev/null
++++ config.anal[41]: AMSREBF=/dev/null
++++ config.anal[42]: export SSMITBF=/dev/null
++++ config.anal[42]: SSMITBF=/dev/null
++++ config.anal[43]: export AMSR2BF=/dev/null
++++ config.anal[43]: AMSR2BF=/dev/null
++++ config.anal[48]: export CONVINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_convinfo.txt
++++ config.anal[48]: CONVINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_convinfo.txt
++++ config.anal[49]: export OZINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_ozinfo.txt
++++ config.anal[49]: OZINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_ozinfo.txt
++++ config.anal[50]: export SATINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_satinfo.txt
++++ config.anal[50]: SATINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_satinfo.txt
++++ config.anal[51]: export OBERROR=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/prepobs_errtable.global
++++ config.anal[51]: OBERROR=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/prepobs_errtable.global
++++ config.anal[53]: [[ NO = \Y\E\S ]]
++++ config.anal[62]: [[ emc == \e\m\c ]]
++++ config.anal[64]: [[ 2021122100 -ge 2019021900 ]]
++++ config.anal[64]: [[ 2021122100 -lt 2019110706 ]]
++++ config.anal[70]: [[ 2021122100 -ge 2019110706 ]]
++++ config.anal[70]: [[ 2021122100 -lt 2020040718 ]]
++++ config.anal[76]: [[ 2021122100 -ge 2020040718 ]]
++++ config.anal[76]: [[ 2021122100 -lt 2020052612 ]]
++++ config.anal[82]: [[ 2021122100 -ge 2020052612 ]]
++++ config.anal[82]: [[ 2021122100 -lt 2020082412 ]]
++++ config.anal[88]: [[ 2021122100 -ge 2020082412 ]]
++++ config.anal[88]: [[ 2021122100 -lt 2020091612 ]]
++++ config.anal[93]: [[ 2021122100 -ge 2020091612 ]]
++++ config.anal[93]: [[ 2021122100 -lt 2021031712 ]]
++++ config.anal[98]: [[ 2021122100 -ge 2021031712 ]]
++++ config.anal[98]: [[ 2021122100 -lt 2021091612 ]]
++++ config.anal[112]: [[ 2021122100 -ge 2020011600 ]]
++++ config.anal[112]: [[ 2021122100 -lt 2020011806 ]]
++++ config.anal[118]: [[ 2021122100 -ge 2019021900 ]]
++++ config.anal[118]: [[ 2021122100 -lt 2019110706 ]]
++++ config.anal[123]: [[ 2021122100 -ge 2019110706 ]]
++++ config.anal[123]: [[ 2021122100 -lt 2020022012 ]]
++++ config.anal[128]: [[ 2021122100 -ge 2020022012 ]]
++++ config.anal[128]: [[ 2021122100 -lt 2021052118 ]]
++++ config.anal[133]: [[ 2021122100 -ge 2021052118 ]]
++++ config.anal[133]: [[ 2021122100 -lt 2021092206 ]]
++++ config.anal[138]: [[ 2021122100 -ge 2021092206 ]]
++++ config.anal[138]: [[ 2021122100 -lt 2021102612 ]]
++++ config.anal[153]: echo 'END: config.anal'
+END: config.anal
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[110]: source /work2/noaa/stmp/CI/ORION/269/gfs/env/ORION.env anal
++++ ORION.env[3]: [[ 1 -ne 1 ]]
++++ ORION.env[15]: step=anal
++++ ORION.env[17]: export 'launcher=srun -l --export=ALL'
++++ ORION.env[17]: launcher='srun -l --export=ALL'
++++ ORION.env[18]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ ORION.env[18]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ ORION.env[21]: export MPI_BUFS_PER_PROC=2048
++++ ORION.env[21]: MPI_BUFS_PER_PROC=2048
++++ ORION.env[22]: export MPI_BUFS_PER_HOST=2048
++++ ORION.env[22]: MPI_BUFS_PER_HOST=2048
++++ ORION.env[23]: export MPI_GROUP_MAX=256
++++ ORION.env[23]: MPI_GROUP_MAX=256
++++ ORION.env[24]: export MPI_MEMMAP_OFF=1
++++ ORION.env[24]: MPI_MEMMAP_OFF=1
++++ ORION.env[25]: export MP_STDOUTMODE=ORDERED
++++ ORION.env[25]: MP_STDOUTMODE=ORDERED
++++ ORION.env[26]: export KMP_AFFINITY=scatter
++++ ORION.env[26]: KMP_AFFINITY=scatter
++++ ORION.env[27]: export OMP_STACKSIZE=2048000
++++ ORION.env[27]: OMP_STACKSIZE=2048000
++++ ORION.env[28]: export NTHSTACK=1024000000
++++ ORION.env[28]: NTHSTACK=1024000000
++++ ORION.env[31]: ulimit -s unlimited
++++ ORION.env[32]: ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 767215
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) 192512000
+open files                      (-n) 131072
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 4096
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
++++ ORION.env[34]: [[ anal = \p\r\e\p ]]
++++ ORION.env[34]: [[ anal = \p\r\e\p\b\u\f\r ]]
++++ ORION.env[43]: [[ anal = \p\r\e\p\s\n\o\w\o\b\s ]]
++++ ORION.env[47]: [[ anal = \w\a\v\e\i\n\i\t ]]
++++ ORION.env[47]: [[ anal = \w\a\v\e\p\r\e\p ]]
++++ ORION.env[47]: [[ anal = \w\a\v\e\p\o\s\t\s\b\s ]]
++++ ORION.env[48]: [[ anal = \w\a\v\e\p\o\s\t\b\n\d\p\n\t ]]
++++ ORION.env[48]: [[ anal = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ ORION.env[48]: [[ anal == \w\a\v\e\p\o\s\t\b\n\d\p\n\t\b\l\l ]]
++++ ORION.env[55]: [[ anal = \a\t\m\a\n\l\r\u\n ]]
++++ ORION.env[63]: [[ anal = \a\t\m\e\n\s\a\n\l\r\u\n ]]
++++ ORION.env[71]: [[ anal = \a\e\r\o\a\n\l\r\u\n ]]
++++ ORION.env[81]: [[ anal = \s\n\o\w\a\n\l ]]
++++ ORION.env[91]: [[ anal = \o\c\n\a\n\a\l\b\m\a\t ]]
++++ ORION.env[101]: [[ anal = \o\c\n\a\n\a\l\r\u\n ]]
++++ ORION.env[111]: [[ anal = \o\c\n\a\n\a\l\c\h\k\p\t ]]
++++ ORION.env[121]: [[ anal = \o\c\n\a\n\a\l\e\c\e\n ]]
++++ ORION.env[129]: [[ anal = \a\n\a\l ]]
++++ ORION.env[131]: export MKL_NUM_THREADS=4
++++ ORION.env[131]: MKL_NUM_THREADS=4
++++ ORION.env[132]: export MKL_CBWR=AUTO
++++ ORION.env[132]: MKL_CBWR=AUTO
++++ ORION.env[134]: export CFP_MP=YES
++++ ORION.env[134]: CFP_MP=YES
++++ ORION.env[135]: export USE_CFP=YES
++++ ORION.env[135]: USE_CFP=YES
++++ ORION.env[136]: export 'APRUNCFP=srun -l --export=ALL -n $ncmd --multi-prog --output=mpmd.%j.%t.out'
++++ ORION.env[136]: APRUNCFP='srun -l --export=ALL -n $ncmd --multi-prog --output=mpmd.%j.%t.out'
++++ ORION.env[138]: nth_max=5
++++ ORION.env[140]: export NTHREADS_GSI=5
++++ ORION.env[140]: NTHREADS_GSI=5
++++ ORION.env[141]: [[ 5 -gt 5 ]]
++++ ORION.env[142]: export 'APRUN_GSI=srun -l --export=ALL -n 84 --cpus-per-task=5'
++++ ORION.env[142]: APRUN_GSI='srun -l --export=ALL -n 84 --cpus-per-task=5'
++++ ORION.env[144]: export NTHREADS_CALCINC=1
++++ ORION.env[144]: NTHREADS_CALCINC=1
++++ ORION.env[145]: [[ 1 -gt 5 ]]
++++ ORION.env[146]: export 'APRUN_CALCINC=srun -l --export=ALL $ncmd --cpus-per-task=1'
++++ ORION.env[146]: APRUN_CALCINC='srun -l --export=ALL $ncmd --cpus-per-task=1'
++++ ORION.env[148]: export NTHREADS_CYCLE=5
++++ ORION.env[148]: NTHREADS_CYCLE=5
++++ ORION.env[149]: [[ 5 -gt 40 ]]
++++ ORION.env[150]: npe_cycle=6
++++ ORION.env[151]: export 'APRUN_CYCLE=srun -l --export=ALL -n 6 --cpus-per-task=5'
++++ ORION.env[151]: APRUN_CYCLE='srun -l --export=ALL -n 6 --cpus-per-task=5'
++++ ORION.env[153]: export NTHREADS_GAUSFCANL=1
++++ ORION.env[153]: NTHREADS_GAUSFCANL=1
++++ ORION.env[154]: npe_gausfcanl=1
++++ ORION.env[155]: export 'APRUN_GAUSFCANL=srun -l --export=ALL -n 1 --cpus-per-task=1'
++++ ORION.env[155]: APRUN_GAUSFCANL='srun -l --export=ALL -n 1 --cpus-per-task=1'
+++ jjob_header.sh[111]: status=0
+++ jjob_header.sh[112]: ((  status != 0  ))
++ JGLOBAL_ATMOS_ANALYSIS[10]: export CDATE=2021122100
++ JGLOBAL_ATMOS_ANALYSIS[10]: CDATE=2021122100
++ JGLOBAL_ATMOS_ANALYSIS[11]: export CDUMP=gdas
++ JGLOBAL_ATMOS_ANALYSIS[11]: CDUMP=gdas
++ JGLOBAL_ATMOS_ANALYSIS[12]: export COMPONENT=atmos
++ JGLOBAL_ATMOS_ANALYSIS[12]: COMPONENT=atmos
++ JGLOBAL_ATMOS_ANALYSIS[13]: export DO_CALC_ANALYSIS=YES
++ JGLOBAL_ATMOS_ANALYSIS[13]: DO_CALC_ANALYSIS=YES
++ JGLOBAL_ATMOS_ANALYSIS[14]: export MAKE_NSSTBUFR=NO
++ JGLOBAL_ATMOS_ANALYSIS[14]: MAKE_NSSTBUFR=NO
++ JGLOBAL_ATMOS_ANALYSIS[15]: export MAKE_ACFTBUFR=NO
++ JGLOBAL_ATMOS_ANALYSIS[15]: MAKE_ACFTBUFR=NO
+++ JGLOBAL_ATMOS_ANALYSIS[22]: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/prod-util-2.1.1-hevcp3q/bin/ndate -6 2021122100
++ JGLOBAL_ATMOS_ANALYSIS[22]: GDATE=2021122018
++ JGLOBAL_ATMOS_ANALYSIS[23]: export gPDY=20211220
++ JGLOBAL_ATMOS_ANALYSIS[23]: gPDY=20211220
++ JGLOBAL_ATMOS_ANALYSIS[24]: export gcyc=18
++ JGLOBAL_ATMOS_ANALYSIS[24]: gcyc=18
++ JGLOBAL_ATMOS_ANALYSIS[25]: export GDUMP=gdas
++ JGLOBAL_ATMOS_ANALYSIS[25]: GDUMP=gdas
++ JGLOBAL_ATMOS_ANALYSIS[26]: export GDUMP_ENS=enkfgdas
++ JGLOBAL_ATMOS_ANALYSIS[26]: GDUMP_ENS=enkfgdas
++ JGLOBAL_ATMOS_ANALYSIS[28]: export OPREFIX=gdas.t00z.
++ JGLOBAL_ATMOS_ANALYSIS[28]: OPREFIX=gdas.t00z.
++ JGLOBAL_ATMOS_ANALYSIS[29]: export GPREFIX=gdas.t18z.
++ JGLOBAL_ATMOS_ANALYSIS[29]: GPREFIX=gdas.t18z.
++ JGLOBAL_ATMOS_ANALYSIS[30]: export APREFIX=gdas.t00z.
++ JGLOBAL_ATMOS_ANALYSIS[30]: APREFIX=gdas.t00z.
++ JGLOBAL_ATMOS_ANALYSIS[31]: export GPREFIX_ENS=enkfgdas.t18z.
++ JGLOBAL_ATMOS_ANALYSIS[31]: GPREFIX_ENS=enkfgdas.t18z.
++ JGLOBAL_ATMOS_ANALYSIS[34]: YMD=20211221
++ JGLOBAL_ATMOS_ANALYSIS[34]: HH=00
++ JGLOBAL_ATMOS_ANALYSIS[34]: declare_from_tmpl -rx COM_OBS COM_ATMOS_ANALYSIS
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_OBS=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs
+declare_from_tmpl :: COM_ATMOS_ANALYSIS=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos
++ JGLOBAL_ATMOS_ANALYSIS[36]: RUN=gdas
++ JGLOBAL_ATMOS_ANALYSIS[36]: YMD=20211220
++ JGLOBAL_ATMOS_ANALYSIS[36]: HH=18
++ JGLOBAL_ATMOS_ANALYSIS[36]: declare_from_tmpl -rx COM_ATMOS_ANALYSIS_PREV:COM_ATMOS_ANALYSIS_TMPL COM_ATMOS_HISTORY_PREV:COM_ATMOS_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_ANALYSIS_PREV=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//analysis/atmos
+declare_from_tmpl :: COM_ATMOS_HISTORY_PREV=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history
++ JGLOBAL_ATMOS_ANALYSIS[40]: MEMDIR=ensstat
++ JGLOBAL_ATMOS_ANALYSIS[40]: RUN=enkfgdas
++ JGLOBAL_ATMOS_ANALYSIS[40]: YMD=20211220
++ JGLOBAL_ATMOS_ANALYSIS[40]: HH=18
++ JGLOBAL_ATMOS_ANALYSIS[40]: declare_from_tmpl -rx COM_ATMOS_HISTORY_ENS_PREV:COM_ATMOS_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_HISTORY_ENS_PREV=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/enkfgdas.20211220/18/ensstat/model_data/atmos/history
++ JGLOBAL_ATMOS_ANALYSIS[43]: mkdir -m 775 -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos
++ JGLOBAL_ATMOS_ANALYSIS[45]: export ATMGES=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc
++ JGLOBAL_ATMOS_ANALYSIS[45]: ATMGES=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc
++ JGLOBAL_ATMOS_ANALYSIS[46]: '[' '!' -f /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc ']'
+++ JGLOBAL_ATMOS_ANALYSIS[52]: /work2/noaa/stmp/CI/ORION/269/gfs/ush/getncdimlen /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc pfull
++ JGLOBAL_ATMOS_ANALYSIS[52]: export LEVS=127
++ JGLOBAL_ATMOS_ANALYSIS[52]: LEVS=127
++ JGLOBAL_ATMOS_ANALYSIS[53]: status=0
++ JGLOBAL_ATMOS_ANALYSIS[54]: [[ 0 -ne 0 ]]
++ JGLOBAL_ATMOS_ANALYSIS[57]: '[' NO = YES ']'
++ JGLOBAL_ATMOS_ANALYSIS[67]: export PREPQC=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.prepbufr
++ JGLOBAL_ATMOS_ANALYSIS[67]: PREPQC=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.prepbufr
++ JGLOBAL_ATMOS_ANALYSIS[68]: [[ ! -f /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.prepbufr ]]
++ JGLOBAL_ATMOS_ANALYSIS[71]: export TCVITL=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.syndata.tcvitals.tm00
++ JGLOBAL_ATMOS_ANALYSIS[71]: TCVITL=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.syndata.tcvitals.tm00
++ JGLOBAL_ATMOS_ANALYSIS[72]: [[ YES = \Y\E\S ]]
++ JGLOBAL_ATMOS_ANALYSIS[73]: [[ NO == \Y\E\S ]]
++ JGLOBAL_ATMOS_ANALYSIS[77]: export PREPQCPF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.prepbufr.acft_profiles
++ JGLOBAL_ATMOS_ANALYSIS[77]: PREPQCPF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.prepbufr.acft_profiles
++ JGLOBAL_ATMOS_ANALYSIS[80]: [[ gdas = \g\f\s ]]
++ JGLOBAL_ATMOS_ANALYSIS[89]: /work2/noaa/stmp/CI/ORION/269/gfs/scripts/exglobal_atmos_analysis.sh
+Begin exglobal_atmos_analysis.sh at Sat Apr 13 03:37:28 UTC 2024
+++ exglobal_atmos_analysis.sh[25]: pwd
++ exglobal_atmos_analysis.sh[25]: pwd=/work/noaa/stmp/mterry/RUNDIRS/C96_atm3DVar_294f060e/anal.315227
++ exglobal_atmos_analysis.sh[28]: CDATE=2021122100
++ exglobal_atmos_analysis.sh[29]: CDUMP=gdas
++ exglobal_atmos_analysis.sh[30]: GDUMP=gdas
+++ exglobal_atmos_analysis.sh[33]: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/prod-util-2.1.1-hevcp3q/bin/ndate -6 2021122100
++ exglobal_atmos_analysis.sh[33]: GDATE=2021122018
+++ exglobal_atmos_analysis.sh[34]: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/prod-util-2.1.1-hevcp3q/bin/ndate -3 2021122100
++ exglobal_atmos_analysis.sh[34]: BDATE=2021122021
+++ exglobal_atmos_analysis.sh[35]: cut -c1-8
+++ exglobal_atmos_analysis.sh[35]: echo 2021122100
++ exglobal_atmos_analysis.sh[35]: PDY=20211221
+++ exglobal_atmos_analysis.sh[36]: cut -c9-10
+++ exglobal_atmos_analysis.sh[36]: echo 2021122100
++ exglobal_atmos_analysis.sh[36]: cyc=00
+++ exglobal_atmos_analysis.sh[37]: cut -c1-8
+++ exglobal_atmos_analysis.sh[37]: echo 2021122021
++ exglobal_atmos_analysis.sh[37]: bPDY=20211220
+++ exglobal_atmos_analysis.sh[38]: cut -c9-10
+++ exglobal_atmos_analysis.sh[38]: echo 2021122021
++ exglobal_atmos_analysis.sh[38]: bcyc=21
++ exglobal_atmos_analysis.sh[41]: export 'NCP=/bin/cp -p'
++ exglobal_atmos_analysis.sh[41]: NCP='/bin/cp -p'
++ exglobal_atmos_analysis.sh[42]: export NMV=/bin/mv
++ exglobal_atmos_analysis.sh[42]: NMV=/bin/mv
++ exglobal_atmos_analysis.sh[43]: export 'NLN=/bin/ln -sf'
++ exglobal_atmos_analysis.sh[43]: NLN='/bin/ln -sf'
++ exglobal_atmos_analysis.sh[44]: export 'CHGRP_CMD=chgrp rstprod'
++ exglobal_atmos_analysis.sh[44]: CHGRP_CMD='chgrp rstprod'
++ exglobal_atmos_analysis.sh[45]: export NCLEN=/work2/noaa/stmp/CI/ORION/269/gfs/ush/getncdimlen
++ exglobal_atmos_analysis.sh[45]: NCLEN=/work2/noaa/stmp/CI/ORION/269/gfs/ush/getncdimlen
++ exglobal_atmos_analysis.sh[46]: COMPRESS=gzip
++ exglobal_atmos_analysis.sh[47]: UNCOMPRESS=gunzip
++ exglobal_atmos_analysis.sh[48]: APRUNCFP='srun -l --export=ALL -n $ncmd --multi-prog --output=mpmd.%j.%t.out'
++ exglobal_atmos_analysis.sh[49]: APRUN_GSI='srun -l --export=ALL -n 84 --cpus-per-task=5'
++ exglobal_atmos_analysis.sh[50]: NTHREADS_GSI=5
++ exglobal_atmos_analysis.sh[53]: export imp_physics=8
++ exglobal_atmos_analysis.sh[53]: imp_physics=8
++ exglobal_atmos_analysis.sh[54]: lupp=.true.
++ exglobal_atmos_analysis.sh[55]: cnvw_option=.false.
++ exglobal_atmos_analysis.sh[58]: cao_check=.true.
++ exglobal_atmos_analysis.sh[59]: ta2tb=.true.
++ exglobal_atmos_analysis.sh[62]: lobsdiag_forenkf=.false.
++ exglobal_atmos_analysis.sh[63]: netcdf_diag=.true.
++ exglobal_atmos_analysis.sh[64]: binary_diag=.false.
++ exglobal_atmos_analysis.sh[67]: DOIAU=YES
++ exglobal_atmos_analysis.sh[68]: export IAUFHRS=6
++ exglobal_atmos_analysis.sh[68]: IAUFHRS=6
++ exglobal_atmos_analysis.sh[71]: GSIEXEC=/work2/noaa/stmp/CI/ORION/269/gfs/exec/gsi.x
++ exglobal_atmos_analysis.sh[72]: export NTHREADS_CALCINC=1
++ exglobal_atmos_analysis.sh[72]: NTHREADS_CALCINC=1
++ exglobal_atmos_analysis.sh[73]: export 'APRUN_CALCINC=srun -l --export=ALL $ncmd --cpus-per-task=1'
++ exglobal_atmos_analysis.sh[73]: APRUN_CALCINC='srun -l --export=ALL $ncmd --cpus-per-task=1'
++ exglobal_atmos_analysis.sh[74]: export APRUN_CALCANL=
++ exglobal_atmos_analysis.sh[74]: APRUN_CALCANL=
++ exglobal_atmos_analysis.sh[75]: export APRUN_CHGRES=
++ exglobal_atmos_analysis.sh[75]: APRUN_CHGRES=
++ exglobal_atmos_analysis.sh[76]: export CALCINCEXEC=/work2/noaa/stmp/CI/ORION/269/gfs/exec/calc_increment_ens.x
++ exglobal_atmos_analysis.sh[76]: CALCINCEXEC=/work2/noaa/stmp/CI/ORION/269/gfs/exec/calc_increment_ens.x
++ exglobal_atmos_analysis.sh[77]: export CALCINCNCEXEC=/work2/noaa/stmp/CI/ORION/269/gfs/exec/calc_increment_ens_ncio.x
++ exglobal_atmos_analysis.sh[77]: CALCINCNCEXEC=/work2/noaa/stmp/CI/ORION/269/gfs/exec/calc_increment_ens_ncio.x
++ exglobal_atmos_analysis.sh[78]: export CALCANLEXEC=/work2/noaa/stmp/CI/ORION/269/gfs/exec/calc_analysis.x
++ exglobal_atmos_analysis.sh[78]: CALCANLEXEC=/work2/noaa/stmp/CI/ORION/269/gfs/exec/calc_analysis.x
++ exglobal_atmos_analysis.sh[79]: export CHGRESNCEXEC=/work2/noaa/stmp/CI/ORION/269/gfs/exec/enkf_chgres_recenter_nc.x
++ exglobal_atmos_analysis.sh[79]: CHGRESNCEXEC=/work2/noaa/stmp/CI/ORION/269/gfs/exec/enkf_chgres_recenter_nc.x
++ exglobal_atmos_analysis.sh[80]: export CHGRESINCEXEC=/work2/noaa/stmp/CI/ORION/269/gfs/exec/interp_inc.x
++ exglobal_atmos_analysis.sh[80]: CHGRESINCEXEC=/work2/noaa/stmp/CI/ORION/269/gfs/exec/interp_inc.x
++ exglobal_atmos_analysis.sh[81]: CHGRESEXEC=/work2/noaa/stmp/CI/ORION/269/gfs/exec/enkf_chgres_recenter.x
++ exglobal_atmos_analysis.sh[82]: export NTHREADS_CHGRES=24
++ exglobal_atmos_analysis.sh[82]: NTHREADS_CHGRES=24
++ exglobal_atmos_analysis.sh[83]: CALCINCPY=/work2/noaa/stmp/CI/ORION/269/gfs/ush/calcinc_gfs.py
++ exglobal_atmos_analysis.sh[86]: RUN=gdas
++ exglobal_atmos_analysis.sh[87]: SENDECF=NO
++ exglobal_atmos_analysis.sh[88]: SENDDBN=NO
++ exglobal_atmos_analysis.sh[89]: RUN_GETGES=NO
++ exglobal_atmos_analysis.sh[90]: GETGESSH=getges.sh
++ exglobal_atmos_analysis.sh[91]: export gesenvir=prod
++ exglobal_atmos_analysis.sh[91]: gesenvir=prod
++ exglobal_atmos_analysis.sh[93]: export hofx_2m_sfcfile=.false.
++ exglobal_atmos_analysis.sh[93]: hofx_2m_sfcfile=.false.
++ exglobal_atmos_analysis.sh[96]: OPREFIX=gdas.t00z.
++ exglobal_atmos_analysis.sh[97]: OSUFFIX=
++ exglobal_atmos_analysis.sh[98]: PREPQC=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.prepbufr
++ exglobal_atmos_analysis.sh[99]: PREPQCPF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.prepbufr.acft_profiles
++ exglobal_atmos_analysis.sh[100]: NSSTBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.nsstbufr
++ exglobal_atmos_analysis.sh[101]: SATWND=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.satwnd.tm00.bufr_d
++ exglobal_atmos_analysis.sh[102]: OSCATBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.oscatw.tm00.bufr_d
++ exglobal_atmos_analysis.sh[103]: RAPIDSCATBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.rapidscatw.tm00.bufr_d
++ exglobal_atmos_analysis.sh[104]: GSNDBF=/dev/null
++ exglobal_atmos_analysis.sh[105]: GSNDBF1=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.goesfv.tm00.bufr_d
++ exglobal_atmos_analysis.sh[107]: B1MSU=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.1bmsu.tm00.bufr_d
++ exglobal_atmos_analysis.sh[110]: B1AMUA=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.1bamua.tm00.bufr_d
++ exglobal_atmos_analysis.sh[111]: B1AMUB=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.1bamub.tm00.bufr_d
++ exglobal_atmos_analysis.sh[112]: B1MHS=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.1bmhs.tm00.bufr_d
++ exglobal_atmos_analysis.sh[113]: ESHRS3=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.eshrs3.tm00.bufr_d
++ exglobal_atmos_analysis.sh[114]: ESAMUA=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.esamua.tm00.bufr_d
++ exglobal_atmos_analysis.sh[115]: ESAMUB=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.esamub.tm00.bufr_d
++ exglobal_atmos_analysis.sh[116]: ESMHS=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.esmhs.tm00.bufr_d
++ exglobal_atmos_analysis.sh[117]: HRS3DB=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.hrs3db.tm00.bufr_d
++ exglobal_atmos_analysis.sh[118]: AMUADB=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.amuadb.tm00.bufr_d
++ exglobal_atmos_analysis.sh[119]: AMUBDB=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.amubdb.tm00.bufr_d
++ exglobal_atmos_analysis.sh[120]: MHSDB=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.mhsdb.tm00.bufr_d
++ exglobal_atmos_analysis.sh[121]: AIRSBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.airsev.tm00.bufr_d
++ exglobal_atmos_analysis.sh[122]: IASIBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.mtiasi.tm00.bufr_d
++ exglobal_atmos_analysis.sh[123]: ESIASI=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.esiasi.tm00.bufr_d
++ exglobal_atmos_analysis.sh[124]: IASIDB=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.iasidb.tm00.bufr_d
++ exglobal_atmos_analysis.sh[125]: AMSREBF=/dev/null
++ exglobal_atmos_analysis.sh[126]: AMSR2BF=/dev/null
++ exglobal_atmos_analysis.sh[127]: GMI1CRBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.gmi1cr.tm00.bufr_d
++ exglobal_atmos_analysis.sh[128]: SAPHIRBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.saphir.tm00.bufr_d
++ exglobal_atmos_analysis.sh[129]: SEVIRIBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.sevcsr.tm00.bufr_d
++ exglobal_atmos_analysis.sh[130]: AHIBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.ahicsr.tm00.bufr_d
++ exglobal_atmos_analysis.sh[131]: SSTVIIRS=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.sstvcw.tm00.bufr_d
++ exglobal_atmos_analysis.sh[132]: ABIBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.gsrcsr.tm00.bufr_d
++ exglobal_atmos_analysis.sh[133]: CRISBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.cris.tm00.bufr_d
++ exglobal_atmos_analysis.sh[134]: ESCRIS=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.escris.tm00.bufr_d
++ exglobal_atmos_analysis.sh[135]: CRISDB=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.crisdb.tm00.bufr_d
++ exglobal_atmos_analysis.sh[136]: CRISFSBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.crisf4.tm00.bufr_d
++ exglobal_atmos_analysis.sh[137]: ESCRISFS=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.escrsf.tm00.bufr_d
++ exglobal_atmos_analysis.sh[138]: CRISFSDB=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.crsfdb.tm00.bufr_d
++ exglobal_atmos_analysis.sh[139]: ATMSBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.atms.tm00.bufr_d
++ exglobal_atmos_analysis.sh[140]: ESATMS=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.esatms.tm00.bufr_d
++ exglobal_atmos_analysis.sh[141]: ATMSDB=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.atmsdb.tm00.bufr_d
++ exglobal_atmos_analysis.sh[142]: SSMITBF=/dev/null
++ exglobal_atmos_analysis.sh[143]: SSMISBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.ssmisu.tm00.bufr_d
++ exglobal_atmos_analysis.sh[144]: SBUVBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.osbuv8.tm00.bufr_d
++ exglobal_atmos_analysis.sh[145]: OMPSNPBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.ompsn8.tm00.bufr_d
++ exglobal_atmos_analysis.sh[146]: OMPSTCBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.ompst8.tm00.bufr_d
++ exglobal_atmos_analysis.sh[147]: OMPSLPBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.ompslp.tm00.bufr_d
++ exglobal_atmos_analysis.sh[148]: GOMEBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.gome.tm00.bufr_d
++ exglobal_atmos_analysis.sh[149]: OMIBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.omi.tm00.bufr_d
++ exglobal_atmos_analysis.sh[150]: MLSBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.mls.tm00.bufr_d
++ exglobal_atmos_analysis.sh[151]: SMIPCP=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.spssmi.tm00.bufr_d
++ exglobal_atmos_analysis.sh[152]: TMIPCP=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.sptrmm.tm00.bufr_d
++ exglobal_atmos_analysis.sh[153]: GPSROBF=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.gpsro.tm00.bufr_d
++ exglobal_atmos_analysis.sh[154]: TCVITL=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.syndata.tcvitals.tm00
++ exglobal_atmos_analysis.sh[155]: B1AVHAM=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.avcsam.tm00.bufr_d
++ exglobal_atmos_analysis.sh[156]: B1AVHPM=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.avcspm.tm00.bufr_d
++ exglobal_atmos_analysis.sh[157]: HDOB=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.hdob.tm00.bufr_d
++ exglobal_atmos_analysis.sh[160]: GPREFIX=gdas.t18z.
++ exglobal_atmos_analysis.sh[161]: GSUFFIX=.nc
++ exglobal_atmos_analysis.sh[162]: SFCG03=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf003.nc
++ exglobal_atmos_analysis.sh[163]: SFCG04=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf004.nc
++ exglobal_atmos_analysis.sh[164]: SFCG05=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf005.nc
++ exglobal_atmos_analysis.sh[165]: SFCGES=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf006.nc
++ exglobal_atmos_analysis.sh[166]: SFCG07=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf007.nc
++ exglobal_atmos_analysis.sh[167]: SFCG08=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf008.nc
++ exglobal_atmos_analysis.sh[168]: SFCG09=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf009.nc
++ exglobal_atmos_analysis.sh[169]: ATMG03=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf003.nc
++ exglobal_atmos_analysis.sh[170]: ATMG04=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf004.nc
++ exglobal_atmos_analysis.sh[171]: ATMG05=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf005.nc
++ exglobal_atmos_analysis.sh[172]: ATMGES=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc
++ exglobal_atmos_analysis.sh[173]: ATMG07=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf007.nc
++ exglobal_atmos_analysis.sh[174]: ATMG08=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf008.nc
++ exglobal_atmos_analysis.sh[175]: ATMG09=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf009.nc
++ exglobal_atmos_analysis.sh[176]: GBIAS=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//analysis/atmos/gdas.t18z.abias
++ exglobal_atmos_analysis.sh[177]: GBIASPC=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//analysis/atmos/gdas.t18z.abias_pc
++ exglobal_atmos_analysis.sh[178]: GBIASAIR=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//analysis/atmos/gdas.t18z.abias_air
++ exglobal_atmos_analysis.sh[179]: GRADSTAT=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//analysis/atmos/gdas.t18z.radstat
++ exglobal_atmos_analysis.sh[182]: export APREFIX=gdas.t00z.
++ exglobal_atmos_analysis.sh[182]: APREFIX=gdas.t00z.
++ exglobal_atmos_analysis.sh[183]: SFCANL=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.sfcanl.nc
++ exglobal_atmos_analysis.sh[184]: DTFANL=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.dtfanl.nc
++ exglobal_atmos_analysis.sh[185]: ATMANL=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.atmanl.nc
++ exglobal_atmos_analysis.sh[186]: ABIAS=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.abias
++ exglobal_atmos_analysis.sh[187]: ABIASPC=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.abias_pc
++ exglobal_atmos_analysis.sh[188]: ABIASAIR=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.abias_air
++ exglobal_atmos_analysis.sh[189]: ABIASe=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.abias_int
++ exglobal_atmos_analysis.sh[190]: RADSTAT=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.radstat
++ exglobal_atmos_analysis.sh[191]: GSISTAT=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.gsistat
++ exglobal_atmos_analysis.sh[192]: PCPSTAT=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.pcpstat
++ exglobal_atmos_analysis.sh[193]: CNVSTAT=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.cnvstat
++ exglobal_atmos_analysis.sh[194]: OZNSTAT=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.oznstat
++ exglobal_atmos_analysis.sh[197]: ATMINC=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.atminc.nc
++ exglobal_atmos_analysis.sh[200]: RUN_SELECT=NO
++ exglobal_atmos_analysis.sh[201]: USE_SELECT=NO
++ exglobal_atmos_analysis.sh[202]: USE_RADSTAT=YES
++ exglobal_atmos_analysis.sh[203]: SELECT_OBS=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gdas.t00z.obsinput
++ exglobal_atmos_analysis.sh[204]: GENDIAG=YES
++ exglobal_atmos_analysis.sh[205]: DIAG_SUFFIX=
++ exglobal_atmos_analysis.sh[206]: '[' .true. = .true. ']'
++ exglobal_atmos_analysis.sh[207]: DIAG_SUFFIX=.nc4
++ exglobal_atmos_analysis.sh[209]: DIAG_COMPRESS=YES
++ exglobal_atmos_analysis.sh[210]: DIAG_TARBALL=YES
++ exglobal_atmos_analysis.sh[211]: USE_CFP=YES
++ exglobal_atmos_analysis.sh[212]: CFP_MP=YES
++ exglobal_atmos_analysis.sh[213]: nm=
++ exglobal_atmos_analysis.sh[214]: '[' YES = YES ']'
++ exglobal_atmos_analysis.sh[215]: nm=0
++ exglobal_atmos_analysis.sh[217]: DIAG_DIR=/work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags
++ exglobal_atmos_analysis.sh[220]: DOHYBVAR=NO
++ exglobal_atmos_analysis.sh[221]: NMEM_ENS=0
++ exglobal_atmos_analysis.sh[222]: export DONST=YES
++ exglobal_atmos_analysis.sh[222]: DONST=YES
++ exglobal_atmos_analysis.sh[223]: NST_GSI=3
++ exglobal_atmos_analysis.sh[224]: NSTINFO=4
++ exglobal_atmos_analysis.sh[225]: ZSEA1=0
++ exglobal_atmos_analysis.sh[226]: ZSEA2=0
++ exglobal_atmos_analysis.sh[227]: FAC_DTL=1
++ exglobal_atmos_analysis.sh[228]: FAC_TSL=1
++ exglobal_atmos_analysis.sh[229]: TZR_QC=1
++ exglobal_atmos_analysis.sh[230]: USE_READIN_ANL_SFCMASK=.false.
++ exglobal_atmos_analysis.sh[231]: SMOOTH_ENKF=NO
++ exglobal_atmos_analysis.sh[232]: export DOIAU=YES
++ exglobal_atmos_analysis.sh[232]: DOIAU=YES
++ exglobal_atmos_analysis.sh[233]: DO_CALC_INCREMENT=NO
++ exglobal_atmos_analysis.sh[234]: DO_CALC_ANALYSIS=YES
++ exglobal_atmos_analysis.sh[235]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++ exglobal_atmos_analysis.sh[235]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++ exglobal_atmos_analysis.sh[236]: USE_CORRELATED_OBERRS=YES
+++ exglobal_atmos_analysis.sh[239]: /work2/noaa/stmp/CI/ORION/269/gfs/ush/getncdimlen /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc grid_xt
++ exglobal_atmos_analysis.sh[239]: LONB=384
+++ exglobal_atmos_analysis.sh[240]: /work2/noaa/stmp/CI/ORION/269/gfs/ush/getncdimlen /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc grid_yt
++ exglobal_atmos_analysis.sh[240]: LATB=192
++ exglobal_atmos_analysis.sh[241]: LEVS=127
++ exglobal_atmos_analysis.sh[242]: JCAP=-9999
++ exglobal_atmos_analysis.sh[243]: '[' -9999 -eq -9999 -a 192 -ne -9999 ']'
++ exglobal_atmos_analysis.sh[243]: JCAP=190
++ exglobal_atmos_analysis.sh[244]: '[' 384 -eq -9999 -o 192 -eq -9999 -o 127 -eq -9999 -o 190 -eq -9999 ']'
++ exglobal_atmos_analysis.sh[247]: '[' NO = YES ']'
++ exglobal_atmos_analysis.sh[259]: LONB_ENKF=0
+++ exglobal_atmos_analysis.sh[263]: cut -c2-
+++ exglobal_atmos_analysis.sh[263]: echo C96
++ exglobal_atmos_analysis.sh[263]: res=96
++ exglobal_atmos_analysis.sh[264]: JCAP_CASE=190
++ exglobal_atmos_analysis.sh[265]: LATB_CASE=192
++ exglobal_atmos_analysis.sh[266]: LONB_CASE=384
++ exglobal_atmos_analysis.sh[269]: '[' NO = YES ']'
++ exglobal_atmos_analysis.sh[274]: JCAP_A=190
++ exglobal_atmos_analysis.sh[275]: LONA=384
++ exglobal_atmos_analysis.sh[276]: LATA=192
++ exglobal_atmos_analysis.sh[278]: NLON_A=384
++ exglobal_atmos_analysis.sh[279]: NLAT_A=194
++ exglobal_atmos_analysis.sh[281]: DELTIM=400
++ exglobal_atmos_analysis.sh[284]: '[' NO = YES ']'
++ exglobal_atmos_analysis.sh[287]: write_fv3_increment=.true.
++ exglobal_atmos_analysis.sh[288]: WRITE_INCR_ZERO='incvars_to_zero= '\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'','
++ exglobal_atmos_analysis.sh[289]: WRITE_ZERO_STRAT='incvars_zero_strat= '\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'','
++ exglobal_atmos_analysis.sh[290]: WRITE_STRAT_EFOLD='incvars_efold= 5,'
++ exglobal_atmos_analysis.sh[294]: BERROR=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Big_Endian/global_berror.l127y194.f77
++ exglobal_atmos_analysis.sh[295]: SATANGL=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_satangbias.txt
++ exglobal_atmos_analysis.sh[296]: SATINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_satinfo.txt
++ exglobal_atmos_analysis.sh[297]: RADCLOUDINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/cloudy_radiance_info.txt
++ exglobal_atmos_analysis.sh[298]: ATMSFILTER=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/atms_beamwidth.txt
++ exglobal_atmos_analysis.sh[299]: ANAVINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_anavinfo.l127.txt
++ exglobal_atmos_analysis.sh[300]: CONVINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_convinfo.txt
++ exglobal_atmos_analysis.sh[301]: vqcdat=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/vqctp001.dat
++ exglobal_atmos_analysis.sh[302]: INSITUINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_insituinfo.txt
++ exglobal_atmos_analysis.sh[303]: OZINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_ozinfo.txt
++ exglobal_atmos_analysis.sh[304]: PCPINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_pcpinfo.txt
++ exglobal_atmos_analysis.sh[305]: AEROINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_aeroinfo.txt
++ exglobal_atmos_analysis.sh[306]: SCANINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_scaninfo.txt
++ exglobal_atmos_analysis.sh[307]: HYBENSINFO=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_hybens_info.l127.txt
++ exglobal_atmos_analysis.sh[308]: OBERROR=/work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/prepobs_errtable.global
++ exglobal_atmos_analysis.sh[311]: SETUP=gpstop=55,nsig_ext=45,
++ exglobal_atmos_analysis.sh[312]: GRIDOPTS='nlayers(63)=1,nlayers(64)=1,'
++ exglobal_atmos_analysis.sh[313]: BKGVERR=
++ exglobal_atmos_analysis.sh[314]: ANBKGERR=
++ exglobal_atmos_analysis.sh[315]: JCOPTS=
++ exglobal_atmos_analysis.sh[316]: STRONGOPTS=
++ exglobal_atmos_analysis.sh[317]: OBSQC=
++ exglobal_atmos_analysis.sh[318]: OBSINPUT=
++ exglobal_atmos_analysis.sh[319]: SUPERRAD=
++ exglobal_atmos_analysis.sh[320]: SINGLEOB=
++ exglobal_atmos_analysis.sh[321]: LAGDATA=
++ exglobal_atmos_analysis.sh[322]: HYBRID_ENSEMBLE=
++ exglobal_atmos_analysis.sh[323]: RAPIDREFRESH_CLDSURF=
++ exglobal_atmos_analysis.sh[324]: CHEM=
++ exglobal_atmos_analysis.sh[325]: NST=
++ exglobal_atmos_analysis.sh[328]: lrun_subdirs=.true.
++ exglobal_atmos_analysis.sh[329]: '[' NO = YES ']'
++ exglobal_atmos_analysis.sh[334]: l_hyb_ens=.false.
++ exglobal_atmos_analysis.sh[335]: export l4densvar=.false.
++ exglobal_atmos_analysis.sh[335]: l4densvar=.false.
++ exglobal_atmos_analysis.sh[336]: export lwrite4danl=.false.
++ exglobal_atmos_analysis.sh[336]: lwrite4danl=.false.
++ exglobal_atmos_analysis.sh[340]: '[' NO = YES -a .false. = .true. -a .false. = .true. ']'
++ exglobal_atmos_analysis.sh[357]: mkdata=NO
++ exglobal_atmos_analysis.sh[358]: '[' '!' -d /work/noaa/stmp/mterry/RUNDIRS/C96_atm3DVar_294f060e/anal.315227 ']'
++ exglobal_atmos_analysis.sh[363]: cd /work/noaa/stmp/mterry/RUNDIRS/C96_atm3DVar_294f060e/anal.315227
++ exglobal_atmos_analysis.sh[367]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Big_Endian/global_berror.l127y194.f77 berror_stats
++ exglobal_atmos_analysis.sh[368]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_satangbias.txt satbias_angle
++ exglobal_atmos_analysis.sh[369]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_satinfo.txt satinfo
++ exglobal_atmos_analysis.sh[370]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/cloudy_radiance_info.txt cloudy_radiance_info.txt
++ exglobal_atmos_analysis.sh[371]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/atms_beamwidth.txt atms_beamwidth.txt
++ exglobal_atmos_analysis.sh[372]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_anavinfo.l127.txt anavinfo
++ exglobal_atmos_analysis.sh[373]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_convinfo.txt convinfo
++ exglobal_atmos_analysis.sh[374]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/vqctp001.dat vqctp001.dat
++ exglobal_atmos_analysis.sh[375]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_insituinfo.txt insituinfo
++ exglobal_atmos_analysis.sh[376]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_ozinfo.txt ozinfo
++ exglobal_atmos_analysis.sh[377]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_pcpinfo.txt pcpinfo
++ exglobal_atmos_analysis.sh[378]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_aeroinfo.txt aeroinfo
++ exglobal_atmos_analysis.sh[379]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_scaninfo.txt scaninfo
++ exglobal_atmos_analysis.sh[380]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_hybens_info.l127.txt hybens_info
++ exglobal_atmos_analysis.sh[381]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/prepobs_errtable.global errtable
++ exglobal_atmos_analysis.sh[383]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/AIRS_CLDDET.NL AIRS_CLDDET.NL
++ exglobal_atmos_analysis.sh[384]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/CRIS_CLDDET.NL CRIS_CLDDET.NL
++ exglobal_atmos_analysis.sh[385]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/IASI_CLDDET.NL IASI_CLDDET.NL
++ exglobal_atmos_analysis.sh[388]: '[' YES == YES ']'
++ exglobal_atmos_analysis.sh[389]: grep -q Rcov /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/global_anavinfo.l127.txt
++ exglobal_atmos_analysis.sh[390]: ls /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_crisn20 /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_crisn21 /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_crisnpp /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_iasialand /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_iasiasea /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_iasibland /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_iasibsea /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_iasicland /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_iasicsea
++ exglobal_atmos_analysis.sh[391]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_crisn20 /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_crisn21 /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_crisnpp /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_iasialand /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_iasiasea /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_iasibland /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_iasibsea /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_iasicland /work2/noaa/stmp/CI/ORION/269/gfs/fix/gsi/Rcov_iasicsea /work/noaa/stmp/mterry/RUNDIRS/C96_atm3DVar_294f060e/anal.315227
++ exglobal_atmos_analysis.sh[392]: echo 'using correlated obs error'
+using correlated obs error
++ exglobal_atmos_analysis.sh[406]: export MKL_NUM_THREADS=1
++ exglobal_atmos_analysis.sh[406]: MKL_NUM_THREADS=1
++ exglobal_atmos_analysis.sh[414]: mkdir -p crtm_coeffs
+++ exglobal_atmos_analysis.sh[418]: awk '{if($1!~"!"){print $1}}' satinfo
+++ exglobal_atmos_analysis.sh[418]: sort
+++ exglobal_atmos_analysis.sh[418]: uniq
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/abi_g16.SpcCoeff.bin ./crtm_coeffs/abi_g16.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/abi_g16.TauCoeff.bin ./crtm_coeffs/abi_g16.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/abi_g17.SpcCoeff.bin ./crtm_coeffs/abi_g17.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/abi_g17.TauCoeff.bin ./crtm_coeffs/abi_g17.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/abi_g18.SpcCoeff.bin ./crtm_coeffs/abi_g18.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/abi_g18.TauCoeff.bin ./crtm_coeffs/abi_g18.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ahi_himawari8.SpcCoeff.bin ./crtm_coeffs/ahi_himawari8.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ahi_himawari8.TauCoeff.bin ./crtm_coeffs/ahi_himawari8.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ahi_himawari9.SpcCoeff.bin ./crtm_coeffs/ahi_himawari9.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ahi_himawari9.TauCoeff.bin ./crtm_coeffs/ahi_himawari9.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/airs_aqua.SpcCoeff.bin ./crtm_coeffs/airs_aqua.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/airs_aqua.TauCoeff.bin ./crtm_coeffs/airs_aqua.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsr2_gcom-w1.SpcCoeff.bin ./crtm_coeffs/amsr2_gcom-w1.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsr2_gcom-w1.TauCoeff.bin ./crtm_coeffs/amsr2_gcom-w1.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsre_aqua.SpcCoeff.bin ./crtm_coeffs/amsre_aqua.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsre_aqua.TauCoeff.bin ./crtm_coeffs/amsre_aqua.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_aqua.SpcCoeff.bin ./crtm_coeffs/amsua_aqua.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_aqua.TauCoeff.bin ./crtm_coeffs/amsua_aqua.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_metop-a.SpcCoeff.bin ./crtm_coeffs/amsua_metop-a.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_metop-a.TauCoeff.bin ./crtm_coeffs/amsua_metop-a.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_metop-b.SpcCoeff.bin ./crtm_coeffs/amsua_metop-b.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_metop-b.TauCoeff.bin ./crtm_coeffs/amsua_metop-b.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_metop-c.SpcCoeff.bin ./crtm_coeffs/amsua_metop-c.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_metop-c.TauCoeff.bin ./crtm_coeffs/amsua_metop-c.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_n15.SpcCoeff.bin ./crtm_coeffs/amsua_n15.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_n15.TauCoeff.bin ./crtm_coeffs/amsua_n15.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_n18.SpcCoeff.bin ./crtm_coeffs/amsua_n18.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_n18.TauCoeff.bin ./crtm_coeffs/amsua_n18.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_n19.SpcCoeff.bin ./crtm_coeffs/amsua_n19.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_n19.TauCoeff.bin ./crtm_coeffs/amsua_n19.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsub_n17.SpcCoeff.bin ./crtm_coeffs/amsub_n17.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsub_n17.TauCoeff.bin ./crtm_coeffs/amsub_n17.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/atms_n20.SpcCoeff.bin ./crtm_coeffs/atms_n20.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/atms_n20.TauCoeff.bin ./crtm_coeffs/atms_n20.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/atms_n21.SpcCoeff.bin ./crtm_coeffs/atms_n21.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/atms_n21.TauCoeff.bin ./crtm_coeffs/atms_n21.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/atms_npp.SpcCoeff.bin ./crtm_coeffs/atms_npp.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/atms_npp.TauCoeff.bin ./crtm_coeffs/atms_npp.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/avhrr3_metop-a.SpcCoeff.bin ./crtm_coeffs/avhrr3_metop-a.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/avhrr3_metop-a.TauCoeff.bin ./crtm_coeffs/avhrr3_metop-a.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/avhrr3_metop-b.SpcCoeff.bin ./crtm_coeffs/avhrr3_metop-b.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/avhrr3_metop-b.TauCoeff.bin ./crtm_coeffs/avhrr3_metop-b.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/avhrr3_metop-c.SpcCoeff.bin ./crtm_coeffs/avhrr3_metop-c.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/avhrr3_metop-c.TauCoeff.bin ./crtm_coeffs/avhrr3_metop-c.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/avhrr3_n18.SpcCoeff.bin ./crtm_coeffs/avhrr3_n18.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/avhrr3_n18.TauCoeff.bin ./crtm_coeffs/avhrr3_n18.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/avhrr3_n19.SpcCoeff.bin ./crtm_coeffs/avhrr3_n19.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/avhrr3_n19.TauCoeff.bin ./crtm_coeffs/avhrr3_n19.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/cris-fsr_n20.SpcCoeff.bin ./crtm_coeffs/cris-fsr_n20.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/cris-fsr_n20.TauCoeff.bin ./crtm_coeffs/cris-fsr_n20.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/cris-fsr_n21.SpcCoeff.bin ./crtm_coeffs/cris-fsr_n21.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/cris-fsr_n21.TauCoeff.bin ./crtm_coeffs/cris-fsr_n21.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/cris-fsr_npp.SpcCoeff.bin ./crtm_coeffs/cris-fsr_npp.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/cris-fsr_npp.TauCoeff.bin ./crtm_coeffs/cris-fsr_npp.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/gmi_gpm.SpcCoeff.bin ./crtm_coeffs/gmi_gpm.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/gmi_gpm.TauCoeff.bin ./crtm_coeffs/gmi_gpm.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/hirs3_n17.SpcCoeff.bin ./crtm_coeffs/hirs3_n17.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/hirs3_n17.TauCoeff.bin ./crtm_coeffs/hirs3_n17.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/hirs4_metop-a.SpcCoeff.bin ./crtm_coeffs/hirs4_metop-a.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/hirs4_metop-a.TauCoeff.bin ./crtm_coeffs/hirs4_metop-a.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/hirs4_metop-b.SpcCoeff.bin ./crtm_coeffs/hirs4_metop-b.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/hirs4_metop-b.TauCoeff.bin ./crtm_coeffs/hirs4_metop-b.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/hirs4_n19.SpcCoeff.bin ./crtm_coeffs/hirs4_n19.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/hirs4_n19.TauCoeff.bin ./crtm_coeffs/hirs4_n19.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/iasi_metop-a.SpcCoeff.bin ./crtm_coeffs/iasi_metop-a.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/iasi_metop-a.TauCoeff.bin ./crtm_coeffs/iasi_metop-a.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/iasi_metop-b.SpcCoeff.bin ./crtm_coeffs/iasi_metop-b.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/iasi_metop-b.TauCoeff.bin ./crtm_coeffs/iasi_metop-b.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/iasi_metop-c.SpcCoeff.bin ./crtm_coeffs/iasi_metop-c.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/iasi_metop-c.TauCoeff.bin ./crtm_coeffs/iasi_metop-c.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/imgr_g11.SpcCoeff.bin ./crtm_coeffs/imgr_g11.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/imgr_g11.TauCoeff.bin ./crtm_coeffs/imgr_g11.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/imgr_g12.SpcCoeff.bin ./crtm_coeffs/imgr_g12.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/imgr_g12.TauCoeff.bin ./crtm_coeffs/imgr_g12.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/imgr_g13.SpcCoeff.bin ./crtm_coeffs/imgr_g13.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/imgr_g13.TauCoeff.bin ./crtm_coeffs/imgr_g13.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/imgr_g14.SpcCoeff.bin ./crtm_coeffs/imgr_g14.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/imgr_g14.TauCoeff.bin ./crtm_coeffs/imgr_g14.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/imgr_g15.SpcCoeff.bin ./crtm_coeffs/imgr_g15.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/imgr_g15.TauCoeff.bin ./crtm_coeffs/imgr_g15.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/mhs_metop-a.SpcCoeff.bin ./crtm_coeffs/mhs_metop-a.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/mhs_metop-a.TauCoeff.bin ./crtm_coeffs/mhs_metop-a.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/mhs_metop-b.SpcCoeff.bin ./crtm_coeffs/mhs_metop-b.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/mhs_metop-b.TauCoeff.bin ./crtm_coeffs/mhs_metop-b.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/mhs_metop-c.SpcCoeff.bin ./crtm_coeffs/mhs_metop-c.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/mhs_metop-c.TauCoeff.bin ./crtm_coeffs/mhs_metop-c.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/mhs_n18.SpcCoeff.bin ./crtm_coeffs/mhs_n18.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/mhs_n18.TauCoeff.bin ./crtm_coeffs/mhs_n18.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/mhs_n19.SpcCoeff.bin ./crtm_coeffs/mhs_n19.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/mhs_n19.TauCoeff.bin ./crtm_coeffs/mhs_n19.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/saphir_meghat.SpcCoeff.bin ./crtm_coeffs/saphir_meghat.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/saphir_meghat.TauCoeff.bin ./crtm_coeffs/saphir_meghat.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/seviri_m08.SpcCoeff.bin ./crtm_coeffs/seviri_m08.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/seviri_m08.TauCoeff.bin ./crtm_coeffs/seviri_m08.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/seviri_m09.SpcCoeff.bin ./crtm_coeffs/seviri_m09.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/seviri_m09.TauCoeff.bin ./crtm_coeffs/seviri_m09.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/seviri_m10.SpcCoeff.bin ./crtm_coeffs/seviri_m10.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/seviri_m10.TauCoeff.bin ./crtm_coeffs/seviri_m10.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/seviri_m11.SpcCoeff.bin ./crtm_coeffs/seviri_m11.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/seviri_m11.TauCoeff.bin ./crtm_coeffs/seviri_m11.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD1_g11.SpcCoeff.bin ./crtm_coeffs/sndrD1_g11.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD1_g11.TauCoeff.bin ./crtm_coeffs/sndrD1_g11.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD1_g12.SpcCoeff.bin ./crtm_coeffs/sndrD1_g12.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD1_g12.TauCoeff.bin ./crtm_coeffs/sndrD1_g12.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD1_g13.SpcCoeff.bin ./crtm_coeffs/sndrD1_g13.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD1_g13.TauCoeff.bin ./crtm_coeffs/sndrD1_g13.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD1_g14.SpcCoeff.bin ./crtm_coeffs/sndrD1_g14.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD1_g14.TauCoeff.bin ./crtm_coeffs/sndrD1_g14.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD1_g15.SpcCoeff.bin ./crtm_coeffs/sndrD1_g15.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD1_g15.TauCoeff.bin ./crtm_coeffs/sndrD1_g15.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD2_g11.SpcCoeff.bin ./crtm_coeffs/sndrD2_g11.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD2_g11.TauCoeff.bin ./crtm_coeffs/sndrD2_g11.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD2_g12.SpcCoeff.bin ./crtm_coeffs/sndrD2_g12.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD2_g12.TauCoeff.bin ./crtm_coeffs/sndrD2_g12.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD2_g13.SpcCoeff.bin ./crtm_coeffs/sndrD2_g13.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD2_g13.TauCoeff.bin ./crtm_coeffs/sndrD2_g13.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD2_g14.SpcCoeff.bin ./crtm_coeffs/sndrD2_g14.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD2_g14.TauCoeff.bin ./crtm_coeffs/sndrD2_g14.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD2_g15.SpcCoeff.bin ./crtm_coeffs/sndrD2_g15.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD2_g15.TauCoeff.bin ./crtm_coeffs/sndrD2_g15.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD3_g11.SpcCoeff.bin ./crtm_coeffs/sndrD3_g11.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD3_g11.TauCoeff.bin ./crtm_coeffs/sndrD3_g11.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD3_g12.SpcCoeff.bin ./crtm_coeffs/sndrD3_g12.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD3_g12.TauCoeff.bin ./crtm_coeffs/sndrD3_g12.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD3_g13.SpcCoeff.bin ./crtm_coeffs/sndrD3_g13.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD3_g13.TauCoeff.bin ./crtm_coeffs/sndrD3_g13.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD3_g14.SpcCoeff.bin ./crtm_coeffs/sndrD3_g14.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD3_g14.TauCoeff.bin ./crtm_coeffs/sndrD3_g14.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD3_g15.SpcCoeff.bin ./crtm_coeffs/sndrD3_g15.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD3_g15.TauCoeff.bin ./crtm_coeffs/sndrD3_g15.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD4_g11.SpcCoeff.bin ./crtm_coeffs/sndrD4_g11.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD4_g11.TauCoeff.bin ./crtm_coeffs/sndrD4_g11.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD4_g12.SpcCoeff.bin ./crtm_coeffs/sndrD4_g12.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD4_g12.TauCoeff.bin ./crtm_coeffs/sndrD4_g12.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD4_g13.SpcCoeff.bin ./crtm_coeffs/sndrD4_g13.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD4_g13.TauCoeff.bin ./crtm_coeffs/sndrD4_g13.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD4_g14.SpcCoeff.bin ./crtm_coeffs/sndrD4_g14.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD4_g14.TauCoeff.bin ./crtm_coeffs/sndrD4_g14.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD4_g15.SpcCoeff.bin ./crtm_coeffs/sndrD4_g15.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/sndrD4_g15.TauCoeff.bin ./crtm_coeffs/sndrD4_g15.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ssmi_f15.SpcCoeff.bin ./crtm_coeffs/ssmi_f15.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ssmi_f15.TauCoeff.bin ./crtm_coeffs/ssmi_f15.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ssmis_f16.SpcCoeff.bin ./crtm_coeffs/ssmis_f16.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ssmis_f16.TauCoeff.bin ./crtm_coeffs/ssmis_f16.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ssmis_f17.SpcCoeff.bin ./crtm_coeffs/ssmis_f17.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ssmis_f17.TauCoeff.bin ./crtm_coeffs/ssmis_f17.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ssmis_f18.SpcCoeff.bin ./crtm_coeffs/ssmis_f18.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ssmis_f18.TauCoeff.bin ./crtm_coeffs/ssmis_f18.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ssmis_f19.SpcCoeff.bin ./crtm_coeffs/ssmis_f19.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ssmis_f19.TauCoeff.bin ./crtm_coeffs/ssmis_f19.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ssmis_f20.SpcCoeff.bin ./crtm_coeffs/ssmis_f20.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/ssmis_f20.TauCoeff.bin ./crtm_coeffs/ssmis_f20.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/viirs-m_j1.SpcCoeff.bin ./crtm_coeffs/viirs-m_j1.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/viirs-m_j1.TauCoeff.bin ./crtm_coeffs/viirs-m_j1.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/viirs-m_j2.SpcCoeff.bin ./crtm_coeffs/viirs-m_j2.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/viirs-m_j2.TauCoeff.bin ./crtm_coeffs/viirs-m_j2.TauCoeff.bin
++ exglobal_atmos_analysis.sh[415]: for file in '$(awk '\''{if($1!~"!"){print $1}}'\'' satinfo | sort | uniq)'
++ exglobal_atmos_analysis.sh[416]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/viirs-m_npp.SpcCoeff.bin ./crtm_coeffs/viirs-m_npp.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[417]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/viirs-m_npp.TauCoeff.bin ./crtm_coeffs/viirs-m_npp.TauCoeff.bin
++ exglobal_atmos_analysis.sh[419]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/amsua_metop-a_v2.SpcCoeff.bin ./crtm_coeffs/amsua_metop-a_v2.SpcCoeff.bin
++ exglobal_atmos_analysis.sh[421]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/Nalli.IRwater.EmisCoeff.bin ./crtm_coeffs/Nalli.IRwater.EmisCoeff.bin
++ exglobal_atmos_analysis.sh[422]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/NPOESS.IRice.EmisCoeff.bin ./crtm_coeffs/NPOESS.IRice.EmisCoeff.bin
++ exglobal_atmos_analysis.sh[423]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/NPOESS.IRland.EmisCoeff.bin ./crtm_coeffs/NPOESS.IRland.EmisCoeff.bin
++ exglobal_atmos_analysis.sh[424]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/NPOESS.IRsnow.EmisCoeff.bin ./crtm_coeffs/NPOESS.IRsnow.EmisCoeff.bin
++ exglobal_atmos_analysis.sh[425]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/NPOESS.VISice.EmisCoeff.bin ./crtm_coeffs/NPOESS.VISice.EmisCoeff.bin
++ exglobal_atmos_analysis.sh[426]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/NPOESS.VISland.EmisCoeff.bin ./crtm_coeffs/NPOESS.VISland.EmisCoeff.bin
++ exglobal_atmos_analysis.sh[427]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/NPOESS.VISsnow.EmisCoeff.bin ./crtm_coeffs/NPOESS.VISsnow.EmisCoeff.bin
++ exglobal_atmos_analysis.sh[428]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/NPOESS.VISwater.EmisCoeff.bin ./crtm_coeffs/NPOESS.VISwater.EmisCoeff.bin
++ exglobal_atmos_analysis.sh[429]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/FASTEM6.MWwater.EmisCoeff.bin ./crtm_coeffs/FASTEM6.MWwater.EmisCoeff.bin
++ exglobal_atmos_analysis.sh[430]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/AerosolCoeff.bin ./crtm_coeffs/AerosolCoeff.bin
++ exglobal_atmos_analysis.sh[431]: /bin/ln -sf /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-fix-2.4.0.1_emc-ezbyzji/fix/CloudCoeff.GFDLFV3.-109z-1.bin ./crtm_coeffs/CloudCoeff.bin
++ exglobal_atmos_analysis.sh[435]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.prepbufr prepbufr
++ exglobal_atmos_analysis.sh[436]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.prepbufr.acft_profiles prepbufr_profl
++ exglobal_atmos_analysis.sh[437]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.satwnd.tm00.bufr_d satwndbufr
++ exglobal_atmos_analysis.sh[438]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.oscatw.tm00.bufr_d oscatbufr
++ exglobal_atmos_analysis.sh[439]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.rapidscatw.tm00.bufr_d rapidscatbufr
++ exglobal_atmos_analysis.sh[440]: /bin/ln -sf /dev/null gsndrbufr
++ exglobal_atmos_analysis.sh[441]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.goesfv.tm00.bufr_d gsnd1bufr
++ exglobal_atmos_analysis.sh[442]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.1bmsu.tm00.bufr_d msubufr
++ exglobal_atmos_analysis.sh[443]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.1bamua.tm00.bufr_d amsuabufr
++ exglobal_atmos_analysis.sh[444]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.1bamub.tm00.bufr_d amsubbufr
++ exglobal_atmos_analysis.sh[445]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.1bmhs.tm00.bufr_d mhsbufr
++ exglobal_atmos_analysis.sh[446]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.esamua.tm00.bufr_d amsuabufrears
++ exglobal_atmos_analysis.sh[447]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.esamub.tm00.bufr_d amsubbufrears
++ exglobal_atmos_analysis.sh[449]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.amuadb.tm00.bufr_d amsuabufr_db
++ exglobal_atmos_analysis.sh[450]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.amubdb.tm00.bufr_d amsubbufr_db
++ exglobal_atmos_analysis.sh[452]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.osbuv8.tm00.bufr_d sbuvbufr
++ exglobal_atmos_analysis.sh[453]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.ompsn8.tm00.bufr_d ompsnpbufr
++ exglobal_atmos_analysis.sh[454]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.ompslp.tm00.bufr_d ompslpbufr
++ exglobal_atmos_analysis.sh[455]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.ompst8.tm00.bufr_d ompstcbufr
++ exglobal_atmos_analysis.sh[456]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.gome.tm00.bufr_d gomebufr
++ exglobal_atmos_analysis.sh[457]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.omi.tm00.bufr_d omibufr
++ exglobal_atmos_analysis.sh[458]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.mls.tm00.bufr_d mlsbufr
++ exglobal_atmos_analysis.sh[459]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.spssmi.tm00.bufr_d ssmirrbufr
++ exglobal_atmos_analysis.sh[460]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.sptrmm.tm00.bufr_d tmirrbufr
++ exglobal_atmos_analysis.sh[461]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.airsev.tm00.bufr_d airsbufr
++ exglobal_atmos_analysis.sh[462]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.mtiasi.tm00.bufr_d iasibufr
++ exglobal_atmos_analysis.sh[463]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.esiasi.tm00.bufr_d iasibufrears
++ exglobal_atmos_analysis.sh[464]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.iasidb.tm00.bufr_d iasibufr_db
++ exglobal_atmos_analysis.sh[465]: /bin/ln -sf /dev/null amsrebufr
++ exglobal_atmos_analysis.sh[466]: /bin/ln -sf /dev/null amsr2bufr
++ exglobal_atmos_analysis.sh[468]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.saphir.tm00.bufr_d saphirbufr
++ exglobal_atmos_analysis.sh[469]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.sevcsr.tm00.bufr_d seviribufr
++ exglobal_atmos_analysis.sh[470]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.cris.tm00.bufr_d crisbufr
++ exglobal_atmos_analysis.sh[471]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.escris.tm00.bufr_d crisbufrears
++ exglobal_atmos_analysis.sh[472]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.crisdb.tm00.bufr_d crisbufr_db
++ exglobal_atmos_analysis.sh[473]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.crisf4.tm00.bufr_d crisfsbufr
++ exglobal_atmos_analysis.sh[474]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.escrsf.tm00.bufr_d crisfsbufrears
++ exglobal_atmos_analysis.sh[475]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.crsfdb.tm00.bufr_d crisfsbufr_db
++ exglobal_atmos_analysis.sh[476]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.atms.tm00.bufr_d atmsbufr
++ exglobal_atmos_analysis.sh[477]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.esatms.tm00.bufr_d atmsbufrears
++ exglobal_atmos_analysis.sh[478]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.atmsdb.tm00.bufr_d atmsbufr_db
++ exglobal_atmos_analysis.sh[479]: /bin/ln -sf /dev/null ssmitbufr
++ exglobal_atmos_analysis.sh[480]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.ssmisu.tm00.bufr_d ssmisbufr
++ exglobal_atmos_analysis.sh[481]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.gpsro.tm00.bufr_d gpsrobufr
++ exglobal_atmos_analysis.sh[482]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.syndata.tcvitals.tm00 tcvitl
++ exglobal_atmos_analysis.sh[483]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.avcsam.tm00.bufr_d avhambufr
++ exglobal_atmos_analysis.sh[484]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.avcspm.tm00.bufr_d avhpmbufr
++ exglobal_atmos_analysis.sh[485]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.ahicsr.tm00.bufr_d ahibufr
++ exglobal_atmos_analysis.sh[486]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.gsrcsr.tm00.bufr_d abibufr
++ exglobal_atmos_analysis.sh[487]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.hdob.tm00.bufr_d hdobbufr
++ exglobal_atmos_analysis.sh[488]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.sstvcw.tm00.bufr_d sstviirs
++ exglobal_atmos_analysis.sh[490]: [[ YES = \Y\E\S ]]
++ exglobal_atmos_analysis.sh[490]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00/obs/gdas.t00z.nsstbufr nsstbufr
++ exglobal_atmos_analysis.sh[494]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//analysis/atmos/gdas.t18z.abias satbias_in
++ exglobal_atmos_analysis.sh[495]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//analysis/atmos/gdas.t18z.abias_pc satbias_pc
++ exglobal_atmos_analysis.sh[496]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//analysis/atmos/gdas.t18z.abias_air aircftbias_in
++ exglobal_atmos_analysis.sh[497]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//analysis/atmos/gdas.t18z.radstat radstat.gdas
++ exglobal_atmos_analysis.sh[501]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf003.nc sigf03
++ exglobal_atmos_analysis.sh[502]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc sigf06
++ exglobal_atmos_analysis.sh[503]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf009.nc sigf09
++ exglobal_atmos_analysis.sh[505]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf003.nc sfcf03
++ exglobal_atmos_analysis.sh[506]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf006.nc sfcf06
++ exglobal_atmos_analysis.sh[507]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf009.nc sfcf09
++ exglobal_atmos_analysis.sh[509]: [[ -f /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf004.nc ]]
++ exglobal_atmos_analysis.sh[510]: [[ -f /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf005.nc ]]
++ exglobal_atmos_analysis.sh[511]: [[ -f /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf007.nc ]]
++ exglobal_atmos_analysis.sh[512]: [[ -f /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf008.nc ]]
++ exglobal_atmos_analysis.sh[514]: [[ -f /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf004.nc ]]
++ exglobal_atmos_analysis.sh[515]: [[ -f /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf005.nc ]]
++ exglobal_atmos_analysis.sh[516]: [[ -f /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf007.nc ]]
++ exglobal_atmos_analysis.sh[517]: [[ -f /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211220/18//model_data/atmos/history/gdas.t18z.sfcf008.nc ]]
++ exglobal_atmos_analysis.sh[519]: '[' NO = YES ']'
++ exglobal_atmos_analysis.sh[550]: '[' 190 -ne 190 ']'
++ exglobal_atmos_analysis.sh[566]: '[' YES = YES ']'
++ exglobal_atmos_analysis.sh[567]: '[' .true. = .true. ']'
++ exglobal_atmos_analysis.sh[568]: '[' -d /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags ']'
++ exglobal_atmos_analysis.sh[569]: rm -rf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags
++ exglobal_atmos_analysis.sh[571]: npe_m1=83
+++ exglobal_atmos_analysis.sh[580]: seq 0 83
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 0
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0000
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0000
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0000 dir.0000
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 1
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0001
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0001
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0001 dir.0001
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 2
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0002
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0002
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0002 dir.0002
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 3
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0003
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0003
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0003 dir.0003
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 4
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0004
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0004
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0004 dir.0004
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 5
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0005
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0005
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0005 dir.0005
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 6
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0006
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0006
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0006 dir.0006
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 7
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0007
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0007
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0007 dir.0007
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 8
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0008
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0008
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0008 dir.0008
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 9
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0009
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0009
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0009 dir.0009
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 10
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0010
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0010
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0010 dir.0010
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 11
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0011
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0011
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0011 dir.0011
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 12
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0012
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0012
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0012 dir.0012
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 13
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0013
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0013
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0013 dir.0013
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 14
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0014
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0014
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0014 dir.0014
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 15
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0015
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0015
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0015 dir.0015
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 16
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0016
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0016
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0016 dir.0016
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 17
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0017
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0017
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0017 dir.0017
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 18
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0018
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0018
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0018 dir.0018
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 19
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0019
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0019
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0019 dir.0019
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 20
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0020
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0020
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0020 dir.0020
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 21
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0021
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0021
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0021 dir.0021
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 22
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0022
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0022
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0022 dir.0022
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 23
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0023
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0023
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0023 dir.0023
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 24
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0024
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0024
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0024 dir.0024
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 25
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0025
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0025
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0025 dir.0025
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 26
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0026
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0026
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0026 dir.0026
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 27
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0027
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0027
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0027 dir.0027
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 28
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0028
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0028
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0028 dir.0028
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 29
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0029
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0029
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0029 dir.0029
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 30
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0030
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0030
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0030 dir.0030
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 31
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0031
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0031
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0031 dir.0031
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 32
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0032
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0032
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0032 dir.0032
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 33
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0033
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0033
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0033 dir.0033
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 34
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0034
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0034
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0034 dir.0034
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 35
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0035
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0035
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0035 dir.0035
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 36
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0036
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0036
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0036 dir.0036
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 37
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0037
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0037
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0037 dir.0037
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 38
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0038
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0038
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0038 dir.0038
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 39
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0039
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0039
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0039 dir.0039
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 40
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0040
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0040
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0040 dir.0040
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 41
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0041
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0041
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0041 dir.0041
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 42
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0042
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0042
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0042 dir.0042
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 43
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0043
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0043
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0043 dir.0043
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 44
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0044
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0044
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0044 dir.0044
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 45
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0045
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0045
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0045 dir.0045
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 46
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0046
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0046
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0046 dir.0046
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 47
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0047
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0047
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0047 dir.0047
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 48
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0048
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0048
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0048 dir.0048
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 49
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0049
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0049
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0049 dir.0049
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 50
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0050
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0050
++ exglobal_atmos_analysis.sh[575]: /bin/ln -sf /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0050 dir.0050
++ exglobal_atmos_analysis.sh[572]: for pe in '$(seq 0 ${npe_m1})'
+++ exglobal_atmos_analysis.sh[573]: printf %04i 51
++ exglobal_atmos_analysis.sh[573]: pedir=dir.0051
++ exglobal_atmos_analysis.sh[574]: mkdir -p /work2/noaa/stmp/CI/ORION/269/RUNTESTS/COMROOT/C96_atm3DVar_294f060e/gdas.20211221/00//analysis/atmos/gsidiags/dir.0051
+slurmstepd: error: *** JOB 17433234 ON Orion-03-21 CANCELLED AT 2024-04-12T22:37:51 ***
