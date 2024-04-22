@@ -1,0 +1,99 @@
++ OPTIND=1
++ _opts='-f '
++ getopts :j:dv option
++ case "${option}" in
++ BUILD_JOBS=8
++ getopts :j:dv option
++ shift 2
++ BUILD_JOBS=8
++ WORKFLOW_BUILD=ON
++ ./gdas.cd/build.sh -f -f
+Building GDASApp on orion
+
+Currently Loaded Modules:
+  1) intel/2022.1.2                   32) eckit/1.24.5
+  2) stack-intel/2022.0.2             33) fftw/3.3.10
+  3) impi/2022.1.2                    34) fckit/0.11.0
+  4) stack-intel-oneapi-mpi/2021.5.1  35) fiat/1.2.0
+  5) cmake/3.23.1                     36) ectrans/1.2.0
+  6) nghttp2/1.57.0                   37) qhull/2020.2
+  7) curl/8.4.0                       38) atlas/0.35.1
+  8) zlib/1.2.13                      39) sp/2.5.0
+  9) git/2.28.0                       40) gsl-lite/0.37.0
+ 10) pkg-config/0.27.1                41) libjpeg/2.1.0
+ 11) hdf5/1.14.0                      42) krb5/1.15.1
+ 12) parallel-netcdf/1.12.2           43) libtirpc/1.3.3
+ 13) snappy/1.1.10                    44) hdf/4.2.15
+ 14) zstd/1.5.2                       45) jedi-cmake/1.4.0
+ 15) c-blosc/1.21.5                   46) libpng/1.6.37
+ 16) netcdf-c/4.9.2                   47) libxt/1.1.5
+ 17) nccmp/1.9.0.1                    48) libxmu/1.1.4
+ 18) netcdf-fortran/4.6.1             49) libxpm/4.11.0
+ 19) antlr/2.7.7                      50) libxaw/1.0.13
+ 20) gsl/2.7.1                        51) udunits/2.2.28
+ 21) nco/5.0.6                        52) ncview/2.1.9
+ 22) parallelio/2.5.10                53) netcdf-cxx4/4.3.1
+ 23) wget/1.21.3                      54) py-pybind11/2.11.0
+ 24) boost/1.83.0                     55) contrib/0.1
+ 25) bufr/12.0.1                      56) noaatools/3.1
+ 26) git-lfs/2.12.0                   57) rocoto/1.3.3
+ 27) ecbuild/3.7.2                    58) hpc/1.2.0
+ 28) openjpeg/2.3.1                   59) miniconda3/4.6.14
+ 29) eccodes/2.32.0                   60) gdasapp/1.0.0
+ 30) eigen/3.4.0                      61) GDAS/orion.intel
+ 31) openblas/0.3.24
+
+ 
+
+Configuring ...
++ cmake -DMPIEXEC_EXECUTABLE=/opt/slurm/bin/srun -DMPIEXEC_NUMPROC_FLAG=-n -DBUILD_GSIBEC=ON -DCLONE_JCSDADATA=NO -DWORKFLOW_TESTS=ON /work2/noaa/stmp/CI/ORION/278/gfs/sorc/gdas.cd/bundle
+-- The C compiler identification is Intel 2021.5.0.20211109
+-- The CXX compiler identification is Intel 2021.5.0.20211109
+-- The Fortran compiler identification is Intel 2021.5.0.20211109
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /apps/intel-2022.1.2/intel-2022.1.2/mpi/2021.5.1/bin/mpiicc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /apps/intel-2022.1.2/intel-2022.1.2/mpi/2021.5.1/bin/mpiicpc - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /apps/intel-2022.1.2/intel-2022.1.2/mpi/2021.5.1/bin/mpiifort - skipped
+-- ecbuild   3.7.2	/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/ecbuild-3.7.2-3n22kc3/share/ecbuild/cmake
+-- cmake     3.23.1	/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake
+-- ---------------------------------------------------------
+-- Found Git: /apps/git-2.28.0/bin/git (found version "2.28.0") 
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of void*
+-- Check size of void* - done
+-- Check size of off_t
+-- Check size of off_t - done
+-- ---------------------------------------------------------
+-- ---------------------------------------------------------
+-- [GDAS-bundle] (1.0.0)
+-- Feature TESTS enabled
+-- Found Python3: /work2/noaa/da/python/opt/core/miniconda3/4.6.14/envs/gdasapp/bin/python3.7 (found version "3.7.12") found components: Interpreter 
+-- Feature TESTS enabled
+-- ---------------------------------------------------------
+-- Adding bundle project jedicmake
+CMake Error at /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/ecbuild-3.7.2-3n22kc3/share/ecbuild/cmake/ecbuild_log.cmake:190 (message):
+  [1;35mCRITICAL - Source directory
+  '/work2/noaa/stmp/CI/ORION/278/gfs/sorc/gdas.cd/bundle/jedicmake' for
+  subproject 'jedicmake' does not exist or does not contain a CMakeLists.txt
+  file.[m
+Call Stack (most recent call first):
+  /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/ecbuild-3.7.2-3n22kc3/share/ecbuild/cmake/ecbuild_bundle.cmake:166 (ecbuild_critical)
+  CMakeLists.txt:47 (ecbuild_bundle)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/work2/noaa/stmp/CI/ORION/278/gfs/sorc/gdas.cd/build/CMakeFiles/CMakeOutput.log".
