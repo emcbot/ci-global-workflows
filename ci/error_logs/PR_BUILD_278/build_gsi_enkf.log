@@ -1,0 +1,107 @@
++ OPTIND=1
++ getopts :j:dv option
++ case "${option}" in
++ BUILD_JOBS=8
++ getopts :j:dv option
++ shift 2
++ BUILD_TYPE=Release
++ BUILD_VERBOSE=NO
++ BUILD_JOBS=8
++ GSI_MODE=GFS
++ ENKF_MODE=GFS
++ REGRESSION_TESTS=NO
++ ./gsi_enkf.fd/ush/build.sh
+++++ readlink -f -n ./gsi_enkf.fd/ush/build.sh
++++ dirname /scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd/ush/build.sh
+++ cd /scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd/ush/..
+++ pwd -P
++ readonly DIR_ROOT=/scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd
++ DIR_ROOT=/scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd
++ BUILD_TYPE=Release
++ CMAKE_OPTS=
++ COMPILER=intel
++ BUILD_DIR=/scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd/build
++ INSTALL_PREFIX=/scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd/install
++ GSI_MODE=GFS
++ ENKF_MODE=GFS
++ REGRESSION_TESTS=NO
++ source /scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd/ush/detect_machine.sh
+++ [[ -n '' ]]
+++ case $(hostname -f) in
++++ hostname -f
+++ MACHINE_ID=hera
+++ [[ hera == \U\N\K\N\O\W\N ]]
+++ MACHINE_ID=hera
+++ [[ hera != \U\N\K\N\O\W\N ]]
+++ return
++ set +x
+
+Currently Loaded Modules:
+  1) intel/2022.1.2                   21) openblas/0.3.24
+  2) stack-intel/2021.5.0             22) py-setuptools/63.4.3
+  3) impi/2022.1.2                    23) py-numpy/1.23.4
+  4) stack-intel-oneapi-mpi/2021.5.1  24) bufr/11.7.0
+  5) gettext/0.19.8.1                 25) bacio/2.4.1
+  6) libxcrypt/4.4.35                 26) w3emc/2.10.0
+  7) zlib/1.2.13                      27) sp/2.5.0
+  8) sqlite/3.43.2                    28) ip/4.3.0
+  9) util-linux-uuid/2.38.1           29) sigio/2.3.2
+ 10) python/3.11.6                    30) sfcio/1.4.1
+ 11) nghttp2/1.57.0                   31) nemsio/2.5.4
+ 12) curl/8.4.0                       32) wrf-io/1.2.0
+ 13) cmake/3.23.1                     33) ncio/1.1.2
+ 14) snappy/1.1.10                    34) crtm-fix/2.4.0.1_emc
+ 15) zstd/1.5.2                       35) git-lfs/2.10.0
+ 16) c-blosc/1.21.5                   36) crtm/2.4.0.1
+ 17) pkg-config/0.27.1                37) gsi-ncdiag/1.1.2
+ 18) hdf5/1.14.0                      38) gsi_common
+ 19) netcdf-c/4.9.2                   39) prod_util/2.1.1
+ 20) netcdf-fortran/4.6.1             40) gsi_hera.intel
+
+ 
+
++ CONTROLPATH=/scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd/../develop/install/bin
++ CMAKE_OPTS+=' -DCMAKE_BUILD_TYPE=Release'
++ CMAKE_OPTS+=' -DCMAKE_INSTALL_PREFIX=/scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd/install'
++ CMAKE_OPTS+=' -DGSI_MODE=GFS -DENKF_MODE=GFS'
++ [[ NO =~ [yYtT] ]]
++ [[ YES =~ [yYtT] ]]
++ rm -rf /scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd/build
++ mkdir -p /scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd/build
++ cd /scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd/build
++ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd/install -DGSI_MODE=GFS -DENKF_MODE=GFS /scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd
+-- The C compiler identification is Intel 2021.5.0.20211109
+-- The Fortran compiler identification is Intel 2021.5.0.20211109
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /apps/oneapi/compiler/2022.0.2/linux/bin/intel64/icc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /apps/oneapi/compiler/2022.0.2/linux/bin/intel64/ifort - skipped
+-- OPENMP ................. OFF
+-- ENABLE_MKL ............. ON
+-- BUILD_GSDCLOUD ......... OFF
+-- BUILD_MGBF ............. ON
+-- BUILD_GSI .............. ON
+-- BUILD_ENKF ............. ON
+-- BUILD_REG_TESTING ...... OFF
+-- Building MGBF library
+-- Building GSI
+-- GSI: OPENMP ................. OFF
+-- GSI: ENABLE_MKL ............. ON
+-- GSI: USE_GSDCLOUD ........... OFF
+-- GSI: USE_MGBF ............... ON
+-- GSI: GSI_MODE ............... GFS
+-- Found MKL: /apps/oneapi/mkl/2022.0.2/lib/intel64/libmkl_intel_lp64.so;/apps/oneapi/mkl/2022.0.2/lib/intel64/libmkl_sequential.so;/apps/oneapi/mkl/2022.0.2/lib/intel64/libmkl_core.so  
+-- Found MPI_C: /apps/oneapi/mpi/2021.5.1/lib/libmpifort.so (found version "3.1") 
+./build_gsi_enkf.sh: line 28: 569552 Terminated              BUILD_TYPE=${BUILD_TYPE:-"Release"} BUILD_VERBOSE=${BUILD_VERBOSE:-"NO"} BUILD_JOBS=${BUILD_JOBS:-8} GSI_MODE=GFS ENKF_MODE=GFS REGRESSION_TESTS=NO ./gsi_enkf.fd/ush/build.sh
+l Stack (most recent call first):
+  /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/cmake-3.23.1-qjplcak/share/cmake-3.23/Modules/FindMPI.cmake:1315 (_MPI_try_staged_settings)
+  /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/cmake-3.23.1-qjplcak/share/cmake-3.23/Modules/FindMPI.cmake:1481 (_MPI_check_lang_works)
+  src/gsi/CMakeLists.txt:60 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/scratch1/NCEPDEV/global/CI/278/gfs/sorc/gsi_enkf.fd/build/CMakeFiles/CMakeOutput.log".
