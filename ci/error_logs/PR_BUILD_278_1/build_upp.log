@@ -1,0 +1,13 @@
+++ dirname ./build_upp.sh
++ script_dir=.
++ cd .
++ OPTIND=1
++ _opts=
++ getopts :dj:v option
++ case "${option}" in
++ BUILD_JOBS=2
++ getopts :dj:v option
++ shift 2
++ [[ ! -d ../exec ]]
++ cd upp.fd/tests
+./build_upp.sh: line 29: cd: upp.fd/tests: No such file or directory
