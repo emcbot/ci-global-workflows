@@ -1,0 +1,250 @@
++ OPTIND=1
++ getopts :j:dv option
++ case "${option}" in
++ BUILD_JOBS=8
++ getopts :j:dv option
++ shift 2
++ BUILD_TYPE=Release
++ BUILD_VERBOSE=NO
++ BUILD_JOBS=8
++ GSI_MODE=GFS
++ ENKF_MODE=GFS
++ REGRESSION_TESTS=NO
++ ./gsi_enkf.fd/ush/build.sh
+++++ readlink -f -n ./gsi_enkf.fd/ush/build.sh
++++ dirname /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/ush/build.sh
+++ cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/ush/..
+++ pwd -P
++ readonly DIR_ROOT=/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd
++ DIR_ROOT=/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd
++ BUILD_TYPE=Release
++ CMAKE_OPTS=
++ COMPILER=intel
++ BUILD_DIR=/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build
++ INSTALL_PREFIX=/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/install
++ GSI_MODE=GFS
++ ENKF_MODE=GFS
++ REGRESSION_TESTS=NO
++ source /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/ush/detect_machine.sh
+++ [[ -n '' ]]
+++ case $(hostname -f) in
++++ hostname -f
+++ MACHINE_ID=orion
+++ [[ orion == \U\N\K\N\O\W\N ]]
+++ MACHINE_ID=orion
+++ [[ orion != \U\N\K\N\O\W\N ]]
+++ return
++ set +x
+
+Currently Loaded Modules:
+  1) intel/2022.1.2                   21) openblas/0.3.24
+  2) stack-intel/2022.0.2             22) py-setuptools/63.4.3
+  3) impi/2022.1.2                    23) py-numpy/1.23.4
+  4) stack-intel-oneapi-mpi/2021.5.1  24) bufr/11.7.0
+  5) gettext/0.19.8.1                 25) bacio/2.4.1
+  6) libxcrypt/4.4.35                 26) w3emc/2.10.0
+  7) zlib/1.2.13                      27) sp/2.5.0
+  8) sqlite/3.43.2                    28) ip/4.3.0
+  9) util-linux-uuid/2.38.1           29) sigio/2.3.2
+ 10) python/3.11.6                    30) sfcio/1.4.1
+ 11) nghttp2/1.57.0                   31) nemsio/2.5.4
+ 12) curl/8.4.0                       32) wrf-io/1.2.0
+ 13) cmake/3.23.1                     33) ncio/1.1.2
+ 14) snappy/1.1.10                    34) crtm-fix/2.4.0.1_emc
+ 15) zstd/1.5.2                       35) git-lfs/2.12.0
+ 16) c-blosc/1.21.5                   36) crtm/2.4.0.1
+ 17) pkg-config/0.27.1                37) gsi-ncdiag/1.1.2
+ 18) hdf5/1.14.0                      38) gsi_common
+ 19) netcdf-c/4.9.2                   39) prod_util/2.1.1
+ 20) netcdf-fortran/4.6.1             40) gsi_orion.intel
+
+ 
+
++ CONTROLPATH=/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/../develop/install/bin
++ CMAKE_OPTS+=' -DCMAKE_BUILD_TYPE=Release'
++ CMAKE_OPTS+=' -DCMAKE_INSTALL_PREFIX=/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/install'
++ CMAKE_OPTS+=' -DGSI_MODE=GFS -DENKF_MODE=GFS'
++ [[ NO =~ [yYtT] ]]
++ [[ YES =~ [yYtT] ]]
++ rm -rf /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build
++ mkdir -p /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build
++ cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build
++ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/install -DGSI_MODE=GFS -DENKF_MODE=GFS /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd
+-- The C compiler identification is Intel 2021.5.0.20211109
+-- The Fortran compiler identification is Intel 2021.5.0.20211109
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/icc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort - skipped
+-- OPENMP ................. OFF
+-- ENABLE_MKL ............. ON
+-- BUILD_GSDCLOUD ......... OFF
+-- BUILD_MGBF ............. ON
+-- BUILD_GSI .............. ON
+-- BUILD_ENKF ............. ON
+-- BUILD_REG_TESTING ...... OFF
+-- Building MGBF library
+-- Building GSI
+-- GSI: OPENMP ................. OFF
+-- GSI: ENABLE_MKL ............. ON
+-- GSI: USE_GSDCLOUD ........... OFF
+-- GSI: USE_MGBF ............... ON
+-- GSI: GSI_MODE ............... GFS
+-- Found MKL: /apps/intel-2022.1.2/intel-2022.1.2/mkl/2022.0.2/lib/intel64/libmkl_intel_lp64.so;/apps/intel-2022.1.2/intel-2022.1.2/mkl/2022.0.2/lib/intel64/libmkl_sequential.so;/apps/intel-2022.1.2/intel-2022.1.2/mkl/2022.0.2/lib/intel64/libmkl_core.so  
+-- Found MPI_C: /apps/intel-2022.1.2/intel-2022.1.2/mpi/2021.5.1/lib/libmpifort.so (found version "3.1") 
+-- Found MPI_Fortran: /apps/intel-2022.1.2/intel-2022.1.2/mpi/2021.5.1/lib/libmpifort.so (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-c-4.9.2-4g3gg4n/include;/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-fortran-4.6.1-hmzbka3/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-c-4.9.2-4g3gg4n/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-c-4.9.2-4g3gg4n] Lib: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-c-4.9.2-4g3gg4n/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-fortran-4.6.1-hmzbka3/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-fortran-4.6.1-hmzbka3] Lib: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-fortran-4.6.1-hmzbka3/lib/libnetcdff.so 
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/bacio-2.4.1-azlisvh/lib/libbacio_4.a (found version "2.4.1")
+-- Found sigio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/sigio-2.3.2-yeb2tdk/lib/libsigio.a (found version "2.3.0")
+-- Found sfcio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/sfcio-1.4.1-r3sc33g/lib/libsfcio.a (found version "1.4.0")
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/bacio-2.4.1-azlisvh/lib/libbacio_4.a (found version "2.4.1")
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/bacio-2.4.1-azlisvh/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/w3emc-2.10.0-kww7sdk/lib64/libw3emc_4.a (found version "2.10.0")
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found nemsio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/nemsio-2.5.4-chpv7zy/lib64/libnemsio.a (found version "2.5.4")
+-- Found MPI: TRUE (found version "3.1")  
+-- Found ncio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/ncio-1.1.2-ocwpick/lib64/libncio.a (found version "1.1.2")
+-- Found ncdiag: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/gsi-ncdiag-1.1.2-taol63f/lib64/libncdiag.a (found version "1.1.2")
+-- Found sp: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/sp-2.5.0-7yfpzlm/lib64/libsp_4.a (found version "2.5.0")
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Found sp: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/sp-2.5.0-7yfpzlm/lib64/libsp_4.a (found version "2.5.0")
+-- Found ip: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/ip-4.3.0-vgdjbdh/lib64/libip_4.a (found version "4.2.0")
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/bacio-2.4.1-azlisvh/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/w3emc-2.10.0-kww7sdk/lib64/libw3emc_4.a (found version "2.10.0")
+-- Found bufr: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2022.0.2/bufr-11.7.0-xwqjwrm/lib64/libbufr_4.so (found version "11.7.0")
+-- Found crtm: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/crtm-2.4.0.1-mn74hpa/lib/libcrtm.a (found version "2.4.0")
+-- Building EnKF
+-- EnKF: OPENMP ................. OFF
+-- EnKF: ENABLE_MKL ............. ON
+-- EnKF: ENKF_MODE .............. GFS
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-c-4.9.2-4g3gg4n/include;/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-fortran-4.6.1-hmzbka3/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-c-4.9.2-4g3gg4n/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-c-4.9.2-4g3gg4n] Lib: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-c-4.9.2-4g3gg4n/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-fortran-4.6.1-hmzbka3/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-fortran-4.6.1-hmzbka3] Lib: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/netcdf-fortran-4.6.1-hmzbka3/lib/libnetcdff.so 
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/bacio-2.4.1-azlisvh/lib/libbacio_4.a (found version "2.4.1")
+-- Found sigio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/sigio-2.3.2-yeb2tdk/lib/libsigio.a (found version "2.3.0")
+-- Found sfcio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/sfcio-1.4.1-r3sc33g/lib/libsfcio.a (found version "1.4.0")
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/bacio-2.4.1-azlisvh/lib/libbacio_4.a (found version "2.4.1")
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/bacio-2.4.1-azlisvh/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/w3emc-2.10.0-kww7sdk/lib64/libw3emc_4.a (found version "2.10.0")
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found nemsio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/nemsio-2.5.4-chpv7zy/lib64/libnemsio.a (found version "2.5.4")
+-- Found MPI: TRUE (found version "3.1")  
+-- Found ncio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/ncio-1.1.2-ocwpick/lib64/libncio.a (found version "1.1.2")
+-- Found sp: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/sp-2.5.0-7yfpzlm/lib64/libsp_4.a (found version "2.5.0")
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/bacio-2.4.1-azlisvh/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/w3emc-2.10.0-kww7sdk/lib64/libw3emc_4.a (found version "2.10.0")
+-- Copying GSI binary fix files from /work/noaa/global/glopara/fix/gsi/20240208
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build
++ make -j 8 VERBOSE=NO
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -S/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd -B/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build --check-build-system CMakeFiles/Makefile.cmake 0
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_progress_start /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/CMakeFiles /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build//CMakeFiles/progress.marks
+make  -f CMakeFiles/Makefile2 all
+make[1]: Entering directory `/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build'
+make  -f src/mgbf/CMakeFiles/mgbf.dir/build.make src/mgbf/CMakeFiles/mgbf.dir/depend
+make  -f src/gsi/CMakeFiles/gsi_c_obj.dir/build.make src/gsi/CMakeFiles/gsi_c_obj.dir/depend
+make[2]: Entering directory `/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build'
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build && /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_depends "Unix Makefiles" /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/gsi /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/gsi /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/gsi/CMakeFiles/gsi_c_obj.dir/DependInfo.cmake --color=
+make[2]: Entering directory `/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build'
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build && /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_depends "Unix Makefiles" /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/CMakeFiles/mgbf.dir/DependInfo.cmake --color=
+Dependee "/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/CMakeFiles/mgbf.dir/DependInfo.cmake" is newer than depender "/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/CMakeFiles/mgbf.dir/depend.internal".
+Dependee "/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/CMakeFiles/mgbf.dir/depend.internal".
+make[2]: Leaving directory `/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build'
+make  -f src/gsi/CMakeFiles/gsi_c_obj.dir/build.make src/gsi/CMakeFiles/gsi_c_obj.dir/build
+make[2]: Entering directory `/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build'
+[  0%] Building C object src/gsi/CMakeFiles/gsi_c_obj.dir/blockIO.c.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/gsi && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/icc -DFortranByte=char -DFortranInt=int -DFortranLlong="long long" -DNDEBUG -Dfunder  -xHOST -g -MD -MT src/gsi/CMakeFiles/gsi_c_obj.dir/blockIO.c.o -MF CMakeFiles/gsi_c_obj.dir/blockIO.c.o.d -o CMakeFiles/gsi_c_obj.dir/blockIO.c.o -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/gsi/blockIO.c
+Scanning dependencies of target mgbf
+make[2]: Leaving directory `/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build'
+make  -f src/mgbf/CMakeFiles/mgbf.dir/build.make src/mgbf/CMakeFiles/mgbf.dir/build
+make[2]: Entering directory `/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build'
+[  0%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/jp_pkind.f90.o
+[  0%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/kinds.f90.o
+[  0%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/jp_pkind2.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/jp_pkind2.f90 -o CMakeFiles/mgbf.dir/jp_pkind2.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/jp_pkind.f90 -o CMakeFiles/mgbf.dir/jp_pkind.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/kinds.f90 -o CMakeFiles/mgbf.dir/kinds.f90.o
+make[2]: Leaving directory `/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build'
+[  0%] Built target gsi_c_obj
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/jp_pkind2.mod src/mgbf/CMakeFiles/mgbf.dir/jp_pkind2.mod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/kinds.mod src/mgbf/CMakeFiles/mgbf.dir/kinds.mod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/jp_pkind.mod src/mgbf/CMakeFiles/mgbf.dir/jp_pkind.mod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/jp_pkind2.f90.o.provides.build
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/kinds.f90.o.provides.build
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/jp_pkind.f90.o.provides.build
+[  0%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/mg_timers.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/mg_timers.f90 -o CMakeFiles/mgbf.dir/mg_timers.f90.o
+[  1%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/jp_pietc_s.f90.o
+[  1%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/jp_pietc.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/jp_pietc.f90 -o CMakeFiles/mgbf.dir/jp_pietc.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/jp_pietc_s.f90 -o CMakeFiles/mgbf.dir/jp_pietc_s.f90.o
+[  1%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/jp_pbfil2.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/jp_pbfil2.f90 -o CMakeFiles/mgbf.dir/jp_pbfil2.f90.o
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/jp_pietc_s.mod src/mgbf/CMakeFiles/mgbf.dir/jp_pietc_s.mod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/jp_pietc.mod src/mgbf/CMakeFiles/mgbf.dir/jp_pietc.mod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/jp_pietc_s.f90.o.provides.build
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/jp_pbfil2.mod src/mgbf/CMakeFiles/mgbf.dir/jp_pbfil2.mod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/mg_timers.mod src/mgbf/CMakeFiles/mgbf.dir/mg_timers.mod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/jp_pietc.f90.o.provides.build
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/jp_pbfil2.f90.o.provides.build
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/mg_timers.f90.o.provides.build
+[  1%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/jp_pmat.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/jp_pmat.f90 -o CMakeFiles/mgbf.dir/jp_pmat.f90.o
+[  1%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/mg_parameter.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/mg_parameter.f90 -o CMakeFiles/mgbf.dir/mg_parameter.f90.o
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/mg_parameter.mod src/mgbf/CMakeFiles/mgbf.dir/mg_parameter.mod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/mg_parameter.f90.o.provides.build
+[  1%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/mg_domain_loc.f90.o
+[  2%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/mg_domain.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/mg_domain_loc.f90 -o CMakeFiles/mgbf.dir/mg_domain_loc.f90.o
+[  2%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/mg_mppstuff.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/mg_domain.f90 -o CMakeFiles/mgbf.dir/mg_domain.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/mg_mppstuff.f90 -o CMakeFiles/mgbf.dir/mg_mppstuff.f90.o
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/mg_parameter@mg_mppstuff.smod src/mgbf/CMakeFiles/mgbf.dir/mg_parameter@mg_mppstuff.smod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/mg_mppstuff.f90.o.provides.build
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/mg_parameter@mg_domain_loc.smod src/mgbf/CMakeFiles/mgbf.dir/mg_parameter@mg_domain_loc.smod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/mg_domain_loc.f90.o.provides.build
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/mg_parameter@mg_domain.smod src/mgbf/CMakeFiles/mgbf.dir/mg_parameter@mg_domain.smod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/mg_domain.f90.o.provides.build
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/jp_pmat.mod src/mgbf/CMakeFiles/mgbf.dir/jp_pmat.mod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/jp_pmat.f90.o.provides.build
+[  2%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/jp_pmat4.f90.o
+[  2%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/jp_pbfil.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/jp_pbfil.f90 -o CMakeFiles/mgbf.dir/jp_pbfil.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/jp_pmat4.f90 -o CMakeFiles/mgbf.dir/jp_pmat4.f90.o
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/mg_parameter@jp_pbfil.smod src/mgbf/CMakeFiles/mgbf.dir/mg_parameter@jp_pbfil.smod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/jp_pbfil.f90.o.provides.build
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/jp_pmat4.mod src/mgbf/CMakeFiles/mgbf.dir/jp_pmat4.mod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/jp_pmat4.f90.o.provides.build
+[  2%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/jp_pbfil3.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/jp_pbfil3.f90 -o CMakeFiles/mgbf.dir/jp_pbfil3.f90.o
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E cmake_copy_f90_mod src/mgbf/include/mgbf/jp_pbfil3.mod src/mgbf/CMakeFiles/mgbf.dir/jp_pbfil3.mod.stamp Intel
+/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/intel/2022.0.2/cmake-3.23.1-q6jmc7i/bin/cmake -E touch src/mgbf/CMakeFiles/mgbf.dir/jp_pbfil3.f90.o.provides.build
+[  2%] Building Fortran object src/mgbf/CMakeFiles/mgbf.dir/mg_intstate.f90.o
+cd /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf && /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/ifort -DNDEBUG -I/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build/src/mgbf/include/mgbf -xHOST -g -traceback -convert big_endian -O3 -module include/mgbf -c /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/mg_intstate.f90 -o CMakeFiles/mgbf.dir/mg_intstate.f90.o
+ifort: error #10106: Fatal error in /apps/intel-2022.1.2/intel-2022.1.2/compiler/2022.0.2/linux/bin/intel64/../../bin/intel64/fortcom, terminated by terminate signal
+compilation aborted for /work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/src/mgbf/mg_intstate.f90 (code 1)
+make[2]: *** [src/mgbf/CMakeFiles/mgbf.dir/mg_intstate.f90.o] Error 1
+make[2]: Leaving directory `/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build'
+make[1]: *** [src/mgbf/CMakeFiles/mgbf.dir/all] Error 2
+make[1]: Leaving directory `/work2/noaa/stmp/CI/ORION/2613/gfs/sorc/gsi_enkf.fd/build'
+make: *** [all] Error 2
