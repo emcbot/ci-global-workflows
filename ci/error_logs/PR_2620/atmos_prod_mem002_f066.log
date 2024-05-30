@@ -1,0 +1,907 @@
+Begin atmos_products.sh at Thu May 30 16:11:50 UTC 2024
++ atmos_products.sh[11]: . /work2/noaa/stmp/CI/HERCULES/2620/gefs/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) contrib/0.1                      41) grib-util/1.3.0
+  2) intel-oneapi-compilers/2023.1.0  42) g2tmpl/1.10.2
+  3) stack-intel/2021.9.0             43) gsi-ncdiag/1.1.2
+  4) intel-oneapi-mpi/2021.9.0        44) crtm-fix/2.4.0.1_emc
+  5) stack-intel-oneapi-mpi/2021.9.0  45) git-lfs/3.1.2
+  6) intel-oneapi-mkl/2023.1.0        46) crtm/2.4.0.1
+  7) zlib/1.2.13                      47) openblas/0.3.24
+  8) pigz/2.7                         48) py-setuptools/63.4.3
+  9) zstd/1.5.2                       49) py-numpy/1.23.4
+ 10) tar/1.34                         50) bufr/11.7.0
+ 11) gettext/0.21.1                   51) gmake/4.2.1
+ 12) libxcrypt/4.4.35                 52) wgrib2/2.0.8
+ 13) sqlite/3.43.2                    53) py-f90nml/1.4.3
+ 14) util-linux-uuid/2.38.1           54) py-cftime/1.0.3.4
+ 15) python/3.11.6                    55) py-netcdf4/1.5.8
+ 16) libjpeg/2.1.0                    56) libyaml/0.2.5
+ 17) jasper/2.0.32                    57) py-pyyaml/6.0
+ 18) libpng/1.6.37                    58) py-markupsafe/2.1.3
+ 19) openjpeg/2.3.1                   59) py-jinja2/3.1.2
+ 20) eccodes/2.32.0                   60) py-bottleneck/1.3.7
+ 21) fftw/3.3.10                      61) py-numexpr/2.8.4
+ 22) nghttp2/1.57.0                   62) py-et-xmlfile/1.0.1
+ 23) curl/8.4.0                       63) py-openpyxl/3.1.2
+ 24) proj/9.2.1                       64) py-pytz/2023.3
+ 25) udunits/2.2.28                   65) py-pyxlsb/1.0.10
+ 26) cdo/2.2.0                        66) py-xlrd/2.0.1
+ 27) hdf5/1.14.0                      67) py-xlsxwriter/3.1.7
+ 28) snappy/1.1.10                    68) py-xlwt/1.3.0
+ 29) c-blosc/1.21.5                   69) py-pandas/1.5.3
+ 30) netcdf-c/4.9.2                   70) py-six/1.16.0
+ 31) netcdf-fortran/4.6.1             71) py-python-dateutil/2.8.2
+ 32) antlr/2.7.7                      72) g2c/1.6.4
+ 33) gsl/2.7.1                        73) netcdf-cxx4/4.3.1
+ 34) nco/5.0.6                        74) met/9.1.3
+ 35) bacio/2.4.1                      75) metplus/3.1.1
+ 36) w3emc/2.10.0                     76) py-packaging/23.1
+ 37) prod_util/2.1.1                  77) py-xarray/2023.7.0
+ 38) g2/3.4.5                         78) prepobs/1.0.1
+ 39) sp/2.5.0                         79) fit2obs/1.1.1
+ 40) ip/4.3.0                         80) module_base.hercules
+
+ 
+
++ atmos_products.sh[12]: status=0
++ atmos_products.sh[13]: ((  status != 0  ))
++ atmos_products.sh[15]: export job=atmos_products
++ atmos_products.sh[15]: job=atmos_products
++ atmos_products.sh[16]: export jobid=atmos_products.1546491
++ atmos_products.sh[16]: jobid=atmos_products.1546491
++ atmos[20]: IFS=_
++ atmos[20]: read -ra fhrs
++ atmos_products.sh[24]: for fhr in "${fhrs[@]}"
++ atmos_products.sh[27]: fhr=10#066
++ atmos_products.sh[28]: fhr=10#066
++ atmos_products.sh[29]: export FORECAST_HOUR=66
++ atmos_products.sh[29]: FORECAST_HOUR=66
++ atmos_products.sh[30]: /work2/noaa/stmp/CI/HERCULES/2620/gefs/jobs/JGLOBAL_ATMOS_PRODUCTS
+Begin JGLOBAL_ATMOS_PRODUCTS at Thu May 30 16:11:52 UTC 2024
++ JGLOBAL_ATMOS_PRODUCTS[4]: source /work2/noaa/stmp/CI/HERCULES/2620/gefs/ush/jjob_header.sh -e atmos_products -c 'base atmos_products'
+++ jjob_header.sh[44]: OPTIND=1
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[48]: env_job=atmos_products
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[47]: read -ra configs
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[59]: shift 4
+++ jjob_header.sh[61]: [[ -z atmos_products ]]
+++ jjob_header.sh[69]: export DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_d6f6ae0c/atmos_products.1546491
+++ jjob_header.sh[69]: DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_d6f6ae0c/atmos_products.1546491
+++ jjob_header.sh[70]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[71]: rm -rf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_d6f6ae0c/atmos_products.1546491
+++ jjob_header.sh[73]: mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_d6f6ae0c/atmos_products.1546491
+++ jjob_header.sh[74]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_d6f6ae0c/atmos_products.1546491
+++ jjob_header.sh[80]: export cycle=t12z
+++ jjob_header.sh[80]: cycle=t12z
+++ jjob_header.sh[81]: setpdy.sh
+sed: can't read /work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/date/t12z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[82]: source ./PDY
++++ PDY[1]: export PDYm7=20210316
++++ PDY[1]: PDYm7=20210316
++++ PDY[2]: export PDYm6=20210317
++++ PDY[2]: PDYm6=20210317
++++ PDY[3]: export PDYm5=20210318
++++ PDY[3]: PDYm5=20210318
++++ PDY[4]: export PDYm4=20210319
++++ PDY[4]: PDYm4=20210319
++++ PDY[5]: export PDYm3=20210320
++++ PDY[5]: PDYm3=20210320
++++ PDY[6]: export PDYm2=20210321
++++ PDY[6]: PDYm2=20210321
++++ PDY[7]: export PDYm1=20210322
++++ PDY[7]: PDYm1=20210322
++++ PDY[8]: export PDY=20210323
++++ PDY[8]: PDY=20210323
++++ PDY[9]: export PDYp1=20210324
++++ PDY[9]: PDYp1=20210324
++++ PDY[10]: export PDYp2=20210325
++++ PDY[10]: PDYp2=20210325
++++ PDY[11]: export PDYp3=20210326
++++ PDY[11]: PDYp3=20210326
++++ PDY[12]: export PDYp4=20210327
++++ PDY[12]: PDYp4=20210327
++++ PDY[13]: export PDYp5=20210328
++++ PDY[13]: PDYp5=20210328
++++ PDY[14]: export PDYp6=20210329
++++ PDY[14]: PDYp6=20210329
++++ PDY[15]: export PDYp7=20210330
++++ PDY[15]: PDYp7=20210330
+++ jjob_header.sh[88]: export pid=1546887
+++ jjob_header.sh[88]: pid=1546887
+++ jjob_header.sh[89]: export pgmout=OUTPUT.1546887
+++ jjob_header.sh[89]: pgmout=OUTPUT.1546887
+++ jjob_header.sh[90]: export pgmerr=errfile
+++ jjob_header.sh[90]: pgmerr=errfile
+++ jjob_header.sh[96]: export EXPDIR=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/EXPDIR/C48_S2SWA_gefs_d6f6ae0c
+++ jjob_header.sh[96]: EXPDIR=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/EXPDIR/C48_S2SWA_gefs_d6f6ae0c
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/EXPDIR/C48_S2SWA_gefs_d6f6ae0c/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=HERCULES
++++ config.base[9]: machine=HERCULES
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=fv3-cpu
++++ config.base[15]: ACCOUNT=fv3-cpu
++++ config.base[16]: export QUEUE=batch
++++ config.base[16]: QUEUE=batch
++++ config.base[17]: export QUEUE_SERVICE=batch
++++ config.base[17]: QUEUE_SERVICE=batch
++++ config.base[18]: export PARTITION_BATCH=hercules
++++ config.base[18]: PARTITION_BATCH=hercules
++++ config.base[19]: export PARTITION_SERVICE=service
++++ config.base[19]: PARTITION_SERVICE=service
++++ config.base[22]: export HPSS_PROJECT=emc-global
++++ config.base[22]: HPSS_PROJECT=emc-global
++++ config.base[25]: export HOMEgfs=/work2/noaa/stmp/CI/HERCULES/2620/gefs
++++ config.base[25]: HOMEgfs=/work2/noaa/stmp/CI/HERCULES/2620/gefs
++++ config.base[26]: export EXECgfs=/work2/noaa/stmp/CI/HERCULES/2620/gefs/exec
++++ config.base[26]: EXECgfs=/work2/noaa/stmp/CI/HERCULES/2620/gefs/exec
++++ config.base[27]: export FIXgfs=/work2/noaa/stmp/CI/HERCULES/2620/gefs/fix
++++ config.base[27]: FIXgfs=/work2/noaa/stmp/CI/HERCULES/2620/gefs/fix
++++ config.base[28]: export PARMgfs=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm
++++ config.base[28]: PARMgfs=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm
++++ config.base[29]: export SCRgfs=/work2/noaa/stmp/CI/HERCULES/2620/gefs/scripts
++++ config.base[29]: SCRgfs=/work2/noaa/stmp/CI/HERCULES/2620/gefs/scripts
++++ config.base[30]: export USHgfs=/work2/noaa/stmp/CI/HERCULES/2620/gefs/ush
++++ config.base[30]: USHgfs=/work2/noaa/stmp/CI/HERCULES/2620/gefs/ush
++++ config.base[35]: export PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[35]: PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[36]: export COMROOT=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT
++++ config.base[36]: COMROOT=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT
++++ config.base[37]: export COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[37]: COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[38]: export BASE_CPLIC=/work/noaa/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[38]: BASE_CPLIC=/work/noaa/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[41]: export HOMEDIR=/work/noaa/global/mterry
++++ config.base[41]: HOMEDIR=/work/noaa/global/mterry
++++ config.base[42]: export STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[42]: STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[43]: export PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[43]: PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[44]: export NOSCRUB=/work/noaa/global/mterry
++++ config.base[44]: NOSCRUB=/work/noaa/global/mterry
++++ config.base[47]: export BASE_GIT=/work/noaa/global/glopara/git
++++ config.base[47]: BASE_GIT=/work/noaa/global/glopara/git
++++ config.base[50]: export DO_BUFRSND=NO
++++ config.base[50]: DO_BUFRSND=NO
++++ config.base[51]: export DO_GEMPAK=NO
++++ config.base[51]: DO_GEMPAK=NO
++++ config.base[52]: export DO_AWIPS=NO
++++ config.base[52]: DO_AWIPS=NO
++++ config.base[58]: export REALTIME=YES
++++ config.base[58]: REALTIME=YES
++++ config.base[61]: export MODE=forecast-only
++++ config.base[61]: MODE=forecast-only
++++ config.base[70]: export HOMEpost=/work2/noaa/stmp/CI/HERCULES/2620/gefs
++++ config.base[70]: HOMEpost=/work2/noaa/stmp/CI/HERCULES/2620/gefs
++++ config.base[73]: export 'NCP=/bin/cp -p'
++++ config.base[73]: NCP='/bin/cp -p'
++++ config.base[74]: export NMV=/bin/mv
++++ config.base[74]: NMV=/bin/mv
++++ config.base[75]: export 'NLN=/bin/ln -sf'
++++ config.base[75]: NLN='/bin/ln -sf'
++++ config.base[76]: export VERBOSE=YES
++++ config.base[76]: VERBOSE=YES
++++ config.base[77]: export KEEPDATA=NO
++++ config.base[77]: KEEPDATA=NO
++++ config.base[78]: export DEBUG_POSTSCRIPT=NO
++++ config.base[78]: DEBUG_POSTSCRIPT=NO
++++ config.base[79]: export CHGRP_RSTPROD=YES
++++ config.base[79]: CHGRP_RSTPROD=YES
++++ config.base[80]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[80]: CHGRP_CMD='chgrp rstprod'
++++ config.base[81]: export NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[81]: NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[82]: export NCLEN=/work2/noaa/stmp/CI/HERCULES/2620/gefs/ush/getncdimlen
++++ config.base[82]: NCLEN=/work2/noaa/stmp/CI/HERCULES/2620/gefs/ush/getncdimlen
++++ config.base[85]: export BASE_ENV=/work2/noaa/stmp/CI/HERCULES/2620/gefs/env
++++ config.base[85]: BASE_ENV=/work2/noaa/stmp/CI/HERCULES/2620/gefs/env
++++ config.base[86]: export BASE_JOB=/work2/noaa/stmp/CI/HERCULES/2620/gefs/jobs/rocoto
++++ config.base[86]: BASE_JOB=/work2/noaa/stmp/CI/HERCULES/2620/gefs/jobs/rocoto
++++ config.base[89]: export SDATE=2021032312
++++ config.base[89]: SDATE=2021032312
++++ config.base[90]: export EDATE=2021032312
++++ config.base[90]: EDATE=2021032312
++++ config.base[91]: export EXP_WARM_START=.false.
++++ config.base[91]: EXP_WARM_START=.false.
++++ config.base[92]: export assim_freq=6
++++ config.base[92]: assim_freq=6
++++ config.base[93]: export PSLOT=C48_S2SWA_gefs_d6f6ae0c
++++ config.base[93]: PSLOT=C48_S2SWA_gefs_d6f6ae0c
++++ config.base[94]: export EXPDIR=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/EXPDIR/C48_S2SWA_gefs_d6f6ae0c
++++ config.base[94]: EXPDIR=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/EXPDIR/C48_S2SWA_gefs_d6f6ae0c
++++ config.base[95]: export ROTDIR=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c
++++ config.base[95]: ROTDIR=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c
++++ config.base[97]: export DATAROOT=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_d6f6ae0c
++++ config.base[97]: DATAROOT=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_d6f6ae0c
++++ config.base[98]: export RUNDIR=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_d6f6ae0c
++++ config.base[98]: RUNDIR=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_d6f6ae0c
++++ config.base[99]: export ARCDIR=/work/noaa/global/mterry/archive/C48_S2SWA_gefs_d6f6ae0c
++++ config.base[99]: ARCDIR=/work/noaa/global/mterry/archive/C48_S2SWA_gefs_d6f6ae0c
++++ config.base[100]: export ATARDIR=/work/noaa/global/mterry/archive_rotdir/C48_S2SWA_gefs_d6f6ae0c
++++ config.base[100]: ATARDIR=/work/noaa/global/mterry/archive_rotdir/C48_S2SWA_gefs_d6f6ae0c
++++ config.base[103]: export envir=prod
++++ config.base[103]: envir=prod
++++ config.base[104]: export NET=gefs
++++ config.base[104]: NET=gefs
++++ config.base[105]: export RUN=gefs
++++ config.base[105]: RUN=gefs
++++ config.base[111]: source /work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/EXPDIR/C48_S2SWA_gefs_d6f6ae0c/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/input'
+++++ config.com[53]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/restart'
+++++ config.com[54]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[55]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[56]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/history'
+++++ config.com[57]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/master'
+++++ config.com[58]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[59]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[60]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[63]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[65]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[66]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[67]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[68]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[71]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/restart'
+++++ config.com[72]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/prep'
+++++ config.com[73]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/history'
+++++ config.com[74]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[75]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[76]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[77]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[79]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/history'
+++++ config.com[80]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/restart'
+++++ config.com[81]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/input'
+++++ config.com[82]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[83]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[84]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[85]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[87]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[88]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/input'
+++++ config.com[89]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/history'
+++++ config.com[90]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/restart'
+++++ config.com[91]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[92]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[93]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[95]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/chem/history'
+++++ config.com[96]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[98]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/med/restart'
++++ config.base[114]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[114]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[115]: export LOGSCRIPT=
++++ config.base[115]: LOGSCRIPT=
++++ config.base[118]: export 'REDOUT=1>'
++++ config.base[118]: REDOUT='1>'
++++ config.base[119]: export 'REDERR=2>'
++++ config.base[119]: REDERR='2>'
++++ config.base[121]: export SENDECF=NO
++++ config.base[121]: SENDECF=NO
++++ config.base[122]: export SENDSDM=NO
++++ config.base[122]: SENDSDM=NO
++++ config.base[123]: export SENDDBN_NTC=NO
++++ config.base[123]: SENDDBN_NTC=NO
++++ config.base[124]: export SENDDBN=NO
++++ config.base[124]: SENDDBN=NO
++++ config.base[125]: export DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[125]: DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[128]: export APP=S2SWA
++++ config.base[128]: APP=S2SWA
++++ config.base[131]: export DO_ATM=YES
++++ config.base[131]: DO_ATM=YES
++++ config.base[132]: export DO_COUPLED=NO
++++ config.base[132]: DO_COUPLED=NO
++++ config.base[133]: export DO_WAVE=NO
++++ config.base[133]: DO_WAVE=NO
++++ config.base[134]: export DO_OCN=NO
++++ config.base[134]: DO_OCN=NO
++++ config.base[135]: export DO_ICE=NO
++++ config.base[135]: DO_ICE=NO
++++ config.base[136]: export DO_AERO=NO
++++ config.base[136]: DO_AERO=NO
++++ config.base[137]: export AERO_FCST_CDUMP=
++++ config.base[137]: AERO_FCST_CDUMP=
++++ config.base[138]: export AERO_ANL_CDUMP=
++++ config.base[138]: AERO_ANL_CDUMP=
++++ config.base[139]: export WAVE_CDUMP=
++++ config.base[139]: WAVE_CDUMP=
++++ config.base[140]: export DOBNDPNT_WAVE=NO
++++ config.base[140]: DOBNDPNT_WAVE=NO
++++ config.base[141]: export DOIBP_WAV=NO
++++ config.base[141]: DOIBP_WAV=NO
++++ config.base[142]: export FRAC_GRID=.true.
++++ config.base[142]: FRAC_GRID=.true.
++++ config.base[143]: export DO_NEST=NO
++++ config.base[143]: DO_NEST=NO
++++ config.base[144]: [[ NO == \Y\E\S ]]
++++ config.base[148]: export ntiles=6
++++ config.base[148]: ntiles=6
++++ config.base[152]: export OPS_RES=C768
++++ config.base[152]: OPS_RES=C768
++++ config.base[155]: export LEVS=128
++++ config.base[155]: LEVS=128
++++ config.base[156]: export CASE=C48
++++ config.base[156]: CASE=C48
++++ config.base[157]: export CASE_ENS=C48
++++ config.base[157]: CASE_ENS=C48
++++ config.base[158]: export OCNRES=500
++++ config.base[158]: OCNRES=500
++++ config.base[159]: export ICERES=500
++++ config.base[159]: ICERES=500
++++ config.base[161]: case "${CASE}" in
++++ config.base[163]: export waveGRD=glo_500
++++ config.base[163]: waveGRD=glo_500
++++ config.base[180]: case "${APP}" in
++++ config.base[199]: export DO_COUPLED=YES
++++ config.base[199]: DO_COUPLED=YES
++++ config.base[200]: export DO_OCN=YES
++++ config.base[200]: DO_OCN=YES
++++ config.base[201]: export DO_ICE=YES
++++ config.base[201]: DO_ICE=YES
++++ config.base[203]: [[ S2SWA =~ A$ ]]
++++ config.base[204]: export DO_AERO=YES
++++ config.base[204]: DO_AERO=YES
++++ config.base[205]: export AERO_ANL_CDUMP=both
++++ config.base[205]: AERO_ANL_CDUMP=both
++++ config.base[206]: export AERO_FCST_CDUMP=gdas
++++ config.base[206]: AERO_FCST_CDUMP=gdas
++++ config.base[209]: [[ S2SWA =~ ^S2SW ]]
++++ config.base[210]: export DO_WAVE=YES
++++ config.base[210]: DO_WAVE=YES
++++ config.base[211]: export WAVE_CDUMP=both
++++ config.base[211]: WAVE_CDUMP=both
++++ config.base[212]: export cplwav2atm=.true.
++++ config.base[212]: cplwav2atm=.true.
++++ config.base[222]: export gfs_cyc=1
++++ config.base[222]: gfs_cyc=1
++++ config.base[225]: export FHMIN_GFS=0
++++ config.base[225]: FHMIN_GFS=0
++++ config.base[226]: export FHMIN=0
++++ config.base[226]: FHMIN=0
++++ config.base[227]: export FHMAX_GFS=120
++++ config.base[227]: FHMAX_GFS=120
++++ config.base[228]: export FHOUT_GFS=6
++++ config.base[228]: FHOUT_GFS=6
++++ config.base[229]: export FHMAX_HF_GFS=0
++++ config.base[229]: FHMAX_HF_GFS=0
++++ config.base[230]: export FHOUT_HF_GFS=1
++++ config.base[230]: FHOUT_HF_GFS=1
++++ config.base[231]: export FHOUT_OCNICE_GFS=6
++++ config.base[231]: FHOUT_OCNICE_GFS=6
++++ config.base[232]: export FHMIN_WAV=0
++++ config.base[232]: FHMIN_WAV=0
++++ config.base[233]: export FHOUT_WAV=3
++++ config.base[233]: FHOUT_WAV=3
++++ config.base[234]: export FHMAX_HF_WAV=120
++++ config.base[234]: FHMAX_HF_WAV=120
++++ config.base[235]: export FHOUT_HF_WAV=1
++++ config.base[235]: FHOUT_HF_WAV=1
++++ config.base[236]: export FHMAX_WAV=120
++++ config.base[236]: FHMAX_WAV=120
++++ config.base[237]: ((  gfs_cyc != 0  ))
++++ config.base[238]: export STEP_GFS=24
++++ config.base[238]: STEP_GFS=24
++++ config.base[242]: export ILPOST=1
++++ config.base[242]: ILPOST=1
++++ config.base[244]: export FHMIN_ENKF=0
++++ config.base[244]: FHMIN_ENKF=0
++++ config.base[245]: export FHMAX_ENKF=120
++++ config.base[245]: FHMAX_ENKF=120
++++ config.base[246]: export FHOUT_ENKF=6
++++ config.base[246]: FHOUT_ENKF=6
++++ config.base[249]: export restart_interval_gfs=12
++++ config.base[249]: restart_interval_gfs=12
++++ config.base[250]: export restart_interval_enkfgfs=12
++++ config.base[250]: restart_interval_enkfgfs=12
++++ config.base[255]: export QUILTING=.true.
++++ config.base[255]: QUILTING=.true.
++++ config.base[256]: export OUTPUT_GRID=gaussian_grid
++++ config.base[256]: OUTPUT_GRID=gaussian_grid
++++ config.base[257]: export WRITE_DOPOST=.true.
++++ config.base[257]: WRITE_DOPOST=.true.
++++ config.base[258]: export WRITE_NSFLIP=.true.
++++ config.base[258]: WRITE_NSFLIP=.true.
++++ config.base[261]: export FLTFILEGFS=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/post/postxconfig-NT-GEFS.txt
++++ config.base[261]: FLTFILEGFS=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/post/postxconfig-NT-GEFS.txt
++++ config.base[262]: export FLTFILEGFSF00=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/post/postxconfig-NT-GEFS-F00.txt
++++ config.base[262]: FLTFILEGFSF00=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/post/postxconfig-NT-GEFS-F00.txt
++++ config.base[265]: export imp_physics=8
++++ config.base[265]: imp_physics=8
++++ config.base[269]: export DO_JEDIATMVAR=NO
++++ config.base[269]: DO_JEDIATMVAR=NO
++++ config.base[270]: export DO_JEDIATMENS=NO
++++ config.base[270]: DO_JEDIATMENS=NO
++++ config.base[271]: export DO_JEDIOCNVAR=NO
++++ config.base[271]: DO_JEDIOCNVAR=NO
++++ config.base[272]: export DO_JEDISNOWDA=NO
++++ config.base[272]: DO_JEDISNOWDA=NO
++++ config.base[273]: export DO_MERGENSST=NO
++++ config.base[273]: DO_MERGENSST=NO
++++ config.base[276]: export NMEM_ENS=2
++++ config.base[276]: NMEM_ENS=2
++++ config.base[280]: export ENSMEM=002
++++ config.base[280]: ENSMEM=002
++++ config.base[281]: export MEMDIR=mem002
++++ config.base[281]: MEMDIR=mem002
++++ config.base[285]: export USE_OCN_PERTURB_FILES=false
++++ config.base[285]: USE_OCN_PERTURB_FILES=false
++++ config.base[287]: export DOIAU=NO
++++ config.base[287]: DOIAU=NO
++++ config.base[289]: [[ .false. = \.\f\a\l\s\e\. ]]
++++ config.base[290]: export IAU_FHROT=0
++++ config.base[290]: IAU_FHROT=0
++++ config.base[300]: export DONST=YES
++++ config.base[300]: DONST=YES
++++ config.base[301]: [[ YES = \Y\E\S ]]
++++ config.base[301]: export 'FNTSFA=        '
++++ config.base[301]: FNTSFA='        '
++++ config.base[304]: export nst_anl=.true.
++++ config.base[304]: nst_anl=.true.
++++ config.base[307]: export MAKE_NSSTBUFR=NO
++++ config.base[307]: MAKE_NSSTBUFR=NO
++++ config.base[310]: export MAKE_ACFTBUFR=NO
++++ config.base[310]: MAKE_ACFTBUFR=NO
++++ config.base[313]: export DO_METP=NO
++++ config.base[313]: DO_METP=NO
++++ config.base[314]: export DO_FIT2OBS=NO
++++ config.base[314]: DO_FIT2OBS=NO
++++ config.base[317]: export HPSSARCH=NO
++++ config.base[317]: HPSSARCH=NO
++++ config.base[318]: export LOCALARCH=NO
++++ config.base[318]: LOCALARCH=NO
++++ config.base[319]: [[ NO = \Y\E\S ]]
++++ config.base[323]: export ARCH_CYC=00
++++ config.base[323]: ARCH_CYC=00
++++ config.base[324]: export ARCH_WARMICFREQ=4
++++ config.base[324]: ARCH_WARMICFREQ=4
++++ config.base[325]: export ARCH_FCSTICFREQ=1
++++ config.base[325]: ARCH_FCSTICFREQ=1
++++ config.base[327]: export DELETE_COM_IN_ARCHIVE_JOB=YES
++++ config.base[327]: DELETE_COM_IN_ARCHIVE_JOB=YES
++++ config.base[330]: export NUM_SND_COLLECTIVES=9
++++ config.base[330]: NUM_SND_COLLECTIVES=9
++++ config.base[332]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/EXPDIR/C48_S2SWA_gefs_d6f6ae0c/config.atmos_products
++++ config.atmos_products[6]: echo 'BEGIN: config.atmos_products'
+BEGIN: config.atmos_products
++++ config.atmos_products[9]: . /work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/EXPDIR/C48_S2SWA_gefs_d6f6ae0c/config.resources atmos_products
+++++ config.resources[7]: ((  1 != 1  ))
+++++ config.resources[14]: step=atmos_products
+++++ config.resources[16]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[18]: case ${machine} in
+++++ config.resources[22]: npe_node_max=80
+++++ config.resources[51]: export npe_node_max
+++++ config.resources[53]: case ${step} in
+++++ config.resources[215]: export wtime_atmos_products=00:15:00
+++++ config.resources[215]: wtime_atmos_products=00:15:00
+++++ config.resources[216]: export npe_atmos_products=24
+++++ config.resources[216]: npe_atmos_products=24
+++++ config.resources[217]: export nth_atmos_products=1
+++++ config.resources[217]: nth_atmos_products=1
+++++ config.resources[218]: export npe_node_atmos_products=24
+++++ config.resources[218]: npe_node_atmos_products=24
+++++ config.resources[219]: export wtime_atmos_products_gfs=00:15:00
+++++ config.resources[219]: wtime_atmos_products_gfs=00:15:00
+++++ config.resources[220]: export npe_atmos_products_gfs=24
+++++ config.resources[220]: npe_atmos_products_gfs=24
+++++ config.resources[221]: export nth_atmos_products_gfs=1
+++++ config.resources[221]: nth_atmos_products_gfs=1
+++++ config.resources[222]: export npe_node_atmos_products_gfs=24
+++++ config.resources[222]: npe_node_atmos_products_gfs=24
+++++ config.resources[223]: export is_exclusive=True
+++++ config.resources[223]: is_exclusive=True
+++++ config.resources[303]: echo 'END: config.resources'
+END: config.resources
++++ config.atmos_products[12]: export NFHRS_PER_GROUP=3
++++ config.atmos_products[12]: NFHRS_PER_GROUP=3
++++ config.atmos_products[15]: export INTERP_ATMOS_MASTERSH=/work2/noaa/stmp/CI/HERCULES/2620/gefs/ush/interp_atmos_master.sh
++++ config.atmos_products[15]: INTERP_ATMOS_MASTERSH=/work2/noaa/stmp/CI/HERCULES/2620/gefs/ush/interp_atmos_master.sh
++++ config.atmos_products[16]: export INTERP_ATMOS_SFLUXSH=/work2/noaa/stmp/CI/HERCULES/2620/gefs/ush/interp_atmos_sflux.sh
++++ config.atmos_products[16]: INTERP_ATMOS_SFLUXSH=/work2/noaa/stmp/CI/HERCULES/2620/gefs/ush/interp_atmos_sflux.sh
++++ config.atmos_products[18]: export downset=2
++++ config.atmos_products[18]: downset=2
++++ config.atmos_products[19]: export FHOUT_PGBS=6
++++ config.atmos_products[19]: FHOUT_PGBS=6
++++ config.atmos_products[20]: export FLXGF=NO
++++ config.atmos_products[20]: FLXGF=NO
++++ config.atmos_products[23]: export paramlista=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/product/gefs.0p25.fFFF.paramlist.a.txt
++++ config.atmos_products[23]: paramlista=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/product/gefs.0p25.fFFF.paramlist.a.txt
++++ config.atmos_products[24]: export paramlista_anl=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/product/gefs.0p25.anl.paramlist.a.txt
++++ config.atmos_products[24]: paramlista_anl=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/product/gefs.0p25.anl.paramlist.a.txt
++++ config.atmos_products[25]: export paramlista_f000=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/product/gefs.0p25.f000.paramlist.a.txt
++++ config.atmos_products[25]: paramlista_f000=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/product/gefs.0p25.f000.paramlist.a.txt
++++ config.atmos_products[26]: export paramlistb=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/product/gefs.0p25.fFFF.paramlist.b.txt
++++ config.atmos_products[26]: paramlistb=/work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/product/gefs.0p25.fFFF.paramlist.b.txt
++++ config.atmos_products[28]: echo 'END: config.atmos_products'
+END: config.atmos_products
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[110]: source /work2/noaa/stmp/CI/HERCULES/2620/gefs/env/HERCULES.env atmos_products
++++ HERCULES.env[3]: [[ 1 -ne 1 ]]
++++ HERCULES.env[13]: step=atmos_products
++++ HERCULES.env[15]: export 'launcher=srun -l --export=ALL'
++++ HERCULES.env[15]: launcher='srun -l --export=ALL'
++++ HERCULES.env[16]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[16]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[19]: export MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[19]: MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[20]: export MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[20]: MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[21]: export MPI_GROUP_MAX=256
++++ HERCULES.env[21]: MPI_GROUP_MAX=256
++++ HERCULES.env[22]: export MPI_MEMMAP_OFF=1
++++ HERCULES.env[22]: MPI_MEMMAP_OFF=1
++++ HERCULES.env[23]: export MP_STDOUTMODE=ORDERED
++++ HERCULES.env[23]: MP_STDOUTMODE=ORDERED
++++ HERCULES.env[24]: export KMP_AFFINITY=scatter
++++ HERCULES.env[24]: KMP_AFFINITY=scatter
++++ HERCULES.env[25]: export OMP_STACKSIZE=2048000
++++ HERCULES.env[25]: OMP_STACKSIZE=2048000
++++ HERCULES.env[26]: export NTHSTACK=1024000000
++++ HERCULES.env[26]: NTHSTACK=1024000000
++++ HERCULES.env[28]: export I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[28]: I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[29]: export I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[29]: I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[31]: ulimit -s unlimited
++++ HERCULES.env[32]: ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 2042963
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 156057600
+open files                          (-n) 131072
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) unlimited
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 1028798
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
++++ HERCULES.env[34]: case ${step} in
++++ HERCULES.env[233]: export USE_CFP=YES
++++ HERCULES.env[233]: USE_CFP=YES
+++ jjob_header.sh[111]: status=0
+++ jjob_header.sh[112]: ((  status != 0  ))
++ JGLOBAL_ATMOS_PRODUCTS[12]: YMD=20210323
++ JGLOBAL_ATMOS_PRODUCTS[12]: HH=12
++ JGLOBAL_ATMOS_PRODUCTS[12]: declare_from_tmpl -rx COM_ATMOS_ANALYSIS COM_ATMOS_HISTORY COM_ATMOS_MASTER
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_ANALYSIS=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/analysis/atmos
+declare_from_tmpl :: COM_ATMOS_HISTORY=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/model_data/atmos/history
+declare_from_tmpl :: COM_ATMOS_MASTER=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/model_data/atmos/master
++ JGLOBAL_ATMOS_PRODUCTS[14]: for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[15]: prod_dir=COM_ATMOS_GRIB_0p25
++ JGLOBAL_ATMOS_PRODUCTS[16]: GRID=0p25
++ JGLOBAL_ATMOS_PRODUCTS[16]: YMD=20210323
++ JGLOBAL_ATMOS_PRODUCTS[16]: HH=12
++ JGLOBAL_ATMOS_PRODUCTS[16]: declare_from_tmpl -rx COM_ATMOS_GRIB_0p25:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_GRIB_0p25=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/products/atmos/grib2/0p25
++ JGLOBAL_ATMOS_PRODUCTS[17]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/products/atmos/grib2/0p25 ]]
++ JGLOBAL_ATMOS_PRODUCTS[14]: for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[15]: prod_dir=COM_ATMOS_GRIB_0p50
++ JGLOBAL_ATMOS_PRODUCTS[16]: GRID=0p50
++ JGLOBAL_ATMOS_PRODUCTS[16]: YMD=20210323
++ JGLOBAL_ATMOS_PRODUCTS[16]: HH=12
++ JGLOBAL_ATMOS_PRODUCTS[16]: declare_from_tmpl -rx COM_ATMOS_GRIB_0p50:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_GRIB_0p50=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/products/atmos/grib2/0p50
++ JGLOBAL_ATMOS_PRODUCTS[17]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/products/atmos/grib2/0p50 ]]
++ JGLOBAL_ATMOS_PRODUCTS[14]: for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[15]: prod_dir=COM_ATMOS_GRIB_1p00
++ JGLOBAL_ATMOS_PRODUCTS[16]: GRID=1p00
++ JGLOBAL_ATMOS_PRODUCTS[16]: YMD=20210323
++ JGLOBAL_ATMOS_PRODUCTS[16]: HH=12
++ JGLOBAL_ATMOS_PRODUCTS[16]: declare_from_tmpl -rx COM_ATMOS_GRIB_1p00:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_GRIB_1p00=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/products/atmos/grib2/1p00
++ JGLOBAL_ATMOS_PRODUCTS[17]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/products/atmos/grib2/1p00 ]]
++ JGLOBAL_ATMOS_PRODUCTS[21]: export PREFIX=gefs.t12z.
++ JGLOBAL_ATMOS_PRODUCTS[21]: PREFIX=gefs.t12z.
++ JGLOBAL_ATMOS_PRODUCTS[25]: /work2/noaa/stmp/CI/HERCULES/2620/gefs/scripts/exglobal_atmos_products.sh
+Begin exglobal_atmos_products.sh at Thu May 30 16:12:02 UTC 2024
++ exglobal_atmos_products.sh[6]: export WGRIB2=wgrib2
++ exglobal_atmos_products.sh[6]: WGRIB2=wgrib2
++ exglobal_atmos_products.sh[9]: INTERP_ATMOS_MASTERSH=/work2/noaa/stmp/CI/HERCULES/2620/gefs/ush/interp_atmos_master.sh
++ exglobal_atmos_products.sh[10]: INTERP_ATMOS_SFLUXSH=/work2/noaa/stmp/CI/HERCULES/2620/gefs/ush/interp_atmos_sflux.sh
++ exglobal_atmos_products.sh[13]: downset=2
++ exglobal_atmos_products.sh[14]: npe_atmos_products=24
++ exglobal_atmos_products.sh[17]: WGNE=NO
++ exglobal_atmos_products.sh[18]: FHMAX_WGNE=0
++ exglobal_atmos_products.sh[20]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_d6f6ae0c/atmos_products.1546491
++ exglobal_atmos_products.sh[24]: ((  FORECAST_HOUR <= 0  ))
+++ exglobal_atmos_products.sh[35]: printf f%03d 66
++ exglobal_atmos_products.sh[35]: fhr3=f066
++ exglobal_atmos_products.sh[36]: ((  FORECAST_HOUR%FHOUT_PGBS == 0  ))
++ exglobal_atmos_products.sh[37]: PGBS=YES
++ exglobal_atmos_products.sh[45]: MASTER_FILE=/work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/model_data/atmos/master/gefs.t12z.master.grb2f066
++ exglobal_atmos_products.sh[50]: wgrib2 /work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/model_data/atmos/master/gefs.t12z.master.grb2f066
++ exglobal_atmos_products.sh[50]: grep -F -f /work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/product/gefs.0p25.fFFF.paramlist.a.txt
++ exglobal_atmos_products.sh[50]: wgrib2 -i -grib tmpfile_f066 /work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/model_data/atmos/master/gefs.t12z.master.grb2f066
+1:0:d=2021032312:PRMSL:mean sea level:66 hour fcst:ENS=+0
+26:541301:d=2021032312:VIS:surface:66 hour fcst:ENS=+0
+30:598855:d=2021032312:GUST:surface:66 hour fcst:ENS=+0
++ exglobal_atmos_products.sh[51]: export err=0
++ exglobal_atmos_products.sh[51]: err=0
++ exglobal_atmos_products.sh[51]: err_chk
+ completed cleanly
++ exglobal_atmos_products.sh[53]: ((  downset == 2  ))
++ exglobal_atmos_products.sh[55]: wgrib2 /work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/model_data/atmos/master/gefs.t12z.master.grb2f066
++ exglobal_atmos_products.sh[55]: grep -F -f /work2/noaa/stmp/CI/HERCULES/2620/gefs/parm/product/gefs.0p25.fFFF.paramlist.b.txt
++ exglobal_atmos_products.sh[55]: wgrib2 -i -grib tmpfileb_f066 /work2/noaa/stmp/CI/HERCULES/2620/RUNTESTS/COMROOT/C48_S2SWA_gefs_d6f6ae0c/gefs.20210323/12/mem002/model_data/atmos/master/gefs.t12z.master.grb2f066
+2:25919:d=2021032312:PRES:1 hybrid level:66 hour fcst:ENS=+0
+3:51651:d=2021032312:HGT:1 hybrid level:66 hour fcst:ENS=+0
+4:63404:d=2021032312:TMP:1 hybrid level:66 hour fcst:ENS=+0
+5:84076:d=2021032312:RH:1 hybrid level:66 hour fcst:ENS=+0
+6:110915:d=2021032312:UGRD:1 hybrid level:66 hour fcst:ENS=+0
+7:131417:d=2021032312:VGRD:1 hybrid level:66 hour fcst:ENS=+0
+8:152481:d=2021032312:PRES:2 hybrid level:66 hour fcst:ENS=+0
+9:178218:d=2021032312:HGT:2 hybrid level:66 hour fcst:ENS=+0
+10:190969:d=2021032312:TMP:2 hybrid level:66 hour fcst:ENS=+0
+11:211628:d=2021032312:RH:2 hybrid level:66 hour fcst:ENS=+0
+12:238462:d=2021032312:UGRD:2 hybrid level:66 hour fcst:ENS=+0
+13:259632:d=2021032312:VGRD:2 hybrid level:66 hour fcst:ENS=+0
+14:281174:d=2021032312:PRES:3 hybrid level:66 hour fcst:ENS=+0
+15:306891:d=2021032312:HGT:3 hybrid level:66 hour fcst:ENS=+0
+16:320201:d=2021032312:TMP:3 hybrid level:66 hour fcst:ENS=+0
+17:341058:d=2021032312:RH:3 hybrid level:66 hour fcst:ENS=+0
+18:367876:d=2021032312:UGRD:3 hybrid level:66 hour fcst:ENS=+0
+19:389222:d=2021032312:VGRD:3 hybrid level:66 hour fcst:ENS=+0
+20:410927:d=2021032312:PRES:4 hybrid level:66 hour fcst:ENS=+0
+21:436637:d=2021032312:HGT:4 hybrid level:66 hour fcst:ENS=+0
+22:450450:d=2021032312:TMP:4 hybrid level:66 hour fcst:ENS=+0
+23:471105:d=2021032312:RH:4 hybrid level:66 hour fcst:ENS=+0
+24:497930:d=2021032312:UGRD:4 hybrid level:66 hour fcst:ENS=+0
+25:519433:d=2021032312:VGRD:4 hybrid level:66 hour fcst:ENS=+0
+27:554899:d=2021032312:UGRD:planetary boundary layer:66 hour fcst:ENS=+0
+28:569167:d=2021032312:VGRD:planetary boundary layer:66 hour fcst:ENS=+0
+29:583883:d=2021032312:VRATE:planetary boundary layer:66 hour fcst:ENS=+0
+31:613892:d=2021032312:HGT:1 mb:66 hour fcst:ENS=+0
+32:634042:d=2021032312:TMP:1 mb:66 hour fcst:ENS=+0
+33:642323:d=2021032312:SPFH:1 mb:66 hour fcst:ENS=+0
+34:654705:d=2021032312:VVEL:1 mb:66 hour fcst:ENS=+0
+35:680830:d=2021032312:UGRD:1 mb:66 hour fcst:ENS=+0
+36:698957:d=2021032312:VGRD:1 mb:66 hour fcst:ENS=+0
+37:716400:d=2021032312:O3MR:1 mb:66 hour fcst:ENS=+0
+38:736722:d=2021032312:HGT:2 mb:66 hour fcst:ENS=+0
+39:756631:d=2021032312:TMP:2 mb:66 hour fcst:ENS=+0
+40:765506:d=2021032312:SPFH:2 mb:66 hour fcst:ENS=+0
+41:775705:d=2021032312:VVEL:2 mb:66 hour fcst:ENS=+0
+42:805297:d=2021032312:UGRD:2 mb:66 hour fcst:ENS=+0
+43:823641:d=2021032312:VGRD:2 mb:66 hour fcst:ENS=+0
+44:841223:d=2021032312:O3MR:2 mb:66 hour fcst:ENS=+0
+45:863263:d=2021032312:HGT:3 mb:66 hour fcst:ENS=+0
+46:883174:d=2021032312:TMP:3 mb:66 hour fcst:ENS=+0
+47:891855:d=2021032312:SPFH:3 mb:66 hour fcst:ENS=+0
+48:903030:d=2021032312:VVEL:3 mb:66 hour fcst:ENS=+0
+49:933836:d=2021032312:UGRD:3 mb:66 hour fcst:ENS=+0
+50:944771:d=2021032312:VGRD:3 mb:66 hour fcst:ENS=+0
+51:962205:d=2021032312:O3MR:3 mb:66 hour fcst:ENS=+0
+52:984863:d=2021032312:HGT:5 mb:66 hour fcst:ENS=+0
+53:1004832:d=2021032312:TMP:5 mb:66 hour fcst:ENS=+0
+54:1013603:d=2021032312:SPFH:5 mb:66 hour fcst:ENS=+0
+55:1026456:d=2021032312:VVEL:5 mb:66 hour fcst:ENS=+0
+56:1056339:d=2021032312:UGRD:5 mb:66 hour fcst:ENS=+0
+57:1067513:d=2021032312:VGRD:5 mb:66 hour fcst:ENS=+0
+58:1085468:d=2021032312:O3MR:5 mb:66 hour fcst:ENS=+0
+59:1107359:d=2021032312:HGT:7 mb:66 hour fcst:ENS=+0
+60:1127420:d=2021032312:TMP:7 mb:66 hour fcst:ENS=+0
+61:1135954:d=2021032312:SPFH:7 mb:66 hour fcst:ENS=+0
+62:1147429:d=2021032312:VVEL:7 mb:66 hour fcst:ENS=+0
+63:1172797:d=2021032312:UGRD:7 mb:66 hour fcst:ENS=+0
+64:1183895:d=2021032312:VGRD:7 mb:66 hour fcst:ENS=+0
+65:1201804:d=2021032312:O3MR:7 mb:66 hour fcst:ENS=+0
+66:1224630:d=2021032312:HGT:10 mb:66 hour fcst:ENS=+0
+67:1244566:d=2021032312:TMP:10 mb:66 hour fcst:ENS=+0
+68:1253016:d=2021032312:RH:10 mb:66 hour fcst:ENS=+0
+69:1260052:d=2021032312:SPFH:10 mb:66 hour fcst:ENS=+0
+70:1270908:d=2021032312:VVEL:10 mb:66 hour fcst:ENS=+0
+71:1297531:d=2021032312:UGRD:10 mb:66 hour fcst:ENS=+0
+72:1308258:d=2021032312:VGRD:10 mb:66 hour fcst:ENS=+0
+73:1326112:d=2021032312:ABSV:10 mb:66 hour fcst:ENS=+0
+75:1343211:d=2021032312:O3MR:10 mb:66 hour fcst:ENS=+0
+76:1361022:d=2021032312:HGT:20 mb:66 hour fcst:ENS=+0
+77:1380548:d=2021032312:TMP:20 mb:66 hour fcst:ENS=+0
+78:1388850:d=2021032312:RH:20 mb:66 hour fcst:ENS=+0
+79:1394762:d=2021032312:SPFH:20 mb:66 hour fcst:ENS=+0
+80:1402096:d=2021032312:VVEL:20 mb:66 hour fcst:ENS=+0
+81:1430508:d=2021032312:UGRD:20 mb:66 hour fcst:ENS=+0
+82:1448758:d=2021032312:VGRD:20 mb:66 hour fcst:ENS=+0
+83:1466562:d=2021032312:ABSV:20 mb:66 hour fcst:ENS=+0
+85:1483552:d=2021032312:O3MR:20 mb:66 hour fcst:ENS=+0
+86:1507250:d=2021032312:HGT:30 mb:66 hour fcst:ENS=+0
+87:1526469:d=2021032312:TMP:30 mb:66 hour fcst:ENS=+0
+88:1534920:d=2021032312:RH:30 mb:66 hour fcst:ENS=+0
+89:1542137:d=2021032312:SPFH:30 mb:66 hour fcst:ENS=+0
+90:1549789:d=2021032312:VVEL:30 mb:66 hour fcst:ENS=+0
+91:1579645:d=2021032312:UGRD:30 mb:66 hour fcst:ENS=+0
+92:1597880:d=2021032312:VGRD:30 mb:66 hour fcst:ENS=+0
+93:1615644:d=2021032312:ABSV:30 mb:66 hour fcst:ENS=+0
+95:1632508:d=2021032312:O3MR:30 mb:66 hour fcst:ENS=+0
+96:1658246:d=2021032312:HGT:50 mb:66 hour fcst:ENS=+0
+97:1677197:d=2021032312:TMP:50 mb:66 hour fcst:ENS=+0
+98:1685842:d=2021032312:RH:50 mb:66 hour fcst:ENS=+0
+99:1696161:d=2021032312:SPFH:50 mb:66 hour fcst:ENS=+0
+100:1706061:d=2021032312:VVEL:50 mb:66 hour fcst:ENS=+0
+101:1737456:d=2021032312:UGRD:50 mb:66 hour fcst:ENS=+0
+102:1755570:d=2021032312:VGRD:50 mb:66 hour fcst:ENS=+0
+103:1773530:d=2021032312:ABSV:50 mb:66 hour fcst:ENS=+0
+105:1790628:d=2021032312:O3MR:50 mb:66 hour fcst:ENS=+0
+106:1815960:d=2021032312:HGT:70 mb:66 hour fcst:ENS=+0
+107:1835105:d=2021032312:TMP:70 mb:66 hour fcst:ENS=+0
+108:1844406:d=2021032312:RH:70 mb:66 hour fcst:ENS=+0
+109:1852496:d=2021032312:SPFH:70 mb:66 hour fcst:ENS=+0
+110:1864187:d=2021032312:VVEL:70 mb:66 hour fcst:ENS=+0
+111:1888829:d=2021032312:UGRD:70 mb:66 hour fcst:ENS=+0
+112:1907430:d=2021032312:VGRD:70 mb:66 hour fcst:ENS=+0
+113:1925746:d=2021032312:ABSV:70 mb:66 hour fcst:ENS=+0
+115:1943150:d=2021032312:O3MR:70 mb:66 hour fcst:ENS=+0
+116:1968446:d=2021032312:HGT:100 mb:66 hour fcst:ENS=+0
+117:1988321:d=2021032312:TMP:100 mb:66 hour fcst:ENS=+0
+118:1998257:d=2021032312:RH:100 mb:66 hour fcst:ENS=+0
+119:2008347:d=2021032312:SPFH:100 mb:66 hour fcst:ENS=+0
+120:2022173:d=2021032312:VVEL:100 mb:66 hour fcst:ENS=+0
+121:2048738:d=2021032312:UGRD:100 mb:66 hour fcst:ENS=+0
+122:2068428:d=2021032312:VGRD:100 mb:66 hour fcst:ENS=+0
+123:2087840:d=2021032312:ABSV:100 mb:66 hour fcst:ENS=+0
+125:2106085:d=2021032312:O3MR:100 mb:66 hour fcst:ENS=+0
+126:2129839:d=2021032312:O3MR:125 mb:66 hour fcst:ENS=+0
+127:2152409:d=2021032312:HGT:150 mb:66 hour fcst:ENS=+0
+128:2172874:d=2021032312:TMP:150 mb:66 hour fcst:ENS=+0
+129:2182887:d=2021032312:RH:150 mb:66 hour fcst:ENS=+0
+130:2194520:d=2021032312:SPFH:150 mb:66 hour fcst:ENS=+0
+131:2208192:d=2021032312:VVEL:150 mb:66 hour fcst:ENS=+0
+132:2235266:d=2021032312:UGRD:150 mb:66 hour fcst:ENS=+0
+133:2255855:d=2021032312:VGRD:150 mb:66 hour fcst:ENS=+0
+134:2276364:d=2021032312:ABSV:150 mb:66 hour fcst:ENS=+0
+136:2295689:d=2021032312:O3MR:150 mb:66 hour fcst:ENS=+0
+137:2317534:d=2021032312:HGT:200 mb:66 hour fcst:ENS=+0
+138:2338746:d=2021032312:TMP:200 mb:66 hour fcst:ENS=+0
+139:2349582:d=2021032312:RH:200 mb:66 hour fcst:ENS=+0
+140:2364943:d=2021032312:SPFH:200 mb:66 hour fcst:ENS=+0
+141:2379260:d=2021032312:VVEL:200 mb:66 hour fcst:ENS=+0
+142:2402293:d=2021032312:UGRD:200 mb:66 hour fcst:ENS=+0
+143:2416251:d=2021032312:VGRD:200 mb:66 hour fcst:ENS=+0
+144:2430380:d=2021032312:ABSV:200 mb:66 hour fcst:ENS=+0
+146:2450786:d=2021032312:O3MR:200 mb:66 hour fcst:ENS=+0
+147:2470984:d=2021032312:HGT:250 mb:66 hour fcst:ENS=+0
+148:2492878:d=2021032312:TMP:250 mb:66 hour fcst:ENS=+0
+149:2504564:d=2021032312:RH:250 mb:66 hour fcst:ENS=+0
+150:2522861:d=2021032312:SPFH:250 mb:66 hour fcst:ENS=+0
+151:2542005:d=2021032312:VVEL:250 mb:66 hour fcst:ENS=+0
+152:2566788:d=2021032312:UGRD:250 mb:66 hour fcst:ENS=+0
+153:2581616:d=2021032312:VGRD:250 mb:66 hour fcst:ENS=+0
+154:2596789:d=2021032312:ABSV:250 mb:66 hour fcst:ENS=+0
+156:2618855:d=2021032312:O3MR:250 mb:66 hour fcst:ENS=+0
+157:2643885:d=2021032312:HGT:300 mb:66 hour fcst:ENS=+0
+158:2666109:d=2021032312:TMP:300 mb:66 hour fcst:ENS=+0
+159:2677351:d=2021032312:RH:300 mb:66 hour fcst:ENS=+0
+160:2696423:d=2021032312:SPFH:300 mb:66 hour fcst:ENS=+0
+161:2711459:d=2021032312:VVEL:300 mb:66 hour fcst:ENS=+0
+162:2737404:d=2021032312:UGRD:300 mb:66 hour fcst:ENS=+0
+163:2752543:d=2021032312:VGRD:300 mb:66 hour fcst:ENS=+0
+164:2768507:d=2021032312:ABSV:300 mb:66 hour fcst:ENS=+0
+166:2791462:d=2021032312:O3MR:300 mb:66 hour fcst:ENS=+0
+167:2818052:d=2021032312:HGT:350 mb:66 hour fcst:ENS=+0
+168:2840264:d=2021032312:TMP:350 mb:66 hour fcst:ENS=+0
+169:2851466:d=2021032312:RH:350 mb:66 hour fcst:ENS=+0
+170:2870704:d=2021032312:SPFH:350 mb:66 hour fcst:ENS=+0
+171:2887646:d=2021032312:VVEL:350 mb:66 hour fcst:ENS=+0
+172:2914218:d=2021032312:UGRD:350 mb:66 hour fcst:ENS=+0
+173:2929257:d=2021032312:VGRD:350 mb:66 hour fcst:ENS=+0
+174:2945087:d=2021032312:ABSV:350 mb:66 hour fcst:ENS=+0
+176:2967980:d=2021032312:O3MR:350 mb:66 hour fcst:ENS=+0
+177:2993095:d=2021032312:HGT:400 mb:66 hour fcst:ENS=+0
+178:3015086:d=2021032312:TMP:400 mb:66 hour fcst:ENS=+0
+179:3026142:d=2021032312:RH:400 mb:66 hour fcst:ENS=+0
+180:3045396:d=2021032312:SPFH:400 mb:66 hour fcst:ENS=+0
+181:3063809:d=2021032312:VVEL:400 mb:66 hour fcst:ENS=+0
+182:3090714:d=2021032312:UGRD:400 mb:66 hour fcst:ENS=+0
+183:3105518:d=2021032312:VGRD:400 mb:66 hour fcst:ENS=+0
+184:3128730:d=2021032312:ABSV:400 mb:66 hour fcst:ENS=+0
+186:3151497:d=2021032312:O3MR:400 mb:66 hour fcst:ENS=+0
+187:3175869:d=2021032312:HGT:450 mb:66 hour fcst:ENS=+0
+188:3199985:d=2021032312:TMP:450 mb:66 hour fcst:ENS=+0
+189:3211247:d=2021032312:RH:450 mb:66 hour fcst:ENS=+0
+190:3230683:d=2021032312:SPFH:450 mb:66 hour fcst:ENS=+0
+191:3250640:d=2021032312:VVEL:450 mb:66 hour fcst:ENS=+0
+192:3277754:d=2021032312:UGRD:450 mb:66 hour fcst:ENS=+0
+193:3299875:d=2021032312:VGRD:450 mb:66 hour fcst:ENS=+0
+194:3322627:d=2021032312:ABSV:450 mb:66 hour fcst:ENS=+0
++ exglobal_atmos_products.sh[56]: export err=0
++ exglobal_atmos_products.sh[56]: err=0
++ exglobal_atmos_products.sh[56]: err_chk
+ completed cleanly
++ exglobal_atmos_products.sh[60]: grid_string=0p25
++ exglobal_atmos_products.sh[61]: [[ YES == \Y\E\S ]]
++ exglobal_atmos_products.sh[62]: grid_string=0p25:0p50:1p00
++ exglobal_atmos_products.sh[68]: IFS=:
++ exglobal_atmos_products.sh[68]: read -ra grids
++ exglobal_atmos_products.sh[152]: (( nset=1  ))
++ exglobal_atmos_products.sh[152]: (( nset <= downset  ))
++ exglobal_atmos_products.sh[72]: echo 'Begin processing nset = 1'
+Begin processing nset = 1
++ exglobal_atmos_products.sh[75]: nproc=24
++ exglobal_atmos_products.sh[78]: ((  nset == 1  ))
++ exglobal_atmos_products.sh[79]: grp=
++ exglobal_atmos_products.sh[85]: tmpfile=tmpfile_f066
+++ exglobal_atmos_products.sh[88]: wgrib2 tmpfile_f066
+++ exglobal_atmos_products.sh[88]: wc -l
++ exglobal_atmos_products.sh[88]: ncount=3
++ exglobal_atmos_products.sh[89]: ((  nproc > ncount  ))
++ exglobal_atmos_products.sh[90]: echo 'WARNING: Total no. of available processors '\''24'\'' exceeds no. of records '\''3'\'' in tmpfile_f066'
+WARNING: Total no. of available processors '24' exceeds no. of records '3' in tmpfile_f066
++ exglobal_atmos_products.sh[91]: echo 'Reduce nproc to 3 (or less) to not waste resources'
+Reduce nproc to 3 (or less) to not waste resources
++ exglobal_atmos_products.sh[93]: inv=0
++ exglobal_atmos_products.sh[94]: rm -f /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_d6f6ae0c/atmos_products.1546491/poescript
++ exglobal_atmos_products.sh[96]: last=0
++ exglobal_atmos_products.sh[127]: (( iproc = 1  ))
++ exglobal_atmos_products.sh[127]: (( iproc <= nproc  ))
++ exglobal_atmos_products.sh[98]: first=1
++ exglobal_atmos_products.sh[99]: last=0
++ exglobal_atmos_products.sh[100]: ((  last > ncount  ))
++ exglobal_atmos_products.sh[105]: set +e
++ exglobal_atmos_products.sh[107]: wgrib2 -d 0 tmpfile_f066
++ exglobal_atmos_products.sh[107]: grep -E -i 'ugrd|ustm|uflx|u-gwd|land'
++ exglobal_atmos_products.sh[108]: rc=1
++ exglobal_atmos_products.sh[109]: set_strict
++ preamble.sh[43]: [[ YES == \Y\E\S ]]
++ preamble.sh[45]: set -eu
++ exglobal_atmos_products.sh[110]: ((  rc == 0  ))
++ exglobal_atmos_products.sh[113]: ((  iproc == nproc  ))
++ exglobal_atmos_products.sh[118]: wgrib2 tmpfile_f066 -for 1:0 -grib tmpfile_f066_1
+
+*** FATAL ERROR: parse_loop: end < start 1:0 ***
+
++ exglobal_atmos_products.sh[1]: postamble exglobal_atmos_products.sh 1717085522 8
++ preamble.sh[70]: set +x
+End exglobal_atmos_products.sh at 16:12:03 with error code 8 (time elapsed: 00:00:01)
++ JGLOBAL_ATMOS_PRODUCTS[1]: postamble JGLOBAL_ATMOS_PRODUCTS 1717085512 8
++ preamble.sh[70]: set +x
+End JGLOBAL_ATMOS_PRODUCTS at 16:12:03 with error code 8 (time elapsed: 00:00:11)
++ atmos_products.sh[1]: postamble atmos_products.sh 1717085510 8
++ preamble.sh[70]: set +x
+End atmos_products.sh at 16:12:03 with error code 8 (time elapsed: 00:00:13)
