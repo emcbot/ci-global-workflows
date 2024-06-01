@@ -1,0 +1,1104 @@
+Begin analcalc.sh at Sat Jun  1 22:19:58 UTC 2024
++ analcalc.sh[7]: . /work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) contrib/0.1                      41) grib-util/1.3.0
+  2) intel-oneapi-compilers/2023.1.0  42) g2tmpl/1.10.2
+  3) stack-intel/2021.9.0             43) gsi-ncdiag/1.1.2
+  4) intel-oneapi-mpi/2021.9.0        44) crtm-fix/2.4.0.1_emc
+  5) stack-intel-oneapi-mpi/2021.9.0  45) git-lfs/3.1.2
+  6) intel-oneapi-mkl/2023.1.0        46) crtm/2.4.0.1
+  7) zlib/1.2.13                      47) openblas/0.3.24
+  8) pigz/2.7                         48) py-setuptools/63.4.3
+  9) zstd/1.5.2                       49) py-numpy/1.23.4
+ 10) tar/1.34                         50) bufr/11.7.0
+ 11) gettext/0.21.1                   51) gmake/4.2.1
+ 12) libxcrypt/4.4.35                 52) wgrib2/2.0.8
+ 13) sqlite/3.43.2                    53) py-f90nml/1.4.3
+ 14) util-linux-uuid/2.38.1           54) py-cftime/1.0.3.4
+ 15) python/3.11.6                    55) py-netcdf4/1.5.8
+ 16) libjpeg/2.1.0                    56) libyaml/0.2.5
+ 17) jasper/2.0.32                    57) py-pyyaml/6.0
+ 18) libpng/1.6.37                    58) py-markupsafe/2.1.3
+ 19) openjpeg/2.3.1                   59) py-jinja2/3.1.2
+ 20) eccodes/2.32.0                   60) py-bottleneck/1.3.7
+ 21) fftw/3.3.10                      61) py-numexpr/2.8.4
+ 22) nghttp2/1.57.0                   62) py-et-xmlfile/1.0.1
+ 23) curl/8.4.0                       63) py-openpyxl/3.1.2
+ 24) proj/9.2.1                       64) py-pytz/2023.3
+ 25) udunits/2.2.28                   65) py-pyxlsb/1.0.10
+ 26) cdo/2.2.0                        66) py-xlrd/2.0.1
+ 27) hdf5/1.14.0                      67) py-xlsxwriter/3.1.7
+ 28) snappy/1.1.10                    68) py-xlwt/1.3.0
+ 29) c-blosc/1.21.5                   69) py-pandas/1.5.3
+ 30) netcdf-c/4.9.2                   70) py-six/1.16.0
+ 31) netcdf-fortran/4.6.1             71) py-python-dateutil/2.8.2
+ 32) antlr/2.7.7                      72) g2c/1.6.4
+ 33) gsl/2.7.1                        73) netcdf-cxx4/4.3.1
+ 34) nco/5.0.6                        74) met/9.1.3
+ 35) bacio/2.4.1                      75) metplus/3.1.1
+ 36) w3emc/2.10.0                     76) py-packaging/23.1
+ 37) prod_util/2.1.1                  77) py-xarray/2023.7.0
+ 38) g2/3.4.5                         78) prepobs/1.0.1
+ 39) sp/2.5.0                         79) fit2obs/1.1.1
+ 40) ip/4.3.0                         80) module_base.hercules
+
+ 
+
++ analcalc.sh[8]: status=0
++ analcalc.sh[9]: [[ 0 -ne 0 ]]
++ analcalc.sh[11]: export job=analcalc
++ analcalc.sh[11]: job=analcalc
++ analcalc.sh[12]: export jobid=analcalc.2881501
++ analcalc.sh[12]: jobid=analcalc.2881501
++ analcalc.sh[16]: /work2/noaa/stmp/CI/HERCULES/2645/gfs/jobs/JGLOBAL_ATMOS_ANALYSIS_CALC
+Begin JGLOBAL_ATMOS_ANALYSIS_CALC at Sat Jun  1 22:20:01 UTC 2024
++ JGLOBAL_ATMOS_ANALYSIS_CALC[4]: source /work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/jjob_header.sh -e analcalc -c 'base anal analcalc'
+++ jjob_header.sh[44]: OPTIND=1
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[48]: env_job=analcalc
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[47]: read -ra configs
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[59]: shift 4
+++ jjob_header.sh[61]: [[ -z analcalc ]]
+++ jjob_header.sh[69]: export DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501
+++ jjob_header.sh[69]: DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501
+++ jjob_header.sh[70]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[71]: rm -rf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501
+++ jjob_header.sh[73]: mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501
+++ jjob_header.sh[74]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501
+++ jjob_header.sh[80]: export cycle=t00z
+++ jjob_header.sh[80]: cycle=t00z
+++ jjob_header.sh[81]: setpdy.sh
+sed: can't read /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/date/t00z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[82]: source ./PDY
++++ PDY[1]: export PDYm7=20211214
++++ PDY[1]: PDYm7=20211214
++++ PDY[2]: export PDYm6=20211215
++++ PDY[2]: PDYm6=20211215
++++ PDY[3]: export PDYm5=20211216
++++ PDY[3]: PDYm5=20211216
++++ PDY[4]: export PDYm4=20211217
++++ PDY[4]: PDYm4=20211217
++++ PDY[5]: export PDYm3=20211218
++++ PDY[5]: PDYm3=20211218
++++ PDY[6]: export PDYm2=20211219
++++ PDY[6]: PDYm2=20211219
++++ PDY[7]: export PDYm1=20211220
++++ PDY[7]: PDYm1=20211220
++++ PDY[8]: export PDY=20211221
++++ PDY[8]: PDY=20211221
++++ PDY[9]: export PDYp1=20211222
++++ PDY[9]: PDYp1=20211222
++++ PDY[10]: export PDYp2=20211223
++++ PDY[10]: PDYp2=20211223
++++ PDY[11]: export PDYp3=20211224
++++ PDY[11]: PDYp3=20211224
++++ PDY[12]: export PDYp4=20211225
++++ PDY[12]: PDYp4=20211225
++++ PDY[13]: export PDYp5=20211226
++++ PDY[13]: PDYp5=20211226
++++ PDY[14]: export PDYp6=20211227
++++ PDY[14]: PDYp6=20211227
++++ PDY[15]: export PDYp7=20211228
++++ PDY[15]: PDYp7=20211228
+++ jjob_header.sh[88]: export pid=2881788
+++ jjob_header.sh[88]: pid=2881788
+++ jjob_header.sh[89]: export pgmout=OUTPUT.2881788
+++ jjob_header.sh[89]: pgmout=OUTPUT.2881788
+++ jjob_header.sh[90]: export pgmerr=errfile
+++ jjob_header.sh[90]: pgmerr=errfile
+++ jjob_header.sh[96]: export EXPDIR=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/EXPDIR/C96C48_hybatmDA_786c0ac9
+++ jjob_header.sh[96]: EXPDIR=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/EXPDIR/C96C48_hybatmDA_786c0ac9
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/EXPDIR/C96C48_hybatmDA_786c0ac9/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=HERCULES
++++ config.base[9]: machine=HERCULES
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=nems
++++ config.base[15]: ACCOUNT=nems
++++ config.base[16]: export ACCOUNT_SERVICE=fv3-cpu
++++ config.base[16]: ACCOUNT_SERVICE=fv3-cpu
++++ config.base[17]: export QUEUE=batch
++++ config.base[17]: QUEUE=batch
++++ config.base[18]: export QUEUE_SERVICE=batch
++++ config.base[18]: QUEUE_SERVICE=batch
++++ config.base[19]: export PARTITION_BATCH=hercules
++++ config.base[19]: PARTITION_BATCH=hercules
++++ config.base[20]: export PARTITION_SERVICE=service
++++ config.base[20]: PARTITION_SERVICE=service
++++ config.base[21]: export RESERVATION=
++++ config.base[21]: RESERVATION=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/work2/noaa/stmp/CI/HERCULES/2645/gfs
++++ config.base[27]: HOMEgfs=/work2/noaa/stmp/CI/HERCULES/2645/gfs
++++ config.base[28]: export EXECgfs=/work2/noaa/stmp/CI/HERCULES/2645/gfs/exec
++++ config.base[28]: EXECgfs=/work2/noaa/stmp/CI/HERCULES/2645/gfs/exec
++++ config.base[29]: export FIXgfs=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix
++++ config.base[29]: FIXgfs=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix
++++ config.base[30]: export PARMgfs=/work2/noaa/stmp/CI/HERCULES/2645/gfs/parm
++++ config.base[30]: PARMgfs=/work2/noaa/stmp/CI/HERCULES/2645/gfs/parm
++++ config.base[31]: export SCRgfs=/work2/noaa/stmp/CI/HERCULES/2645/gfs/scripts
++++ config.base[31]: SCRgfs=/work2/noaa/stmp/CI/HERCULES/2645/gfs/scripts
++++ config.base[32]: export USHgfs=/work2/noaa/stmp/CI/HERCULES/2645/gfs/ush
++++ config.base[32]: USHgfs=/work2/noaa/stmp/CI/HERCULES/2645/gfs/ush
++++ config.base[34]: export FIXam=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/am
++++ config.base[34]: FIXam=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/am
++++ config.base[35]: export FIXaer=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/aer
++++ config.base[35]: FIXaer=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/aer
++++ config.base[36]: export FIXcpl=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/cpl
++++ config.base[36]: FIXcpl=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/cpl
++++ config.base[37]: export FIXlut=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/lut
++++ config.base[37]: FIXlut=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/lut
++++ config.base[38]: export FIXorog=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/orog
++++ config.base[38]: FIXorog=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/orog
++++ config.base[39]: export FIXcice=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/cice
++++ config.base[39]: FIXcice=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/cice
++++ config.base[40]: export FIXmom=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/mom6
++++ config.base[40]: FIXmom=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/mom6
++++ config.base[41]: export FIXreg2grb2=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/reg2grb2
++++ config.base[41]: FIXreg2grb2=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/reg2grb2
++++ config.base[42]: export FIXugwd=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/ugwd
++++ config.base[42]: FIXugwd=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/ugwd
++++ config.base[43]: export FIXgdas=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/gdas
++++ config.base[43]: FIXgdas=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/gdas
++++ config.base[48]: export PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[48]: PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[49]: export COMROOT=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT
++++ config.base[49]: COMROOT=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT
++++ config.base[50]: export COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[50]: COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[51]: export DMPDIR=/work/noaa/rstprod/dump
++++ config.base[51]: DMPDIR=/work/noaa/rstprod/dump
++++ config.base[52]: export BASE_CPLIC=/work/noaa/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[52]: BASE_CPLIC=/work/noaa/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[56]: export COMINecmwf=/work/noaa/global/glopara/data/external_gempak/ecmwf
++++ config.base[56]: COMINecmwf=/work/noaa/global/glopara/data/external_gempak/ecmwf
++++ config.base[57]: export COMINnam=/work/noaa/global/glopara/data/external_gempak/nam
++++ config.base[57]: COMINnam=/work/noaa/global/glopara/data/external_gempak/nam
++++ config.base[58]: export COMINukmet=/work/noaa/global/glopara/data/external_gempak/ukmet
++++ config.base[58]: COMINukmet=/work/noaa/global/glopara/data/external_gempak/ukmet
++++ config.base[61]: export HOMEDIR=/work/noaa/global/mterry
++++ config.base[61]: HOMEDIR=/work/noaa/global/mterry
++++ config.base[62]: export STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[62]: STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[63]: export PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[63]: PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[64]: export NOSCRUB=/work/noaa/global/mterry
++++ config.base[64]: NOSCRUB=/work/noaa/global/mterry
++++ config.base[67]: export BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[67]: BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[70]: export DO_GOES=NO
++++ config.base[70]: DO_GOES=NO
++++ config.base[71]: export DO_BUFRSND=NO
++++ config.base[71]: DO_BUFRSND=NO
++++ config.base[72]: export DO_GEMPAK=NO
++++ config.base[72]: DO_GEMPAK=NO
++++ config.base[73]: export DO_AWIPS=NO
++++ config.base[73]: DO_AWIPS=NO
++++ config.base[74]: export DO_NPOESS=NO
++++ config.base[74]: DO_NPOESS=NO
++++ config.base[75]: export DO_TRACKER=YES
++++ config.base[75]: DO_TRACKER=YES
++++ config.base[76]: export DO_GENESIS=YES
++++ config.base[76]: DO_GENESIS=YES
++++ config.base[77]: export DO_GENESIS_FSU=NO
++++ config.base[77]: DO_GENESIS_FSU=NO
++++ config.base[78]: export DO_VERFOZN=YES
++++ config.base[78]: DO_VERFOZN=YES
++++ config.base[79]: export DO_VERFRAD=YES
++++ config.base[79]: DO_VERFRAD=YES
++++ config.base[80]: export DO_VMINMON=YES
++++ config.base[80]: DO_VMINMON=YES
++++ config.base[81]: export DO_MOS=NO
++++ config.base[81]: DO_MOS=NO
++++ config.base[87]: export REALTIME=YES
++++ config.base[87]: REALTIME=YES
++++ config.base[90]: export MODE=cycled
++++ config.base[90]: MODE=cycled
++++ config.base[99]: export FIXgsi=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/gsi
++++ config.base[99]: FIXgsi=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/gsi
++++ config.base[100]: export HOMEpost=/work2/noaa/stmp/CI/HERCULES/2645/gfs
++++ config.base[100]: HOMEpost=/work2/noaa/stmp/CI/HERCULES/2645/gfs
++++ config.base[101]: export HOMEobsproc=/work/noaa/global/glopara/git_rocky9/obsproc/v1.1.2
++++ config.base[101]: HOMEobsproc=/work/noaa/global/glopara/git_rocky9/obsproc/v1.1.2
++++ config.base[104]: export 'NCP=/bin/cp -p'
++++ config.base[104]: NCP='/bin/cp -p'
++++ config.base[105]: export NMV=/bin/mv
++++ config.base[105]: NMV=/bin/mv
++++ config.base[106]: export 'NLN=/bin/ln -sf'
++++ config.base[106]: NLN='/bin/ln -sf'
++++ config.base[107]: export VERBOSE=YES
++++ config.base[107]: VERBOSE=YES
++++ config.base[108]: export KEEPDATA=NO
++++ config.base[108]: KEEPDATA=NO
++++ config.base[109]: export DEBUG_POSTSCRIPT=NO
++++ config.base[109]: DEBUG_POSTSCRIPT=NO
++++ config.base[110]: export CHGRP_RSTPROD=YES
++++ config.base[110]: CHGRP_RSTPROD=YES
++++ config.base[111]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[111]: CHGRP_CMD='chgrp rstprod'
++++ config.base[112]: export NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[112]: NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[113]: export NCLEN=/work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/getncdimlen
++++ config.base[113]: NCLEN=/work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/getncdimlen
++++ config.base[116]: export BASE_ENV=/work2/noaa/stmp/CI/HERCULES/2645/gfs/env
++++ config.base[116]: BASE_ENV=/work2/noaa/stmp/CI/HERCULES/2645/gfs/env
++++ config.base[117]: export BASE_JOB=/work2/noaa/stmp/CI/HERCULES/2645/gfs/jobs/rocoto
++++ config.base[117]: BASE_JOB=/work2/noaa/stmp/CI/HERCULES/2645/gfs/jobs/rocoto
++++ config.base[120]: export SDATE=2021122018
++++ config.base[120]: SDATE=2021122018
++++ config.base[121]: export EDATE=2021122106
++++ config.base[121]: EDATE=2021122106
++++ config.base[122]: export EXP_WARM_START=.false.
++++ config.base[122]: EXP_WARM_START=.false.
++++ config.base[123]: export assim_freq=6
++++ config.base[123]: assim_freq=6
++++ config.base[124]: export PSLOT=C96C48_hybatmDA_786c0ac9
++++ config.base[124]: PSLOT=C96C48_hybatmDA_786c0ac9
++++ config.base[125]: export EXPDIR=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/EXPDIR/C96C48_hybatmDA_786c0ac9
++++ config.base[125]: EXPDIR=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/EXPDIR/C96C48_hybatmDA_786c0ac9
++++ config.base[126]: export ROTDIR=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9
++++ config.base[126]: ROTDIR=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9
++++ config.base[127]: export ROTDIR_DUMP=YES
++++ config.base[127]: ROTDIR_DUMP=YES
++++ config.base[128]: export DUMP_SUFFIX=
++++ config.base[128]: DUMP_SUFFIX=
++++ config.base[129]: [[ 2021122100 -ge 2019092100 ]]
++++ config.base[129]: [[ 2021122100 -le 2019110700 ]]
++++ config.base[132]: export DATAROOT=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9
++++ config.base[132]: DATAROOT=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9
++++ config.base[133]: export RUNDIR=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9
++++ config.base[133]: RUNDIR=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9
++++ config.base[134]: export ARCDIR=/work/noaa/global/mterry/archive/C96C48_hybatmDA_786c0ac9
++++ config.base[134]: ARCDIR=/work/noaa/global/mterry/archive/C96C48_hybatmDA_786c0ac9
++++ config.base[135]: export ATARDIR=/work/noaa/global/mterry/archive_rotdir/C96C48_hybatmDA_786c0ac9
++++ config.base[135]: ATARDIR=/work/noaa/global/mterry/archive_rotdir/C96C48_hybatmDA_786c0ac9
++++ config.base[138]: export envir=prod
++++ config.base[138]: envir=prod
++++ config.base[139]: export NET=gfs
++++ config.base[139]: NET=gfs
++++ config.base[140]: export RUN=gfs
++++ config.base[140]: RUN=gfs
++++ config.base[146]: source /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/EXPDIR/C96C48_hybatmDA_786c0ac9/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/input'
+++++ config.com[53]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/restart'
+++++ config.com[54]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[55]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[56]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/history'
+++++ config.com[57]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/master'
+++++ config.com[58]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[59]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[60]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[63]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[65]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[66]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[67]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[68]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[71]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/restart'
+++++ config.com[72]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/prep'
+++++ config.com[73]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/history'
+++++ config.com[74]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[75]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[76]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[77]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[79]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/history'
+++++ config.com[80]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/restart'
+++++ config.com[81]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/input'
+++++ config.com[82]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[83]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[84]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[85]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[87]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[88]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/input'
+++++ config.com[89]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/history'
+++++ config.com[90]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/restart'
+++++ config.com[91]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[92]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[93]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[95]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/chem/history'
+++++ config.com[96]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[98]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/med/restart'
++++ config.base[149]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[149]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[150]: export LOGSCRIPT=
++++ config.base[150]: LOGSCRIPT=
++++ config.base[153]: export 'REDOUT=1>'
++++ config.base[153]: REDOUT='1>'
++++ config.base[154]: export 'REDERR=2>'
++++ config.base[154]: REDERR='2>'
++++ config.base[156]: export SENDECF=NO
++++ config.base[156]: SENDECF=NO
++++ config.base[157]: export SENDSDM=NO
++++ config.base[157]: SENDSDM=NO
++++ config.base[158]: export SENDDBN_NTC=NO
++++ config.base[158]: SENDDBN_NTC=NO
++++ config.base[159]: export SENDDBN=NO
++++ config.base[159]: SENDDBN=NO
++++ config.base[160]: export DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[160]: DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[163]: export APP=ATM
++++ config.base[163]: APP=ATM
++++ config.base[165]: shopt -s extglob
++++ config.base[167]: case "${RUN}" in
++++ config.base[174]: shopt -u extglob
++++ config.base[177]: export DO_ATM=YES
++++ config.base[177]: DO_ATM=YES
++++ config.base[178]: export DO_COUPLED=NO
++++ config.base[178]: DO_COUPLED=NO
++++ config.base[179]: export DO_WAVE=NO
++++ config.base[179]: DO_WAVE=NO
++++ config.base[180]: export DO_OCN=NO
++++ config.base[180]: DO_OCN=NO
++++ config.base[181]: export DO_ICE=NO
++++ config.base[181]: DO_ICE=NO
++++ config.base[182]: export DO_AERO=NO
++++ config.base[182]: DO_AERO=NO
++++ config.base[183]: export AERO_FCST_CDUMP=
++++ config.base[183]: AERO_FCST_CDUMP=
++++ config.base[184]: export AERO_ANL_CDUMP=
++++ config.base[184]: AERO_ANL_CDUMP=
++++ config.base[185]: export WAVE_CDUMP=
++++ config.base[185]: WAVE_CDUMP=
++++ config.base[186]: export DOBNDPNT_WAVE=NO
++++ config.base[186]: DOBNDPNT_WAVE=NO
++++ config.base[187]: export DOIBP_WAV=NO
++++ config.base[187]: DOIBP_WAV=NO
++++ config.base[188]: export FRAC_GRID=.true.
++++ config.base[188]: FRAC_GRID=.true.
++++ config.base[189]: export DO_NEST=NO
++++ config.base[189]: DO_NEST=NO
++++ config.base[190]: [[ NO == \Y\E\S ]]
++++ config.base[194]: export ntiles=6
++++ config.base[194]: ntiles=6
++++ config.base[198]: export OPS_RES=C768
++++ config.base[198]: OPS_RES=C768
++++ config.base[201]: export LEVS=128
++++ config.base[201]: LEVS=128
++++ config.base[202]: export CASE=C96
++++ config.base[202]: CASE=C96
++++ config.base[203]: export CASE_ENS=C48
++++ config.base[203]: CASE_ENS=C48
++++ config.base[204]: export OCNRES=500
++++ config.base[204]: OCNRES=500
++++ config.base[205]: export ICERES=500
++++ config.base[205]: ICERES=500
++++ config.base[208]: case "${CASE}" in
++++ config.base[213]: export waveGRD=uglo_100km
++++ config.base[213]: waveGRD=uglo_100km
++++ config.base[227]: case "${APP}" in
++++ config.base[268]: [[ gfs =~ gdas ]]
++++ config.base[271]: [[ gfs =~ gfs ]]
++++ config.base[272]: export FHCYC=24
++++ config.base[272]: FHCYC=24
++++ config.base[276]: export FHMIN=0
++++ config.base[276]: FHMIN=0
++++ config.base[277]: export FHMAX=9
++++ config.base[277]: FHMAX=9
++++ config.base[278]: export FHOUT=3
++++ config.base[278]: FHOUT=3
++++ config.base[279]: export FHOUT_OCNICE=3
++++ config.base[279]: FHOUT_OCNICE=3
++++ config.base[282]: export EUPD_CYC=gdas
++++ config.base[282]: EUPD_CYC=gdas
++++ config.base[285]: export gfs_cyc=1
++++ config.base[285]: gfs_cyc=1
++++ config.base[288]: export FHMIN_GFS=0
++++ config.base[288]: FHMIN_GFS=0
++++ config.base[289]: export FHMAX_GFS=120
++++ config.base[289]: FHMAX_GFS=120
++++ config.base[290]: export FHOUT_GFS=3
++++ config.base[290]: FHOUT_GFS=3
++++ config.base[291]: export FHMAX_HF_GFS=0
++++ config.base[291]: FHMAX_HF_GFS=0
++++ config.base[292]: export FHOUT_HF_GFS=1
++++ config.base[292]: FHOUT_HF_GFS=1
++++ config.base[293]: export FHOUT_OCNICE_GFS=6
++++ config.base[293]: FHOUT_OCNICE_GFS=6
++++ config.base[294]: export FHMIN_WAV=0
++++ config.base[294]: FHMIN_WAV=0
++++ config.base[295]: export FHOUT_WAV=3
++++ config.base[295]: FHOUT_WAV=3
++++ config.base[296]: export FHMAX_HF_WAV=120
++++ config.base[296]: FHMAX_HF_WAV=120
++++ config.base[297]: export FHOUT_HF_WAV=1
++++ config.base[297]: FHOUT_HF_WAV=1
++++ config.base[298]: export FHMAX_WAV=9
++++ config.base[298]: FHMAX_WAV=9
++++ config.base[299]: export FHMAX_WAV_GFS=120
++++ config.base[299]: FHMAX_WAV_GFS=120
++++ config.base[300]: ((  gfs_cyc != 0  ))
++++ config.base[301]: export STEP_GFS=24
++++ config.base[301]: STEP_GFS=24
++++ config.base[306]: export ILPOST=1
++++ config.base[306]: ILPOST=1
++++ config.base[307]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[308]: export ILPOST=3
++++ config.base[308]: ILPOST=3
++++ config.base[312]: export restart_interval_gfs=12
++++ config.base[312]: restart_interval_gfs=12
++++ config.base[317]: export QUILTING=.true.
++++ config.base[317]: QUILTING=.true.
++++ config.base[318]: export OUTPUT_GRID=gaussian_grid
++++ config.base[318]: OUTPUT_GRID=gaussian_grid
++++ config.base[319]: export WRITE_DOPOST=.true.
++++ config.base[319]: WRITE_DOPOST=.true.
++++ config.base[320]: export WRITE_NSFLIP=.true.
++++ config.base[320]: WRITE_NSFLIP=.true.
++++ config.base[323]: export DOIAU=YES
++++ config.base[323]: DOIAU=YES
++++ config.base[324]: export IAUFHRS=3,6,9
++++ config.base[324]: IAUFHRS=3,6,9
++++ config.base[325]: export IAU_FHROT=3
++++ config.base[325]: IAU_FHROT=3
++++ config.base[326]: export IAU_DELTHRS=6
++++ config.base[326]: IAU_DELTHRS=6
++++ config.base[327]: export IAU_OFFSET=6
++++ config.base[327]: IAU_OFFSET=6
++++ config.base[328]: export DOIAU_ENKF=YES
++++ config.base[328]: DOIAU_ENKF=YES
++++ config.base[329]: export IAUFHRS_ENKF=3,6,9
++++ config.base[329]: IAUFHRS_ENKF=3,6,9
++++ config.base[330]: export IAU_DELTHRS_ENKF=6
++++ config.base[330]: IAU_DELTHRS_ENKF=6
++++ config.base[333]: export lobsdiag_forenkf=.true.
++++ config.base[333]: lobsdiag_forenkf=.true.
++++ config.base[341]: export imp_physics=8
++++ config.base[341]: imp_physics=8
++++ config.base[345]: export DO_JEDIATMVAR=NO
++++ config.base[345]: DO_JEDIATMVAR=NO
++++ config.base[346]: export DO_JEDIATMENS=NO
++++ config.base[346]: DO_JEDIATMENS=NO
++++ config.base[347]: export DO_JEDIOCNVAR=NO
++++ config.base[347]: DO_JEDIOCNVAR=NO
++++ config.base[348]: export DO_JEDISNOWDA=NO
++++ config.base[348]: DO_JEDISNOWDA=NO
++++ config.base[349]: export DO_MERGENSST=NO
++++ config.base[349]: DO_MERGENSST=NO
++++ config.base[352]: export DOHYBVAR=YES
++++ config.base[352]: DOHYBVAR=YES
++++ config.base[353]: export NMEM_ENS=2
++++ config.base[353]: NMEM_ENS=2
++++ config.base[354]: export SMOOTH_ENKF=NO
++++ config.base[354]: SMOOTH_ENKF=NO
++++ config.base[355]: export l4densvar=.true.
++++ config.base[355]: l4densvar=.true.
++++ config.base[356]: export lwrite4danl=.true.
++++ config.base[356]: lwrite4danl=.true.
++++ config.base[357]: export DO_CALC_INCREMENT=NO
++++ config.base[357]: DO_CALC_INCREMENT=NO
++++ config.base[360]: export NMEM_ENS_GFS=30
++++ config.base[360]: NMEM_ENS_GFS=30
++++ config.base[361]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[361]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[362]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[362]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[365]: [[ YES = \Y\E\S ]]
++++ config.base[366]: export FHMIN_ENKF=3
++++ config.base[366]: FHMIN_ENKF=3
++++ config.base[367]: export FHMAX_ENKF=9
++++ config.base[367]: FHMAX_ENKF=9
++++ config.base[368]: export FHMAX_ENKF_GFS=12
++++ config.base[368]: FHMAX_ENKF_GFS=12
++++ config.base[369]: export FHOUT_ENKF_GFS=3
++++ config.base[369]: FHOUT_ENKF_GFS=3
++++ config.base[370]: [[ .true. = \.\t\r\u\e\. ]]
++++ config.base[371]: export FHOUT=1
++++ config.base[371]: FHOUT=1
++++ config.base[372]: export FHOUT_ENKF=1
++++ config.base[372]: FHOUT_ENKF=1
++++ config.base[379]: [[ YES == \N\O ]]
++++ config.base[387]: export ENKF_SPREAD=YES
++++ config.base[387]: ENKF_SPREAD=YES
++++ config.base[390]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[390]: [[ 2021122018 = \2\0\2\1\1\2\2\1\0\0 ]]
++++ config.base[390]: [[ YES = \N\O ]]
++++ config.base[390]: [[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[396]: [[ YES = \N\O ]]
++++ config.base[400]: [[ YES == \Y\E\S ]]
++++ config.base[401]: export restart_interval_enkfgdas=3
++++ config.base[401]: restart_interval_enkfgdas=3
++++ config.base[406]: export restart_interval_enkfgfs=3
++++ config.base[406]: restart_interval_enkfgfs=3
++++ config.base[408]: [[ YES == \Y\E\S ]]
++++ config.base[409]: export restart_interval_gdas=3
++++ config.base[409]: restart_interval_gdas=3
++++ config.base[414]: export GSI_SOILANAL=NO
++++ config.base[414]: GSI_SOILANAL=NO
++++ config.base[417]: export DONST=YES
++++ config.base[417]: DONST=YES
++++ config.base[418]: [[ YES = \Y\E\S ]]
++++ config.base[418]: export 'FNTSFA=        '
++++ config.base[418]: FNTSFA='        '
++++ config.base[421]: export nst_anl=.true.
++++ config.base[421]: nst_anl=.true.
++++ config.base[424]: export MAKE_NSSTBUFR=NO
++++ config.base[424]: MAKE_NSSTBUFR=NO
++++ config.base[427]: export MAKE_ACFTBUFR=NO
++++ config.base[427]: MAKE_ACFTBUFR=NO
++++ config.base[430]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[430]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[433]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[433]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[434]: export INCVARS_EFOLD=5
++++ config.base[434]: INCVARS_EFOLD=5
++++ config.base[439]: export netcdf_diag=.true.
++++ config.base[439]: netcdf_diag=.true.
++++ config.base[440]: export binary_diag=.false.
++++ config.base[440]: binary_diag=.false.
++++ config.base[443]: export DO_METP=NO
++++ config.base[443]: DO_METP=NO
++++ config.base[444]: export DO_FIT2OBS=YES
++++ config.base[444]: DO_FIT2OBS=YES
++++ config.base[445]: export DO_VRFY_OCEANDA=NO
++++ config.base[445]: DO_VRFY_OCEANDA=NO
++++ config.base[448]: export HPSSARCH=NO
++++ config.base[448]: HPSSARCH=NO
++++ config.base[449]: export LOCALARCH=NO
++++ config.base[449]: LOCALARCH=NO
++++ config.base[450]: [[ NO = \Y\E\S ]]
++++ config.base[454]: export ARCH_CYC=00
++++ config.base[454]: ARCH_CYC=00
++++ config.base[455]: export ARCH_WARMICFREQ=4
++++ config.base[455]: ARCH_WARMICFREQ=4
++++ config.base[456]: export ARCH_FCSTICFREQ=1
++++ config.base[456]: ARCH_FCSTICFREQ=1
++++ config.base[459]: export FITSARC=YES
++++ config.base[459]: FITSARC=YES
++++ config.base[460]: export FHMAX_FITS=132
++++ config.base[460]: FHMAX_FITS=132
++++ config.base[461]: [[ 132 -gt 120 ]]
++++ config.base[461]: export FHMAX_FITS=120
++++ config.base[461]: FHMAX_FITS=120
++++ config.base[464]: [[ NO = \Y\E\S ]]
++++ config.base[471]: export NUM_SND_COLLECTIVES=9
++++ config.base[471]: NUM_SND_COLLECTIVES=9
++++ config.base[473]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/EXPDIR/C96C48_hybatmDA_786c0ac9/config.anal
++++ config.anal[6]: echo 'BEGIN: config.anal'
+BEGIN: config.anal
++++ config.anal[9]: . /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/EXPDIR/C96C48_hybatmDA_786c0ac9/config.resources anal
+++++ config.resources[7]: ((  1 != 1  ))
+++++ config.resources[31]: step=anal
+++++ config.resources[33]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[35]: case ${machine} in
+++++ config.resources[40]: npe_node_max=80
+++++ config.resources[72]: export npe_node_max
+++++ config.resources[74]: case ${step} in
+++++ config.resources[528]: export wtime_anal=01:20:00
+++++ config.resources[528]: wtime_anal=01:20:00
+++++ config.resources[529]: export wtime_anal_gfs=01:00:00
+++++ config.resources[529]: wtime_anal_gfs=01:00:00
+++++ config.resources[530]: export npe_anal=780
+++++ config.resources[530]: npe_anal=780
+++++ config.resources[531]: export nth_anal=5
+++++ config.resources[531]: nth_anal=5
+++++ config.resources[532]: export npe_anal_gfs=825
+++++ config.resources[532]: npe_anal_gfs=825
+++++ config.resources[533]: export nth_anal_gfs=5
+++++ config.resources[533]: nth_anal_gfs=5
+++++ config.resources[534]: [[ HERCULES == \W\C\O\S\S\2 ]]
+++++ config.resources[538]: case ${CASE} in
+++++ config.resources[564]: export npe_anal=84
+++++ config.resources[564]: npe_anal=84
+++++ config.resources[565]: export npe_anal_gfs=84
+++++ config.resources[565]: npe_anal_gfs=84
+++++ config.resources[566]: [[ HERCULES == \S\4 ]]
+++++ config.resources[584]: export npe_node_anal=16
+++++ config.resources[584]: npe_node_anal=16
+++++ config.resources[585]: export nth_cycle=5
+++++ config.resources[585]: nth_cycle=5
+++++ config.resources[586]: export npe_node_cycle=16
+++++ config.resources[586]: npe_node_cycle=16
+++++ config.resources[587]: export is_exclusive=True
+++++ config.resources[587]: is_exclusive=True
+++++ config.resources[1300]: echo 'END: config.resources'
+END: config.resources
++++ config.anal[11]: [[ YES = \Y\E\S ]]
++++ config.anal[12]: . /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/EXPDIR/C96C48_hybatmDA_786c0ac9/config.nsst
+++++ config.nsst[6]: echo 'BEGIN: config.nsst'
+BEGIN: config.nsst
+++++ config.nsst[11]: export NST_MODEL=2
+++++ config.nsst[11]: NST_MODEL=2
+++++ config.nsst[14]: [[ NO == \Y\E\S ]]
+++++ config.nsst[14]: [[ NO == \Y\E\S ]]
+++++ config.nsst[19]: export NST_SPINUP=0
+++++ config.nsst[19]: NST_SPINUP=0
+++++ config.nsst[20]: cdate=2021122100
+++++ config.nsst[21]: ((  cdate < 2017072000  ))
+++++ config.nsst[26]: export NST_RESV=0
+++++ config.nsst[26]: NST_RESV=0
+++++ config.nsst[29]: export ZSEA1=0
+++++ config.nsst[29]: ZSEA1=0
+++++ config.nsst[30]: export ZSEA2=0
+++++ config.nsst[30]: ZSEA2=0
+++++ config.nsst[32]: export NST_GSI=3
+++++ config.nsst[32]: NST_GSI=3
+++++ config.nsst[36]: export NSTINFO=0
+++++ config.nsst[36]: NSTINFO=0
+++++ config.nsst[37]: ((  NST_GSI > 0  ))
+++++ config.nsst[37]: export NSTINFO=4
+++++ config.nsst[37]: NSTINFO=4
+++++ config.nsst[39]: echo 'END: config.nsst'
+END: config.nsst
++++ config.anal[15]: [[ gfs = \g\f\s ]]
++++ config.anal[16]: export USE_RADSTAT=NO
++++ config.anal[16]: USE_RADSTAT=NO
++++ config.anal[17]: export GENDIAG=NO
++++ config.anal[17]: GENDIAG=NO
++++ config.anal[18]: export 'SETUP=diag_rad=.false.,diag_pcp=.false.,diag_conv=.false.,diag_ozone=.false.,write_diag(3)=.false.,niter(2)=100,'
++++ config.anal[18]: SETUP='diag_rad=.false.,diag_pcp=.false.,diag_conv=.false.,diag_ozone=.false.,write_diag(3)=.false.,niter(2)=100,'
++++ config.anal[19]: export DIAG_TARBALL=YES
++++ config.anal[19]: DIAG_TARBALL=YES
++++ config.anal[22]: export npe_gsi=84
++++ config.anal[22]: npe_gsi=84
++++ config.anal[24]: [[ gfs == \g\f\s ]]
++++ config.anal[25]: export npe_gsi=84
++++ config.anal[25]: npe_gsi=84
++++ config.anal[26]: export nth_anal=5
++++ config.anal[26]: nth_anal=5
++++ config.anal[30]: [[ 128 = \1\2\8 ]]
++++ config.anal[31]: export 'GRIDOPTS=nlayers(63)=1,nlayers(64)=1,'
++++ config.anal[31]: GRIDOPTS='nlayers(63)=1,nlayers(64)=1,'
++++ config.anal[32]: export 'SETUP=gpstop=55,nsig_ext=45,diag_rad=.false.,diag_pcp=.false.,diag_conv=.false.,diag_ozone=.false.,write_diag(3)=.false.,niter(2)=100,'
++++ config.anal[32]: SETUP='gpstop=55,nsig_ext=45,diag_rad=.false.,diag_pcp=.false.,diag_conv=.false.,diag_ozone=.false.,write_diag(3)=.false.,niter(2)=100,'
++++ config.anal[36]: export lobsdiag_forenkf=.false.
++++ config.anal[36]: lobsdiag_forenkf=.false.
++++ config.anal[40]: export GSNDBF=/dev/null
++++ config.anal[40]: GSNDBF=/dev/null
++++ config.anal[41]: export AMSREBF=/dev/null
++++ config.anal[41]: AMSREBF=/dev/null
++++ config.anal[42]: export SSMITBF=/dev/null
++++ config.anal[42]: SSMITBF=/dev/null
++++ config.anal[43]: export AMSR2BF=/dev/null
++++ config.anal[43]: AMSR2BF=/dev/null
++++ config.anal[48]: export CONVINFO=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/gsi/global_convinfo.txt
++++ config.anal[48]: CONVINFO=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/gsi/global_convinfo.txt
++++ config.anal[49]: export OZINFO=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/gsi/global_ozinfo.txt
++++ config.anal[49]: OZINFO=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/gsi/global_ozinfo.txt
++++ config.anal[50]: export SATINFO=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/gsi/global_satinfo.txt
++++ config.anal[50]: SATINFO=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/gsi/global_satinfo.txt
++++ config.anal[51]: export OBERROR=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/gsi/prepobs_errtable.global
++++ config.anal[51]: OBERROR=/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/gsi/prepobs_errtable.global
++++ config.anal[53]: [[ NO = \Y\E\S ]]
++++ config.anal[62]: [[ emc == \e\m\c ]]
++++ config.anal[64]: [[ 2021122100 -ge 2019021900 ]]
++++ config.anal[64]: [[ 2021122100 -lt 2019110706 ]]
++++ config.anal[70]: [[ 2021122100 -ge 2019110706 ]]
++++ config.anal[70]: [[ 2021122100 -lt 2020040718 ]]
++++ config.anal[76]: [[ 2021122100 -ge 2020040718 ]]
++++ config.anal[76]: [[ 2021122100 -lt 2020052612 ]]
++++ config.anal[82]: [[ 2021122100 -ge 2020052612 ]]
++++ config.anal[82]: [[ 2021122100 -lt 2020082412 ]]
++++ config.anal[88]: [[ 2021122100 -ge 2020082412 ]]
++++ config.anal[88]: [[ 2021122100 -lt 2020091612 ]]
++++ config.anal[93]: [[ 2021122100 -ge 2020091612 ]]
++++ config.anal[93]: [[ 2021122100 -lt 2021031712 ]]
++++ config.anal[98]: [[ 2021122100 -ge 2021031712 ]]
++++ config.anal[98]: [[ 2021122100 -lt 2021091612 ]]
++++ config.anal[112]: [[ 2021122100 -ge 2020011600 ]]
++++ config.anal[112]: [[ 2021122100 -lt 2020011806 ]]
++++ config.anal[118]: [[ 2021122100 -ge 2019021900 ]]
++++ config.anal[118]: [[ 2021122100 -lt 2019110706 ]]
++++ config.anal[123]: [[ 2021122100 -ge 2019110706 ]]
++++ config.anal[123]: [[ 2021122100 -lt 2020022012 ]]
++++ config.anal[128]: [[ 2021122100 -ge 2020022012 ]]
++++ config.anal[128]: [[ 2021122100 -lt 2021052118 ]]
++++ config.anal[133]: [[ 2021122100 -ge 2021052118 ]]
++++ config.anal[133]: [[ 2021122100 -lt 2021092206 ]]
++++ config.anal[138]: [[ 2021122100 -ge 2021092206 ]]
++++ config.anal[138]: [[ 2021122100 -lt 2021102612 ]]
++++ config.anal[155]: export AIRS_CADS=.false.
++++ config.anal[155]: AIRS_CADS=.false.
++++ config.anal[156]: export CRIS_CADS=.false.
++++ config.anal[156]: CRIS_CADS=.false.
++++ config.anal[157]: export IASI_CADS=.false.
++++ config.anal[157]: IASI_CADS=.false.
++++ config.anal[159]: echo 'END: config.anal'
+END: config.anal
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/EXPDIR/C96C48_hybatmDA_786c0ac9/config.analcalc
++++ config.analcalc[6]: echo 'BEGIN: config.analcalc'
+BEGIN: config.analcalc
++++ config.analcalc[9]: . /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/EXPDIR/C96C48_hybatmDA_786c0ac9/config.resources analcalc
+++++ config.resources[7]: ((  1 != 1  ))
+++++ config.resources[31]: step=analcalc
+++++ config.resources[33]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[35]: case ${machine} in
+++++ config.resources[40]: npe_node_max=80
+++++ config.resources[72]: export npe_node_max
+++++ config.resources[74]: case ${step} in
+++++ config.resources[591]: export wtime_analcalc=00:10:00
+++++ config.resources[591]: wtime_analcalc=00:10:00
+++++ config.resources[592]: export npe_analcalc=127
+++++ config.resources[592]: npe_analcalc=127
+++++ config.resources[593]: export ntasks=127
+++++ config.resources[593]: ntasks=127
+++++ config.resources[594]: export nth_analcalc=1
+++++ config.resources[594]: nth_analcalc=1
+++++ config.resources[595]: export nth_echgres=4
+++++ config.resources[595]: nth_echgres=4
+++++ config.resources[596]: export nth_echgres_gfs=12
+++++ config.resources[596]: nth_echgres_gfs=12
+++++ config.resources[597]: export npe_node_analcalc=80
+++++ config.resources[597]: npe_node_analcalc=80
+++++ config.resources[598]: export is_exclusive=True
+++++ config.resources[598]: is_exclusive=True
+++++ config.resources[599]: export memory_analcalc=48GB
+++++ config.resources[599]: memory_analcalc=48GB
+++++ config.resources[1300]: echo 'END: config.resources'
+END: config.resources
++++ config.analcalc[11]: [[ gfs == \g\f\s ]]
++++ config.analcalc[12]: export nth_echgres=12
++++ config.analcalc[12]: nth_echgres=12
++++ config.analcalc[15]: echo 'END: config.analcalc'
+END: config.analcalc
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[110]: source /work2/noaa/stmp/CI/HERCULES/2645/gfs/env/HERCULES.env analcalc
++++ HERCULES.env[3]: [[ 1 -ne 1 ]]
++++ HERCULES.env[13]: step=analcalc
++++ HERCULES.env[15]: export 'launcher=srun -l --export=ALL'
++++ HERCULES.env[15]: launcher='srun -l --export=ALL'
++++ HERCULES.env[16]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[16]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[19]: export MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[19]: MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[20]: export MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[20]: MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[21]: export MPI_GROUP_MAX=256
++++ HERCULES.env[21]: MPI_GROUP_MAX=256
++++ HERCULES.env[22]: export MPI_MEMMAP_OFF=1
++++ HERCULES.env[22]: MPI_MEMMAP_OFF=1
++++ HERCULES.env[23]: export MP_STDOUTMODE=ORDERED
++++ HERCULES.env[23]: MP_STDOUTMODE=ORDERED
++++ HERCULES.env[24]: export KMP_AFFINITY=scatter
++++ HERCULES.env[24]: KMP_AFFINITY=scatter
++++ HERCULES.env[25]: export OMP_STACKSIZE=2048000
++++ HERCULES.env[25]: OMP_STACKSIZE=2048000
++++ HERCULES.env[26]: export NTHSTACK=1024000000
++++ HERCULES.env[26]: NTHSTACK=1024000000
++++ HERCULES.env[28]: export I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[28]: I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[29]: export I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[29]: I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[31]: ulimit -s unlimited
++++ HERCULES.env[32]: ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 2042963
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 50331648
+open files                          (-n) 131072
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) unlimited
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 1028798
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
++++ HERCULES.env[34]: case ${step} in
++++ HERCULES.env[144]: export MKL_NUM_THREADS=4
++++ HERCULES.env[144]: MKL_NUM_THREADS=4
++++ HERCULES.env[145]: export MKL_CBWR=AUTO
++++ HERCULES.env[145]: MKL_CBWR=AUTO
++++ HERCULES.env[147]: export CFP_MP=YES
++++ HERCULES.env[147]: CFP_MP=YES
++++ HERCULES.env[148]: export USE_CFP=YES
++++ HERCULES.env[148]: USE_CFP=YES
++++ HERCULES.env[149]: export 'APRUNCFP=srun -l --export=ALL -n $ncmd --multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[149]: APRUNCFP='srun -l --export=ALL -n $ncmd --multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[151]: nth_max=5
++++ HERCULES.env[153]: export NTHREADS_GSI=5
++++ HERCULES.env[153]: NTHREADS_GSI=5
++++ HERCULES.env[154]: [[ 5 -gt 5 ]]
++++ HERCULES.env[155]: export 'APRUN_GSI=srun -l --export=ALL -n 84 --cpus-per-task=5'
++++ HERCULES.env[155]: APRUN_GSI='srun -l --export=ALL -n 84 --cpus-per-task=5'
++++ HERCULES.env[157]: export NTHREADS_CALCINC=1
++++ HERCULES.env[157]: NTHREADS_CALCINC=1
++++ HERCULES.env[158]: [[ 1 -gt 5 ]]
++++ HERCULES.env[159]: export 'APRUN_CALCINC=srun -l --export=ALL $ncmd --cpus-per-task=1'
++++ HERCULES.env[159]: APRUN_CALCINC='srun -l --export=ALL $ncmd --cpus-per-task=1'
++++ HERCULES.env[161]: export NTHREADS_CYCLE=5
++++ HERCULES.env[161]: NTHREADS_CYCLE=5
++++ HERCULES.env[162]: [[ 5 -gt 80 ]]
++++ HERCULES.env[163]: npe_cycle=6
++++ HERCULES.env[164]: export 'APRUN_CYCLE=srun -l --export=ALL -n 6 --cpus-per-task=5'
++++ HERCULES.env[164]: APRUN_CYCLE='srun -l --export=ALL -n 6 --cpus-per-task=5'
++++ HERCULES.env[166]: export NTHREADS_GAUSFCANL=1
++++ HERCULES.env[166]: NTHREADS_GAUSFCANL=1
++++ HERCULES.env[167]: npe_gausfcanl=1
++++ HERCULES.env[168]: export 'APRUN_GAUSFCANL=srun -l --export=ALL -n 1 --cpus-per-task=1'
++++ HERCULES.env[168]: APRUN_GAUSFCANL='srun -l --export=ALL -n 1 --cpus-per-task=1'
+++ jjob_header.sh[111]: status=0
+++ jjob_header.sh[112]: ((  status != 0  ))
++ JGLOBAL_ATMOS_ANALYSIS_CALC[10]: export CDUMP=gfs
++ JGLOBAL_ATMOS_ANALYSIS_CALC[10]: CDUMP=gfs
++ JGLOBAL_ATMOS_ANALYSIS_CALC[11]: export DO_CALC_ANALYSIS=YES
++ JGLOBAL_ATMOS_ANALYSIS_CALC[11]: DO_CALC_ANALYSIS=YES
+++ JGLOBAL_ATMOS_ANALYSIS_CALC[19]: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/ndate -6 2021122100
++ JGLOBAL_ATMOS_ANALYSIS_CALC[19]: GDATE=2021122018
++ JGLOBAL_ATMOS_ANALYSIS_CALC[21]: export gPDY=20211220
++ JGLOBAL_ATMOS_ANALYSIS_CALC[21]: gPDY=20211220
++ JGLOBAL_ATMOS_ANALYSIS_CALC[22]: export gcyc=18
++ JGLOBAL_ATMOS_ANALYSIS_CALC[22]: gcyc=18
++ JGLOBAL_ATMOS_ANALYSIS_CALC[23]: export GDUMP=gdas
++ JGLOBAL_ATMOS_ANALYSIS_CALC[23]: GDUMP=gdas
++ JGLOBAL_ATMOS_ANALYSIS_CALC[24]: export GDUMP_ENS=enkfgdas
++ JGLOBAL_ATMOS_ANALYSIS_CALC[24]: GDUMP_ENS=enkfgdas
++ JGLOBAL_ATMOS_ANALYSIS_CALC[26]: export OPREFIX=gfs.t00z.
++ JGLOBAL_ATMOS_ANALYSIS_CALC[26]: OPREFIX=gfs.t00z.
++ JGLOBAL_ATMOS_ANALYSIS_CALC[27]: export GPREFIX=gdas.t18z.
++ JGLOBAL_ATMOS_ANALYSIS_CALC[27]: GPREFIX=gdas.t18z.
++ JGLOBAL_ATMOS_ANALYSIS_CALC[28]: export APREFIX=gfs.t00z.
++ JGLOBAL_ATMOS_ANALYSIS_CALC[28]: APREFIX=gfs.t00z.
++ JGLOBAL_ATMOS_ANALYSIS_CALC[29]: export GPREFIX_ENS=enkfgdas.t18z.
++ JGLOBAL_ATMOS_ANALYSIS_CALC[29]: GPREFIX_ENS=enkfgdas.t18z.
++ JGLOBAL_ATMOS_ANALYSIS_CALC[31]: RUN=gfs
++ JGLOBAL_ATMOS_ANALYSIS_CALC[31]: YMD=20211221
++ JGLOBAL_ATMOS_ANALYSIS_CALC[31]: HH=00
++ JGLOBAL_ATMOS_ANALYSIS_CALC[31]: declare_from_tmpl -rx COM_OBS
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_OBS=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00/obs
++ JGLOBAL_ATMOS_ANALYSIS_CALC[33]: YMD=20211221
++ JGLOBAL_ATMOS_ANALYSIS_CALC[33]: HH=00
++ JGLOBAL_ATMOS_ANALYSIS_CALC[33]: declare_from_tmpl -rx COM_ATMOS_ANALYSIS COM_ATMOS_RESTART
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_ANALYSIS=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos
+declare_from_tmpl :: COM_ATMOS_RESTART=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//model_data/atmos/restart
++ JGLOBAL_ATMOS_ANALYSIS_CALC[35]: RUN=gdas
++ JGLOBAL_ATMOS_ANALYSIS_CALC[35]: YMD=20211220
++ JGLOBAL_ATMOS_ANALYSIS_CALC[35]: HH=18
++ JGLOBAL_ATMOS_ANALYSIS_CALC[35]: declare_from_tmpl -rx COM_OBS_PREV:COM_OBS_TMPL COM_ATMOS_HISTORY_PREV:COM_ATMOS_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_OBS_PREV=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18/obs
+declare_from_tmpl :: COM_ATMOS_HISTORY_PREV=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history
++ JGLOBAL_ATMOS_ANALYSIS_CALC[40]: export ATMGES=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc
++ JGLOBAL_ATMOS_ANALYSIS_CALC[40]: ATMGES=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc
++ JGLOBAL_ATMOS_ANALYSIS_CALC[41]: '[' '!' -f /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc ']'
+++ JGLOBAL_ATMOS_ANALYSIS_CALC[47]: /work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/getncdimlen /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc pfull
++ JGLOBAL_ATMOS_ANALYSIS_CALC[47]: export LEVS=127
++ JGLOBAL_ATMOS_ANALYSIS_CALC[47]: LEVS=127
++ JGLOBAL_ATMOS_ANALYSIS_CALC[48]: status=0
++ JGLOBAL_ATMOS_ANALYSIS_CALC[49]: [[ 0 -ne 0 ]]
++ JGLOBAL_ATMOS_ANALYSIS_CALC[53]: export DOGAUSFCANL=YES
++ JGLOBAL_ATMOS_ANALYSIS_CALC[53]: DOGAUSFCANL=YES
++ JGLOBAL_ATMOS_ANALYSIS_CALC[59]: /work2/noaa/stmp/CI/HERCULES/2645/gfs/scripts/exglobal_atmos_analysis_calc.sh
+Begin exglobal_atmos_analysis_calc.sh at Sat Jun  1 22:20:31 UTC 2024
+++ exglobal_atmos_analysis_calc.sh[25]: pwd
++ exglobal_atmos_analysis_calc.sh[25]: pwd=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501
++ exglobal_atmos_analysis_calc.sh[28]: CDUMP=gfs
++ exglobal_atmos_analysis_calc.sh[29]: GDUMP=gdas
++ exglobal_atmos_analysis_calc.sh[32]: export 'CHGRP_CMD=chgrp rstprod'
++ exglobal_atmos_analysis_calc.sh[32]: CHGRP_CMD='chgrp rstprod'
++ exglobal_atmos_analysis_calc.sh[33]: export NCLEN=/work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/getncdimlen
++ exglobal_atmos_analysis_calc.sh[33]: NCLEN=/work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/getncdimlen
++ exglobal_atmos_analysis_calc.sh[34]: COMPRESS=gzip
++ exglobal_atmos_analysis_calc.sh[35]: UNCOMPRESS=gunzip
++ exglobal_atmos_analysis_calc.sh[36]: APRUNCFP='srun -l --export=ALL -n $ncmd --multi-prog --output=mpmd.%j.%t.out'
++ exglobal_atmos_analysis_calc.sh[39]: netcdf_diag=.true.
++ exglobal_atmos_analysis_calc.sh[40]: binary_diag=.false.
++ exglobal_atmos_analysis_calc.sh[43]: DOIAU=YES
++ exglobal_atmos_analysis_calc.sh[44]: export IAUFHRS=3,6,9
++ exglobal_atmos_analysis_calc.sh[44]: IAUFHRS=3,6,9
++ exglobal_atmos_analysis_calc.sh[47]: export NTHREADS_CALCINC=1
++ exglobal_atmos_analysis_calc.sh[47]: NTHREADS_CALCINC=1
++ exglobal_atmos_analysis_calc.sh[48]: export 'APRUN_CALCINC=srun -l --export=ALL $ncmd --cpus-per-task=1'
++ exglobal_atmos_analysis_calc.sh[48]: APRUN_CALCINC='srun -l --export=ALL $ncmd --cpus-per-task=1'
++ exglobal_atmos_analysis_calc.sh[49]: export APRUN_CALCANL=
++ exglobal_atmos_analysis_calc.sh[49]: APRUN_CALCANL=
++ exglobal_atmos_analysis_calc.sh[50]: export APRUN_CHGRES=
++ exglobal_atmos_analysis_calc.sh[50]: APRUN_CHGRES=
++ exglobal_atmos_analysis_calc.sh[52]: export CALCANLEXEC=/work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/calc_analysis.x
++ exglobal_atmos_analysis_calc.sh[52]: CALCANLEXEC=/work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/calc_analysis.x
++ exglobal_atmos_analysis_calc.sh[53]: export CHGRESNCEXEC=/work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/enkf_chgres_recenter_nc.x
++ exglobal_atmos_analysis_calc.sh[53]: CHGRESNCEXEC=/work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/enkf_chgres_recenter_nc.x
++ exglobal_atmos_analysis_calc.sh[54]: export CHGRESINCEXEC=/work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/interp_inc.x
++ exglobal_atmos_analysis_calc.sh[54]: CHGRESINCEXEC=/work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/interp_inc.x
++ exglobal_atmos_analysis_calc.sh[55]: export NTHREADS_CHGRES=1
++ exglobal_atmos_analysis_calc.sh[55]: NTHREADS_CHGRES=1
++ exglobal_atmos_analysis_calc.sh[56]: CALCINCPY=/work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/calcinc_gfs.py
++ exglobal_atmos_analysis_calc.sh[57]: CALCANLPY=/work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/calcanl_gfs.py
++ exglobal_atmos_analysis_calc.sh[59]: DOGAUSFCANL=YES
++ exglobal_atmos_analysis_calc.sh[60]: GAUSFCANLSH=/work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/gaussian_sfcanl.sh
++ exglobal_atmos_analysis_calc.sh[61]: export GAUSFCANLEXE=/work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/gaussian_sfcanl.x
++ exglobal_atmos_analysis_calc.sh[61]: GAUSFCANLEXE=/work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/gaussian_sfcanl.x
++ exglobal_atmos_analysis_calc.sh[62]: NTHREADS_GAUSFCANL=1
++ exglobal_atmos_analysis_calc.sh[63]: APRUN_GAUSFCANL='srun -l --export=ALL -n 1 --cpus-per-task=1'
++ exglobal_atmos_analysis_calc.sh[66]: RUN=gfs
++ exglobal_atmos_analysis_calc.sh[67]: SENDECF=NO
++ exglobal_atmos_analysis_calc.sh[68]: SENDDBN=NO
++ exglobal_atmos_analysis_calc.sh[71]: GPREFIX=gdas.t18z.
++ exglobal_atmos_analysis_calc.sh[72]: ATMG03=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf003.nc
++ exglobal_atmos_analysis_calc.sh[73]: ATMG04=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf004.nc
++ exglobal_atmos_analysis_calc.sh[74]: ATMG05=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf005.nc
++ exglobal_atmos_analysis_calc.sh[75]: ATMGES=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc
++ exglobal_atmos_analysis_calc.sh[76]: ATMG07=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf007.nc
++ exglobal_atmos_analysis_calc.sh[77]: ATMG08=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf008.nc
++ exglobal_atmos_analysis_calc.sh[78]: ATMG09=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf009.nc
++ exglobal_atmos_analysis_calc.sh[81]: export APREFIX=gfs.t00z.
++ exglobal_atmos_analysis_calc.sh[81]: APREFIX=gfs.t00z.
++ exglobal_atmos_analysis_calc.sh[82]: SFCANL=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.sfcanl.nc
++ exglobal_atmos_analysis_calc.sh[83]: DTFANL=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.dtfanl.nc
++ exglobal_atmos_analysis_calc.sh[84]: ATMANL=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmanl.nc
++ exglobal_atmos_analysis_calc.sh[87]: ATMINC=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atminc.nc
++ exglobal_atmos_analysis_calc.sh[90]: DOHYBVAR=YES
++ exglobal_atmos_analysis_calc.sh[91]: lrun_subdirs=.true.
++ exglobal_atmos_analysis_calc.sh[92]: '[' YES = YES ']'
++ exglobal_atmos_analysis_calc.sh[93]: l_hyb_ens=.true.
++ exglobal_atmos_analysis_calc.sh[94]: export l4densvar=.true.
++ exglobal_atmos_analysis_calc.sh[94]: l4densvar=.true.
++ exglobal_atmos_analysis_calc.sh[95]: export lwrite4danl=.true.
++ exglobal_atmos_analysis_calc.sh[95]: lwrite4danl=.true.
++ exglobal_atmos_analysis_calc.sh[103]: '[' YES = YES -a .true. = .true. -a .true. = .true. ']'
++ exglobal_atmos_analysis_calc.sh[104]: ATMA03=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma003.nc
++ exglobal_atmos_analysis_calc.sh[105]: ATMI03=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmi003.nc
++ exglobal_atmos_analysis_calc.sh[106]: ATMA04=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma004.nc
++ exglobal_atmos_analysis_calc.sh[107]: ATMI04=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmi004.nc
++ exglobal_atmos_analysis_calc.sh[108]: ATMA05=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma005.nc
++ exglobal_atmos_analysis_calc.sh[109]: ATMI05=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmi005.nc
++ exglobal_atmos_analysis_calc.sh[110]: ATMA07=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma007.nc
++ exglobal_atmos_analysis_calc.sh[111]: ATMI07=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmi007.nc
++ exglobal_atmos_analysis_calc.sh[112]: ATMA08=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma008.nc
++ exglobal_atmos_analysis_calc.sh[113]: ATMI08=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmi008.nc
++ exglobal_atmos_analysis_calc.sh[114]: ATMA09=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma009.nc
++ exglobal_atmos_analysis_calc.sh[115]: ATMI09=/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmi009.nc
++ exglobal_atmos_analysis_calc.sh[121]: mkdata=NO
++ exglobal_atmos_analysis_calc.sh[122]: '[' '!' -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501 ']'
++ exglobal_atmos_analysis_calc.sh[127]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501
++ exglobal_atmos_analysis_calc.sh[131]: rm -rf 'dir.*'
++ exglobal_atmos_analysis_calc.sh[135]: '[' YES == YES ']'
++ exglobal_atmos_analysis_calc.sh[137]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmanl.nc siganl
++ exglobal_atmos_analysis_calc.sh[138]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atminc.nc siginc.nc
++ exglobal_atmos_analysis_calc.sh[139]: '[' YES = YES -a .true. = .true. -a .true. = .true. ']'
++ exglobal_atmos_analysis_calc.sh[140]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma003.nc siga03
++ exglobal_atmos_analysis_calc.sh[141]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmi003.nc sigi03.nc
++ exglobal_atmos_analysis_calc.sh[142]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma004.nc siga04
++ exglobal_atmos_analysis_calc.sh[143]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmi004.nc sigi04.nc
++ exglobal_atmos_analysis_calc.sh[144]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma005.nc siga05
++ exglobal_atmos_analysis_calc.sh[145]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmi005.nc sigi05.nc
++ exglobal_atmos_analysis_calc.sh[146]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma007.nc siga07
++ exglobal_atmos_analysis_calc.sh[147]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmi007.nc sigi07.nc
++ exglobal_atmos_analysis_calc.sh[148]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma008.nc siga08
++ exglobal_atmos_analysis_calc.sh[149]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmi008.nc sigi08.nc
++ exglobal_atmos_analysis_calc.sh[150]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma009.nc siga09
++ exglobal_atmos_analysis_calc.sh[151]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmi009.nc sigi09.nc
++ exglobal_atmos_analysis_calc.sh[154]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf003.nc sigf03
++ exglobal_atmos_analysis_calc.sh[155]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.nc sigf06
++ exglobal_atmos_analysis_calc.sh[156]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf009.nc sigf09
++ exglobal_atmos_analysis_calc.sh[158]: [[ -f /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf004.nc ]]
++ exglobal_atmos_analysis_calc.sh[158]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf004.nc sigf04
++ exglobal_atmos_analysis_calc.sh[159]: [[ -f /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf005.nc ]]
++ exglobal_atmos_analysis_calc.sh[159]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf005.nc sigf05
++ exglobal_atmos_analysis_calc.sh[160]: [[ -f /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf007.nc ]]
++ exglobal_atmos_analysis_calc.sh[160]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf007.nc sigf07
++ exglobal_atmos_analysis_calc.sh[161]: [[ -f /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf008.nc ]]
++ exglobal_atmos_analysis_calc.sh[161]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf008.nc sigf08
++ exglobal_atmos_analysis_calc.sh[164]: '[' -f /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf004.nc -a -f /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf005.nc -a -f /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf007.nc -a -f /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf008.nc ']'
++ exglobal_atmos_analysis_calc.sh[165]: nhr_obsbin=1
++ exglobal_atmos_analysis_calc.sh[168]: /work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/calcanl_gfs.py
+{'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x1532e9761e90>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/calcanl_gfs.py', '__cached__': None, 'os': <module 'os' (frozen)>, 'shutil': <module 'shutil' from '/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/python-3.11.6-ajcuas2/lib/python3.11/shutil.py'>, 'subprocess': <module 'subprocess' from '/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/python-3.11.6-ajcuas2/lib/python3.11/subprocess.py'>, 'sys': <module 'sys' (built-in)>, 'gsi_utils': <module 'gsi_utils' from '/work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/gsi_utils.py'>, 'OrderedDict': <class 'collections.OrderedDict'>, 'datetime': <module 'datetime' from '/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/python-3.11.6-ajcuas2/lib/python3.11/datetime.py'>, 'python2fortran_bool': {True: '.true.', False: '.false.'}, 'calcanl_gfs': <function calcanl_gfs at 0x1532e96ca700>, 'DoIAU': True, 'l4DEnsVar': True, 'Write4Danl': True, 'ComIn_Ges': '/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history', 'GPrefix': 'gdas.t18z.', 'ComOut': '/work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos', 'APrefix': 'gfs.t00z.', 'NThreads': '1', 'FixDir': '/work2/noaa/stmp/CI/HERCULES/2645/gfs/fix/am', 'atmges_ens_mean': './atmges_ensmean', 'RunDir': '/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501', 'ExecCMD': '', 'ExecCMDMPI': 'srun -l --export=ALL $ncmd --cpus-per-task=1', 'ExecAnl': '/work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/calc_analysis.x', 'ExecChgresInc': '/work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/interp_inc.x', 'NEMSGet': 'nemsio_get', 'IAUHrs': [3, 6, 9], 'Cdump': 'gfs', 'JEDI': False}
+calcanl_gfs beginning at:  2024-06-01 22:20:34.662098
+mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_03
+mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06
+ln -s /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma003.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/anl.03
+/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/anl.03 exists, unlinking.
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/siga03 /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/anl.03
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/sigi03.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_03/siginc.nc.03
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/inc.fullres.03 /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_03/inc.fullres.03
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/sigf03 /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/ges.03
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/sigf03 /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_03/ges.03
+cp /work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/interp_inc.x /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_03/chgres_inc.x
+mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_03
+mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_06
+ln -s /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma003.ensres.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_06/anl.ensres.03
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/sigi03.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_06/siginc.nc.03
+ln -s /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf003.ensres.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_06/ges.ensres.03
+cp /work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/calc_analysis.x /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/calc_anl.x
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/siginc.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/siginc.nc.06
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/sigf06 /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/ges.06
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/siganl /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/anl.06
+cp /work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/interp_inc.x /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/chgres_inc.x
+cp /work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/calc_analysis.x /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_06/calc_anl.x
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/siginc.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_06/siginc.nc.06
+ln -s /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atmanl.ensres.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_06/anl.ensres.06
+ln -s /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf006.ensres.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_06/ges.ensres.06
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/sigf06 /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_06/ges.06
+mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_09
+ln -s /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma009.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/anl.09
+/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/anl.09 exists, unlinking.
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/siga09 /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/anl.09
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/sigi09.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_09/siginc.nc.09
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/inc.fullres.09 /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_09/inc.fullres.09
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/sigf09 /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/ges.09
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/sigf09 /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_09/ges.09
+cp /work2/noaa/stmp/CI/HERCULES/2645/gfs/exec/interp_inc.x /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_09/chgres_inc.x
+mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_09
+ln -s /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gfs.20211221/00//analysis/atmos/gfs.t00z.atma009.ensres.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_06/anl.ensres.09
+ln -s /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/sigi09.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_06/siginc.nc.09
+ln -s /work2/noaa/stmp/CI/HERCULES/2645/RUNTESTS/COMROOT/C96C48_hybatmDA_786c0ac9/gdas.20211220/18//model_data/atmos/history/gdas.t18z.atmf009.ensres.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_ensres_06/ges.ensres.09
+will process increment file: /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_03/siginc.nc.03
+will process increment file: /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_06/siginc.nc.06
+will process increment file: /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_786c0ac9/analcalc.2881501/calcanl_09/siginc.nc.09
+Interpolating increment for f003
+interp_inc 3 OrderedDict([('setup', {'lon_out': 384, 'lat_out': 192, 'lev': 127, 'infile': "'siginc.nc.03'", 'outfile': "'inc.fullres.03'"})])
+Traceback (most recent call last):
+  File "/work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/calcanl_gfs.py", line 366, in <module>
+    calcanl_gfs(DoIAU, l4DEnsVar, Write4Danl, ComOut, APrefix,
+  File "/work2/noaa/stmp/CI/HERCULES/2645/gfs/ush/calcanl_gfs.py", line 256, in calcanl_gfs
+    job = subprocess.Popen(ExecCMDMPI10_host + ' ' + CalcAnlDir + '/chgres_inc.x', shell=True, cwd=CalcAnlDir)
+                           ^^^^^^^^^^^^^^^^^
+NameError: name 'ExecCMDMPI10_host' is not defined. Did you mean: 'ExecCMDMPI1_host'?
++ exglobal_atmos_analysis_calc.sh[1]: postamble exglobal_atmos_analysis_calc.sh 1717280431 1
++ preamble.sh[70]: set +x
+End exglobal_atmos_analysis_calc.sh at 22:20:35 with error code 1 (time elapsed: 00:00:04)
++ JGLOBAL_ATMOS_ANALYSIS_CALC[1]: postamble JGLOBAL_ATMOS_ANALYSIS_CALC 1717280401 1
++ preamble.sh[70]: set +x
+End JGLOBAL_ATMOS_ANALYSIS_CALC at 22:20:35 with error code 1 (time elapsed: 00:00:34)
++ analcalc.sh[1]: postamble analcalc.sh 1717280398 1
++ preamble.sh[70]: set +x
+End analcalc.sh at 22:20:39 with error code 1 (time elapsed: 00:00:41)
