@@ -1,0 +1,1479 @@
+PBS: Running prologue on parent mom node: nid002960...
+Job 134384125.cbqs01 nodelist: nid[002960,002982-002983,002986,002993]
++ /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/jobs/rocoto/wavepostpnt.sh
+Begin wavepostpnt.sh at Wed Jun  5 22:01:11 UTC 2024
++ wavepostpnt.sh[6]: echo
+
++ wavepostpnt.sh[7]: echo '=============== START TO SOURCE FV3GFS WORKFLOW MODULES ==============='
+=============== START TO SOURCE FV3GFS WORKFLOW MODULES ===============
++ wavepostpnt.sh[9]: . /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/ush/load_ufswm_modules.sh
+++ load_ufswm_modules.sh[4]: [[ NO == \N\O ]]
+++ load_ufswm_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_ufswm_modules.sh[6]: set +x
+Resetting modules to system default. Reseting $MODULEPATH back to system default. All extra directories will be removed from $MODULEPATH.
+
+Lmod is automatically replacing "craype-network-ofi" with "craype-network-ucx".
+
+
+Inactive Modules:
+  1) cray-mpich/8.1.12     2) scotch/7.0.4
+
+
+Activating Modules:
+  1) scotch/7.0.4
+
+
+Currently Loaded Modules:
+  1) craype-x86-rome    (H)  18) g2tmpl/1.10.2
+  2) envvar/1.0              19) ip/3.3.3
+  3) PrgEnv-intel/8.1.0      20) sp/2.3.3
+  4) intel/19.1.3.304        21) w3emc/2.9.2
+  5) craype/2.7.13           22) gftl-shared/1.6.1
+  6) cmake/3.20.2            23) mapl/2.40.3-esmf-8.6.0
+  7) jasper/2.0.25           24) pnetcdf/1.12.2
+  8) zlib/1.2.11             25) ufs_wcoss2.intel
+  9) libpng/1.6.37           26) prod_util/2.0.14
+ 10) hdf5/1.14.0             27) cray-pals/1.2.2
+ 11) netcdf/4.9.2            28) cfp/2.0.4
+ 12) pio/2.5.10              29) libjpeg/9c
+ 13) esmf/8.6.0              30) craype-network-ucx     (H)
+ 14) fms/2023.04             31) cray-mpich-ucx/8.1.12
+ 15) bacio/2.4.1             32) scotch/7.0.4
+ 16) crtm/2.4.0              33) wgrib2/2.0.8_wmo
+ 17) g2/3.4.5
+
+  Where:
+   H:  Hidden Module
+
+Inactive Modules:
+  1) cray-mpich/8.1.12
+
+ 
+
++ wavepostpnt.sh[10]: status=0
++ wavepostpnt.sh[11]: [[ 0 -ne 0 ]]
++ wavepostpnt.sh[13]: export job=wavepostpnt
++ wavepostpnt.sh[13]: job=wavepostpnt
++ wavepostpnt.sh[14]: export jobid=wavepostpnt.221851
++ wavepostpnt.sh[14]: jobid=wavepostpnt.221851
++ wavepostpnt.sh[17]: echo
+
++ wavepostpnt.sh[18]: echo '=============== START TO RUN WAVE_POST_PNT ==============='
+=============== START TO RUN WAVE_POST_PNT ===============
++ wavepostpnt.sh[20]: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/jobs/JGLOBAL_WAVE_POST_PNT
+Begin JGLOBAL_WAVE_POST_PNT at Wed Jun  5 22:01:15 UTC 2024
++ JGLOBAL_WAVE_POST_PNT[4]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/ush/jjob_header.sh -e wavepostpnt -c 'base wave wavepostsbs wavepostpnt'
+++ jjob_header.sh[44]: OPTIND=1
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[48]: env_job=wavepostpnt
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[47]: read -ra configs
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[59]: shift 4
+++ jjob_header.sh[61]: [[ -z wavepostpnt ]]
+++ jjob_header.sh[69]: export DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851
+++ jjob_header.sh[69]: DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851
+++ jjob_header.sh[70]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[71]: rm -rf /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851
+++ jjob_header.sh[73]: mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851
+++ jjob_header.sh[74]: cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851
+++ jjob_header.sh[80]: export cycle=t12z
+++ jjob_header.sh[80]: cycle=t12z
+++ jjob_header.sh[81]: setpdy.sh
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[82]: source ./PDY
++++ PDY[1]: export PDYm7=20210316
++++ PDY[1]: PDYm7=20210316
++++ PDY[2]: export PDYm6=20210317
++++ PDY[2]: PDYm6=20210317
++++ PDY[3]: export PDYm5=20210318
++++ PDY[3]: PDYm5=20210318
++++ PDY[4]: export PDYm4=20210319
++++ PDY[4]: PDYm4=20210319
++++ PDY[5]: export PDYm3=20210320
++++ PDY[5]: PDYm3=20210320
++++ PDY[6]: export PDYm2=20210321
++++ PDY[6]: PDYm2=20210321
++++ PDY[7]: export PDYm1=20210322
++++ PDY[7]: PDYm1=20210322
++++ PDY[8]: export PDY=20210323
++++ PDY[8]: PDY=20210323
++++ PDY[9]: export PDYp1=20210324
++++ PDY[9]: PDYp1=20210324
++++ PDY[10]: export PDYp2=20210325
++++ PDY[10]: PDYp2=20210325
++++ PDY[11]: export PDYp3=20210326
++++ PDY[11]: PDYp3=20210326
++++ PDY[12]: export PDYp4=20210327
++++ PDY[12]: PDYp4=20210327
++++ PDY[13]: export PDYp5=20210328
++++ PDY[13]: PDYp5=20210328
++++ PDY[14]: export PDYp6=20210329
++++ PDY[14]: PDYp6=20210329
++++ PDY[15]: export PDYp7=20210330
++++ PDY[15]: PDYp7=20210330
+++ jjob_header.sh[88]: export pid=223942
+++ jjob_header.sh[88]: pid=223942
+++ jjob_header.sh[89]: export pgmout=OUTPUT.223942
+++ jjob_header.sh[89]: pgmout=OUTPUT.223942
+++ jjob_header.sh[90]: export pgmerr=errfile
+++ jjob_header.sh[90]: pgmerr=errfile
+++ jjob_header.sh[96]: export EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/EXPDIR/C48_S2SW_9b290b28
+++ jjob_header.sh[96]: EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/EXPDIR/C48_S2SW_9b290b28
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/EXPDIR/C48_S2SW_9b290b28/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=WCOSS2
++++ config.base[9]: machine=WCOSS2
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=GFS-DEV
++++ config.base[15]: ACCOUNT=GFS-DEV
++++ config.base[16]: export ACCOUNT_SERVICE=GFS-DEV
++++ config.base[16]: ACCOUNT_SERVICE=GFS-DEV
++++ config.base[17]: export QUEUE=dev
++++ config.base[17]: QUEUE=dev
++++ config.base[18]: export QUEUE_SERVICE=dev_transfer
++++ config.base[18]: QUEUE_SERVICE=dev_transfer
++++ config.base[19]: export PARTITION_BATCH=
++++ config.base[19]: PARTITION_BATCH=
++++ config.base[20]: export PARTITION_SERVICE=
++++ config.base[20]: PARTITION_SERVICE=
++++ config.base[21]: export RESERVATION=
++++ config.base[21]: RESERVATION=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow
++++ config.base[27]: HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow
++++ config.base[28]: export EXECgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/exec
++++ config.base[28]: EXECgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/exec
++++ config.base[29]: export FIXgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix
++++ config.base[29]: FIXgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix
++++ config.base[30]: export PARMgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/parm
++++ config.base[30]: PARMgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/parm
++++ config.base[31]: export SCRgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/scripts
++++ config.base[31]: SCRgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/scripts
++++ config.base[32]: export USHgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/ush
++++ config.base[32]: USHgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/ush
++++ config.base[34]: export FIXam=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/am
++++ config.base[34]: FIXam=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/am
++++ config.base[35]: export FIXaer=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/aer
++++ config.base[35]: FIXaer=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/aer
++++ config.base[36]: export FIXcpl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/cpl
++++ config.base[36]: FIXcpl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/cpl
++++ config.base[37]: export FIXlut=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/lut
++++ config.base[37]: FIXlut=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/lut
++++ config.base[38]: export FIXorog=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/orog
++++ config.base[38]: FIXorog=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/orog
++++ config.base[39]: export FIXcice=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/cice
++++ config.base[39]: FIXcice=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/cice
++++ config.base[40]: export FIXmom=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/mom6
++++ config.base[40]: FIXmom=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/mom6
++++ config.base[41]: export FIXreg2grb2=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/reg2grb2
++++ config.base[41]: FIXreg2grb2=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/reg2grb2
++++ config.base[42]: export FIXugwd=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/ugwd
++++ config.base[42]: FIXugwd=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/ugwd
++++ config.base[43]: export FIXgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/gdas
++++ config.base[43]: FIXgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/gdas
++++ config.base[48]: export PACKAGEROOT=/lfs/h1/ops/prod/packages
++++ config.base[48]: PACKAGEROOT=/lfs/h1/ops/prod/packages
++++ config.base[49]: export COMROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT
++++ config.base[49]: COMROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT
++++ config.base[50]: export COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.base[50]: COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.base[51]: export DMPDIR=/lfs/h2/emc/dump/noscrub/dump
++++ config.base[51]: DMPDIR=/lfs/h2/emc/dump/noscrub/dump
++++ config.base[52]: export BASE_CPLIC=/lfs/h2/emc/global/noscrub/emc.global/data/ICSDIR/prototype_ICs
++++ config.base[52]: BASE_CPLIC=/lfs/h2/emc/global/noscrub/emc.global/data/ICSDIR/prototype_ICs
++++ config.base[56]: export COMINecmwf=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ecmwf
++++ config.base[56]: COMINecmwf=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ecmwf
++++ config.base[57]: export COMINnam=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/nam
++++ config.base[57]: COMINnam=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/nam
++++ config.base[58]: export COMINukmet=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ukmet
++++ config.base[58]: COMINukmet=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ukmet
++++ config.base[61]: export HOMEDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[61]: HOMEDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[62]: export STMP=/lfs/h2/emc/stmp/terry.mcguinness
++++ config.base[62]: STMP=/lfs/h2/emc/stmp/terry.mcguinness
++++ config.base[63]: export PTMP=/lfs/h2/emc/ptmp/terry.mcguinness
++++ config.base[63]: PTMP=/lfs/h2/emc/ptmp/terry.mcguinness
++++ config.base[64]: export NOSCRUB=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[64]: NOSCRUB=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[67]: export BASE_GIT=/lfs/h2/emc/global/save/emc.global/git
++++ config.base[67]: BASE_GIT=/lfs/h2/emc/global/save/emc.global/git
++++ config.base[70]: export DO_GOES=NO
++++ config.base[70]: DO_GOES=NO
++++ config.base[71]: export DO_BUFRSND=NO
++++ config.base[71]: DO_BUFRSND=NO
++++ config.base[72]: export DO_GEMPAK=NO
++++ config.base[72]: DO_GEMPAK=NO
++++ config.base[73]: export DO_AWIPS=NO
++++ config.base[73]: DO_AWIPS=NO
++++ config.base[74]: export DO_NPOESS=NO
++++ config.base[74]: DO_NPOESS=NO
++++ config.base[75]: export DO_TRACKER=YES
++++ config.base[75]: DO_TRACKER=YES
++++ config.base[76]: export DO_GENESIS=YES
++++ config.base[76]: DO_GENESIS=YES
++++ config.base[77]: export DO_GENESIS_FSU=NO
++++ config.base[77]: DO_GENESIS_FSU=NO
++++ config.base[78]: export DO_VERFOZN=YES
++++ config.base[78]: DO_VERFOZN=YES
++++ config.base[79]: export DO_VERFRAD=YES
++++ config.base[79]: DO_VERFRAD=YES
++++ config.base[80]: export DO_VMINMON=YES
++++ config.base[80]: DO_VMINMON=YES
++++ config.base[81]: export DO_MOS=NO
++++ config.base[81]: DO_MOS=NO
++++ config.base[87]: export REALTIME=YES
++++ config.base[87]: REALTIME=YES
++++ config.base[90]: export MODE=forecast-only
++++ config.base[90]: MODE=forecast-only
++++ config.base[99]: export FIXgsi=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/gsi
++++ config.base[99]: FIXgsi=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/fix/gsi
++++ config.base[100]: export HOMEpost=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow
++++ config.base[100]: HOMEpost=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow
++++ config.base[101]: export HOMEobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.1.2
++++ config.base[101]: HOMEobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.1.2
++++ config.base[104]: export 'NCP=/bin/cp -p'
++++ config.base[104]: NCP='/bin/cp -p'
++++ config.base[105]: export NMV=/bin/mv
++++ config.base[105]: NMV=/bin/mv
++++ config.base[106]: export 'NLN=/bin/ln -sf'
++++ config.base[106]: NLN='/bin/ln -sf'
++++ config.base[107]: export VERBOSE=YES
++++ config.base[107]: VERBOSE=YES
++++ config.base[108]: export KEEPDATA=NO
++++ config.base[108]: KEEPDATA=NO
++++ config.base[109]: export DEBUG_POSTSCRIPT=NO
++++ config.base[109]: DEBUG_POSTSCRIPT=NO
++++ config.base[110]: export CHGRP_RSTPROD=YES
++++ config.base[110]: CHGRP_RSTPROD=YES
++++ config.base[111]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[111]: CHGRP_CMD='chgrp rstprod'
++++ config.base[112]: export NCDUMP=/apps/test/hpc-stack/i-19.1.3.304__m-8.1.12__h-1.14.0__n-4.9.2__p-2.5.10__e-8.6.0_pnetcdf/intel-19.1.3.304/cray-mpich-8.1.12/netcdf/4.9.2/bin/ncdump
++++ config.base[112]: NCDUMP=/apps/test/hpc-stack/i-19.1.3.304__m-8.1.12__h-1.14.0__n-4.9.2__p-2.5.10__e-8.6.0_pnetcdf/intel-19.1.3.304/cray-mpich-8.1.12/netcdf/4.9.2/bin/ncdump
++++ config.base[113]: export NCLEN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/ush/getncdimlen
++++ config.base[113]: NCLEN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/ush/getncdimlen
++++ config.base[116]: export BASE_ENV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/env
++++ config.base[116]: BASE_ENV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/env
++++ config.base[117]: export BASE_JOB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/jobs/rocoto
++++ config.base[117]: BASE_JOB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/jobs/rocoto
++++ config.base[120]: export SDATE=2021032312
++++ config.base[120]: SDATE=2021032312
++++ config.base[121]: export EDATE=2021032312
++++ config.base[121]: EDATE=2021032312
++++ config.base[122]: export EXP_WARM_START=.false.
++++ config.base[122]: EXP_WARM_START=.false.
++++ config.base[123]: export assim_freq=6
++++ config.base[123]: assim_freq=6
++++ config.base[124]: export PSLOT=C48_S2SW_9b290b28
++++ config.base[124]: PSLOT=C48_S2SW_9b290b28
++++ config.base[125]: export EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/EXPDIR/C48_S2SW_9b290b28
++++ config.base[125]: EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/EXPDIR/C48_S2SW_9b290b28
++++ config.base[126]: export ROTDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28
++++ config.base[126]: ROTDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28
++++ config.base[127]: export ROTDIR_DUMP=YES
++++ config.base[127]: ROTDIR_DUMP=YES
++++ config.base[128]: export DUMP_SUFFIX=
++++ config.base[128]: DUMP_SUFFIX=
++++ config.base[129]: [[ 2021032312 -ge 2019092100 ]]
++++ config.base[129]: [[ 2021032312 -le 2019110700 ]]
++++ config.base[132]: export DATAROOT=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28
++++ config.base[132]: DATAROOT=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28
++++ config.base[133]: export RUNDIR=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28
++++ config.base[133]: RUNDIR=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28
++++ config.base[134]: export ARCDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness/archive/C48_S2SW_9b290b28
++++ config.base[134]: ARCDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness/archive/C48_S2SW_9b290b28
++++ config.base[135]: export ATARDIR=/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C48_S2SW_9b290b28
++++ config.base[135]: ATARDIR=/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C48_S2SW_9b290b28
++++ config.base[138]: export envir=prod
++++ config.base[138]: envir=prod
++++ config.base[139]: export NET=gfs
++++ config.base[139]: NET=gfs
++++ config.base[140]: export RUN=gfs
++++ config.base[140]: RUN=gfs
++++ config.base[146]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/EXPDIR/C48_S2SW_9b290b28/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/input'
+++++ config.com[53]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/restart'
+++++ config.com[54]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[55]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[56]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/history'
+++++ config.com[57]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/master'
+++++ config.com[58]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[59]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[60]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[63]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[65]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[66]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[67]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[68]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[71]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/restart'
+++++ config.com[72]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/prep'
+++++ config.com[73]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/history'
+++++ config.com[74]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[75]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[76]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[77]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[79]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/history'
+++++ config.com[80]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/restart'
+++++ config.com[81]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/input'
+++++ config.com[82]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[83]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[84]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[85]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[87]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[88]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/input'
+++++ config.com[89]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/history'
+++++ config.com[90]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/restart'
+++++ config.com[91]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[92]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[93]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[95]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/chem/history'
+++++ config.com[96]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[98]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/med/restart'
++++ config.base[149]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[149]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[150]: export LOGSCRIPT=
++++ config.base[150]: LOGSCRIPT=
++++ config.base[153]: export 'REDOUT=1>'
++++ config.base[153]: REDOUT='1>'
++++ config.base[154]: export 'REDERR=2>'
++++ config.base[154]: REDERR='2>'
++++ config.base[156]: export SENDECF=NO
++++ config.base[156]: SENDECF=NO
++++ config.base[157]: export SENDSDM=NO
++++ config.base[157]: SENDSDM=NO
++++ config.base[158]: export SENDDBN_NTC=NO
++++ config.base[158]: SENDDBN_NTC=NO
++++ config.base[159]: export SENDDBN=NO
++++ config.base[159]: SENDDBN=NO
++++ config.base[160]: export DBNROOT=/apps/ops/prod/nco/core/prod_util.v2.0.14/fakedbn
++++ config.base[160]: DBNROOT=/apps/ops/prod/nco/core/prod_util.v2.0.14/fakedbn
++++ config.base[163]: export APP=S2SW
++++ config.base[163]: APP=S2SW
++++ config.base[165]: shopt -s extglob
++++ config.base[167]: case "${RUN}" in
++++ config.base[174]: shopt -u extglob
++++ config.base[177]: export DO_ATM=YES
++++ config.base[177]: DO_ATM=YES
++++ config.base[178]: export DO_COUPLED=NO
++++ config.base[178]: DO_COUPLED=NO
++++ config.base[179]: export DO_WAVE=NO
++++ config.base[179]: DO_WAVE=NO
++++ config.base[180]: export DO_OCN=NO
++++ config.base[180]: DO_OCN=NO
++++ config.base[181]: export DO_ICE=NO
++++ config.base[181]: DO_ICE=NO
++++ config.base[182]: export DO_AERO=NO
++++ config.base[182]: DO_AERO=NO
++++ config.base[183]: export AERO_FCST_CDUMP=
++++ config.base[183]: AERO_FCST_CDUMP=
++++ config.base[184]: export AERO_ANL_CDUMP=
++++ config.base[184]: AERO_ANL_CDUMP=
++++ config.base[185]: export WAVE_CDUMP=
++++ config.base[185]: WAVE_CDUMP=
++++ config.base[186]: export DOBNDPNT_WAVE=NO
++++ config.base[186]: DOBNDPNT_WAVE=NO
++++ config.base[187]: export DOIBP_WAV=NO
++++ config.base[187]: DOIBP_WAV=NO
++++ config.base[188]: export FRAC_GRID=.true.
++++ config.base[188]: FRAC_GRID=.true.
++++ config.base[189]: export DO_NEST=NO
++++ config.base[189]: DO_NEST=NO
++++ config.base[190]: [[ NO == \Y\E\S ]]
++++ config.base[194]: export ntiles=6
++++ config.base[194]: ntiles=6
++++ config.base[198]: export OPS_RES=C768
++++ config.base[198]: OPS_RES=C768
++++ config.base[201]: export LEVS=128
++++ config.base[201]: LEVS=128
++++ config.base[202]: export CASE=C48
++++ config.base[202]: CASE=C48
++++ config.base[203]: export CASE_ENS=@CASEENS@
++++ config.base[203]: CASE_ENS=@CASEENS@
++++ config.base[204]: export OCNRES=500
++++ config.base[204]: OCNRES=500
++++ config.base[205]: export ICERES=500
++++ config.base[205]: ICERES=500
++++ config.base[208]: case "${CASE}" in
++++ config.base[210]: export waveGRD=uglo_100km
++++ config.base[210]: waveGRD=uglo_100km
++++ config.base[227]: case "${APP}" in
++++ config.base[246]: export DO_COUPLED=YES
++++ config.base[246]: DO_COUPLED=YES
++++ config.base[247]: export DO_OCN=YES
++++ config.base[247]: DO_OCN=YES
++++ config.base[248]: export DO_ICE=YES
++++ config.base[248]: DO_ICE=YES
++++ config.base[250]: [[ S2SW =~ A$ ]]
++++ config.base[256]: [[ S2SW =~ ^S2SW ]]
++++ config.base[257]: export DO_WAVE=YES
++++ config.base[257]: DO_WAVE=YES
++++ config.base[258]: export WAVE_CDUMP=both
++++ config.base[258]: WAVE_CDUMP=both
++++ config.base[268]: [[ gfs =~ gdas ]]
++++ config.base[271]: [[ gfs =~ gfs ]]
++++ config.base[272]: export FHCYC=24
++++ config.base[272]: FHCYC=24
++++ config.base[276]: export FHMIN=0
++++ config.base[276]: FHMIN=0
++++ config.base[277]: export FHMAX=9
++++ config.base[277]: FHMAX=9
++++ config.base[278]: export FHOUT=3
++++ config.base[278]: FHOUT=3
++++ config.base[279]: export FHOUT_OCNICE=3
++++ config.base[279]: FHOUT_OCNICE=3
++++ config.base[282]: export EUPD_CYC=gdas
++++ config.base[282]: EUPD_CYC=gdas
++++ config.base[285]: export gfs_cyc=1
++++ config.base[285]: gfs_cyc=1
++++ config.base[288]: export FHMIN_GFS=0
++++ config.base[288]: FHMIN_GFS=0
++++ config.base[289]: export FHMAX_GFS=120
++++ config.base[289]: FHMAX_GFS=120
++++ config.base[290]: export FHOUT_GFS=3
++++ config.base[290]: FHOUT_GFS=3
++++ config.base[291]: export FHMAX_HF_GFS=0
++++ config.base[291]: FHMAX_HF_GFS=0
++++ config.base[292]: export FHOUT_HF_GFS=1
++++ config.base[292]: FHOUT_HF_GFS=1
++++ config.base[293]: export FHOUT_OCNICE_GFS=6
++++ config.base[293]: FHOUT_OCNICE_GFS=6
++++ config.base[294]: export FHMIN_WAV=0
++++ config.base[294]: FHMIN_WAV=0
++++ config.base[295]: export FHOUT_WAV=3
++++ config.base[295]: FHOUT_WAV=3
++++ config.base[296]: export FHMAX_HF_WAV=120
++++ config.base[296]: FHMAX_HF_WAV=120
++++ config.base[297]: export FHOUT_HF_WAV=1
++++ config.base[297]: FHOUT_HF_WAV=1
++++ config.base[298]: export FHMAX_WAV=9
++++ config.base[298]: FHMAX_WAV=9
++++ config.base[299]: export FHMAX_WAV_GFS=120
++++ config.base[299]: FHMAX_WAV_GFS=120
++++ config.base[300]: ((  gfs_cyc != 0  ))
++++ config.base[301]: export STEP_GFS=24
++++ config.base[301]: STEP_GFS=24
++++ config.base[306]: export ILPOST=1
++++ config.base[306]: ILPOST=1
++++ config.base[307]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[308]: export ILPOST=3
++++ config.base[308]: ILPOST=3
++++ config.base[312]: export restart_interval_gfs=12
++++ config.base[312]: restart_interval_gfs=12
++++ config.base[317]: export QUILTING=.true.
++++ config.base[317]: QUILTING=.true.
++++ config.base[318]: export OUTPUT_GRID=gaussian_grid
++++ config.base[318]: OUTPUT_GRID=gaussian_grid
++++ config.base[319]: export WRITE_DOPOST=.true.
++++ config.base[319]: WRITE_DOPOST=.true.
++++ config.base[320]: export WRITE_NSFLIP=.true.
++++ config.base[320]: WRITE_NSFLIP=.true.
++++ config.base[323]: export DOIAU=YES
++++ config.base[323]: DOIAU=YES
++++ config.base[324]: export IAUFHRS=3,6,9
++++ config.base[324]: IAUFHRS=3,6,9
++++ config.base[325]: export IAU_FHROT=3
++++ config.base[325]: IAU_FHROT=3
++++ config.base[326]: export IAU_DELTHRS=6
++++ config.base[326]: IAU_DELTHRS=6
++++ config.base[327]: export IAU_OFFSET=6
++++ config.base[327]: IAU_OFFSET=6
++++ config.base[328]: export DOIAU_ENKF=YES
++++ config.base[328]: DOIAU_ENKF=YES
++++ config.base[329]: export IAUFHRS_ENKF=3,6,9
++++ config.base[329]: IAUFHRS_ENKF=3,6,9
++++ config.base[330]: export IAU_DELTHRS_ENKF=6
++++ config.base[330]: IAU_DELTHRS_ENKF=6
++++ config.base[333]: export lobsdiag_forenkf=.true.
++++ config.base[333]: lobsdiag_forenkf=.true.
++++ config.base[341]: export imp_physics=8
++++ config.base[341]: imp_physics=8
++++ config.base[345]: export DO_JEDIATMVAR=NO
++++ config.base[345]: DO_JEDIATMVAR=NO
++++ config.base[346]: export DO_JEDIATMENS=NO
++++ config.base[346]: DO_JEDIATMENS=NO
++++ config.base[347]: export DO_JEDIOCNVAR=NO
++++ config.base[347]: DO_JEDIOCNVAR=NO
++++ config.base[348]: export DO_JEDISNOWDA=NO
++++ config.base[348]: DO_JEDISNOWDA=NO
++++ config.base[349]: export DO_MERGENSST=NO
++++ config.base[349]: DO_MERGENSST=NO
++++ config.base[352]: export DOHYBVAR=@DOHYBVAR@
++++ config.base[352]: DOHYBVAR=@DOHYBVAR@
++++ config.base[353]: export NMEM_ENS=0
++++ config.base[353]: NMEM_ENS=0
++++ config.base[354]: export SMOOTH_ENKF=NO
++++ config.base[354]: SMOOTH_ENKF=NO
++++ config.base[355]: export l4densvar=.true.
++++ config.base[355]: l4densvar=.true.
++++ config.base[356]: export lwrite4danl=.true.
++++ config.base[356]: lwrite4danl=.true.
++++ config.base[357]: export DO_CALC_INCREMENT=NO
++++ config.base[357]: DO_CALC_INCREMENT=NO
++++ config.base[360]: export NMEM_ENS_GFS=30
++++ config.base[360]: NMEM_ENS_GFS=30
++++ config.base[361]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[361]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[362]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[362]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[365]: [[ @DOHYBVAR@ = \Y\E\S ]]
++++ config.base[379]: [[ @DOHYBVAR@ == \N\O ]]
++++ config.base[387]: export ENKF_SPREAD=YES
++++ config.base[387]: ENKF_SPREAD=YES
++++ config.base[390]: [[ forecast-only = \c\y\c\l\e\d ]]
++++ config.base[390]: [[ YES = \N\O ]]
++++ config.base[390]: [[ forecast-only = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[390]: [[ .false. = \.\f\a\l\s\e\. ]]
++++ config.base[391]: export IAU_OFFSET=0
++++ config.base[391]: IAU_OFFSET=0
++++ config.base[392]: export IAU_FHROT=0
++++ config.base[392]: IAU_FHROT=0
++++ config.base[393]: export IAUFHRS=6
++++ config.base[393]: IAUFHRS=6
++++ config.base[396]: [[ YES = \N\O ]]
++++ config.base[400]: [[ YES == \Y\E\S ]]
++++ config.base[401]: export restart_interval_enkfgdas=3
++++ config.base[401]: restart_interval_enkfgdas=3
++++ config.base[406]: export restart_interval_enkfgfs=3
++++ config.base[406]: restart_interval_enkfgfs=3
++++ config.base[408]: [[ YES == \Y\E\S ]]
++++ config.base[409]: export restart_interval_gdas=3
++++ config.base[409]: restart_interval_gdas=3
++++ config.base[414]: export GSI_SOILANAL=NO
++++ config.base[414]: GSI_SOILANAL=NO
++++ config.base[417]: export DONST=YES
++++ config.base[417]: DONST=YES
++++ config.base[418]: [[ YES = \Y\E\S ]]
++++ config.base[418]: export 'FNTSFA=        '
++++ config.base[418]: FNTSFA='        '
++++ config.base[421]: export nst_anl=.true.
++++ config.base[421]: nst_anl=.true.
++++ config.base[424]: export MAKE_NSSTBUFR=NO
++++ config.base[424]: MAKE_NSSTBUFR=NO
++++ config.base[427]: export MAKE_ACFTBUFR=NO
++++ config.base[427]: MAKE_ACFTBUFR=NO
++++ config.base[430]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[430]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[433]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[433]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[434]: export INCVARS_EFOLD=5
++++ config.base[434]: INCVARS_EFOLD=5
++++ config.base[439]: export netcdf_diag=.true.
++++ config.base[439]: netcdf_diag=.true.
++++ config.base[440]: export binary_diag=.false.
++++ config.base[440]: binary_diag=.false.
++++ config.base[443]: export DO_METP=NO
++++ config.base[443]: DO_METP=NO
++++ config.base[444]: export DO_FIT2OBS=YES
++++ config.base[444]: DO_FIT2OBS=YES
++++ config.base[445]: export DO_VRFY_OCEANDA=NO
++++ config.base[445]: DO_VRFY_OCEANDA=NO
++++ config.base[448]: export FHMAX_FITS=132
++++ config.base[448]: FHMAX_FITS=132
++++ config.base[449]: [[ 132 -gt 120 ]]
++++ config.base[449]: export FHMAX_FITS=120
++++ config.base[449]: FHMAX_FITS=120
++++ config.base[452]: export HPSSARCH=NO
++++ config.base[452]: HPSSARCH=NO
++++ config.base[453]: export LOCALARCH=NO
++++ config.base[453]: LOCALARCH=NO
++++ config.base[454]: [[ NO = \Y\E\S ]]
++++ config.base[458]: export ARCH_CYC=00
++++ config.base[458]: ARCH_CYC=00
++++ config.base[459]: export ARCH_WARMICFREQ=4
++++ config.base[459]: ARCH_WARMICFREQ=4
++++ config.base[460]: export ARCH_FCSTICFREQ=1
++++ config.base[460]: ARCH_FCSTICFREQ=1
++++ config.base[463]: [[ NO = \Y\E\S ]]
++++ config.base[470]: export NUM_SND_COLLECTIVES=9
++++ config.base[470]: NUM_SND_COLLECTIVES=9
++++ config.base[472]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/EXPDIR/C48_S2SW_9b290b28/config.wave
++++ config.wave[6]: echo 'BEGIN: config.wave'
+BEGIN: config.wave
++++ config.wave[13]: export CDUMPwave=gfswave
++++ config.wave[13]: CDUMPwave=gfswave
++++ config.wave[16]: export CDUMPRSTwave=gdas
++++ config.wave[16]: CDUMPRSTwave=gdas
++++ config.wave[19]: export waveGRDN=1
++++ config.wave[19]: waveGRDN=1
++++ config.wave[20]: export waveGRDG=10
++++ config.wave[20]: waveGRDG=10
++++ config.wave[21]: export USE_WAV_RMP=NO
++++ config.wave[21]: USE_WAV_RMP=NO
++++ config.wave[22]: export waveMULTIGRID=.false.
++++ config.wave[22]: waveMULTIGRID=.false.
++++ config.wave[23]: export MESH_WAV=mesh.uglo_100km.nc
++++ config.wave[23]: MESH_WAV=mesh.uglo_100km.nc
++++ config.wave[24]: export 'waveesmfGRD= '
++++ config.wave[24]: waveesmfGRD=' '
++++ config.wave[27]: case "${waveGRD}" in
++++ config.wave[79]: export waveinterpGRD=glo_200
++++ config.wave[79]: waveinterpGRD=glo_200
++++ config.wave[80]: export wavepostGRD=
++++ config.wave[80]: wavepostGRD=
++++ config.wave[81]: export waveuoutpGRD=uglo_100km
++++ config.wave[81]: waveuoutpGRD=uglo_100km
++++ config.wave[96]: export WAVEWND_DID=
++++ config.wave[96]: WAVEWND_DID=
++++ config.wave[97]: export WAVEWND_FID=
++++ config.wave[97]: WAVEWND_FID=
++++ config.wave[100]: [[ gfs == \g\f\s ]]
++++ config.wave[101]: export FHMAX_WAV=120
++++ config.wave[101]: FHMAX_WAV=120
++++ config.wave[103]: export WAVHINDH=0
++++ config.wave[103]: WAVHINDH=0
++++ config.wave[104]: export FHMAX_WAV_IBP=180
++++ config.wave[104]: FHMAX_WAV_IBP=180
++++ config.wave[105]: ((  FHMAX_WAV < FHMAX_WAV_IBP  ))
++++ config.wave[105]: export FHMAX_WAV_IBP=120
++++ config.wave[105]: FHMAX_WAV_IBP=120
++++ config.wave[108]: export DTFLD_WAV=3600
++++ config.wave[108]: DTFLD_WAV=3600
++++ config.wave[109]: export DTPNT_WAV=3600
++++ config.wave[109]: DTPNT_WAV=3600
++++ config.wave[110]: export FHINCP_WAV=1
++++ config.wave[110]: FHINCP_WAV=1
++++ config.wave[113]: export 'OUTPARS_WAV=WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++ config.wave[113]: OUTPARS_WAV='WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++ config.wave[116]: [[ gfs == \g\d\a\s ]]
++++ config.wave[120]: [[ 1 -ne 0 ]]
++++ config.wave[121]: export WAVHCYC=6
++++ config.wave[121]: WAVHCYC=6
++++ config.wave[122]: export FHMAX_WAV_CUR=192
++++ config.wave[122]: FHMAX_WAV_CUR=192
++++ config.wave[130]: export RSTTYPE_WAV=T
++++ config.wave[130]: RSTTYPE_WAV=T
++++ config.wave[131]: [[ gfs != gfs ]]
++++ config.wave[136]: rst_dt_gfs=43200
++++ config.wave[137]: [[ 43200 -gt 0 ]]
++++ config.wave[138]: export DT_1_RST_WAV=0
++++ config.wave[138]: DT_1_RST_WAV=0
++++ config.wave[141]: export DT_2_RST_WAV=43200
++++ config.wave[141]: DT_2_RST_WAV=43200
++++ config.wave[147]: export RSTIOFF_WAV=0
++++ config.wave[147]: RSTIOFF_WAV=0
++++ config.wave[152]: export RUNMEM=-1
++++ config.wave[152]: RUNMEM=-1
++++ config.wave[155]: ((  RUNMEM == -1  ))
++++ config.wave[157]: export waveMEMB=
++++ config.wave[157]: waveMEMB=
++++ config.wave[164]: export WW3ATMINP=CPL
++++ config.wave[164]: WW3ATMINP=CPL
++++ config.wave[165]: [[ YES == \Y\E\S ]]
++++ config.wave[166]: export WW3ICEINP=CPL
++++ config.wave[166]: WW3ICEINP=CPL
++++ config.wave[167]: export WAVEICE_FID=
++++ config.wave[167]: WAVEICE_FID=
++++ config.wave[173]: export WAVECUR_DID=rtofs
++++ config.wave[173]: WAVECUR_DID=rtofs
++++ config.wave[174]: [[ YES == \Y\E\S ]]
++++ config.wave[175]: export WW3CURINP=CPL
++++ config.wave[175]: WW3CURINP=CPL
++++ config.wave[176]: export WAVECUR_FID=
++++ config.wave[176]: WAVECUR_FID=
++++ config.wave[183]: export WW3ATMIENS=F
++++ config.wave[183]: WW3ATMIENS=F
++++ config.wave[184]: export WW3ICEIENS=F
++++ config.wave[184]: WW3ICEIENS=F
++++ config.wave[185]: export WW3CURIENS=F
++++ config.wave[185]: WW3CURIENS=F
++++ config.wave[187]: export GOFILETYPE=1
++++ config.wave[187]: GOFILETYPE=1
++++ config.wave[188]: export POFILETYPE=1
++++ config.wave[188]: POFILETYPE=1
++++ config.wave[192]: export FUNIPNT=T
++++ config.wave[192]: FUNIPNT=T
++++ config.wave[194]: export IOSRV=1
++++ config.wave[194]: IOSRV=1
++++ config.wave[196]: export FPNTPROC=T
++++ config.wave[196]: FPNTPROC=T
++++ config.wave[198]: export FGRDPROC=F
++++ config.wave[198]: FGRDPROC=F
++++ config.wave[200]: export FLAGMASKCOMP=F
++++ config.wave[200]: FLAGMASKCOMP=F
++++ config.wave[202]: export FLAGMASKOUT=F
++++ config.wave[202]: FLAGMASKOUT=F
++++ config.wave[204]: echo 'END: config.wave'
+END: config.wave
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/EXPDIR/C48_S2SW_9b290b28/config.wavepostsbs
++++ config.wavepostsbs[6]: echo 'BEGIN: config.wavepostsbs'
+BEGIN: config.wavepostsbs
++++ config.wavepostsbs[9]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/EXPDIR/C48_S2SW_9b290b28/config.resources wavepostsbs
+++++ config.resources[7]: ((  1 != 1  ))
+++++ config.resources[31]: step=wavepostsbs
+++++ config.resources[33]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[35]: case ${machine} in
+++++ config.resources[36]: npe_node_max=128
+++++ config.resources[72]: export npe_node_max
+++++ config.resources[74]: case ${step} in
+++++ config.resources[134]: export wtime_wavepostsbs=00:20:00
+++++ config.resources[134]: wtime_wavepostsbs=00:20:00
+++++ config.resources[135]: export wtime_wavepostsbs_gfs=03:00:00
+++++ config.resources[135]: wtime_wavepostsbs_gfs=03:00:00
+++++ config.resources[136]: export npe_wavepostsbs=8
+++++ config.resources[136]: npe_wavepostsbs=8
+++++ config.resources[137]: export nth_wavepostsbs=1
+++++ config.resources[137]: nth_wavepostsbs=1
+++++ config.resources[138]: export npe_node_wavepostsbs=128
+++++ config.resources[138]: npe_node_wavepostsbs=128
+++++ config.resources[139]: export NTASKS=8
+++++ config.resources[139]: NTASKS=8
+++++ config.resources[140]: export memory_wavepostsbs=10GB
+++++ config.resources[140]: memory_wavepostsbs=10GB
+++++ config.resources[141]: export memory_wavepostsbs_gfs=10GB
+++++ config.resources[141]: memory_wavepostsbs_gfs=10GB
+++++ config.resources[1300]: echo 'END: config.resources'
+END: config.resources
++++ config.wavepostsbs[12]: export WAV_SUBGRBSRC=
++++ config.wavepostsbs[12]: WAV_SUBGRBSRC=
++++ config.wavepostsbs[13]: export WAV_SUBGRB=
++++ config.wavepostsbs[13]: WAV_SUBGRB=
++++ config.wavepostsbs[16]: export DOFLD_WAV=YES
++++ config.wavepostsbs[16]: DOFLD_WAV=YES
++++ config.wavepostsbs[17]: export DOPNT_WAV=YES
++++ config.wavepostsbs[17]: DOPNT_WAV=YES
++++ config.wavepostsbs[18]: export DOGRB_WAV=YES
++++ config.wavepostsbs[18]: DOGRB_WAV=YES
++++ config.wavepostsbs[19]: [[ -n glo_200 ]]
++++ config.wavepostsbs[20]: export DOGRI_WAV=YES
++++ config.wavepostsbs[20]: DOGRI_WAV=YES
++++ config.wavepostsbs[24]: export DOSPC_WAV=YES
++++ config.wavepostsbs[24]: DOSPC_WAV=YES
++++ config.wavepostsbs[25]: export DOBLL_WAV=YES
++++ config.wavepostsbs[25]: DOBLL_WAV=YES
++++ config.wavepostsbs[27]: echo 'END: config.wavepostsbs'
+END: config.wavepostsbs
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/EXPDIR/C48_S2SW_9b290b28/config.wavepostpnt
++++ config.wavepostpnt[6]: echo 'BEGIN: config.wavepostpnt'
+BEGIN: config.wavepostpnt
++++ config.wavepostpnt[9]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/EXPDIR/C48_S2SW_9b290b28/config.resources wavepostpnt
+++++ config.resources[7]: ((  1 != 1  ))
+++++ config.resources[31]: step=wavepostpnt
+++++ config.resources[33]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[35]: case ${machine} in
+++++ config.resources[36]: npe_node_max=128
+++++ config.resources[72]: export npe_node_max
+++++ config.resources[74]: case ${step} in
+++++ config.resources[173]: export wtime_wavepostpnt=04:00:00
+++++ config.resources[173]: wtime_wavepostpnt=04:00:00
+++++ config.resources[174]: export npe_wavepostpnt=200
+++++ config.resources[174]: npe_wavepostpnt=200
+++++ config.resources[175]: export nth_wavepostpnt=1
+++++ config.resources[175]: nth_wavepostpnt=1
+++++ config.resources[176]: export npe_node_wavepostpnt=128
+++++ config.resources[176]: npe_node_wavepostpnt=128
+++++ config.resources[177]: export is_exclusive=True
+++++ config.resources[177]: is_exclusive=True
+++++ config.resources[178]: [[ 128 -gt 40 ]]
+++++ config.resources[179]: export npe_node_wavepostpnt=40
+++++ config.resources[179]: npe_node_wavepostpnt=40
+++++ config.resources[180]: export is_exclusive=False
+++++ config.resources[180]: is_exclusive=False
+++++ config.resources[182]: export NTASKS=200
+++++ config.resources[182]: NTASKS=200
+++++ config.resources[1300]: echo 'END: config.resources'
+END: config.resources
++++ config.wavepostpnt[11]: echo 'END: config.wavepostpnt'
+END: config.wavepostpnt
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[110]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/env/WCOSS2.env wavepostpnt
++++ WCOSS2.env[3]: [[ 1 -ne 1 ]]
++++ WCOSS2.env[15]: step=wavepostpnt
++++ WCOSS2.env[18]: export 'launcher=mpiexec -l'
++++ WCOSS2.env[18]: launcher='mpiexec -l'
++++ WCOSS2.env[19]: export 'mpmd_opt=--cpu-bind verbose,core cfp'
++++ WCOSS2.env[19]: mpmd_opt='--cpu-bind verbose,core cfp'
++++ WCOSS2.env[21]: [[ wavepostpnt = \p\r\e\p ]]
++++ WCOSS2.env[21]: [[ wavepostpnt = \p\r\e\p\b\u\f\r ]]
++++ WCOSS2.env[30]: [[ wavepostpnt = \p\r\e\p\s\n\o\w\o\b\s ]]
++++ WCOSS2.env[34]: [[ wavepostpnt = \p\r\e\p\_\e\m\i\s\s\i\o\n\s ]]
++++ WCOSS2.env[38]: [[ wavepostpnt = \w\a\v\e\i\n\i\t ]]
++++ WCOSS2.env[38]: [[ wavepostpnt = \w\a\v\e\p\r\e\p ]]
++++ WCOSS2.env[38]: [[ wavepostpnt = \w\a\v\e\p\o\s\t\s\b\s ]]
++++ WCOSS2.env[38]: [[ wavepostpnt = \w\a\v\e\p\o\s\t\b\n\d\p\n\t ]]
++++ WCOSS2.env[38]: [[ wavepostpnt = \w\a\v\e\p\o\s\t\b\n\d\p\n\t\b\l\l ]]
++++ WCOSS2.env[38]: [[ wavepostpnt = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ WCOSS2.env[40]: export USE_CFP=YES
++++ WCOSS2.env[40]: USE_CFP=YES
++++ WCOSS2.env[41]: [[ wavepostpnt = \w\a\v\e\p\r\e\p ]]
++++ WCOSS2.env[42]: export 'wavempexec=mpiexec -l -np'
++++ WCOSS2.env[42]: wavempexec='mpiexec -l -np'
++++ WCOSS2.env[43]: export 'wave_mpmd=--cpu-bind verbose,core cfp'
++++ WCOSS2.env[43]: wave_mpmd='--cpu-bind verbose,core cfp'
+++ jjob_header.sh[111]: status=0
+++ jjob_header.sh[112]: ((  status != 0  ))
++ JGLOBAL_WAVE_POST_PNT[7]: export errchk=err_chk
++ JGLOBAL_WAVE_POST_PNT[7]: errchk=err_chk
++ JGLOBAL_WAVE_POST_PNT[9]: export MP_PULSE=0
++ JGLOBAL_WAVE_POST_PNT[9]: MP_PULSE=0
++ JGLOBAL_WAVE_POST_PNT[12]: YMD=20210323
++ JGLOBAL_WAVE_POST_PNT[12]: HH=12
++ JGLOBAL_WAVE_POST_PNT[12]: declare_from_tmpl -rx COM_WAVE_PREP COM_WAVE_HISTORY COM_WAVE_STATION
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_WAVE_PREP=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28/gfs.20210323/12//model_data/wave/prep
+declare_from_tmpl :: COM_WAVE_HISTORY=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28/gfs.20210323/12//model_data/wave/history
+declare_from_tmpl :: COM_WAVE_STATION=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28/gfs.20210323/12//products/wave/station
++ JGLOBAL_WAVE_POST_PNT[14]: [[ ! -d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28/gfs.20210323/12//products/wave/station ]]
++ JGLOBAL_WAVE_POST_PNT[18]: membTAG=p
++ JGLOBAL_WAVE_POST_PNT[19]: '[' '' == 00 ']'
++ JGLOBAL_WAVE_POST_PNT[20]: export membTAG
++ JGLOBAL_WAVE_POST_PNT[21]: export WAV_MOD_TAG=gfswave
++ JGLOBAL_WAVE_POST_PNT[21]: WAV_MOD_TAG=gfswave
++ JGLOBAL_WAVE_POST_PNT[23]: export CFP_VERBOSE=1
++ JGLOBAL_WAVE_POST_PNT[23]: CFP_VERBOSE=1
++ JGLOBAL_WAVE_POST_PNT[25]: export FHMAX_WAV_PNT=120
++ JGLOBAL_WAVE_POST_PNT[25]: FHMAX_WAV_PNT=120
++ JGLOBAL_WAVE_POST_PNT[26]: export DOSPC_WAV=YES
++ JGLOBAL_WAVE_POST_PNT[26]: DOSPC_WAV=YES
++ JGLOBAL_WAVE_POST_PNT[27]: export DOBLL_WAV=YES
++ JGLOBAL_WAVE_POST_PNT[27]: DOBLL_WAV=YES
++ JGLOBAL_WAVE_POST_PNT[28]: export DOBNDPNT_WAV=NO
++ JGLOBAL_WAVE_POST_PNT[28]: DOBNDPNT_WAV=NO
++ JGLOBAL_WAVE_POST_PNT[32]: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/scripts/exgfs_wave_post_pnt.sh
+Begin exgfs_wave_post_pnt.sh at Wed Jun  5 22:07:39 UTC 2024
++ exgfs_wave_post_pnt.sh[39]: cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851
++ exgfs_wave_post_pnt.sh[43]: export WAV_MOD_TAG=gfswave
++ exgfs_wave_post_pnt.sh[43]: WAV_MOD_TAG=gfswave
+++ exgfs_wave_post_pnt.sh[45]: hostname
++ exgfs_wave_post_pnt.sh[45]: echo 'HAS BEGUN on nid002960'
+HAS BEGUN on nid002960
++ exgfs_wave_post_pnt.sh[46]: echo 'Starting WAVE PNT POSTPROCESSOR SCRIPT for gfswave'
+Starting WAVE PNT POSTPROCESSOR SCRIPT for gfswave
++ exgfs_wave_post_pnt.sh[48]: set +x
+ 
+                     *************************************
+                     *** WAVE PNT POSTPROCESSOR SCRIPT ***
+                     *************************************
+ 
+Starting at : Wed Jun  5 22:07:39 UTC 2024
+-------------
+ 
++ exgfs_wave_post_pnt.sh[61]: '[' -z 200 ']'
++ exgfs_wave_post_pnt.sh[70]: waveuoutpGRD=uglo_100km
++ exgfs_wave_post_pnt.sh[75]: export STA_DIR=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/station_ascii_files
++ exgfs_wave_post_pnt.sh[75]: STA_DIR=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/station_ascii_files
++ exgfs_wave_post_pnt.sh[76]: '[' -d /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/station_ascii_files ']'
++ exgfs_wave_post_pnt.sh[80]: mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/station_ascii_files
++ exgfs_wave_post_pnt.sh[81]: mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/station_ascii_files/spec
++ exgfs_wave_post_pnt.sh[82]: mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/station_ascii_files/bull
++ exgfs_wave_post_pnt.sh[83]: mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/station_ascii_files/cbull
++ exgfs_wave_post_pnt.sh[84]: mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/station_ascii_files/specfhr
++ exgfs_wave_post_pnt.sh[85]: mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/station_ascii_files/bullfhr
++ exgfs_wave_post_pnt.sh[86]: mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/station_ascii_files/cbullfhr
++ exgfs_wave_post_pnt.sh[88]: set +x
+ 
+Grid information  :
+-------------------
+   Output points : uglo_100km
+ 
++ exgfs_wave_post_pnt.sh[99]: exit_code=0
++ exgfs_wave_post_pnt.sh[101]: set +x
+ 
+Preparing input files :
+-----------------------
++ exgfs_wave_post_pnt.sh[111]: rm -f cmdfile
++ exgfs_wave_post_pnt.sh[112]: touch cmdfile
++ exgfs_wave_post_pnt.sh[113]: chmod 744 cmdfile
++ exgfs_wave_post_pnt.sh[115]: set_trace
++ preamble.sh[52]: [[ YES == \Y\E\S ]]
++ preamble.sh[53]: set -x
++ exgfs_wave_post_pnt.sh[118]: iloop=0
++ exgfs_wave_post_pnt.sh[119]: for grdID in ${waveuoutpGRD}
++ exgfs_wave_post_pnt.sh[120]: [[ -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28/gfs.20210323/12//model_data/wave/prep/gfswave.mod_def.uglo_100km ]]
++ exgfs_wave_post_pnt.sh[121]: set +x
+ Mod def file for uglo_100km found in /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28/gfs.20210323/12//model_data/wave/prep. copying ....
++ exgfs_wave_post_pnt.sh[125]: cp -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28/gfs.20210323/12//model_data/wave/prep/gfswave.mod_def.uglo_100km mod_def.uglo_100km
++ exgfs_wave_post_pnt.sh[126]: iloop=1
++ exgfs_wave_post_pnt.sh[130]: for grdID in $waveuoutpGRD
++ exgfs_wave_post_pnt.sh[132]: '[' '!' -f mod_def.uglo_100km ']'
++ exgfs_wave_post_pnt.sh[144]: set +x
+File mod_def.uglo_100km found. Syncing to all nodes ...
++ exgfs_wave_post_pnt.sh[152]: rm -f buoy.loc
++ exgfs_wave_post_pnt.sh[154]: '[' -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/parm/wave/wave_gfs.buoys ']'
++ exgfs_wave_post_pnt.sh[156]: cp -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/parm/wave/wave_gfs.buoys buoy.loc.temp
++ exgfs_wave_post_pnt.sh[157]: '[' NO = YES ']'
++ exgfs_wave_post_pnt.sh[166]: sed -n '/^\$.*/!p' buoy.loc.temp
++ exgfs_wave_post_pnt.sh[166]: grep -v IBP
++ exgfs_wave_post_pnt.sh[170]: '[' -s buoy.loc ']'
++ exgfs_wave_post_pnt.sh[172]: set +x
+   buoy.loc and buoy.ibp copied and processed (/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/parm/wave/wave_gfs.buoys).
++ exgfs_wave_post_pnt.sh[191]: '[' -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/parm/wave/ww3_outp_spec.inp.tmpl ']'
++ exgfs_wave_post_pnt.sh[193]: cp -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/parm/wave/ww3_outp_spec.inp.tmpl ww3_outp_spec.inp.tmpl
++ exgfs_wave_post_pnt.sh[196]: '[' -f ww3_outp_spec.inp.tmpl ']'
++ exgfs_wave_post_pnt.sh[198]: set +x
+   ww3_outp_spec.inp.tmpl copied. Syncing to all grids ...
++ exgfs_wave_post_pnt.sh[214]: '[' -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/parm/wave/ww3_outp_bull.inp.tmpl ']'
++ exgfs_wave_post_pnt.sh[216]: cp -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/parm/wave/ww3_outp_bull.inp.tmpl ww3_outp_bull.inp.tmpl
++ exgfs_wave_post_pnt.sh[219]: '[' -f ww3_outp_bull.inp.tmpl ']'
++ exgfs_wave_post_pnt.sh[221]: set +x
+   ww3_outp_bull.inp.tmpl copied. Syncing to all nodes ...
++ exgfs_wave_post_pnt.sh[238]: '[' YES = YES ']'
+++ exgfs_wave_post_pnt.sh[240]: /apps/ops/prod/nco/core/prod_util.v2.0.14/exec/ndate -0 2021032312
++ exgfs_wave_post_pnt.sh[240]: ymdh=2021032312
++ exgfs_wave_post_pnt.sh[241]: tstart='20210323 120000'
++ exgfs_wave_post_pnt.sh[242]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[243]: sed -e 's/TIME/20210323 120000/g' -e s/DT/3600./g -e s/POINT/1/g -e s/ITYPE/0/g -e s/FORMAT/F/g ww3_outp_spec.inp.tmpl
++ exgfs_wave_post_pnt.sh[250]: /bin/ln -sf mod_def.uglo_100km mod_def.ww3
++ exgfs_wave_post_pnt.sh[251]: HMS=120000
++ exgfs_wave_post_pnt.sh[252]: [[ -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28/gfs.20210323/12//model_data/wave/history/gfswave.out_pnt.uglo_100km.20210323.120000 ]]
++ exgfs_wave_post_pnt.sh[253]: /bin/ln -sf /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28/gfs.20210323/12//model_data/wave/history/gfswave.out_pnt.uglo_100km.20210323.120000 ./out_pnt.uglo_100km
++ exgfs_wave_post_pnt.sh[265]: rm -f buoy_tmp.loc buoy_log.ww3 ww3_oup.inp
++ exgfs_wave_post_pnt.sh[266]: /bin/ln -sf ./out_pnt.uglo_100km ./out_pnt.ww3
++ exgfs_wave_post_pnt.sh[267]: /bin/ln -sf ./mod_def.uglo_100km ./mod_def.ww3
++ exgfs_wave_post_pnt.sh[268]: export pgm=ww3_outp
++ exgfs_wave_post_pnt.sh[268]: pgm=ww3_outp
++ exgfs_wave_post_pnt.sh[268]: . prep_step
+++ prep_step[3]: '[' -n ww3_outp ']'
+++ prep_step[3]: '[' -n OUTPUT.223942 ']'
+++ prep_step[4]: echo ww3_outp
+++ prep_step[7]: '[' -f errfile ']'
+++ prep_step[11]: export FORT01=0
+++ prep_step[11]: FORT01=0
++++ prep_step[12]: grep '^FORT[0-9]\{1,\}='
++++ prep_step[12]: env
++++ prep_step[12]: awk -F= '{print $1}'
+++ prep_step[12]: unset FORT01
++ exgfs_wave_post_pnt.sh[269]: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/exec/ww3_outp
++ exgfs_wave_post_pnt.sh[270]: export err=0
++ exgfs_wave_post_pnt.sh[270]: err=0
++ exgfs_wave_post_pnt.sh[270]: err_chk
+ww3_outp completed cleanly
++ exgfs_wave_post_pnt.sh[273]: '[' 0 '!=' 0 ']'
++ exgfs_wave_post_pnt.sh[292]: cat buoy.loc
++ exgfs_wave_post_pnt.sh[292]: sed 's/'\''//g'
++ exgfs_wave_post_pnt.sh[292]: awk '{print $3}'
++ exgfs_wave_post_pnt.sh[293]: grep -F -f ibp_tags buoy_log.ww3
++ exgfs_wave_post_pnt.sh[294]: rm -f buoy_log.dat
++ exgfs_wave_post_pnt.sh[295]: mv buoy_log.tmp buoy_log.dat
++ exgfs_wave_post_pnt.sh[297]: grep -F -f ibp_tags buoy_lst.loc
+++ exgfs_wave_post_pnt.sh[299]: awk '{ print $1 }' buoy_tmp1.loc
++ exgfs_wave_post_pnt.sh[299]: buoys='46070
+46071
+52212
+SAIPAN
+GUAM
+WAKE
+PALAU
+YAP
+CHUUK
+POHNPEI
+KOSRAE
+MAJURO
+ENEWETAK
+TARAWA
+52200
+22102
+22103
+22105
+52201
+52202
+52211
+SAIPAN_W
+SAIPAN_E
+PALAU_W
+PALAU_E
+YAP_E
+CHUUK_W
+CHUUK_E
+POHNPEI_E
+KOSRAE_W
+KWAJALEIN
+KWAJ_W1
+KWAJ_W2
+KWAJ_E
+WOTHO
+ROI_NAMUR
+WOTJE_E
+MAJURO_02
+MAJURO_03
+21178
+21229
+22184
+22185
+22186
+22187
+22188
+22190
+NEWGUINE_S
+NADI
+FUNAFUTI
+NOUMEA
+PORT_VILA
+NAURU
+SOLOMON_SW
+SOLOMON_SE
+SOLOMON_N
+55020
+55035
+55039
+SULAWESI
+P_BONARAT
+P_RUNDUMA
+P_JAMDENA
+P_SAWA
+LAGOS
+FORCADOS
+NIGERDELTA
+CALABAR
+P_ENGGANO
+P_PENJAN
+SEMARANG
+P_IGI
+BORNEO
+P_GUREDA
+62170
+LF3F
+62026
+62111
+62112
+62116
+62119
+62128
+62132
+62133
+62142
+62143
+62144
+62145
+62152
+62162
+62164
+63055
+63056
+63057
+63103
+63108
+63110
+63112
+63113
+63115
+LF3J
+LF4B
+LF4H
+LF4C
+LF5U
+EURO
+K13
+62118
+62146
+63111
+BSH01
+BSH02
+BSH03
+BSH04
+BSH05
+LF3N
+LF5T
+LDWR
+3FYT
+LFB1
+LFB2
+23092
+23097
+23098
+23099
+23100
+23101
+23168
+23169
+23170
+23172
+23173
+23174
+G_NICOBAR
+56002
+56005
+56006
+56007
+AGULHAS_FA
+MALAY01
+MALAY02
+MALAY03
+MALAY04
+MALAY05
+MALAY06
+56012
+CADUCOU
+SWROBE
+WBAST1
+WBAST2
+EBAST
+CBAST
+CSORRELL
+SEKING
+NKING
+EHOGAN
+STHSEC
+EBICHENO
+WCAPYORK
+JANSZ
+23167
+23171
+23451
+23455
+23456
+23491
+23492
+23493
+23494
+23495
+JEFFREYBAY
+CAPEPOINT
+FAPLATFORM
+BKMG01
+BKMG02
+BKMG03
+BKMG04
+BKMG05
+BKMG06
+BKMG07
+BKMG08
+BKMG09
+BKMG10
+BKMG11
+BKMG12
+BKMG13
+BKMG14
+BKMG15
+BKMG16
+BKMG17
+BKMG18
+BKMG19
+BKMG20
+BKMG21
+BKMG22
+BKMG23
+BKMG24
+BKMG25
+BKMG26
+BKMG27
+BKMG28
+BKMG29
+BKMG30
+BKMG31
+BKMG32
+BKMG33
+BKMG34
+BKMG35
+BKMG36
+BKMG37
+BKMG38
+BKMG39
+BKMG40
+BKMG41
+BKMG42
+BKMG43
+BKMG44
+BKMG45
+BKMG46
+BKMG47
+BKMG48
+BKMG49
+BKMG51
+BKMG52
+BKMG53
+BKMG54
+BKMG55
+BKMG56
+BKMG57
+BKMG58
+BKMG59
+BKMG60
+BKMG61
+BKMG62
+BKMG63
+BKMG64
+BKMG65
+BKMG66
+BKMG67
+BKMG68
+BKMG69
+BKMG70
+BKMG71
+BKMG72
+BKMG73
+BKMG74
+BKMG75
+21004
+22001
+22107
+MAUR01
+MAUR02
+V14003
+V14004
+V14005
+V14006
+V14007
+V14008
+V14009
+V14010
+V14011
+V14012
+V14013
+V14014
+V53015
+V14016
+V14017
+V53018
+V23019
+V23020
+V23021
+V23022
+V14023
+V14039
+V14040
+V14041
+V14042
+V14043
+V14044
+V14045
+V14046
+V14047
+V14048
+V14049
+V14050
+V14051
+V14052
+V14053
+V14054
+V14055
+V14056
+V14057
+V14058
+V14059
+V14060
+V14061
+V14062
+V14063
+V14064
+V14065
+V14066
+V14067
+V14068
+V14069
+V14070
+V14071
+V14072
+V14073
+V14074
+V14075
+V14076
+V14077
+V14079
+V14080
+V14081
+V14082
+V14083
+V14084
+KNY51
+KNY52
+KNY53
+KNY54
+KNY55
+KNY56
+KNY57
+KNY58
+KNY59
+KNY60
+KNY61
+KNY62
+KNY63
+KNY64
+KNY65
+KNY66
+KNY67
+KNY68
+KNY69
+KNY70
+KNY71
+KNY72
+KNY73
+KNY74
+KNY75
+KNY76
+KNY77
+KNY78
+KNY79
+KNY80
+KNY81
+KNY82
+KNY83
+MDG51
+MDG52
+MDG53
+MDG54
+MDG55
+MDG56
+MDG57
+MDG58
+MDG59
+MDG60
+MDG61
+MDG62
+MDG63
+MDG64
+MDG65
+MDG66
+MDG67
+MDG68
+MDG69
+MDG70
+MDG71
+MDG72
+MDG73
+MDG74
+MDG75
+MDG76
+MDG77
+MDG78
+MDG79
+MDG80
+MDG81
+SYC51
+SYC52
+SYC53
+SYC54
+SYC55
+SYC56
+SYC57
+SYC58
+SYC59
+SYC60
+SYC61
+SYC62
+SYC63
+SYC64
+SYC65
+SYC66
+SYC67
+SYC68
+SYC69
+SYC70
+SYC71'
+++ exgfs_wave_post_pnt.sh[300]: wc buoy_tmp1.loc
+++ exgfs_wave_post_pnt.sh[300]: awk '{ print $1 }'
++ exgfs_wave_post_pnt.sh[300]: Nb=403
++ exgfs_wave_post_pnt.sh[301]: rm -f buoy_tmp1.loc
++ exgfs_wave_post_pnt.sh[303]: '[' -s buoy_log.dat ']'
++ exgfs_wave_post_pnt.sh[305]: set +x
+Buoy log file created. Syncing to all nodes ...
++ exgfs_wave_post_pnt.sh[325]: set +x
+ 
+   Input files read and processed at : Wed Jun  5 22:07:41 UTC 2024
+ 
+   Data summary : 
+   ---------------------------------------------
+      Sufficient data for spectral files        : YES (403 points)
+      Sufficient data for bulletins             : YES (403 points)
+      Boundary points                           : NO
+ 
++ exgfs_wave_post_pnt.sh[342]: set +x
+   Making command file for wave post points 
++ exgfs_wave_post_pnt.sh[346]: rm -f cmdfile
++ exgfs_wave_post_pnt.sh[347]: touch cmdfile
++ exgfs_wave_post_pnt.sh[348]: chmod 744 cmdfile
++ exgfs_wave_post_pnt.sh[351]: fhr=0
++ exgfs_wave_post_pnt.sh[352]: '[' 0 -le 120 ']'
+++ exgfs_wave_post_pnt.sh[354]: date
++ exgfs_wave_post_pnt.sh[354]: echo '   Creating the wave point scripts at : Wed Jun  5 22:07:42 UTC 2024'
+   Creating the wave point scripts at : Wed Jun  5 22:07:42 UTC 2024
+++ exgfs_wave_post_pnt.sh[355]: /apps/ops/prod/nco/core/prod_util.v2.0.14/exec/ndate 0 2021032312
++ exgfs_wave_post_pnt.sh[355]: ymdh=2021032312
++ exgfs_wave_post_pnt.sh[356]: YMD=20210323
++ exgfs_wave_post_pnt.sh[357]: HMS=120000
++ exgfs_wave_post_pnt.sh[358]: YMDHMS=20210323120000
+++ exgfs_wave_post_pnt.sh[359]: printf %03i 0
++ exgfs_wave_post_pnt.sh[359]: FH3=000
++ exgfs_wave_post_pnt.sh[361]: rm -f tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[362]: touch tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[363]: mkdir output_20210323120000
++ exgfs_wave_post_pnt.sh[364]: cd output_20210323120000
++ exgfs_wave_post_pnt.sh[367]: export SPECDATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/output_20210323120000
++ exgfs_wave_post_pnt.sh[367]: SPECDATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/output_20210323120000
++ exgfs_wave_post_pnt.sh[368]: export BULLDATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/output_20210323120000
++ exgfs_wave_post_pnt.sh[368]: BULLDATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/output_20210323120000
++ exgfs_wave_post_pnt.sh[369]: cp /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/mod_def.uglo_100km mod_def.uglo_100km
++ exgfs_wave_post_pnt.sh[371]: pfile=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28/gfs.20210323/12//model_data/wave/history/gfswave.out_pnt.uglo_100km.20210323.120000
++ exgfs_wave_post_pnt.sh[372]: '[' -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28/gfs.20210323/12//model_data/wave/history/gfswave.out_pnt.uglo_100km.20210323.120000 ']'
++ exgfs_wave_post_pnt.sh[374]: /bin/ln -sf /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28/gfs.20210323/12//model_data/wave/history/gfswave.out_pnt.uglo_100km.20210323.120000 ./out_pnt.uglo_100km
++ exgfs_wave_post_pnt.sh[383]: cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851
++ exgfs_wave_post_pnt.sh[385]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[387]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[387]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[388]: for buoy in $buoys
++ exgfs_wave_post_pnt.sh[390]: echo '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/ush/wave_outp_spec.sh 46070 2021032312 spec /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/output_20210323120000 > /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28/wavepostpnt.221851/output_20210323120000/spec_46070.out 2>&1'
+/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/scripts/exgfs_wave_post_pnt.sh: line 390: echo: write error: Disk quota exceeded
++ exgfs_wave_post_pnt.sh[1]: postamble exgfs_wave_post_pnt.sh 1717625259 1
++ preamble.sh[70]: set +x
+End exgfs_wave_post_pnt.sh at 22:07:42 with error code 1 (time elapsed: 00:00:03)
++ JGLOBAL_WAVE_POST_PNT[1]: postamble JGLOBAL_WAVE_POST_PNT 1717624875 1
++ preamble.sh[70]: set +x
+End JGLOBAL_WAVE_POST_PNT at 22:07:42 with error code 1 (time elapsed: 00:06:27)
++ wavepostpnt.sh[1]: postamble wavepostpnt.sh 1717624871 1
++ preamble.sh[70]: set +x
+End wavepostpnt.sh at 22:07:42 with error code 1 (time elapsed: 00:06:31)
+PBS: Running epilogue on parent mom node: nid002960...
+##### Job 134384125.cbqs01 - PBS Job Script:
+(Note: Duplicate #PBS entries are a function how PBS interprets and caches the original job script.)
+
+#! /bin/sh
+#PBS -N C48_S2SW_9b290b28_gfswavepostpnt_12
+#PBS -A GFS-DEV
+#PBS -q dev
+#PBS -l walltime=04:00:00
+#PBS -l select=5:mpiprocs=40:ompthreads=1:ncpus=40
+#PBS -j oe -o /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT/C48_S2SW_9b290b28/logs/2021032312/gfswavepostpnt.log
+#PBS -l place=vscatter:shared
+export RUN_ENVIR='emc'
+export HOMEgfs='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow'
+export EXPDIR='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/EXPDIR/C48_S2SW_9b290b28'
+export NET='gfs'
+export CDUMP='gfs'
+export RUN='gfs'
+export CDATE='2021032312'
+export PDY='20210323'
+export cyc='12'
+export COMROOT='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/RUNTESTS/COMROOT'
+export DATAROOT='/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C48_S2SW_9b290b28'
+set -x
+/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2649/global-workflow/jobs/rocoto/wavepostpnt.sh
+##### End of job script
+------------------------------------------------------------------
+
