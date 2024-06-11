@@ -1,0 +1,418 @@
+Begin waveinit.sh at Tue Jun 11 18:34:42 UTC 2024
++ waveinit.sh[6]: echo
+
++ waveinit.sh[7]: echo '=============== START TO SOURCE FV3GFS WORKFLOW MODULES ==============='
+=============== START TO SOURCE FV3GFS WORKFLOW MODULES ===============
++ waveinit.sh[9]: . /scratch1/NCEPDEV/global/CI/2667/gefs/ush/load_ufswm_modules.sh
+++ load_ufswm_modules.sh[4]: [[ NO == \N\O ]]
+++ load_ufswm_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_ufswm_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) contrib                          25) git-lfs/2.10.0
+  2) intel/2022.1.2                   26) crtm/2.4.0
+  3) stack-intel/2021.5.0             27) g2/3.4.5
+  4) impi/2022.1.2                    28) g2tmpl/1.10.2
+  5) stack-intel-oneapi-mpi/2021.5.1  29) ip/4.3.0
+  6) curl/8.1.2                       30) sp/2.3.3
+  7) cmake/3.23.1                     31) w3emc/2.10.0
+  8) libjpeg/2.1.0                    32) gftl/1.10.0
+  9) jasper/2.0.32                    33) gftl-shared/1.6.1
+ 10) zlib/1.2.13                      34) fargparse/1.5.0
+ 11) libpng/1.6.37                    35) gettext/0.19.8.1
+ 12) pkg-config/0.27.1                36) libxcrypt/4.4.35
+ 13) hdf5/1.14.0                      37) sqlite/3.42.0
+ 14) snappy/1.1.10                    38) util-linux-uuid/2.38.1
+ 15) zstd/1.5.2                       39) python/3.10.8
+ 16) c-blosc/1.21.4                   40) mapl/2.40.3-esmf-8.5.0
+ 17) netcdf-c/4.9.2                   41) scotch/7.0.4
+ 18) netcdf-fortran/4.6.0             42) ufs_common
+ 19) parallel-netcdf/1.12.2           43) nccmp/1.9.0.1
+ 20) parallelio/2.5.10                44) ufs_hera.intel
+ 21) esmf/8.5.0                       45) w3nco/2.4.1
+ 22) fms/2023.02.01                   46) prod_util/1.2.2
+ 23) bacio/2.4.1                      47) wgrib2/3.1.2_wmo
+ 24) crtm-fix/2.4.0_emc
+
+ 
+
++ waveinit.sh[10]: status=0
++ waveinit.sh[11]: [[ 0 -ne 0 ]]
++ waveinit.sh[13]: export job=waveinit
++ waveinit.sh[13]: job=waveinit
++ waveinit.sh[14]: export jobid=waveinit.1216200
++ waveinit.sh[14]: jobid=waveinit.1216200
++ waveinit.sh[17]: echo
+
++ waveinit.sh[18]: echo '=============== START TO RUN WAVE INIT ==============='
+=============== START TO RUN WAVE INIT ===============
++ waveinit.sh[20]: /scratch1/NCEPDEV/global/CI/2667/gefs/jobs/JGLOBAL_WAVE_INIT
+Begin JGLOBAL_WAVE_INIT at Tue Jun 11 18:34:47 UTC 2024
++ JGLOBAL_WAVE_INIT[4]: source /scratch1/NCEPDEV/global/CI/2667/gefs/ush/jjob_header.sh -e waveinit -c 'base wave waveinit'
+++ jjob_header.sh[44]: OPTIND=1
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[48]: env_job=waveinit
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[47]: read -ra configs
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[59]: shift 4
+++ jjob_header.sh[61]: [[ -z waveinit ]]
+++ jjob_header.sh[69]: export DATA=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48_S2SWA_gefs_b10c4867/waveinit.1216200
+++ jjob_header.sh[69]: DATA=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48_S2SWA_gefs_b10c4867/waveinit.1216200
+++ jjob_header.sh[70]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[71]: rm -rf /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48_S2SWA_gefs_b10c4867/waveinit.1216200
+++ jjob_header.sh[73]: mkdir -p /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48_S2SWA_gefs_b10c4867/waveinit.1216200
+++ jjob_header.sh[74]: cd /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48_S2SWA_gefs_b10c4867/waveinit.1216200
+++ jjob_header.sh[80]: export cycle=t12z
+++ jjob_header.sh[80]: cycle=t12z
+++ jjob_header.sh[81]: setpdy.sh
+sed: can't read /scratch1/NCEPDEV/global/CI/2667/RUNTESTS/COMROOT/date/t12z: No such file or directory
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[82]: source ./PDY
++++ PDY[1]: export PDYm7=20210316
++++ PDY[1]: PDYm7=20210316
++++ PDY[2]: export PDYm6=20210317
++++ PDY[2]: PDYm6=20210317
++++ PDY[3]: export PDYm5=20210318
++++ PDY[3]: PDYm5=20210318
++++ PDY[4]: export PDYm4=20210319
++++ PDY[4]: PDYm4=20210319
++++ PDY[5]: export PDYm3=20210320
++++ PDY[5]: PDYm3=20210320
++++ PDY[6]: export PDYm2=20210321
++++ PDY[6]: PDYm2=20210321
++++ PDY[7]: export PDYm1=20210322
++++ PDY[7]: PDYm1=20210322
++++ PDY[8]: export PDY=20210323
++++ PDY[8]: PDY=20210323
++++ PDY[9]: export PDYp1=20210324
++++ PDY[9]: PDYp1=20210324
++++ PDY[10]: export PDYp2=20210325
++++ PDY[10]: PDYp2=20210325
++++ PDY[11]: export PDYp3=20210326
++++ PDY[11]: PDYp3=20210326
++++ PDY[12]: export PDYp4=20210327
++++ PDY[12]: PDYp4=20210327
++++ PDY[13]: export PDYp5=20210328
++++ PDY[13]: PDYp5=20210328
++++ PDY[14]: export PDYp6=20210329
++++ PDY[14]: PDYp6=20210329
++++ PDY[15]: export PDYp7=20210330
++++ PDY[15]: PDYp7=20210330
+++ jjob_header.sh[88]: export pid=1217573
+++ jjob_header.sh[88]: pid=1217573
+++ jjob_header.sh[89]: export pgmout=OUTPUT.1217573
+++ jjob_header.sh[89]: pgmout=OUTPUT.1217573
+++ jjob_header.sh[90]: export pgmerr=errfile
+++ jjob_header.sh[90]: pgmerr=errfile
+++ jjob_header.sh[96]: export EXPDIR=/scratch1/NCEPDEV/global/CI/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_b10c4867
+++ jjob_header.sh[96]: EXPDIR=/scratch1/NCEPDEV/global/CI/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_b10c4867
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /scratch1/NCEPDEV/global/CI/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_b10c4867/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=HERA
++++ config.base[9]: machine=HERA
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=fv3-cpu
++++ config.base[15]: ACCOUNT=fv3-cpu
++++ config.base[16]: export ACCOUNT_SERVICE=fv3-cpu
++++ config.base[16]: ACCOUNT_SERVICE=fv3-cpu
++++ config.base[17]: export QUEUE=batch
++++ config.base[17]: QUEUE=batch
++++ config.base[18]: export QUEUE_SERVICE=batch
++++ config.base[18]: QUEUE_SERVICE=batch
++++ config.base[19]: export PARTITION_BATCH=hera
++++ config.base[19]: PARTITION_BATCH=hera
++++ config.base[20]: export PARTITION_SERVICE=service
++++ config.base[20]: PARTITION_SERVICE=service
++++ config.base[21]: export RESERVATION=
++++ config.base[21]: RESERVATION=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/scratch1/NCEPDEV/global/CI/2667/gefs
++++ config.base[27]: HOMEgfs=/scratch1/NCEPDEV/global/CI/2667/gefs
++++ config.base[28]: export EXECgfs=/scratch1/NCEPDEV/global/CI/2667/gefs/exec
++++ config.base[28]: EXECgfs=/scratch1/NCEPDEV/global/CI/2667/gefs/exec
++++ config.base[29]: export FIXgfs=/scratch1/NCEPDEV/global/CI/2667/gefs/fix
++++ config.base[29]: FIXgfs=/scratch1/NCEPDEV/global/CI/2667/gefs/fix
++++ config.base[30]: export PARMgfs=/scratch1/NCEPDEV/global/CI/2667/gefs/parm
++++ config.base[30]: PARMgfs=/scratch1/NCEPDEV/global/CI/2667/gefs/parm
++++ config.base[31]: export SCRgfs=/scratch1/NCEPDEV/global/CI/2667/gefs/scripts
++++ config.base[31]: SCRgfs=/scratch1/NCEPDEV/global/CI/2667/gefs/scripts
++++ config.base[32]: export USHgfs=/scratch1/NCEPDEV/global/CI/2667/gefs/ush
++++ config.base[32]: USHgfs=/scratch1/NCEPDEV/global/CI/2667/gefs/ush
++++ config.base[37]: export PACKAGEROOT=/scratch1/NCEPDEV/global/glopara/nwpara
++++ config.base[37]: PACKAGEROOT=/scratch1/NCEPDEV/global/glopara/nwpara
++++ config.base[38]: export COMROOT=/scratch1/NCEPDEV/global/CI/2667/RUNTESTS/COMROOT
++++ config.base[38]: COMROOT=/scratch1/NCEPDEV/global/CI/2667/RUNTESTS/COMROOT
++++ config.base[39]: export COMINsyn=/scratch1/NCEPDEV/global/glopara/com/gfs/prod/syndat
++++ config.base[39]: COMINsyn=/scratch1/NCEPDEV/global/glopara/com/gfs/prod/syndat
++++ config.base[40]: export BASE_CPLIC=/scratch1/NCEPDEV/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[40]: BASE_CPLIC=/scratch1/NCEPDEV/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[43]: export HOMEDIR=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[43]: HOMEDIR=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[44]: export STMP=/scratch1/NCEPDEV/stmp2/Terry.McGuinness
++++ config.base[44]: STMP=/scratch1/NCEPDEV/stmp2/Terry.McGuinness
++++ config.base[45]: export PTMP=/scratch1/NCEPDEV/stmp4/Terry.McGuinness
++++ config.base[45]: PTMP=/scratch1/NCEPDEV/stmp4/Terry.McGuinness
++++ config.base[46]: export NOSCRUB=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[46]: NOSCRUB=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[49]: export BASE_GIT=/scratch1/NCEPDEV/global/glopara/git
++++ config.base[49]: BASE_GIT=/scratch1/NCEPDEV/global/glopara/git
++++ config.base[52]: export DO_BUFRSND=NO
++++ config.base[52]: DO_BUFRSND=NO
++++ config.base[53]: export DO_GEMPAK=NO
++++ config.base[53]: DO_GEMPAK=NO
++++ config.base[54]: export DO_AWIPS=NO
++++ config.base[54]: DO_AWIPS=NO
++++ config.base[60]: export REALTIME=YES
++++ config.base[60]: REALTIME=YES
++++ config.base[63]: export MODE=forecast-only
++++ config.base[63]: MODE=forecast-only
++++ config.base[72]: export HOMEpost=/scratch1/NCEPDEV/global/CI/2667/gefs
++++ config.base[72]: HOMEpost=/scratch1/NCEPDEV/global/CI/2667/gefs
++++ config.base[75]: export 'NCP=/bin/cp -p'
++++ config.base[75]: NCP='/bin/cp -p'
++++ config.base[76]: export NMV=/bin/mv
++++ config.base[76]: NMV=/bin/mv
++++ config.base[77]: export 'NLN=/bin/ln -sf'
++++ config.base[77]: NLN='/bin/ln -sf'
++++ config.base[78]: export VERBOSE=YES
++++ config.base[78]: VERBOSE=YES
++++ config.base[79]: export KEEPDATA=NO
++++ config.base[79]: KEEPDATA=NO
++++ config.base[80]: export DEBUG_POSTSCRIPT=NO
++++ config.base[80]: DEBUG_POSTSCRIPT=NO
++++ config.base[81]: export CHGRP_RSTPROD=YES
++++ config.base[81]: CHGRP_RSTPROD=YES
++++ config.base[82]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[82]: CHGRP_CMD='chgrp rstprod'
++++ config.base[83]: export NCDUMP=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.5.1/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-u7rbz5g/bin/ncdump
++++ config.base[83]: NCDUMP=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.5.1/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-u7rbz5g/bin/ncdump
++++ config.base[84]: export NCLEN=/scratch1/NCEPDEV/global/CI/2667/gefs/ush/getncdimlen
++++ config.base[84]: NCLEN=/scratch1/NCEPDEV/global/CI/2667/gefs/ush/getncdimlen
++++ config.base[87]: export BASE_ENV=/scratch1/NCEPDEV/global/CI/2667/gefs/env
++++ config.base[87]: BASE_ENV=/scratch1/NCEPDEV/global/CI/2667/gefs/env
++++ config.base[88]: export BASE_JOB=/scratch1/NCEPDEV/global/CI/2667/gefs/jobs/rocoto
++++ config.base[88]: BASE_JOB=/scratch1/NCEPDEV/global/CI/2667/gefs/jobs/rocoto
++++ config.base[91]: export SDATE=2021032312
++++ config.base[91]: SDATE=2021032312
++++ config.base[92]: export EDATE=2021032312
++++ config.base[92]: EDATE=2021032312
++++ config.base[93]: export EXP_WARM_START=.false.
++++ config.base[93]: EXP_WARM_START=.false.
++++ config.base[94]: export assim_freq=6
++++ config.base[94]: assim_freq=6
++++ config.base[95]: export PSLOT=C48_S2SWA_gefs_b10c4867
++++ config.base[95]: PSLOT=C48_S2SWA_gefs_b10c4867
++++ config.base[96]: export EXPDIR=/scratch1/NCEPDEV/global/CI/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_b10c4867
++++ config.base[96]: EXPDIR=/scratch1/NCEPDEV/global/CI/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_b10c4867
++++ config.base[97]: export ROTDIR=/scratch1/NCEPDEV/global/CI/2667/RUNTESTS/COMROOT/C48_S2SWA_gefs_b10c4867
++++ config.base[97]: ROTDIR=/scratch1/NCEPDEV/global/CI/2667/RUNTESTS/COMROOT/C48_S2SWA_gefs_b10c4867
++++ config.base[99]: export DATAROOT=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48_S2SWA_gefs_b10c4867
++++ config.base[99]: DATAROOT=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48_S2SWA_gefs_b10c4867
++++ config.base[100]: export RUNDIR=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48_S2SWA_gefs_b10c4867
++++ config.base[100]: RUNDIR=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48_S2SWA_gefs_b10c4867
++++ config.base[101]: export ARCDIR=/scratch1/NCEPDEV/global/Terry.McGuinness/archive/C48_S2SWA_gefs_b10c4867
++++ config.base[101]: ARCDIR=/scratch1/NCEPDEV/global/Terry.McGuinness/archive/C48_S2SWA_gefs_b10c4867
++++ config.base[102]: export ATARDIR=/NCEPDEV/emc-global/1year/Terry.McGuinness/HERA/scratch/C48_S2SWA_gefs_b10c4867
++++ config.base[102]: ATARDIR=/NCEPDEV/emc-global/1year/Terry.McGuinness/HERA/scratch/C48_S2SWA_gefs_b10c4867
++++ config.base[105]: export envir=prod
++++ config.base[105]: envir=prod
++++ config.base[106]: export NET=gefs
++++ config.base[106]: NET=gefs
++++ config.base[107]: export RUN=gefs
++++ config.base[107]: RUN=gefs
++++ config.base[113]: source /scratch1/NCEPDEV/global/CI/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_b10c4867/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/input'
+++++ config.com[53]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/restart'
+++++ config.com[54]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[55]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[56]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/history'
+++++ config.com[57]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/master'
+++++ config.com[58]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[59]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[60]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[63]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[65]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[66]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[67]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[68]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[71]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/restart'
+++++ config.com[72]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/prep'
+++++ config.com[73]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/history'
+++++ config.com[74]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[75]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[76]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[77]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[79]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/history'
+++++ config.com[80]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/restart'
+++++ config.com[81]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/input'
+++++ config.com[82]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[83]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[84]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[85]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[87]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[88]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/input'
+++++ config.com[89]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/history'
+++++ config.com[90]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/restart'
+++++ config.com[91]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[92]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[93]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[95]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/chem/history'
+++++ config.com[96]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[98]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/med/restart'
++++ config.base[116]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[116]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[117]: export LOGSCRIPT=
++++ config.base[117]: LOGSCRIPT=
++++ config.base[120]: export 'REDOUT=1>'
++++ config.base[120]: REDOUT='1>'
++++ config.base[121]: export 'REDERR=2>'
++++ config.base[121]: REDERR='2>'
++++ config.base[123]: export SENDECF=NO
++++ config.base[123]: SENDECF=NO
++++ config.base[124]: export SENDSDM=NO
++++ config.base[124]: SENDSDM=NO
++++ config.base[125]: export SENDDBN_NTC=NO
++++ config.base[125]: SENDDBN_NTC=NO
++++ config.base[126]: export SENDDBN=NO
++++ config.base[126]: SENDDBN=NO
++++ config.base[127]: export DBNROOT=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.5.1/envs/unified-env-rocky8/install/intel/2021.5.0/prod-util-1.2.2-etmp4wu/fakedbn
++++ config.base[127]: DBNROOT=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.5.1/envs/unified-env-rocky8/install/intel/2021.5.0/prod-util-1.2.2-etmp4wu/fakedbn
++++ config.base[130]: export APP=S2SWA
++++ config.base[130]: APP=S2SWA
++++ config.base[133]: export DO_ATM=YES
++++ config.base[133]: DO_ATM=YES
++++ config.base[134]: export DO_COUPLED=NO
++++ config.base[134]: DO_COUPLED=NO
++++ config.base[135]: export DO_WAVE=NO
++++ config.base[135]: DO_WAVE=NO
++++ config.base[136]: export DO_OCN=NO
++++ config.base[136]: DO_OCN=NO
++++ config.base[137]: export DO_ICE=NO
++++ config.base[137]: DO_ICE=NO
++++ config.base[138]: export DO_AERO=NO
++++ config.base[138]: DO_AERO=NO
++++ config.base[139]: export AERO_FCST_CDUMP=
++++ config.base[139]: AERO_FCST_CDUMP=
++++ config.base[140]: export AERO_ANL_CDUMP=
++++ config.base[140]: AERO_ANL_CDUMP=
++++ config.base[141]: export WAVE_CDUMP=
++++ config.base[141]: WAVE_CDUMP=
++++ config.base[142]: export DOBNDPNT_WAVE=NO
++++ config.base[142]: DOBNDPNT_WAVE=NO
++++ config.base[143]: export DOIBP_WAV=NO
++++ config.base[143]: DOIBP_WAV=NO
++++ config.base[144]: export FRAC_GRID=.true.
++++ config.base[144]: FRAC_GRID=.true.
++++ config.base[145]: export DO_NEST=NO
++++ config.base[145]: DO_NEST=NO
++++ config.base[146]: [[ NO == \Y\E\S ]]
++++ config.base[150]: export ntiles=6
++++ config.base[150]: ntiles=6
++++ config.base[154]: export OPS_RES=C768
++++ config.base[154]: OPS_RES=C768
++++ config.base[157]: export LEVS=128
++++ config.base[157]: LEVS=128
++++ config.base[158]: export CASE=C48
++++ config.base[158]: CASE=C48
++++ config.base[159]: export CASE_ENS=C48
++++ config.base[159]: CASE_ENS=C48
++++ config.base[160]: export OCNRES=500
++++ config.base[160]: OCNRES=500
++++ config.base[161]: export ICERES=500
++++ config.base[161]: ICERES=500
++++ config.base[163]: case "${CASE}" in
++++ config.base[165]: export waveGRD=glo_500
++++ config.base[165]: waveGRD=glo_500
++++ config.base[182]: case "${APP}" in
++++ config.base[201]: export DO_COUPLED=YES
++++ config.base[201]: DO_COUPLED=YES
++++ config.base[202]: export DO_OCN=YES
++++ config.base[202]: DO_OCN=YES
++++ config.base[203]: export DO_ICE=YES
++++ config.base[203]: DO_ICE=YES
++++ config.base[205]: [[ S2SWA =~ A$ ]]
++++ config.base[206]: export DO_AERO=YES
++++ config.base[206]: DO_AERO=YES
++++ config.base[207]: export AERO_ANL_CDUMP=both
++++ config.base[207]: AERO_ANL_CDUMP=both
++++ config.base[208]: export AERO_FCST_CDUMP=gdas
++++ config.base[208]: AERO_FCST_CDUMP=gdas
++++ config.base[211]: [[ S2SWA =~ ^S2SW ]]
++++ config.base[212]: export DO_WAVE=YES
++++ config.base[212]: DO_WAVE=YES
++++ config.base[213]: export WAVE_CDUMP=both
++++ config.base[213]: WAVE_CDUMP=both
++++ config.base[214]: export cplwav2atm=.true.
++++ config.base[214]: cplwav2atm=.true.
++++ config.base[224]: export gfs_cyc=1
++++ config.base[224]: gfs_cyc=1
++++ config.base[227]: export FHMIN_GFS=0
++++ config.base[227]: FHMIN_GFS=0
++++ config.base[228]: export FHMIN=0
++++ config.base[228]: FHMIN=0
++++ config.base[229]: export FHMAX_GFS=120
++++ config.base[229]: FHMAX_GFS=120
++++ config.base[230]: export FHOUT_GFS=6
++++ config.base[230]: FHOUT_GFS=6
++++ config.base[231]: export FHMAX_HF_GFS=0
++++ config.base[231]: FHMAX_HF_GFS=0
++++ config.base[232]: export FHOUT_HF_GFS=1
++++ config.base[232]: FHOUT_HF_GFS=1
++++ config.base[233]: export FHOUT_OCNICE_GFS=6
++++ config.base[233]: FHOUT_OCNICE_GFS=6
++++ config.base[234]: export FHMIN_WAV=0
++++ config.base[234]: FHMIN_WAV=0
++++ config.base[235]: export FHOUT_WAV=3
++++ config.base[235]: FHOUT_WAV=3
++++ config.base[236]: export FHMAX_HF_WAV=120
++++ config.base[236]: FHMAX_HF_WAV=120
++++ config.base[237]: export FHOUT_HF_WAV=1
++++ config.base[237]: FHOUT_HF_WAV=1
++++ config.base[238]: export FHMAX_WAV=120
++++ config.base[238]: FHMAX_WAV=120
++++ config.base[239]: ((  gfs_cyc != 0  ))
++++ config.base[240]: export STEP_GFS=24
++++ config.base[240]: STEP_GFS=24
++++ config.base[244]: export ILPOST=1
++++ config.base[244]: ILPOST=1
++++ config.base[246]: export FHMIN_ENKF=0
++++ config.base[246]: FHMIN_ENKF=0
++++ config.base[247]: export FHMAX_ENKF=120
++++ config.base[247]: FHMAX_ENKF=120
++++ config.base[248]: export FHOUT_ENKF=6
++++ config.base[248]: FHOUT_ENKF=6
+/scratch1/NCEPDEV/global/CI/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_b10c4867/config.base: line 249: FHOUT_OCNICE: unbound variable
+++++ config.base[1]: postamble JGLOBAL_WAVE_INIT 1718130887 1
+++++ preamble.sh[70]: set +x
+End JGLOBAL_WAVE_INIT at 18:34:53 with error code 1 (time elapsed: 00:00:06)
++ waveinit.sh[1]: postamble waveinit.sh 1718130882 1
++ preamble.sh[70]: set +x
+End waveinit.sh at 18:34:53 with error code 1 (time elapsed: 00:00:11)
+_______________________________________________________________
+Start Epilog on node h8c03 for job 61610519 :: Tue Jun 11 18:34:54 UTC 2024
+Job 61610519 finished for user Terry.McGuinness in partition hera with exit code 1:0
+_______________________________________________________________
+End Epilogue Tue Jun 11 18:34:54 UTC 2024
