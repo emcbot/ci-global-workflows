@@ -1,0 +1,1986 @@
+Begin fcst.sh at Tue Jun 11 02:17:22 UTC 2024
++ fcst.sh[8]: source /work2/noaa/stmp/CI/HERCULES/2632/gefs/ush/detect_machine.sh
+++ detect_machine.sh[12]: [[ -n '' ]]
+++ detect_machine.sh[15]: case $(hostname -f) in
++++ detect_machine.sh[15]: hostname -f
+++ detect_machine.sh[45]: MACHINE_ID=UNKNOWN
+++ detect_machine.sh[48]: [[ UNKNOWN == \U\N\K\N\O\W\N ]]
+++ detect_machine.sh[49]: case ${PW_CSP:-} in
+++ detect_machine.sh[51]: PW_CSP=UNKNOWN
+++ detect_machine.sh[56]: MACHINE_ID=UNKNOWN
+++ detect_machine.sh[59]: [[ UNKNOWN != \U\N\K\N\O\W\N ]]
+++ detect_machine.sh[64]: [[ -d /lfs/h3 ]]
+++ detect_machine.sh[67]: [[ -d /lfs/h1 ]]
+++ detect_machine.sh[70]: [[ -d /mnt/lfs1 ]]
+++ detect_machine.sh[73]: [[ -d /scratch1 ]]
+++ detect_machine.sh[76]: [[ -d /work ]]
+++ detect_machine.sh[78]: [[ -d /apps/other ]]
+++ detect_machine.sh[80]: MACHINE_ID=hercules
++ fcst.sh[9]: [[ hercules == \w\c\o\s\s\2 ]]
++ fcst.sh[12]: . /work2/noaa/stmp/CI/HERCULES/2632/gefs/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) contrib/0.1                      41) grib-util/1.3.0
+  2) intel-oneapi-compilers/2023.1.0  42) g2tmpl/1.10.2
+  3) stack-intel/2021.9.0             43) gsi-ncdiag/1.1.2
+  4) intel-oneapi-mpi/2021.9.0        44) crtm-fix/2.4.0.1_emc
+  5) stack-intel-oneapi-mpi/2021.9.0  45) git-lfs/3.1.2
+  6) intel-oneapi-mkl/2023.1.0        46) crtm/2.4.0.1
+  7) zlib/1.2.13                      47) openblas/0.3.24
+  8) pigz/2.7                         48) py-setuptools/63.4.3
+  9) zstd/1.5.2                       49) py-numpy/1.23.4
+ 10) tar/1.34                         50) bufr/11.7.0
+ 11) gettext/0.21.1                   51) gmake/4.2.1
+ 12) libxcrypt/4.4.35                 52) wgrib2/2.0.8
+ 13) sqlite/3.43.2                    53) py-f90nml/1.4.3
+ 14) util-linux-uuid/2.38.1           54) py-cftime/1.0.3.4
+ 15) python/3.11.6                    55) py-netcdf4/1.5.8
+ 16) libjpeg/2.1.0                    56) libyaml/0.2.5
+ 17) jasper/2.0.32                    57) py-pyyaml/6.0
+ 18) libpng/1.6.37                    58) py-markupsafe/2.1.3
+ 19) openjpeg/2.3.1                   59) py-jinja2/3.1.2
+ 20) eccodes/2.32.0                   60) py-bottleneck/1.3.7
+ 21) fftw/3.3.10                      61) py-numexpr/2.8.4
+ 22) nghttp2/1.57.0                   62) py-et-xmlfile/1.0.1
+ 23) curl/8.4.0                       63) py-openpyxl/3.1.2
+ 24) proj/9.2.1                       64) py-pytz/2023.3
+ 25) udunits/2.2.28                   65) py-pyxlsb/1.0.10
+ 26) cdo/2.2.0                        66) py-xlrd/2.0.1
+ 27) hdf5/1.14.0                      67) py-xlsxwriter/3.1.7
+ 28) snappy/1.1.10                    68) py-xlwt/1.3.0
+ 29) c-blosc/1.21.5                   69) py-pandas/1.5.3
+ 30) netcdf-c/4.9.2                   70) py-six/1.16.0
+ 31) netcdf-fortran/4.6.1             71) py-python-dateutil/2.8.2
+ 32) antlr/2.7.7                      72) g2c/1.6.4
+ 33) gsl/2.7.1                        73) netcdf-cxx4/4.3.1
+ 34) nco/5.0.6                        74) met/9.1.3
+ 35) bacio/2.4.1                      75) metplus/3.1.1
+ 36) w3emc/2.10.0                     76) py-packaging/23.1
+ 37) prod_util/2.1.1                  77) py-xarray/2023.7.0
+ 38) g2/3.4.5                         78) prepobs/1.0.1
+ 39) sp/2.5.0                         79) fit2obs/1.1.1
+ 40) ip/4.3.0                         80) module_base.hercules
+
+ 
+
++ fcst.sh[14]: status=0
++ fcst.sh[15]: [[ 0 -ne 0 ]]
++ fcst.sh[17]: export job=fcst
++ fcst.sh[17]: job=fcst
++ fcst.sh[18]: export jobid=fcst.1618457
++ fcst.sh[18]: jobid=fcst.1618457
++ fcst.sh[21]: /work2/noaa/stmp/CI/HERCULES/2632/gefs/jobs/JGLOBAL_FORECAST
+Begin JGLOBAL_FORECAST at Tue Jun 11 02:17:24 UTC 2024
++ JGLOBAL_FORECAST[5]: ((  10#001 > 0  ))
++ JGLOBAL_FORECAST[6]: export DATAjob=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312
++ JGLOBAL_FORECAST[6]: DATAjob=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312
++ JGLOBAL_FORECAST[7]: export DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/fcst.1618457
++ JGLOBAL_FORECAST[7]: DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/fcst.1618457
++ JGLOBAL_FORECAST[8]: source /work2/noaa/stmp/CI/HERCULES/2632/gefs/ush/jjob_header.sh -e efcs -c 'base fcst efcs'
+++ jjob_header.sh[44]: OPTIND=1
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[48]: env_job=efcs
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[47]: read -ra configs
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[59]: shift 4
+++ jjob_header.sh[61]: [[ -z efcs ]]
+++ jjob_header.sh[69]: export DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/fcst.1618457
+++ jjob_header.sh[69]: DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/fcst.1618457
+++ jjob_header.sh[70]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[71]: rm -rf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/fcst.1618457
+++ jjob_header.sh[73]: mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/fcst.1618457
+++ jjob_header.sh[74]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/fcst.1618457
+++ jjob_header.sh[80]: export cycle=t12z
+++ jjob_header.sh[80]: cycle=t12z
+++ jjob_header.sh[81]: setpdy.sh
+sed: can't read /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/date/t12z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[82]: source ./PDY
++++ PDY[1]: export PDYm7=20210316
++++ PDY[1]: PDYm7=20210316
++++ PDY[2]: export PDYm6=20210317
++++ PDY[2]: PDYm6=20210317
++++ PDY[3]: export PDYm5=20210318
++++ PDY[3]: PDYm5=20210318
++++ PDY[4]: export PDYm4=20210319
++++ PDY[4]: PDYm4=20210319
++++ PDY[5]: export PDYm3=20210320
++++ PDY[5]: PDYm3=20210320
++++ PDY[6]: export PDYm2=20210321
++++ PDY[6]: PDYm2=20210321
++++ PDY[7]: export PDYm1=20210322
++++ PDY[7]: PDYm1=20210322
++++ PDY[8]: export PDY=20210323
++++ PDY[8]: PDY=20210323
++++ PDY[9]: export PDYp1=20210324
++++ PDY[9]: PDYp1=20210324
++++ PDY[10]: export PDYp2=20210325
++++ PDY[10]: PDYp2=20210325
++++ PDY[11]: export PDYp3=20210326
++++ PDY[11]: PDYp3=20210326
++++ PDY[12]: export PDYp4=20210327
++++ PDY[12]: PDYp4=20210327
++++ PDY[13]: export PDYp5=20210328
++++ PDY[13]: PDYp5=20210328
++++ PDY[14]: export PDYp6=20210329
++++ PDY[14]: PDYp6=20210329
++++ PDY[15]: export PDYp7=20210330
++++ PDY[15]: PDYp7=20210330
+++ jjob_header.sh[88]: export pid=1618762
+++ jjob_header.sh[88]: pid=1618762
+++ jjob_header.sh[89]: export pgmout=OUTPUT.1618762
+++ jjob_header.sh[89]: pgmout=OUTPUT.1618762
+++ jjob_header.sh[90]: export pgmerr=errfile
+++ jjob_header.sh[90]: pgmerr=errfile
+++ jjob_header.sh[96]: export EXPDIR=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44
+++ jjob_header.sh[96]: EXPDIR=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=HERCULES
++++ config.base[9]: machine=HERCULES
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=fv3-cpu
++++ config.base[15]: ACCOUNT=fv3-cpu
++++ config.base[16]: export ACCOUNT_SERVICE=fv3-cpu
++++ config.base[16]: ACCOUNT_SERVICE=fv3-cpu
++++ config.base[17]: export QUEUE=batch
++++ config.base[17]: QUEUE=batch
++++ config.base[18]: export QUEUE_SERVICE=batch
++++ config.base[18]: QUEUE_SERVICE=batch
++++ config.base[19]: export PARTITION_BATCH=hercules
++++ config.base[19]: PARTITION_BATCH=hercules
++++ config.base[20]: export PARTITION_SERVICE=service
++++ config.base[20]: PARTITION_SERVICE=service
++++ config.base[21]: export RESERVATION=
++++ config.base[21]: RESERVATION=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/work2/noaa/stmp/CI/HERCULES/2632/gefs
++++ config.base[27]: HOMEgfs=/work2/noaa/stmp/CI/HERCULES/2632/gefs
++++ config.base[28]: export EXECgfs=/work2/noaa/stmp/CI/HERCULES/2632/gefs/exec
++++ config.base[28]: EXECgfs=/work2/noaa/stmp/CI/HERCULES/2632/gefs/exec
++++ config.base[29]: export FIXgfs=/work2/noaa/stmp/CI/HERCULES/2632/gefs/fix
++++ config.base[29]: FIXgfs=/work2/noaa/stmp/CI/HERCULES/2632/gefs/fix
++++ config.base[30]: export PARMgfs=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm
++++ config.base[30]: PARMgfs=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm
++++ config.base[31]: export SCRgfs=/work2/noaa/stmp/CI/HERCULES/2632/gefs/scripts
++++ config.base[31]: SCRgfs=/work2/noaa/stmp/CI/HERCULES/2632/gefs/scripts
++++ config.base[32]: export USHgfs=/work2/noaa/stmp/CI/HERCULES/2632/gefs/ush
++++ config.base[32]: USHgfs=/work2/noaa/stmp/CI/HERCULES/2632/gefs/ush
++++ config.base[37]: export PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[37]: PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[38]: export COMROOT=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT
++++ config.base[38]: COMROOT=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT
++++ config.base[39]: export COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[39]: COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[40]: export BASE_CPLIC=/work/noaa/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[40]: BASE_CPLIC=/work/noaa/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[43]: export HOMEDIR=/work/noaa/global/mterry
++++ config.base[43]: HOMEDIR=/work/noaa/global/mterry
++++ config.base[44]: export STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[44]: STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[45]: export PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[45]: PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[46]: export NOSCRUB=/work/noaa/global/mterry
++++ config.base[46]: NOSCRUB=/work/noaa/global/mterry
++++ config.base[49]: export BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[49]: BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[52]: export DO_BUFRSND=NO
++++ config.base[52]: DO_BUFRSND=NO
++++ config.base[53]: export DO_GEMPAK=NO
++++ config.base[53]: DO_GEMPAK=NO
++++ config.base[54]: export DO_AWIPS=NO
++++ config.base[54]: DO_AWIPS=NO
++++ config.base[60]: export REALTIME=YES
++++ config.base[60]: REALTIME=YES
++++ config.base[63]: export MODE=forecast-only
++++ config.base[63]: MODE=forecast-only
++++ config.base[72]: export HOMEpost=/work2/noaa/stmp/CI/HERCULES/2632/gefs
++++ config.base[72]: HOMEpost=/work2/noaa/stmp/CI/HERCULES/2632/gefs
++++ config.base[75]: export 'NCP=/bin/cp -p'
++++ config.base[75]: NCP='/bin/cp -p'
++++ config.base[76]: export NMV=/bin/mv
++++ config.base[76]: NMV=/bin/mv
++++ config.base[77]: export 'NLN=/bin/ln -sf'
++++ config.base[77]: NLN='/bin/ln -sf'
++++ config.base[78]: export VERBOSE=YES
++++ config.base[78]: VERBOSE=YES
++++ config.base[79]: export KEEPDATA=NO
++++ config.base[79]: KEEPDATA=NO
++++ config.base[80]: export DEBUG_POSTSCRIPT=NO
++++ config.base[80]: DEBUG_POSTSCRIPT=NO
++++ config.base[81]: export CHGRP_RSTPROD=YES
++++ config.base[81]: CHGRP_RSTPROD=YES
++++ config.base[82]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[82]: CHGRP_CMD='chgrp rstprod'
++++ config.base[83]: export NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[83]: NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[84]: export NCLEN=/work2/noaa/stmp/CI/HERCULES/2632/gefs/ush/getncdimlen
++++ config.base[84]: NCLEN=/work2/noaa/stmp/CI/HERCULES/2632/gefs/ush/getncdimlen
++++ config.base[87]: export BASE_ENV=/work2/noaa/stmp/CI/HERCULES/2632/gefs/env
++++ config.base[87]: BASE_ENV=/work2/noaa/stmp/CI/HERCULES/2632/gefs/env
++++ config.base[88]: export BASE_JOB=/work2/noaa/stmp/CI/HERCULES/2632/gefs/jobs/rocoto
++++ config.base[88]: BASE_JOB=/work2/noaa/stmp/CI/HERCULES/2632/gefs/jobs/rocoto
++++ config.base[91]: export SDATE=2021032312
++++ config.base[91]: SDATE=2021032312
++++ config.base[92]: export EDATE=2021032312
++++ config.base[92]: EDATE=2021032312
++++ config.base[93]: export EXP_WARM_START=.false.
++++ config.base[93]: EXP_WARM_START=.false.
++++ config.base[94]: export assim_freq=6
++++ config.base[94]: assim_freq=6
++++ config.base[95]: export PSLOT=C48_S2SWA_gefs_24ba9c44
++++ config.base[95]: PSLOT=C48_S2SWA_gefs_24ba9c44
++++ config.base[96]: export EXPDIR=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44
++++ config.base[96]: EXPDIR=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44
++++ config.base[97]: export ROTDIR=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44
++++ config.base[97]: ROTDIR=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44
++++ config.base[99]: export DATAROOT=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44
++++ config.base[99]: DATAROOT=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44
++++ config.base[100]: export RUNDIR=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44
++++ config.base[100]: RUNDIR=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44
++++ config.base[101]: export ARCDIR=/work/noaa/global/mterry/archive/C48_S2SWA_gefs_24ba9c44
++++ config.base[101]: ARCDIR=/work/noaa/global/mterry/archive/C48_S2SWA_gefs_24ba9c44
++++ config.base[102]: export ATARDIR=/work/noaa/global/mterry/archive_rotdir/C48_S2SWA_gefs_24ba9c44
++++ config.base[102]: ATARDIR=/work/noaa/global/mterry/archive_rotdir/C48_S2SWA_gefs_24ba9c44
++++ config.base[105]: export envir=prod
++++ config.base[105]: envir=prod
++++ config.base[106]: export NET=gefs
++++ config.base[106]: NET=gefs
++++ config.base[107]: export RUN=gefs
++++ config.base[107]: RUN=gefs
++++ config.base[113]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/input'
+++++ config.com[53]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/restart'
+++++ config.com[54]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[55]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[56]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/history'
+++++ config.com[57]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/master'
+++++ config.com[58]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[59]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[60]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[63]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[65]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[66]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[67]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[68]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[71]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/restart'
+++++ config.com[72]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/prep'
+++++ config.com[73]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/history'
+++++ config.com[74]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[75]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[76]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[77]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[79]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/history'
+++++ config.com[80]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/restart'
+++++ config.com[81]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/input'
+++++ config.com[82]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[83]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[84]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[85]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[87]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[88]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/input'
+++++ config.com[89]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/history'
+++++ config.com[90]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/restart'
+++++ config.com[91]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[92]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[93]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[95]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/chem/history'
+++++ config.com[96]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[98]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/med/restart'
++++ config.base[116]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[116]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[117]: export LOGSCRIPT=
++++ config.base[117]: LOGSCRIPT=
++++ config.base[120]: export 'REDOUT=1>'
++++ config.base[120]: REDOUT='1>'
++++ config.base[121]: export 'REDERR=2>'
++++ config.base[121]: REDERR='2>'
++++ config.base[123]: export SENDECF=NO
++++ config.base[123]: SENDECF=NO
++++ config.base[124]: export SENDSDM=NO
++++ config.base[124]: SENDSDM=NO
++++ config.base[125]: export SENDDBN_NTC=NO
++++ config.base[125]: SENDDBN_NTC=NO
++++ config.base[126]: export SENDDBN=NO
++++ config.base[126]: SENDDBN=NO
++++ config.base[127]: export DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[127]: DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[130]: export APP=S2SWA
++++ config.base[130]: APP=S2SWA
++++ config.base[133]: export DO_ATM=YES
++++ config.base[133]: DO_ATM=YES
++++ config.base[134]: export DO_COUPLED=NO
++++ config.base[134]: DO_COUPLED=NO
++++ config.base[135]: export DO_WAVE=NO
++++ config.base[135]: DO_WAVE=NO
++++ config.base[136]: export DO_OCN=NO
++++ config.base[136]: DO_OCN=NO
++++ config.base[137]: export DO_ICE=NO
++++ config.base[137]: DO_ICE=NO
++++ config.base[138]: export DO_AERO=NO
++++ config.base[138]: DO_AERO=NO
++++ config.base[139]: export AERO_FCST_CDUMP=
++++ config.base[139]: AERO_FCST_CDUMP=
++++ config.base[140]: export AERO_ANL_CDUMP=
++++ config.base[140]: AERO_ANL_CDUMP=
++++ config.base[141]: export WAVE_CDUMP=
++++ config.base[141]: WAVE_CDUMP=
++++ config.base[142]: export DOBNDPNT_WAVE=NO
++++ config.base[142]: DOBNDPNT_WAVE=NO
++++ config.base[143]: export DOIBP_WAV=NO
++++ config.base[143]: DOIBP_WAV=NO
++++ config.base[144]: export FRAC_GRID=.true.
++++ config.base[144]: FRAC_GRID=.true.
++++ config.base[145]: export DO_NEST=NO
++++ config.base[145]: DO_NEST=NO
++++ config.base[146]: [[ NO == \Y\E\S ]]
++++ config.base[150]: export ntiles=6
++++ config.base[150]: ntiles=6
++++ config.base[154]: export OPS_RES=C768
++++ config.base[154]: OPS_RES=C768
++++ config.base[157]: export LEVS=128
++++ config.base[157]: LEVS=128
++++ config.base[158]: export CASE=C48
++++ config.base[158]: CASE=C48
++++ config.base[159]: export CASE_ENS=C48
++++ config.base[159]: CASE_ENS=C48
++++ config.base[160]: export OCNRES=500
++++ config.base[160]: OCNRES=500
++++ config.base[161]: export ICERES=500
++++ config.base[161]: ICERES=500
++++ config.base[163]: case "${CASE}" in
++++ config.base[165]: export waveGRD=glo_500
++++ config.base[165]: waveGRD=glo_500
++++ config.base[182]: case "${APP}" in
++++ config.base[201]: export DO_COUPLED=YES
++++ config.base[201]: DO_COUPLED=YES
++++ config.base[202]: export DO_OCN=YES
++++ config.base[202]: DO_OCN=YES
++++ config.base[203]: export DO_ICE=YES
++++ config.base[203]: DO_ICE=YES
++++ config.base[205]: [[ S2SWA =~ A$ ]]
++++ config.base[206]: export DO_AERO=YES
++++ config.base[206]: DO_AERO=YES
++++ config.base[207]: export AERO_ANL_CDUMP=both
++++ config.base[207]: AERO_ANL_CDUMP=both
++++ config.base[208]: export AERO_FCST_CDUMP=gdas
++++ config.base[208]: AERO_FCST_CDUMP=gdas
++++ config.base[211]: [[ S2SWA =~ ^S2SW ]]
++++ config.base[212]: export DO_WAVE=YES
++++ config.base[212]: DO_WAVE=YES
++++ config.base[213]: export WAVE_CDUMP=both
++++ config.base[213]: WAVE_CDUMP=both
++++ config.base[214]: export cplwav2atm=.true.
++++ config.base[214]: cplwav2atm=.true.
++++ config.base[224]: export gfs_cyc=1
++++ config.base[224]: gfs_cyc=1
++++ config.base[227]: export FHMIN_GFS=0
++++ config.base[227]: FHMIN_GFS=0
++++ config.base[228]: export FHMIN=0
++++ config.base[228]: FHMIN=0
++++ config.base[229]: export FHMAX_GFS=120
++++ config.base[229]: FHMAX_GFS=120
++++ config.base[230]: export FHOUT_GFS=6
++++ config.base[230]: FHOUT_GFS=6
++++ config.base[231]: export FHMAX_HF_GFS=0
++++ config.base[231]: FHMAX_HF_GFS=0
++++ config.base[232]: export FHOUT_HF_GFS=1
++++ config.base[232]: FHOUT_HF_GFS=1
++++ config.base[233]: export FHOUT_OCNICE_GFS=6
++++ config.base[233]: FHOUT_OCNICE_GFS=6
++++ config.base[234]: export FHMIN_WAV=0
++++ config.base[234]: FHMIN_WAV=0
++++ config.base[235]: export FHOUT_WAV=3
++++ config.base[235]: FHOUT_WAV=3
++++ config.base[236]: export FHMAX_HF_WAV=120
++++ config.base[236]: FHMAX_HF_WAV=120
++++ config.base[237]: export FHOUT_HF_WAV=1
++++ config.base[237]: FHOUT_HF_WAV=1
++++ config.base[238]: export FHMAX_WAV=120
++++ config.base[238]: FHMAX_WAV=120
++++ config.base[239]: ((  gfs_cyc != 0  ))
++++ config.base[240]: export STEP_GFS=24
++++ config.base[240]: STEP_GFS=24
++++ config.base[244]: export ILPOST=1
++++ config.base[244]: ILPOST=1
++++ config.base[246]: export FHMIN_ENKF=0
++++ config.base[246]: FHMIN_ENKF=0
++++ config.base[247]: export FHMAX_ENKF=120
++++ config.base[247]: FHMAX_ENKF=120
++++ config.base[248]: export FHOUT_ENKF=6
++++ config.base[248]: FHOUT_ENKF=6
++++ config.base[251]: export restart_interval_gfs=12
++++ config.base[251]: restart_interval_gfs=12
++++ config.base[252]: export restart_interval_enkfgfs=12
++++ config.base[252]: restart_interval_enkfgfs=12
++++ config.base[257]: export QUILTING=.true.
++++ config.base[257]: QUILTING=.true.
++++ config.base[258]: export OUTPUT_GRID=gaussian_grid
++++ config.base[258]: OUTPUT_GRID=gaussian_grid
++++ config.base[259]: export WRITE_DOPOST=.true.
++++ config.base[259]: WRITE_DOPOST=.true.
++++ config.base[260]: export WRITE_NSFLIP=.true.
++++ config.base[260]: WRITE_NSFLIP=.true.
++++ config.base[263]: export FLTFILEGFS=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/post/postxconfig-NT-GEFS.txt
++++ config.base[263]: FLTFILEGFS=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/post/postxconfig-NT-GEFS.txt
++++ config.base[264]: export FLTFILEGFSF00=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/post/postxconfig-NT-GEFS-F00.txt
++++ config.base[264]: FLTFILEGFSF00=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/post/postxconfig-NT-GEFS-F00.txt
++++ config.base[267]: export imp_physics=8
++++ config.base[267]: imp_physics=8
++++ config.base[271]: export DO_JEDIATMVAR=NO
++++ config.base[271]: DO_JEDIATMVAR=NO
++++ config.base[272]: export DO_JEDIATMENS=NO
++++ config.base[272]: DO_JEDIATMENS=NO
++++ config.base[273]: export DO_JEDIOCNVAR=NO
++++ config.base[273]: DO_JEDIOCNVAR=NO
++++ config.base[274]: export DO_JEDISNOWDA=NO
++++ config.base[274]: DO_JEDISNOWDA=NO
++++ config.base[275]: export DO_MERGENSST=NO
++++ config.base[275]: DO_MERGENSST=NO
++++ config.base[278]: export NMEM_ENS=2
++++ config.base[278]: NMEM_ENS=2
++++ config.base[282]: export ENSMEM=001
++++ config.base[282]: ENSMEM=001
++++ config.base[283]: export MEMDIR=mem001
++++ config.base[283]: MEMDIR=mem001
++++ config.base[287]: export USE_OCN_PERTURB_FILES=false
++++ config.base[287]: USE_OCN_PERTURB_FILES=false
++++ config.base[289]: export DOIAU=NO
++++ config.base[289]: DOIAU=NO
++++ config.base[291]: [[ .false. = \.\f\a\l\s\e\. ]]
++++ config.base[292]: export IAU_FHROT=0
++++ config.base[292]: IAU_FHROT=0
++++ config.base[302]: export DONST=YES
++++ config.base[302]: DONST=YES
++++ config.base[303]: [[ YES = \Y\E\S ]]
++++ config.base[303]: export 'FNTSFA=        '
++++ config.base[303]: FNTSFA='        '
++++ config.base[306]: export nst_anl=.true.
++++ config.base[306]: nst_anl=.true.
++++ config.base[309]: export MAKE_NSSTBUFR=NO
++++ config.base[309]: MAKE_NSSTBUFR=NO
++++ config.base[312]: export MAKE_ACFTBUFR=NO
++++ config.base[312]: MAKE_ACFTBUFR=NO
++++ config.base[315]: export DO_METP=NO
++++ config.base[315]: DO_METP=NO
++++ config.base[316]: export DO_FIT2OBS=NO
++++ config.base[316]: DO_FIT2OBS=NO
++++ config.base[319]: export HPSSARCH=NO
++++ config.base[319]: HPSSARCH=NO
++++ config.base[320]: export LOCALARCH=NO
++++ config.base[320]: LOCALARCH=NO
++++ config.base[321]: [[ NO = \Y\E\S ]]
++++ config.base[325]: export ARCH_CYC=00
++++ config.base[325]: ARCH_CYC=00
++++ config.base[326]: export ARCH_WARMICFREQ=4
++++ config.base[326]: ARCH_WARMICFREQ=4
++++ config.base[327]: export ARCH_FCSTICFREQ=1
++++ config.base[327]: ARCH_FCSTICFREQ=1
++++ config.base[329]: export DELETE_COM_IN_ARCHIVE_JOB=YES
++++ config.base[329]: DELETE_COM_IN_ARCHIVE_JOB=YES
++++ config.base[332]: export NUM_SND_COLLECTIVES=9
++++ config.base[332]: NUM_SND_COLLECTIVES=9
++++ config.base[334]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.fcst
++++ config.fcst[6]: echo 'BEGIN: config.fcst'
+BEGIN: config.fcst
++++ config.fcst[8]: export USE_ESMF_THREADING=YES
++++ config.fcst[8]: USE_ESMF_THREADING=YES
++++ config.fcst[9]: export COPY_FINAL_RESTARTS=NO
++++ config.fcst[9]: COPY_FINAL_RESTARTS=NO
++++ config.fcst[12]: case ${WAVE_CDUMP} in
++++ config.fcst[18]: case ${AERO_FCST_CDUMP} in
++++ config.fcst[20]: DO_AERO=NO
++++ config.fcst[24]: string='--fv3 C48'
++++ config.fcst[25]: [[ YES == \Y\E\S ]]
++++ config.fcst[25]: string='--fv3 C48 --mom6 500'
++++ config.fcst[26]: [[ YES == \Y\E\S ]]
++++ config.fcst[26]: string='--fv3 C48 --mom6 500 --cice6 500'
++++ config.fcst[27]: [[ YES == \Y\E\S ]]
++++ config.fcst[27]: string='--fv3 C48 --mom6 500 --cice6 500 --ww3 glo_500'
++++ config.fcst[28]: [[ NO == \Y\E\S ]]
++++ config.fcst[31]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.ufs --fv3 C48 --mom6 500 --cice6 500 --ww3 glo_500
+++++ config.ufs[9]: echo 'BEGIN: config.ufs'
+BEGIN: config.ufs
+++++ config.ufs[11]: ((  8 <= 1  ))
+++++ config.ufs[26]: skip_mom6=true
+++++ config.ufs[27]: skip_cice6=true
+++++ config.ufs[28]: skip_ww3=true
+++++ config.ufs[29]: skip_gocart=true
+++++ config.ufs[30]: skip_mediator=true
+++++ config.ufs[33]: ((  8 > 0  ))
+++++ config.ufs[34]: key=--fv3
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[37]: fv3_res=C48
+++++ config.ufs[38]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  6 > 0  ))
+++++ config.ufs[34]: key=--mom6
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[41]: mom6_res=500
+++++ config.ufs[42]: skip_mom6=false
+++++ config.ufs[43]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  4 > 0  ))
+++++ config.ufs[34]: key=--cice6
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[46]: cice6_res=500
+++++ config.ufs[47]: skip_cice6=false
+++++ config.ufs[48]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  2 > 0  ))
+++++ config.ufs[34]: key=--ww3
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[51]: ww3_res=glo_500
+++++ config.ufs[52]: skip_ww3=false
+++++ config.ufs[53]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  0 > 0  ))
+++++ config.ufs[67]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[68]: skip_mediator=false
+++++ config.ufs[72]: case "${fv3_res}" in
+++++ config.ufs[74]: export DELTIM=1200
+++++ config.ufs[74]: DELTIM=1200
+++++ config.ufs[75]: export layout_x=1
+++++ config.ufs[75]: layout_x=1
+++++ config.ufs[76]: export layout_y=1
+++++ config.ufs[76]: layout_y=1
+++++ config.ufs[77]: export layout_x_gfs=1
+++++ config.ufs[77]: layout_x_gfs=1
+++++ config.ufs[78]: export layout_y_gfs=1
+++++ config.ufs[78]: layout_y_gfs=1
+++++ config.ufs[79]: export nthreads_fv3=1
+++++ config.ufs[79]: nthreads_fv3=1
+++++ config.ufs[80]: export nthreads_fv3_gfs=1
+++++ config.ufs[80]: nthreads_fv3_gfs=1
+++++ config.ufs[81]: export nthreads_ufs=1
+++++ config.ufs[81]: nthreads_ufs=1
+++++ config.ufs[82]: export nthreads_ufs_gfs=1
+++++ config.ufs[82]: nthreads_ufs_gfs=1
+++++ config.ufs[83]: export xr_cnvcld=.false.
+++++ config.ufs[83]: xr_cnvcld=.false.
+++++ config.ufs[84]: export cdmbgwd=0.071,2.1,1.0,1.0
+++++ config.ufs[84]: cdmbgwd=0.071,2.1,1.0,1.0
+++++ config.ufs[85]: export cdmbgwd_gsl=40.0,1.77,1.0,1.0
+++++ config.ufs[85]: cdmbgwd_gsl=40.0,1.77,1.0,1.0
+++++ config.ufs[86]: export k_split=1
+++++ config.ufs[86]: k_split=1
+++++ config.ufs[87]: export n_split=4
+++++ config.ufs[87]: n_split=4
+++++ config.ufs[88]: export tau=10.0
+++++ config.ufs[88]: tau=10.0
+++++ config.ufs[89]: export rf_cutoff=100.0
+++++ config.ufs[89]: rf_cutoff=100.0
+++++ config.ufs[90]: export fv_sg_adj=3600
+++++ config.ufs[90]: fv_sg_adj=3600
+++++ config.ufs[91]: export knob_ugwp_tauamp=6.0e-3
+++++ config.ufs[91]: knob_ugwp_tauamp=6.0e-3
+++++ config.ufs[92]: export WRITE_GROUP=1
+++++ config.ufs[92]: WRITE_GROUP=1
+++++ config.ufs[93]: export WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[93]: WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[94]: export WRITE_GROUP_GFS=1
+++++ config.ufs[94]: WRITE_GROUP_GFS=1
+++++ config.ufs[95]: export WRTTASK_PER_GROUP_PER_THREAD_PER_TILE_GFS=1
+++++ config.ufs[95]: WRTTASK_PER_GROUP_PER_THREAD_PER_TILE_GFS=1
+++++ config.ufs[242]: ((  WRTTASK_PER_GROUP_PER_THREAD = WRTTASK_PER_GROUP_PER_THREAD_PER_TILE * 6  ))
+++++ config.ufs[243]: ((  WRTTASK_PER_GROUP_PER_THREAD_GFS = WRTTASK_PER_GROUP_PER_THREAD_PER_TILE_GFS * 6  ))
+++++ config.ufs[244]: export WRTTASK_PER_GROUP_PER_THREAD
+++++ config.ufs[245]: export WRTTASK_PER_GROUP_PER_THREAD_GFS
+++++ config.ufs[247]: ((  ntasks_fv3 = layout_x * layout_y * 6  ))
+++++ config.ufs[248]: ((  ntasks_fv3_gfs = layout_x_gfs * layout_y_gfs * 6  ))
+++++ config.ufs[249]: export ntasks_fv3
+++++ config.ufs[250]: export ntasks_fv3_gfs
+++++ config.ufs[252]: ((  ntasks_quilt = WRITE_GROUP * WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.ufs[253]: ((  ntasks_quilt_gfs = WRITE_GROUP_GFS * WRTTASK_PER_GROUP_PER_THREAD_GFS  ))
+++++ config.ufs[254]: export ntasks_quilt
+++++ config.ufs[255]: export ntasks_quilt_gfs
+++++ config.ufs[258]: case ${fv3_res} in
+++++ config.ufs[260]: OUTPUT_FILETYPE_ATM=netcdf
+++++ config.ufs[261]: OUTPUT_FILETYPE_SFC=netcdf
+++++ config.ufs[272]: export OUTPUT_FILETYPE_ATM OUTPUT_FILETYPE_SFC
+++++ config.ufs[275]: export cpl=.false.
+++++ config.ufs[275]: cpl=.false.
+++++ config.ufs[276]: export cplflx=.false.
+++++ config.ufs[276]: cplflx=.false.
+++++ config.ufs[277]: export cplice=.false.
+++++ config.ufs[277]: cplice=.false.
+++++ config.ufs[278]: export cplchm=.false.
+++++ config.ufs[278]: cplchm=.false.
+++++ config.ufs[279]: export cplwav=.false.
+++++ config.ufs[279]: cplwav=.false.
+++++ config.ufs[280]: export cplwav2atm=.false.
+++++ config.ufs[280]: cplwav2atm=.false.
+++++ config.ufs[281]: export CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[281]: CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[282]: model_list=atm
+++++ config.ufs[285]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[286]: export cpl=.true.
+++++ config.ufs[286]: cpl=.true.
+++++ config.ufs[287]: export nthreads_mediator=1
+++++ config.ufs[287]: nthreads_mediator=1
+++++ config.ufs[288]: export CCPP_SUITE=FV3_GFS_v17_coupled_p8_ugwpv1
+++++ config.ufs[288]: CCPP_SUITE=FV3_GFS_v17_coupled_p8_ugwpv1
+++++ config.ufs[292]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[293]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.ocn
++++++ config.ocn[3]: echo 'BEGIN: config.ocn'
+BEGIN: config.ocn
++++++ config.ocn[5]: export MESH_OCN=mesh.mx500.nc
++++++ config.ocn[5]: MESH_OCN=mesh.mx500.nc
++++++ config.ocn[7]: export DO_OCN_SPPT=NO
++++++ config.ocn[7]: DO_OCN_SPPT=NO
++++++ config.ocn[8]: export DO_OCN_PERT_EPBL=NO
++++++ config.ocn[8]: DO_OCN_PERT_EPBL=NO
++++++ config.ocn[11]: export MOM6_USE_LI2016=True
++++++ config.ocn[11]: MOM6_USE_LI2016=True
++++++ config.ocn[12]: export MOM6_THERMO_SPAN=False
++++++ config.ocn[12]: MOM6_THERMO_SPAN=False
++++++ config.ocn[14]: [[ NO == \Y\E\S ]]
++++++ config.ocn[17]: export ODA_INCUPD=False
++++++ config.ocn[17]: ODA_INCUPD=False
++++++ config.ocn[21]: [[ NO == \Y\E\S ]]
++++++ config.ocn[24]: export ODA_INCUPD_NHOURS=3.0
++++++ config.ocn[24]: ODA_INCUPD_NHOURS=3.0
++++++ config.ocn[29]: echo 'END: config.ocn'
+END: config.ocn
+++++ config.ufs[294]: export cplflx=.true.
+++++ config.ufs[294]: cplflx=.true.
+++++ config.ufs[295]: model_list=atm.ocean
+++++ config.ufs[296]: nthreads_mom6=1
+++++ config.ufs[297]: case "${mom6_res}" in
+++++ config.ufs[299]: ntasks_mom6=8
+++++ config.ufs[300]: OCNTIM=3600
+++++ config.ufs[301]: NX_GLB=72
+++++ config.ufs[302]: NY_GLB=35
+++++ config.ufs[303]: DT_DYNAM_MOM6=3600
+++++ config.ufs[304]: DT_THERM_MOM6=3600
+++++ config.ufs[305]: FRUNOFF=
+++++ config.ufs[306]: CHLCLIM=seawifs_1998-2006_smoothed_2X.nc
+++++ config.ufs[307]: MOM6_RESTART_SETTING=r
+++++ config.ufs[308]: MOM6_RIVER_RUNOFF=False
+++++ config.ufs[309]: eps_imesh=4.0e-1
+++++ config.ufs[310]: MOM6_DIAG_COORD_DEF_Z_FILE=oceanda_zgrid_25L.nc
+++++ config.ufs[311]: MOM6_DIAG_MISVAL=0.0
+++++ config.ufs[312]: MOM6_ALLOW_LANDMASK_CHANGES=False
+++++ config.ufs[313]: TOPOEDITS=
+++++ config.ufs[387]: export nthreads_mom6 ntasks_mom6
+++++ config.ufs[388]: export OCNTIM
+++++ config.ufs[389]: export NX_GLB NY_GLB
+++++ config.ufs[390]: export DT_DYNAM_MOM6 DT_THERM_MOM6
+++++ config.ufs[391]: export FRUNOFF
+++++ config.ufs[392]: export CHLCLIM
+++++ config.ufs[393]: export TOPOEDITS
+++++ config.ufs[394]: export MOM6_RIVER_RUNOFF
+++++ config.ufs[395]: export MOM6_RESTART_SETTING
+++++ config.ufs[396]: export eps_imesh
+++++ config.ufs[397]: export MOM6_DIAG_COORD_DEF_Z_FILE
+++++ config.ufs[398]: export MOM6_DIAG_MISVAL
+++++ config.ufs[399]: export MOM6_ALLOW_LANDMASK_CHANGES
+++++ config.ufs[403]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[404]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.ice
++++++ config.ice[3]: echo 'BEGIN: config.ice'
+BEGIN: config.ice
++++++ config.ice[6]: export min_seaice=1.0e-6
++++++ config.ice[6]: min_seaice=1.0e-6
++++++ config.ice[7]: export use_cice_alb=.true.
++++++ config.ice[7]: use_cice_alb=.true.
++++++ config.ice[9]: export MESH_ICE=mesh.mx500.nc
++++++ config.ice[9]: MESH_ICE=mesh.mx500.nc
++++++ config.ice[11]: export CICE_GRID=grid_cice_NEMS_mx500.nc
++++++ config.ice[11]: CICE_GRID=grid_cice_NEMS_mx500.nc
++++++ config.ice[12]: export CICE_MASK=kmtu_cice_NEMS_mx500.nc
++++++ config.ice[12]: CICE_MASK=kmtu_cice_NEMS_mx500.nc
++++++ config.ice[14]: echo 'END: config.ice'
+END: config.ice
+++++ config.ufs[405]: export cplice=.true.
+++++ config.ufs[405]: cplice=.true.
+++++ config.ufs[406]: model_list=atm.ocean.ice
+++++ config.ufs[408]: [[ false == \t\r\u\e ]]
+++++ config.ufs[413]: nthreads_cice6=1
+++++ config.ufs[414]: case "${cice6_res}" in
+++++ config.ufs[416]: ntasks_cice6=4
+++++ config.ufs[417]: cice6_processor_shape=slenderX1
+++++ config.ufs[438]: export nthreads_cice6 ntasks_cice6
+++++ config.ufs[439]: export cice6_processor_shape
+++++ config.ufs[443]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[444]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.wave
++++++ config.wave[6]: echo 'BEGIN: config.wave'
+BEGIN: config.wave
++++++ config.wave[13]: export CDUMPwave=gefswave
++++++ config.wave[13]: CDUMPwave=gefswave
++++++ config.wave[16]: export CDUMPRSTwave=gdas
++++++ config.wave[16]: CDUMPRSTwave=gdas
++++++ config.wave[19]: export waveGRDN=1
++++++ config.wave[19]: waveGRDN=1
++++++ config.wave[20]: export waveGRDG=10
++++++ config.wave[20]: waveGRDG=10
++++++ config.wave[21]: export USE_WAV_RMP=NO
++++++ config.wave[21]: USE_WAV_RMP=NO
++++++ config.wave[22]: export waveMULTIGRID=.false.
++++++ config.wave[22]: waveMULTIGRID=.false.
++++++ config.wave[23]: export MESH_WAV=mesh.glo_500.nc
++++++ config.wave[23]: MESH_WAV=mesh.glo_500.nc
++++++ config.wave[24]: export 'waveesmfGRD= '
++++++ config.wave[24]: waveesmfGRD=' '
++++++ config.wave[27]: case "${waveGRD}" in
++++++ config.wave[73]: export waveinterpGRD=
++++++ config.wave[73]: waveinterpGRD=
++++++ config.wave[74]: export wavepostGRD=glo_500
++++++ config.wave[74]: wavepostGRD=glo_500
++++++ config.wave[75]: export waveuoutpGRD=glo_500
++++++ config.wave[75]: waveuoutpGRD=glo_500
++++++ config.wave[84]: export WAVEWND_DID=
++++++ config.wave[84]: WAVEWND_DID=
++++++ config.wave[85]: export WAVEWND_FID=
++++++ config.wave[85]: WAVEWND_FID=
++++++ config.wave[88]: export WAVHINDH=0
++++++ config.wave[88]: WAVHINDH=0
++++++ config.wave[89]: export FHMAX_WAV_IBP=180
++++++ config.wave[89]: FHMAX_WAV_IBP=180
++++++ config.wave[90]: ((  FHMAX_WAV < FHMAX_WAV_IBP  ))
++++++ config.wave[90]: export FHMAX_WAV_IBP=120
++++++ config.wave[90]: FHMAX_WAV_IBP=120
++++++ config.wave[93]: export DTFLD_WAV=3600
++++++ config.wave[93]: DTFLD_WAV=3600
++++++ config.wave[94]: export DTPNT_WAV=3600
++++++ config.wave[94]: DTPNT_WAV=3600
++++++ config.wave[95]: export FHINCP_WAV=1
++++++ config.wave[95]: FHINCP_WAV=1
++++++ config.wave[98]: export 'OUTPARS_WAV=WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++++ config.wave[98]: OUTPARS_WAV='WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++++ config.wave[101]: export WAVHCYC=6
++++++ config.wave[101]: WAVHCYC=6
++++++ config.wave[102]: export FHMAX_WAV_CUR=192
++++++ config.wave[102]: FHMAX_WAV_CUR=192
++++++ config.wave[106]: export RSTTYPE_WAV=T
++++++ config.wave[106]: RSTTYPE_WAV=T
++++++ config.wave[107]: rst_dt_gfs=43200
++++++ config.wave[108]: [[ 43200 -gt 0 ]]
++++++ config.wave[109]: export DT_1_RST_WAV=0
++++++ config.wave[109]: DT_1_RST_WAV=0
++++++ config.wave[112]: export DT_2_RST_WAV=43200
++++++ config.wave[112]: DT_2_RST_WAV=43200
++++++ config.wave[118]: export RSTIOFF_WAV=0
++++++ config.wave[118]: RSTIOFF_WAV=0
++++++ config.wave[122]: export RUNMEM=-1
++++++ config.wave[122]: RUNMEM=-1
++++++ config.wave[125]: ((  RUNMEM == -1  ))
++++++ config.wave[127]: export waveMEMB=
++++++ config.wave[127]: waveMEMB=
++++++ config.wave[134]: export WW3ATMINP=CPL
++++++ config.wave[134]: WW3ATMINP=CPL
++++++ config.wave[135]: [[ YES == \Y\E\S ]]
++++++ config.wave[136]: export WW3ICEINP=CPL
++++++ config.wave[136]: WW3ICEINP=CPL
++++++ config.wave[137]: export WAVEICE_FID=
++++++ config.wave[137]: WAVEICE_FID=
++++++ config.wave[143]: export WAVECUR_DID=rtofs
++++++ config.wave[143]: WAVECUR_DID=rtofs
++++++ config.wave[144]: [[ YES == \Y\E\S ]]
++++++ config.wave[145]: export WW3CURINP=CPL
++++++ config.wave[145]: WW3CURINP=CPL
++++++ config.wave[146]: export WAVECUR_FID=
++++++ config.wave[146]: WAVECUR_FID=
++++++ config.wave[153]: export WW3ATMIENS=F
++++++ config.wave[153]: WW3ATMIENS=F
++++++ config.wave[154]: export WW3ICEIENS=F
++++++ config.wave[154]: WW3ICEIENS=F
++++++ config.wave[155]: export WW3CURIENS=F
++++++ config.wave[155]: WW3CURIENS=F
++++++ config.wave[157]: export GOFILETYPE=1
++++++ config.wave[157]: GOFILETYPE=1
++++++ config.wave[158]: export POFILETYPE=1
++++++ config.wave[158]: POFILETYPE=1
++++++ config.wave[162]: export FUNIPNT=T
++++++ config.wave[162]: FUNIPNT=T
++++++ config.wave[164]: export IOSRV=1
++++++ config.wave[164]: IOSRV=1
++++++ config.wave[166]: export FPNTPROC=T
++++++ config.wave[166]: FPNTPROC=T
++++++ config.wave[168]: export FGRDPROC=F
++++++ config.wave[168]: FGRDPROC=F
++++++ config.wave[170]: export FLAGMASKCOMP=F
++++++ config.wave[170]: FLAGMASKCOMP=F
++++++ config.wave[172]: export FLAGMASKOUT=F
++++++ config.wave[172]: FLAGMASKOUT=F
++++++ config.wave[174]: echo 'END: config.wave'
+END: config.wave
+++++ config.ufs[445]: export cplwav=.true.
+++++ config.ufs[445]: cplwav=.true.
+++++ config.ufs[446]: export cplwav2atm=.true.
+++++ config.ufs[446]: cplwav2atm=.true.
+++++ config.ufs[447]: model_list=atm.ocean.ice.wave
+++++ config.ufs[448]: nthreads_ww3=2
+++++ config.ufs[449]: case "${ww3_res}" in
+++++ config.ufs[468]: ntasks_ww3=12
+++++ config.ufs[469]: nthreads_ww3=1
+++++ config.ufs[479]: export ntasks_ww3 nthreads_ww3
+++++ config.ufs[483]: [[ true == \f\a\l\s\e ]]
+++++ config.ufs[491]: [[ YES == \Y\E\S ]]
+++++ config.ufs[492]: tmpl_suffix=_esmf
+++++ config.ufs[494]: case "${model_list}" in
+++++ config.ufs[511]: default_template=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/ufs/ufs.configure.s2sw_esmf.IN
+++++ config.ufs[523]: export ufs_configure_template=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/ufs/ufs.configure.s2sw_esmf.IN
+++++ config.ufs[523]: ufs_configure_template=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/ufs/ufs.configure.s2sw_esmf.IN
+++++ config.ufs[524]: unset model_list default_template
+++++ config.ufs[526]: [[ ! -r /work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/ufs/ufs.configure.s2sw_esmf.IN ]]
+++++ config.ufs[531]: echo 'END: config.ufs'
+END: config.ufs
++++ config.fcst[34]: export FHMAX=120
++++ config.fcst[34]: FHMAX=120
++++ config.fcst[36]: export FHOUT=6
++++ config.fcst[36]: FHOUT=6
++++ config.fcst[37]: export FHMAX_HF=0
++++ config.fcst[37]: FHMAX_HF=0
++++ config.fcst[38]: export FHOUT_HF=1
++++ config.fcst[38]: FHOUT_HF=1
++++ config.fcst[39]: export FHOUT_OCNICE=6
++++ config.fcst[39]: FHOUT_OCNICE=6
++++ config.fcst[42]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.resources fcst
+++++ config.resources[7]: ((  1 != 1  ))
+++++ config.resources[14]: step=fcst
+++++ config.resources[16]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[18]: case ${machine} in
+++++ config.resources[22]: npe_node_max=80
+++++ config.resources[51]: export npe_node_max
+++++ config.resources[53]: case ${step} in
+++++ config.resources[81]: export is_exclusive=True
+++++ config.resources[81]: is_exclusive=True
+++++ config.resources[83]: _CDUMP_LIST=gefs
+++++ config.resources[86]: for _CDUMP in ${_CDUMP_LIST}
+++++ config.resources[87]: [[ gefs =~ gfs ]]
+++++ config.resources[100]: [[ YES == \Y\E\S ]]
+++++ config.resources[101]: export UFS_THREADS=1
+++++ config.resources[101]: UFS_THREADS=1
+++++ config.resources[112]: ((  FV3PETS = ntasks_fv3 * nthreads_fv3  ))
+++++ config.resources[113]: echo 'FV3 using (nthreads, PETS) = (1, 6)'
+FV3 using (nthreads, PETS) = (1, 6)
+++++ config.resources[116]: [[ .true. == \.\t\r\u\e\. ]]
+++++ config.resources[117]: ((  QUILTPETS = ntasks_quilt * nthreads_fv3  ))
+++++ config.resources[118]: ((  WRTTASK_PER_GROUP = WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.resources[119]: export WRTTASK_PER_GROUP
+++++ config.resources[123]: echo 'QUILT using (nthreads, PETS) = (1, 6)'
+QUILT using (nthreads, PETS) = (1, 6)
+++++ config.resources[126]: ATMTHREADS=1
+++++ config.resources[127]: ((  ATMPETS = FV3PETS + QUILTPETS  ))
+++++ config.resources[128]: export ATMPETS ATMTHREADS
+++++ config.resources[129]: echo 'FV3ATM using (nthreads, PETS) = (1, 12)'
+FV3ATM using (nthreads, PETS) = (1, 12)
+++++ config.resources[132]: NTASKS_TOT=12
+++++ config.resources[138]: MEDTHREADS=1
+++++ config.resources[139]: MEDPETS=6
+++++ config.resources[140]: ((  6 > 300  ))
+++++ config.resources[141]: export MEDPETS MEDTHREADS
+++++ config.resources[142]: echo 'MEDIATOR using (threads, PETS) = (1, 6)'
+MEDIATOR using (threads, PETS) = (1, 6)
+++++ config.resources[144]: CHMPETS=0
+++++ config.resources[144]: CHMTHREADS=0
+++++ config.resources[145]: [[ NO == \Y\E\S ]]
+++++ config.resources[152]: export CHMPETS CHMTHREADS
+++++ config.resources[154]: WAVPETS=0
+++++ config.resources[154]: WAVTHREADS=0
+++++ config.resources[155]: [[ YES == \Y\E\S ]]
+++++ config.resources[156]: ((  WAVPETS = ntasks_ww3 * nthreads_ww3  ))
+++++ config.resources[157]: ((  WAVTHREADS = nthreads_ww3  ))
+++++ config.resources[158]: echo 'WW3 using (threads, PETS) = (1, 12)'
+WW3 using (threads, PETS) = (1, 12)
+++++ config.resources[159]: ((  NTASKS_TOT = NTASKS_TOT + WAVPETS  ))
+++++ config.resources[161]: export WAVPETS WAVTHREADS
+++++ config.resources[163]: OCNPETS=0
+++++ config.resources[163]: OCNTHREADS=0
+++++ config.resources[164]: [[ YES == \Y\E\S ]]
+++++ config.resources[165]: ((  OCNPETS = ntasks_mom6 * nthreads_mom6  ))
+++++ config.resources[166]: ((  OCNTHREADS = nthreads_mom6  ))
+++++ config.resources[167]: echo 'MOM6 using (threads, PETS) = (1, 8)'
+MOM6 using (threads, PETS) = (1, 8)
+++++ config.resources[168]: ((  NTASKS_TOT = NTASKS_TOT + OCNPETS  ))
+++++ config.resources[170]: export OCNPETS OCNTHREADS
+++++ config.resources[172]: ICEPETS=0
+++++ config.resources[172]: ICETHREADS=0
+++++ config.resources[173]: [[ YES == \Y\E\S ]]
+++++ config.resources[174]: ((  ICEPETS = ntasks_cice6 * nthreads_cice6  ))
+++++ config.resources[175]: ((  ICETHREADS = nthreads_cice6  ))
+++++ config.resources[176]: echo 'CICE6 using (threads, PETS) = (1, 4)'
+CICE6 using (threads, PETS) = (1, 4)
+++++ config.resources[177]: ((  NTASKS_TOT = NTASKS_TOT + ICEPETS  ))
+++++ config.resources[179]: export ICEPETS ICETHREADS
+++++ config.resources[181]: echo 'Total PETS for gefs = 36'
+Total PETS for gefs = 36
+++++ config.resources[183]: [[ gefs =~ gfs ]]
+++++ config.resources[188]: declare -x npe_fcst=36
+++++ config.resources[189]: declare -x nth_fcst=1
+++++ config.resources[190]: declare -x npe_node_fcst=80
+++++ config.resources[195]: case "${CASE}" in
+++++ config.resources[197]: declare -x wtime_fcst=03:00:00
+++++ config.resources[198]: declare -x wtime_fcst_gfs=03:00:00
+++++ config.resources[210]: unset _CDUMP _CDUMP_LIST
+++++ config.resources[211]: unset NTASKS_TOT
+++++ config.resources[303]: echo 'END: config.resources'
+END: config.resources
++++ config.fcst[43]: export domains_stack_size=16000000
++++ config.fcst[43]: domains_stack_size=16000000
++++ config.fcst[46]: [[ YES == \Y\E\S ]]
++++ config.fcst[47]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.nsst
+++++ config.nsst[6]: echo 'BEGIN: config.nsst'
+BEGIN: config.nsst
+++++ config.nsst[11]: export NST_MODEL=2
+++++ config.nsst[11]: NST_MODEL=2
+++++ config.nsst[14]: export NST_SPINUP=0
+++++ config.nsst[14]: NST_SPINUP=0
+++++ config.nsst[15]: cdate=2021032312
+++++ config.nsst[16]: ((  cdate < 2017072000  ))
+++++ config.nsst[21]: export NST_RESV=0
+++++ config.nsst[21]: NST_RESV=0
+++++ config.nsst[24]: export ZSEA1=0
+++++ config.nsst[24]: ZSEA1=0
+++++ config.nsst[25]: export ZSEA2=0
+++++ config.nsst[25]: ZSEA2=0
+++++ config.nsst[27]: export NST_GSI=3
+++++ config.nsst[27]: NST_GSI=3
+++++ config.nsst[31]: export NSTINFO=0
+++++ config.nsst[31]: NSTINFO=0
+++++ config.nsst[32]: ((  NST_GSI > 0  ))
+++++ config.nsst[32]: export NSTINFO=4
+++++ config.nsst[32]: NSTINFO=4
+++++ config.nsst[34]: echo 'END: config.nsst'
+END: config.nsst
++++ config.fcst[50]: export esmf_profile=.false.
++++ config.fcst[50]: esmf_profile=.false.
++++ config.fcst[51]: export esmf_logkind=ESMF_LOGKIND_MULTI_ON_ERROR
++++ config.fcst[51]: esmf_logkind=ESMF_LOGKIND_MULTI_ON_ERROR
++++ config.fcst[56]: export FORECASTSH=/work2/noaa/stmp/CI/HERCULES/2632/gefs/scripts/exglobal_forecast.sh
++++ config.fcst[56]: FORECASTSH=/work2/noaa/stmp/CI/HERCULES/2632/gefs/scripts/exglobal_forecast.sh
++++ config.fcst[58]: export FCSTEXEC=ufs_model.x
++++ config.fcst[58]: FCSTEXEC=ufs_model.x
++++ config.fcst[62]: export TYPE=nh
++++ config.fcst[62]: TYPE=nh
++++ config.fcst[63]: export MONO=non-mono
++++ config.fcst[63]: MONO=non-mono
++++ config.fcst[66]: export h2o_phys=.true.
++++ config.fcst[66]: h2o_phys=.true.
++++ config.fcst[69]: export new_o3forc=YES
++++ config.fcst[69]: new_o3forc=YES
++++ config.fcst[71]: export gwd_opt=2
++++ config.fcst[71]: gwd_opt=2
++++ config.fcst[76]: ((  gwd_opt == 1  ))
++++ config.fcst[86]: ((  gwd_opt == 2  ))
++++ config.fcst[102]: export knob_ugwp_version=1
++++ config.fcst[102]: knob_ugwp_version=1
++++ config.fcst[103]: export do_ugwp=.false.
++++ config.fcst[103]: do_ugwp=.false.
++++ config.fcst[104]: export do_tofd=.false.
++++ config.fcst[104]: do_tofd=.false.
++++ config.fcst[105]: export do_ugwp_v0=.false.
++++ config.fcst[105]: do_ugwp_v0=.false.
++++ config.fcst[106]: export do_ugwp_v1=.true.
++++ config.fcst[106]: do_ugwp_v1=.true.
++++ config.fcst[107]: export do_ugwp_v0_orog_only=.false.
++++ config.fcst[107]: do_ugwp_v0_orog_only=.false.
++++ config.fcst[108]: export do_ugwp_v0_nst_only=.false.
++++ config.fcst[108]: do_ugwp_v0_nst_only=.false.
++++ config.fcst[109]: export do_gsl_drag_ls_bl=.true.
++++ config.fcst[109]: do_gsl_drag_ls_bl=.true.
++++ config.fcst[110]: export do_gsl_drag_ss=.true.
++++ config.fcst[110]: do_gsl_drag_ss=.true.
++++ config.fcst[111]: export do_gsl_drag_tofd=.true.
++++ config.fcst[111]: do_gsl_drag_tofd=.true.
++++ config.fcst[112]: export do_ugwp_v1_orog_only=.false.
++++ config.fcst[112]: do_ugwp_v1_orog_only=.false.
+++++ config.fcst[113]: echo 128/2.35
+++++ config.fcst[113]: bc
++++ config.fcst[113]: launch_level=54
++++ config.fcst[114]: export launch_level
++++ config.fcst[118]: export d2_bg_k1=0.20
++++ config.fcst[118]: d2_bg_k1=0.20
++++ config.fcst[119]: export d2_bg_k2=0.04
++++ config.fcst[119]: d2_bg_k2=0.04
++++ config.fcst[120]: export dz_min=6
++++ config.fcst[120]: dz_min=6
++++ config.fcst[121]: export n_sponge=42
++++ config.fcst[121]: n_sponge=42
++++ config.fcst[124]: export hybedmf=.false.
++++ config.fcst[124]: hybedmf=.false.
++++ config.fcst[125]: export satmedmf=.true.
++++ config.fcst[125]: satmedmf=.true.
++++ config.fcst[126]: export isatmedmf=1
++++ config.fcst[126]: isatmedmf=1
++++ config.fcst[127]: tbf=
++++ config.fcst[128]: [[ .true. == \.\t\r\u\e\. ]]
++++ config.fcst[128]: tbf=_satmedmf
++++ config.fcst[131]: export progsigma=.true.
++++ config.fcst[131]: progsigma=.true.
++++ config.fcst[132]: tbp=
++++ config.fcst[133]: [[ .true. == \.\t\r\u\e\. ]]
++++ config.fcst[133]: tbp=_progsigma
++++ config.fcst[136]: [[ NO == \Y\E\S ]]
++++ config.fcst[139]: export IAER=1011
++++ config.fcst[139]: IAER=1011
++++ config.fcst[141]: export iovr_lw=3
++++ config.fcst[141]: iovr_lw=3
++++ config.fcst[142]: export iovr_sw=3
++++ config.fcst[142]: iovr_sw=3
++++ config.fcst[143]: export iovr=3
++++ config.fcst[143]: iovr=3
++++ config.fcst[144]: export icliq_sw=2
++++ config.fcst[144]: icliq_sw=2
++++ config.fcst[145]: export isubc_sw=2
++++ config.fcst[145]: isubc_sw=2
++++ config.fcst[146]: export isubc_lw=2
++++ config.fcst[146]: isubc_lw=2
++++ config.fcst[149]: export do_RRTMGP=.false.
++++ config.fcst[149]: do_RRTMGP=.false.
++++ config.fcst[150]: export doGP_cldoptics_LUT=.false.
++++ config.fcst[150]: doGP_cldoptics_LUT=.false.
++++ config.fcst[151]: export doGP_lwscat=.false.
++++ config.fcst[151]: doGP_lwscat=.false.
++++ config.fcst[155]: export iopt_sfc=3
++++ config.fcst[155]: iopt_sfc=3
++++ config.fcst[156]: export iopt_trs=2
++++ config.fcst[156]: iopt_trs=2
++++ config.fcst[159]: export dnats=0
++++ config.fcst[159]: dnats=0
++++ config.fcst[160]: export cal_pre=.true.
++++ config.fcst[160]: cal_pre=.true.
++++ config.fcst[161]: export do_sat_adj=.false.
++++ config.fcst[161]: do_sat_adj=.false.
++++ config.fcst[162]: export random_clds=.true.
++++ config.fcst[162]: random_clds=.true.
++++ config.fcst[164]: case ${imp_physics} in
++++ config.fcst[176]: export ncld=2
++++ config.fcst[176]: ncld=2
++++ config.fcst[177]: export FIELD_TABLE=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/ufs/fv3/field_table_thompson_noaero_tke_progsigma
++++ config.fcst[177]: FIELD_TABLE=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/ufs/fv3/field_table_thompson_noaero_tke_progsigma
++++ config.fcst[178]: export nwat=6
++++ config.fcst[178]: nwat=6
++++ config.fcst[180]: export cal_pre=.false.
++++ config.fcst[180]: cal_pre=.false.
++++ config.fcst[181]: export random_clds=.false.
++++ config.fcst[181]: random_clds=.false.
++++ config.fcst[182]: export effr_in=.true.
++++ config.fcst[182]: effr_in=.true.
++++ config.fcst[183]: export ltaerosol=.false.
++++ config.fcst[183]: ltaerosol=.false.
++++ config.fcst[184]: export lradar=.true.
++++ config.fcst[184]: lradar=.true.
++++ config.fcst[185]: export ttendlim=-999
++++ config.fcst[185]: ttendlim=-999
++++ config.fcst[186]: export dt_inner=600
++++ config.fcst[186]: dt_inner=600
++++ config.fcst[187]: export sedi_semi=.true.
++++ config.fcst[187]: sedi_semi=.true.
++++ config.fcst[188]: [[ .true. == .true. ]]
++++ config.fcst[188]: export dt_inner=1200
++++ config.fcst[188]: dt_inner=1200
++++ config.fcst[189]: export decfl=10
++++ config.fcst[189]: decfl=10
++++ config.fcst[191]: export hord_mt_nh_nonmono=5
++++ config.fcst[191]: hord_mt_nh_nonmono=5
++++ config.fcst[192]: export hord_xx_nh_nonmono=5
++++ config.fcst[192]: hord_xx_nh_nonmono=5
++++ config.fcst[193]: export vtdm4_nh_nonmono=0.02
++++ config.fcst[193]: vtdm4_nh_nonmono=0.02
++++ config.fcst[194]: export nord=2
++++ config.fcst[194]: nord=2
++++ config.fcst[195]: export dddmp=0.1
++++ config.fcst[195]: dddmp=0.1
++++ config.fcst[196]: export d4_bg=0.12
++++ config.fcst[196]: d4_bg=0.12
++++ config.fcst[221]: export DO_SPPT=NO
++++ config.fcst[221]: DO_SPPT=NO
++++ config.fcst[222]: export DO_SKEB=NO
++++ config.fcst[222]: DO_SKEB=NO
++++ config.fcst[223]: export DO_SHUM=NO
++++ config.fcst[223]: DO_SHUM=NO
++++ config.fcst[224]: export DO_LAND_PERT=NO
++++ config.fcst[224]: DO_LAND_PERT=NO
++++ config.fcst[225]: export DO_CA=YES
++++ config.fcst[225]: DO_CA=YES
++++ config.fcst[228]: export cplmode=ufs.frac
++++ config.fcst[228]: cplmode=ufs.frac
++++ config.fcst[229]: [[ .true. == \.\f\a\l\s\e\. ]]
++++ config.fcst[232]: export psm_bc=1
++++ config.fcst[232]: psm_bc=1
++++ config.fcst[234]: export min_lakeice=0.15
++++ config.fcst[234]: min_lakeice=0.15
++++ config.fcst[235]: export min_seaice=1.0e-6
++++ config.fcst[235]: min_seaice=1.0e-6
++++ config.fcst[236]: export use_cice_alb=.true.
++++ config.fcst[236]: use_cice_alb=.true.
++++ config.fcst[238]: export FSICL=0
++++ config.fcst[238]: FSICL=0
++++ config.fcst[239]: export FSICS=0
++++ config.fcst[239]: FSICS=0
++++ config.fcst[243]: export DIAG_TABLE=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/ufs/fv3/diag_table
++++ config.fcst[243]: DIAG_TABLE=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/ufs/fv3/diag_table
++++ config.fcst[246]: export restart_interval=12
++++ config.fcst[246]: restart_interval=12
++++ config.fcst[249]: export adjust_dry_mass=.false.
++++ config.fcst[249]: adjust_dry_mass=.false.
++++ config.fcst[252]: [[ C48 = C768 ]]
++++ config.fcst[255]: export io_layout=1,1
++++ config.fcst[255]: io_layout=1,1
++++ config.fcst[262]: echo 'END: config.fcst'
+END: config.fcst
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.efcs
++++ config.efcs[6]: echo 'BEGIN: config.efcs'
+BEGIN: config.efcs
++++ config.efcs[14]: export CASE=C48
++++ config.efcs[14]: CASE=C48
++++ config.efcs[17]: string='--fv3 C48'
++++ config.efcs[19]: [[ YES == \Y\E\S ]]
++++ config.efcs[19]: string='--fv3 C48 --mom6 500'
++++ config.efcs[20]: [[ YES == \Y\E\S ]]
++++ config.efcs[20]: string='--fv3 C48 --mom6 500 --cice6 500'
++++ config.efcs[21]: [[ YES == \Y\E\S ]]
++++ config.efcs[21]: string='--fv3 C48 --mom6 500 --cice6 500 --ww3 glo_500'
++++ config.efcs[22]: [[ NO == \Y\E\S ]]
++++ config.efcs[24]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.ufs --fv3 C48 --mom6 500 --cice6 500 --ww3 glo_500
+++++ config.ufs[9]: echo 'BEGIN: config.ufs'
+BEGIN: config.ufs
+++++ config.ufs[11]: ((  8 <= 1  ))
+++++ config.ufs[26]: skip_mom6=true
+++++ config.ufs[27]: skip_cice6=true
+++++ config.ufs[28]: skip_ww3=true
+++++ config.ufs[29]: skip_gocart=true
+++++ config.ufs[30]: skip_mediator=true
+++++ config.ufs[33]: ((  8 > 0  ))
+++++ config.ufs[34]: key=--fv3
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[37]: fv3_res=C48
+++++ config.ufs[38]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  6 > 0  ))
+++++ config.ufs[34]: key=--mom6
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[41]: mom6_res=500
+++++ config.ufs[42]: skip_mom6=false
+++++ config.ufs[43]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  4 > 0  ))
+++++ config.ufs[34]: key=--cice6
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[46]: cice6_res=500
+++++ config.ufs[47]: skip_cice6=false
+++++ config.ufs[48]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  2 > 0  ))
+++++ config.ufs[34]: key=--ww3
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[51]: ww3_res=glo_500
+++++ config.ufs[52]: skip_ww3=false
+++++ config.ufs[53]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  0 > 0  ))
+++++ config.ufs[67]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[68]: skip_mediator=false
+++++ config.ufs[72]: case "${fv3_res}" in
+++++ config.ufs[74]: export DELTIM=1200
+++++ config.ufs[74]: DELTIM=1200
+++++ config.ufs[75]: export layout_x=1
+++++ config.ufs[75]: layout_x=1
+++++ config.ufs[76]: export layout_y=1
+++++ config.ufs[76]: layout_y=1
+++++ config.ufs[77]: export layout_x_gfs=1
+++++ config.ufs[77]: layout_x_gfs=1
+++++ config.ufs[78]: export layout_y_gfs=1
+++++ config.ufs[78]: layout_y_gfs=1
+++++ config.ufs[79]: export nthreads_fv3=1
+++++ config.ufs[79]: nthreads_fv3=1
+++++ config.ufs[80]: export nthreads_fv3_gfs=1
+++++ config.ufs[80]: nthreads_fv3_gfs=1
+++++ config.ufs[81]: export nthreads_ufs=1
+++++ config.ufs[81]: nthreads_ufs=1
+++++ config.ufs[82]: export nthreads_ufs_gfs=1
+++++ config.ufs[82]: nthreads_ufs_gfs=1
+++++ config.ufs[83]: export xr_cnvcld=.false.
+++++ config.ufs[83]: xr_cnvcld=.false.
+++++ config.ufs[84]: export cdmbgwd=0.071,2.1,1.0,1.0
+++++ config.ufs[84]: cdmbgwd=0.071,2.1,1.0,1.0
+++++ config.ufs[85]: export cdmbgwd_gsl=40.0,1.77,1.0,1.0
+++++ config.ufs[85]: cdmbgwd_gsl=40.0,1.77,1.0,1.0
+++++ config.ufs[86]: export k_split=1
+++++ config.ufs[86]: k_split=1
+++++ config.ufs[87]: export n_split=4
+++++ config.ufs[87]: n_split=4
+++++ config.ufs[88]: export tau=10.0
+++++ config.ufs[88]: tau=10.0
+++++ config.ufs[89]: export rf_cutoff=100.0
+++++ config.ufs[89]: rf_cutoff=100.0
+++++ config.ufs[90]: export fv_sg_adj=3600
+++++ config.ufs[90]: fv_sg_adj=3600
+++++ config.ufs[91]: export knob_ugwp_tauamp=6.0e-3
+++++ config.ufs[91]: knob_ugwp_tauamp=6.0e-3
+++++ config.ufs[92]: export WRITE_GROUP=1
+++++ config.ufs[92]: WRITE_GROUP=1
+++++ config.ufs[93]: export WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[93]: WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[94]: export WRITE_GROUP_GFS=1
+++++ config.ufs[94]: WRITE_GROUP_GFS=1
+++++ config.ufs[95]: export WRTTASK_PER_GROUP_PER_THREAD_PER_TILE_GFS=1
+++++ config.ufs[95]: WRTTASK_PER_GROUP_PER_THREAD_PER_TILE_GFS=1
+++++ config.ufs[242]: ((  WRTTASK_PER_GROUP_PER_THREAD = WRTTASK_PER_GROUP_PER_THREAD_PER_TILE * 6  ))
+++++ config.ufs[243]: ((  WRTTASK_PER_GROUP_PER_THREAD_GFS = WRTTASK_PER_GROUP_PER_THREAD_PER_TILE_GFS * 6  ))
+++++ config.ufs[244]: export WRTTASK_PER_GROUP_PER_THREAD
+++++ config.ufs[245]: export WRTTASK_PER_GROUP_PER_THREAD_GFS
+++++ config.ufs[247]: ((  ntasks_fv3 = layout_x * layout_y * 6  ))
+++++ config.ufs[248]: ((  ntasks_fv3_gfs = layout_x_gfs * layout_y_gfs * 6  ))
+++++ config.ufs[249]: export ntasks_fv3
+++++ config.ufs[250]: export ntasks_fv3_gfs
+++++ config.ufs[252]: ((  ntasks_quilt = WRITE_GROUP * WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.ufs[253]: ((  ntasks_quilt_gfs = WRITE_GROUP_GFS * WRTTASK_PER_GROUP_PER_THREAD_GFS  ))
+++++ config.ufs[254]: export ntasks_quilt
+++++ config.ufs[255]: export ntasks_quilt_gfs
+++++ config.ufs[258]: case ${fv3_res} in
+++++ config.ufs[260]: OUTPUT_FILETYPE_ATM=netcdf
+++++ config.ufs[261]: OUTPUT_FILETYPE_SFC=netcdf
+++++ config.ufs[272]: export OUTPUT_FILETYPE_ATM OUTPUT_FILETYPE_SFC
+++++ config.ufs[275]: export cpl=.false.
+++++ config.ufs[275]: cpl=.false.
+++++ config.ufs[276]: export cplflx=.false.
+++++ config.ufs[276]: cplflx=.false.
+++++ config.ufs[277]: export cplice=.false.
+++++ config.ufs[277]: cplice=.false.
+++++ config.ufs[278]: export cplchm=.false.
+++++ config.ufs[278]: cplchm=.false.
+++++ config.ufs[279]: export cplwav=.false.
+++++ config.ufs[279]: cplwav=.false.
+++++ config.ufs[280]: export cplwav2atm=.false.
+++++ config.ufs[280]: cplwav2atm=.false.
+++++ config.ufs[281]: export CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[281]: CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[282]: model_list=atm
+++++ config.ufs[285]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[286]: export cpl=.true.
+++++ config.ufs[286]: cpl=.true.
+++++ config.ufs[287]: export nthreads_mediator=1
+++++ config.ufs[287]: nthreads_mediator=1
+++++ config.ufs[288]: export CCPP_SUITE=FV3_GFS_v17_coupled_p8_ugwpv1
+++++ config.ufs[288]: CCPP_SUITE=FV3_GFS_v17_coupled_p8_ugwpv1
+++++ config.ufs[292]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[293]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.ocn
++++++ config.ocn[3]: echo 'BEGIN: config.ocn'
+BEGIN: config.ocn
++++++ config.ocn[5]: export MESH_OCN=mesh.mx500.nc
++++++ config.ocn[5]: MESH_OCN=mesh.mx500.nc
++++++ config.ocn[7]: export DO_OCN_SPPT=NO
++++++ config.ocn[7]: DO_OCN_SPPT=NO
++++++ config.ocn[8]: export DO_OCN_PERT_EPBL=NO
++++++ config.ocn[8]: DO_OCN_PERT_EPBL=NO
++++++ config.ocn[11]: export MOM6_USE_LI2016=True
++++++ config.ocn[11]: MOM6_USE_LI2016=True
++++++ config.ocn[12]: export MOM6_THERMO_SPAN=False
++++++ config.ocn[12]: MOM6_THERMO_SPAN=False
++++++ config.ocn[14]: [[ NO == \Y\E\S ]]
++++++ config.ocn[17]: export ODA_INCUPD=False
++++++ config.ocn[17]: ODA_INCUPD=False
++++++ config.ocn[21]: [[ NO == \Y\E\S ]]
++++++ config.ocn[24]: export ODA_INCUPD_NHOURS=3.0
++++++ config.ocn[24]: ODA_INCUPD_NHOURS=3.0
++++++ config.ocn[29]: echo 'END: config.ocn'
+END: config.ocn
+++++ config.ufs[294]: export cplflx=.true.
+++++ config.ufs[294]: cplflx=.true.
+++++ config.ufs[295]: model_list=atm.ocean
+++++ config.ufs[296]: nthreads_mom6=1
+++++ config.ufs[297]: case "${mom6_res}" in
+++++ config.ufs[299]: ntasks_mom6=8
+++++ config.ufs[300]: OCNTIM=3600
+++++ config.ufs[301]: NX_GLB=72
+++++ config.ufs[302]: NY_GLB=35
+++++ config.ufs[303]: DT_DYNAM_MOM6=3600
+++++ config.ufs[304]: DT_THERM_MOM6=3600
+++++ config.ufs[305]: FRUNOFF=
+++++ config.ufs[306]: CHLCLIM=seawifs_1998-2006_smoothed_2X.nc
+++++ config.ufs[307]: MOM6_RESTART_SETTING=r
+++++ config.ufs[308]: MOM6_RIVER_RUNOFF=False
+++++ config.ufs[309]: eps_imesh=4.0e-1
+++++ config.ufs[310]: MOM6_DIAG_COORD_DEF_Z_FILE=oceanda_zgrid_25L.nc
+++++ config.ufs[311]: MOM6_DIAG_MISVAL=0.0
+++++ config.ufs[312]: MOM6_ALLOW_LANDMASK_CHANGES=False
+++++ config.ufs[313]: TOPOEDITS=
+++++ config.ufs[387]: export nthreads_mom6 ntasks_mom6
+++++ config.ufs[388]: export OCNTIM
+++++ config.ufs[389]: export NX_GLB NY_GLB
+++++ config.ufs[390]: export DT_DYNAM_MOM6 DT_THERM_MOM6
+++++ config.ufs[391]: export FRUNOFF
+++++ config.ufs[392]: export CHLCLIM
+++++ config.ufs[393]: export TOPOEDITS
+++++ config.ufs[394]: export MOM6_RIVER_RUNOFF
+++++ config.ufs[395]: export MOM6_RESTART_SETTING
+++++ config.ufs[396]: export eps_imesh
+++++ config.ufs[397]: export MOM6_DIAG_COORD_DEF_Z_FILE
+++++ config.ufs[398]: export MOM6_DIAG_MISVAL
+++++ config.ufs[399]: export MOM6_ALLOW_LANDMASK_CHANGES
+++++ config.ufs[403]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[404]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.ice
++++++ config.ice[3]: echo 'BEGIN: config.ice'
+BEGIN: config.ice
++++++ config.ice[6]: export min_seaice=1.0e-6
++++++ config.ice[6]: min_seaice=1.0e-6
++++++ config.ice[7]: export use_cice_alb=.true.
++++++ config.ice[7]: use_cice_alb=.true.
++++++ config.ice[9]: export MESH_ICE=mesh.mx500.nc
++++++ config.ice[9]: MESH_ICE=mesh.mx500.nc
++++++ config.ice[11]: export CICE_GRID=grid_cice_NEMS_mx500.nc
++++++ config.ice[11]: CICE_GRID=grid_cice_NEMS_mx500.nc
++++++ config.ice[12]: export CICE_MASK=kmtu_cice_NEMS_mx500.nc
++++++ config.ice[12]: CICE_MASK=kmtu_cice_NEMS_mx500.nc
++++++ config.ice[14]: echo 'END: config.ice'
+END: config.ice
+++++ config.ufs[405]: export cplice=.true.
+++++ config.ufs[405]: cplice=.true.
+++++ config.ufs[406]: model_list=atm.ocean.ice
+++++ config.ufs[408]: [[ false == \t\r\u\e ]]
+++++ config.ufs[413]: nthreads_cice6=1
+++++ config.ufs[414]: case "${cice6_res}" in
+++++ config.ufs[416]: ntasks_cice6=4
+++++ config.ufs[417]: cice6_processor_shape=slenderX1
+++++ config.ufs[438]: export nthreads_cice6 ntasks_cice6
+++++ config.ufs[439]: export cice6_processor_shape
+++++ config.ufs[443]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[444]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.wave
++++++ config.wave[6]: echo 'BEGIN: config.wave'
+BEGIN: config.wave
++++++ config.wave[13]: export CDUMPwave=gefswave
++++++ config.wave[13]: CDUMPwave=gefswave
++++++ config.wave[16]: export CDUMPRSTwave=gdas
++++++ config.wave[16]: CDUMPRSTwave=gdas
++++++ config.wave[19]: export waveGRDN=1
++++++ config.wave[19]: waveGRDN=1
++++++ config.wave[20]: export waveGRDG=10
++++++ config.wave[20]: waveGRDG=10
++++++ config.wave[21]: export USE_WAV_RMP=NO
++++++ config.wave[21]: USE_WAV_RMP=NO
++++++ config.wave[22]: export waveMULTIGRID=.false.
++++++ config.wave[22]: waveMULTIGRID=.false.
++++++ config.wave[23]: export MESH_WAV=mesh.glo_500.nc
++++++ config.wave[23]: MESH_WAV=mesh.glo_500.nc
++++++ config.wave[24]: export 'waveesmfGRD= '
++++++ config.wave[24]: waveesmfGRD=' '
++++++ config.wave[27]: case "${waveGRD}" in
++++++ config.wave[73]: export waveinterpGRD=
++++++ config.wave[73]: waveinterpGRD=
++++++ config.wave[74]: export wavepostGRD=glo_500
++++++ config.wave[74]: wavepostGRD=glo_500
++++++ config.wave[75]: export waveuoutpGRD=glo_500
++++++ config.wave[75]: waveuoutpGRD=glo_500
++++++ config.wave[84]: export WAVEWND_DID=
++++++ config.wave[84]: WAVEWND_DID=
++++++ config.wave[85]: export WAVEWND_FID=
++++++ config.wave[85]: WAVEWND_FID=
++++++ config.wave[88]: export WAVHINDH=0
++++++ config.wave[88]: WAVHINDH=0
++++++ config.wave[89]: export FHMAX_WAV_IBP=180
++++++ config.wave[89]: FHMAX_WAV_IBP=180
++++++ config.wave[90]: ((  FHMAX_WAV < FHMAX_WAV_IBP  ))
++++++ config.wave[90]: export FHMAX_WAV_IBP=120
++++++ config.wave[90]: FHMAX_WAV_IBP=120
++++++ config.wave[93]: export DTFLD_WAV=3600
++++++ config.wave[93]: DTFLD_WAV=3600
++++++ config.wave[94]: export DTPNT_WAV=3600
++++++ config.wave[94]: DTPNT_WAV=3600
++++++ config.wave[95]: export FHINCP_WAV=1
++++++ config.wave[95]: FHINCP_WAV=1
++++++ config.wave[98]: export 'OUTPARS_WAV=WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++++ config.wave[98]: OUTPARS_WAV='WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++++ config.wave[101]: export WAVHCYC=6
++++++ config.wave[101]: WAVHCYC=6
++++++ config.wave[102]: export FHMAX_WAV_CUR=192
++++++ config.wave[102]: FHMAX_WAV_CUR=192
++++++ config.wave[106]: export RSTTYPE_WAV=T
++++++ config.wave[106]: RSTTYPE_WAV=T
++++++ config.wave[107]: rst_dt_gfs=43200
++++++ config.wave[108]: [[ 43200 -gt 0 ]]
++++++ config.wave[109]: export DT_1_RST_WAV=0
++++++ config.wave[109]: DT_1_RST_WAV=0
++++++ config.wave[112]: export DT_2_RST_WAV=43200
++++++ config.wave[112]: DT_2_RST_WAV=43200
++++++ config.wave[118]: export RSTIOFF_WAV=0
++++++ config.wave[118]: RSTIOFF_WAV=0
++++++ config.wave[122]: export RUNMEM=-1
++++++ config.wave[122]: RUNMEM=-1
++++++ config.wave[125]: ((  RUNMEM == -1  ))
++++++ config.wave[127]: export waveMEMB=
++++++ config.wave[127]: waveMEMB=
++++++ config.wave[134]: export WW3ATMINP=CPL
++++++ config.wave[134]: WW3ATMINP=CPL
++++++ config.wave[135]: [[ YES == \Y\E\S ]]
++++++ config.wave[136]: export WW3ICEINP=CPL
++++++ config.wave[136]: WW3ICEINP=CPL
++++++ config.wave[137]: export WAVEICE_FID=
++++++ config.wave[137]: WAVEICE_FID=
++++++ config.wave[143]: export WAVECUR_DID=rtofs
++++++ config.wave[143]: WAVECUR_DID=rtofs
++++++ config.wave[144]: [[ YES == \Y\E\S ]]
++++++ config.wave[145]: export WW3CURINP=CPL
++++++ config.wave[145]: WW3CURINP=CPL
++++++ config.wave[146]: export WAVECUR_FID=
++++++ config.wave[146]: WAVECUR_FID=
++++++ config.wave[153]: export WW3ATMIENS=F
++++++ config.wave[153]: WW3ATMIENS=F
++++++ config.wave[154]: export WW3ICEIENS=F
++++++ config.wave[154]: WW3ICEIENS=F
++++++ config.wave[155]: export WW3CURIENS=F
++++++ config.wave[155]: WW3CURIENS=F
++++++ config.wave[157]: export GOFILETYPE=1
++++++ config.wave[157]: GOFILETYPE=1
++++++ config.wave[158]: export POFILETYPE=1
++++++ config.wave[158]: POFILETYPE=1
++++++ config.wave[162]: export FUNIPNT=T
++++++ config.wave[162]: FUNIPNT=T
++++++ config.wave[164]: export IOSRV=1
++++++ config.wave[164]: IOSRV=1
++++++ config.wave[166]: export FPNTPROC=T
++++++ config.wave[166]: FPNTPROC=T
++++++ config.wave[168]: export FGRDPROC=F
++++++ config.wave[168]: FGRDPROC=F
++++++ config.wave[170]: export FLAGMASKCOMP=F
++++++ config.wave[170]: FLAGMASKCOMP=F
++++++ config.wave[172]: export FLAGMASKOUT=F
++++++ config.wave[172]: FLAGMASKOUT=F
++++++ config.wave[174]: echo 'END: config.wave'
+END: config.wave
+++++ config.ufs[445]: export cplwav=.true.
+++++ config.ufs[445]: cplwav=.true.
+++++ config.ufs[446]: export cplwav2atm=.true.
+++++ config.ufs[446]: cplwav2atm=.true.
+++++ config.ufs[447]: model_list=atm.ocean.ice.wave
+++++ config.ufs[448]: nthreads_ww3=2
+++++ config.ufs[449]: case "${ww3_res}" in
+++++ config.ufs[468]: ntasks_ww3=12
+++++ config.ufs[469]: nthreads_ww3=1
+++++ config.ufs[479]: export ntasks_ww3 nthreads_ww3
+++++ config.ufs[483]: [[ true == \f\a\l\s\e ]]
+++++ config.ufs[491]: [[ YES == \Y\E\S ]]
+++++ config.ufs[492]: tmpl_suffix=_esmf
+++++ config.ufs[494]: case "${model_list}" in
+++++ config.ufs[511]: default_template=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/ufs/ufs.configure.s2sw_esmf.IN
+++++ config.ufs[523]: export ufs_configure_template=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/ufs/ufs.configure.s2sw_esmf.IN
+++++ config.ufs[523]: ufs_configure_template=/work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/ufs/ufs.configure.s2sw_esmf.IN
+++++ config.ufs[524]: unset model_list default_template
+++++ config.ufs[526]: [[ ! -r /work2/noaa/stmp/CI/HERCULES/2632/gefs/parm/ufs/ufs.configure.s2sw_esmf.IN ]]
+++++ config.ufs[531]: echo 'END: config.ufs'
+END: config.ufs
++++ config.efcs[27]: source /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/EXPDIR/C48_S2SWA_gefs_24ba9c44/config.resources efcs
+++++ config.resources[7]: ((  1 != 1  ))
+++++ config.resources[14]: step=efcs
+++++ config.resources[16]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[18]: case ${machine} in
+++++ config.resources[22]: npe_node_max=80
+++++ config.resources[51]: export npe_node_max
+++++ config.resources[53]: case ${step} in
+++++ config.resources[81]: export is_exclusive=True
+++++ config.resources[81]: is_exclusive=True
+++++ config.resources[83]: _CDUMP_LIST=gefs
+++++ config.resources[86]: for _CDUMP in ${_CDUMP_LIST}
+++++ config.resources[87]: [[ gefs =~ gfs ]]
+++++ config.resources[100]: [[ YES == \Y\E\S ]]
+++++ config.resources[101]: export UFS_THREADS=1
+++++ config.resources[101]: UFS_THREADS=1
+++++ config.resources[112]: ((  FV3PETS = ntasks_fv3 * nthreads_fv3  ))
+++++ config.resources[113]: echo 'FV3 using (nthreads, PETS) = (1, 6)'
+FV3 using (nthreads, PETS) = (1, 6)
+++++ config.resources[116]: [[ .true. == \.\t\r\u\e\. ]]
+++++ config.resources[117]: ((  QUILTPETS = ntasks_quilt * nthreads_fv3  ))
+++++ config.resources[118]: ((  WRTTASK_PER_GROUP = WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.resources[119]: export WRTTASK_PER_GROUP
+++++ config.resources[123]: echo 'QUILT using (nthreads, PETS) = (1, 6)'
+QUILT using (nthreads, PETS) = (1, 6)
+++++ config.resources[126]: ATMTHREADS=1
+++++ config.resources[127]: ((  ATMPETS = FV3PETS + QUILTPETS  ))
+++++ config.resources[128]: export ATMPETS ATMTHREADS
+++++ config.resources[129]: echo 'FV3ATM using (nthreads, PETS) = (1, 12)'
+FV3ATM using (nthreads, PETS) = (1, 12)
+++++ config.resources[132]: NTASKS_TOT=12
+++++ config.resources[138]: MEDTHREADS=1
+++++ config.resources[139]: MEDPETS=6
+++++ config.resources[140]: ((  6 > 300  ))
+++++ config.resources[141]: export MEDPETS MEDTHREADS
+++++ config.resources[142]: echo 'MEDIATOR using (threads, PETS) = (1, 6)'
+MEDIATOR using (threads, PETS) = (1, 6)
+++++ config.resources[144]: CHMPETS=0
+++++ config.resources[144]: CHMTHREADS=0
+++++ config.resources[145]: [[ NO == \Y\E\S ]]
+++++ config.resources[152]: export CHMPETS CHMTHREADS
+++++ config.resources[154]: WAVPETS=0
+++++ config.resources[154]: WAVTHREADS=0
+++++ config.resources[155]: [[ YES == \Y\E\S ]]
+++++ config.resources[156]: ((  WAVPETS = ntasks_ww3 * nthreads_ww3  ))
+++++ config.resources[157]: ((  WAVTHREADS = nthreads_ww3  ))
+++++ config.resources[158]: echo 'WW3 using (threads, PETS) = (1, 12)'
+WW3 using (threads, PETS) = (1, 12)
+++++ config.resources[159]: ((  NTASKS_TOT = NTASKS_TOT + WAVPETS  ))
+++++ config.resources[161]: export WAVPETS WAVTHREADS
+++++ config.resources[163]: OCNPETS=0
+++++ config.resources[163]: OCNTHREADS=0
+++++ config.resources[164]: [[ YES == \Y\E\S ]]
+++++ config.resources[165]: ((  OCNPETS = ntasks_mom6 * nthreads_mom6  ))
+++++ config.resources[166]: ((  OCNTHREADS = nthreads_mom6  ))
+++++ config.resources[167]: echo 'MOM6 using (threads, PETS) = (1, 8)'
+MOM6 using (threads, PETS) = (1, 8)
+++++ config.resources[168]: ((  NTASKS_TOT = NTASKS_TOT + OCNPETS  ))
+++++ config.resources[170]: export OCNPETS OCNTHREADS
+++++ config.resources[172]: ICEPETS=0
+++++ config.resources[172]: ICETHREADS=0
+++++ config.resources[173]: [[ YES == \Y\E\S ]]
+++++ config.resources[174]: ((  ICEPETS = ntasks_cice6 * nthreads_cice6  ))
+++++ config.resources[175]: ((  ICETHREADS = nthreads_cice6  ))
+++++ config.resources[176]: echo 'CICE6 using (threads, PETS) = (1, 4)'
+CICE6 using (threads, PETS) = (1, 4)
+++++ config.resources[177]: ((  NTASKS_TOT = NTASKS_TOT + ICEPETS  ))
+++++ config.resources[179]: export ICEPETS ICETHREADS
+++++ config.resources[181]: echo 'Total PETS for gefs = 36'
+Total PETS for gefs = 36
+++++ config.resources[183]: [[ gefs =~ gfs ]]
+++++ config.resources[188]: declare -x npe_efcs=36
+++++ config.resources[189]: declare -x nth_efcs=1
+++++ config.resources[190]: declare -x npe_node_efcs=80
+++++ config.resources[195]: case "${CASE}" in
+++++ config.resources[197]: declare -x wtime_efcs=03:00:00
+++++ config.resources[198]: declare -x wtime_efcs_gfs=03:00:00
+++++ config.resources[210]: unset _CDUMP _CDUMP_LIST
+++++ config.resources[211]: unset NTASKS_TOT
+++++ config.resources[303]: echo 'END: config.resources'
+END: config.resources
++++ config.efcs[30]: export FHOUT=6
++++ config.efcs[30]: FHOUT=6
++++ config.efcs[31]: [[ gefs == \e\n\k\f\g\f\s ]]
++++ config.efcs[36]: export FHMAX=120
++++ config.efcs[36]: FHMAX=120
++++ config.efcs[37]: [[ gefs == \e\n\k\f\g\f\s ]]
++++ config.efcs[42]: export DO_SKEB=YES
++++ config.efcs[42]: DO_SKEB=YES
++++ config.efcs[43]: export SKEB=0.8,-999,-999,-999,-999
++++ config.efcs[43]: SKEB=0.8,-999,-999,-999,-999
++++ config.efcs[44]: export SKEB_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[44]: SKEB_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[45]: export SKEB_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[45]: SKEB_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[46]: export SKEBNORM=1
++++ config.efcs[46]: SKEBNORM=1
++++ config.efcs[47]: export SKEB_NPASS=30
++++ config.efcs[47]: SKEB_NPASS=30
++++ config.efcs[48]: export SKEB_VDOF=5
++++ config.efcs[48]: SKEB_VDOF=5
++++ config.efcs[49]: export DO_SHUM=YES
++++ config.efcs[49]: DO_SHUM=YES
++++ config.efcs[50]: export SHUM=0.005
++++ config.efcs[50]: SHUM=0.005
++++ config.efcs[51]: export SHUM_TAU=21600.
++++ config.efcs[51]: SHUM_TAU=21600.
++++ config.efcs[52]: export SHUM_LSCALE=500000.
++++ config.efcs[52]: SHUM_LSCALE=500000.
++++ config.efcs[53]: export DO_SPPT=YES
++++ config.efcs[53]: DO_SPPT=YES
++++ config.efcs[54]: export SPPT=0.56,0.28,0.14,0.056,0.028
++++ config.efcs[54]: SPPT=0.56,0.28,0.14,0.056,0.028
++++ config.efcs[55]: export SPPT_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[55]: SPPT_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[56]: export SPPT_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[56]: SPPT_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[57]: export SPPT_LOGIT=.true.
++++ config.efcs[57]: SPPT_LOGIT=.true.
++++ config.efcs[58]: export SPPT_SFCLIMIT=.true.
++++ config.efcs[58]: SPPT_SFCLIMIT=.true.
++++ config.efcs[59]: export DO_CA=YES
++++ config.efcs[59]: DO_CA=YES
++++ config.efcs[61]: export DO_OCN_SPPT=YES
++++ config.efcs[61]: DO_OCN_SPPT=YES
++++ config.efcs[62]: export OCNSPPT=0.8,0.4,0.2,0.08,0.04
++++ config.efcs[62]: OCNSPPT=0.8,0.4,0.2,0.08,0.04
++++ config.efcs[63]: export OCNSPPT_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[63]: OCNSPPT_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[64]: export OCNSPPT_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[64]: OCNSPPT_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[65]: export DO_OCN_PERT_EPBL=YES
++++ config.efcs[65]: DO_OCN_PERT_EPBL=YES
++++ config.efcs[66]: export EPBL=0.8,0.4,0.2,0.08,0.04
++++ config.efcs[66]: EPBL=0.8,0.4,0.2,0.08,0.04
++++ config.efcs[67]: export EPBL_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[67]: EPBL_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[68]: export EPBL_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[68]: EPBL_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[70]: [[ false == \t\r\u\e ]]
++++ config.efcs[79]: export ODA_INCUPD=False
++++ config.efcs[79]: ODA_INCUPD=False
++++ config.efcs[81]: export restart_interval=12
++++ config.efcs[81]: restart_interval=12
++++ config.efcs[83]: echo 'END: config.efcs'
+END: config.efcs
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[110]: source /work2/noaa/stmp/CI/HERCULES/2632/gefs/env/HERCULES.env efcs
++++ HERCULES.env[3]: [[ 1 -ne 1 ]]
++++ HERCULES.env[13]: step=efcs
++++ HERCULES.env[15]: export 'launcher=srun -l --export=ALL'
++++ HERCULES.env[15]: launcher='srun -l --export=ALL'
++++ HERCULES.env[16]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[16]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[19]: export MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[19]: MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[20]: export MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[20]: MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[21]: export MPI_GROUP_MAX=256
++++ HERCULES.env[21]: MPI_GROUP_MAX=256
++++ HERCULES.env[22]: export MPI_MEMMAP_OFF=1
++++ HERCULES.env[22]: MPI_MEMMAP_OFF=1
++++ HERCULES.env[23]: export MP_STDOUTMODE=ORDERED
++++ HERCULES.env[23]: MP_STDOUTMODE=ORDERED
++++ HERCULES.env[24]: export KMP_AFFINITY=scatter
++++ HERCULES.env[24]: KMP_AFFINITY=scatter
++++ HERCULES.env[25]: export OMP_STACKSIZE=2048000
++++ HERCULES.env[25]: OMP_STACKSIZE=2048000
++++ HERCULES.env[26]: export NTHSTACK=1024000000
++++ HERCULES.env[26]: NTHSTACK=1024000000
++++ HERCULES.env[28]: export I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[28]: I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[29]: export I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[29]: I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[31]: ulimit -s unlimited
++++ HERCULES.env[32]: ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 2042963
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 520192000
+open files                          (-n) 131072
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) unlimited
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 1028798
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
++++ HERCULES.env[34]: case ${step} in
++++ HERCULES.env[207]: export OMP_STACKSIZE=512M
++++ HERCULES.env[207]: OMP_STACKSIZE=512M
++++ HERCULES.env[208]: [[ gefs =~ gfs ]]
++++ HERCULES.env[212]: nprocs=npe_efcs
++++ HERCULES.env[213]: ppn=npe_node_efcs
++++ HERCULES.env[215]: ((  nnodes = (36+80-1)/80  ))
++++ HERCULES.env[216]: ((  ntasks = nnodes*80  ))
++++ HERCULES.env[218]: export 'APRUN_UFS=srun -l --export=ALL -n 80'
++++ HERCULES.env[218]: APRUN_UFS='srun -l --export=ALL -n 80'
++++ HERCULES.env[219]: unset nprocs ppn nnodes ntasks
+++ jjob_header.sh[111]: status=0
+++ jjob_header.sh[112]: ((  status != 0  ))
++ JGLOBAL_FORECAST[16]: export DATArestart=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/restart
++ JGLOBAL_FORECAST[16]: DATArestart=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/restart
++ JGLOBAL_FORECAST[17]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/restart ]]
++ JGLOBAL_FORECAST[18]: export DATAoutput=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/output
++ JGLOBAL_FORECAST[18]: DATAoutput=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/output
++ JGLOBAL_FORECAST[19]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/output ]]
++ JGLOBAL_FORECAST[26]: rCDUMP=gefs
++ JGLOBAL_FORECAST[27]: export rCDUMP=gefs
++ JGLOBAL_FORECAST[27]: rCDUMP=gefs
+++ JGLOBAL_FORECAST[31]: date --utc -d '20210323 12 - 6 hours' +%Y%m%d%H
++ JGLOBAL_FORECAST[31]: GDATE=2021032306
++ JGLOBAL_FORECAST[32]: declare -rx GDATE
++ JGLOBAL_FORECAST[34]: declare -rx gPDY=20210323
++ JGLOBAL_FORECAST[35]: declare -rx gcyc=06
++ JGLOBAL_FORECAST[38]: YMD=20210323
++ JGLOBAL_FORECAST[38]: HH=12
++ JGLOBAL_FORECAST[38]: declare_from_tmpl -rx COMIN_ATMOS_INPUT:COM_ATMOS_INPUT_TMPL COMIN_ATMOS_ANALYSIS:COM_ATMOS_ANALYSIS_TMPL COMOUT_CONF:COM_CONF_TMPL COMOUT_ATMOS_RESTART:COM_ATMOS_RESTART_TMPL COMOUT_ATMOS_HISTORY:COM_ATMOS_HISTORY_TMPL COMOUT_ATMOS_MASTER:COM_ATMOS_MASTER_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ATMOS_INPUT=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/atmos/input
+declare_from_tmpl :: COMIN_ATMOS_ANALYSIS=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/analysis/atmos
+declare_from_tmpl :: COMOUT_CONF=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/conf
+declare_from_tmpl :: COMOUT_ATMOS_RESTART=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/atmos/restart
+declare_from_tmpl :: COMOUT_ATMOS_HISTORY=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/atmos/history
+declare_from_tmpl :: COMOUT_ATMOS_MASTER=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/atmos/master
++ JGLOBAL_FORECAST[46]: RUN=gefs
++ JGLOBAL_FORECAST[46]: YMD=20210323
++ JGLOBAL_FORECAST[46]: HH=06
++ JGLOBAL_FORECAST[46]: declare_from_tmpl -rx COMIN_ATMOS_RESTART_PREV:COM_ATMOS_RESTART_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ATMOS_RESTART_PREV=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/06/mem001/model_data/atmos/restart
++ JGLOBAL_FORECAST[49]: [[ YES == \Y\E\S ]]
++ JGLOBAL_FORECAST[50]: YMD=20210323
++ JGLOBAL_FORECAST[50]: HH=12
++ JGLOBAL_FORECAST[50]: declare_from_tmpl -rx COMIN_WAVE_PREP:COM_WAVE_PREP_TMPL COMOUT_WAVE_RESTART:COM_WAVE_RESTART_TMPL COMOUT_WAVE_HISTORY:COM_WAVE_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_WAVE_PREP=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/wave/prep
+declare_from_tmpl :: COMOUT_WAVE_RESTART=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/wave/restart
+declare_from_tmpl :: COMOUT_WAVE_HISTORY=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/wave/history
++ JGLOBAL_FORECAST[54]: RUN=gefs
++ JGLOBAL_FORECAST[54]: YMD=20210323
++ JGLOBAL_FORECAST[54]: HH=06
++ JGLOBAL_FORECAST[54]: declare_from_tmpl -rx COMIN_WAVE_RESTART_PREV:COM_WAVE_RESTART_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_WAVE_RESTART_PREV=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/06/mem001/model_data/wave/restart
++ JGLOBAL_FORECAST[58]: [[ YES == \Y\E\S ]]
++ JGLOBAL_FORECAST[59]: YMD=20210323
++ JGLOBAL_FORECAST[59]: HH=12
++ JGLOBAL_FORECAST[59]: declare_from_tmpl -rx COMIN_OCEAN_ANALYSIS:COM_OCEAN_ANALYSIS_TMPL COMIN_OCEAN_INPUT:COM_OCEAN_INPUT_TMPL COMOUT_MED_RESTART:COM_MED_RESTART_TMPL COMOUT_OCEAN_RESTART:COM_OCEAN_RESTART_TMPL COMOUT_OCEAN_HISTORY:COM_OCEAN_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_OCEAN_ANALYSIS=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/analysis/ocean
+declare_from_tmpl :: COMIN_OCEAN_INPUT=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/ocean/input
+declare_from_tmpl :: COMOUT_MED_RESTART=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/med/restart
+declare_from_tmpl :: COMOUT_OCEAN_RESTART=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/ocean/restart
+declare_from_tmpl :: COMOUT_OCEAN_HISTORY=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/ocean/history
++ JGLOBAL_FORECAST[65]: RUN=gefs
++ JGLOBAL_FORECAST[65]: YMD=20210323
++ JGLOBAL_FORECAST[65]: HH=06
++ JGLOBAL_FORECAST[65]: declare_from_tmpl -rx COMIN_OCEAN_RESTART_PREV:COM_OCEAN_RESTART_TMPL COMIN_MED_RESTART_PREV:COM_MED_RESTART_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_OCEAN_RESTART_PREV=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/06/mem001/model_data/ocean/restart
+declare_from_tmpl :: COMIN_MED_RESTART_PREV=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/06/mem001/model_data/med/restart
++ JGLOBAL_FORECAST[70]: [[ YES == \Y\E\S ]]
++ JGLOBAL_FORECAST[71]: YMD=20210323
++ JGLOBAL_FORECAST[71]: HH=12
++ JGLOBAL_FORECAST[71]: declare_from_tmpl -rx COMIN_ICE_INPUT:COM_ICE_INPUT_TMPL COMIN_ICE_ANALYSIS:COM_ICE_ANALYSIS_TMPL COMOUT_ICE_RESTART:COM_ICE_RESTART_TMPL COMOUT_ICE_HISTORY:COM_ICE_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ICE_INPUT=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/ice/input
+declare_from_tmpl :: COMIN_ICE_ANALYSIS=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/analysis/ice
+declare_from_tmpl :: COMOUT_ICE_RESTART=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/ice/restart
+declare_from_tmpl :: COMOUT_ICE_HISTORY=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/ice/history
++ JGLOBAL_FORECAST[76]: RUN=gefs
++ JGLOBAL_FORECAST[76]: YMD=20210323
++ JGLOBAL_FORECAST[76]: HH=06
++ JGLOBAL_FORECAST[76]: declare_from_tmpl -rx COMIN_ICE_RESTART_PREV:COM_ICE_RESTART_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ICE_RESTART_PREV=/work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/06/mem001/model_data/ice/restart
++ JGLOBAL_FORECAST[80]: [[ NO == \Y\E\S ]]
++ JGLOBAL_FORECAST[89]: /work2/noaa/stmp/CI/HERCULES/2632/gefs/scripts/exglobal_forecast.sh
+Begin exglobal_forecast.sh at Tue Jun 11 02:17:51 UTC 2024
++ exglobal_forecast.sh[83]: source /work2/noaa/stmp/CI/HERCULES/2632/gefs/ush/forecast_predet.sh
++ exglobal_forecast.sh[84]: source /work2/noaa/stmp/CI/HERCULES/2632/gefs/ush/forecast_det.sh
++ exglobal_forecast.sh[85]: source /work2/noaa/stmp/CI/HERCULES/2632/gefs/ush/forecast_postdet.sh
++ exglobal_forecast.sh[86]: source /work2/noaa/stmp/CI/HERCULES/2632/gefs/ush/parsing_ufs_configure.sh
++ exglobal_forecast.sh[88]: source /work2/noaa/stmp/CI/HERCULES/2632/gefs/ush/atparse.bash
++ exglobal_forecast.sh[91]: cpl=.true.
++ exglobal_forecast.sh[92]: cplflx=.true.
++ exglobal_forecast.sh[93]: cplwav=.true.
++ exglobal_forecast.sh[94]: cplchm=.false.
++ exglobal_forecast.sh[95]: cplice=.true.
++ exglobal_forecast.sh[97]: OCNTIM=3600
++ exglobal_forecast.sh[98]: DELTIM=1200
++ exglobal_forecast.sh[99]: ICETIM=1200
++ exglobal_forecast.sh[101]: CPL_SLOW=3600
++ exglobal_forecast.sh[102]: CPL_FAST=1200
++ exglobal_forecast.sh[104]: echo 'MAIN: Loading common variables before determination of run type'
+MAIN: Loading common variables before determination of run type
++ exglobal_forecast.sh[105]: common_predet
++ forecast_predet.sh[41]: echo 'SUB common_predet: Defining variables for shared through model components'
+SUB common_predet: Defining variables for shared through model components
++ forecast_predet.sh[43]: CDUMP=gefs
++ forecast_predet.sh[44]: rCDUMP=gefs
++ forecast_predet.sh[46]: CDATE=2021032312
++ forecast_predet.sh[47]: ENSMEM=001
++ forecast_predet.sh[50]: half_window=3
++ forecast_predet.sh[51]: current_cycle=2021032312
+++ forecast_predet.sh[52]: date --utc -d '20210323 12 - 6 hours' +%Y%m%d%H
++ forecast_predet.sh[52]: previous_cycle=2021032306
+++ forecast_predet.sh[53]: date --utc -d '20210323 12 + 6 hours' +%Y%m%d%H
++ forecast_predet.sh[53]: next_cycle=2021032318
+++ forecast_predet.sh[54]: date --utc -d '20210323 12 - 3 hours' +%Y%m%d%H
++ forecast_predet.sh[54]: current_cycle_begin=2021032309
+++ forecast_predet.sh[55]: date --utc -d '20210323 12 + 3 hours' +%Y%m%d%H
++ forecast_predet.sh[55]: current_cycle_end=2021032315
+++ forecast_predet.sh[56]: date --utc -d '20210323 18 - 3 hours' +%Y%m%d%H
++ forecast_predet.sh[56]: next_cycle_begin=2021032315
++ forecast_predet.sh[58]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[62]: model_start_date_current_cycle=2021032312
++ forecast_predet.sh[63]: model_start_date_next_cycle=2021032318
+++ forecast_predet.sh[65]: date --utc -d '20210323 12 + 120 hours' +%Y%m%d%H
++ forecast_predet.sh[65]: forecast_end_cycle=2021032812
++ forecast_predet.sh[67]: FHMIN=0
++ forecast_predet.sh[68]: FHMAX=120
++ forecast_predet.sh[69]: FHOUT=6
++ forecast_predet.sh[70]: FHMAX_HF=0
++ forecast_predet.sh[71]: FHOUT_HF=1
++ forecast_predet.sh[73]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/conf ]]
++ forecast_predet.sh[75]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/fcst.1618457
++ forecast_predet.sh[78]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/fcst.1618457/INPUT ]]
++ forecast_predet.sh[78]: mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/fcst.1618457/INPUT
++ exglobal_forecast.sh[107]: echo 'MAIN: Loading variables before determination of run type'
+MAIN: Loading variables before determination of run type
++ exglobal_forecast.sh[108]: FV3_predet
++ forecast_predet.sh[84]: echo 'SUB FV3_predet: Defining variables for FV3'
+SUB FV3_predet: Defining variables for FV3
++ forecast_predet.sh[86]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/atmos/history ]]
++ forecast_predet.sh[87]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/atmos/master ]]
++ forecast_predet.sh[88]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2632/RUNTESTS/COMROOT/C48_S2SWA_gefs_24ba9c44/gefs.20210323/12/mem001/model_data/atmos/restart ]]
++ forecast_predet.sh[89]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/restart/FV3_RESTART ]]
++ forecast_predet.sh[90]: /bin/ln -sf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/restart/FV3_RESTART /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_24ba9c44/gefsefcs001.2021032312/fcst.1618457/RESTART
++ forecast_predet.sh[92]: FHZER=6
++ forecast_predet.sh[93]: FHCYC=24
++ forecast_predet.sh[94]: restart_interval=12
++ forecast_predet.sh[97]: ((  restart_interval == 0  ))
++ forecast_predet.sh[102]: mapfile -t FV3_RESTART_FH
+++ forecast_predet.sh[102]: seq 12 12 120
++ forecast_predet.sh[104]: local nrestarts=10
++ forecast_predet.sh[105]: ((  FV3_RESTART_FH[nrestarts-1] != FHMAX  ))
++ forecast_predet.sh[111]: FV3_OUTPUT_FH=
++ forecast_predet.sh[112]: local fhr=0
++ forecast_predet.sh[113]: ((  FHOUT_HF > 0 && FHMAX_HF > 0  ))
+++ forecast_predet.sh[117]: seq -s ' ' 0 6 120
++ forecast_predet.sh[117]: FV3_OUTPUT_FH=' 0 6 12 18 24 30 36 42 48 54 60 66 72 78 84 90 96 102 108 114 120'
++ forecast_predet.sh[120]: MEMBER=1
++ forecast_predet.sh[121]: PREFIX_ATMINC=
++ forecast_predet.sh[124]: IAUFHRS=0
++ forecast_predet.sh[125]: IAU_DELTHRS=0
++ forecast_predet.sh[130]: res=48
++ forecast_predet.sh[131]: resp=49
++ forecast_predet.sh[132]: npx=49
++ forecast_predet.sh[133]: npy=49
++ forecast_predet.sh[134]: npz=127
++ forecast_predet.sh[135]: io_layout=1,1
++ forecast_predet.sh[139]: JCAP_CASE=94
++ forecast_predet.sh[140]: LONB_CASE=192
++ forecast_predet.sh[141]: LATB_CASE=96
++ forecast_predet.sh[143]: JCAP=94
++ forecast_predet.sh[144]: LONB=192
++ forecast_predet.sh[145]: LATB=96
++ forecast_predet.sh[147]: LONB_IMO=192
++ forecast_predet.sh[148]: LATB_JMO=96
++ forecast_predet.sh[158]: NST_MODEL=2
++ forecast_predet.sh[159]: NST_SPINUP=0
++ forecast_predet.sh[160]: NST_RESV=0
++ forecast_predet.sh[161]: ZSEA1=0
++ forecast_predet.sh[162]: ZSEA2=0
++ forecast_predet.sh[163]: nstf_name=2,0,0,0,0
++ forecast_predet.sh[164]: nst_anl=.true.
++ forecast_predet.sh[170]: blocksize=32
++ forecast_predet.sh[173]: filtered_terrain=.true.
++ forecast_predet.sh[174]: gfs_dwinds=.true.
++ forecast_predet.sh[177]: no_dycore=.false.
++ forecast_predet.sh[178]: dycore_only=.false.
++ forecast_predet.sh[179]: chksum_debug=.false.
++ forecast_predet.sh[180]: print_freq=6
++ forecast_predet.sh[186]: na_init=1
++ forecast_predet.sh[188]: local suite_file=/work2/noaa/stmp/CI/HERCULES/2632/gefs/sorc/ufs_model.fd/FV3/ccpp/suites/suite_FV3_GFS_v17_coupled_p8_ugwpv1.xml
++ forecast_predet.sh[189]: [[ ! -f /work2/noaa/stmp/CI/HERCULES/2632/gefs/sorc/ufs_model.fd/FV3/ccpp/suites/suite_FV3_GFS_v17_coupled_p8_ugwpv1.xml ]]
++ forecast_predet.sh[195]: local num_noahmpdrv
+++ forecast_predet.sh[196]: grep -c noahmpdrv /work2/noaa/stmp/CI/HERCULES/2632/gefs/sorc/ufs_model.fd/FV3/ccpp/suites/suite_FV3_GFS_v17_coupled_p8_ugwpv1.xml
++ forecast_predet.sh[196]: num_noahmpdrv=1
++ forecast_predet.sh[197]: ((  num_noahmpdrv > 0  ))
++ forecast_predet.sh[198]: lsm=2
++ forecast_predet.sh[199]: lheatstrg=.false.
++ forecast_predet.sh[200]: landice=.false.
++ forecast_predet.sh[201]: iopt_dveg=4
++ forecast_predet.sh[202]: iopt_crs=2
++ forecast_predet.sh[203]: iopt_btr=1
++ forecast_predet.sh[204]: iopt_run=1
++ forecast_predet.sh[205]: iopt_sfc=3
++ forecast_predet.sh[206]: iopt_frz=1
++ forecast_predet.sh[207]: iopt_inf=1
++ forecast_predet.sh[208]: iopt_rad=3
++ forecast_predet.sh[209]: iopt_alb=1
++ forecast_predet.sh[210]: iopt_snf=4
++ forecast_predet.sh[211]: iopt_tbot=2
++ forecast_predet.sh[212]: iopt_stc=3
++ forecast_predet.sh[213]: IALB=2
++ forecast_predet.sh[214]: IEMS=2
++ forecast_predet.sh[235]: [[ nh == \n\h ]]
++ forecast_predet.sh[236]: hydrostatic=.false.
++ forecast_predet.sh[237]: phys_hydrostatic=.false.
++ forecast_predet.sh[238]: use_hydro_pressure=.false.
++ forecast_predet.sh[239]: make_nh=.true.
++ forecast_predet.sh[248]: consv_te=1.
++ forecast_predet.sh[249]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[254]: consv_te=1.
++ forecast_predet.sh[255]: k_split=1
++ forecast_predet.sh[259]: n_split=4
++ forecast_predet.sh[261]: [[ non- == \m\o\n\o ]]
++ forecast_predet.sh[272]: d_con=1.
++ forecast_predet.sh[273]: do_vort_damp=.true.
++ forecast_predet.sh[274]: [[ nh == \n\h ]]
++ forecast_predet.sh[275]: hord_mt=5
++ forecast_predet.sh[276]: hord_xx=5
++ forecast_predet.sh[283]: [[ non- != \m\o\n\o ]]
++ forecast_predet.sh[283]: [[ nh == \n\h ]]
++ forecast_predet.sh[284]: vtdm4=0.02
++ forecast_predet.sh[290]: nggps_ic=.true.
++ forecast_predet.sh[291]: ncep_ic=.false.
++ forecast_predet.sh[292]: external_ic=.true.
++ forecast_predet.sh[293]: mountain=.false.
++ forecast_predet.sh[294]: warm_start=.false.
++ forecast_predet.sh[295]: read_increment=.false.
++ forecast_predet.sh[296]: res_latlon_dynamics='""'
++ forecast_predet.sh[299]: do_skeb=.false.
++ forecast_predet.sh[300]: do_shum=.false.
++ forecast_predet.sh[301]: do_sppt=.false.
++ forecast_predet.sh[302]: do_ca=.false.
++ forecast_predet.sh[303]: ISEED=0
++ forecast_predet.sh[304]: ((  MEMBER > 0  ))
++ forecast_predet.sh[305]: local imem=1
++ forecast_predet.sh[306]: local base_seed=20210323120100
++ forecast_predet.sh[308]: [[ YES == \Y\E\S ]]
++ forecast_predet.sh[309]: do_skeb=.true.
++ forecast_predet.sh[310]: ISEED_SKEB=20210323120101
++ forecast_predet.sh[313]: [[ YES == \Y\E\S ]]
++ forecast_predet.sh[314]: do_shum=.true.
++ forecast_predet.sh[315]: ISEED_SHUM=20210323120102
++ forecast_predet.sh[318]: [[ YES == \Y\E\S ]]
++ forecast_predet.sh[319]: do_sppt=.true.
++ forecast_predet.sh[320]: ISEED_SPPT=20210323120103,20210323120104,20210323120105,20210323120106,20210323120107
++ forecast_predet.sh[323]: [[ YES == \Y\E\S ]]
++ forecast_predet.sh[324]: do_ca=.true.
++ forecast_predet.sh[325]: ISEED_CA=354518201
++ forecast_predet.sh[328]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[343]: FNGLAC=/work2/noaa/stmp/CI/HERCULES/2632/gefs/fix/am/global_glacier.2x2.grb
++ forecast_predet.sh[344]: FNMXIC=/work2/noaa/stmp/CI/HERCULES/2632/gefs/fix/am/global_maxice.2x2.grb
++ forecast_predet.sh[345]: FNTSFC=/work2/noaa/stmp/CI/HERCULES/2632/gefs/fix/am/RTGSST.1982.2012.monthly.clim.grb
++ forecast_predet.sh[346]: FNSNOC=/work2/noaa/stmp/CI/HERCULES/2632/gefs/fix/am/global_snoclim.1.875.grb
++ forecast_predet.sh[347]: FNZORC=igbp
++ forecast_predet.sh[348]: FNAISC=/work2/noaa/stmp/CI/HERCULES/2632/gefs/fix/am/IMS-NIC.blended.ice.monthly.clim.grb
+/work2/noaa/stmp/CI/HERCULES/2632/gefs/ush/forecast_predet.sh: line 349: FIXorog: unbound variable
+++ forecast_predet.sh[1]: postamble exglobal_forecast.sh 1718072271 1
+++ preamble.sh[70]: set +x
+End exglobal_forecast.sh at 02:17:54 with error code 1 (time elapsed: 00:00:03)
++ JGLOBAL_FORECAST[1]: postamble JGLOBAL_FORECAST 1718072244 1
++ preamble.sh[70]: set +x
+End JGLOBAL_FORECAST at 02:17:54 with error code 1 (time elapsed: 00:00:30)
++ fcst.sh[1]: postamble fcst.sh 1718072242 1
++ preamble.sh[70]: set +x
+End fcst.sh at 02:17:54 with error code 1 (time elapsed: 00:00:32)
