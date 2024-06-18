@@ -1,0 +1,442 @@
+Begin prep_emissions.sh at Tue Jun 18 15:06:42 UTC 2024
++ prep_emissions.sh[7]: source /work2/noaa/stmp/CI/HERCULES/2667/gefs/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) contrib/0.1                      41) grib-util/1.3.0
+  2) intel-oneapi-compilers/2023.1.0  42) g2tmpl/1.10.2
+  3) stack-intel/2021.9.0             43) gsi-ncdiag/1.1.2
+  4) intel-oneapi-mpi/2021.9.0        44) crtm-fix/2.4.0.1_emc
+  5) stack-intel-oneapi-mpi/2021.9.0  45) git-lfs/3.1.2
+  6) intel-oneapi-mkl/2023.1.0        46) crtm/2.4.0.1
+  7) zlib/1.2.13                      47) openblas/0.3.24
+  8) pigz/2.7                         48) py-setuptools/63.4.3
+  9) zstd/1.5.2                       49) py-numpy/1.23.4
+ 10) tar/1.34                         50) bufr/11.7.0
+ 11) gettext/0.21.1                   51) gmake/4.2.1
+ 12) libxcrypt/4.4.35                 52) wgrib2/2.0.8
+ 13) sqlite/3.43.2                    53) py-f90nml/1.4.3
+ 14) util-linux-uuid/2.38.1           54) py-cftime/1.0.3.4
+ 15) python/3.11.6                    55) py-netcdf4/1.5.8
+ 16) libjpeg/2.1.0                    56) libyaml/0.2.5
+ 17) jasper/2.0.32                    57) py-pyyaml/6.0
+ 18) libpng/1.6.37                    58) py-markupsafe/2.1.3
+ 19) openjpeg/2.3.1                   59) py-jinja2/3.1.2
+ 20) eccodes/2.32.0                   60) py-bottleneck/1.3.7
+ 21) fftw/3.3.10                      61) py-numexpr/2.8.4
+ 22) nghttp2/1.57.0                   62) py-et-xmlfile/1.0.1
+ 23) curl/8.4.0                       63) py-openpyxl/3.1.2
+ 24) proj/9.2.1                       64) py-pytz/2023.3
+ 25) udunits/2.2.28                   65) py-pyxlsb/1.0.10
+ 26) cdo/2.2.0                        66) py-xlrd/2.0.1
+ 27) hdf5/1.14.0                      67) py-xlsxwriter/3.1.7
+ 28) snappy/1.1.10                    68) py-xlwt/1.3.0
+ 29) c-blosc/1.21.5                   69) py-pandas/1.5.3
+ 30) netcdf-c/4.9.2                   70) py-six/1.16.0
+ 31) netcdf-fortran/4.6.1             71) py-python-dateutil/2.8.2
+ 32) antlr/2.7.7                      72) g2c/1.6.4
+ 33) gsl/2.7.1                        73) netcdf-cxx4/4.3.1
+ 34) nco/5.0.6                        74) met/9.1.3
+ 35) bacio/2.4.1                      75) metplus/3.1.1
+ 36) w3emc/2.10.0                     76) py-packaging/23.1
+ 37) prod_util/2.1.1                  77) py-xarray/2023.7.0
+ 38) g2/3.4.5                         78) prepobs/1.0.1
+ 39) sp/2.5.0                         79) fit2obs/1.1.1
+ 40) ip/4.3.0                         80) module_base.hercules
+
+ 
+
++ prep_emissions.sh[8]: status=0
++ prep_emissions.sh[9]: ((  status !=  0  ))
++ prep_emissions.sh[11]: export job=prep_emissions
++ prep_emissions.sh[11]: job=prep_emissions
++ prep_emissions.sh[12]: export jobid=prep_emissions.889810
++ prep_emissions.sh[12]: jobid=prep_emissions.889810
++ prep_emissions.sh[16]: PYTHONPATH=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-xarray-2023.7.0-x743hx4/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-packaging-23.1-cvb54w6/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-python-dateutil-2.8.2-crskgyy/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-six-1.16.0-dtjcn7o/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-pandas-1.5.3-7tjsvkw/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-xlwt-1.3.0-ghvbw56/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-xlsxwriter-3.1.7-rqogaok/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-xlrd-2.0.1-g52jf7f/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-pyxlsb-1.0.10-ow7w6ge/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-pytz-2023.3-kmu3i3s/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-openpyxl-3.1.2-vfourqe/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-et-xmlfile-1.0.1-7wze7yq/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-numexpr-2.8.4-nobvkrq/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-bottleneck-1.3.7-ftw2r3a/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-jinja2-3.1.2-eoja5pj/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-markupsafe-2.1.3-v6xcnb7/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-pyyaml-6.0-t2st4x2/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-netcdf4-1.5.8-bgfhv5i/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-cftime-1.0.3.4-ienmq3i/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-f90nml-1.4.3-3ib7u6z/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/bufr-11.7.0-7qdgt6m/lib64/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/bufr-11.7.0-7qdgt6m/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-numpy-1.23.4-ftta6ne/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/gsi-addon-env/install/intel/2021.9.0/py-setuptools-63.4.3-5extjhr/lib/python3.11/site-packages:/work2/noaa/stmp/CI/HERCULES/2667/gefs/ush/python
++ prep_emissions.sh[17]: export PYTHONPATH
++ prep_emissions.sh[21]: /work2/noaa/stmp/CI/HERCULES/2667/gefs/jobs/JGLOBAL_PREP_EMISSIONS
+Begin JGLOBAL_PREP_EMISSIONS at Tue Jun 18 15:06:45 UTC 2024
++ JGLOBAL_PREP_EMISSIONS[4]: source /work2/noaa/stmp/CI/HERCULES/2667/gefs/ush/jjob_header.sh -e prep_emissions -c 'base prep_emissions'
+++ jjob_header.sh[44]: OPTIND=1
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[48]: env_job=prep_emissions
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[47]: read -ra configs
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[59]: shift 4
+++ jjob_header.sh[61]: [[ -z prep_emissions ]]
+++ jjob_header.sh[69]: export DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_10bcdcba/prep_emissions.889810
+++ jjob_header.sh[69]: DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_10bcdcba/prep_emissions.889810
+++ jjob_header.sh[70]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[71]: rm -rf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_10bcdcba/prep_emissions.889810
+++ jjob_header.sh[73]: mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_10bcdcba/prep_emissions.889810
+++ jjob_header.sh[74]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_10bcdcba/prep_emissions.889810
+++ jjob_header.sh[80]: export cycle=t12z
+++ jjob_header.sh[80]: cycle=t12z
+++ jjob_header.sh[81]: setpdy.sh
+sed: can't read /work2/noaa/stmp/CI/HERCULES/2667/RUNTESTS/COMROOT/date/t12z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[82]: source ./PDY
++++ PDY[1]: export PDYm7=20210316
++++ PDY[1]: PDYm7=20210316
++++ PDY[2]: export PDYm6=20210317
++++ PDY[2]: PDYm6=20210317
++++ PDY[3]: export PDYm5=20210318
++++ PDY[3]: PDYm5=20210318
++++ PDY[4]: export PDYm4=20210319
++++ PDY[4]: PDYm4=20210319
++++ PDY[5]: export PDYm3=20210320
++++ PDY[5]: PDYm3=20210320
++++ PDY[6]: export PDYm2=20210321
++++ PDY[6]: PDYm2=20210321
++++ PDY[7]: export PDYm1=20210322
++++ PDY[7]: PDYm1=20210322
++++ PDY[8]: export PDY=20210323
++++ PDY[8]: PDY=20210323
++++ PDY[9]: export PDYp1=20210324
++++ PDY[9]: PDYp1=20210324
++++ PDY[10]: export PDYp2=20210325
++++ PDY[10]: PDYp2=20210325
++++ PDY[11]: export PDYp3=20210326
++++ PDY[11]: PDYp3=20210326
++++ PDY[12]: export PDYp4=20210327
++++ PDY[12]: PDYp4=20210327
++++ PDY[13]: export PDYp5=20210328
++++ PDY[13]: PDYp5=20210328
++++ PDY[14]: export PDYp6=20210329
++++ PDY[14]: PDYp6=20210329
++++ PDY[15]: export PDYp7=20210330
++++ PDY[15]: PDYp7=20210330
+++ jjob_header.sh[88]: export pid=890101
+++ jjob_header.sh[88]: pid=890101
+++ jjob_header.sh[89]: export pgmout=OUTPUT.890101
+++ jjob_header.sh[89]: pgmout=OUTPUT.890101
+++ jjob_header.sh[90]: export pgmerr=errfile
+++ jjob_header.sh[90]: pgmerr=errfile
+++ jjob_header.sh[96]: export EXPDIR=/work2/noaa/stmp/CI/HERCULES/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_10bcdcba
+++ jjob_header.sh[96]: EXPDIR=/work2/noaa/stmp/CI/HERCULES/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_10bcdcba
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/HERCULES/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_10bcdcba/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=HERCULES
++++ config.base[9]: machine=HERCULES
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=fv3-cpu
++++ config.base[15]: ACCOUNT=fv3-cpu
++++ config.base[16]: export ACCOUNT_SERVICE=fv3-cpu
++++ config.base[16]: ACCOUNT_SERVICE=fv3-cpu
++++ config.base[17]: export QUEUE=batch
++++ config.base[17]: QUEUE=batch
++++ config.base[18]: export QUEUE_SERVICE=batch
++++ config.base[18]: QUEUE_SERVICE=batch
++++ config.base[19]: export PARTITION_BATCH=hercules
++++ config.base[19]: PARTITION_BATCH=hercules
++++ config.base[20]: export PARTITION_SERVICE=service
++++ config.base[20]: PARTITION_SERVICE=service
++++ config.base[21]: export RESERVATION=
++++ config.base[21]: RESERVATION=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/work2/noaa/stmp/CI/HERCULES/2667/gefs
++++ config.base[27]: HOMEgfs=/work2/noaa/stmp/CI/HERCULES/2667/gefs
++++ config.base[28]: export EXECgfs=/work2/noaa/stmp/CI/HERCULES/2667/gefs/exec
++++ config.base[28]: EXECgfs=/work2/noaa/stmp/CI/HERCULES/2667/gefs/exec
++++ config.base[29]: export FIXgfs=/work2/noaa/stmp/CI/HERCULES/2667/gefs/fix
++++ config.base[29]: FIXgfs=/work2/noaa/stmp/CI/HERCULES/2667/gefs/fix
++++ config.base[30]: export PARMgfs=/work2/noaa/stmp/CI/HERCULES/2667/gefs/parm
++++ config.base[30]: PARMgfs=/work2/noaa/stmp/CI/HERCULES/2667/gefs/parm
++++ config.base[31]: export SCRgfs=/work2/noaa/stmp/CI/HERCULES/2667/gefs/scripts
++++ config.base[31]: SCRgfs=/work2/noaa/stmp/CI/HERCULES/2667/gefs/scripts
++++ config.base[32]: export USHgfs=/work2/noaa/stmp/CI/HERCULES/2667/gefs/ush
++++ config.base[32]: USHgfs=/work2/noaa/stmp/CI/HERCULES/2667/gefs/ush
++++ config.base[33]: export FIXorog=/work2/noaa/stmp/CI/HERCULES/2667/gefs/fix/orog
++++ config.base[33]: FIXorog=/work2/noaa/stmp/CI/HERCULES/2667/gefs/fix/orog
++++ config.base[34]: export FIXugwd=/work2/noaa/stmp/CI/HERCULES/2667/gefs/fix/ugwd
++++ config.base[34]: FIXugwd=/work2/noaa/stmp/CI/HERCULES/2667/gefs/fix/ugwd
++++ config.base[39]: export PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[39]: PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[40]: export COMROOT=/work2/noaa/stmp/CI/HERCULES/2667/RUNTESTS/COMROOT
++++ config.base[40]: COMROOT=/work2/noaa/stmp/CI/HERCULES/2667/RUNTESTS/COMROOT
++++ config.base[41]: export COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[41]: COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[42]: export BASE_CPLIC=/work/noaa/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[42]: BASE_CPLIC=/work/noaa/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[45]: export HOMEDIR=/work/noaa/global/mterry
++++ config.base[45]: HOMEDIR=/work/noaa/global/mterry
++++ config.base[46]: export STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[46]: STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[47]: export PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[47]: PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[48]: export NOSCRUB=/work/noaa/global/mterry
++++ config.base[48]: NOSCRUB=/work/noaa/global/mterry
++++ config.base[51]: export BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[51]: BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[54]: export DO_BUFRSND=NO
++++ config.base[54]: DO_BUFRSND=NO
++++ config.base[55]: export DO_GEMPAK=NO
++++ config.base[55]: DO_GEMPAK=NO
++++ config.base[56]: export DO_AWIPS=NO
++++ config.base[56]: DO_AWIPS=NO
++++ config.base[62]: export REALTIME=YES
++++ config.base[62]: REALTIME=YES
++++ config.base[65]: export MODE=forecast-only
++++ config.base[65]: MODE=forecast-only
++++ config.base[74]: export HOMEpost=/work2/noaa/stmp/CI/HERCULES/2667/gefs
++++ config.base[74]: HOMEpost=/work2/noaa/stmp/CI/HERCULES/2667/gefs
++++ config.base[77]: export 'NCP=/bin/cp -p'
++++ config.base[77]: NCP='/bin/cp -p'
++++ config.base[78]: export NMV=/bin/mv
++++ config.base[78]: NMV=/bin/mv
++++ config.base[79]: export 'NLN=/bin/ln -sf'
++++ config.base[79]: NLN='/bin/ln -sf'
++++ config.base[80]: export VERBOSE=YES
++++ config.base[80]: VERBOSE=YES
++++ config.base[81]: export KEEPDATA=NO
++++ config.base[81]: KEEPDATA=NO
++++ config.base[82]: export DEBUG_POSTSCRIPT=NO
++++ config.base[82]: DEBUG_POSTSCRIPT=NO
++++ config.base[83]: export CHGRP_RSTPROD=YES
++++ config.base[83]: CHGRP_RSTPROD=YES
++++ config.base[84]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[84]: CHGRP_CMD='chgrp rstprod'
++++ config.base[85]: export NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[85]: NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[86]: export NCLEN=/work2/noaa/stmp/CI/HERCULES/2667/gefs/ush/getncdimlen
++++ config.base[86]: NCLEN=/work2/noaa/stmp/CI/HERCULES/2667/gefs/ush/getncdimlen
++++ config.base[89]: export BASE_ENV=/work2/noaa/stmp/CI/HERCULES/2667/gefs/env
++++ config.base[89]: BASE_ENV=/work2/noaa/stmp/CI/HERCULES/2667/gefs/env
++++ config.base[90]: export BASE_JOB=/work2/noaa/stmp/CI/HERCULES/2667/gefs/jobs/rocoto
++++ config.base[90]: BASE_JOB=/work2/noaa/stmp/CI/HERCULES/2667/gefs/jobs/rocoto
++++ config.base[93]: export SDATE=2021032312
++++ config.base[93]: SDATE=2021032312
++++ config.base[94]: export EDATE=2021032312
++++ config.base[94]: EDATE=2021032312
++++ config.base[95]: export EXP_WARM_START=.false.
++++ config.base[95]: EXP_WARM_START=.false.
++++ config.base[96]: export assim_freq=6
++++ config.base[96]: assim_freq=6
++++ config.base[97]: export PSLOT=C48_S2SWA_gefs_10bcdcba
++++ config.base[97]: PSLOT=C48_S2SWA_gefs_10bcdcba
++++ config.base[98]: export EXPDIR=/work2/noaa/stmp/CI/HERCULES/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_10bcdcba
++++ config.base[98]: EXPDIR=/work2/noaa/stmp/CI/HERCULES/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_10bcdcba
++++ config.base[99]: export ROTDIR=/work2/noaa/stmp/CI/HERCULES/2667/RUNTESTS/COMROOT/C48_S2SWA_gefs_10bcdcba
++++ config.base[99]: ROTDIR=/work2/noaa/stmp/CI/HERCULES/2667/RUNTESTS/COMROOT/C48_S2SWA_gefs_10bcdcba
++++ config.base[101]: export DATAROOT=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_10bcdcba
++++ config.base[101]: DATAROOT=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_10bcdcba
++++ config.base[102]: export RUNDIR=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_10bcdcba
++++ config.base[102]: RUNDIR=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_10bcdcba
++++ config.base[103]: export ARCDIR=/work/noaa/global/mterry/archive/C48_S2SWA_gefs_10bcdcba
++++ config.base[103]: ARCDIR=/work/noaa/global/mterry/archive/C48_S2SWA_gefs_10bcdcba
++++ config.base[104]: export ATARDIR=/work/noaa/global/mterry/archive_rotdir/C48_S2SWA_gefs_10bcdcba
++++ config.base[104]: ATARDIR=/work/noaa/global/mterry/archive_rotdir/C48_S2SWA_gefs_10bcdcba
++++ config.base[107]: export envir=prod
++++ config.base[107]: envir=prod
++++ config.base[108]: export NET=gefs
++++ config.base[108]: NET=gefs
++++ config.base[109]: export RUN=gefs
++++ config.base[109]: RUN=gefs
++++ config.base[115]: source /work2/noaa/stmp/CI/HERCULES/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_10bcdcba/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[78]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[79]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[81]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/history'
+++++ config.com[82]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/restart'
+++++ config.com[83]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/input'
+++++ config.com[84]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[85]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[86]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[87]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[89]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[90]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/input'
+++++ config.com[91]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/history'
+++++ config.com[92]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/restart'
+++++ config.com[93]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[94]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[95]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[97]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/chem/history'
+++++ config.com[98]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[100]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/med/restart'
++++ config.base[118]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[118]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[119]: export LOGSCRIPT=
++++ config.base[119]: LOGSCRIPT=
++++ config.base[122]: export 'REDOUT=1>'
++++ config.base[122]: REDOUT='1>'
++++ config.base[123]: export 'REDERR=2>'
++++ config.base[123]: REDERR='2>'
++++ config.base[125]: export SENDECF=NO
++++ config.base[125]: SENDECF=NO
++++ config.base[126]: export SENDSDM=NO
++++ config.base[126]: SENDSDM=NO
++++ config.base[127]: export SENDDBN_NTC=NO
++++ config.base[127]: SENDDBN_NTC=NO
++++ config.base[128]: export SENDDBN=NO
++++ config.base[128]: SENDDBN=NO
++++ config.base[129]: export DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[129]: DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[132]: export APP=S2SWA
++++ config.base[132]: APP=S2SWA
++++ config.base[135]: export DO_ATM=YES
++++ config.base[135]: DO_ATM=YES
++++ config.base[136]: export DO_COUPLED=NO
++++ config.base[136]: DO_COUPLED=NO
++++ config.base[137]: export DO_WAVE=NO
++++ config.base[137]: DO_WAVE=NO
++++ config.base[138]: export DO_OCN=NO
++++ config.base[138]: DO_OCN=NO
++++ config.base[139]: export DO_ICE=NO
++++ config.base[139]: DO_ICE=NO
++++ config.base[140]: export DO_AERO=NO
++++ config.base[140]: DO_AERO=NO
++++ config.base[141]: export AERO_FCST_CDUMP=
++++ config.base[141]: AERO_FCST_CDUMP=
++++ config.base[142]: export AERO_ANL_CDUMP=
++++ config.base[142]: AERO_ANL_CDUMP=
++++ config.base[143]: export WAVE_CDUMP=
++++ config.base[143]: WAVE_CDUMP=
++++ config.base[144]: export DOBNDPNT_WAVE=NO
++++ config.base[144]: DOBNDPNT_WAVE=NO
++++ config.base[145]: export DOIBP_WAV=NO
++++ config.base[145]: DOIBP_WAV=NO
++++ config.base[146]: export FRAC_GRID=.true.
++++ config.base[146]: FRAC_GRID=.true.
++++ config.base[147]: export DO_NEST=NO
++++ config.base[147]: DO_NEST=NO
++++ config.base[148]: [[ NO == \Y\E\S ]]
++++ config.base[152]: export ntiles=6
++++ config.base[152]: ntiles=6
++++ config.base[156]: export OPS_RES=C768
++++ config.base[156]: OPS_RES=C768
++++ config.base[159]: export LEVS=128
++++ config.base[159]: LEVS=128
++++ config.base[160]: export CASE=C48
++++ config.base[160]: CASE=C48
++++ config.base[161]: export CASE_ENS=C48
++++ config.base[161]: CASE_ENS=C48
++++ config.base[162]: export OCNRES=500
++++ config.base[162]: OCNRES=500
++++ config.base[163]: export ICERES=500
++++ config.base[163]: ICERES=500
++++ config.base[165]: case "${CASE}" in
++++ config.base[167]: export waveGRD=glo_500
++++ config.base[167]: waveGRD=glo_500
++++ config.base[184]: case "${APP}" in
++++ config.base[203]: export DO_COUPLED=YES
++++ config.base[203]: DO_COUPLED=YES
++++ config.base[204]: export DO_OCN=YES
++++ config.base[204]: DO_OCN=YES
++++ config.base[205]: export DO_ICE=YES
++++ config.base[205]: DO_ICE=YES
++++ config.base[207]: [[ S2SWA =~ A$ ]]
++++ config.base[208]: export DO_AERO=YES
++++ config.base[208]: DO_AERO=YES
++++ config.base[209]: export AERO_ANL_CDUMP=both
++++ config.base[209]: AERO_ANL_CDUMP=both
++++ config.base[210]: export AERO_FCST_CDUMP=gdas
++++ config.base[210]: AERO_FCST_CDUMP=gdas
++++ config.base[213]: [[ S2SWA =~ ^S2SW ]]
++++ config.base[214]: export DO_WAVE=YES
++++ config.base[214]: DO_WAVE=YES
++++ config.base[215]: export WAVE_CDUMP=both
++++ config.base[215]: WAVE_CDUMP=both
++++ config.base[216]: export cplwav2atm=.true.
++++ config.base[216]: cplwav2atm=.true.
++++ config.base[226]: export FHMIN=0
++++ config.base[226]: FHMIN=0
++++ config.base[227]: export FHMAX=9
++++ config.base[227]: FHMAX=9
++++ config.base[228]: export FHOUT=3
++++ config.base[228]: FHOUT=3
++++ config.base[229]: export FHOUT_OCN=3
++++ config.base[229]: FHOUT_OCN=3
++++ config.base[230]: export FHOUT_ICE=3
++++ config.base[230]: FHOUT_ICE=3
++++ config.base[233]: export gfs_cyc=1
++++ config.base[233]: gfs_cyc=1
++++ config.base[236]: export FHMIN_GFS=0
++++ config.base[236]: FHMIN_GFS=0
++++ config.base[237]: export FHMIN=0
++++ config.base[237]: FHMIN=0
++++ config.base[238]: export FHMAX_GFS=120
++++ config.base[238]: FHMAX_GFS=120
++++ config.base[239]: export FHOUT_GFS=6
++++ config.base[239]: FHOUT_GFS=6
++++ config.base[240]: export FHMAX_HF_GFS=0
++++ config.base[240]: FHMAX_HF_GFS=0
++++ config.base[241]: export FHOUT_HF_GFS=1
++++ config.base[241]: FHOUT_HF_GFS=1
++++ config.base[242]: export FHOUT_OCN_GFS=6
++++ config.base[242]: FHOUT_OCN_GFS=6
++++ config.base[243]: export FHOUT_ICE_GFS=6
++++ config.base[243]: FHOUT_ICE_GFS=6
++++ config.base[244]: export FHMIN_WAV=0
++++ config.base[244]: FHMIN_WAV=0
++++ config.base[245]: export FHOUT_WAV=3
++++ config.base[245]: FHOUT_WAV=3
++++ config.base[246]: export FHMAX_HF_WAV=120
++++ config.base[246]: FHMAX_HF_WAV=120
++++ config.base[247]: export FHOUT_HF_WAV=1
++++ config.base[247]: FHOUT_HF_WAV=1
++++ config.base[248]: export FHMAX_WAV=120
++++ config.base[248]: FHMAX_WAV=120
++++ config.base[249]: ((  gfs_cyc != 0  ))
++++ config.base[250]: export STEP_GFS=24
++++ config.base[250]: STEP_GFS=24
++++ config.base[254]: export ILPOST=1
++++ config.base[254]: ILPOST=1
++++ config.base[256]: export FHMIN_ENKF=0
++++ config.base[256]: FHMIN_ENKF=0
++++ config.base[257]: export FHMAX_ENKF=120
++++ config.base[257]: FHMAX_ENKF=120
++++ config.base[258]: export FHOUT_ENKF=6
++++ config.base[258]: FHOUT_ENKF=6
+/work2/noaa/stmp/CI/HERCULES/2667/RUNTESTS/EXPDIR/C48_S2SWA_gefs_10bcdcba/config.base: line 259: FHOUT_OCNICE_GFS: unbound variable
+++++ config.base[1]: postamble JGLOBAL_PREP_EMISSIONS 1718723205 1
+++++ preamble.sh[70]: set +x
+End JGLOBAL_PREP_EMISSIONS at 15:06:51 with error code 1 (time elapsed: 00:00:06)
++ prep_emissions.sh[1]: postamble prep_emissions.sh 1718723202 1
++ preamble.sh[70]: set +x
+End prep_emissions.sh at 15:06:51 with error code 1 (time elapsed: 00:00:09)
