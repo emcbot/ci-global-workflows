@@ -1,0 +1,911 @@
+Begin wavepostsbs.sh at Tue Jun 25 07:49:35 UTC 2024
++ wavepostsbs.sh[8]: . /work2/noaa/stmp/CI/HERCULES/2643/gefs/ush/load_ufswm_modules.sh
+++ load_ufswm_modules.sh[4]: [[ NO == \N\O ]]
+++ load_ufswm_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_ufswm_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) contrib/0.1                      25) git-lfs/3.1.2
+  2) intel-oneapi-compilers/2023.1.0  26) crtm/2.4.0
+  3) stack-intel/2021.9.0             27) g2/3.4.5
+  4) intel-oneapi-mpi/2021.9.0        28) g2tmpl/1.10.2
+  5) stack-intel-oneapi-mpi/2021.9.0  29) ip/4.3.0
+  6) nghttp2/1.57.0                   30) sp/2.5.0
+  7) curl/8.4.0                       31) w3emc/2.10.0
+  8) cmake/3.23.1                     32) gftl/1.10.0
+  9) libjpeg/2.1.0                    33) gftl-shared/1.6.1
+ 10) jasper/2.0.32                    34) fargparse/1.5.0
+ 11) zlib/1.2.13                      35) pigz/2.7
+ 12) libpng/1.6.37                    36) tar/1.34
+ 13) hdf5/1.14.0                      37) gettext/0.21.1
+ 14) snappy/1.1.10                    38) libxcrypt/4.4.35
+ 15) zstd/1.5.2                       39) sqlite/3.43.2
+ 16) c-blosc/1.21.5                   40) util-linux-uuid/2.38.1
+ 17) netcdf-c/4.9.2                   41) python/3.10.13
+ 18) netcdf-fortran/4.6.1             42) mapl/2.40.3-esmf-8.6.0
+ 19) parallel-netcdf/1.12.2           43) scotch/7.0.4
+ 20) parallelio/2.5.10                44) ufs_common
+ 21) esmf/8.6.0                       45) nccmp/1.9.0.1
+ 22) fms/2023.04                      46) ufs_hercules.intel
+ 23) bacio/2.4.1                      47) prod_util/2.1.1
+ 24) crtm-fix/2.4.0_emc               48) wgrib2/3.1.1
+
+ 
+
++ wavepostsbs.sh[9]: status=0
++ wavepostsbs.sh[10]: [[ 0 -ne 0 ]]
++ wavepostsbs.sh[12]: export job=wavepostsbs
++ wavepostsbs.sh[12]: job=wavepostsbs
++ wavepostsbs.sh[13]: export jobid=wavepostsbs.2840847
++ wavepostsbs.sh[13]: jobid=wavepostsbs.2840847
++ wavepostsbs.sh[17]: /work2/noaa/stmp/CI/HERCULES/2643/gefs/jobs/JGLOBAL_WAVE_POST_SBS
+Begin JGLOBAL_WAVE_POST_SBS at Tue Jun 25 07:49:38 UTC 2024
++ JGLOBAL_WAVE_POST_SBS[4]: source /work2/noaa/stmp/CI/HERCULES/2643/gefs/ush/jjob_header.sh -e wavepostsbs -c 'base wave wavepostsbs'
+++ jjob_header.sh[44]: OPTIND=1
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[48]: env_job=wavepostsbs
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[47]: read -ra configs
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[59]: shift 4
+++ jjob_header.sh[61]: [[ -z wavepostsbs ]]
+++ jjob_header.sh[69]: export DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a/wavepostsbs.2840847
+++ jjob_header.sh[69]: DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a/wavepostsbs.2840847
+++ jjob_header.sh[70]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[71]: rm -rf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a/wavepostsbs.2840847
+++ jjob_header.sh[73]: mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a/wavepostsbs.2840847
+++ jjob_header.sh[74]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a/wavepostsbs.2840847
+++ jjob_header.sh[80]: export cycle=t12z
+++ jjob_header.sh[80]: cycle=t12z
+++ jjob_header.sh[81]: setpdy.sh
+sed: can't read /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/date/t12z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[82]: source ./PDY
++++ PDY[1]: export PDYm7=20210316
++++ PDY[1]: PDYm7=20210316
++++ PDY[2]: export PDYm6=20210317
++++ PDY[2]: PDYm6=20210317
++++ PDY[3]: export PDYm5=20210318
++++ PDY[3]: PDYm5=20210318
++++ PDY[4]: export PDYm4=20210319
++++ PDY[4]: PDYm4=20210319
++++ PDY[5]: export PDYm3=20210320
++++ PDY[5]: PDYm3=20210320
++++ PDY[6]: export PDYm2=20210321
++++ PDY[6]: PDYm2=20210321
++++ PDY[7]: export PDYm1=20210322
++++ PDY[7]: PDYm1=20210322
++++ PDY[8]: export PDY=20210323
++++ PDY[8]: PDY=20210323
++++ PDY[9]: export PDYp1=20210324
++++ PDY[9]: PDYp1=20210324
++++ PDY[10]: export PDYp2=20210325
++++ PDY[10]: PDYp2=20210325
++++ PDY[11]: export PDYp3=20210326
++++ PDY[11]: PDYp3=20210326
++++ PDY[12]: export PDYp4=20210327
++++ PDY[12]: PDYp4=20210327
++++ PDY[13]: export PDYp5=20210328
++++ PDY[13]: PDYp5=20210328
++++ PDY[14]: export PDYp6=20210329
++++ PDY[14]: PDYp6=20210329
++++ PDY[15]: export PDYp7=20210330
++++ PDY[15]: PDYp7=20210330
+++ jjob_header.sh[88]: export pid=2842796
+++ jjob_header.sh[88]: pid=2842796
+++ jjob_header.sh[89]: export pgmout=OUTPUT.2842796
+++ jjob_header.sh[89]: pgmout=OUTPUT.2842796
+++ jjob_header.sh[90]: export pgmerr=errfile
+++ jjob_header.sh[90]: pgmerr=errfile
+++ jjob_header.sh[96]: export EXPDIR=/work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/EXPDIR/C48_S2SWA_gefs_63904c2a
+++ jjob_header.sh[96]: EXPDIR=/work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/EXPDIR/C48_S2SWA_gefs_63904c2a
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/EXPDIR/C48_S2SWA_gefs_63904c2a/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=HERCULES
++++ config.base[9]: machine=HERCULES
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=fv3-cpu
++++ config.base[15]: ACCOUNT=fv3-cpu
++++ config.base[16]: export ACCOUNT_SERVICE=fv3-cpu
++++ config.base[16]: ACCOUNT_SERVICE=fv3-cpu
++++ config.base[17]: export QUEUE=batch
++++ config.base[17]: QUEUE=batch
++++ config.base[18]: export QUEUE_SERVICE=batch
++++ config.base[18]: QUEUE_SERVICE=batch
++++ config.base[19]: export PARTITION_BATCH=hercules
++++ config.base[19]: PARTITION_BATCH=hercules
++++ config.base[20]: export PARTITION_SERVICE=service
++++ config.base[20]: PARTITION_SERVICE=service
++++ config.base[21]: export RESERVATION=
++++ config.base[21]: RESERVATION=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/work2/noaa/stmp/CI/HERCULES/2643/gefs
++++ config.base[27]: HOMEgfs=/work2/noaa/stmp/CI/HERCULES/2643/gefs
++++ config.base[28]: export EXECgfs=/work2/noaa/stmp/CI/HERCULES/2643/gefs/exec
++++ config.base[28]: EXECgfs=/work2/noaa/stmp/CI/HERCULES/2643/gefs/exec
++++ config.base[29]: export FIXgfs=/work2/noaa/stmp/CI/HERCULES/2643/gefs/fix
++++ config.base[29]: FIXgfs=/work2/noaa/stmp/CI/HERCULES/2643/gefs/fix
++++ config.base[30]: export PARMgfs=/work2/noaa/stmp/CI/HERCULES/2643/gefs/parm
++++ config.base[30]: PARMgfs=/work2/noaa/stmp/CI/HERCULES/2643/gefs/parm
++++ config.base[31]: export SCRgfs=/work2/noaa/stmp/CI/HERCULES/2643/gefs/scripts
++++ config.base[31]: SCRgfs=/work2/noaa/stmp/CI/HERCULES/2643/gefs/scripts
++++ config.base[32]: export USHgfs=/work2/noaa/stmp/CI/HERCULES/2643/gefs/ush
++++ config.base[32]: USHgfs=/work2/noaa/stmp/CI/HERCULES/2643/gefs/ush
++++ config.base[33]: export FIXorog=/work2/noaa/stmp/CI/HERCULES/2643/gefs/fix/orog
++++ config.base[33]: FIXorog=/work2/noaa/stmp/CI/HERCULES/2643/gefs/fix/orog
++++ config.base[34]: export FIXugwd=/work2/noaa/stmp/CI/HERCULES/2643/gefs/fix/ugwd
++++ config.base[34]: FIXugwd=/work2/noaa/stmp/CI/HERCULES/2643/gefs/fix/ugwd
++++ config.base[39]: export PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[39]: PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[40]: export COMROOT=/work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT
++++ config.base[40]: COMROOT=/work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT
++++ config.base[41]: export COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[41]: COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[42]: export BASE_CPLIC=/work/noaa/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[42]: BASE_CPLIC=/work/noaa/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[45]: export HOMEDIR=/work/noaa/global/mterry
++++ config.base[45]: HOMEDIR=/work/noaa/global/mterry
++++ config.base[46]: export STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[46]: STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[47]: export PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[47]: PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[48]: export NOSCRUB=/work/noaa/global/mterry
++++ config.base[48]: NOSCRUB=/work/noaa/global/mterry
++++ config.base[51]: export BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[51]: BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[54]: export DO_BUFRSND=NO
++++ config.base[54]: DO_BUFRSND=NO
++++ config.base[55]: export DO_GEMPAK=NO
++++ config.base[55]: DO_GEMPAK=NO
++++ config.base[56]: export DO_AWIPS=NO
++++ config.base[56]: DO_AWIPS=NO
++++ config.base[62]: export REALTIME=YES
++++ config.base[62]: REALTIME=YES
++++ config.base[65]: export MODE=forecast-only
++++ config.base[65]: MODE=forecast-only
++++ config.base[74]: export HOMEpost=/work2/noaa/stmp/CI/HERCULES/2643/gefs
++++ config.base[74]: HOMEpost=/work2/noaa/stmp/CI/HERCULES/2643/gefs
++++ config.base[77]: export 'NCP=/bin/cp -p'
++++ config.base[77]: NCP='/bin/cp -p'
++++ config.base[78]: export NMV=/bin/mv
++++ config.base[78]: NMV=/bin/mv
++++ config.base[79]: export 'NLN=/bin/ln -sf'
++++ config.base[79]: NLN='/bin/ln -sf'
++++ config.base[80]: export VERBOSE=YES
++++ config.base[80]: VERBOSE=YES
++++ config.base[81]: export KEEPDATA=NO
++++ config.base[81]: KEEPDATA=NO
++++ config.base[82]: export DEBUG_POSTSCRIPT=NO
++++ config.base[82]: DEBUG_POSTSCRIPT=NO
++++ config.base[83]: export CHGRP_RSTPROD=YES
++++ config.base[83]: CHGRP_RSTPROD=YES
++++ config.base[84]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[84]: CHGRP_CMD='chgrp rstprod'
++++ config.base[85]: export NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[85]: NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[86]: export NCLEN=/work2/noaa/stmp/CI/HERCULES/2643/gefs/ush/getncdimlen
++++ config.base[86]: NCLEN=/work2/noaa/stmp/CI/HERCULES/2643/gefs/ush/getncdimlen
++++ config.base[89]: export BASE_ENV=/work2/noaa/stmp/CI/HERCULES/2643/gefs/env
++++ config.base[89]: BASE_ENV=/work2/noaa/stmp/CI/HERCULES/2643/gefs/env
++++ config.base[90]: export BASE_JOB=/work2/noaa/stmp/CI/HERCULES/2643/gefs/jobs/rocoto
++++ config.base[90]: BASE_JOB=/work2/noaa/stmp/CI/HERCULES/2643/gefs/jobs/rocoto
++++ config.base[93]: export SDATE=2021032312
++++ config.base[93]: SDATE=2021032312
++++ config.base[94]: export EDATE=2021032312
++++ config.base[94]: EDATE=2021032312
++++ config.base[95]: export EXP_WARM_START=.false.
++++ config.base[95]: EXP_WARM_START=.false.
++++ config.base[96]: export assim_freq=6
++++ config.base[96]: assim_freq=6
++++ config.base[97]: export PSLOT=C48_S2SWA_gefs_63904c2a
++++ config.base[97]: PSLOT=C48_S2SWA_gefs_63904c2a
++++ config.base[98]: export EXPDIR=/work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/EXPDIR/C48_S2SWA_gefs_63904c2a
++++ config.base[98]: EXPDIR=/work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/EXPDIR/C48_S2SWA_gefs_63904c2a
++++ config.base[99]: export ROTDIR=/work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a
++++ config.base[99]: ROTDIR=/work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a
++++ config.base[101]: export DATAROOT=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a
++++ config.base[101]: DATAROOT=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a
++++ config.base[102]: export RUNDIR=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a
++++ config.base[102]: RUNDIR=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a
++++ config.base[103]: export ARCDIR=/work/noaa/global/mterry/archive/C48_S2SWA_gefs_63904c2a
++++ config.base[103]: ARCDIR=/work/noaa/global/mterry/archive/C48_S2SWA_gefs_63904c2a
++++ config.base[104]: export ATARDIR=/work/noaa/global/mterry/archive_rotdir/C48_S2SWA_gefs_63904c2a
++++ config.base[104]: ATARDIR=/work/noaa/global/mterry/archive_rotdir/C48_S2SWA_gefs_63904c2a
++++ config.base[107]: export envir=prod
++++ config.base[107]: envir=prod
++++ config.base[108]: export NET=gefs
++++ config.base[108]: NET=gefs
++++ config.base[109]: export RUN=gefs
++++ config.base[109]: RUN=gefs
++++ config.base[115]: source /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/EXPDIR/C48_S2SWA_gefs_63904c2a/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[78]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[79]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[81]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/history'
+++++ config.com[82]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/restart'
+++++ config.com[83]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/input'
+++++ config.com[84]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[85]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[86]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[87]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[89]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[90]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/input'
+++++ config.com[91]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/history'
+++++ config.com[92]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/restart'
+++++ config.com[93]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[94]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[95]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[97]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/chem/history'
+++++ config.com[98]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[100]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/med/restart'
++++ config.base[118]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[118]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[119]: export LOGSCRIPT=
++++ config.base[119]: LOGSCRIPT=
++++ config.base[122]: export 'REDOUT=1>'
++++ config.base[122]: REDOUT='1>'
++++ config.base[123]: export 'REDERR=2>'
++++ config.base[123]: REDERR='2>'
++++ config.base[125]: export SENDECF=NO
++++ config.base[125]: SENDECF=NO
++++ config.base[126]: export SENDSDM=NO
++++ config.base[126]: SENDSDM=NO
++++ config.base[127]: export SENDDBN_NTC=NO
++++ config.base[127]: SENDDBN_NTC=NO
++++ config.base[128]: export SENDDBN=NO
++++ config.base[128]: SENDDBN=NO
++++ config.base[129]: export DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[129]: DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[132]: export APP=S2SWA
++++ config.base[132]: APP=S2SWA
++++ config.base[135]: export DO_ATM=YES
++++ config.base[135]: DO_ATM=YES
++++ config.base[136]: export DO_COUPLED=NO
++++ config.base[136]: DO_COUPLED=NO
++++ config.base[137]: export DO_WAVE=NO
++++ config.base[137]: DO_WAVE=NO
++++ config.base[138]: export DO_OCN=NO
++++ config.base[138]: DO_OCN=NO
++++ config.base[139]: export DO_ICE=NO
++++ config.base[139]: DO_ICE=NO
++++ config.base[140]: export DO_AERO=NO
++++ config.base[140]: DO_AERO=NO
++++ config.base[141]: export AERO_FCST_CDUMP=
++++ config.base[141]: AERO_FCST_CDUMP=
++++ config.base[142]: export AERO_ANL_CDUMP=
++++ config.base[142]: AERO_ANL_CDUMP=
++++ config.base[143]: export WAVE_CDUMP=
++++ config.base[143]: WAVE_CDUMP=
++++ config.base[144]: export DOBNDPNT_WAVE=NO
++++ config.base[144]: DOBNDPNT_WAVE=NO
++++ config.base[145]: export DOIBP_WAV=NO
++++ config.base[145]: DOIBP_WAV=NO
++++ config.base[146]: export FRAC_GRID=.true.
++++ config.base[146]: FRAC_GRID=.true.
++++ config.base[147]: export DO_NEST=NO
++++ config.base[147]: DO_NEST=NO
++++ config.base[148]: [[ NO == \Y\E\S ]]
++++ config.base[152]: export ntiles=6
++++ config.base[152]: ntiles=6
++++ config.base[156]: export OPS_RES=C768
++++ config.base[156]: OPS_RES=C768
++++ config.base[159]: export LEVS=128
++++ config.base[159]: LEVS=128
++++ config.base[160]: export CASE=C48
++++ config.base[160]: CASE=C48
++++ config.base[161]: export CASE_ENS=C48
++++ config.base[161]: CASE_ENS=C48
++++ config.base[162]: export OCNRES=500
++++ config.base[162]: OCNRES=500
++++ config.base[163]: export ICERES=500
++++ config.base[163]: ICERES=500
++++ config.base[165]: case "${CASE}" in
++++ config.base[167]: export waveGRD=glo_500
++++ config.base[167]: waveGRD=glo_500
++++ config.base[184]: case "${APP}" in
++++ config.base[203]: export DO_COUPLED=YES
++++ config.base[203]: DO_COUPLED=YES
++++ config.base[204]: export DO_OCN=YES
++++ config.base[204]: DO_OCN=YES
++++ config.base[205]: export DO_ICE=YES
++++ config.base[205]: DO_ICE=YES
++++ config.base[207]: [[ S2SWA =~ A$ ]]
++++ config.base[208]: export DO_AERO=YES
++++ config.base[208]: DO_AERO=YES
++++ config.base[209]: export AERO_ANL_CDUMP=both
++++ config.base[209]: AERO_ANL_CDUMP=both
++++ config.base[210]: export AERO_FCST_CDUMP=gdas
++++ config.base[210]: AERO_FCST_CDUMP=gdas
++++ config.base[213]: [[ S2SWA =~ ^S2SW ]]
++++ config.base[214]: export DO_WAVE=YES
++++ config.base[214]: DO_WAVE=YES
++++ config.base[215]: export WAVE_CDUMP=both
++++ config.base[215]: WAVE_CDUMP=both
++++ config.base[216]: export cplwav2atm=.true.
++++ config.base[216]: cplwav2atm=.true.
++++ config.base[226]: export FHMIN=0
++++ config.base[226]: FHMIN=0
++++ config.base[227]: export FHMAX=9
++++ config.base[227]: FHMAX=9
++++ config.base[228]: export FHOUT=3
++++ config.base[228]: FHOUT=3
++++ config.base[229]: export FHOUT_OCN=3
++++ config.base[229]: FHOUT_OCN=3
++++ config.base[230]: export FHOUT_ICE=3
++++ config.base[230]: FHOUT_ICE=3
++++ config.base[233]: export gfs_cyc=1
++++ config.base[233]: gfs_cyc=1
++++ config.base[236]: export FHMIN_GFS=0
++++ config.base[236]: FHMIN_GFS=0
++++ config.base[237]: export FHMIN=0
++++ config.base[237]: FHMIN=0
++++ config.base[238]: export FHMAX_GFS=120
++++ config.base[238]: FHMAX_GFS=120
++++ config.base[239]: export FHOUT_GFS=6
++++ config.base[239]: FHOUT_GFS=6
++++ config.base[240]: export FHMAX_HF_GFS=0
++++ config.base[240]: FHMAX_HF_GFS=0
++++ config.base[241]: export FHOUT_HF_GFS=1
++++ config.base[241]: FHOUT_HF_GFS=1
++++ config.base[242]: export FHOUT_OCN_GFS=6
++++ config.base[242]: FHOUT_OCN_GFS=6
++++ config.base[243]: export FHOUT_ICE_GFS=6
++++ config.base[243]: FHOUT_ICE_GFS=6
++++ config.base[244]: export FHMIN_WAV=0
++++ config.base[244]: FHMIN_WAV=0
++++ config.base[245]: export FHOUT_WAV=3
++++ config.base[245]: FHOUT_WAV=3
++++ config.base[246]: export FHMAX_HF_WAV=120
++++ config.base[246]: FHMAX_HF_WAV=120
++++ config.base[247]: export FHOUT_HF_WAV=1
++++ config.base[247]: FHOUT_HF_WAV=1
++++ config.base[248]: export FHMAX_WAV=120
++++ config.base[248]: FHMAX_WAV=120
++++ config.base[249]: ((  gfs_cyc != 0  ))
++++ config.base[250]: export STEP_GFS=24
++++ config.base[250]: STEP_GFS=24
++++ config.base[254]: export ILPOST=1
++++ config.base[254]: ILPOST=1
++++ config.base[256]: export FHMIN_ENKF=0
++++ config.base[256]: FHMIN_ENKF=0
++++ config.base[257]: export FHMAX_ENKF=120
++++ config.base[257]: FHMAX_ENKF=120
++++ config.base[258]: export FHOUT_ENKF=6
++++ config.base[258]: FHOUT_ENKF=6
++++ config.base[259]: export FHOUT_OCN=6
++++ config.base[259]: FHOUT_OCN=6
++++ config.base[260]: export FHOUT_ICE=6
++++ config.base[260]: FHOUT_ICE=6
++++ config.base[263]: export restart_interval_gfs=12
++++ config.base[263]: restart_interval_gfs=12
++++ config.base[264]: export restart_interval_enkfgfs=12
++++ config.base[264]: restart_interval_enkfgfs=12
++++ config.base[269]: export QUILTING=.true.
++++ config.base[269]: QUILTING=.true.
++++ config.base[270]: export OUTPUT_GRID=gaussian_grid
++++ config.base[270]: OUTPUT_GRID=gaussian_grid
++++ config.base[271]: export WRITE_DOPOST=.true.
++++ config.base[271]: WRITE_DOPOST=.true.
++++ config.base[272]: export WRITE_NSFLIP=.true.
++++ config.base[272]: WRITE_NSFLIP=.true.
++++ config.base[275]: export FLTFILEGFS=/work2/noaa/stmp/CI/HERCULES/2643/gefs/parm/post/postxconfig-NT-GEFS.txt
++++ config.base[275]: FLTFILEGFS=/work2/noaa/stmp/CI/HERCULES/2643/gefs/parm/post/postxconfig-NT-GEFS.txt
++++ config.base[276]: export FLTFILEGFSF00=/work2/noaa/stmp/CI/HERCULES/2643/gefs/parm/post/postxconfig-NT-GEFS-F00.txt
++++ config.base[276]: FLTFILEGFSF00=/work2/noaa/stmp/CI/HERCULES/2643/gefs/parm/post/postxconfig-NT-GEFS-F00.txt
++++ config.base[279]: export imp_physics=8
++++ config.base[279]: imp_physics=8
++++ config.base[283]: export DO_JEDIATMVAR=NO
++++ config.base[283]: DO_JEDIATMVAR=NO
++++ config.base[284]: export DO_JEDIATMENS=NO
++++ config.base[284]: DO_JEDIATMENS=NO
++++ config.base[285]: export DO_JEDIOCNVAR=NO
++++ config.base[285]: DO_JEDIOCNVAR=NO
++++ config.base[286]: export DO_JEDISNOWDA=NO
++++ config.base[286]: DO_JEDISNOWDA=NO
++++ config.base[287]: export DO_MERGENSST=NO
++++ config.base[287]: DO_MERGENSST=NO
++++ config.base[290]: export NMEM_ENS=2
++++ config.base[290]: NMEM_ENS=2
++++ config.base[294]: export ENSMEM=001
++++ config.base[294]: ENSMEM=001
++++ config.base[295]: export MEMDIR=mem001
++++ config.base[295]: MEMDIR=mem001
++++ config.base[299]: export REPLAY_ICS=NO
++++ config.base[299]: REPLAY_ICS=NO
++++ config.base[300]: [[ NO == \Y\E\S ]]
++++ config.base[303]: export OFFSET_START_HOUR=0
++++ config.base[303]: OFFSET_START_HOUR=0
++++ config.base[306]: export DOIAU=NO
++++ config.base[306]: DOIAU=NO
++++ config.base[308]: [[ .false. = \.\f\a\l\s\e\. ]]
++++ config.base[309]: export IAU_FHROT=0
++++ config.base[309]: IAU_FHROT=0
++++ config.base[319]: export DONST=YES
++++ config.base[319]: DONST=YES
++++ config.base[320]: [[ YES = \Y\E\S ]]
++++ config.base[320]: export 'FNTSFA=        '
++++ config.base[320]: FNTSFA='        '
++++ config.base[323]: export nst_anl=.true.
++++ config.base[323]: nst_anl=.true.
++++ config.base[326]: export MAKE_NSSTBUFR=NO
++++ config.base[326]: MAKE_NSSTBUFR=NO
++++ config.base[329]: export MAKE_ACFTBUFR=NO
++++ config.base[329]: MAKE_ACFTBUFR=NO
++++ config.base[332]: export DO_METP=NO
++++ config.base[332]: DO_METP=NO
++++ config.base[333]: export DO_FIT2OBS=NO
++++ config.base[333]: DO_FIT2OBS=NO
++++ config.base[336]: export HPSSARCH=NO
++++ config.base[336]: HPSSARCH=NO
++++ config.base[337]: export LOCALARCH=NO
++++ config.base[337]: LOCALARCH=NO
++++ config.base[338]: [[ NO = \Y\E\S ]]
++++ config.base[342]: export ARCH_CYC=00
++++ config.base[342]: ARCH_CYC=00
++++ config.base[343]: export ARCH_WARMICFREQ=4
++++ config.base[343]: ARCH_WARMICFREQ=4
++++ config.base[344]: export ARCH_FCSTICFREQ=1
++++ config.base[344]: ARCH_FCSTICFREQ=1
++++ config.base[346]: export DELETE_COM_IN_ARCHIVE_JOB=YES
++++ config.base[346]: DELETE_COM_IN_ARCHIVE_JOB=YES
++++ config.base[349]: export NUM_SND_COLLECTIVES=9
++++ config.base[349]: NUM_SND_COLLECTIVES=9
++++ config.base[351]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/EXPDIR/C48_S2SWA_gefs_63904c2a/config.wave
++++ config.wave[6]: echo 'BEGIN: config.wave'
+BEGIN: config.wave
++++ config.wave[13]: export CDUMPwave=gefswave
++++ config.wave[13]: CDUMPwave=gefswave
++++ config.wave[16]: export CDUMPRSTwave=gdas
++++ config.wave[16]: CDUMPRSTwave=gdas
++++ config.wave[19]: export waveGRDN=1
++++ config.wave[19]: waveGRDN=1
++++ config.wave[20]: export waveGRDG=10
++++ config.wave[20]: waveGRDG=10
++++ config.wave[21]: export USE_WAV_RMP=NO
++++ config.wave[21]: USE_WAV_RMP=NO
++++ config.wave[22]: export waveMULTIGRID=.false.
++++ config.wave[22]: waveMULTIGRID=.false.
++++ config.wave[23]: export MESH_WAV=mesh.glo_500.nc
++++ config.wave[23]: MESH_WAV=mesh.glo_500.nc
++++ config.wave[24]: export 'waveesmfGRD= '
++++ config.wave[24]: waveesmfGRD=' '
++++ config.wave[27]: case "${waveGRD}" in
++++ config.wave[73]: export waveinterpGRD=
++++ config.wave[73]: waveinterpGRD=
++++ config.wave[74]: export wavepostGRD=glo_500
++++ config.wave[74]: wavepostGRD=glo_500
++++ config.wave[75]: export waveuoutpGRD=glo_500
++++ config.wave[75]: waveuoutpGRD=glo_500
++++ config.wave[84]: export WAVEWND_DID=
++++ config.wave[84]: WAVEWND_DID=
++++ config.wave[85]: export WAVEWND_FID=
++++ config.wave[85]: WAVEWND_FID=
++++ config.wave[88]: export WAVHINDH=0
++++ config.wave[88]: WAVHINDH=0
++++ config.wave[89]: export FHMAX_WAV_IBP=180
++++ config.wave[89]: FHMAX_WAV_IBP=180
++++ config.wave[90]: ((  FHMAX_WAV < FHMAX_WAV_IBP  ))
++++ config.wave[90]: export FHMAX_WAV_IBP=120
++++ config.wave[90]: FHMAX_WAV_IBP=120
++++ config.wave[93]: export DTFLD_WAV=3600
++++ config.wave[93]: DTFLD_WAV=3600
++++ config.wave[94]: export DTPNT_WAV=3600
++++ config.wave[94]: DTPNT_WAV=3600
++++ config.wave[95]: export FHINCP_WAV=1
++++ config.wave[95]: FHINCP_WAV=1
++++ config.wave[98]: export 'OUTPARS_WAV=WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++ config.wave[98]: OUTPARS_WAV='WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++ config.wave[101]: export WAVHCYC=6
++++ config.wave[101]: WAVHCYC=6
++++ config.wave[102]: export FHMAX_WAV_CUR=192
++++ config.wave[102]: FHMAX_WAV_CUR=192
++++ config.wave[106]: export RSTTYPE_WAV=T
++++ config.wave[106]: RSTTYPE_WAV=T
++++ config.wave[107]: rst_dt_gfs=43200
++++ config.wave[108]: [[ 43200 -gt 0 ]]
++++ config.wave[109]: export DT_1_RST_WAV=0
++++ config.wave[109]: DT_1_RST_WAV=0
++++ config.wave[112]: export DT_2_RST_WAV=43200
++++ config.wave[112]: DT_2_RST_WAV=43200
++++ config.wave[118]: export RSTIOFF_WAV=0
++++ config.wave[118]: RSTIOFF_WAV=0
++++ config.wave[122]: export RUNMEM=-1
++++ config.wave[122]: RUNMEM=-1
++++ config.wave[125]: ((  RUNMEM == -1  ))
++++ config.wave[127]: export waveMEMB=
++++ config.wave[127]: waveMEMB=
++++ config.wave[134]: export WW3ATMINP=CPL
++++ config.wave[134]: WW3ATMINP=CPL
++++ config.wave[135]: [[ YES == \Y\E\S ]]
++++ config.wave[136]: export WW3ICEINP=CPL
++++ config.wave[136]: WW3ICEINP=CPL
++++ config.wave[137]: export WAVEICE_FID=
++++ config.wave[137]: WAVEICE_FID=
++++ config.wave[143]: export WAVECUR_DID=rtofs
++++ config.wave[143]: WAVECUR_DID=rtofs
++++ config.wave[144]: [[ YES == \Y\E\S ]]
++++ config.wave[145]: export WW3CURINP=CPL
++++ config.wave[145]: WW3CURINP=CPL
++++ config.wave[146]: export WAVECUR_FID=
++++ config.wave[146]: WAVECUR_FID=
++++ config.wave[153]: export WW3ATMIENS=F
++++ config.wave[153]: WW3ATMIENS=F
++++ config.wave[154]: export WW3ICEIENS=F
++++ config.wave[154]: WW3ICEIENS=F
++++ config.wave[155]: export WW3CURIENS=F
++++ config.wave[155]: WW3CURIENS=F
++++ config.wave[157]: export GOFILETYPE=1
++++ config.wave[157]: GOFILETYPE=1
++++ config.wave[158]: export POFILETYPE=1
++++ config.wave[158]: POFILETYPE=1
++++ config.wave[162]: export FUNIPNT=T
++++ config.wave[162]: FUNIPNT=T
++++ config.wave[164]: export IOSRV=1
++++ config.wave[164]: IOSRV=1
++++ config.wave[166]: export FPNTPROC=T
++++ config.wave[166]: FPNTPROC=T
++++ config.wave[168]: export FGRDPROC=F
++++ config.wave[168]: FGRDPROC=F
++++ config.wave[170]: export FLAGMASKCOMP=F
++++ config.wave[170]: FLAGMASKCOMP=F
++++ config.wave[172]: export FLAGMASKOUT=F
++++ config.wave[172]: FLAGMASKOUT=F
++++ config.wave[174]: echo 'END: config.wave'
+END: config.wave
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/EXPDIR/C48_S2SWA_gefs_63904c2a/config.wavepostsbs
++++ config.wavepostsbs[6]: echo 'BEGIN: config.wavepostsbs'
+BEGIN: config.wavepostsbs
++++ config.wavepostsbs[9]: source /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/EXPDIR/C48_S2SWA_gefs_63904c2a/config.resources wavepostsbs
+++++ config.resources[7]: ((  1 != 1  ))
+++++ config.resources[14]: step=wavepostsbs
+++++ config.resources[16]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[18]: case ${machine} in
+++++ config.resources[22]: npe_node_max=80
+++++ config.resources[51]: export npe_node_max
+++++ config.resources[53]: case ${step} in
+++++ config.resources[247]: export wtime_wavepostsbs=03:00:00
+++++ config.resources[247]: wtime_wavepostsbs=03:00:00
+++++ config.resources[248]: export npe_wavepostsbs=1
+++++ config.resources[248]: npe_wavepostsbs=1
+++++ config.resources[249]: export nth_wavepostsbs=1
+++++ config.resources[249]: nth_wavepostsbs=1
+++++ config.resources[250]: export npe_node_wavepostsbs=80
+++++ config.resources[250]: npe_node_wavepostsbs=80
+++++ config.resources[251]: export NTASKS=1
+++++ config.resources[251]: NTASKS=1
+++++ config.resources[252]: export memory_wavepostsbs=10GB
+++++ config.resources[252]: memory_wavepostsbs=10GB
+++++ config.resources[303]: echo 'END: config.resources'
+END: config.resources
++++ config.wavepostsbs[12]: export WAV_SUBGRBSRC=
++++ config.wavepostsbs[12]: WAV_SUBGRBSRC=
++++ config.wavepostsbs[13]: export WAV_SUBGRB=
++++ config.wavepostsbs[13]: WAV_SUBGRB=
++++ config.wavepostsbs[16]: export DOFLD_WAV=YES
++++ config.wavepostsbs[16]: DOFLD_WAV=YES
++++ config.wavepostsbs[17]: export DOPNT_WAV=YES
++++ config.wavepostsbs[17]: DOPNT_WAV=YES
++++ config.wavepostsbs[18]: export DOGRB_WAV=YES
++++ config.wavepostsbs[18]: DOGRB_WAV=YES
++++ config.wavepostsbs[19]: [[ -n '' ]]
++++ config.wavepostsbs[22]: export DOGRI_WAV=NO
++++ config.wavepostsbs[22]: DOGRI_WAV=NO
++++ config.wavepostsbs[24]: export DOSPC_WAV=YES
++++ config.wavepostsbs[24]: DOSPC_WAV=YES
++++ config.wavepostsbs[25]: export DOBLL_WAV=YES
++++ config.wavepostsbs[25]: DOBLL_WAV=YES
++++ config.wavepostsbs[27]: echo 'END: config.wavepostsbs'
+END: config.wavepostsbs
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[110]: source /work2/noaa/stmp/CI/HERCULES/2643/gefs/env/HERCULES.env wavepostsbs
++++ HERCULES.env[3]: [[ 1 -ne 1 ]]
++++ HERCULES.env[13]: step=wavepostsbs
++++ HERCULES.env[15]: export 'launcher=srun -l --export=ALL'
++++ HERCULES.env[15]: launcher='srun -l --export=ALL'
++++ HERCULES.env[16]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[16]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[19]: export MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[19]: MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[20]: export MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[20]: MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[21]: export MPI_GROUP_MAX=256
++++ HERCULES.env[21]: MPI_GROUP_MAX=256
++++ HERCULES.env[22]: export MPI_MEMMAP_OFF=1
++++ HERCULES.env[22]: MPI_MEMMAP_OFF=1
++++ HERCULES.env[23]: export MP_STDOUTMODE=ORDERED
++++ HERCULES.env[23]: MP_STDOUTMODE=ORDERED
++++ HERCULES.env[24]: export KMP_AFFINITY=scatter
++++ HERCULES.env[24]: KMP_AFFINITY=scatter
++++ HERCULES.env[25]: export OMP_STACKSIZE=2048000
++++ HERCULES.env[25]: OMP_STACKSIZE=2048000
++++ HERCULES.env[26]: export NTHSTACK=1024000000
++++ HERCULES.env[26]: NTHSTACK=1024000000
++++ HERCULES.env[28]: export I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[28]: I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[29]: export I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[29]: I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[31]: ulimit -s unlimited
++++ HERCULES.env[32]: ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 2042962
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 10485760
+open files                          (-n) 131072
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) unlimited
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 1028798
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
++++ HERCULES.env[34]: case ${step} in
++++ HERCULES.env[54]: export CFP_MP=YES
++++ HERCULES.env[54]: CFP_MP=YES
++++ HERCULES.env[55]: [[ wavepostsbs = \w\a\v\e\p\r\e\p ]]
++++ HERCULES.env[56]: export 'wavempexec=srun -l --export=ALL'
++++ HERCULES.env[56]: wavempexec='srun -l --export=ALL'
++++ HERCULES.env[57]: export 'wave_mpmd=--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[57]: wave_mpmd='--multi-prog --output=mpmd.%j.%t.out'
+++ jjob_header.sh[111]: status=0
+++ jjob_header.sh[112]: ((  status != 0  ))
++ JGLOBAL_WAVE_POST_SBS[7]: export errchk=err_chk
++ JGLOBAL_WAVE_POST_SBS[7]: errchk=err_chk
++ JGLOBAL_WAVE_POST_SBS[9]: export MP_PULSE=0
++ JGLOBAL_WAVE_POST_SBS[9]: MP_PULSE=0
++ JGLOBAL_WAVE_POST_SBS[12]: YMD=20210323
++ JGLOBAL_WAVE_POST_SBS[12]: HH=12
++ JGLOBAL_WAVE_POST_SBS[12]: declare_from_tmpl -rx COMIN_WAVE_PREP:COM_WAVE_PREP_TMPL COMIN_WAVE_HISTORY:COM_WAVE_HISTORY_TMPL COMOUT_WAVE_PREP:COM_WAVE_PREP_TMPL COMOUT_WAVE_GRID:COM_WAVE_GRID_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_WAVE_PREP=/work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/model_data/wave/prep
+declare_from_tmpl :: COMIN_WAVE_HISTORY=/work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/model_data/wave/history
+declare_from_tmpl :: COMOUT_WAVE_PREP=/work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/model_data/wave/prep
+declare_from_tmpl :: COMOUT_WAVE_GRID=/work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/products/wave/gridded
++ JGLOBAL_WAVE_POST_SBS[18]: for out_dir in "${COMOUT_WAVE_PREP}" "${COMOUT_WAVE_GRID}"
++ JGLOBAL_WAVE_POST_SBS[19]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/model_data/wave/prep ]]
++ JGLOBAL_WAVE_POST_SBS[18]: for out_dir in "${COMOUT_WAVE_PREP}" "${COMOUT_WAVE_GRID}"
++ JGLOBAL_WAVE_POST_SBS[19]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/products/wave/gridded ]]
++ JGLOBAL_WAVE_POST_SBS[27]: membTAG=p
++ JGLOBAL_WAVE_POST_SBS[28]: '[' '' == 00 ']'
++ JGLOBAL_WAVE_POST_SBS[29]: export membTAG
++ JGLOBAL_WAVE_POST_SBS[30]: export WAV_MOD_TAG=gefswave
++ JGLOBAL_WAVE_POST_SBS[30]: WAV_MOD_TAG=gefswave
++ JGLOBAL_WAVE_POST_SBS[32]: export CFP_VERBOSE=1
++ JGLOBAL_WAVE_POST_SBS[32]: CFP_VERBOSE=1
++ JGLOBAL_WAVE_POST_SBS[35]: /work2/noaa/stmp/CI/HERCULES/2643/gefs/scripts/exgfs_wave_post_gridded_sbs.sh
+Begin exgfs_wave_post_gridded_sbs.sh at Tue Jun 25 07:49:44 UTC 2024
++ exgfs_wave_post_gridded_sbs.sh[44]: export WAV_MOD_TAG=gefswave
++ exgfs_wave_post_gridded_sbs.sh[44]: WAV_MOD_TAG=gefswave
++ exgfs_wave_post_gridded_sbs.sh[46]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a/wavepostsbs.2840847
++ exgfs_wave_post_gridded_sbs.sh[48]: echo 'Starting WAVE POSTPROCESSOR SCRIPT for gefswave'
+Starting WAVE POSTPROCESSOR SCRIPT for gefswave
++ exgfs_wave_post_gridded_sbs.sh[50]: set +x
+ 
+                     *********************************
+                     *** WAVE POSTPROCESSOR SCRIPT ***
+                     *********************************
+ 
+Starting at : Tue Jun 25 02:49:44 CDT 2024
+-------------
+ 
++ exgfs_wave_post_gridded_sbs.sh[63]: '[' -z 1 ']'
++ exgfs_wave_post_gridded_sbs.sh[74]: export waveGRD=glo_500
++ exgfs_wave_post_gridded_sbs.sh[74]: waveGRD=glo_500
++ exgfs_wave_post_gridded_sbs.sh[77]: export waveinterpGRD=
++ exgfs_wave_post_gridded_sbs.sh[77]: waveinterpGRD=
++ exgfs_wave_post_gridded_sbs.sh[78]: export wavepostGRD=glo_500
++ exgfs_wave_post_gridded_sbs.sh[78]: wavepostGRD=glo_500
++ exgfs_wave_post_gridded_sbs.sh[81]: set +x
+ 
+Grid information  :
+-------------------
+   Native wave grids  : glo_500
+   Interpolated grids : 
+   Post-process grids : glo_500
+ 
++ exgfs_wave_post_gridded_sbs.sh[91]: export FHRUN=0
++ exgfs_wave_post_gridded_sbs.sh[91]: FHRUN=0
++ exgfs_wave_post_gridded_sbs.sh[96]: export DOGRB_WAV=YES
++ exgfs_wave_post_gridded_sbs.sh[96]: DOGRB_WAV=YES
++ exgfs_wave_post_gridded_sbs.sh[97]: export DOGRI_WAV=NO
++ exgfs_wave_post_gridded_sbs.sh[97]: DOGRI_WAV=NO
++ exgfs_wave_post_gridded_sbs.sh[99]: exit_code=0
++ exgfs_wave_post_gridded_sbs.sh[101]: set +x
+ 
+Preparing input files :
+-----------------------
++ exgfs_wave_post_gridded_sbs.sh[110]: for grdID in ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_post_gridded_sbs.sh[111]: [[ -f /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/model_data/wave/prep/gefswave.mod_def.glo_500 ]]
++ exgfs_wave_post_gridded_sbs.sh[112]: set +x
+ Mod def file for glo_500 found in /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/model_data/wave/prep. copying ....
++ exgfs_wave_post_gridded_sbs.sh[116]: cp -f /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/model_data/wave/prep/gefswave.mod_def.glo_500 mod_def.glo_500
++ exgfs_wave_post_gridded_sbs.sh[110]: for grdID in ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_post_gridded_sbs.sh[111]: [[ -f /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/model_data/wave/prep/gefswave.mod_def.glo_500 ]]
++ exgfs_wave_post_gridded_sbs.sh[112]: set +x
+ Mod def file for glo_500 found in /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/model_data/wave/prep. copying ....
++ exgfs_wave_post_gridded_sbs.sh[116]: cp -f /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/model_data/wave/prep/gefswave.mod_def.glo_500 mod_def.glo_500
++ exgfs_wave_post_gridded_sbs.sh[121]: for grdID in ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_post_gridded_sbs.sh[122]: [[ ! -f mod_def.glo_500 ]]
++ exgfs_wave_post_gridded_sbs.sh[134]: set +x
+File mod_def.glo_500 found. Syncing to all nodes ...
++ exgfs_wave_post_gridded_sbs.sh[121]: for grdID in ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_post_gridded_sbs.sh[122]: [[ ! -f mod_def.glo_500 ]]
++ exgfs_wave_post_gridded_sbs.sh[134]: set +x
+File mod_def.glo_500 found. Syncing to all nodes ...
++ exgfs_wave_post_gridded_sbs.sh[143]: '[' NO = YES ']'
++ exgfs_wave_post_gridded_sbs.sh[172]: '[' YES = YES ']'
++ exgfs_wave_post_gridded_sbs.sh[174]: for grbGRD in $waveinterpGRD $wavepostGRD
++ exgfs_wave_post_gridded_sbs.sh[176]: '[' -f /work2/noaa/stmp/CI/HERCULES/2643/gefs/parm/wave/ww3_grib2.glo_500.inp.tmpl ']'
++ exgfs_wave_post_gridded_sbs.sh[178]: cp -f /work2/noaa/stmp/CI/HERCULES/2643/gefs/parm/wave/ww3_grib2.glo_500.inp.tmpl ww3_grib2.glo_500.inp.tmpl
++ exgfs_wave_post_gridded_sbs.sh[181]: '[' -f ww3_grib2.glo_500.inp.tmpl ']'
++ exgfs_wave_post_gridded_sbs.sh[183]: set +x
+   ww3_grib2.glo_500.inp.tmpl copied. Syncing to all nodes ...
++ exgfs_wave_post_gridded_sbs.sh[203]: set +x
+ 
+   Input files read and processed at : Tue Jun 25 02:49:45 CDT 2024
+ 
+   Data summary : 
+   ---------------------------------------------
+      Sufficient data for GRID interpolation    : NO
+      Sufficient data for GRIB files            : YES
+ 
++ exgfs_wave_post_gridded_sbs.sh[220]: set +x
+   Making command file for sbs grib2 and GRID Interpolation 
++ exgfs_wave_post_gridded_sbs.sh[227]: '[' NO = YES ']'
++ exgfs_wave_post_gridded_sbs.sh[236]: fhr=0
++ exgfs_wave_post_gridded_sbs.sh[238]: fhrg=0
++ exgfs_wave_post_gridded_sbs.sh[239]: sleep_interval=10
++ exgfs_wave_post_gridded_sbs.sh[240]: iwaitmax=120
++ exgfs_wave_post_gridded_sbs.sh[241]: '[' 0 -le 120 ']'
+++ exgfs_wave_post_gridded_sbs.sh[243]: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/ndate 0 2021032312
++ exgfs_wave_post_gridded_sbs.sh[243]: ymdh=2021032312
+++ exgfs_wave_post_gridded_sbs.sh[244]: echo 2021032312
+++ exgfs_wave_post_gridded_sbs.sh[244]: cut -c1-8
++ exgfs_wave_post_gridded_sbs.sh[244]: YMD=20210323
+++ exgfs_wave_post_gridded_sbs.sh[245]: echo 2021032312
+++ exgfs_wave_post_gridded_sbs.sh[245]: cut -c9-10
++ exgfs_wave_post_gridded_sbs.sh[245]: HMS=120000
++ exgfs_wave_post_gridded_sbs.sh[246]: YMDHMS=20210323120000
+++ exgfs_wave_post_gridded_sbs.sh[247]: printf %03i 0
++ exgfs_wave_post_gridded_sbs.sh[247]: FH3=000
++ exgfs_wave_post_gridded_sbs.sh[249]: fcmdnow=cmdfile.000
++ exgfs_wave_post_gridded_sbs.sh[250]: fcmdigrd=icmdfile.000
++ exgfs_wave_post_gridded_sbs.sh[251]: mkdir output_20210323120000
++ exgfs_wave_post_gridded_sbs.sh[252]: cd output_20210323120000
++ exgfs_wave_post_gridded_sbs.sh[253]: rm -f cmdfile.000 icmdfile.000
++ exgfs_wave_post_gridded_sbs.sh[254]: touch cmdfile.000 icmdfile.000
++ exgfs_wave_post_gridded_sbs.sh[258]: export GRIBDATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a/wavepostsbs.2840847/output_20210323120000
++ exgfs_wave_post_gridded_sbs.sh[258]: GRIBDATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a/wavepostsbs.2840847/output_20210323120000
++ exgfs_wave_post_gridded_sbs.sh[259]: export GRDIDATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a/wavepostsbs.2840847/output_20210323120000
++ exgfs_wave_post_gridded_sbs.sh[259]: GRDIDATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a/wavepostsbs.2840847/output_20210323120000
++ exgfs_wave_post_gridded_sbs.sh[263]: '[' 0 = 0 ']'
++ exgfs_wave_post_gridded_sbs.sh[265]: for wavGRD in ${waveGRD}
++ exgfs_wave_post_gridded_sbs.sh[266]: gfile=/work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/model_data/wave/history/gefswave.out_grd.glo_500.20210323.120000
++ exgfs_wave_post_gridded_sbs.sh[267]: wait_for_file /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/model_data/wave/history/gefswave.out_grd.glo_500.20210323.120000 10 120
++ bash_utils.sh[93]: set +x
++ bash_utils.sh[101]: return 0
++ exgfs_wave_post_gridded_sbs.sh[273]: /bin/ln -sf /work2/noaa/stmp/CI/HERCULES/2643/RUNTESTS/COMROOT/C48_S2SWA_gefs_63904c2a/gefs.20210323/12/mem001/model_data/wave/history/gefswave.out_grd.glo_500.20210323.120000 ./out_grd.glo_500
++ exgfs_wave_post_gridded_sbs.sh[276]: '[' NO = YES ']'
++ exgfs_wave_post_gridded_sbs.sh[308]: '[' YES = YES ']'
++ exgfs_wave_post_gridded_sbs.sh[310]: for grdID in ${wavepostGRD}
+++ exgfs_wave_post_gridded_sbs.sh[312]: echo WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA
++ exgfs_wave_post_gridded_sbs.sh[312]: gribFL=''\''WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'\'''
++ exgfs_wave_post_gridded_sbs.sh[313]: case $grdID in
++ exgfs_wave_post_gridded_sbs.sh[327]: GRDNAME=global
++ exgfs_wave_post_gridded_sbs.sh[327]: GRDRES=5p00
++ exgfs_wave_post_gridded_sbs.sh[327]: GRIDNR=255
++ exgfs_wave_post_gridded_sbs.sh[327]: MODNR=11
++ exgfs_wave_post_gridded_sbs.sh[330]: echo '/work2/noaa/stmp/CI/HERCULES/2643/gefs/ush/wave_grib2_sbs.sh glo_500 255 11 2021032312 0 global 5p00 '\''WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'\'' > grib_glo_500.out 2>&1'
++ exgfs_wave_post_gridded_sbs.sh[336]: '[' YES = YES ']'
++ exgfs_wave_post_gridded_sbs.sh[337]: nfile=0
++ exgfs_wave_post_gridded_sbs.sh[338]: ifile=0
++ exgfs_wave_post_gridded_sbs.sh[339]: iline=1
++ exgfs_wave_post_gridded_sbs.sh[340]: ifirst=yes
+++ exgfs_wave_post_gridded_sbs.sh[341]: wc -l cmdfile.000
+++ exgfs_wave_post_gridded_sbs.sh[341]: awk '{print $1}'
++ exgfs_wave_post_gridded_sbs.sh[341]: nlines=1
++ exgfs_wave_post_gridded_sbs.sh[342]: '[' 1 -le 1 ']'
+++ exgfs_wave_post_gridded_sbs.sh[343]: sed -n 1p cmdfile.000
++ exgfs_wave_post_gridded_sbs.sh[343]: line='/work2/noaa/stmp/CI/HERCULES/2643/gefs/ush/wave_grib2_sbs.sh glo_500 255 11 2021032312 0 global 5p00 '\''WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'\'' > grib_glo_500.out 2>&1'
++ exgfs_wave_post_gridded_sbs.sh[344]: '[' -z '/work2/noaa/stmp/CI/HERCULES/2643/gefs/ush/wave_grib2_sbs.sh glo_500 255 11 2021032312 0 global 5p00 '\''WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'\'' > grib_glo_500.out 2>&1' ']'
++ exgfs_wave_post_gridded_sbs.sh[347]: '[' yes = yes ']'
++ exgfs_wave_post_gridded_sbs.sh[348]: echo '#!/bin/sh'
++ exgfs_wave_post_gridded_sbs.sh[349]: echo '0 cmdmfile.0'
++ exgfs_wave_post_gridded_sbs.sh[350]: chmod 744 cmdmfile.0
++ exgfs_wave_post_gridded_sbs.sh[352]: echo /work2/noaa/stmp/CI/HERCULES/2643/gefs/ush/wave_grib2_sbs.sh glo_500 255 11 2021032312 0 global 5p00 ''\''WND' CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR 'CHA'\''' '>' grib_glo_500.out '2>&1'
++ exgfs_wave_post_gridded_sbs.sh[353]: nfile=1
++ exgfs_wave_post_gridded_sbs.sh[354]: '[' 1 -eq 1 ']'
++ exgfs_wave_post_gridded_sbs.sh[355]: nfile=0
++ exgfs_wave_post_gridded_sbs.sh[356]: ifirst=no
++ exgfs_wave_post_gridded_sbs.sh[358]: iline=2
++ exgfs_wave_post_gridded_sbs.sh[342]: '[' 2 -le 1 ']'
+++ exgfs_wave_post_gridded_sbs.sh[363]: wc -l cmdfile.000
+++ exgfs_wave_post_gridded_sbs.sh[363]: awk '{print $1}'
++ exgfs_wave_post_gridded_sbs.sh[363]: wavenproc=1
+++ exgfs_wave_post_gridded_sbs.sh[364]: echo 1
++ exgfs_wave_post_gridded_sbs.sh[364]: wavenproc=1
++ exgfs_wave_post_gridded_sbs.sh[366]: set +x
+ 
+   Executing the grib2_sbs scripts at : Tue Jun 25 02:49:45 CDT 2024
+   ------------------------------------
+ 
++ exgfs_wave_post_gridded_sbs.sh[373]: '[' 1 -gt 1 ']'
++ exgfs_wave_post_gridded_sbs.sh[382]: chmod 744 cmdfile.000
++ exgfs_wave_post_gridded_sbs.sh[383]: ./cmdfile.000
++ exgfs_wave_post_gridded_sbs.sh[384]: exit=0
++ exgfs_wave_post_gridded_sbs.sh[387]: '[' 0 '!=' 0 ']'
++ exgfs_wave_post_gridded_sbs.sh[401]: rm -f out_grd.glo_500
++ exgfs_wave_post_gridded_sbs.sh[403]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_63904c2a/wavepostsbs.2840847
++ exgfs_wave_post_gridded_sbs.sh[405]: FHINCG=1
++ exgfs_wave_post_gridded_sbs.sh[406]: '[' 0 = 0 ']'
++ exgfs_wave_post_gridded_sbs.sh[409]: ENSTAG=
++ exgfs_wave_post_gridded_sbs.sh[410]: '[' ']'
++ exgfs_wave_post_gridded_sbs.sh[411]: gribchk=gefswave.t12z.global.5p00.f000.grib2
+/work2/noaa/stmp/CI/HERCULES/2643/gefs/scripts/exgfs_wave_post_gridded_sbs.sh: line 412: COMIN_WAVE_GRID: unbound variable
+++ exgfs_wave_post_gridded_sbs.sh[1]: postamble exgfs_wave_post_gridded_sbs.sh 1719301784 1
+++ preamble.sh[70]: set +x
+End exgfs_wave_post_gridded_sbs.sh at 07:49:46 with error code 1 (time elapsed: 00:00:02)
++ JGLOBAL_WAVE_POST_SBS[1]: postamble JGLOBAL_WAVE_POST_SBS 1719301778 1
++ preamble.sh[70]: set +x
+End JGLOBAL_WAVE_POST_SBS at 07:49:46 with error code 1 (time elapsed: 00:00:08)
++ wavepostsbs.sh[1]: postamble wavepostsbs.sh 1719301775 1
++ preamble.sh[70]: set +x
+End wavepostsbs.sh at 07:49:46 with error code 1 (time elapsed: 00:00:11)
