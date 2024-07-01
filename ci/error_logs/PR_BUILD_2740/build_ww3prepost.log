@@ -1,0 +1,215 @@
+++ dirname ./build_ww3prepost.sh
++ script_dir=.
++ cd .
++ APP=S2SWA
++ PDLIB=ON
++ getopts :j:a:dvw option
++ case "${option}" in
++ PDLIB=OFF
++ getopts :j:a:dvw option
++ case "${option}" in
++ BUILD_JOBS=2
++ getopts :j:a:dvw option
++ [[ S2SWA == \A\T\M\W ]]
++ [[ OFF == \O\N ]]
++ ww3switch=model/bin/switch_meshcap
++ [[ ! -d ../exec ]]
+++ pwd -P
++ finalexecdir=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec
++ set +x
++ cd ufs_model.fd/WW3
+++ pwd -P
++ WW3_DIR=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3
++ export WW3_DIR
++ export SWITCHFILE=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/bin/switch_meshcap
++ SWITCHFILE=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/bin/switch_meshcap
++ prep_exes='ww3_grid ww3_prep ww3_prnc ww3_grid'
++ post_exes='ww3_outp ww3_outf ww3_outp ww3_gint ww3_ounf ww3_ounp ww3_grib'
++ path_build=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ [[ -d /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD ]]
++ mkdir -p /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ cd /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ echo 'Forcing a SHRD build'
+Forcing a SHRD build
++ buildswitch=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch
++ cat /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/bin/switch_meshcap
++ sed -e s/DIST/SHRD/g -e 's/OMPG / /g' -e 's/OMPH / /g' -e 's/MPIT / /g' -e 's/MPI / /g' -e 's/B4B / /g' -e 's/PDLIB / /g' -e 's/SCOTCH / /g' -e 's/METIS / /g' -e s/NOGRB/NCEP2/g /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/tempswitch
++ rm /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/tempswitch
++ echo 'Switch file is /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch with switches:'
+Switch file is /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch with switches:
++ cat /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch
+NCO NCEP2 SHRD    PR3 UQ FLX0 SEED ST4 STAB0 NL1 BT1 DB1 MLIM FLD2 TR0 BS0 RWND WNX1 WNT1 CRX1 CRT1 O0 O1 O2 O3 O4 O5 O6 O7 O14 O15 IC0 IS0 REF0
++ MAKE_OPT=-DCMAKE_INSTALL_PREFIX=install
++ [[ Release = \D\e\b\u\g ]]
++ cmake /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3 -DSWITCH=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch -DCMAKE_INSTALL_PREFIX=install
+-- The C compiler identification is Intel 2021.5.0.20211109
+-- The Fortran compiler identification is Intel 2021.5.0.20211109
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /apps/oneapi/mpi/2021.5.1/bin/mpiicc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /apps/oneapi/mpi/2021.5.1/bin/mpiifort - skipped
+-- Build with switch: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch
+-- Setting build type to 'Release' as none was specified.
+-- Found MPI_C: /apps/oneapi/mpi/2021.5.1/bin/mpiicc (found version "3.1") 
+-- Found MPI_Fortran: /apps/oneapi/mpi/2021.5.1/bin/mpiifort (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/include;/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-fortran-4.6.1-ifhqcwv/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k] Lib: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-fortran-4.6.1-ifhqcwv/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-fortran-4.6.1-ifhqcwv] Lib: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-fortran-4.6.1-ifhqcwv/lib/libnetcdff.so 
+-- Found ZLIB: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/zlib-1.2.13-eabxx4z/lib/libz.a (found version "1.2.13") 
+-- Found PNG: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/libpng-1.6.37-cha7kfi/lib64/libpng.so (found version "1.6.37") 
+-- Found g2: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/g2-3.4.5-77xve5x/lib64/libg2_4.a (found version "3.4.5")
+-- Found bacio: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/bacio-2.4.1-wqq7qmr/lib/libbacio_4.a (found version "2.4.1")
+-- Found bacio: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/bacio-2.4.1-wqq7qmr/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/w3emc-2.10.0-xer6twa/lib64/libw3emc_4.a (found version "2.10.0")
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ rc=0
++ ((  rc != 0  ))
++ make -j 2
+Scanning dependencies of target ww3_lib
+[  1%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/constants.F90.o
+[  2%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3metamd.F90.o
+[  3%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3uqckmd.F90.o
+[  4%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wav_shr_flags.F90.o
+[  5%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3strkmd.F90.o
+[  6%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3servmd.F90.o
+[  7%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmunitmd.F90.o
+[  8%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3gsrumd.F90.o
+[  9%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3arrymd.F90.o
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3arrymd.F90(2255): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+         '  Spectrum : ',A,'  Units : ',E8.3,1X,A,        &
+-----------------------------------------^
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3arrymd.F90(2256): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+         '  Maximum value : ',E8.3,1X,A/)
+-------------------------------^
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3arrymd.F90(2253): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+         '  Maximum value : ',E8.3,1X,A/)
+-------------------------------^
+[ 10%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3cspcmd.F90.o
+[ 11%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3gdatmd.F90.o
+[ 13%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3odatmd.F90.o
+[ 13%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3idatmd.F90.o
+[ 14%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3sbt1md.F90.o
+[ 15%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlbouncmd.F90.o
+[ 16%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlboundmd.F90.o
+[ 17%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmmdatmd.F90.o
+[ 17%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlounfmd.F90.o
+[ 18%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlounpmd.F90.o
+[ 19%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlprncmd.F90.o
+[ 20%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmltrncmd.F90.o
+[ 21%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmluprstrmd.F90.o
+[ 22%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3sdb1md.F90.o
+[ 22%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3tidemd.F90.o
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3tidemd.F90(826): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+      READ(KR1,'(4X,A5,E16.10,i5)')TIDE_KONAN(K),TIDE_SIGAN(K),TIDE_NINF(k)
+------------------------^
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3tidemd.F90(830): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        read(kr1,'(4X,A5,E16.10,2F10.3)') TIDE_KONIN(K,k2),TIDE_SIGIN(K,k2),TIDE_R(K,k2),TIDE_ZETA(K,k2)
+--------------------------^
+[ 23%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3adatmd.F90.o
+[ 24%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3timemd.F90.o
+[ 25%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3dispmd.F90.o
+[ 26%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3fld1md.F90.o
+[ 27%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlgridmd.F90.o
+[ 28%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlshelmd.F90.o
+[ 29%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3fldsmd.F90.o
+[ 30%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3src4md.F90.o
+[ 31%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3partmd.F90.o
+[ 32%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlmultimd.F90.o
+[ 33%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmfinlmd.F90.o
+[ 34%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3fld2md.F90.o
+[ 35%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3parall.F90.o
+[ 36%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3snl1md.F90.o
+[ 37%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3triamd.F90.o
+[ 38%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3wdatmd.F90.o
+[ 39%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iogrmd.F90.o
+[ 40%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iogomd.F90.o
+[ 41%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iopomd.F90.o
+[ 42%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iorsmd.F90.o
+[ 43%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iobcmd.F90.o
+[ 44%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iosfmd.F90.o
+[ 45%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iotrmd.F90.o
+[ 46%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3pro3md.F90.o
+[ 47%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3profsmd.F90.o
+[ 48%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3srcemd.F90.o
+[ 48%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3updtmd.F90.o
+[ 49%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3wdasmd.F90.o
+[ 50%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmgridmd.F90.o
+[ 51%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmupdtmd.F90.o
+[ 52%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3bullmd.F90.o
+[ 53%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wav_grdout.F90.o
+[ 54%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3ounfmetamd.F90.o
+[ 55%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wminiomd.F90.o
+[ 56%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmiopomd.F90.o
+[ 57%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3gridmd.F90.o
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3gridmd.F90(6370): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+         ', SDSCUMP =', F3.1,', SDSNUW =', E8.3,', '/,     &
+--------------------------------------------^
+[ 57%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3initmd.F90.o
+[ 58%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iogoncdmd.F90.o
+[ 59%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3wavemd.F90.o
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3wavemd.F90(414): remark #6536: All symbols from this module are already visible due to another USE; the ONLY clause will have no effect. Rename clauses, if any, will be honored.   [W3ODATMD]
+    USE W3ODATMD
+--------^
+[ 60%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wminitmd.F90.o
+[ 61%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmwavemd.F90.o
+[ 61%] Linking Fortran static library ../../lib/libww3.a
+[ 61%] Built target ww3_lib
+Scanning dependencies of target ww3_grid
+Scanning dependencies of target ww3_strt
+[ 63%] Building Fortran object model/src/CMakeFiles/ww3_strt.dir/ww3_strt.F90.o
+[ 63%] Building Fortran object model/src/CMakeFiles/ww3_grid.dir/ww3_grid.F90.o
+[ 63%] Linking Fortran executable ../../bin/ww3_grid
+[ 63%] Built target ww3_grid
+[ 64%] Linking Fortran executable ../../bin/ww3_strt
+Scanning dependencies of target ww3_bound
+[ 65%] Building Fortran object model/src/CMakeFiles/ww3_bound.dir/ww3_bound.F90.o
+[ 65%] Built target ww3_strt
+[ 66%] Linking Fortran executable ../../bin/ww3_bound
+Scanning dependencies of target ww3_outf
+[ 67%] Building Fortran object model/src/CMakeFiles/ww3_outf.dir/ww3_outf.F90.o
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/ww3_outf.F90(2477): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+                  WRITE(FSCS,'(G7.1)') FSC
+--------------------------------^
+[ 67%] Built target ww3_bound
+Scanning dependencies of target ww3_outp
+[ 68%] Building Fortran object model/src/CMakeFiles/ww3_outp.dir/ww3_outp.F90.o
+[ 69%] Linking Fortran executable ../../bin/ww3_outp
+[ 69%] Built target ww3_outp
+Scanning dependencies of target ww3_trck
+[ 70%] Building Fortran object model/src/CMakeFiles/ww3_trck.dir/ww3_trck.F90.o
+[ 71%] Linking Fortran executable ../../bin/ww3_trck
+[ 71%] Built target ww3_trck
+Scanning dependencies of target ww3_grib
+[ 72%] Building Fortran object model/src/CMakeFiles/ww3_grib.dir/ww3_grib.F90.o
+[ 73%] Linking Fortran executable ../../bin/ww3_grib
+[ 73%] Built target ww3_grib
+Scanning dependencies of target ww3_gint
+[ 74%] Building Fortran object model/src/CMakeFiles/ww3_gint.dir/ww3_gint.F90.o
+[ 75%] Linking Fortran executable ../../bin/ww3_outf
+[ 75%] Built target ww3_outf
+Scanning dependencies of target gx_outf
+[ 75%] Building Fortran object model/src/CMakeFiles/gx_outf.dir/gx_outf.F90.o
+[ 76%] Linking Fortran executable ../../bin/ww3_gint
+[ 76%] Built target ww3_gint
+Scanning dependencies of target gx_outp
+[ 77%] Building Fortran object model/src/CMakeFiles/gx_outp.dir/gx_outp.F90.o
+ifort: error #10106: Fatal error in /apps/oneapi/compiler/2022.0.2/linux/bin/intel64/../../bin/intel64/fortcom, terminated by terminate signal
+compilation aborted for /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/gx_outf.F90 (code 1)
+make[2]: *** [model/src/CMakeFiles/gx_outf.dir/build.make:75: model/src/CMakeFiles/gx_outf.dir/gx_outf.F90.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:389: model/src/CMakeFiles/gx_outf.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [model/src/CMakeFiles/gx_outp.dir/build.make:105: bin/gx_outp] Terminated
+make[1]: *** [CMakeFiles/Makefile2:415: model/src/CMakeFiles/gx_outp.dir/all] Terminated
+make: *** [Makefile:136: all] Error 2
