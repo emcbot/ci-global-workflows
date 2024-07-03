@@ -1,0 +1,47 @@
+Begin fcst.sh at Wed Jul  3 21:44:24 UTC 2024
++ fcst.sh[8]: source /scratch1/NCEPDEV/global/CI/2741/gfs/ush/detect_machine.sh
+++ detect_machine.sh[12]: [[ -n '' ]]
+++ detect_machine.sh[15]: case $(hostname -f) in
++++ detect_machine.sh[15]: hostname -f
+++ detect_machine.sh[45]: MACHINE_ID=UNKNOWN
+++ detect_machine.sh[48]: [[ UNKNOWN == \U\N\K\N\O\W\N ]]
+++ detect_machine.sh[49]: case ${PW_CSP:-} in
+++ detect_machine.sh[51]: PW_CSP=UNKNOWN
+++ detect_machine.sh[56]: MACHINE_ID=UNKNOWN
+++ detect_machine.sh[59]: [[ UNKNOWN != \U\N\K\N\O\W\N ]]
+++ detect_machine.sh[64]: [[ -d /lfs/h3 ]]
+++ detect_machine.sh[67]: [[ -d /lfs/h1 ]]
+++ detect_machine.sh[70]: [[ -d /mnt/lfs1 ]]
+++ detect_machine.sh[73]: [[ -d /scratch1 ]]
+++ detect_machine.sh[75]: MACHINE_ID=hera
++ fcst.sh[9]: [[ hera == \w\c\o\s\s\2 ]]
++ fcst.sh[12]: . /scratch1/NCEPDEV/global/CI/2741/gfs/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+Lmod has detected the following error: The following module(s) are unknown:
+"prepobs/1.0.2"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "prepobs/1.0.2"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+Executing this command requires loading "prepobs/1.0.2" which failed while
+processing the following module(s):
+
+    Module fullname   Module Filename
+    ---------------   ---------------
+    module_base.hera  /scratch1/NCEPDEV/global/CI/2741/gfs/modulefiles/module_base.hera.lua
+
+
+End fcst.sh at 21:44:31 with error code 1 (time elapsed: 00:00:07)
+_______________________________________________________________
+Start Epilog on node h36m07 for job 62857033 :: Wed Jul  3 21:44:32 UTC 2024
+Job 62857033 finished for user Terry.McGuinness in partition hera with exit code 1:0
+_______________________________________________________________
+End Epilogue Wed Jul  3 21:44:32 UTC 2024
