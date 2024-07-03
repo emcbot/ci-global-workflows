@@ -1,0 +1,448 @@
+++ dirname ./build_ww3prepost.sh
++ script_dir=.
++ cd .
++ APP=S2SWA
++ PDLIB=ON
++ getopts :j:a:dvw option
++ case "${option}" in
++ PDLIB=OFF
++ getopts :j:a:dvw option
++ case "${option}" in
++ BUILD_JOBS=2
++ getopts :j:a:dvw option
++ [[ S2SWA == \A\T\M\W ]]
++ [[ OFF == \O\N ]]
++ ww3switch=model/bin/switch_meshcap
++ [[ ! -d ../exec ]]
+++ pwd -P
++ finalexecdir=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec
++ set +x
++ cd ufs_model.fd/WW3
+++ pwd -P
++ WW3_DIR=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3
++ export WW3_DIR
++ export SWITCHFILE=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/bin/switch_meshcap
++ SWITCHFILE=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/bin/switch_meshcap
++ prep_exes='ww3_grid ww3_prep ww3_prnc ww3_grid'
++ post_exes='ww3_outp ww3_outf ww3_outp ww3_gint ww3_ounf ww3_ounp ww3_grib'
++ path_build=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ [[ -d /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD ]]
++ rm -rf /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ mkdir -p /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ cd /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ echo 'Forcing a SHRD build'
+Forcing a SHRD build
++ buildswitch=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch
++ cat /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/bin/switch_meshcap
++ sed -e s/DIST/SHRD/g -e 's/OMPG / /g' -e 's/OMPH / /g' -e 's/MPIT / /g' -e 's/MPI / /g' -e 's/B4B / /g' -e 's/PDLIB / /g' -e 's/SCOTCH / /g' -e 's/METIS / /g' -e s/NOGRB/NCEP2/g /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/tempswitch
++ rm /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/tempswitch
++ echo 'Switch file is /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch with switches:'
+Switch file is /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch with switches:
++ cat /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch
+NCO NCEP2 SHRD    PR3 UQ FLX0 SEED ST4 STAB0 NL1 BT1 DB1 MLIM FLD2 TR0 BS0 RWND WNX1 WNT1 CRX1 CRT1 O0 O1 O2 O3 O4 O5 O6 O7 O14 O15 IC0 IS0 REF0
++ MAKE_OPT=-DCMAKE_INSTALL_PREFIX=install
++ [[ Release = \D\e\b\u\g ]]
++ cmake /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3 -DSWITCH=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch -DCMAKE_INSTALL_PREFIX=install
+-- The C compiler identification is Intel 2021.5.0.20211109
+-- The Fortran compiler identification is Intel 2021.5.0.20211109
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /apps/oneapi/mpi/2021.5.1/bin/mpiicc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /apps/oneapi/mpi/2021.5.1/bin/mpiifort - skipped
+-- Build with switch: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch
+-- Setting build type to 'Release' as none was specified.
+-- Found MPI_C: /apps/oneapi/mpi/2021.5.1/bin/mpiicc (found version "3.1") 
+-- Found MPI_Fortran: /apps/oneapi/mpi/2021.5.1/bin/mpiifort (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/include;/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-fortran-4.6.1-ifhqcwv/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k] Lib: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-fortran-4.6.1-ifhqcwv/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-fortran-4.6.1-ifhqcwv] Lib: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-fortran-4.6.1-ifhqcwv/lib/libnetcdff.so 
+-- Found ZLIB: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/zlib-1.2.13-eabxx4z/lib/libz.a (found version "1.2.13") 
+-- Found PNG: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/libpng-1.6.37-cha7kfi/lib64/libpng.so (found version "1.6.37") 
+-- Found g2: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/g2-3.4.5-77xve5x/lib64/libg2_4.a (found version "3.4.5")
+-- Found bacio: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/bacio-2.4.1-wqq7qmr/lib/libbacio_4.a (found version "2.4.1")
+-- Found bacio: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/bacio-2.4.1-wqq7qmr/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/w3emc-2.10.0-xer6twa/lib64/libw3emc_4.a (found version "2.10.0")
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ rc=0
++ ((  rc != 0  ))
++ make -j 2
+Scanning dependencies of target ww3_lib
+[  1%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3metamd.F90.o
+[  2%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/constants.F90.o
+[  3%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3uqckmd.F90.o
+[  4%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wav_shr_flags.F90.o
+[  5%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3strkmd.F90.o
+[  6%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3servmd.F90.o
+[  7%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmunitmd.F90.o
+[  8%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3gsrumd.F90.o
+[  9%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3arrymd.F90.o
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3arrymd.F90(2255): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+         '  Spectrum : ',A,'  Units : ',E8.3,1X,A,        &
+-----------------------------------------^
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3arrymd.F90(2256): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+         '  Maximum value : ',E8.3,1X,A/)
+-------------------------------^
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3arrymd.F90(2253): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+         '  Maximum value : ',E8.3,1X,A/)
+-------------------------------^
+[ 10%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3cspcmd.F90.o
+[ 11%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3gdatmd.F90.o
+[ 13%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3idatmd.F90.o
+[ 13%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3odatmd.F90.o
+[ 14%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3sbt1md.F90.o
+[ 15%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3adatmd.F90.o
+[ 16%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3timemd.F90.o
+[ 17%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3dispmd.F90.o
+[ 18%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3fld1md.F90.o
+[ 19%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlgridmd.F90.o
+[ 20%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlbouncmd.F90.o
+[ 21%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlboundmd.F90.o
+[ 22%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmmdatmd.F90.o
+[ 22%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlounfmd.F90.o
+[ 23%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlounpmd.F90.o
+[ 24%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlprncmd.F90.o
+[ 25%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmltrncmd.F90.o
+[ 26%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmluprstrmd.F90.o
+[ 27%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3sdb1md.F90.o
+[ 27%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3tidemd.F90.o
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3tidemd.F90(826): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+      READ(KR1,'(4X,A5,E16.10,i5)')TIDE_KONAN(K),TIDE_SIGAN(K),TIDE_NINF(k)
+------------------------^
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3tidemd.F90(830): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        read(kr1,'(4X,A5,E16.10,2F10.3)') TIDE_KONIN(K,k2),TIDE_SIGIN(K,k2),TIDE_R(K,k2),TIDE_ZETA(K,k2)
+--------------------------^
+[ 28%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3fldsmd.F90.o
+[ 29%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3src4md.F90.o
+[ 30%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3partmd.F90.o
+[ 31%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlshelmd.F90.o
+[ 32%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmfinlmd.F90.o
+[ 33%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3fld2md.F90.o
+[ 34%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlmultimd.F90.o
+[ 35%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3snl1md.F90.o
+[ 36%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3triamd.F90.o
+[ 37%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3parall.F90.o
+[ 38%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iogrmd.F90.o
+[ 39%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3wdatmd.F90.o
+[ 39%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3updtmd.F90.o
+[ 40%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3wdasmd.F90.o
+[ 41%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmgridmd.F90.o
+[ 42%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmupdtmd.F90.o
+[ 43%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3bullmd.F90.o
+[ 44%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iogomd.F90.o
+[ 45%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iopomd.F90.o
+[ 46%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iorsmd.F90.o
+[ 47%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iobcmd.F90.o
+[ 48%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iosfmd.F90.o
+[ 49%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iotrmd.F90.o
+[ 50%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3pro3md.F90.o
+[ 51%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3profsmd.F90.o
+[ 52%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3srcemd.F90.o
+[ 53%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3gridmd.F90.o
+[ 54%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wav_grdout.F90.o
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3gridmd.F90(6370): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+         ', SDSCUMP =', F3.1,', SDSNUW =', E8.3,', '/,     &
+--------------------------------------------^
+[ 55%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3ounfmetamd.F90.o
+[ 56%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wminiomd.F90.o
+[ 57%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmiopomd.F90.o
+[ 57%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3initmd.F90.o
+[ 58%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iogoncdmd.F90.o
+[ 59%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wminitmd.F90.o
+[ 60%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3wavemd.F90.o
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/w3wavemd.F90(414): remark #6536: All symbols from this module are already visible due to another USE; the ONLY clause will have no effect. Rename clauses, if any, will be honored.   [W3ODATMD]
+    USE W3ODATMD
+--------^
+[ 61%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmwavemd.F90.o
+[ 61%] Linking Fortran static library ../../lib/libww3.a
+[ 61%] Built target ww3_lib
+Scanning dependencies of target ww3_strt
+Scanning dependencies of target ww3_grid
+[ 62%] Building Fortran object model/src/CMakeFiles/ww3_grid.dir/ww3_grid.F90.o
+[ 63%] Building Fortran object model/src/CMakeFiles/ww3_strt.dir/ww3_strt.F90.o
+[ 63%] Linking Fortran executable ../../bin/ww3_grid
+[ 64%] Linking Fortran executable ../../bin/ww3_strt
+[ 64%] Built target ww3_grid
+Scanning dependencies of target ww3_bound
+[ 65%] Building Fortran object model/src/CMakeFiles/ww3_bound.dir/ww3_bound.F90.o
+[ 65%] Built target ww3_strt
+Scanning dependencies of target ww3_outf
+[ 66%] Building Fortran object model/src/CMakeFiles/ww3_outf.dir/ww3_outf.F90.o
+[ 67%] Linking Fortran executable ../../bin/ww3_bound
+/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/src/ww3_outf.F90(2477): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+                  WRITE(FSCS,'(G7.1)') FSC
+--------------------------------^
+[ 67%] Built target ww3_bound
+Scanning dependencies of target ww3_outp
+[ 68%] Building Fortran object model/src/CMakeFiles/ww3_outp.dir/ww3_outp.F90.o
+[ 69%] Linking Fortran executable ../../bin/ww3_outp
+[ 69%] Built target ww3_outp
+Scanning dependencies of target ww3_trck
+[ 70%] Building Fortran object model/src/CMakeFiles/ww3_trck.dir/ww3_trck.F90.o
+[ 71%] Linking Fortran executable ../../bin/ww3_trck
+[ 71%] Built target ww3_trck
+Scanning dependencies of target ww3_grib
+[ 72%] Building Fortran object model/src/CMakeFiles/ww3_grib.dir/ww3_grib.F90.o
+[ 73%] Linking Fortran executable ../../bin/ww3_grib
+[ 73%] Built target ww3_grib
+Scanning dependencies of target ww3_gint
+[ 74%] Building Fortran object model/src/CMakeFiles/ww3_gint.dir/ww3_gint.F90.o
+[ 75%] Linking Fortran executable ../../bin/ww3_outf
+[ 75%] Built target ww3_outf
+Scanning dependencies of target gx_outf
+[ 75%] Building Fortran object model/src/CMakeFiles/gx_outf.dir/gx_outf.F90.o
+[ 76%] Linking Fortran executable ../../bin/gx_outf
+[ 77%] Linking Fortran executable ../../bin/ww3_gint
+[ 77%] Built target gx_outf
+[ 77%] Built target ww3_gint
+Scanning dependencies of target gx_outp
+Scanning dependencies of target ww3_uprstr
+[ 78%] Building Fortran object model/src/CMakeFiles/gx_outp.dir/gx_outp.F90.o
+[ 79%] Building Fortran object model/src/CMakeFiles/ww3_uprstr.dir/ww3_uprstr.F90.o
+[ 80%] Linking Fortran executable ../../bin/gx_outp
+[ 80%] Built target gx_outp
+[ 81%] Linking Fortran executable ../../bin/ww3_uprstr
+Scanning dependencies of target ww3_shel
+[ 82%] Building Fortran object model/src/CMakeFiles/ww3_shel.dir/ww3_shel.F90.o
+[ 82%] Built target ww3_uprstr
+Scanning dependencies of target ww3_prep
+[ 83%] Building Fortran object model/src/CMakeFiles/ww3_prep.dir/ww3_prep.F90.o
+[ 84%] Linking Fortran executable ../../bin/ww3_prep
+[ 85%] Linking Fortran executable ../../bin/ww3_shel
+[ 85%] Built target ww3_prep
+Scanning dependencies of target ww3_gspl
+[ 86%] Building Fortran object model/src/CMakeFiles/ww3_gspl.dir/ww3_gspl.F90.o
+[ 86%] Built target ww3_shel
+Scanning dependencies of target ww3_multi
+[ 87%] Building Fortran object model/src/CMakeFiles/ww3_multi.dir/ww3_multi.F90.o
+[ 88%] Linking Fortran executable ../../bin/ww3_multi
+[ 88%] Built target ww3_multi
+Scanning dependencies of target ww3_systrk
+[ 89%] Building Fortran object model/src/CMakeFiles/ww3_systrk.dir/ww3_systrk.F90.o
+[ 90%] Linking Fortran executable ../../bin/ww3_gspl
+[ 90%] Built target ww3_gspl
+Scanning dependencies of target ww3_ounf
+[ 91%] Building Fortran object model/src/CMakeFiles/ww3_ounf.dir/ww3_ounf.F90.o
+[ 92%] Linking Fortran executable ../../bin/ww3_systrk
+[ 92%] Built target ww3_systrk
+Scanning dependencies of target ww3_ounp
+[ 93%] Building Fortran object model/src/CMakeFiles/ww3_ounp.dir/ww3_ounp.F90.o
+[ 94%] Linking Fortran executable ../../bin/ww3_ounp
+[ 94%] Built target ww3_ounp
+Scanning dependencies of target ww3_bounc
+[ 95%] Building Fortran object model/src/CMakeFiles/ww3_bounc.dir/ww3_bounc.F90.o
+[ 96%] Linking Fortran executable ../../bin/ww3_bounc
+[ 97%] Linking Fortran executable ../../bin/ww3_ounf
+[ 97%] Built target ww3_bounc
+Scanning dependencies of target ww3_trnc
+[ 98%] Building Fortran object model/src/CMakeFiles/ww3_trnc.dir/ww3_trnc.F90.o
+[ 98%] Built target ww3_ounf
+Scanning dependencies of target ww3_prnc
+[ 98%] Building Fortran object model/src/CMakeFiles/ww3_prnc.dir/ww3_prnc.F90.o
+[ 99%] Linking Fortran executable ../../bin/ww3_trnc
+[ 99%] Built target ww3_trnc
+[100%] Linking Fortran executable ../../bin/ww3_prnc
+[100%] Built target ww3_prnc
++ rc=0
++ ((  rc != 0  ))
++ make install
+[ 61%] Built target ww3_lib
+[ 63%] Built target ww3_strt
+[ 64%] Built target ww3_grid
+[ 66%] Built target ww3_bound
+[ 68%] Built target ww3_outf
+[ 70%] Built target ww3_outp
+[ 72%] Built target ww3_trck
+[ 74%] Built target ww3_grib
+[ 76%] Built target ww3_gint
+[ 77%] Built target gx_outf
+[ 79%] Built target gx_outp
+[ 81%] Built target ww3_uprstr
+[ 83%] Built target ww3_shel
+[ 85%] Built target ww3_prep
+[ 87%] Built target ww3_gspl
+[ 89%] Built target ww3_multi
+[ 91%] Built target ww3_systrk
+[ 93%] Built target ww3_ounf
+[ 95%] Built target ww3_ounp
+[ 97%] Built target ww3_bounc
+[ 99%] Built target ww3_trnc
+[100%] Built target ww3_prnc
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_strt
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_strt" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_grid
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_grid" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_bound
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_bound" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_outf
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_outf" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_outp
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_outp" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_trck
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_trck" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_grib
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_grib" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_gint
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_gint" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/gx_outf
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/gx_outf" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/gx_outp
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/gx_outp" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_uprstr
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_uprstr" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_shel
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_shel" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_prep
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_prep" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_gspl
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_gspl" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_multi
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_multi" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_systrk
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_systrk" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_ounf
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_ounf" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_ounp
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_ounp" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_bounc
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_bounc" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_trnc
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_trnc" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_prnc
+-- Set runtime path of "/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_prnc" to ""
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/lib/libww3.a
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/switch
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3nmlshelmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3metamd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3sdb1md.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3timemd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3idatmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3uqckmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3nmlmultimd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3ounfmetamd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/wminitmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3nmlbouncmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3nmlboundmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3triamd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/wmfinlmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3iosfmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3strkmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3cspcmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3iogrmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3fld1md.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3nmluprstrmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3nmlounpmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3nmlgridmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3gridmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/wmmdatmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/wav_grdout.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/wminiomd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3initmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3wdatmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3gsrumd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3src4md.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3iopomd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3nmltrncmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3odatmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3dispmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3iogoncdmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3tidemd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/wmunitmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3fld2md.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/wmiopomd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3wavemd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3iotrmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3nmlprncmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3bullmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3iogomd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3parall.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/wmupdtmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3iorsmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3sbt1md.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3arrymd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3adatmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3nmlounfmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/constants.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3srcemd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3iobcmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3pro3md.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3profsmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3gdatmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3fldsmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/wmgridmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3wdasmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3servmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/wmwavemd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3partmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3snl1md.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/wav_shr_flags.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/mod/w3updtmd.mod
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/lib/cmake/WW3/WW3-config.cmake
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/lib/cmake/WW3/WW3-config-version.cmake
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/lib/cmake/WW3/WW3-targets.cmake
+-- Installing: /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/lib/cmake/WW3/WW3-targets-release.cmake
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_grid /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_prep /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_prnc /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_grid /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_outp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_outf /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_outp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_gint /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_ounf /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_ounp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/install/bin/ww3_grib /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec/
++ rc=0
++ ((  rc != 0  ))
++ echo 'executables are in /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec'
+executables are in /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec
++ echo 'cleaning up /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD'
+cleaning up /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ rm -rf /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ exit 0
