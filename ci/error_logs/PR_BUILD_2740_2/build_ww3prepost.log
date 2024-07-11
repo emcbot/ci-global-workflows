@@ -1,0 +1,55 @@
+++ dirname ./build_ww3prepost.sh
++ script_dir=.
++ cd .
++ APP=S2SWA
++ PDLIB=ON
++ getopts :j:a:dvw option
++ case "${option}" in
++ PDLIB=OFF
++ getopts :j:a:dvw option
++ case "${option}" in
++ BUILD_JOBS=2
++ getopts :j:a:dvw option
++ [[ S2SWA == \A\T\M\W ]]
++ [[ OFF == \O\N ]]
++ ww3switch=model/bin/switch_meshcap
++ [[ ! -d ../exec ]]
+++ pwd -P
++ finalexecdir=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/../exec
++ set +x
++ cd ufs_model.fd/WW3
+++ pwd -P
++ WW3_DIR=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3
++ export WW3_DIR
++ export SWITCHFILE=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/bin/switch_meshcap
++ SWITCHFILE=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/bin/switch_meshcap
++ prep_exes='ww3_grid ww3_prep ww3_prnc ww3_grid'
++ post_exes='ww3_outp ww3_outf ww3_outp ww3_gint ww3_ounf ww3_ounp ww3_grib'
++ path_build=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ [[ -d /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD ]]
++ mkdir -p /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ cd /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD
++ echo 'Forcing a SHRD build'
+Forcing a SHRD build
++ buildswitch=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch
++ cat /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/model/bin/switch_meshcap
++ sed -e s/DIST/SHRD/g -e 's/OMPG / /g' -e 's/OMPH / /g' -e 's/MPIT / /g' -e 's/MPI / /g' -e 's/B4B / /g' -e 's/PDLIB / /g' -e 's/SCOTCH / /g' -e 's/METIS / /g' -e s/NOGRB/NCEP2/g /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/tempswitch
++ rm /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/tempswitch
++ echo 'Switch file is /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch with switches:'
+Switch file is /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch with switches:
++ cat /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch
+NCO NCEP2 SHRD    PR3 UQ FLX0 SEED ST4 STAB0 NL1 BT1 DB1 MLIM FLD2 TR0 BS0 RWND WNX1 WNT1 CRX1 CRT1 O0 O1 O2 O3 O4 O5 O6 O7 O14 O15 IC0 IS0 REF0
++ MAKE_OPT=-DCMAKE_INSTALL_PREFIX=install
++ [[ Release = \D\e\b\u\g ]]
++ cmake /scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3 -DSWITCH=/scratch1/NCEPDEV/global/CI/2740/gefs/sorc/ufs_model.fd/WW3/build_SHRD/switch -DCMAKE_INSTALL_PREFIX=install
+-- The C compiler identification is Intel 2021.5.0.20211109
+-- The Fortran compiler identification is Intel 2021.5.0.20211109
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /apps/oneapi/mpi/2021.5.1/bin/mpiicc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - failed
+-- Check for working Fortran compiler: /apps/oneapi/mpi/2021.5.1/bin/mpiifort
+./build_ww3prepost.sh: line 98: 4019134 Terminated              cmake "${WW3_DIR}" -DSWITCH="${buildswitch}" ${MAKE_OPT}
