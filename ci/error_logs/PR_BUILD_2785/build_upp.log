@@ -1,0 +1,25 @@
+++ dirname ./build_upp.sh
++ script_dir=.
++ cd .
++ OPTIND=1
++ _opts=
++ getopts :dj:v option
++ case "${option}" in
++ BUILD_JOBS=2
++ getopts :dj:v option
++ shift 2
++ [[ ! -d ../exec ]]
++ cd ufs_model.fd/FV3/upp/tests
++ BUILD_JOBS=2
++ ./compile_upp.sh
+Building for machine orion, compiler intel
+Lmod has detected the following error: Cannot load module
+"stack-intel/2022.0.2" without these module(s) loaded:
+   intel/2022.1.2
+
+While processing the following module(s):
+    Module fullname       Module Filename
+    ---------------       ---------------
+    stack-intel/2022.0.2  /work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env/install/modulefiles/Core/stack-intel/2022.0.2.lua
+    orion                 /work2/noaa/stmp/CI/ORION/2785/gfs/sorc/ufs_model.fd/FV3/upp/modulefiles/orion.lua
+
