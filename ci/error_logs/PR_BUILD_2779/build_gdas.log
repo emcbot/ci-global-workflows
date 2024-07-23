@@ -1,0 +1,649 @@
++ OPTIND=1
++ _opts='-f '
++ getopts :j:dv option
++ case "${option}" in
++ BUILD_JOBS=8
++ getopts :j:dv option
++ shift 2
++ BUILD_JOBS=8
++ WORKFLOW_BUILD=ON
++ ./gdas.cd/build.sh -f -f
+Building GDASApp on hercules
+-------------------------------------------------------------------------------
+The following dependent module(s) are not currently loaded: py-numpy/1.22.3 (required by: bufr/12.0.1), python/3.10.13 (required by: boost/1.83.0, bufr/12.0.1, fckit/0.11.0, atlas/0.35.1, py-pybind11/2.11.0)
+-------------------------------------------------------------------------------
+
+Currently Loaded Modules:
+  1) intel-oneapi-compilers/2023.1.0  33) openblas/0.3.24
+  2) stack-intel/2021.9.0             34) eckit/1.24.5
+  3) intel-oneapi-mpi/2021.9.0        35) fftw/3.3.10
+  4) stack-intel-oneapi-mpi/2021.9.0  36) fckit/0.11.0
+  5) cmake/3.23.1                     37) fiat/1.2.0
+  6) nghttp2/1.57.0                   38) ectrans/1.2.0
+  7) curl/8.4.0                       39) fms/2023.04
+  8) zlib/1.2.13                      40) qhull/2020.2
+  9) git/2.31.1                       41) atlas/0.35.1
+ 10) hdf5/1.14.0                      42) sp/2.5.0
+ 11) parallel-netcdf/1.12.2           43) gsl-lite/0.37.0
+ 12) snappy/1.1.10                    44) libjpeg/2.1.0
+ 13) zstd/1.5.2                       45) krb5/1.20.1
+ 14) c-blosc/1.21.5                   46) libtirpc/1.3.3
+ 15) netcdf-c/4.9.2                   47) hdf/4.2.15
+ 16) nccmp/1.9.0.1                    48) jedi-cmake/1.4.0
+ 17) netcdf-fortran/4.6.1             49) libpng/1.6.37
+ 18) antlr/2.7.7                      50) libxt/1.1.5
+ 19) gsl/2.7.1                        51) libxmu/1.1.4
+ 20) nco/5.0.6                        52) libxpm/3.5.12
+ 21) parallelio/2.5.10                53) libxaw/1.0.13
+ 22) wget/1.21.1                      54) udunits/2.2.28
+ 23) pigz/2.7                         55) ncview/2.1.9
+ 24) tar/1.34                         56) netcdf-cxx4/4.3.1
+ 25) gettext/0.21.1                   57) py-pybind11/2.11.0
+ 26) boost/1.83.0                     58) contrib/0.1
+ 27) bufr/12.0.1                      59) noaatools/3.1
+ 28) git-lfs/3.1.2                    60) rocoto/1.3.7
+ 29) ecbuild/3.7.2                    61) hpc/1.2.0
+ 30) openjpeg/2.3.1                   62) miniconda3/4.6.14
+ 31) eccodes/2.32.0                   63) gdasapp/1.0.0
+ 32) eigen/3.4.0                      64) GDAS/hercules.intel
+
+ 
+
+Configuring ...
++ cmake -DMPIEXEC_EXECUTABLE=/opt/slurm/bin/srun -DMPIEXEC_NUMPROC_FLAG=-n -DBUILD_GSIBEC=ON -DCLONE_JCSDADATA=NO -DMACHINE=hercules -DWORKFLOW_TESTS=ON /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/bundle
+-- The C compiler identification is Intel 2021.9.0.20230302
+-- The CXX compiler identification is Intel 2021.9.0.20230302
+-- The Fortran compiler identification is Intel 2021.9.0.20230302
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiicc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiicpc - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiifort - skipped
+-- ecbuild   3.7.2	/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/ecbuild-3.7.2-wj5csa2/share/ecbuild/cmake
+-- cmake     3.23.1	/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/cmake-3.23.1-uqaeynr/bin/cmake
+-- ---------------------------------------------------------
+-- Found Git: /usr/bin/git (found version "2.31.1") 
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of void*
+-- Check size of void* - done
+-- Check size of off_t
+-- Check size of off_t - done
+-- ---------------------------------------------------------
+-- ---------------------------------------------------------
+-- [GDAS-bundle] (1.0.0)
+-- Feature TESTS enabled
+-- Found Python3: /work2/noaa/da/python/opt/core/miniconda3/4.6.14/envs/gdasapp/bin/python3.7 (found version "3.7.12") found components: Interpreter 
+-- Feature TESTS enabled
+-- ---------------------------------------------------------
+-- Adding bundle project jedicmake
+-- ---------------------------------------------------------
+-- Skipping bundle project eckit
+-- ---------------------------------------------------------
+-- Skipping bundle project fckit
+-- ---------------------------------------------------------
+-- Skipping bundle project atlas
+-- ---------------------------------------------------------
+-- Adding bundle project crtm
+-- ---------------------------------------------------------
+-- [crtm] (2.4.1)
+-- Feature TESTS enabled
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF::NetCDF_Fortran [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so]
+-- ---------------------------------------------------------
+-- [CRTM_Tests] (1.0.1)
+-- Feature TESTS enabled
+-- download CRTM coeffs files from: https://bin.ssec.wisc.edu/pub/s4/CRTM/file to /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/test_data/crtm/2.4.1_skylab_4.0
+-- Hostname: hercules-login-2.hpc.msstate.edu
+-- Host FQDN: hercules-login-2.hpc.msstate.edu
+-- The lsb_release command cannot be found. Using defaults.
+-- Git Branch (set CDASH_OVERRIDE_GIT_BRANCH to force): GIT_BRANCH_UNSPECIFIED
+-- System ID: Linux_5.14.0-162.6.1.el9_1.0.1.x86_64_#1 SMP PREEMPT_DYNAMIC Mon Nov 28 18:44:09 UTC 2022
+-- Compilers: Intel_2021.9.0.20230302
+-- Build: GIT_BRANCH_UNSPECIFIED;Linux_5.14.0-162.6.1.el9_1.0.1.x86_64_#1 SMP PREEMPT_DYNAMIC Mon Nov 28 18:44:09 UTC 2022_conda;Intel_2021.9.0.20230302;RelWithDebInfo
+-- Site: hercules-login-2.hpc.msstate.edu
+-- ---------------------------------------------------------
+-- Adding bundle project gsibec
+-- Found ecbuild: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/ecbuild-3.7.2-wj5csa2/share/ecbuild/cmake (found suitable version "3.7.2", minimum required is "3.3.2") 
+-- ---------------------------------------------------------
+-- [gsibec] (1.2.1)
+-- Feature TESTS enabled
+-- Could NOT find MKL (missing: MKL_LIBRARIES MKL_INCLUDE_DIRS) 
+-- Looking for Fortran sgemm
+-- Looking for Fortran sgemm - not found
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Looking for Fortran sgemm
+-- Looking for Fortran sgemm - found
+-- Found BLAS: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/openblas-0.3.24-zsule7f/lib/libopenblas.so  
+-- Looking for Fortran cheev
+-- Looking for Fortran cheev - found
+-- Found LAPACK: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/openblas-0.3.24-zsule7f/lib/libopenblas.so;-lm;-ldl  
+-- Found MPI_Fortran: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiifort (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found MPI_C: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiicc (found version "3.1") 
+-- Found MPI_CXX: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiicpc (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so 
+-- Found sp: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/sp-2.5.0-hidqzcr/lib64/libsp_4.a (found version "2.5.0")
+-- ---------------------------------------------------------
+-- Adding bundle project gsw
+-- ---------------------------------------------------------
+-- [gsw] (3.0.8)
+-- Feature TESTS enabled
+-- ---------------------------------------------------------
+-- Adding bundle project oops
+-- ---------------------------------------------------------
+-- [oops] (1.10.0)
+-- Feature TESTS enabled
+-- Could NOT find MKL (missing: MKL_LIBRARIES MKL_INCLUDE_DIRS) 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: C CXX Fortran 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so 
+-- Found Boost: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/boost-1.83.0-siqjtiz/lib/cmake/Boost-1.83.0/BoostConfig.cmake (found suitable version "1.83.0", minimum required is "1.64.0")  
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found addr2line at /usr/bin/addr2line.
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_addr2line
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_addr2line - Failed
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_addr2line_nognus
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_addr2line_nognus - Failed
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_addr2line_gnus
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_addr2line_gnus - Failed
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_default
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_default - Success
+-- Using this provider for stacktraces: default.
+-- ---------------------------------------------------------
+-- Adding bundle project vader
+-- ---------------------------------------------------------
+-- [vader] (1.7.0)
+-- Feature TESTS enabled
+-- VADER variables
+--   - ENABLE_VADER_DOC: OFF
+-- Found MPI: TRUE (found version "3.1") found components: C Fortran 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: CXX Fortran 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so 
+-- GSW FOUND; Including Marine Recipes gsw (3.0.8)
+-- ---------------------------------------------------------
+-- Adding bundle project saber
+-- ---------------------------------------------------------
+-- [saber] (1.10.0)
+-- Feature TESTS enabled
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Could NOT find MKL (missing: MKL_LIBRARIES MKL_INCLUDE_DIRS) 
+-- Found Boost: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/boost-1.83.0-siqjtiz/lib/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+-- Could NOT find MKL (missing: MKL_LIBRARIES MKL_INCLUDE_DIRS) 
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.7.3") 
+-- Found sp: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/sp-2.5.0-hidqzcr/lib64/libsp_4.a (found version "2.5.0")
+-- SABER block GSI is enabled
+-- SABER block FastLAM spectral layer is enabled
+-- SABER block SPECTRALB is enabled
+-- SABER blocks based on VADER are enabled
+-- SABER instrumentation is not enabled
+-- Offline code coverage is not enabled
+-- Setup QUENCH data links
+-- SABER tests activated:
+--   - TIER 1 base
+--   - TIER 1 FastLAM-specific
+--   - TIER 1 FastLAM-specific - FFTW
+--   - TIER 1 GSI-GEOS-specific
+--   - TIER 1 GSI-GFS-specific
+--   - TIER 1 SPECTRALB-specific
+--   - TIER 1 VADER-specific
+-- Setup SABER directories and links
+-- Tests parallel configuration: MPI: 1 / OMP: 1
+-- Tests parallel configuration: MPI: 2 / OMP: 1
+-- Tests parallel configuration: MPI: 4 / OMP: 1
+-- SABER documentation is not enabled
+-- ---------------------------------------------------------
+-- Adding bundle project ioda
+-- ---------------------------------------------------------
+-- [ioda] (2.9.0)
+-- Feature TESTS enabled
+-- Found OpenMP_C: -qopenmp (found version "5.0") 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: C CXX Fortran 
+-- Found HDF5: hdf5-shared (found version "1.14.0") found components: C HL 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found udunits: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/udunits-2.2.28-sprwyzo/lib/libudunits2.so (Required is at least version "2.2.0") 
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so 
+-- Found Boost: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/boost-1.83.0-siqjtiz/lib/cmake/Boost-1.83.0/BoostConfig.cmake (found suitable version "1.83.0", minimum required is "1.64.0")  
+-- Found Python3: /work2/noaa/da/python/opt/core/miniconda3/4.6.14/envs/gdasapp/bin/python3.7 (found version "3.7.12") found components: Interpreter Development Development.Module Development.Embed 
+-- Performing Test HAS_INTEL_IPO
+-- Performing Test HAS_INTEL_IPO - Success
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_abiclr.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_ahiclr.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_aircraft.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_aircraft_write.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_airs.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_altimeter.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_amsr.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_amsub.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_ascatsm.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_aod.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_aod_write.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_aod_write_testdatasets.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_atms.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_atms_write.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_atovs.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_atovs_write.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_cris.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_crisfsr.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_geocloud.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_gmihigh.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_gmihigh_write.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_gmilow.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_gnssro.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_gnssro_profile.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_groundgps.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_hirasfsr.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_hloswind.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_iasi.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_iasi_write.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_mwri.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_mwsfy3.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_oceancolour.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_oceansound.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_oceansound_truncate_profiles.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_satsst.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sattcwv.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_satwind.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_scatwind.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_seaice.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_seviriclr.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde_history.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde_mixed.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde_time_displacement.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde_truncate_profiles.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde_write.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde_write_mixed.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_ssmis.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_surface.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_surfacecloud.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_surfacesst.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//odb_default_name_map.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//odb_aircraft_name_map.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//odb_gnssro_name_map.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//odb_gnssro_profile_name_map.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//odb_oceansound_name_map.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//odb_radiance_name_map.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//odb_sonde_name_map.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//odb_surface_name_map.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//odb_surfacesst_name_map.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ioda/share/test/testinput//validation//ObsSpace.yaml
+-- Use test data from ioda-data repository
+-- ---------------------------------------------------------
+-- Adding bundle project ufo
+-- ---------------------------------------------------------
+-- [ufo] (1.10.0)
+-- Feature TESTS enabled
+-- Found MPI: TRUE (found version "3.1") found components: C CXX Fortran 
+-- Found Boost: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/boost-1.83.0-siqjtiz/lib/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: C CXX Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- CRTM FOUND; Including CRTM Observation Operator (2.4.1)
+-- RTTOV NOT FOUND; Excluding RTTOV Radiance Observation Operator
+-- GSW FOUND; Including Marine Observation Operators (3.0.8)
+-- ROPP NOT FOUND: Excluding GNSSRO Bending angle ROPP Operators
+-- GEOS-AERO NOT FOUND: Excluding AOD operator from GEOS
+-- OASIM NOT FOUND: Excluding Ocean Atmosphere Spectral Irradiance Model
+-- Download test data from https://bin.ssec.wisc.edu/pub/s4/CRTM/file/crtm_coefficients_2.4.1_skylab_4.0.tar.gz
+-- Use test data from ufo-data repository
+-- Running ufo tests for tiers up to and including tier 1
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/auxillary
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/auxillary/IASI_EmisEigenVec.dat
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/bmatrix
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov/iasi_bmatrix_70_test.dat
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov/gmihigh_bmatrix_70_test.dat
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov/amsr_bmatrix_70_test.dat
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov/ssmis_bmatrix_70_test.dat
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov/atms_bmatrix_70_test.dat
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov/atovs_bmatrix_70_test.dat
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/bmatrix/gnssro
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/bmatrix/gnssro/gnssro_bmatrix.txt
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/namemap
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/namemap/test_name_map.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/namemap/bayesian_name_map.yaml
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/rmatrix
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov/ssmis_dmspf17_rmatrix_test.nc4
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov/atovs_metopb_rmatrix_test.nc4
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov/amsr_gcomw1_rmatrix_test.nc4
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov/iasi_metopb_rmatrix_test.nc4
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov/atms_noaa_20_rmatrix_test.nc4
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov/gmihigh_gpm_rmatrix_test.nc4
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/rmatrix/gnssro
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/rmatrix/gnssro/gnssro_ba_rmatrix_latitude.nl
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/rmatrix/gnssro/gnssro_ba_rmatrix_latitude.nc4
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/rmatrix/gnssro/gnssro_ba_rmatrix.nl
+-- Installing: /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/ufo/resources/rmatrix/gnssro/gnssro_ba_rmatrix_avtemp.nl
+WARNWE ARE USING fv3-interface.cmake
+-- ---------------------------------------------------------
+-- Adding bundle project fv3
+CMake Warning (dev) at fv3/CMakeLists.txt:18 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  Environment variable ecbuild_ROOT is set to:
+
+    /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/ecbuild-3.7.2-wj5csa2
+
+  For compatibility, CMake is ignoring the variable.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found ecbuild: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/ecbuild-3.7.2-wj5csa2/share/ecbuild/cmake (found suitable version "3.7.2", minimum required is "3.6") 
+-- ---------------------------------------------------------
+-- [fv3] (1.3.0)
+-- Feature TESTS enabled
+-- Performing Test C_COMPILER_SUPPORTS_OMP
+-- Performing Test C_COMPILER_SUPPORTS_OMP - Success
+-- Performing Test CXX_COMPILER_SUPPORTS_OMP
+-- Performing Test CXX_COMPILER_SUPPORTS_OMP - Success
+-- Performing Test Fortran_COMPILER_SUPPORTS_OMP
+-- Performing Test Fortran_COMPILER_SUPPORTS_OMP - Success
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so 
+-- Found MPI: TRUE (found version "3.1") found components: CXX Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found FMS: "/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/fms-2023.04-73x5ipk" (Version: "2023.4.0")
+-- FMS targets:
+--   - FMS::fms_r4 [Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/fms-2023.04-73x5ipk/lib/libfms_r4.a]
+-- ---------------------------------------------------------
+-- Adding bundle project femps
+CMake Warning (dev) at femps/CMakeLists.txt:7 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  Environment variable ecbuild_ROOT is set to:
+
+    /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/ecbuild-3.7.2-wj5csa2
+
+  For compatibility, CMake is ignoring the variable.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- ---------------------------------------------------------
+-- [femps] (1.3.0)
+-- Feature TESTS enabled
+-- Feature TESTS enabled
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so 
+-- ---------------------------------------------------------
+-- Adding bundle project fv3-jedi-lm
+CMake Warning (dev) at fv3-jedi-lm/CMakeLists.txt:18 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  Environment variable ecbuild_ROOT is set to:
+
+    /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/ecbuild-3.7.2-wj5csa2
+
+  For compatibility, CMake is ignoring the variable.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- ---------------------------------------------------------
+-- [fv3jedilm] (1.5.0)
+-- Feature TESTS enabled
+-- Could NOT find MKL (missing: MKL_LIBRARIES MKL_INCLUDE_DIRS) 
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- fv3jedilm FOUND MPI
+-- Found package MPI required for feature MPI
+-- Feature MPI enabled
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so 
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found FMS: "/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/fms-2023.04-73x5ipk" (Version: "2023.4.0")
+-- FMS targets:
+--   - FMS::fms_r4 [Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/fms-2023.04-73x5ipk/lib/libfms_r4.a]
+-- ---------------------------------------------------------
+-- Adding bundle project fv3-jedi
+CMake Warning (dev) at fv3-jedi/CMakeLists.txt:20 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  Environment variable ecbuild_ROOT is set to:
+
+    /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/ecbuild-3.7.2-wj5csa2
+
+  For compatibility, CMake is ignoring the variable.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- ---------------------------------------------------------
+-- [fv3jedi] (1.9.0)
+-- Feature TESTS enabled
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Found sp: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/sp-2.5.0-hidqzcr/lib64/libsp_4.a (found version "2.5.0")
+-- Could NOT find MKL (missing: MKL_LIBRARIES MKL_INCLUDE_DIRS) 
+-- FFTW targets:
+--     FFTW::fftw3 (double precision)  [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/fftw-3.3.10-botgfbj/lib/libfftw3.so]
+-- Found FFTW: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/fftw-3.3.10-botgfbj/include  found components: double 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- FV3-SABER block GSI is enabled
+-- Found sp: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/sp-2.5.0-hidqzcr/lib64/libsp_4.a (found version "2.5.0")
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: C CXX Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: CXX Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found FMS: "/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/fms-2023.04-73x5ipk" (Version: "2023.4.0")
+-- FMS targets:
+--   - FMS::fms_r4 [Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/fms-2023.04-73x5ipk/lib/libfms_r4.a]
+-- Use crtm test data provided by ufo in /work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/bundle/test-data-release/crtm/2.4.1_skylab_4.0/
+-- Use test data from fv3-jedi-data repository
+CMake Error: failed to create symbolic link '/work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/fv3-jedi/test/Data/inputs/gfs_c12/mem000': No such file or directory
+-- Running fv3jedi tests for tiers up to and including tier 1
+-- ---------------------------------------------------------
+-- Adding bundle project icepack
+CMake Warning (dev) at icepack/CMakeLists.txt:14 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  Environment variable ecbuild_ROOT is set to:
+
+    /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/ecbuild-3.7.2-wj5csa2
+
+  For compatibility, CMake is ignoring the variable.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found ecbuild: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/ecbuild-3.7.2-wj5csa2/share/ecbuild/cmake (found suitable version "3.7.2", minimum required is "3.3.2") 
+-- ---------------------------------------------------------
+-- [icepack] (1.2.0)
+-- Feature TESTS enabled
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: C Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: C Fortran 
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF::NetCDF_Fortran [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so]
+-- ---------------------------------------------------------
+-- Adding bundle project soca
+-- ---------------------------------------------------------
+-- [soca] (1.8.0)
+-- Feature TESTS enabled
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: Fortran C 
+-- FindNetCDF defines targets:
+--   - NetCDF::NetCDF_Fortran [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so]
+--   - NetCDF::NetCDF_C [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so]
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: CXX Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Found sp: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/sp-2.5.0-hidqzcr/lib64/libsp_4.a (found version "2.5.0")
+-- Could NOT find MKL (missing: MKL_LIBRARIES MKL_INCLUDE_DIRS) 
+-- FFTW targets:
+--     FFTW::fftw3 (double precision)  [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/fftw-3.3.10-botgfbj/lib/libfftw3.so]
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: C CXX Fortran 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2")  
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so 
+-- Found FMS: "/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/fms-2023.04-73x5ipk" (Version: "2023.4.0")
+-- FMS targets:
+--   - FMS::fms_r4 [Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/fms-2023.04-73x5ipk/lib/libfms_r4.a]
+CMake Error at soca/CMakeLists.txt:35 (find_package):
+  By not providing "Findmom6.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "mom6", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "mom6" (requested
+  version 2020.4.0) with any of the following names:
+
+    mom6Config.cmake
+    mom6-config.cmake
+
+  Add the installation prefix of "mom6" to CMAKE_PREFIX_PATH or set
+  "mom6_DIR" to a directory containing one of the above files.  If "mom6"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/CMakeFiles/CMakeOutput.log".
+See also "/work2/noaa/stmp/CI/HERCULES/2779/gfs/sorc/gdas.cd/build/CMakeFiles/CMakeError.log".
