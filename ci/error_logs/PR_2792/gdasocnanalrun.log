@@ -1,0 +1,1819 @@
+Begin ocnanalrun.sh at Tue Aug  6 10:16:37 UTC 2024
++ ocnanalrun.sh[7]: . /scratch1/NCEPDEV/global/CI/2792/gfs/ush/load_ufsda_modules.sh
+++ load_ufsda_modules.sh[4]: [[ NO == \N\O ]]
+++ load_ufsda_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_ufsda_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) contrib                          48) atlas/0.35.1
+  2) intel/2022.1.2                   49) sp/2.5.0
+  3) stack-intel/2021.5.0             50) gsl-lite/0.37.0
+  4) impi/2022.1.2                    51) libjpeg/2.1.0
+  5) stack-intel-oneapi-mpi/2021.5.1  52) krb5/1.20.1
+  6) cmake/3.23.1                     53) libtirpc/1.3.3
+  7) gettext/0.19.8.1                 54) hdf/4.2.15
+  8) pcre2/10.42                      55) jedi-cmake/1.4.0
+  9) nghttp2/1.57.0                   56) libpng/1.6.37
+ 10) curl/8.4.0                       57) libxt/1.1.5
+ 11) zlib/1.2.13                      58) libxmu/1.1.4
+ 12) git/2.18.0                       59) libxpm/4.11.0
+ 13) pkg-config/0.27.1                60) libxaw/1.0.13
+ 14) hdf5/1.14.0                      61) udunits/2.2.28
+ 15) parallel-netcdf/1.12.2           62) ncview/2.1.9
+ 16) snappy/1.1.10                    63) netcdf-cxx4/4.3.1
+ 17) zstd/1.5.2                       64) json/3.10.5
+ 18) c-blosc/1.21.5                   65) rocoto/1.3.6
+ 19) netcdf-c/4.9.2                   66) bacio/2.4.1
+ 20) nccmp/1.9.0.1                    67) w3emc/2.10.0
+ 21) netcdf-fortran/4.6.1             68) prod_util/2.1.1
+ 22) antlr/2.7.7                      69) py-markupsafe/2.1.3
+ 23) gsl/2.7.1                        70) py-jinja2/3.0.3
+ 24) nco/5.0.6                        71) py-cftime/1.0.3.4
+ 25) parallelio/2.5.10                72) py-netcdf4/1.5.8
+ 26) wget/1.14                        73) py-pybind11/2.11.0
+ 27) libxcrypt/4.4.35                 74) py-pycodestyle/2.11.0
+ 28) sqlite/3.43.2                    75) libyaml/0.2.5
+ 29) util-linux-uuid/2.38.1           76) py-pyyaml/6.0
+ 30) python/3.10.13                   77) py-scipy/1.11.3
+ 31) boost/1.83.0                     78) py-packaging/23.1
+ 32) py-setuptools/63.4.3             79) py-bottleneck/1.3.7
+ 33) py-numpy/1.22.3                  80) py-numexpr/2.8.4
+ 34) bufr/12.0.1                      81) py-et-xmlfile/1.0.1
+ 35) git-lfs/2.10.0                   82) py-openpyxl/3.1.2
+ 36) ecbuild/3.7.2                    83) py-six/1.16.0
+ 37) openjpeg/2.3.1                   84) py-python-dateutil/2.8.2
+ 38) eccodes/2.32.0                   85) py-pytz/2023.3
+ 39) eigen/3.4.0                      86) py-pyxlsb/1.0.10
+ 40) openblas/0.3.24                  87) py-xlrd/2.0.1
+ 41) eckit/1.24.5                     88) py-xlsxwriter/3.1.7
+ 42) fftw/3.3.10                      89) py-xlwt/1.3.0
+ 43) fckit/0.11.0                     90) py-pandas/1.5.3
+ 44) fiat/1.2.0                       91) py-xarray/2023.7.0
+ 45) fms/2023.04                      92) py-f90nml/1.4.3
+ 46) ectrans/1.2.0                    93) py-pip/23.1.2
+ 47) qhull/2020.2                     94) GDAS/hera.intel
+
+ 
+
+Package         Version
+--------------- --------
+Bottleneck      1.3.7
+cftime          1.0.3.4
+et-xmlfile      1.0.1
+f90nml          1.4.3
+Jinja2          3.0.3
+MarkupSafe      2.1.3
+netCDF4         1.5.8
+numexpr         2.8.4
+numpy           1.22.3
+openpyxl        3.1.2
+packaging       23.1
+pandas          1.5.3
+pip             23.1.2
+pybind11        2.11.0
+pycodestyle     2.11.0
+python-dateutil 2.8.2
+pytz            2023.3
+pyxlsb          1.0.10
+PyYAML          6.0
+scipy           1.11.3
+setuptools      63.4.3
+six             1.16.0
+xarray          2023.7.0
+xlrd            2.0.1
+XlsxWriter      3.1.7
+xlwt            1.3.0
++ ocnanalrun.sh[8]: status=0
++ ocnanalrun.sh[9]: [[ 0 -ne 0 ]]
++ ocnanalrun.sh[11]: export job=ocnanalrun
++ ocnanalrun.sh[11]: job=ocnanalrun
++ ocnanalrun.sh[12]: export jobid=ocnanalrun.3151910
++ ocnanalrun.sh[12]: jobid=ocnanalrun.3151910
++ ocnanalrun.sh[16]: /scratch1/NCEPDEV/global/CI/2792/gfs/jobs/JGDAS_GLOBAL_OCEAN_ANALYSIS_RUN
+Begin JGDAS_GLOBAL_OCEAN_ANALYSIS_RUN at Tue Aug  6 10:17:03 UTC 2024
++ JGDAS_GLOBAL_OCEAN_ANALYSIS_RUN[3]: export WIPE_DATA=NO
++ JGDAS_GLOBAL_OCEAN_ANALYSIS_RUN[3]: WIPE_DATA=NO
++ JGDAS_GLOBAL_OCEAN_ANALYSIS_RUN[4]: export DATA=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18
++ JGDAS_GLOBAL_OCEAN_ANALYSIS_RUN[4]: DATA=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18
++ JGDAS_GLOBAL_OCEAN_ANALYSIS_RUN[5]: source /scratch1/NCEPDEV/global/CI/2792/gfs/ush/jjob_header.sh -e ocnanalrun -c 'base ocnanal ocnanalrun'
+++ jjob_header.sh[44]: OPTIND=1
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[48]: env_job=ocnanalrun
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[46]: case "${option}" in
+++ jjob_header.sh[47]: read -ra configs
+++ jjob_header.sh[45]: getopts c:e: option
+++ jjob_header.sh[59]: shift 4
+++ jjob_header.sh[61]: [[ -z ocnanalrun ]]
+++ jjob_header.sh[69]: export DATA=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18
+++ jjob_header.sh[69]: DATA=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18
+++ jjob_header.sh[70]: [[ NO == \Y\E\S ]]
+++ jjob_header.sh[73]: mkdir -p /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18
+++ jjob_header.sh[74]: cd /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18
+++ jjob_header.sh[80]: export cycle=t18z
+++ jjob_header.sh[80]: cycle=t18z
+++ jjob_header.sh[81]: setpdy.sh
+sed: can't read /scratch1/NCEPDEV/global/CI/2792/RUNTESTS/COMROOT/date/t18z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[82]: source ./PDY
++++ PDY[1]: export PDYm7=20210317
++++ PDY[1]: PDYm7=20210317
++++ PDY[2]: export PDYm6=20210318
++++ PDY[2]: PDYm6=20210318
++++ PDY[3]: export PDYm5=20210319
++++ PDY[3]: PDYm5=20210319
++++ PDY[4]: export PDYm4=20210320
++++ PDY[4]: PDYm4=20210320
++++ PDY[5]: export PDYm3=20210321
++++ PDY[5]: PDYm3=20210321
++++ PDY[6]: export PDYm2=20210322
++++ PDY[6]: PDYm2=20210322
++++ PDY[7]: export PDYm1=20210323
++++ PDY[7]: PDYm1=20210323
++++ PDY[8]: export PDY=20210324
++++ PDY[8]: PDY=20210324
++++ PDY[9]: export PDYp1=20210325
++++ PDY[9]: PDYp1=20210325
++++ PDY[10]: export PDYp2=20210326
++++ PDY[10]: PDYp2=20210326
++++ PDY[11]: export PDYp3=20210327
++++ PDY[11]: PDYp3=20210327
++++ PDY[12]: export PDYp4=20210328
++++ PDY[12]: PDYp4=20210328
++++ PDY[13]: export PDYp5=20210329
++++ PDY[13]: PDYp5=20210329
++++ PDY[14]: export PDYp6=20210330
++++ PDY[14]: PDYp6=20210330
++++ PDY[15]: export PDYp7=20210331
++++ PDY[15]: PDYp7=20210331
+++ jjob_header.sh[88]: export pid=3152613
+++ jjob_header.sh[88]: pid=3152613
+++ jjob_header.sh[89]: export pgmout=OUTPUT.3152613
+++ jjob_header.sh[89]: pgmout=OUTPUT.3152613
+++ jjob_header.sh[90]: export pgmerr=errfile
+++ jjob_header.sh[90]: pgmerr=errfile
+++ jjob_header.sh[96]: export EXPDIR=/scratch1/NCEPDEV/global/CI/2792/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_586800cb
+++ jjob_header.sh[96]: EXPDIR=/scratch1/NCEPDEV/global/CI/2792/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_586800cb
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /scratch1/NCEPDEV/global/CI/2792/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_586800cb/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=HERA
++++ config.base[9]: machine=HERA
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=nems
++++ config.base[15]: ACCOUNT=nems
++++ config.base[16]: export QUEUE=batch
++++ config.base[16]: QUEUE=batch
++++ config.base[17]: export QUEUE_SERVICE=batch
++++ config.base[17]: QUEUE_SERVICE=batch
++++ config.base[18]: export PARTITION_BATCH=hera
++++ config.base[18]: PARTITION_BATCH=hera
++++ config.base[19]: export PARTITION_SERVICE=service
++++ config.base[19]: PARTITION_SERVICE=service
++++ config.base[20]: export RESERVATION=
++++ config.base[20]: RESERVATION=
++++ config.base[21]: export CLUSTERS=
++++ config.base[21]: CLUSTERS=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/scratch1/NCEPDEV/global/CI/2792/gfs
++++ config.base[27]: HOMEgfs=/scratch1/NCEPDEV/global/CI/2792/gfs
++++ config.base[28]: export EXECgfs=/scratch1/NCEPDEV/global/CI/2792/gfs/exec
++++ config.base[28]: EXECgfs=/scratch1/NCEPDEV/global/CI/2792/gfs/exec
++++ config.base[29]: export FIXgfs=/scratch1/NCEPDEV/global/CI/2792/gfs/fix
++++ config.base[29]: FIXgfs=/scratch1/NCEPDEV/global/CI/2792/gfs/fix
++++ config.base[30]: export PARMgfs=/scratch1/NCEPDEV/global/CI/2792/gfs/parm
++++ config.base[30]: PARMgfs=/scratch1/NCEPDEV/global/CI/2792/gfs/parm
++++ config.base[31]: export SCRgfs=/scratch1/NCEPDEV/global/CI/2792/gfs/scripts
++++ config.base[31]: SCRgfs=/scratch1/NCEPDEV/global/CI/2792/gfs/scripts
++++ config.base[32]: export USHgfs=/scratch1/NCEPDEV/global/CI/2792/gfs/ush
++++ config.base[32]: USHgfs=/scratch1/NCEPDEV/global/CI/2792/gfs/ush
++++ config.base[34]: export FIXam=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/am
++++ config.base[34]: FIXam=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/am
++++ config.base[35]: export FIXaer=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/aer
++++ config.base[35]: FIXaer=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/aer
++++ config.base[36]: export FIXcpl=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/cpl
++++ config.base[36]: FIXcpl=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/cpl
++++ config.base[37]: export FIXlut=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/lut
++++ config.base[37]: FIXlut=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/lut
++++ config.base[38]: export FIXcice=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/cice
++++ config.base[38]: FIXcice=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/cice
++++ config.base[39]: export FIXmom=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/mom6
++++ config.base[39]: FIXmom=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/mom6
++++ config.base[40]: export FIXreg2grb2=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/reg2grb2
++++ config.base[40]: FIXreg2grb2=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/reg2grb2
++++ config.base[41]: export FIXgdas=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/gdas
++++ config.base[41]: FIXgdas=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/gdas
++++ config.base[46]: export PACKAGEROOT=/scratch1/NCEPDEV/global/glopara/nwpara
++++ config.base[46]: PACKAGEROOT=/scratch1/NCEPDEV/global/glopara/nwpara
++++ config.base[47]: export COMROOT=/scratch1/NCEPDEV/global/CI/2792/RUNTESTS/COMROOT
++++ config.base[47]: COMROOT=/scratch1/NCEPDEV/global/CI/2792/RUNTESTS/COMROOT
++++ config.base[48]: export COMINsyn=/scratch1/NCEPDEV/global/glopara/com/gfs/prod/syndat
++++ config.base[48]: COMINsyn=/scratch1/NCEPDEV/global/glopara/com/gfs/prod/syndat
++++ config.base[49]: export DMPDIR=/scratch1/NCEPDEV/global/glopara/dump
++++ config.base[49]: DMPDIR=/scratch1/NCEPDEV/global/glopara/dump
++++ config.base[50]: export BASE_CPLIC=/scratch1/NCEPDEV/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[50]: BASE_CPLIC=/scratch1/NCEPDEV/global/glopara/data/ICSDIR/prototype_ICs
++++ config.base[54]: export COMINecmwf=/scratch1/NCEPDEV/global/glopara/data/external_gempak/ecmwf
++++ config.base[54]: COMINecmwf=/scratch1/NCEPDEV/global/glopara/data/external_gempak/ecmwf
++++ config.base[55]: export COMINnam=/scratch1/NCEPDEV/global/glopara/data/external_gempak/nam
++++ config.base[55]: COMINnam=/scratch1/NCEPDEV/global/glopara/data/external_gempak/nam
++++ config.base[56]: export COMINukmet=/scratch1/NCEPDEV/global/glopara/data/external_gempak/ukmet
++++ config.base[56]: COMINukmet=/scratch1/NCEPDEV/global/glopara/data/external_gempak/ukmet
++++ config.base[59]: export HOMEDIR=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[59]: HOMEDIR=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[60]: export STMP=/scratch1/NCEPDEV/stmp2/Terry.McGuinness
++++ config.base[60]: STMP=/scratch1/NCEPDEV/stmp2/Terry.McGuinness
++++ config.base[61]: export PTMP=/scratch1/NCEPDEV/stmp4/Terry.McGuinness
++++ config.base[61]: PTMP=/scratch1/NCEPDEV/stmp4/Terry.McGuinness
++++ config.base[62]: export NOSCRUB=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[62]: NOSCRUB=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[65]: export BASE_GIT=/scratch1/NCEPDEV/global/glopara/git
++++ config.base[65]: BASE_GIT=/scratch1/NCEPDEV/global/glopara/git
++++ config.base[68]: export DO_GOES=NO
++++ config.base[68]: DO_GOES=NO
++++ config.base[69]: export DO_BUFRSND=NO
++++ config.base[69]: DO_BUFRSND=NO
++++ config.base[70]: export DO_GEMPAK=NO
++++ config.base[70]: DO_GEMPAK=NO
++++ config.base[71]: export DO_AWIPS=NO
++++ config.base[71]: DO_AWIPS=NO
++++ config.base[72]: export DO_NPOESS=NO
++++ config.base[72]: DO_NPOESS=NO
++++ config.base[73]: export DO_TRACKER=YES
++++ config.base[73]: DO_TRACKER=YES
++++ config.base[74]: export DO_GENESIS=YES
++++ config.base[74]: DO_GENESIS=YES
++++ config.base[75]: export DO_GENESIS_FSU=NO
++++ config.base[75]: DO_GENESIS_FSU=NO
++++ config.base[76]: export DO_VERFOZN=YES
++++ config.base[76]: DO_VERFOZN=YES
++++ config.base[77]: export DO_VERFRAD=YES
++++ config.base[77]: DO_VERFRAD=YES
++++ config.base[78]: export DO_VMINMON=YES
++++ config.base[78]: DO_VMINMON=YES
++++ config.base[79]: export DO_MOS=NO
++++ config.base[79]: DO_MOS=NO
++++ config.base[85]: export REALTIME=YES
++++ config.base[85]: REALTIME=YES
++++ config.base[88]: export MODE=cycled
++++ config.base[88]: MODE=cycled
++++ config.base[97]: export FIXgsi=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/gsi
++++ config.base[97]: FIXgsi=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/gsi
++++ config.base[98]: export HOMEpost=/scratch1/NCEPDEV/global/CI/2792/gfs
++++ config.base[98]: HOMEpost=/scratch1/NCEPDEV/global/CI/2792/gfs
++++ config.base[99]: export HOMEobsproc=/scratch1/NCEPDEV/global/glopara/git/obsproc/v1.1.2
++++ config.base[99]: HOMEobsproc=/scratch1/NCEPDEV/global/glopara/git/obsproc/v1.1.2
++++ config.base[102]: export 'NCP=/bin/cp -p'
++++ config.base[102]: NCP='/bin/cp -p'
++++ config.base[103]: export NMV=/bin/mv
++++ config.base[103]: NMV=/bin/mv
++++ config.base[104]: export 'NLN=/bin/ln -sf'
++++ config.base[104]: NLN='/bin/ln -sf'
++++ config.base[105]: export VERBOSE=YES
++++ config.base[105]: VERBOSE=YES
++++ config.base[106]: export KEEPDATA=NO
++++ config.base[106]: KEEPDATA=NO
++++ config.base[107]: export DEBUG_POSTSCRIPT=NO
++++ config.base[107]: DEBUG_POSTSCRIPT=NO
++++ config.base[108]: export CHGRP_RSTPROD=YES
++++ config.base[108]: CHGRP_RSTPROD=YES
++++ config.base[109]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[109]: CHGRP_CMD='chgrp rstprod'
++++ config.base[110]: export NCDUMP=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/bin/ncdump/bin/ncdump
++++ config.base[110]: NCDUMP=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/bin/ncdump/bin/ncdump
++++ config.base[111]: export NCLEN=/scratch1/NCEPDEV/global/CI/2792/gfs/ush/getncdimlen
++++ config.base[111]: NCLEN=/scratch1/NCEPDEV/global/CI/2792/gfs/ush/getncdimlen
++++ config.base[114]: export BASE_ENV=/scratch1/NCEPDEV/global/CI/2792/gfs/env
++++ config.base[114]: BASE_ENV=/scratch1/NCEPDEV/global/CI/2792/gfs/env
++++ config.base[115]: export BASE_JOB=/scratch1/NCEPDEV/global/CI/2792/gfs/jobs/rocoto
++++ config.base[115]: BASE_JOB=/scratch1/NCEPDEV/global/CI/2792/gfs/jobs/rocoto
++++ config.base[118]: export SDATE=2021032412
++++ config.base[118]: SDATE=2021032412
++++ config.base[119]: export EDATE=2021032418
++++ config.base[119]: EDATE=2021032418
++++ config.base[120]: export EXP_WARM_START=.true.
++++ config.base[120]: EXP_WARM_START=.true.
++++ config.base[121]: export assim_freq=6
++++ config.base[121]: assim_freq=6
++++ config.base[122]: export PSLOT=C48mx500_3DVarAOWCDA_586800cb
++++ config.base[122]: PSLOT=C48mx500_3DVarAOWCDA_586800cb
++++ config.base[123]: export EXPDIR=/scratch1/NCEPDEV/global/CI/2792/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_586800cb
++++ config.base[123]: EXPDIR=/scratch1/NCEPDEV/global/CI/2792/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_586800cb
++++ config.base[124]: export ROTDIR=/scratch1/NCEPDEV/global/CI/2792/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_586800cb
++++ config.base[124]: ROTDIR=/scratch1/NCEPDEV/global/CI/2792/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_586800cb
++++ config.base[125]: export ROTDIR_DUMP=YES
++++ config.base[125]: ROTDIR_DUMP=YES
++++ config.base[126]: export DUMP_SUFFIX=
++++ config.base[126]: DUMP_SUFFIX=
++++ config.base[127]: [[ 2021032418 -ge 2019092100 ]]
++++ config.base[127]: [[ 2021032418 -le 2019110700 ]]
++++ config.base[130]: export DATAROOT=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb
++++ config.base[130]: DATAROOT=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb
++++ config.base[131]: export ARCDIR=/scratch1/NCEPDEV/global/Terry.McGuinness/archive/C48mx500_3DVarAOWCDA_586800cb
++++ config.base[131]: ARCDIR=/scratch1/NCEPDEV/global/Terry.McGuinness/archive/C48mx500_3DVarAOWCDA_586800cb
++++ config.base[132]: export ATARDIR=/NCEPDEV/emc-global/1year/Terry.McGuinness/HERA/scratch/C48mx500_3DVarAOWCDA_586800cb
++++ config.base[132]: ATARDIR=/NCEPDEV/emc-global/1year/Terry.McGuinness/HERA/scratch/C48mx500_3DVarAOWCDA_586800cb
++++ config.base[135]: export envir=prod
++++ config.base[135]: envir=prod
++++ config.base[136]: export NET=gfs
++++ config.base[136]: NET=gfs
++++ config.base[137]: export RUN=gdas
++++ config.base[137]: RUN=gdas
++++ config.base[140]: source /scratch1/NCEPDEV/global/CI/2792/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_586800cb/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[78]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[79]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[81]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/history'
+++++ config.com[82]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/restart'
+++++ config.com[83]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/input'
+++++ config.com[84]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[85]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[86]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[87]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[88]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[90]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[91]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[92]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/input'
+++++ config.com[93]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/history'
+++++ config.com[94]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/restart'
+++++ config.com[95]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[96]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[97]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[99]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/chem/history'
+++++ config.com[100]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[102]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/med/restart'
++++ config.base[143]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[143]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[144]: export LOGSCRIPT=
++++ config.base[144]: LOGSCRIPT=
++++ config.base[147]: export 'REDOUT=1>'
++++ config.base[147]: REDOUT='1>'
++++ config.base[148]: export 'REDERR=2>'
++++ config.base[148]: REDERR='2>'
++++ config.base[150]: export SENDECF=NO
++++ config.base[150]: SENDECF=NO
++++ config.base[151]: export SENDSDM=NO
++++ config.base[151]: SENDSDM=NO
++++ config.base[152]: export SENDDBN_NTC=NO
++++ config.base[152]: SENDDBN_NTC=NO
++++ config.base[153]: export SENDDBN=NO
++++ config.base[153]: SENDDBN=NO
++++ config.base[154]: export DBNROOT=/fakedbn
++++ config.base[154]: DBNROOT=/fakedbn
++++ config.base[157]: export APP=S2S
++++ config.base[157]: APP=S2S
++++ config.base[159]: shopt -s extglob
++++ config.base[161]: case "${RUN}" in
++++ config.base[168]: shopt -u extglob
++++ config.base[171]: export DO_ATM=YES
++++ config.base[171]: DO_ATM=YES
++++ config.base[172]: export DO_COUPLED=NO
++++ config.base[172]: DO_COUPLED=NO
++++ config.base[173]: export DO_WAVE=NO
++++ config.base[173]: DO_WAVE=NO
++++ config.base[174]: export DO_OCN=NO
++++ config.base[174]: DO_OCN=NO
++++ config.base[175]: export DO_ICE=NO
++++ config.base[175]: DO_ICE=NO
++++ config.base[176]: export DO_AERO=NO
++++ config.base[176]: DO_AERO=NO
++++ config.base[177]: export DO_PREP_OBS_AERO=NO
++++ config.base[177]: DO_PREP_OBS_AERO=NO
++++ config.base[178]: export AERO_FCST_RUN=
++++ config.base[178]: AERO_FCST_RUN=
++++ config.base[179]: export AERO_ANL_RUN=
++++ config.base[179]: AERO_ANL_RUN=
++++ config.base[180]: export WAVE_RUN=
++++ config.base[180]: WAVE_RUN=
++++ config.base[181]: export DOBNDPNT_WAVE=NO
++++ config.base[181]: DOBNDPNT_WAVE=NO
++++ config.base[182]: export DOIBP_WAV=NO
++++ config.base[182]: DOIBP_WAV=NO
++++ config.base[183]: export FRAC_GRID=.true.
++++ config.base[183]: FRAC_GRID=.true.
++++ config.base[184]: export DO_NEST=NO
++++ config.base[184]: DO_NEST=NO
++++ config.base[185]: [[ NO == \Y\E\S ]]
++++ config.base[191]: export ntiles=6
++++ config.base[191]: ntiles=6
++++ config.base[192]: export FIXugwd=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/ugwd
++++ config.base[192]: FIXugwd=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/ugwd
++++ config.base[193]: export FIXorog=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/orog
++++ config.base[193]: FIXorog=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/orog
++++ config.base[197]: export OPS_RES=C768
++++ config.base[197]: OPS_RES=C768
++++ config.base[200]: export LEVS=128
++++ config.base[200]: LEVS=128
++++ config.base[201]: export CASE=C48
++++ config.base[201]: CASE=C48
++++ config.base[202]: export CASE_ENS=@CASEENS@
++++ config.base[202]: CASE_ENS=@CASEENS@
++++ config.base[203]: export OCNRES=500
++++ config.base[203]: OCNRES=500
++++ config.base[204]: export ICERES=500
++++ config.base[204]: ICERES=500
++++ config.base[207]: case "${CASE}" in
++++ config.base[209]: export waveGRD=uglo_100km
++++ config.base[209]: waveGRD=uglo_100km
++++ config.base[226]: case "${APP}" in
++++ config.base[245]: export DO_COUPLED=YES
++++ config.base[245]: DO_COUPLED=YES
++++ config.base[246]: export DO_OCN=YES
++++ config.base[246]: DO_OCN=YES
++++ config.base[247]: export DO_ICE=YES
++++ config.base[247]: DO_ICE=YES
++++ config.base[249]: [[ S2S =~ A$ ]]
++++ config.base[255]: [[ S2S =~ ^S2SW ]]
++++ config.base[267]: [[ gdas =~ gdas ]]
++++ config.base[268]: export FHCYC=1
++++ config.base[268]: FHCYC=1
++++ config.base[269]: export FTSFS=10
++++ config.base[269]: FTSFS=10
++++ config.base[275]: export FHMIN=0
++++ config.base[275]: FHMIN=0
++++ config.base[276]: export FHMAX=9
++++ config.base[276]: FHMAX=9
++++ config.base[277]: export FHOUT=3
++++ config.base[277]: FHOUT=3
++++ config.base[278]: export FHOUT_OCN=3
++++ config.base[278]: FHOUT_OCN=3
++++ config.base[279]: export FHOUT_ICE=3
++++ config.base[279]: FHOUT_ICE=3
++++ config.base[282]: export EUPD_CYC=gdas
++++ config.base[282]: EUPD_CYC=gdas
++++ config.base[285]: export gfs_cyc=0
++++ config.base[285]: gfs_cyc=0
++++ config.base[288]: export FHMIN_GFS=0
++++ config.base[288]: FHMIN_GFS=0
++++ config.base[289]: export FHMAX_GFS=120
++++ config.base[289]: FHMAX_GFS=120
++++ config.base[290]: export FHOUT_GFS=3
++++ config.base[290]: FHOUT_GFS=3
++++ config.base[291]: export FHMAX_HF_GFS=0
++++ config.base[291]: FHMAX_HF_GFS=0
++++ config.base[292]: export FHOUT_HF_GFS=1
++++ config.base[292]: FHOUT_HF_GFS=1
++++ config.base[293]: export FHOUT_OCN_GFS=6
++++ config.base[293]: FHOUT_OCN_GFS=6
++++ config.base[294]: export FHOUT_ICE_GFS=6
++++ config.base[294]: FHOUT_ICE_GFS=6
++++ config.base[295]: export FHMIN_WAV=0
++++ config.base[295]: FHMIN_WAV=0
++++ config.base[296]: export FHOUT_WAV=3
++++ config.base[296]: FHOUT_WAV=3
++++ config.base[297]: export FHMAX_HF_WAV=120
++++ config.base[297]: FHMAX_HF_WAV=120
++++ config.base[298]: export FHOUT_HF_WAV=1
++++ config.base[298]: FHOUT_HF_WAV=1
++++ config.base[299]: export FHMAX_WAV=9
++++ config.base[299]: FHMAX_WAV=9
++++ config.base[300]: export FHMAX_WAV_GFS=120
++++ config.base[300]: FHMAX_WAV_GFS=120
++++ config.base[301]: ((  gfs_cyc != 0  ))
++++ config.base[304]: export STEP_GFS=0
++++ config.base[304]: STEP_GFS=0
++++ config.base[307]: export ILPOST=1
++++ config.base[307]: ILPOST=1
++++ config.base[308]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[309]: export ILPOST=3
++++ config.base[309]: ILPOST=3
++++ config.base[313]: export FHMAX_GOES=180
++++ config.base[313]: FHMAX_GOES=180
++++ config.base[314]: export FHOUT_GOES=3
++++ config.base[314]: FHOUT_GOES=3
++++ config.base[315]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[316]: export FHMAX_GOES=120
++++ config.base[316]: FHMAX_GOES=120
++++ config.base[320]: export restart_interval_gfs=12
++++ config.base[320]: restart_interval_gfs=12
++++ config.base[325]: export QUILTING=.true.
++++ config.base[325]: QUILTING=.true.
++++ config.base[326]: export OUTPUT_GRID=gaussian_grid
++++ config.base[326]: OUTPUT_GRID=gaussian_grid
++++ config.base[327]: export WRITE_DOPOST=.true.
++++ config.base[327]: WRITE_DOPOST=.true.
++++ config.base[328]: export WRITE_NSFLIP=.true.
++++ config.base[328]: WRITE_NSFLIP=.true.
++++ config.base[331]: export DOIAU=YES
++++ config.base[331]: DOIAU=YES
++++ config.base[332]: export IAUFHRS=3,6,9
++++ config.base[332]: IAUFHRS=3,6,9
++++ config.base[333]: export IAU_FHROT=3
++++ config.base[333]: IAU_FHROT=3
++++ config.base[334]: export IAU_DELTHRS=6
++++ config.base[334]: IAU_DELTHRS=6
++++ config.base[335]: export IAU_OFFSET=6
++++ config.base[335]: IAU_OFFSET=6
++++ config.base[336]: export DOIAU_ENKF=YES
++++ config.base[336]: DOIAU_ENKF=YES
++++ config.base[337]: export IAUFHRS_ENKF=3,6,9
++++ config.base[337]: IAUFHRS_ENKF=3,6,9
++++ config.base[338]: export IAU_DELTHRS_ENKF=6
++++ config.base[338]: IAU_DELTHRS_ENKF=6
++++ config.base[341]: export lobsdiag_forenkf=.true.
++++ config.base[341]: lobsdiag_forenkf=.true.
++++ config.base[349]: export imp_physics=8
++++ config.base[349]: imp_physics=8
++++ config.base[353]: export DO_JEDIATMVAR=NO
++++ config.base[353]: DO_JEDIATMVAR=NO
++++ config.base[354]: export DO_JEDIATMENS=NO
++++ config.base[354]: DO_JEDIATMENS=NO
++++ config.base[355]: export DO_JEDIOCNVAR=YES
++++ config.base[355]: DO_JEDIOCNVAR=YES
++++ config.base[356]: export DO_JEDISNOWDA=NO
++++ config.base[356]: DO_JEDISNOWDA=NO
++++ config.base[357]: export DO_MERGENSST=NO
++++ config.base[357]: DO_MERGENSST=NO
++++ config.base[360]: export DOHYBVAR=NO
++++ config.base[360]: DOHYBVAR=NO
++++ config.base[361]: export NMEM_ENS=0
++++ config.base[361]: NMEM_ENS=0
++++ config.base[362]: export SMOOTH_ENKF=NO
++++ config.base[362]: SMOOTH_ENKF=NO
++++ config.base[363]: export l4densvar=.true.
++++ config.base[363]: l4densvar=.true.
++++ config.base[364]: export lwrite4danl=.true.
++++ config.base[364]: lwrite4danl=.true.
++++ config.base[365]: export DO_CALC_INCREMENT=NO
++++ config.base[365]: DO_CALC_INCREMENT=NO
++++ config.base[368]: export NMEM_ENS_GFS=30
++++ config.base[368]: NMEM_ENS_GFS=30
++++ config.base[369]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[369]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[370]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[370]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[373]: [[ NO = \Y\E\S ]]
++++ config.base[387]: [[ NO == \N\O ]]
++++ config.base[387]: [[ YES == \Y\E\S ]]
++++ config.base[388]: export IAUFHRS=6
++++ config.base[388]: IAUFHRS=6
++++ config.base[389]: export IAU_FHROT=3
++++ config.base[389]: IAU_FHROT=3
++++ config.base[390]: export IAU_FILTER_INCREMENTS=.true.
++++ config.base[390]: IAU_FILTER_INCREMENTS=.true.
++++ config.base[391]: export IAUFHRS_ENKF=6
++++ config.base[391]: IAUFHRS_ENKF=6
++++ config.base[395]: export ENKF_SPREAD=YES
++++ config.base[395]: ENKF_SPREAD=YES
++++ config.base[398]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[398]: [[ 2021032412 = \2\0\2\1\0\3\2\4\1\8 ]]
++++ config.base[398]: [[ YES = \N\O ]]
++++ config.base[398]: [[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[404]: [[ YES = \N\O ]]
++++ config.base[408]: [[ YES == \Y\E\S ]]
++++ config.base[409]: export restart_interval_enkfgdas=3
++++ config.base[409]: restart_interval_enkfgdas=3
++++ config.base[414]: export restart_interval_enkfgfs=3
++++ config.base[414]: restart_interval_enkfgfs=3
++++ config.base[416]: [[ YES == \Y\E\S ]]
++++ config.base[417]: export restart_interval_gdas=3
++++ config.base[417]: restart_interval_gdas=3
++++ config.base[422]: export GSI_SOILANAL=NO
++++ config.base[422]: GSI_SOILANAL=NO
++++ config.base[425]: export DONST=YES
++++ config.base[425]: DONST=YES
++++ config.base[426]: [[ YES = \Y\E\S ]]
++++ config.base[426]: export 'FNTSFA=        '
++++ config.base[426]: FNTSFA='        '
++++ config.base[429]: export nst_anl=.true.
++++ config.base[429]: nst_anl=.true.
++++ config.base[432]: export MAKE_NSSTBUFR=NO
++++ config.base[432]: MAKE_NSSTBUFR=NO
++++ config.base[435]: export MAKE_ACFTBUFR=NO
++++ config.base[435]: MAKE_ACFTBUFR=NO
++++ config.base[438]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[438]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[441]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[441]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[442]: export INCVARS_EFOLD=5
++++ config.base[442]: INCVARS_EFOLD=5
++++ config.base[447]: export netcdf_diag=.true.
++++ config.base[447]: netcdf_diag=.true.
++++ config.base[448]: export binary_diag=.false.
++++ config.base[448]: binary_diag=.false.
++++ config.base[451]: export DO_METP=YES
++++ config.base[451]: DO_METP=YES
++++ config.base[452]: export DO_FIT2OBS=YES
++++ config.base[452]: DO_FIT2OBS=YES
++++ config.base[453]: export DO_VRFY_OCEANDA=NO
++++ config.base[453]: DO_VRFY_OCEANDA=NO
++++ config.base[456]: export FHMAX_FITS=132
++++ config.base[456]: FHMAX_FITS=132
++++ config.base[457]: [[ 132 -gt 120 ]]
++++ config.base[457]: export FHMAX_FITS=120
++++ config.base[457]: FHMAX_FITS=120
++++ config.base[460]: export HPSSARCH=YES
++++ config.base[460]: HPSSARCH=YES
++++ config.base[461]: export LOCALARCH=NO
++++ config.base[461]: LOCALARCH=NO
++++ config.base[462]: [[ YES = \Y\E\S ]]
++++ config.base[462]: [[ NO = \Y\E\S ]]
++++ config.base[466]: export ARCH_CYC=00
++++ config.base[466]: ARCH_CYC=00
++++ config.base[467]: export ARCH_WARMICFREQ=4
++++ config.base[467]: ARCH_WARMICFREQ=4
++++ config.base[468]: export ARCH_FCSTICFREQ=1
++++ config.base[468]: ARCH_FCSTICFREQ=1
++++ config.base[471]: [[ NO = \Y\E\S ]]
++++ config.base[478]: export REPLAY_ICS=NO
++++ config.base[478]: REPLAY_ICS=NO
++++ config.base[479]: export OFFSET_START_HOUR=0
++++ config.base[479]: OFFSET_START_HOUR=0
++++ config.base[482]: export NUM_SND_COLLECTIVES=9
++++ config.base[482]: NUM_SND_COLLECTIVES=9
++++ config.base[484]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /scratch1/NCEPDEV/global/CI/2792/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_586800cb/config.ocnanal
++++ config.ocnanal[6]: echo 'BEGIN: config.ocnanal'
+BEGIN: config.ocnanal
++++ config.ocnanal[8]: export OBS_YAML_DIR=/scratch1/NCEPDEV/global/CI/2792/gfs/sorc/gdas.cd/parm/soca/obs/config
++++ config.ocnanal[8]: OBS_YAML_DIR=/scratch1/NCEPDEV/global/CI/2792/gfs/sorc/gdas.cd/parm/soca/obs/config
++++ config.ocnanal[9]: export OBS_LIST=/scratch1/NCEPDEV/global/CI/2792/gfs/parm/gdas/soca/obs/obs_list.yaml
++++ config.ocnanal[9]: OBS_LIST=/scratch1/NCEPDEV/global/CI/2792/gfs/parm/gdas/soca/obs/obs_list.yaml
++++ config.ocnanal[10]: export OBS_YAML=/scratch1/NCEPDEV/global/CI/2792/gfs/parm/gdas/soca/obs/obs_list.yaml
++++ config.ocnanal[10]: OBS_YAML=/scratch1/NCEPDEV/global/CI/2792/gfs/parm/gdas/soca/obs/obs_list.yaml
++++ config.ocnanal[11]: export SOCA_INPUT_FIX_DIR=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/gdas/soca/72x35x25/soca
++++ config.ocnanal[11]: SOCA_INPUT_FIX_DIR=/scratch1/NCEPDEV/global/CI/2792/gfs/fix/gdas/soca/72x35x25/soca
++++ config.ocnanal[12]: export SOCA_NINNER=100
++++ config.ocnanal[12]: SOCA_NINNER=100
++++ config.ocnanal[13]: export DOMAIN_STACK_SIZE=116640000
++++ config.ocnanal[13]: DOMAIN_STACK_SIZE=116640000
++++ config.ocnanal[14]: export SOCA_ENS_BKG_STAGE_YAML_TMPL=/scratch1/NCEPDEV/global/CI/2792/gfs/parm/gdas/soca/soca_ens_bkg_stage.yaml.j2
++++ config.ocnanal[14]: SOCA_ENS_BKG_STAGE_YAML_TMPL=/scratch1/NCEPDEV/global/CI/2792/gfs/parm/gdas/soca/soca_ens_bkg_stage.yaml.j2
++++ config.ocnanal[15]: export SOCA_FIX_YAML_TMPL=/scratch1/NCEPDEV/global/CI/2792/gfs/parm/gdas/soca/soca_fix_stage_500.yaml.j2
++++ config.ocnanal[15]: SOCA_FIX_YAML_TMPL=/scratch1/NCEPDEV/global/CI/2792/gfs/parm/gdas/soca/soca_fix_stage_500.yaml.j2
++++ config.ocnanal[17]: export JEDI_BIN=/scratch1/NCEPDEV/global/CI/2792/gfs/sorc/gdas.cd/build/bin
++++ config.ocnanal[17]: JEDI_BIN=/scratch1/NCEPDEV/global/CI/2792/gfs/sorc/gdas.cd/build/bin
++++ config.ocnanal[20]: echo 'END: config.ocnanal'
+END: config.ocnanal
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[97]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[98]: source /scratch1/NCEPDEV/global/CI/2792/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_586800cb/config.ocnanalrun
++++ config.ocnanalrun[6]: echo 'BEGIN: config.ocnanalrun'
+BEGIN: config.ocnanalrun
++++ config.ocnanalrun[9]: . /scratch1/NCEPDEV/global/CI/2792/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_586800cb/config.resources ocnanalrun
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=ocnanalrun
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[45]: max_tasks_per_node=40
+++++ config.resources[47]: mem_node_max=96GB
+++++ config.resources[126]: export max_tasks_per_node
+++++ config.resources[128]: case ${step} in
+++++ config.resources[461]: ntasks=16
+++++ config.resources[462]: case ${OCNRES} in
+++++ config.resources[472]: ntasks=16
+++++ config.resources[473]: memory=24GB
+++++ config.resources[480]: walltime=00:15:00
+++++ config.resources[481]: threads_per_task=1
+++++ config.resources[482]: export is_exclusive=True
+++++ config.resources[482]: is_exclusive=True
+++++ config.resources[483]: tasks_per_node=40
+++++ config.resources[1282]: [[ -f /scratch1/NCEPDEV/global/CI/2792/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_586800cb/config.resources.HERA ]]
+++++ config.resources[1283]: source /scratch1/NCEPDEV/global/CI/2792/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_586800cb/config.resources.HERA
++++++ config.resources.HERA[5]: case ${step} in
+++++ config.resources[1287]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1288]: run_resource_var=threads_per_task_gdas
+++++ config.resources[1289]: [[ -n '' ]]
+++++ config.resources[1291]: [[ -n 0 ]]
+++++ config.resources[1292]: export threads_per_task
+++++ config.resources[1287]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1288]: run_resource_var=ntasks_gdas
+++++ config.resources[1289]: [[ -n '' ]]
+++++ config.resources[1291]: [[ -n 0 ]]
+++++ config.resources[1292]: export ntasks
+++++ config.resources[1287]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1288]: run_resource_var=tasks_per_node_gdas
+++++ config.resources[1289]: [[ -n '' ]]
+++++ config.resources[1291]: [[ -n 0 ]]
+++++ config.resources[1292]: export tasks_per_node
+++++ config.resources[1287]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1288]: run_resource_var=NTASKS_gdas
+++++ config.resources[1289]: [[ -n '' ]]
+++++ config.resources[1291]: [[ -n '' ]]
+++++ config.resources[1287]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1288]: run_resource_var=memory_gdas
+++++ config.resources[1289]: [[ -n '' ]]
+++++ config.resources[1291]: [[ -n 0 ]]
+++++ config.resources[1292]: export memory
+++++ config.resources[1287]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1288]: run_resource_var=walltime_gdas
+++++ config.resources[1289]: [[ -n '' ]]
+++++ config.resources[1291]: [[ -n 0 ]]
+++++ config.resources[1292]: export walltime
+++++ config.resources[1296]: echo 'END: config.resources'
+END: config.resources
++++ config.ocnanalrun[11]: echo 'END: config.ocnanalrun'
+END: config.ocnanalrun
+++ jjob_header.sh[99]: status=0
+++ jjob_header.sh[100]: ((  status != 0  ))
+++ jjob_header.sh[110]: source /scratch1/NCEPDEV/global/CI/2792/gfs/env/HERA.env ocnanalrun
++++ HERA.env[3]: [[ 1 -ne 1 ]]
++++ HERA.env[10]: step=ocnanalrun
++++ HERA.env[12]: export 'launcher=srun -l --export=ALL'
++++ HERA.env[12]: launcher='srun -l --export=ALL'
++++ HERA.env[13]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ HERA.env[13]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ HERA.env[24]: export OMP_STACKSIZE=2048000
++++ HERA.env[24]: OMP_STACKSIZE=2048000
++++ HERA.env[25]: export NTHSTACK=1024000000
++++ HERA.env[25]: NTHSTACK=1024000000
++++ HERA.env[29]: [[ -n 64565037 ]]
++++ HERA.env[30]: ulimit -s unlimited
++++ HERA.env[31]: ulimit -a
+core file size          (blocks, -c) unlimited
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 379963
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) 25165824
+open files                      (-n) 131072
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 379963
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
++++ HERA.env[36]: [[ -n 16 ]]
++++ HERA.env[36]: [[ -n 40 ]]
++++ HERA.env[36]: [[ -n 40 ]]
++++ HERA.env[37]: max_threads_per_task=1
++++ HERA.env[38]: NTHREADSmax=1
++++ HERA.env[39]: NTHREADS1=1
++++ HERA.env[40]: [[ 1 -gt 1 ]]
++++ HERA.env[41]: [[ 1 -gt 1 ]]
++++ HERA.env[42]: APRUN='srun -l --export=ALL -n 16'
++++ HERA.env[48]: [[ ocnanalrun = \p\r\e\p ]]
++++ HERA.env[48]: [[ ocnanalrun = \p\r\e\p\b\u\f\r ]]
++++ HERA.env[55]: [[ ocnanalrun = \p\r\e\p\s\n\o\w\o\b\s ]]
++++ HERA.env[59]: [[ ocnanalrun = \p\r\e\p\_\e\m\i\s\s\i\o\n\s ]]
++++ HERA.env[63]: [[ ocnanalrun = \w\a\v\e\i\n\i\t ]]
++++ HERA.env[63]: [[ ocnanalrun = \w\a\v\e\p\r\e\p ]]
++++ HERA.env[63]: [[ ocnanalrun = \w\a\v\e\p\o\s\t\s\b\s ]]
++++ HERA.env[63]: [[ ocnanalrun = \w\a\v\e\p\o\s\t\b\n\d\p\n\t ]]
++++ HERA.env[63]: [[ ocnanalrun = \w\a\v\e\p\o\s\t\b\n\d\p\n\t\b\l\l ]]
++++ HERA.env[63]: [[ ocnanalrun = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ HERA.env[70]: [[ ocnanalrun = \a\t\m\a\n\l\v\a\r ]]
++++ HERA.env[75]: [[ ocnanalrun = \a\t\m\e\n\s\a\n\l\l\e\t\k\f ]]
++++ HERA.env[80]: [[ ocnanalrun = \a\t\m\e\n\s\a\n\l\f\v\3\i\n\c ]]
++++ HERA.env[85]: [[ ocnanalrun = \a\e\r\o\a\n\l\r\u\n ]]
++++ HERA.env[92]: [[ ocnanalrun = \a\t\m\a\n\l\f\v\3\i\n\c ]]
++++ HERA.env[97]: [[ ocnanalrun = \p\r\e\p\o\b\s\a\e\r\o ]]
++++ HERA.env[102]: [[ ocnanalrun = \s\n\o\w\a\n\l ]]
++++ HERA.env[109]: [[ ocnanalrun = \m\a\r\i\n\e\b\m\a\t ]]
++++ HERA.env[114]: [[ ocnanalrun = \m\a\r\i\n\e\b\m\a\t ]]
++++ HERA.env[119]: [[ ocnanalrun = \o\c\n\a\n\a\l\r\u\n ]]
++++ HERA.env[121]: export 'APRUNCFP=srun -l --export=ALL -n $ncmd --multi-prog'
++++ HERA.env[121]: APRUNCFP='srun -l --export=ALL -n $ncmd --multi-prog'
++++ HERA.env[123]: export 'APRUN_OCNANAL=srun -l --export=ALL -n 16'
++++ HERA.env[123]: APRUN_OCNANAL='srun -l --export=ALL -n 16'
+++ jjob_header.sh[111]: status=0
+++ jjob_header.sh[112]: ((  status != 0  ))
++ JGDAS_GLOBAL_OCEAN_ANALYSIS_RUN[20]: EXSCRIPT=/scratch1/NCEPDEV/global/CI/2792/gfs/sorc/gdas.cd/scripts/exgdas_global_marine_analysis_run.sh
++ JGDAS_GLOBAL_OCEAN_ANALYSIS_RUN[21]: /scratch1/NCEPDEV/global/CI/2792/gfs/sorc/gdas.cd/scripts/exgdas_global_marine_analysis_run.sh
+Tue Aug 6 10:17:20 UTC 2024 EXECUTING /scratch1/NCEPDEV/global/CI/2792/gfs/sorc/gdas.cd/scripts/exgdas_global_marine_analysis_run.sh
+++ exgdas_global_marine_analysis_run.sh[28]: pwd
++ exgdas_global_marine_analysis_run.sh[28]: pwd=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18
++ exgdas_global_marine_analysis_run.sh[31]: export 'NLN=/bin/ln -sf'
++ exgdas_global_marine_analysis_run.sh[31]: NLN='/bin/ln -sf'
++ exgdas_global_marine_analysis_run.sh[42]: cp var.yaml var_original.yaml
++ exgdas_global_marine_analysis_run.sh[43]: clean_yaml var.yaml
++ exgdas_global_marine_analysis_run.sh[36]: mv var.yaml tmp_yaml
++ exgdas_global_marine_analysis_run.sh[37]: sed -e 's/'\''//g' tmp_yaml
++ exgdas_global_marine_analysis_run.sh[44]: srun -l --export=ALL -n 16 /scratch1/NCEPDEV/global/CI/2792/gfs/sorc/gdas.cd/build/bin/gdas.x soca variational var.yaml
+ 0: OOPS Starting 2024-08-06 10:17:25 (UTC+0000)
+ 0: Configuration input file is: var.yaml
+ 0: Full configuration is:YAMLConfiguration[path=var.yaml, root={cost function => {cost type => 3D-FGAT , time window => {begin => 2021-03-24T15:00:00Z , length => PT6H} , analysis variables => (cicen,hicen,hsnon,socn,tocn,uocn,vocn,ssh) , geometry => {mom6_input_nml => mom_input.nml , fields metadata => ./fields_metadata.yaml} , model => {name => PseudoModel , tstep => PT3H , states => ({date => 2021-03-24T18:00:00Z , basename => ./bkg/ , ocn_filename => gdas.ocean.t12z.inst.f006.nc , ice_filename => gdas.ice.t12z.inst.f006.nc , read_from_file => 1},{date => 2021-03-24T21:00:00Z , basename => ./bkg/ , ocn_filename => gdas.ocean.t12z.inst.f009.nc , ice_filename => gdas.ice.t12z.inst.f009.nc , read_from_file => 1})} , background => {read_from_file => 1 , basename => ./INPUT/ , ocn_filename => MOM.res.nc , ice_filename => cice.res.nc , date => 2021-03-24T15:00:00Z , state variables => (cicen,hicen,hsnon,socn,tocn,uocn,vocn,ssh,hocn,mld,layer_depth)} , background error => {covariance model => SABER , saber central b
+ 0: lock => {saber block name => EXPLICIT_DIFFUSION , active variables => (tocn,socn,ssh,cicen) , geometry => {mom6_input_nml => mom_input.nml , fields metadata => ./fields_metadata.yaml} , group mapping => ({name => ocean , variables => (tocn,socn,ssh)},{name => ice , variables => (cicen)}) , read => {groups => ({name => ocean , horizontal => {filename => hz_ocean.nc} , vertical => {filename => vt_ocean.nc}},{name => ice , horizontal => {filename => hz_ice.nc}})}} , saber outer blocks => ({saber block name => StdDev , read => {model file => {date => 2021-03-24T18:00:00Z , basename => ./ , ocn_filename => ocean.bkgerr_stddev.nc , ice_filename => ice.bkgerr_stddev.nc , read_from_file => 3}}}) , linear variable change => {input variables => (cicen,hicen,hsnon,socn,tocn,uocn,vocn,ssh) , output variables => (cicen,hicen,hsnon,socn,tocn,uocn,vocn,ssh) , linear variable changes => ({linear variable change name => BalanceSOCA})}} , observations => {observers => ({obs space => {name => adt_rads_all , obsdatain => {engine
+ 0:  => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.adt_rads_all.2021032418.nc4}} , obsdataout => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/diags/adt_rads_all.2021032418.nc4}} , simulated variables => (absoluteDynamicTopography) , io pool => {max pool size => 1}} , get values => {time interpolation => linear} , obs operator => {name => ADT} , obs error => {covariance model => diagonal} , obs filters => ({filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_area_fraction} , minvalue => 0.9})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_surface_temperature} , minvalue => 5})},{filter => Background Check , absolute threshold => 1},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_floor_depth_below_sea_surface} , minvalue => 500})},{filter => Perform Action , action => {name
+ 0:  => assign error , error function => {name => ObsFunction/LinearCombination , options => {variables => (GeoVaLs/mesoscale_representation_error,ObsError/absoluteDynamicTopography) , coefs => (0.1,1)}}}},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_ice_area_fraction} , maxvalue => 1e-05})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/distance_from_coast} , minvalue => 100000})})},{obs space => {name => sst_avhrr_ma_l3u , obsdatain => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_avhrr_ma_l3u.2021032418.nc4}} , obsdataout => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/diags/sst_avhrr_ma_l3u.2021032418.nc4}} , simulated variables => (seaSurfaceTemperature) , io pool => {max pool size => 1}} , get values => {time interpolation => linear} , obs operator => {name => Identity , o
+ 0: bservation alias file => obsop_name_map.yaml} , obs error => {covariance model => diagonal} , obs filters => ({filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_area_fraction} , minvalue => 0.9})},{filter => Bounds Check , minvalue => 1 , maxvalue => 41},{filter => Background Check , absolute threshold => 5},{filter => Domain Check , where => ({variable => {name => ObsError/seaSurfaceTemperature} , minvalue => 1e-08})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_ice_area_fraction} , maxvalue => 1e-05})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_surface_temperature} , minvalue => -1})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/distance_from_coast} , minvalue => 100000})},{filter => Perform Action , action => {name => assign error , error function => {name => ObsFunction/LinearCombination , options => {variables => (ObsError/seaSurfaceTemperature) , coefs => (1)}}}})},{obs space => {name => sst_avhrr_mb_l3u , obsdat
+ 0: ain => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_avhrr_mb_l3u.2021032418.nc4}} , obsdataout => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/diags/sst_avhrr_mb_l3u.2021032418.nc4}} , simulated variables => (seaSurfaceTemperature) , io pool => {max pool size => 1}} , get values => {time interpolation => linear} , obs operator => {name => Identity , observation alias file => obsop_name_map.yaml} , obs error => {covariance model => diagonal} , obs filters => ({filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_area_fraction} , minvalue => 0.9})},{filter => Bounds Check , minvalue => 1 , maxvalue => 41},{filter => Background Check , absolute threshold => 5},{filter => Domain Check , where => ({variable => {name => ObsError/seaSurfaceTemperature} , minvalue => 1e-08})},{filter => Domain Check , where =
+ 0: > ({variable => {name => GeoVaLs/sea_ice_area_fraction} , maxvalue => 1e-05})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_surface_temperature} , minvalue => -1})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/distance_from_coast} , minvalue => 100000})},{filter => Perform Action , action => {name => assign error , error function => {name => ObsFunction/LinearCombination , options => {variables => (ObsError/seaSurfaceTemperature) , coefs => (1)}}}})},{obs space => {name => sst_viirs_npp_l3u , obsdatain => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_viirs_npp_l3u.2021032418.nc4}} , obsdataout => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/diags/sst_viirs_npp_l3u.2021032418.nc4}} , simulated variables => (seaSurfaceTemperature) , io pool => {max pool size => 1}} , get val
+ 0: ues => {time interpolation => linear} , obs operator => {name => Identity , observation alias file => obsop_name_map.yaml} , obs error => {covariance model => diagonal} , obs filters => ({filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_area_fraction} , minvalue => 0.9})},{filter => Bounds Check , minvalue => 1 , maxvalue => 41},{filter => Background Check , absolute threshold => 5},{filter => Domain Check , where => ({variable => {name => ObsError/seaSurfaceTemperature} , minvalue => 1e-08})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_ice_area_fraction} , maxvalue => 1e-05})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_surface_temperature} , minvalue => -1})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/distance_from_coast} , minvalue => 100000})},{filter => Perform Action , action => {name => assign error , error function => {name => ObsFunction/LinearCombination , options => {variables => (ObsError/seaSurfaceTempe
+ 0: rature) , coefs => (1)}}}})},{obs space => {name => sst_viirs_n20_l3u , obsdatain => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_viirs_n20_l3u.2021032418.nc4}} , obsdataout => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/diags/sst_viirs_n20_l3u.2021032418.nc4}} , simulated variables => (seaSurfaceTemperature) , io pool => {max pool size => 1}} , get values => {time interpolation => linear} , obs operator => {name => Identity , observation alias file => obsop_name_map.yaml} , obs error => {covariance model => diagonal} , obs filters => ({filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_area_fraction} , minvalue => 0.9})},{filter => Bounds Check , minvalue => 1 , maxvalue => 41},{filter => Background Check , absolute threshold => 5},{filter => Domain Check , where => ({variable => {name => ObsError
+ 0: /seaSurfaceTemperature} , minvalue => 1e-08})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_ice_area_fraction} , maxvalue => 1e-05})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_surface_temperature} , minvalue => -1})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/distance_from_coast} , minvalue => 100000})},{filter => Perform Action , action => {name => assign error , error function => {name => ObsFunction/LinearCombination , options => {variables => (ObsError/seaSurfaceTemperature) , coefs => (1)}}}})},{obs space => {name => sst_abi_g16_l3c , obsdatain => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_abi_g16_l3c.2021032418.nc4}} , obsdataout => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/diags/sst_abi_g16_l3c.2021032418.nc4}} , simulated variabl
+ 0: es => (seaSurfaceTemperature) , io pool => {max pool size => 1}} , get values => {time interpolation => linear} , obs operator => {name => Identity , observation alias file => obsop_name_map.yaml} , obs error => {covariance model => diagonal} , obs filters => ({filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_area_fraction} , minvalue => 0.9})},{filter => Bounds Check , minvalue => 1 , maxvalue => 41},{filter => Background Check , absolute threshold => 5},{filter => Domain Check , where => ({variable => {name => ObsError/seaSurfaceTemperature} , minvalue => 1e-08})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_ice_area_fraction} , maxvalue => 1e-05})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_surface_temperature} , minvalue => -1})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/distance_from_coast} , minvalue => 100000})},{filter => Perform Action , action => {name => assign error , error function => {name => ObsFunct
+ 0: ion/LinearCombination , options => {variables => (ObsError/seaSurfaceTemperature) , coefs => (1)}}}})},{obs space => {name => sst_abi_g17_l3c , obsdatain => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_abi_g17_l3c.2021032418.nc4}} , obsdataout => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/diags/sst_abi_g17_l3c.2021032418.nc4}} , simulated variables => (seaSurfaceTemperature) , io pool => {max pool size => 1}} , get values => {time interpolation => linear} , obs operator => {name => Identity , observation alias file => obsop_name_map.yaml} , obs error => {covariance model => diagonal} , obs filters => ({filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_area_fraction} , minvalue => 0.9})},{filter => Bounds Check , minvalue => 1 , maxvalue => 41},{filter => Background Check , absolute threshold => 5
+ 0: },{filter => Domain Check , where => ({variable => {name => ObsError/seaSurfaceTemperature} , minvalue => 1e-08})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_ice_area_fraction} , maxvalue => 1e-05})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_surface_temperature} , minvalue => -1})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/distance_from_coast} , minvalue => 100000})},{filter => Perform Action , action => {name => assign error , error function => {name => ObsFunction/LinearCombination , options => {variables => (ObsError/seaSurfaceTemperature) , coefs => (1)}}}})},{obs space => {name => sst_ahi_h08_l3c , obsdatain => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_ahi_h08_l3c.2021032418.nc4}} , obsdataout => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdaso
+ 0: cnanal_18/diags/sst_ahi_h08_l3c.2021032418.nc4}} , simulated variables => (seaSurfaceTemperature) , io pool => {max pool size => 1}} , get values => {time interpolation => linear} , obs operator => {name => Identity , observation alias file => obsop_name_map.yaml} , obs error => {covariance model => diagonal} , obs filters => ({filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_area_fraction} , minvalue => 0.9})},{filter => Bounds Check , minvalue => 1 , maxvalue => 41},{filter => Background Check , absolute threshold => 5},{filter => Domain Check , where => ({variable => {name => ObsError/seaSurfaceTemperature} , minvalue => 1e-08})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_ice_area_fraction} , maxvalue => 1e-05})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_surface_temperature} , minvalue => -1})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/distance_from_coast} , minvalue => 100000})},{filter => Perform Action , a
+ 0: ction => {name => assign error , error function => {name => ObsFunction/LinearCombination , options => {variables => (ObsError/seaSurfaceTemperature) , coefs => (1)}}}})},{obs space => {name => icec_amsr2_north , obsdatain => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.icec_amsr2_north.2021032418.nc4}} , obsdataout => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/diags/icec_amsr2_north.2021032418.nc4}} , simulated variables => (seaIceFraction) , io pool => {max pool size => 1}} , get values => {time interpolation => linear} , obs operator => {name => Identity , observation alias file => obsop_name_map.yaml} , obs error => {covariance model => diagonal} , obs filters => ({filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_area_fraction} , minvalue => 0.9})},{filter => Bounds Check , minvalue => 0 , maxva
+ 0: lue => 1},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_surface_temperature} , maxvalue => 2})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_surface_temperature} , maxvalue => 0}) , action => {name => inflate error , inflation factor => 2}},{filter => Domain Check , where => ({variable => {name => GeoVaLs/distance_from_coast} , minvalue => 100000})})},{obs space => {name => icec_amsr2_south , obsdatain => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.icec_amsr2_south.2021032418.nc4}} , obsdataout => {engine => {type => H5File , obsfile => /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/diags/icec_amsr2_south.2021032418.nc4}} , simulated variables => (seaIceFraction) , io pool => {max pool size => 1}} , get values => {time interpolation => linear} , obs operator => {name => Identity , observation alias file => obsop_
+ 0: name_map.yaml} , obs error => {covariance model => diagonal} , obs filters => ({filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_area_fraction} , minvalue => 0.9})},{filter => Bounds Check , minvalue => 0 , maxvalue => 1},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_surface_temperature} , maxvalue => 2})},{filter => Domain Check , where => ({variable => {name => GeoVaLs/sea_surface_temperature} , maxvalue => 0}) , action => {name => inflate error , inflation factor => 2}},{filter => Domain Check , where => ({variable => {name => GeoVaLs/distance_from_coast} , minvalue => 100000})})})}} , variational => {minimizer => {algorithm => RPCG} , iterations => ({geometry => {mom6_input_nml => mom_input.nml , fields metadata => ./fields_metadata.yaml} , ninner => 100 , gradient norm reduction => 1e-07 , diagnostics => {departures => ombg}})} , minimizer => {algorithm => RPCG} , output => {datadir => Data , exp => 3dvarfgat_pseudo , type => an , frequency => PT3H} , final => 
+ 0: {diagnostics => {departures => oman} , increment => {output => {state component => {datadir => Data , date => 2021-03-24T15:00:00Z , exp => 3dvarfgat_pseudo , type => incr}} , geometry => {mom6_input_nml => mom_input.nml , fields metadata => ./fields_metadata.yaml}}}}]
+ 0: OOPS_STATS ObjectCountHelper started.
+ 0: OOPS_STATS Run start                                - Runtime:      1.79 sec,  Memory: total:     3.35 Gb, per task: min =   206.67 Mb, max =   213.31 Mb
+ 0: Run: Starting oops::Variational<SOCA, UFO and IODA observations>
+ 0: OOPS_STATS Variational start                        - Runtime:     1.79 sec,  Local Memory:   225.88 Mb
+ 0: NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
+ 0:  &MPP_IO_NML
+ 0:  HEADER_BUFFER_VAL       =       16384,
+ 0:  GLOBAL_FIELD_ON_ROOT_PE = T,
+ 0:  IO_CLOCKS_ON    = F,
+ 0:  SHUFFLE =           0,
+ 0:  DEFLATE_LEVEL   =          -1,
+ 0:  CF_COMPLIANCE   = F
+ 0:  /
+ 0: NOTE from PE     0: MPP_IO_SET_STACK_SIZE: stack size set to     131072.
+ 0: NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to ********.
+ 0: NOTE from PE     0: open_param_file: MOM_input has been opened successfully.
+ 0:  MOM_domains_mod OMPthreading           -1           0           1
+ 2:  MOM_domains_mod OMPthreading           -1           0           1
+ 8:  MOM_domains_mod OMPthreading           -1           0           1
+ 4:  MOM_domains_mod OMPthreading           -1           0           1
+ 6:  MOM_domains_mod OMPthreading           -1           0           1
+10:  MOM_domains_mod OMPthreading           -1           0           1
+12:  MOM_domains_mod OMPthreading           -1           0           1
+14:  MOM_domains_mod OMPthreading           -1           0           1
+ 3:  MOM_domains_mod OMPthreading           -1           0           1
+ 5:  MOM_domains_mod OMPthreading           -1           0           1
+ 7:  MOM_domains_mod OMPthreading           -1           0           1
+11:  MOM_domains_mod OMPthreading           -1           0           1
+ 1:  MOM_domains_mod OMPthreading           -1           0           1
+ 9:  MOM_domains_mod OMPthreading           -1           0           1
+13:  MOM_domains_mod OMPthreading           -1           0           1
+15:  MOM_domains_mod OMPthreading           -1           0           1
+ 0:  MOM domain decomposition
+ 0: whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+ 0:   X-AXIS =   18  18  18  18
+ 0:   Y-AXIS =    9   9   9   8
+ 0:  MOMc domain decomposition
+ 0: whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+ 0:   X-AXIS =    9   9   9   9
+ 0:   Y-AXIS =    5   4   4   4
+ 0: NOTE from PE     0: close_param_file: MOM_input has been closed successfully.
+ 0: Model configuration is:LocalConfiguration[root={name => PseudoModel , tstep => PT3H , states => ({date => 2021-03-24T18:00:00Z , basename => ./bkg/ , ocn_filename => gdas.ocean.t12z.inst.f006.nc , ice_filename => gdas.ice.t12z.inst.f006.nc , read_from_file => 1},{date => 2021-03-24T21:00:00Z , basename => ./bkg/ , ocn_filename => gdas.ocean.t12z.inst.f009.nc , ice_filename => gdas.ice.t12z.inst.f009.nc , read_from_file => 1})}]
+ 0: adt_rads_all: read database from /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.adt_rads_all.2021032418.nc4 (io pool size: 16)
+ 0: adt_rads_all processed vars: 1 Variables: absoluteDynamicTopography
+ 0: adt_rads_all assimilated vars: 1 Variables: absoluteDynamicTopography
+ 0: sst_avhrr_ma_l3u: read database from /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_avhrr_ma_l3u.2021032418.nc4 (io pool size: 16)
+ 0: sst_avhrr_ma_l3u processed vars: 1 Variables: seaSurfaceTemperature
+ 0: sst_avhrr_ma_l3u assimilated vars: 1 Variables: seaSurfaceTemperature
+ 0: sst_avhrr_mb_l3u: read database from /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_avhrr_mb_l3u.2021032418.nc4 (io pool size: 16)
+ 0: sst_avhrr_mb_l3u processed vars: 1 Variables: seaSurfaceTemperature
+ 0: sst_avhrr_mb_l3u assimilated vars: 1 Variables: seaSurfaceTemperature
+ 0: sst_viirs_npp_l3u: read database from /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_viirs_npp_l3u.2021032418.nc4 (io pool size: 16)
+ 0: sst_viirs_npp_l3u processed vars: 1 Variables: seaSurfaceTemperature
+ 0: sst_viirs_npp_l3u assimilated vars: 1 Variables: seaSurfaceTemperature
+ 0: sst_viirs_n20_l3u: read database from /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_viirs_n20_l3u.2021032418.nc4 (io pool size: 16)
+ 0: sst_viirs_n20_l3u processed vars: 1 Variables: seaSurfaceTemperature
+ 0: sst_viirs_n20_l3u assimilated vars: 1 Variables: seaSurfaceTemperature
+ 0: sst_abi_g16_l3c: read database from /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_abi_g16_l3c.2021032418.nc4 (io pool size: 16)
+ 0: sst_abi_g16_l3c processed vars: 1 Variables: seaSurfaceTemperature
+ 0: sst_abi_g16_l3c assimilated vars: 1 Variables: seaSurfaceTemperature
+ 0: sst_abi_g17_l3c: read database from /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_abi_g17_l3c.2021032418.nc4 (io pool size: 16)
+ 0: sst_abi_g17_l3c processed vars: 1 Variables: seaSurfaceTemperature
+ 0: sst_abi_g17_l3c assimilated vars: 1 Variables: seaSurfaceTemperature
+ 0: sst_ahi_h08_l3c: read database from /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.sst_ahi_h08_l3c.2021032418.nc4 (io pool size: 16)
+ 0: sst_ahi_h08_l3c processed vars: 1 Variables: seaSurfaceTemperature
+ 0: sst_ahi_h08_l3c assimilated vars: 1 Variables: seaSurfaceTemperature
+ 0: icec_amsr2_north: read database from /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.icec_amsr2_north.2021032418.nc4 (io pool size: 16)
+ 0: icec_amsr2_north processed vars: 1 Variables: seaIceFraction
+ 0: icec_amsr2_north assimilated vars: 1 Variables: seaIceFraction
+ 0: icec_amsr2_south: read database from /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18/obs/gdas.t18z.icec_amsr2_south.2021032418.nc4 (io pool size: 16)
+ 0: icec_amsr2_south processed vars: 1 Variables: seaIceFraction
+ 0: icec_amsr2_south assimilated vars: 1 Variables: seaIceFraction
+ 0: No bias-correction is performed for this ObsSpace.
+ 0: No bias-correction is performed for this ObsSpace.
+ 0: No bias-correction is performed for this ObsSpace.
+ 0: No bias-correction is performed for this ObsSpace.
+ 0: No bias-correction is performed for this ObsSpace.
+ 0: No bias-correction is performed for this ObsSpace.
+ 0: No bias-correction is performed for this ObsSpace.
+ 0: No bias-correction is performed for this ObsSpace.
+ 0: No bias-correction is performed for this ObsSpace.
+ 0: No bias-correction is performed for this ObsSpace.
+ 0: FGAT window: TimeWindow: start = 2021-03-24T15:00:00Z, end = 2021-03-24T21:00:00Z, inclusive upper bound.
+ 0: 
+ 0: OOPS_STATS IncrementalAssimilation start            - Runtime:     3.31 sec,  Local Memory:   300.93 Mb
+ 0: Running incremental assimilation with 1 outer iterations.
+ 0: Minimizer algorithm=RPCG
+ 0: IncrementalAssimilation: Configuration for outer iteration 0:
+ 0: LocalConfiguration[root={geometry => {mom6_input_nml => mom_input.nml , fields metadata => ./fields_metadata.yaml} , ninner => 100 , gradient norm reduction => 1e-07 , diagnostics => {departures => ombg} , iteration => 0}]
+ 0: OOPS_STATS IncrementalAssimilation iteration 0      - Runtime:     3.31 sec,  Local Memory:   300.93 Mb
+ 0: NOTE from PE     0: open_param_file: MOM_input has been opened successfully.
+ 8:  MOM_domains_mod OMPthreading           -1           0           1
+ 4:  MOM_domains_mod OMPthreading           -1           0           1
+10:  MOM_domains_mod OMPthreading           -1           0           1
+ 7:  MOM_domains_mod OMPthreading           -1           0           1
+ 1:  MOM_domains_mod OMPthreading           -1           0           1
+13:  MOM_domains_mod OMPthreading           -1           0           1
+14:  MOM_domains_mod OMPthreading           -1           0           1
+ 2:  MOM_domains_mod OMPthreading           -1           0           1
+ 3:  MOM_domains_mod OMPthreading           -1           0           1
+11:  MOM_domains_mod OMPthreading           -1           0           1
+15:  MOM_domains_mod OMPthreading           -1           0           1
+ 5:  MOM_domains_mod OMPthreading           -1           0           1
+ 6:  MOM_domains_mod OMPthreading           -1           0           1
+ 9:  MOM_domains_mod OMPthreading           -1           0           1
+12:  MOM_domains_mod OMPthreading           -1           0           1
+ 0:  MOM_domains_mod OMPthreading           -1           0           1
+ 0:  MOM domain decomposition
+ 0: whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+ 0:   X-AXIS =   18  18  18  18
+ 0:   Y-AXIS =    9   9   9   8
+ 0:  MOMc domain decomposition
+ 0: whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+ 0:   X-AXIS =    9   9   9   9
+ 0:   Y-AXIS =    5   4   4   4
+ 0: NOTE from PE     0: close_param_file: MOM_input has been closed successfully.
+ 0: Model:forecast: forecast starting: 
+ 0:   Valid time: 2021-03-24T15:00:00Z
+ 0:   cicen   min=    0.000000   max=    1.000000   mean=    0.123834
+ 0:   hicen   min=    0.000000   max=    4.723396   mean=    0.171703
+ 0:   hsnon   min=    0.000000   max=    0.599262   mean=    0.022745
+ 0:    socn   min=    0.000000   max=   40.043083   mean=   33.680925
+ 0:    tocn   min=   -1.901575   max=   31.154860   mean=   11.776934
+ 0:    uocn   min=   -0.917541   max=    0.671174   mean=   -0.000204
+ 0:    vocn   min=   -0.762980   max=    0.984181   mean=    0.002648
+ 0:     ssh   min=   -1.880910   max=    0.942131   mean=   -0.308473
+ 0:    hocn   min=    0.000000   max= 5416.675293   mean=  128.626797
+ 0:     mld   min=    2.305932   max= 2417.253727   mean=  148.019728
+ 0: layer_depth   min=    2.305932   max= 2949.912054   mean=  150.446598
+ 0: Variables requested from Vader (non-linear): 7 variables: sea_surface_height_above_geoid, sea_area_fraction, sea_surface_temperature, sea_floor_depth_below_sea_surface, mesoscale_representation_error, sea_ice_area_fraction, distance_from_coast
+ 0: Variables provided to Vader: 11 variables: cicen, hicen, hsnon, socn, tocn, uocn, vocn, ssh, hocn, mld, layer_depth
+ 0: Requested variables Vader could not produce: 7 variables: sea_surface_height_above_geoid, sea_area_fraction, sea_surface_temperature, sea_floor_depth_below_sea_surface, mesoscale_representation_error, sea_ice_area_fraction, distance_from_coast
+ 0: Variables requested from Vader (non-linear): 3 variables: sea_surface_height_above_geoid, sea_surface_temperature, sea_ice_area_fraction
+ 0: Variables provided to Vader: 11 variables: cicen, hicen, hsnon, socn, tocn, uocn, vocn, ssh, hocn, mld, layer_depth
+ 0: Requested variables Vader could not produce: 3 variables: sea_surface_height_above_geoid, sea_surface_temperature, sea_ice_area_fraction
+ 0: Variables requested from Vader (non-linear): 7 variables: sea_surface_height_above_geoid, sea_area_fraction, sea_surface_temperature, sea_floor_depth_below_sea_surface, mesoscale_representation_error, sea_ice_area_fraction, distance_from_coast
+ 0: Variables provided to Vader: 11 variables: cicen, hicen, hsnon, socn, tocn, uocn, vocn, ssh, hocn, mld, layer_depth
+ 0: Requested variables Vader could not produce: 7 variables: sea_surface_height_above_geoid, sea_area_fraction, sea_surface_temperature, sea_floor_depth_below_sea_surface, mesoscale_representation_error, sea_ice_area_fraction, distance_from_coast
+ 0: Variables requested from Vader (non-linear): 3 variables: sea_surface_height_above_geoid, sea_surface_temperature, sea_ice_area_fraction
+ 0: Variables provided to Vader: 11 variables: cicen, hicen, hsnon, socn, tocn, uocn, vocn, ssh, hocn, mld, layer_depth
+ 0: Requested variables Vader could not produce: 3 variables: sea_surface_height_above_geoid, sea_surface_temperature, sea_ice_area_fraction
+ 0: Variables requested from Vader (non-linear): 7 variables: sea_surface_height_above_geoid, sea_area_fraction, sea_surface_temperature, sea_floor_depth_below_sea_surface, mesoscale_representation_error, sea_ice_area_fraction, distance_from_coast
+ 0: Variables provided to Vader: 11 variables: cicen, hicen, hsnon, socn, tocn, uocn, vocn, ssh, hocn, mld, layer_depth
+ 0: Requested variables Vader could not produce: 7 variables: sea_surface_height_above_geoid, sea_area_fraction, sea_surface_temperature, sea_floor_depth_below_sea_surface, mesoscale_representation_error, sea_ice_area_fraction, distance_from_coast
+ 0: Variables requested from Vader (non-linear): 3 variables: sea_surface_height_above_geoid, sea_surface_temperature, sea_ice_area_fraction
+ 0: Variables provided to Vader: 11 variables: cicen, hicen, hsnon, socn, tocn, uocn, vocn, ssh, hocn, mld, layer_depth
+ 0: Requested variables Vader could not produce: 3 variables: sea_surface_height_above_geoid, sea_surface_temperature, sea_ice_area_fraction
+ 0: Model:forecast: forecast finished: 
+ 0:   Valid time: 2021-03-24T21:00:00Z
+ 0:   cicen   min=    0.000000   max=    1.000000   mean=    0.123550
+ 0:   hicen   min=    0.000000   max=    4.723888   mean=    0.171674
+ 0:   hsnon   min=    0.000000   max=    0.599291   mean=    0.022769
+ 0:    socn   min=    0.000000   max=   40.043293   mean=   33.680990
+ 0:    tocn   min=   -1.903455   max=   30.965528   mean=   11.777384
+ 0:    uocn   min=   -0.918261   max=    0.681673   mean=   -0.001804
+ 0:    vocn   min=   -0.552975   max=    0.910432   mean=    0.003453
+ 0:     ssh   min=   -1.975990   max=    0.900575   mean=   -0.310287
+ 0:    hocn   min=    0.000000   max= 5416.734375   mean=  128.626723
+ 0:     mld   min=    2.371564   max= 2417.294684   mean=  149.272356
+ 0: layer_depth   min=    2.371564   max= 2949.930430   mean=  150.442029
+ 0: ObsErrorDiag covariance updated 154286
+ 0: Observer::finalize QC = 
+ 0: adt_rads_all absoluteDynamicTopography nlocs = 218113, nobs = 218113, min = 0, max = 19, avg = 3
+ 0: ObsErrorDiag covariance updated 80795
+ 0: Observer::finalize QC = 
+ 0: sst_avhrr_ma_l3u seaSurfaceTemperature nlocs = 101154, nobs = 101154, min = 0, max = 19, avg = 2
+ 0: ObsErrorDiag covariance updated 87614
+ 0: Observer::finalize QC = 
+ 0: sst_avhrr_mb_l3u seaSurfaceTemperature nlocs = 110741, nobs = 110741, min = 0, max = 19, avg = 2
+ 0: ObsErrorDiag covariance updated 86463
+ 0: Observer::finalize QC = 
+ 0: sst_viirs_npp_l3u seaSurfaceTemperature nlocs = 107959, nobs = 107959, min = 0, max = 19, avg = 2
+ 0: ObsErrorDiag covariance updated 82346
+ 0: Observer::finalize QC = 
+ 0: sst_viirs_n20_l3u seaSurfaceTemperature nlocs = 105497, nobs = 105497, min = 0, max = 19, avg = 2
+ 0: ObsErrorDiag covariance updated 264105
+ 0: Observer::finalize QC = 
+ 0: sst_abi_g16_l3c seaSurfaceTemperature nlocs = 315590, nobs = 315590, min = 0, max = 19, avg = 2
+ 0: ObsErrorDiag covariance updated 50176
+ 0: Observer::finalize QC = 
+ 0: sst_abi_g17_l3c seaSurfaceTemperature nlocs = 53223, nobs = 53223, min = 0, max = 13, avg = 0
+ 0: ObsErrorDiag covariance updated 146196
+ 0: Observer::finalize QC = 
+ 0: sst_ahi_h08_l3c seaSurfaceTemperature nlocs = 177346, nobs = 177346, min = 0, max = 19, avg = 2
+ 0: ObsErrorDiag covariance updated 238439
+ 0: Observer::finalize QC = 
+ 0: icec_amsr2_north seaIceFraction nlocs = 588695, nobs = 588695, min = 0, max = 13, avg = 7
+ 0: ObsErrorDiag covariance updated 294873
+ 0: Observer::finalize QC = 
+ 0: icec_amsr2_south seaIceFraction nlocs = 393136, nobs = 393136, min = 0, max = 13, avg = 3
+ 0: CostJo Observations: adt_rads_all nobs= 218113 Min=-1.987300, Max=2.055800, RMS=0.831443
+ 0: 
+ 0: sst_avhrr_ma_l3u nobs= 101154 Min=-2.129043, Max=31.808535, RMS=21.486601
+ 0: 
+ 0: sst_avhrr_mb_l3u nobs= 110741 Min=-2.180571, Max=30.823664, RMS=22.202982
+ 0: 
+ 0: sst_viirs_npp_l3u nobs= 107959 Min=-1.996182, Max=32.920265, RMS=22.052796
+ 0: 
+ 0: sst_viirs_n20_l3u nobs= 105497 Min=-2.086833, Max=32.794247, RMS=22.048160
+ 0: 
+ 0: sst_abi_g16_l3c nobs= 315590 Min=-1.634714, Max=31.716000, RMS=24.121852
+ 0: 
+ 0: sst_abi_g17_l3c nobs= 53223 Min=2.533000, Max=31.939997, RMS=24.911800
+ 0: 
+ 0: sst_ahi_h08_l3c nobs= 177346 Min=-2.354140, Max=33.383530, RMS=24.493741
+ 0: 
+ 0: icec_amsr2_north nobs= 588695 Min=0.000000, Max=1.000000, RMS=0.746690
+ 0: 
+ 0: icec_amsr2_south nobs= 393136 Min=0.000000, Max=1.000000, RMS=0.379107
+ 0: 
+ 0: 
+ 0: Jo Observations:
+ 0: adt_rads_all nobs= 218113 Min=-1.987300, Max=2.055800, RMS=0.831443
+ 0: 
+ 0: sst_avhrr_ma_l3u nobs= 101154 Min=-2.129043, Max=31.808535, RMS=21.486601
+ 0: 
+ 0: sst_avhrr_mb_l3u nobs= 110741 Min=-2.180571, Max=30.823664, RMS=22.202982
+ 0: 
+ 0: sst_viirs_npp_l3u nobs= 107959 Min=-1.996182, Max=32.920265, RMS=22.052796
+ 0: 
+ 0: sst_viirs_n20_l3u nobs= 105497 Min=-2.086833, Max=32.794247, RMS=22.048160
+ 0: 
+ 0: sst_abi_g16_l3c nobs= 315590 Min=-1.634714, Max=31.716000, RMS=24.121852
+ 0: 
+ 0: sst_abi_g17_l3c nobs= 53223 Min=2.533000, Max=31.939997, RMS=24.911800
+ 0: 
+ 0: sst_ahi_h08_l3c nobs= 177346 Min=-2.354140, Max=33.383530, RMS=24.493741
+ 0: 
+ 0: icec_amsr2_north nobs= 588695 Min=0.000000, Max=1.000000, RMS=0.746690
+ 0: 
+ 0: icec_amsr2_south nobs= 393136 Min=0.000000, Max=1.000000, RMS=0.379107
+ 0: 
+ 0: End Jo Observations
+ 0: Jo Observations Equivalent:
+ 0: adt_rads_all nobs= 216732 Min=-1.387674, Max=1.469968, RMS=0.780638
+ 0: 
+ 0: sst_avhrr_ma_l3u nobs= 99547 Min=-1.820345, Max=30.908584, RMS=21.581104
+ 0: 
+ 0: sst_avhrr_mb_l3u nobs= 108465 Min=-1.839194, Max=31.046608, RMS=22.239989
+ 0: 
+ 0: sst_viirs_npp_l3u nobs= 106350 Min=-1.831379, Max=30.918054, RMS=22.074572
+ 0: 
+ 0: sst_viirs_n20_l3u nobs= 103999 Min=-1.826539, Max=31.083687, RMS=22.048130
+ 0: 
+ 0: sst_abi_g16_l3c nobs= 310101 Min=-0.133459, Max=29.427614, RMS=24.104224
+ 0: 
+ 0: sst_abi_g17_l3c nobs= 52543 Min=2.358352, Max=29.996431, RMS=24.799317
+ 0: 
+ 0: sst_ahi_h08_l3c nobs= 176524 Min=-0.721221, Max=31.044545, RMS=24.703742
+ 0: 
+ 0: icec_amsr2_north nobs= 548204 Min=0.000000, Max=1.000000, RMS=0.690757
+ 0: 
+ 0: icec_amsr2_south nobs= 393130 Min=0.000000, Max=0.909194, RMS=0.187095
+ 0: 
+ 0: End Jo Observations Equivalent
+ 0: Jo Bias Corrected Departures:
+ 0: adt_rads_all nobs= 216732 Min=-1.380962, Max=1.660682, RMS=0.186052
+ 0: 
+ 0: sst_avhrr_ma_l3u nobs= 99547 Min=-8.043327, Max=8.541704, RMS=0.912186
+ 0: 
+ 0: sst_avhrr_mb_l3u nobs= 108465 Min=-7.985252, Max=11.002469, RMS=0.869380
+ 0: 
+ 0: sst_viirs_npp_l3u nobs= 106350 Min=-10.150113, Max=11.615840, RMS=1.263014
+ 0: 
+ 0: sst_viirs_n20_l3u nobs= 103999 Min=-10.244451, Max=13.193621, RMS=1.353609
+ 0: 
+ 0: sst_abi_g16_l3c nobs= 310101 Min=-7.806430, Max=9.947093, RMS=1.043099
+ 0: 
+ 0: sst_abi_g17_l3c nobs= 52543 Min=-4.433623, Max=4.976214, RMS=0.617906
+ 0: 
+ 0: sst_ahi_h08_l3c nobs= 176524 Min=-9.815237, Max=11.497941, RMS=1.176925
+ 0: 
+ 0: icec_amsr2_north nobs= 548204 Min=-1.000000, Max=0.695758, RMS=0.181801
+ 0: 
+ 0: icec_amsr2_south nobs= 393130 Min=-1.000000, Max=0.614165, RMS=0.278836
+ 0: 
+ 0: End Jo Bias Corrected Departures
+ 0: Jo Observations Errors:
+ 0: Diagonal observation error covariance
+ 0: adt_rads_all nobs= 154286 Min=0.319993, Max=6.080395, RMS=1.793927
+ 0: 
+ 0: Diagonal observation error covariance
+ 0: sst_avhrr_ma_l3u nobs= 80795 Min=0.140000, Max=1.331538, RMS=0.319332
+ 0: 
+ 0: Diagonal observation error covariance
+ 0: sst_avhrr_mb_l3u nobs= 87614 Min=0.120000, Max=1.547647, RMS=0.313047
+ 0: 
+ 0: Diagonal observation error covariance
+ 0: sst_viirs_npp_l3u nobs= 86463 Min=0.080000, Max=0.784706, RMS=0.273524
+ 0: 
+ 0: Diagonal observation error covariance
+ 0: sst_viirs_n20_l3u nobs= 82346 Min=0.064000, Max=0.714724, RMS=0.276117
+ 0: 
+ 0: Diagonal observation error covariance
+ 0: sst_abi_g16_l3c nobs= 264105 Min=0.106818, Max=0.690001, RMS=0.218673
+ 0: 
+ 0: Diagonal observation error covariance
+ 0: sst_abi_g17_l3c nobs= 50176 Min=0.140178, Max=0.309334, RMS=0.221855
+ 0: 
+ 0: Diagonal observation error covariance
+ 0: sst_ahi_h08_l3c nobs= 146196 Min=0.113913, Max=0.590000, RMS=0.214042
+ 0: 
+ 0: Diagonal observation error covariance
+ 0: icec_amsr2_north nobs= 238439 Min=0.100000, Max=0.200000, RMS=0.119732
+ 0: 
+ 0: Diagonal observation error covariance
+ 0: icec_amsr2_south nobs= 294873 Min=0.100000, Max=0.200000, RMS=0.161048
+ 0: 
+ 0: End Jo Observations Errors
+ 0: CostJo   : Nonlinear Jo(adt_rads_all) = 1466.475996, nobs = 154286, Jo/n = 0.009505, err = 1.793927
+ 0: CostJo   : Nonlinear Jo(sst_avhrr_ma_l3u) = 226652.617267, nobs = 80795, Jo/n = 2.805280, err = 0.319332
+ 0: CostJo   : Nonlinear Jo(sst_avhrr_mb_l3u) = 240954.968465, nobs = 87614, Jo/n = 2.750188, err = 0.313047
+ 0: CostJo   : Nonlinear Jo(sst_viirs_npp_l3u) = 351163.159215, nobs = 86463, Jo/n = 4.061427, err = 0.273524
+ 0: CostJo   : Nonlinear Jo(sst_viirs_n20_l3u) = 346391.383047, nobs = 82346, Jo/n = 4.206536, err = 0.276117
+ 0: CostJo   : Nonlinear Jo(sst_abi_g16_l3c) = 1182255.732484, nobs = 264105, Jo/n = 4.476461, err = 0.218673
+ 0: CostJo   : Nonlinear Jo(sst_abi_g17_l3c) = 157118.754189, nobs = 50176, Jo/n = 3.131353, err = 0.221855
+ 0: CostJo   : Nonlinear Jo(sst_ahi_h08_l3c) = 809407.751119, nobs = 146196, Jo/n = 5.536456, err = 0.214042
+ 0: CostJo   : Nonlinear Jo(icec_amsr2_north) = 137761.254351, nobs = 238439, Jo/n = 0.577763, err = 0.119732
+ 0: CostJo   : Nonlinear Jo(icec_amsr2_south) = 1352334.256866, nobs = 294873, Jo/n = 4.586158, err = 0.161048
+ 0: CostJo   : Nonlinear Jo = 4805506.352999
+ 0: Info     : Prepare ensemble configuration
+ 0: Info     : Read full ensemble
+ 0: Info     : Creating outer blocks
+ 0: Info     : Creating outer block: StdDev
+ 5: 
+ 5: FATAL from PE     5: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+ 5: 
+ 9: 
+ 9: FATAL from PE     9: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+ 9: 
+11: 
+11: FATAL from PE    11: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+11: 
+ 1: 
+ 1: FATAL from PE     1: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+ 1: 
+ 2: 
+ 2: FATAL from PE     2: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+ 2: 
+ 3: 
+ 3: FATAL from PE     3: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+ 3: 
+ 4: 
+ 4: FATAL from PE     4: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+ 4: 
+ 6: 
+ 6: FATAL from PE     6: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+ 6: 
+ 8: 
+ 8: FATAL from PE     8: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+ 8: 
+10: 
+10: FATAL from PE    10: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+10: 
+12: 
+12: FATAL from PE    12: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+12: 
+13: 
+13: FATAL from PE    13: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+13: 
+14: 
+14: FATAL from PE    14: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+14: 
+15: 
+15: FATAL from PE    15: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+15: 
+ 7: 
+ 7: FATAL from PE     7: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+ 7: 
+ 0: 
+ 0: FATAL from PE     0: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+ 0: 
+ 0: 
+ 0: FATAL from PE     0: fms_io(restore_state_all): unable to find mandatory variable aice_h in restart file ./ice.bkgerr_stddev.nc
+ 0: 
+ 6: Image              PC                Routine            Line        Source             
+ 6: libifcoremt.so.5   000014F6CA8D6DCB  tracebackqq_          Unknown  Unknown
+ 6: libsoca.so         000014F6BBEA4059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+ 6: libsoca.so         000014F6BBD7492B  fms_io_mod_mp_res        4303  fms_io.F90
+ 6: libsoca.so         000014F6BBC69A3C  Unknown               Unknown  Unknown
+ 6: libsoca.so         000014F6BBCAC8B5  Unknown               Unknown  Unknown
+ 6: libsoca.so         000014F6BBCA4023  Unknown               Unknown  Unknown
+ 6: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+ 6: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+ 6: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+ 6: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+ 6: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+ 6: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+ 6: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+ 6: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+ 6: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+ 6: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+ 6: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+ 6: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+ 6: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+ 6: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+ 6: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+ 6: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+ 6: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+ 6: liboops.so         000014F687DA666C  _ZN4oops3Run7exec     Unknown  Unknown
+ 6: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+ 6: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+ 6: libc-2.28.so       000014F67C400D85  __libc_start_main     Unknown  Unknown
+ 6: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+ 6: Abort(1) on node 6 (rank 6 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 6
+ 7: Image              PC                Routine            Line        Source             
+ 7: libifcoremt.so.5   00001495C043CDCB  tracebackqq_          Unknown  Unknown
+ 7: libsoca.so         00001495B1A0A059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+ 7: libsoca.so         00001495B18DA92B  fms_io_mod_mp_res        4303  fms_io.F90
+ 7: libsoca.so         00001495B17CFA3C  Unknown               Unknown  Unknown
+ 7: libsoca.so         00001495B18128B5  Unknown               Unknown  Unknown
+ 7: libsoca.so         00001495B180A023  Unknown               Unknown  Unknown
+ 7: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+ 7: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+ 7: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+ 7: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+ 7: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+ 7: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+ 7: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+ 7: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+ 7: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+ 7: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+ 7: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+ 7: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+ 7: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+ 7: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+ 7: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+ 7: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+ 7: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+ 7: liboops.so         000014957D90C66C  _ZN4oops3Run7exec     Unknown  Unknown
+ 7: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+ 7: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+ 7: libc-2.28.so       0000149571F66D85  __libc_start_main     Unknown  Unknown
+ 7: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+ 7: Abort(1) on node 7 (rank 7 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 7
+10: Image              PC                Routine            Line        Source             
+10: libifcoremt.so.5   0000146F0CAD4DCB  tracebackqq_          Unknown  Unknown
+10: libsoca.so         0000146EFE09C059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+10: libsoca.so         0000146EFDF6C92B  fms_io_mod_mp_res        4303  fms_io.F90
+10: libsoca.so         0000146EFDE61A3C  Unknown               Unknown  Unknown
+10: libsoca.so         0000146EFDEA48B5  Unknown               Unknown  Unknown
+10: libsoca.so         0000146EFDE9C023  Unknown               Unknown  Unknown
+10: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+10: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+10: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+10: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+10: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+10: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+10: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+10: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+10: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+10: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+10: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+10: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+10: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+10: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+10: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+10: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+10: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+10: liboops.so         0000146EC9F9E66C  _ZN4oops3Run7exec     Unknown  Unknown
+10: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+10: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+10: libc-2.28.so       0000146EBE5F8D85  __libc_start_main     Unknown  Unknown
+10: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+10: Abort(1) on node 10 (rank 10 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 10
+12: Image              PC                Routine            Line        Source             
+12: libifcoremt.so.5   0000145935DD0DCB  tracebackqq_          Unknown  Unknown
+12: libsoca.so         000014592739E059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+12: libsoca.so         000014592726E92B  fms_io_mod_mp_res        4303  fms_io.F90
+12: libsoca.so         0000145927163A3C  Unknown               Unknown  Unknown
+12: libsoca.so         00001459271A68B5  Unknown               Unknown  Unknown
+12: libsoca.so         000014592719E023  Unknown               Unknown  Unknown
+12: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+12: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+12: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+12: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+12: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+12: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+12: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+12: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+12: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+12: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+12: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+12: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+12: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+12: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+12: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+12: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+12: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+12: liboops.so         00001458F32A066C  _ZN4oops3Run7exec     Unknown  Unknown
+12: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+12: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+12: libc-2.28.so       00001458E78FAD85  __libc_start_main     Unknown  Unknown
+12: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+12: Abort(1) on node 12 (rank 12 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 12
+13: Image              PC                Routine            Line        Source             
+13: libifcoremt.so.5   0000149BD4C65DCB  tracebackqq_          Unknown  Unknown
+13: libsoca.so         0000149BC6233059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+13: libsoca.so         0000149BC610392B  fms_io_mod_mp_res        4303  fms_io.F90
+13: libsoca.so         0000149BC5FF8A3C  Unknown               Unknown  Unknown
+13: libsoca.so         0000149BC603B8B5  Unknown               Unknown  Unknown
+13: libsoca.so         0000149BC6033023  Unknown               Unknown  Unknown
+13: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+13: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+13: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+13: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+13: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+13: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+13: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+13: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+13: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+13: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+13: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+13: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+13: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+13: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+13: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+13: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+13: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+13: liboops.so         0000149B9213566C  _ZN4oops3Run7exec     Unknown  Unknown
+13: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+13: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+13: libc-2.28.so       0000149B8678FD85  __libc_start_main     Unknown  Unknown
+13: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+13: Abort(1) on node 13 (rank 13 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 13
+15: Image              PC                Routine            Line        Source             
+15: libifcoremt.so.5   00001464EC23DDCB  tracebackqq_          Unknown  Unknown
+15: libsoca.so         00001464DD805059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+15: libsoca.so         00001464DD6D592B  fms_io_mod_mp_res        4303  fms_io.F90
+15: libsoca.so         00001464DD5CAA3C  Unknown               Unknown  Unknown
+15: libsoca.so         00001464DD60D8B5  Unknown               Unknown  Unknown
+15: libsoca.so         00001464DD605023  Unknown               Unknown  Unknown
+15: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+15: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+15: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+15: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+15: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+15: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+15: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+15: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+15: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+15: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+15: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+15: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+15: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+15: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+15: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+15: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+15: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+15: liboops.so         00001464A970766C  _ZN4oops3Run7exec     Unknown  Unknown
+15: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+15: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+15: libc-2.28.so       000014649DD61D85  __libc_start_main     Unknown  Unknown
+15: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+15: Abort(1) on node 15 (rank 15 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 15
+ 0: Image              PC                Routine            Line        Source             
+ 0: libifcoremt.so.5   0000154CEDEDBDCB  tracebackqq_          Unknown  Unknown
+ 0: libsoca.so         0000154CDF4A9059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+ 0: libsoca.so         0000154CDF37992B  fms_io_mod_mp_res        4303  fms_io.F90
+ 0: libsoca.so         0000154CDF26EA3C  Unknown               Unknown  Unknown
+ 0: libsoca.so         0000154CDF2B18B5  Unknown               Unknown  Unknown
+ 0: libsoca.so         0000154CDF2A9023  Unknown               Unknown  Unknown
+ 0: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+ 0: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+ 0: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+ 0: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+ 0: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+ 0: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+ 0: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+ 0: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+ 0: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+ 0: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+ 0: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+ 0: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+ 0: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+ 0: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+ 0: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+ 0: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+ 0: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+ 0: liboops.so         0000154CAB3AB66C  _ZN4oops3Run7exec     Unknown  Unknown
+ 0: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+ 0: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+ 0: libc-2.28.so       0000154C9FA05D85  __libc_start_main     Unknown  Unknown
+ 0: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+ 0: Abort(1) on node 0 (rank 0 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+ 1: Image              PC                Routine            Line        Source             
+ 1: libifcoremt.so.5   000014CF73B00DCB  tracebackqq_          Unknown  Unknown
+ 1: libsoca.so         000014CF650CE059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+ 1: libsoca.so         000014CF64F9E92B  fms_io_mod_mp_res        4303  fms_io.F90
+ 1: libsoca.so         000014CF64E93A3C  Unknown               Unknown  Unknown
+ 1: libsoca.so         000014CF64ED68B5  Unknown               Unknown  Unknown
+ 1: libsoca.so         000014CF64ECE023  Unknown               Unknown  Unknown
+ 1: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+ 1: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+ 1: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+ 1: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+ 1: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+ 1: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+ 1: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+ 1: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+ 1: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+ 1: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+ 1: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+ 1: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+ 1: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+ 1: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+ 1: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+ 1: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+ 1: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+ 1: liboops.so         000014CF30FD066C  _ZN4oops3Run7exec     Unknown  Unknown
+ 1: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+ 1: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+ 1: libc-2.28.so       000014CF2562AD85  __libc_start_main     Unknown  Unknown
+ 1: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+ 1: Abort(1) on node 1 (rank 1 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1
+ 2: Image              PC                Routine            Line        Source             
+ 2: libifcoremt.so.5   00001470CA3FDDCB  tracebackqq_          Unknown  Unknown
+ 2: libsoca.so         00001470BB9CB059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+ 2: libsoca.so         00001470BB89B92B  fms_io_mod_mp_res        4303  fms_io.F90
+ 2: libsoca.so         00001470BB790A3C  Unknown               Unknown  Unknown
+ 2: libsoca.so         00001470BB7D38B5  Unknown               Unknown  Unknown
+ 2: libsoca.so         00001470BB7CB023  Unknown               Unknown  Unknown
+ 2: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+ 2: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+ 2: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+ 2: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+ 2: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+ 2: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+ 2: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+ 2: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+ 2: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+ 2: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+ 2: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+ 2: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+ 2: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+ 2: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+ 2: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+ 2: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+ 2: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+ 2: liboops.so         00001470878CD66C  _ZN4oops3Run7exec     Unknown  Unknown
+ 2: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+ 2: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+ 2: libc-2.28.so       000014707BF27D85  __libc_start_main     Unknown  Unknown
+ 2: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+ 2: Abort(1) on node 2 (rank 2 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2
+ 3: Image              PC                Routine            Line        Source             
+ 3: libifcoremt.so.5   000014FB4A834DCB  tracebackqq_          Unknown  Unknown
+ 3: libsoca.so         000014FB3BE02059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+ 3: libsoca.so         000014FB3BCD292B  fms_io_mod_mp_res        4303  fms_io.F90
+ 3: libsoca.so         000014FB3BBC7A3C  Unknown               Unknown  Unknown
+ 3: libsoca.so         000014FB3BC0A8B5  Unknown               Unknown  Unknown
+ 3: libsoca.so         000014FB3BC02023  Unknown               Unknown  Unknown
+ 3: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+ 3: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+ 3: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+ 3: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+ 3: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+ 3: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+ 3: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+ 3: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+ 3: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+ 3: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+ 3: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+ 3: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+ 3: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+ 3: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+ 3: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+ 3: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+ 3: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+ 3: liboops.so         000014FB07D0466C  _ZN4oops3Run7exec     Unknown  Unknown
+ 3: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+ 3: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+ 3: libc-2.28.so       000014FAFC35ED85  __libc_start_main     Unknown  Unknown
+ 3: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+ 3: Abort(1) on node 3 (rank 3 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3
+ 4: Image              PC                Routine            Line        Source             
+ 4: libifcoremt.so.5   000014D7EBF75DCB  tracebackqq_          Unknown  Unknown
+ 4: libsoca.so         000014D7DD53D059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+ 4: libsoca.so         000014D7DD40D92B  fms_io_mod_mp_res        4303  fms_io.F90
+ 4: libsoca.so         000014D7DD302A3C  Unknown               Unknown  Unknown
+ 4: libsoca.so         000014D7DD3458B5  Unknown               Unknown  Unknown
+ 4: libsoca.so         000014D7DD33D023  Unknown               Unknown  Unknown
+ 4: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+ 4: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+ 4: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+ 4: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+ 4: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+ 4: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+ 4: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+ 4: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+ 4: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+ 4: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+ 4: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+ 4: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+ 4: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+ 4: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+ 4: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+ 4: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+ 4: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+ 4: liboops.so         000014D7A943F66C  _ZN4oops3Run7exec     Unknown  Unknown
+ 4: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+ 4: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+ 4: libc-2.28.so       000014D79DA99D85  __libc_start_main     Unknown  Unknown
+ 4: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+ 4: Abort(1) on node 4 (rank 4 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4
+ 5: Image              PC                Routine            Line        Source             
+ 5: libifcoremt.so.5   00001467ACECADCB  tracebackqq_          Unknown  Unknown
+ 5: libsoca.so         000014679E492059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+ 5: libsoca.so         000014679E36292B  fms_io_mod_mp_res        4303  fms_io.F90
+ 5: libsoca.so         000014679E257A3C  Unknown               Unknown  Unknown
+ 5: libsoca.so         000014679E29A8B5  Unknown               Unknown  Unknown
+ 5: libsoca.so         000014679E292023  Unknown               Unknown  Unknown
+ 5: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+ 5: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+ 5: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+ 5: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+ 5: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+ 5: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+ 5: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+ 5: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+ 5: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+ 5: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+ 5: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+ 5: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+ 5: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+ 5: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+ 5: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+ 5: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+ 5: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+ 5: liboops.so         000014676A39466C  _ZN4oops3Run7exec     Unknown  Unknown
+ 5: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+ 5: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+ 5: libc-2.28.so       000014675E9EED85  __libc_start_main     Unknown  Unknown
+ 5: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+ 5: Abort(1) on node 5 (rank 5 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 5
+ 8: Image              PC                Routine            Line        Source             
+ 8: libifcoremt.so.5   0000153106AB6DCB  tracebackqq_          Unknown  Unknown
+ 8: libsoca.so         00001530F807E059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+ 8: libsoca.so         00001530F7F4E92B  fms_io_mod_mp_res        4303  fms_io.F90
+ 8: libsoca.so         00001530F7E43A3C  Unknown               Unknown  Unknown
+ 8: libsoca.so         00001530F7E868B5  Unknown               Unknown  Unknown
+ 8: libsoca.so         00001530F7E7E023  Unknown               Unknown  Unknown
+ 8: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+ 8: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+ 8: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+ 8: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+ 8: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+ 8: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+ 8: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+ 8: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+ 8: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+ 8: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+ 8: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+ 8: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+ 8: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+ 8: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+ 8: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+ 8: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+ 8: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+ 8: liboops.so         00001530C3F8066C  _ZN4oops3Run7exec     Unknown  Unknown
+ 8: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+ 8: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+ 8: libc-2.28.so       00001530B85DAD85  __libc_start_main     Unknown  Unknown
+ 8: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+ 8: Abort(1) on node 8 (rank 8 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 8
+ 9: Image              PC                Routine            Line        Source             
+ 9: libifcoremt.so.5   00001462CB817DCB  tracebackqq_          Unknown  Unknown
+ 9: libsoca.so         00001462BCDDF059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+ 9: libsoca.so         00001462BCCAF92B  fms_io_mod_mp_res        4303  fms_io.F90
+ 9: libsoca.so         00001462BCBA4A3C  Unknown               Unknown  Unknown
+ 9: libsoca.so         00001462BCBE78B5  Unknown               Unknown  Unknown
+ 9: libsoca.so         00001462BCBDF023  Unknown               Unknown  Unknown
+ 9: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+ 9: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+ 9: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+ 9: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+ 9: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+ 9: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+ 9: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+ 9: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+ 9: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+ 9: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+ 9: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+ 9: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+ 9: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+ 9: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+ 9: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+ 9: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+ 9: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+ 9: liboops.so         0000146288CE166C  _ZN4oops3Run7exec     Unknown  Unknown
+ 9: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+ 9: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+ 9: libc-2.28.so       000014627D33BD85  __libc_start_main     Unknown  Unknown
+ 9: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+ 9: Abort(1) on node 9 (rank 9 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 9
+11: Image              PC                Routine            Line        Source             
+11: libifcoremt.so.5   0000149E93D61DCB  tracebackqq_          Unknown  Unknown
+11: libsoca.so         0000149E8532F059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+11: libsoca.so         0000149E851FF92B  fms_io_mod_mp_res        4303  fms_io.F90
+11: libsoca.so         0000149E850F4A3C  Unknown               Unknown  Unknown
+11: libsoca.so         0000149E851378B5  Unknown               Unknown  Unknown
+11: libsoca.so         0000149E8512F023  Unknown               Unknown  Unknown
+11: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+11: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+11: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+11: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+11: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+11: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+11: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+11: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+11: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+11: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+11: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+11: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+11: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+11: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+11: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+11: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+11: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+11: liboops.so         0000149E5123166C  _ZN4oops3Run7exec     Unknown  Unknown
+11: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+11: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+11: libc-2.28.so       0000149E4588BD85  __libc_start_main     Unknown  Unknown
+11: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+11: Abort(1) on node 11 (rank 11 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 11
+14: Image              PC                Routine            Line        Source             
+14: libifcoremt.so.5   000014D8A70A5DCB  tracebackqq_          Unknown  Unknown
+14: libsoca.so         000014D89866D059  mpp_mod_mp_mpp_er          72  mpp_util_mpi.inc
+14: libsoca.so         000014D89853D92B  fms_io_mod_mp_res        4303  fms_io.F90
+14: libsoca.so         000014D898432A3C  Unknown               Unknown  Unknown
+14: libsoca.so         000014D8984758B5  Unknown               Unknown  Unknown
+14: libsoca.so         000014D89846D023  Unknown               Unknown  Unknown
+14: gdas.x             000000000071B83D  Unknown               Unknown  Unknown
+14: gdas.x             00000000007235D2  Unknown               Unknown  Unknown
+14: gdas.x             0000000000722869  Unknown               Unknown  Unknown
+14: gdas.x             000000000072256A  Unknown               Unknown  Unknown
+14: gdas.x             000000000071FCE5  Unknown               Unknown  Unknown
+14: gdas.x             00000000007FA402  Unknown               Unknown  Unknown
+14: gdas.x             00000000007FA384  Unknown               Unknown  Unknown
+14: gdas.x             0000000000837644  Unknown               Unknown  Unknown
+14: gdas.x             000000000085DC77  Unknown               Unknown  Unknown
+14: gdas.x             000000000086F015  Unknown               Unknown  Unknown
+14: gdas.x             000000000071AA76  Unknown               Unknown  Unknown
+14: gdas.x             000000000071A744  Unknown               Unknown  Unknown
+14: gdas.x             0000000000758EA1  Unknown               Unknown  Unknown
+14: gdas.x             00000000007585BF  Unknown               Unknown  Unknown
+14: gdas.x             0000000000756D9D  Unknown               Unknown  Unknown
+14: gdas.x             000000000074E165  Unknown               Unknown  Unknown
+14: gdas.x             000000000074B3E2  Unknown               Unknown  Unknown
+14: liboops.so         000014D86456F66C  _ZN4oops3Run7exec     Unknown  Unknown
+14: gdas.x             00000000004D70C0  Unknown               Unknown  Unknown
+14: gdas.x             00000000004C812C  Unknown               Unknown  Unknown
+14: libc-2.28.so       000014D858BC9D85  __libc_start_main     Unknown  Unknown
+14: gdas.x             00000000004C786E  Unknown               Unknown  Unknown
+14: Abort(1) on node 14 (rank 14 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 14
+ 0: slurmstepd: error: *** STEP 64565037.0 ON h20c52 CANCELLED AT 2024-08-06T10:17:33 ***
+srun: error: h20c52: tasks 0-15: Killed
+srun: Terminating StepId=64565037.0
++ exgdas_global_marine_analysis_run.sh[45]: export err=137
++ exgdas_global_marine_analysis_run.sh[45]: err=137
++ exgdas_global_marine_analysis_run.sh[45]: err_chk
+
+-------------------------------------------------------------
+-- FATAL ERROR: Job ocnanalrun.3151910 failed RETURN CODE 137
+-- ABNORMAL EXIT at Tue Aug  6 10:17:33 UTC 2024 on h20c52
+-------------------------------------------------------------
+
+
+Currently Loaded Modules:
+  1) contrib                          48) atlas/0.35.1
+  2) intel/2022.1.2                   49) sp/2.5.0
+  3) stack-intel/2021.5.0             50) gsl-lite/0.37.0
+  4) impi/2022.1.2                    51) libjpeg/2.1.0
+  5) stack-intel-oneapi-mpi/2021.5.1  52) krb5/1.20.1
+  6) cmake/3.23.1                     53) libtirpc/1.3.3
+  7) gettext/0.19.8.1                 54) hdf/4.2.15
+  8) pcre2/10.42                      55) jedi-cmake/1.4.0
+  9) nghttp2/1.57.0                   56) libpng/1.6.37
+ 10) curl/8.4.0                       57) libxt/1.1.5
+ 11) zlib/1.2.13                      58) libxmu/1.1.4
+ 12) git/2.18.0                       59) libxpm/4.11.0
+ 13) pkg-config/0.27.1                60) libxaw/1.0.13
+ 14) hdf5/1.14.0                      61) udunits/2.2.28
+ 15) parallel-netcdf/1.12.2           62) ncview/2.1.9
+ 16) snappy/1.1.10                    63) netcdf-cxx4/4.3.1
+ 17) zstd/1.5.2                       64) json/3.10.5
+ 18) c-blosc/1.21.5                   65) rocoto/1.3.6
+ 19) netcdf-c/4.9.2                   66) bacio/2.4.1
+ 20) nccmp/1.9.0.1                    67) w3emc/2.10.0
+ 21) netcdf-fortran/4.6.1             68) prod_util/2.1.1
+ 22) antlr/2.7.7                      69) py-markupsafe/2.1.3
+ 23) gsl/2.7.1                        70) py-jinja2/3.0.3
+ 24) nco/5.0.6                        71) py-cftime/1.0.3.4
+ 25) parallelio/2.5.10                72) py-netcdf4/1.5.8
+ 26) wget/1.14                        73) py-pybind11/2.11.0
+ 27) libxcrypt/4.4.35                 74) py-pycodestyle/2.11.0
+ 28) sqlite/3.43.2                    75) libyaml/0.2.5
+ 29) util-linux-uuid/2.38.1           76) py-pyyaml/6.0
+ 30) python/3.10.13                   77) py-scipy/1.11.3
+ 31) boost/1.83.0                     78) py-packaging/23.1
+ 32) py-setuptools/63.4.3             79) py-bottleneck/1.3.7
+ 33) py-numpy/1.22.3                  80) py-numexpr/2.8.4
+ 34) bufr/12.0.1                      81) py-et-xmlfile/1.0.1
+ 35) git-lfs/2.10.0                   82) py-openpyxl/3.1.2
+ 36) ecbuild/3.7.2                    83) py-six/1.16.0
+ 37) openjpeg/2.3.1                   84) py-python-dateutil/2.8.2
+ 38) eccodes/2.32.0                   85) py-pytz/2023.3
+ 39) eigen/3.4.0                      86) py-pyxlsb/1.0.10
+ 40) openblas/0.3.24                  87) py-xlrd/2.0.1
+ 41) eckit/1.24.5                     88) py-xlsxwriter/3.1.7
+ 42) fftw/3.3.10                      89) py-xlwt/1.3.0
+ 43) fckit/0.11.0                     90) py-pandas/1.5.3
+ 44) fiat/1.2.0                       91) py-xarray/2023.7.0
+ 45) fms/2023.04                      92) py-f90nml/1.4.3
+ 46) ectrans/1.2.0                    93) py-pip/23.1.2
+ 47) qhull/2020.2                     94) GDAS/hera.intel
+
+ 
+
+
+Job ocnanalrun.3151910 failed RETURN CODE 137
+/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C48mx500_3DVarAOWCDA_586800cb/gdasocnanal_18
+total 4916
+-rw-r--r-- 1 Terry.McGuinness stmp   34295 May 15 00:17 MOM_input
+-rw-r--r-- 1 Terry.McGuinness stmp     199 May 15 00:17 field_table
+-rw-r--r-- 1 Terry.McGuinness stmp      20 May 15 00:17 diag_table
+-rw-r--r-- 1 Terry.McGuinness stmp  517688 Jun 10 17:01 rossrad.nc
+-rw-r--r-- 1 Terry.McGuinness stmp     873 Aug  6 08:56 obsop_name_map.yaml
+-rw-r--r-- 1 Terry.McGuinness stmp     607 Aug  6 08:56 mom_input.nml.tmpl
+-rw-r--r-- 1 Terry.McGuinness stmp    5250 Aug  6 08:56 fields_metadata.yaml
+-rw-r--r-- 1 Terry.McGuinness stmp  417294 Aug  6 09:59 soca_gridspec.nc
+-rw-r--r-- 1 Terry.McGuinness stmp 2609087 Aug  6 09:59 ocean.bkgerr_stddev.nc
+-rw-r--r-- 1 Terry.McGuinness stmp   87161 Aug  6 09:59 ice.bkgerr_stddev.nc
+-rw-r--r-- 1 Terry.McGuinness stmp   69807 Aug  6 09:59 hz_ocean.nc
+-rw-r--r-- 1 Terry.McGuinness stmp   69807 Aug  6 09:59 hz_ice.nc
+-rw-r--r-- 1 Terry.McGuinness stmp 1039326 Aug  6 09:59 vt_ocean.nc
+drwxr-sr-x 2 Terry.McGuinness stmp    4096 Aug  6 10:04 static_ens
+drwxr-sr-x 2 Terry.McGuinness stmp    4096 Aug  6 10:04 diags
+-rw-r--r-- 1 Terry.McGuinness stmp     577 Aug  6 10:05 socaincr2mom6.yaml
+-rw-r--r-- 1 Terry.McGuinness stmp    1243 Aug  6 10:05 soca_2cice_arctic.yaml
+-rw-r--r-- 1 Terry.McGuinness stmp    1326 Aug  6 10:05 soca_2cice_antarctic.yaml
+drwxr-sr-x 2 Terry.McGuinness stmp    4096 Aug  6 10:05 obs
+-rw-r--r-- 1 Terry.McGuinness stmp     520 Aug  6 10:05 mom_input.nml
+-rw-r--r-- 1 Terry.McGuinness stmp     316 Aug  6 10:05 bkg_list.yaml
+drwxr-sr-x 2 Terry.McGuinness stmp    4096 Aug  6 10:05 bkg
+drwxr-sr-x 2 Terry.McGuinness stmp    4096 Aug  6 10:05 INPUT
+drwxr-sr-x 2 Terry.McGuinness stmp    4096 Aug  6 10:05 Data
+-rw-r--r-- 1 Terry.McGuinness stmp   21308 Aug  6 10:11 tmp_yaml
+lrwxrwxrwx 1 Terry.McGuinness stmp      13 Aug  6 10:11 input.nml -> mom_input.nml
+drwx--S--- 2 Terry.McGuinness stmp    4096 Aug  6 10:11 RESTART
+-rw-r--r-- 1 Terry.McGuinness stmp       0 Aug  6 10:17 ncepdate
+-rwxr--r-- 1 Terry.McGuinness stmp     328 Aug  6 10:17 PDY
+-rw-r--r-- 1 Terry.McGuinness stmp   21308 Aug  6 10:17 var_original.yaml
+-rw-r--r-- 1 Terry.McGuinness stmp   21308 Aug  6 10:17 var.yaml
+-rw-r--r-- 1 Terry.McGuinness stmp    2524 Aug  6 10:17 logfile.000000.out
+-rw-r--r-- 1 Terry.McGuinness stmp     861 Aug  6 10:17 MOM_parameter_doc.short
+-rw-r--r-- 1 Terry.McGuinness stmp    3560 Aug  6 10:17 MOM_parameter_doc.layout
+-rw-r--r-- 1 Terry.McGuinness stmp     441 Aug  6 10:17 MOM_parameter_doc.debugging
+-rw-r--r-- 1 Terry.McGuinness stmp    2539 Aug  6 10:17 MOM_parameter_doc.all
+cat: OUTPUT.3152613: No such file or directory
+slurmstepd: error: *** JOB 64565037 ON h20c52 CANCELLED AT 2024-08-06T10:17:34 ***
+_______________________________________________________________
+Start Epilog on node h20c52 for job 64565037 :: Tue Aug  6 10:17:36 UTC 2024
+Job 64565037 finished for user Terry.McGuinness in partition hera with exit code 0:0
+_______________________________________________________________
+End Epilogue Tue Aug  6 10:17:36 UTC 2024
