@@ -1,0 +1,1285 @@
+PBS: Running prologue on parent mom node: nid001315...
+Job 148754603.cbqs01 nodelist: nid001315
++ /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/jobs/rocoto/prepatmiodaobs.sh
+Begin prepatmiodaobs.sh at Thu Aug 15 19:16:28 UTC 2024
++ prepatmiodaobs.sh[7]: . /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush/load_ufsda_modules.sh
+++ load_ufsda_modules.sh[4]: [[ NO == \N\O ]]
+++ load_ufsda_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_ufsda_modules.sh[6]: set +x
+Resetting modules to system default. Reseting $MODULEPATH back to system default. All extra directories will be removed from $MODULEPATH.
+
+Currently Loaded Modules:
+  1) craype-x86-rome     (H)  12) hdf5/1.10.6       23) fckit/0.11.0
+  2) libfabric/1.11.0.0. (H)  13) netcdf/4.7.4      24) atlas/0.35.0
+  3) craype-network-ofi  (H)  14) udunits/2.2.28    25) nccmp/1.8.9.0
+  4) envvar/1.0               15) eigen/3.4.0       26) nco/5.0.6
+  5) PrgEnv-intel/8.2.0       16) boost/1.79.0      27) gsl/2.7
+  6) cmake/3.20.2             17) gsl-lite/v0.40.0  28) prod_util/2.0.14
+  7) craype/2.7.17            18) sp/2.4.0          29) bufr/12.0.1
+  8) cray-pals/1.2.2          19) python/3.8.6      30) fms-C/2023.04
+  9) git/2.29.0               20) ecbuild/3.7.0     31) GDAS/wcoss2.intel
+ 10) intel/19.1.3.304         21) qhull/2020.2
+ 11) cray-mpich/8.1.12        22) eckit/1.24.4
+
+  Where:
+   H:  Hidden Module
+
+ 
+
+Package             Version
+------------------- ---------
+appdirs             1.4.4
+astropy             4.2
+atomicwrites        1.4.0
+attrs               20.3.0
+boto3               1.24.22
+botocore            1.27.38
+Cartopy             0.18.0
+certifi             2020.12.5
+cftime              1.4.1
+charset-normalizer  2.1.1
+cycler              0.10.0
+Cython              0.29.22
+dicttoxml           1.7.4
+ESMPy               8.0.0
+f90nml              1.4.3
+flake8              3.9.1
+geographiclib       1.50
+geopy               2.1.0
+gsw                 3.4.0
+h5py                3.7.0
+idna                3.4
+importlib-resources 5.10.0
+iniconfig           1.1.1
+iso8601             0.1.14
+Jinja2              3.1.2
+jmespath            1.0.1
+joblib              1.0.1
+kiwisolver          1.3.1
+MarkupSafe          2.1.1
+matplotlib          3.3.4
+mccabe              0.6.1
+MetPy               1.3.1
+more-itertools      8.7.0
+mpi4py              3.1.0
+netCDF4             1.5.6
+numpy               1.20.1
+packaging           20.9
+pandas              1.2.3
+Pillow              8.1.2
+Pint                0.20.1
+pip                 22.2.2
+pipenv              2022.9.24
+pluggy              0.13.1
+pooch               1.6.0
+py                  1.10.0
+pybind11            2.9.2
+pycodestyle         2.7.0
+pyerfa              1.7.2
+pyflakes            2.3.1
+pygrib              2.0.4
+pyparsing           2.4.7
+pyproj              3.0.1
+pyshp               2.1.3
+pytest              6.2.2
+python-dateutil     2.8.1
+pytz                2021.1
+PyYAML              5.4.1
+requests            2.28.1
+s3transfer          0.6.0
+scikit-learn        0.24.1
+scipy               1.6.2
+setuptools          54.2.0
+Shapely             1.7.1
+six                 1.15.0
+termcolor           1.1.0
+threadpoolctl       2.1.0
+toml                0.10.2
+toolz               0.11.2
+traitlets           5.5.0
+urllib3             1.26.11
+virtualenv          16.1.0
+virtualenv-clone    0.5.7
+wheel               0.36.2
+xarray              0.17.0
+xmltodict           0.12.0
+zipp                3.10.0
+WARNING: There was an error checking the latest version of pip.
++ prepatmiodaobs.sh[8]: status=0
++ prepatmiodaobs.sh[9]: [[ 0 -ne 0 ]]
++ prepatmiodaobs.sh[11]: export job=prepatmobs
++ prepatmiodaobs.sh[11]: job=prepatmobs
++ prepatmiodaobs.sh[12]: export jobid=prepatmobs.178491
++ prepatmiodaobs.sh[12]: jobid=prepatmobs.178491
+++ prepatmiodaobs.sh[17]: detect_py_ver
+++ bash_utils.sh[113]: regex='[0-9]+\.[0-9]+'
++++ bash_utils.sh[115]: python --version
+++ bash_utils.sh[115]: [[ Python 3.8.6 =~ [0-9]+\.[0-9]+ ]]
+++ bash_utils.sh[116]: echo 3.8
++ prepatmiodaobs.sh[17]: pyiodaPATH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/build/lib/python3.8/
++ prepatmiodaobs.sh[18]: PYTHONPATH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/build/lib/python3.8/:/apps/ops/prod/nco/core/prod_util.v2.0.14/ush:/apps/prod/python-modules/3.8.6/intel/19.1.3.304/lib/python3.8/site-packages:/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush:/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush/python
++ prepatmiodaobs.sh[19]: export PYTHONPATH
++ prepatmiodaobs.sh[23]: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/jobs/JGLOBAL_ATM_PREP_IODA_OBS
+Begin JGLOBAL_ATM_PREP_IODA_OBS at Thu Aug 15 19:16:52 UTC 2024
++ JGLOBAL_ATM_PREP_IODA_OBS[4]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush/jjob_header.sh -e prepatmiodaobs -c 'base prepatmiodaobs'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=prepatmiodaobs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z prepatmiodaobs ]]
+++ jjob_header.sh[68]: export DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491
+++ jjob_header.sh[68]: DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491
+++ jjob_header.sh[72]: mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491
+++ jjob_header.sh[73]: cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491
+++ jjob_header.sh[79]: export cycle=t00z
+++ jjob_header.sh[79]: cycle=t00z
+++ jjob_header.sh[80]: setpdy.sh
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20240217
++++ PDY[1]: PDYm7=20240217
++++ PDY[2]: export PDYm6=20240218
++++ PDY[2]: PDYm6=20240218
++++ PDY[3]: export PDYm5=20240219
++++ PDY[3]: PDYm5=20240219
++++ PDY[4]: export PDYm4=20240220
++++ PDY[4]: PDYm4=20240220
++++ PDY[5]: export PDYm3=20240221
++++ PDY[5]: PDYm3=20240221
++++ PDY[6]: export PDYm2=20240222
++++ PDY[6]: PDYm2=20240222
++++ PDY[7]: export PDYm1=20240223
++++ PDY[7]: PDYm1=20240223
++++ PDY[8]: export PDY=20240224
++++ PDY[8]: PDY=20240224
++++ PDY[9]: export PDYp1=20240225
++++ PDY[9]: PDYp1=20240225
++++ PDY[10]: export PDYp2=20240226
++++ PDY[10]: PDYp2=20240226
++++ PDY[11]: export PDYp3=20240227
++++ PDY[11]: PDYp3=20240227
++++ PDY[12]: export PDYp4=20240228
++++ PDY[12]: PDYp4=20240228
++++ PDY[13]: export PDYp5=20240229
++++ PDY[13]: PDYp5=20240229
++++ PDY[14]: export PDYp6=20240301
++++ PDY[14]: PDYp6=20240301
++++ PDY[15]: export PDYp7=20240302
++++ PDY[15]: PDYp7=20240302
+++ jjob_header.sh[87]: export pid=178896
+++ jjob_header.sh[87]: pid=178896
+++ jjob_header.sh[88]: export pgmout=OUTPUT.178896
+++ jjob_header.sh[88]: pgmout=OUTPUT.178896
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_886a9f16
+++ jjob_header.sh[95]: EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_886a9f16
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_886a9f16/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=WCOSS2
++++ config.base[9]: machine=WCOSS2
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=GFS-DEV
++++ config.base[15]: ACCOUNT=GFS-DEV
++++ config.base[16]: export QUEUE=dev
++++ config.base[16]: QUEUE=dev
++++ config.base[17]: export QUEUE_SERVICE=dev_transfer
++++ config.base[17]: QUEUE_SERVICE=dev_transfer
++++ config.base[18]: export PARTITION_BATCH=
++++ config.base[18]: PARTITION_BATCH=
++++ config.base[19]: export PARTITION_SERVICE=
++++ config.base[19]: PARTITION_SERVICE=
++++ config.base[20]: export RESERVATION=
++++ config.base[20]: RESERVATION=
++++ config.base[21]: export CLUSTERS=
++++ config.base[21]: CLUSTERS=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow
++++ config.base[27]: HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow
++++ config.base[28]: export EXECgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/exec
++++ config.base[28]: EXECgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/exec
++++ config.base[29]: export FIXgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix
++++ config.base[29]: FIXgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix
++++ config.base[30]: export PARMgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm
++++ config.base[30]: PARMgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm
++++ config.base[31]: export SCRgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/scripts
++++ config.base[31]: SCRgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/scripts
++++ config.base[32]: export USHgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush
++++ config.base[32]: USHgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush
++++ config.base[34]: export FIXam=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/am
++++ config.base[34]: FIXam=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/am
++++ config.base[35]: export FIXaer=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/aer
++++ config.base[35]: FIXaer=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/aer
++++ config.base[36]: export FIXcpl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/cpl
++++ config.base[36]: FIXcpl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/cpl
++++ config.base[37]: export FIXlut=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/lut
++++ config.base[37]: FIXlut=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/lut
++++ config.base[38]: export FIXcice=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/cice
++++ config.base[38]: FIXcice=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/cice
++++ config.base[39]: export FIXmom=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/mom6
++++ config.base[39]: FIXmom=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/mom6
++++ config.base[40]: export FIXreg2grb2=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/reg2grb2
++++ config.base[40]: FIXreg2grb2=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/reg2grb2
++++ config.base[41]: export FIXgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/gdas
++++ config.base[41]: FIXgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/gdas
++++ config.base[46]: export PACKAGEROOT=/lfs/h1/ops/prod/packages
++++ config.base[46]: PACKAGEROOT=/lfs/h1/ops/prod/packages
++++ config.base[47]: export COMROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT
++++ config.base[47]: COMROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT
++++ config.base[48]: export COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.base[48]: COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.base[49]: export DMPDIR=/lfs/h2/emc/dump/noscrub/dump
++++ config.base[49]: DMPDIR=/lfs/h2/emc/dump/noscrub/dump
++++ config.base[50]: export BASE_CPLIC=/lfs/h2/emc/global/noscrub/emc.global/data/ICSDIR/prototype_ICs
++++ config.base[50]: BASE_CPLIC=/lfs/h2/emc/global/noscrub/emc.global/data/ICSDIR/prototype_ICs
++++ config.base[54]: export COMINecmwf=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ecmwf
++++ config.base[54]: COMINecmwf=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ecmwf
++++ config.base[55]: export COMINnam=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/nam
++++ config.base[55]: COMINnam=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/nam
++++ config.base[56]: export COMINukmet=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ukmet
++++ config.base[56]: COMINukmet=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ukmet
++++ config.base[59]: export HOMEDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[59]: HOMEDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[60]: export STMP=/lfs/h2/emc/stmp/terry.mcguinness
++++ config.base[60]: STMP=/lfs/h2/emc/stmp/terry.mcguinness
++++ config.base[61]: export PTMP=/lfs/h2/emc/ptmp/terry.mcguinness
++++ config.base[61]: PTMP=/lfs/h2/emc/ptmp/terry.mcguinness
++++ config.base[62]: export NOSCRUB=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[62]: NOSCRUB=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[65]: export BASE_GIT=/lfs/h2/emc/global/save/emc.global/git
++++ config.base[65]: BASE_GIT=/lfs/h2/emc/global/save/emc.global/git
++++ config.base[68]: export DO_GOES=NO
++++ config.base[68]: DO_GOES=NO
++++ config.base[69]: export DO_BUFRSND=NO
++++ config.base[69]: DO_BUFRSND=NO
++++ config.base[70]: export DO_GEMPAK=NO
++++ config.base[70]: DO_GEMPAK=NO
++++ config.base[71]: export DO_AWIPS=NO
++++ config.base[71]: DO_AWIPS=NO
++++ config.base[72]: export DO_NPOESS=NO
++++ config.base[72]: DO_NPOESS=NO
++++ config.base[73]: export DO_TRACKER=YES
++++ config.base[73]: DO_TRACKER=YES
++++ config.base[74]: export DO_GENESIS=YES
++++ config.base[74]: DO_GENESIS=YES
++++ config.base[75]: export DO_GENESIS_FSU=NO
++++ config.base[75]: DO_GENESIS_FSU=NO
++++ config.base[76]: export DO_VERFOZN=YES
++++ config.base[76]: DO_VERFOZN=YES
++++ config.base[77]: export DO_VERFRAD=YES
++++ config.base[77]: DO_VERFRAD=YES
++++ config.base[78]: export DO_VMINMON=YES
++++ config.base[78]: DO_VMINMON=YES
++++ config.base[79]: export DO_MOS=NO
++++ config.base[79]: DO_MOS=NO
++++ config.base[85]: export REALTIME=YES
++++ config.base[85]: REALTIME=YES
++++ config.base[88]: export MODE=cycled
++++ config.base[88]: MODE=cycled
++++ config.base[97]: export FIXgsi=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/gsi
++++ config.base[97]: FIXgsi=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/gsi
++++ config.base[98]: export HOMEpost=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow
++++ config.base[98]: HOMEpost=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow
++++ config.base[99]: export HOMEobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.1.2
++++ config.base[99]: HOMEobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.1.2
++++ config.base[102]: export 'NCP=/bin/cp -p'
++++ config.base[102]: NCP='/bin/cp -p'
++++ config.base[103]: export NMV=/bin/mv
++++ config.base[103]: NMV=/bin/mv
++++ config.base[104]: export 'NLN=/bin/ln -sf'
++++ config.base[104]: NLN='/bin/ln -sf'
++++ config.base[105]: export VERBOSE=YES
++++ config.base[105]: VERBOSE=YES
++++ config.base[106]: export KEEPDATA=NO
++++ config.base[106]: KEEPDATA=NO
++++ config.base[107]: export DEBUG_POSTSCRIPT=NO
++++ config.base[107]: DEBUG_POSTSCRIPT=NO
++++ config.base[108]: export CHGRP_RSTPROD=YES
++++ config.base[108]: CHGRP_RSTPROD=YES
++++ config.base[109]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[109]: CHGRP_CMD='chgrp rstprod'
++++ config.base[110]: export NCDUMP=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin/ncdump/bin/ncdump
++++ config.base[110]: NCDUMP=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin/ncdump/bin/ncdump
++++ config.base[111]: export NCLEN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush/getncdimlen
++++ config.base[111]: NCLEN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush/getncdimlen
++++ config.base[114]: export BASE_ENV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/env
++++ config.base[114]: BASE_ENV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/env
++++ config.base[115]: export BASE_JOB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/jobs/rocoto
++++ config.base[115]: BASE_JOB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/jobs/rocoto
++++ config.base[118]: export SDATE=2024022318
++++ config.base[118]: SDATE=2024022318
++++ config.base[119]: export EDATE=2024022400
++++ config.base[119]: EDATE=2024022400
++++ config.base[120]: export EXP_WARM_START=.true.
++++ config.base[120]: EXP_WARM_START=.true.
++++ config.base[121]: export assim_freq=6
++++ config.base[121]: assim_freq=6
++++ config.base[122]: export PSLOT=C96C48_ufs_hybatmDA_886a9f16
++++ config.base[122]: PSLOT=C96C48_ufs_hybatmDA_886a9f16
++++ config.base[123]: export EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_886a9f16
++++ config.base[123]: EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_886a9f16
++++ config.base[124]: export ROTDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16
++++ config.base[124]: ROTDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16
++++ config.base[125]: export ROTDIR_DUMP=YES
++++ config.base[125]: ROTDIR_DUMP=YES
++++ config.base[126]: export DUMP_SUFFIX=
++++ config.base[126]: DUMP_SUFFIX=
++++ config.base[127]: [[ 2024022400 -ge 2019092100 ]]
++++ config.base[127]: [[ 2024022400 -le 2019110700 ]]
++++ config.base[130]: export ARCDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness/archive/C96C48_ufs_hybatmDA_886a9f16
++++ config.base[130]: ARCDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness/archive/C96C48_ufs_hybatmDA_886a9f16
++++ config.base[131]: export ATARDIR=/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C96C48_ufs_hybatmDA_886a9f16
++++ config.base[131]: ATARDIR=/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C96C48_ufs_hybatmDA_886a9f16
++++ config.base[134]: export envir=prod
++++ config.base[134]: envir=prod
++++ config.base[135]: export NET=gfs
++++ config.base[135]: NET=gfs
++++ config.base[136]: export RUN=gdas
++++ config.base[136]: RUN=gdas
++++ config.base[139]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_886a9f16/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[78]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[79]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[81]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/history'
+++++ config.com[82]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/restart'
+++++ config.com[83]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ocean/input'
+++++ config.com[84]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[85]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[86]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[87]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[88]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[90]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[91]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[92]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/input'
+++++ config.com[93]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/history'
+++++ config.com[94]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/ice/restart'
+++++ config.com[95]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[96]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[97]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[99]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/chem/history'
+++++ config.com[100]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[102]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model_data/med/restart'
++++ config.base[142]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[142]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[143]: export LOGSCRIPT=
++++ config.base[143]: LOGSCRIPT=
++++ config.base[146]: export 'REDOUT=1>'
++++ config.base[146]: REDOUT='1>'
++++ config.base[147]: export 'REDERR=2>'
++++ config.base[147]: REDERR='2>'
++++ config.base[149]: export SENDECF=NO
++++ config.base[149]: SENDECF=NO
++++ config.base[150]: export SENDSDM=NO
++++ config.base[150]: SENDSDM=NO
++++ config.base[151]: export SENDDBN_NTC=NO
++++ config.base[151]: SENDDBN_NTC=NO
++++ config.base[152]: export SENDDBN=NO
++++ config.base[152]: SENDDBN=NO
++++ config.base[153]: export DBNROOT=/apps/ops/prod/nco/core/prod_util.v2.0.14/fakedbn
++++ config.base[153]: DBNROOT=/apps/ops/prod/nco/core/prod_util.v2.0.14/fakedbn
++++ config.base[156]: export APP=ATM
++++ config.base[156]: APP=ATM
++++ config.base[158]: shopt -s extglob
++++ config.base[160]: case "${RUN}" in
++++ config.base[167]: shopt -u extglob
++++ config.base[170]: export DO_ATM=YES
++++ config.base[170]: DO_ATM=YES
++++ config.base[171]: export DO_COUPLED=NO
++++ config.base[171]: DO_COUPLED=NO
++++ config.base[172]: export DO_WAVE=NO
++++ config.base[172]: DO_WAVE=NO
++++ config.base[173]: export DO_OCN=NO
++++ config.base[173]: DO_OCN=NO
++++ config.base[174]: export DO_ICE=NO
++++ config.base[174]: DO_ICE=NO
++++ config.base[175]: export DO_AERO=NO
++++ config.base[175]: DO_AERO=NO
++++ config.base[176]: export DO_PREP_OBS_AERO=NO
++++ config.base[176]: DO_PREP_OBS_AERO=NO
++++ config.base[177]: export AERO_FCST_RUN=
++++ config.base[177]: AERO_FCST_RUN=
++++ config.base[178]: export AERO_ANL_RUN=
++++ config.base[178]: AERO_ANL_RUN=
++++ config.base[179]: export WAVE_RUN=
++++ config.base[179]: WAVE_RUN=
++++ config.base[180]: export DOBNDPNT_WAVE=NO
++++ config.base[180]: DOBNDPNT_WAVE=NO
++++ config.base[181]: export DOIBP_WAV=NO
++++ config.base[181]: DOIBP_WAV=NO
++++ config.base[182]: export FRAC_GRID=.true.
++++ config.base[182]: FRAC_GRID=.true.
++++ config.base[183]: export DO_NEST=NO
++++ config.base[183]: DO_NEST=NO
++++ config.base[184]: [[ NO == \Y\E\S ]]
++++ config.base[190]: export ntiles=6
++++ config.base[190]: ntiles=6
++++ config.base[191]: export FIXugwd=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/ugwd
++++ config.base[191]: FIXugwd=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/ugwd
++++ config.base[192]: export FIXorog=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/orog
++++ config.base[192]: FIXorog=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/fix/orog
++++ config.base[196]: export OPS_RES=C768
++++ config.base[196]: OPS_RES=C768
++++ config.base[199]: export LEVS=128
++++ config.base[199]: LEVS=128
++++ config.base[200]: export CASE=C96
++++ config.base[200]: CASE=C96
++++ config.base[201]: export CASE_ENS=C48
++++ config.base[201]: CASE_ENS=C48
++++ config.base[202]: export OCNRES=500
++++ config.base[202]: OCNRES=500
++++ config.base[203]: export ICERES=500
++++ config.base[203]: ICERES=500
++++ config.base[206]: case "${CASE}" in
++++ config.base[211]: export waveGRD=uglo_100km
++++ config.base[211]: waveGRD=uglo_100km
++++ config.base[225]: case "${APP}" in
++++ config.base[266]: [[ gdas =~ gdas ]]
++++ config.base[267]: export FHCYC=1
++++ config.base[267]: FHCYC=1
++++ config.base[268]: export FTSFS=10
++++ config.base[268]: FTSFS=10
++++ config.base[274]: export FHMIN=0
++++ config.base[274]: FHMIN=0
++++ config.base[275]: export FHMAX=9
++++ config.base[275]: FHMAX=9
++++ config.base[276]: export FHOUT=3
++++ config.base[276]: FHOUT=3
++++ config.base[277]: export FHOUT_OCN=3
++++ config.base[277]: FHOUT_OCN=3
++++ config.base[278]: export FHOUT_ICE=3
++++ config.base[278]: FHOUT_ICE=3
++++ config.base[281]: export EUPD_CYC=gdas
++++ config.base[281]: EUPD_CYC=gdas
++++ config.base[284]: export gfs_cyc=1
++++ config.base[284]: gfs_cyc=1
++++ config.base[287]: export FHMIN_GFS=0
++++ config.base[287]: FHMIN_GFS=0
++++ config.base[288]: export FHMAX_GFS=120
++++ config.base[288]: FHMAX_GFS=120
++++ config.base[290]: breakpnts=
++++ config.base[291]: export FCST_SEGMENTS=0,120
++++ config.base[291]: FCST_SEGMENTS=0,120
++++ config.base[292]: export FHOUT_GFS=3
++++ config.base[292]: FHOUT_GFS=3
++++ config.base[293]: export FHMAX_HF_GFS=0
++++ config.base[293]: FHMAX_HF_GFS=0
++++ config.base[294]: export FHOUT_HF_GFS=1
++++ config.base[294]: FHOUT_HF_GFS=1
++++ config.base[295]: export FHOUT_OCN_GFS=6
++++ config.base[295]: FHOUT_OCN_GFS=6
++++ config.base[296]: export FHOUT_ICE_GFS=6
++++ config.base[296]: FHOUT_ICE_GFS=6
++++ config.base[297]: export FHMIN_WAV=0
++++ config.base[297]: FHMIN_WAV=0
++++ config.base[298]: export FHOUT_WAV=3
++++ config.base[298]: FHOUT_WAV=3
++++ config.base[299]: export FHMAX_HF_WAV=120
++++ config.base[299]: FHMAX_HF_WAV=120
++++ config.base[300]: export FHOUT_HF_WAV=1
++++ config.base[300]: FHOUT_HF_WAV=1
++++ config.base[301]: export FHMAX_WAV=9
++++ config.base[301]: FHMAX_WAV=9
++++ config.base[302]: export FHMAX_WAV_GFS=120
++++ config.base[302]: FHMAX_WAV_GFS=120
++++ config.base[303]: ((  gfs_cyc != 0  ))
++++ config.base[304]: export STEP_GFS=24
++++ config.base[304]: STEP_GFS=24
++++ config.base[309]: export ILPOST=1
++++ config.base[309]: ILPOST=1
++++ config.base[310]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[311]: export ILPOST=3
++++ config.base[311]: ILPOST=3
++++ config.base[315]: export FHMAX_GOES=180
++++ config.base[315]: FHMAX_GOES=180
++++ config.base[316]: export FHOUT_GOES=3
++++ config.base[316]: FHOUT_GOES=3
++++ config.base[317]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[318]: export FHMAX_GOES=120
++++ config.base[318]: FHMAX_GOES=120
++++ config.base[322]: export restart_interval_gfs=12
++++ config.base[322]: restart_interval_gfs=12
++++ config.base[327]: export QUILTING=.true.
++++ config.base[327]: QUILTING=.true.
++++ config.base[328]: export OUTPUT_GRID=gaussian_grid
++++ config.base[328]: OUTPUT_GRID=gaussian_grid
++++ config.base[329]: export WRITE_DOPOST=.true.
++++ config.base[329]: WRITE_DOPOST=.true.
++++ config.base[330]: export WRITE_NSFLIP=.true.
++++ config.base[330]: WRITE_NSFLIP=.true.
++++ config.base[333]: export DOIAU=NO
++++ config.base[333]: DOIAU=NO
++++ config.base[334]: export IAUFHRS=3,6,9
++++ config.base[334]: IAUFHRS=3,6,9
++++ config.base[335]: export IAU_FHROT=3
++++ config.base[335]: IAU_FHROT=3
++++ config.base[336]: export IAU_DELTHRS=6
++++ config.base[336]: IAU_DELTHRS=6
++++ config.base[337]: export IAU_OFFSET=6
++++ config.base[337]: IAU_OFFSET=6
++++ config.base[338]: export DOIAU_ENKF=NO
++++ config.base[338]: DOIAU_ENKF=NO
++++ config.base[339]: export IAUFHRS_ENKF=3,6,9
++++ config.base[339]: IAUFHRS_ENKF=3,6,9
++++ config.base[340]: export IAU_DELTHRS_ENKF=6
++++ config.base[340]: IAU_DELTHRS_ENKF=6
++++ config.base[343]: export lobsdiag_forenkf=.true.
++++ config.base[343]: lobsdiag_forenkf=.true.
++++ config.base[351]: export imp_physics=8
++++ config.base[351]: imp_physics=8
++++ config.base[355]: export DO_JEDIATMVAR=YES
++++ config.base[355]: DO_JEDIATMVAR=YES
++++ config.base[356]: export DO_JEDIATMENS=YES
++++ config.base[356]: DO_JEDIATMENS=YES
++++ config.base[357]: export DO_JEDIOCNVAR=NO
++++ config.base[357]: DO_JEDIOCNVAR=NO
++++ config.base[358]: export DO_JEDISNOWDA=NO
++++ config.base[358]: DO_JEDISNOWDA=NO
++++ config.base[359]: export DO_MERGENSST=NO
++++ config.base[359]: DO_MERGENSST=NO
++++ config.base[362]: export DOHYBVAR=YES
++++ config.base[362]: DOHYBVAR=YES
++++ config.base[363]: export NMEM_ENS=2
++++ config.base[363]: NMEM_ENS=2
++++ config.base[364]: export SMOOTH_ENKF=NO
++++ config.base[364]: SMOOTH_ENKF=NO
++++ config.base[365]: export l4densvar=.true.
++++ config.base[365]: l4densvar=.true.
++++ config.base[366]: export lwrite4danl=.true.
++++ config.base[366]: lwrite4danl=.true.
++++ config.base[367]: export DO_CALC_INCREMENT=NO
++++ config.base[367]: DO_CALC_INCREMENT=NO
++++ config.base[370]: export NMEM_ENS_GFS=30
++++ config.base[370]: NMEM_ENS_GFS=30
++++ config.base[371]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[371]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[372]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[372]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[375]: [[ YES = \Y\E\S ]]
++++ config.base[376]: export FHMIN_ENKF=3
++++ config.base[376]: FHMIN_ENKF=3
++++ config.base[377]: export FHMAX_ENKF=9
++++ config.base[377]: FHMAX_ENKF=9
++++ config.base[378]: export FHMAX_ENKF_GFS=12
++++ config.base[378]: FHMAX_ENKF_GFS=12
++++ config.base[379]: export FHOUT_ENKF_GFS=3
++++ config.base[379]: FHOUT_ENKF_GFS=3
++++ config.base[380]: [[ .true. = \.\t\r\u\e\. ]]
++++ config.base[381]: export FHOUT=1
++++ config.base[381]: FHOUT=1
++++ config.base[382]: export FHOUT_ENKF=1
++++ config.base[382]: FHOUT_ENKF=1
++++ config.base[389]: [[ YES == \N\O ]]
++++ config.base[397]: export ENKF_SPREAD=YES
++++ config.base[397]: ENKF_SPREAD=YES
++++ config.base[400]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[400]: [[ 2024022318 = \2\0\2\4\0\2\2\4\0\0 ]]
++++ config.base[400]: [[ NO = \N\O ]]
++++ config.base[401]: export IAU_OFFSET=0
++++ config.base[401]: IAU_OFFSET=0
++++ config.base[402]: export IAU_FHROT=0
++++ config.base[402]: IAU_FHROT=0
++++ config.base[403]: export IAUFHRS=6,
++++ config.base[403]: IAUFHRS=6,
++++ config.base[406]: [[ NO = \N\O ]]
++++ config.base[406]: export IAUFHRS_ENKF=6,
++++ config.base[406]: IAUFHRS_ENKF=6,
++++ config.base[410]: [[ NO == \Y\E\S ]]
++++ config.base[413]: export restart_interval_enkfgdas=6
++++ config.base[413]: restart_interval_enkfgdas=6
++++ config.base[416]: export restart_interval_enkfgfs=6
++++ config.base[416]: restart_interval_enkfgfs=6
++++ config.base[418]: [[ NO == \Y\E\S ]]
++++ config.base[421]: export restart_interval_gdas=6
++++ config.base[421]: restart_interval_gdas=6
++++ config.base[424]: export GSI_SOILANAL=NO
++++ config.base[424]: GSI_SOILANAL=NO
++++ config.base[427]: export DONST=YES
++++ config.base[427]: DONST=YES
++++ config.base[428]: [[ YES = \Y\E\S ]]
++++ config.base[428]: export 'FNTSFA=        '
++++ config.base[428]: FNTSFA='        '
++++ config.base[431]: export nst_anl=.true.
++++ config.base[431]: nst_anl=.true.
++++ config.base[434]: export MAKE_NSSTBUFR=NO
++++ config.base[434]: MAKE_NSSTBUFR=NO
++++ config.base[437]: export MAKE_ACFTBUFR=NO
++++ config.base[437]: MAKE_ACFTBUFR=NO
++++ config.base[440]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[440]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[443]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[443]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[444]: export INCVARS_EFOLD=5
++++ config.base[444]: INCVARS_EFOLD=5
++++ config.base[449]: export netcdf_diag=.true.
++++ config.base[449]: netcdf_diag=.true.
++++ config.base[450]: export binary_diag=.false.
++++ config.base[450]: binary_diag=.false.
++++ config.base[453]: export DO_METP=YES
++++ config.base[453]: DO_METP=YES
++++ config.base[454]: export DO_FIT2OBS=YES
++++ config.base[454]: DO_FIT2OBS=YES
++++ config.base[455]: export DO_VRFY_OCEANDA=NO
++++ config.base[455]: DO_VRFY_OCEANDA=NO
++++ config.base[458]: export FHMAX_FITS=132
++++ config.base[458]: FHMAX_FITS=132
++++ config.base[459]: [[ 132 -gt 120 ]]
++++ config.base[459]: export FHMAX_FITS=120
++++ config.base[459]: FHMAX_FITS=120
++++ config.base[462]: export HPSSARCH=NO
++++ config.base[462]: HPSSARCH=NO
++++ config.base[463]: export LOCALARCH=NO
++++ config.base[463]: LOCALARCH=NO
++++ config.base[464]: [[ NO = \Y\E\S ]]
++++ config.base[468]: export ARCH_CYC=00
++++ config.base[468]: ARCH_CYC=00
++++ config.base[469]: export ARCH_WARMICFREQ=4
++++ config.base[469]: ARCH_WARMICFREQ=4
++++ config.base[470]: export ARCH_FCSTICFREQ=1
++++ config.base[470]: ARCH_FCSTICFREQ=1
++++ config.base[473]: [[ YES = \Y\E\S ]]
++++ config.base[474]: export DO_VERFOZN=NO
++++ config.base[474]: DO_VERFOZN=NO
++++ config.base[475]: export DO_VERFRAD=NO
++++ config.base[475]: DO_VERFRAD=NO
++++ config.base[476]: export DO_VMINMON=NO
++++ config.base[476]: DO_VMINMON=NO
++++ config.base[480]: export REPLAY_ICS=NO
++++ config.base[480]: REPLAY_ICS=NO
++++ config.base[481]: export OFFSET_START_HOUR=0
++++ config.base[481]: OFFSET_START_HOUR=0
++++ config.base[484]: export NUM_SND_COLLECTIVES=9
++++ config.base[484]: NUM_SND_COLLECTIVES=9
++++ config.base[488]: [[ WCOSS2 == \A\W\S\P\W ]]
++++ config.base[494]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_886a9f16/config.prepatmiodaobs
++++ config.prepatmiodaobs[6]: echo 'BEGIN: config.prepatmiodaobs'
+BEGIN: config.prepatmiodaobs
++++ config.prepatmiodaobs[9]: . /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_886a9f16/config.resources prepatmiodaobs
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=prepatmiodaobs
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[40]: max_tasks_per_node=128
+++++ config.resources[42]: mem_node_max=500GB
+++++ config.resources[127]: export max_tasks_per_node
+++++ config.resources[129]: case ${step} in
+++++ config.resources[146]: walltime=00:30:00
+++++ config.resources[147]: ntasks=1
+++++ config.resources[148]: threads_per_task=1
+++++ config.resources[149]: tasks_per_node=128
+++++ config.resources[1319]: [[ -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_886a9f16/config.resources.WCOSS2 ]]
+++++ config.resources[1320]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_886a9f16/config.resources.WCOSS2
++++++ config.resources.WCOSS2[5]: case ${step} in
+++++ config.resources[1324]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1325]: run_resource_var=threads_per_task_gdas
+++++ config.resources[1326]: [[ -n '' ]]
+++++ config.resources[1328]: [[ -n 0 ]]
+++++ config.resources[1329]: export threads_per_task
+++++ config.resources[1324]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1325]: run_resource_var=ntasks_gdas
+++++ config.resources[1326]: [[ -n '' ]]
+++++ config.resources[1328]: [[ -n 0 ]]
+++++ config.resources[1329]: export ntasks
+++++ config.resources[1324]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1325]: run_resource_var=tasks_per_node_gdas
+++++ config.resources[1326]: [[ -n '' ]]
+++++ config.resources[1328]: [[ -n 0 ]]
+++++ config.resources[1329]: export tasks_per_node
+++++ config.resources[1324]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1325]: run_resource_var=NTASKS_gdas
+++++ config.resources[1326]: [[ -n '' ]]
+++++ config.resources[1328]: [[ -n '' ]]
+++++ config.resources[1324]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1325]: run_resource_var=memory_gdas
+++++ config.resources[1326]: [[ -n '' ]]
+++++ config.resources[1328]: [[ -n '' ]]
+++++ config.resources[1324]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1325]: run_resource_var=walltime_gdas
+++++ config.resources[1326]: [[ -n '' ]]
+++++ config.resources[1328]: [[ -n 0 ]]
+++++ config.resources[1329]: export walltime
+++++ config.resources[1333]: echo 'END: config.resources'
+END: config.resources
++++ config.prepatmiodaobs[11]: echo 'END: config.prepatmiodaobs'
+END: config.prepatmiodaobs
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/env/WCOSS2.env prepatmiodaobs
++++ WCOSS2.env[3]: [[ 1 -ne 1 ]]
++++ WCOSS2.env[10]: step=prepatmiodaobs
++++ WCOSS2.env[13]: export 'launcher=mpiexec -l'
++++ WCOSS2.env[13]: launcher='mpiexec -l'
++++ WCOSS2.env[14]: export 'mpmd_opt=--cpu-bind verbose,core cfp'
++++ WCOSS2.env[14]: mpmd_opt='--cpu-bind verbose,core cfp'
++++ WCOSS2.env[18]: [[ -n 1 ]]
++++ WCOSS2.env[18]: [[ -n 128 ]]
++++ WCOSS2.env[18]: [[ -n 128 ]]
++++ WCOSS2.env[19]: max_threads_per_task=1
++++ WCOSS2.env[20]: NTHREADSmax=1
++++ WCOSS2.env[21]: NTHREADS1=1
++++ WCOSS2.env[22]: [[ 1 -gt 1 ]]
++++ WCOSS2.env[23]: [[ 1 -gt 1 ]]
++++ WCOSS2.env[24]: APRUN='mpiexec -l -n 1'
++++ WCOSS2.env[30]: [[ prepatmiodaobs = \p\r\e\p ]]
++++ WCOSS2.env[30]: [[ prepatmiodaobs = \p\r\e\p\b\u\f\r ]]
++++ WCOSS2.env[37]: [[ prepatmiodaobs = \p\r\e\p\s\n\o\w\o\b\s ]]
++++ WCOSS2.env[41]: [[ prepatmiodaobs = \p\r\e\p\_\e\m\i\s\s\i\o\n\s ]]
++++ WCOSS2.env[45]: [[ prepatmiodaobs = \w\a\v\e\i\n\i\t ]]
++++ WCOSS2.env[45]: [[ prepatmiodaobs = \w\a\v\e\p\r\e\p ]]
++++ WCOSS2.env[45]: [[ prepatmiodaobs = \w\a\v\e\p\o\s\t\s\b\s ]]
++++ WCOSS2.env[45]: [[ prepatmiodaobs = \w\a\v\e\p\o\s\t\b\n\d\p\n\t ]]
++++ WCOSS2.env[45]: [[ prepatmiodaobs = \w\a\v\e\p\o\s\t\b\n\d\p\n\t\b\l\l ]]
++++ WCOSS2.env[45]: [[ prepatmiodaobs = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ WCOSS2.env[51]: [[ prepatmiodaobs = \a\t\m\a\n\l\v\a\r ]]
++++ WCOSS2.env[56]: [[ prepatmiodaobs = \a\t\m\e\n\s\a\n\l\l\e\t\k\f ]]
++++ WCOSS2.env[61]: [[ prepatmiodaobs = \a\t\m\e\n\s\a\n\l\f\v\3\i\n\c ]]
++++ WCOSS2.env[66]: [[ prepatmiodaobs = \a\e\r\o\a\n\l\r\u\n ]]
++++ WCOSS2.env[73]: [[ prepatmiodaobs = \p\r\e\p\o\b\s\a\e\r\o ]]
++++ WCOSS2.env[78]: [[ prepatmiodaobs = \s\n\o\w\a\n\l ]]
++++ WCOSS2.env[85]: [[ prepatmiodaobs = \e\s\n\o\w\r\e\c\e\n ]]
++++ WCOSS2.env[92]: [[ prepatmiodaobs = \a\t\m\a\n\l\f\v\3\i\n\c ]]
++++ WCOSS2.env[97]: [[ prepatmiodaobs = \a\n\a\l ]]
++++ WCOSS2.env[97]: [[ prepatmiodaobs = \a\n\a\l\c\a\l\c ]]
++++ WCOSS2.env[131]: [[ prepatmiodaobs = \s\f\c\a\n\l ]]
++++ WCOSS2.env[137]: [[ prepatmiodaobs = \e\o\b\s ]]
++++ WCOSS2.env[150]: [[ prepatmiodaobs = \e\u\p\d ]]
++++ WCOSS2.env[164]: [[ prepatmiodaobs = \f\c\s\t ]]
++++ WCOSS2.env[164]: [[ prepatmiodaobs = \e\f\c\s ]]
++++ WCOSS2.env[182]: [[ prepatmiodaobs = \u\p\p ]]
++++ WCOSS2.env[187]: [[ prepatmiodaobs = \a\t\m\o\s\_\p\r\o\d\u\c\t\s ]]
++++ WCOSS2.env[191]: [[ prepatmiodaobs = \o\c\e\a\n\i\c\e\_\p\r\o\d\u\c\t\s ]]
++++ WCOSS2.env[196]: [[ prepatmiodaobs = \e\c\e\n ]]
++++ WCOSS2.env[213]: [[ prepatmiodaobs = \e\s\f\c ]]
++++ WCOSS2.env[222]: [[ prepatmiodaobs = \e\p\o\s ]]
++++ WCOSS2.env[227]: [[ prepatmiodaobs = \p\o\s\t\s\n\d ]]
++++ WCOSS2.env[239]: [[ prepatmiodaobs = \a\w\i\p\s ]]
++++ WCOSS2.env[244]: [[ prepatmiodaobs = \g\e\m\p\a\k ]]
++++ WCOSS2.env[249]: [[ prepatmiodaobs = \f\i\t\2\o\b\s ]]
++++ WCOSS2.env[254]: [[ prepatmiodaobs = \w\a\v\e\a\w\i\p\s\b\u\l\l\s ]]
++++ WCOSS2.env[258]: [[ pre = \m\o\s ]]
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
++ JGLOBAL_ATM_PREP_IODA_OBS[15]: YMD=20240224
++ JGLOBAL_ATM_PREP_IODA_OBS[15]: HH=00
++ JGLOBAL_ATM_PREP_IODA_OBS[15]: declare_from_tmpl -rx COM_OBS
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_OBS=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs
++ JGLOBAL_ATM_PREP_IODA_OBS[20]: EXSCRIPT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush/run_bufr2ioda.py
++ JGLOBAL_ATM_PREP_IODA_OBS[21]: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush/run_bufr2ioda.py 2024022400 gdas /lfs/h2/emc/dump/noscrub/dump /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/
+[38;21m2024-08-15 19:16:55,462 - INFO     - run_bufr2ioda.py: BEGIN: __main__.bufr2ioda[0m
+[38;21m2024-08-15 19:16:55,462 - INFO     - run_bufr2ioda.py: Process 2024-02-24 00:00:00 gdas from /lfs/h2/emc/dump/noscrub/dump to /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda[0m
+[38;21m2024-08-15 19:16:55,479 - INFO     - run_bufr2ioda.py: Convert ozone_ompstc...[0m
+[38;21m2024-08-15 19:16:55,480 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_ozone_ompstc.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,506 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/ozone_ompstc_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,506 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_avhrr...[0m
+[38;21m2024-08-15 19:16:55,506 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_avhrr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,527 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_avhrr_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,527 - INFO     - run_bufr2ioda.py: Convert acft_profiles_prepbufr...[0m
+[38;21m2024-08-15 19:16:55,527 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_acft_profiles_prepbufr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,545 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/acft_profiles_prepbufr_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,545 - INFO     - run_bufr2ioda.py: Convert satwind_scat...[0m
+[38;21m2024-08-15 19:16:55,545 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwind_scat.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,562 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwind_scat_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,562 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_leogeo...[0m
+[38;21m2024-08-15 19:16:55,562 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_leogeo.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,569 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_leogeo_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,570 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_modis...[0m
+[38;21m2024-08-15 19:16:55,570 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_modis.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,588 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_modis_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,588 - INFO     - run_bufr2ioda.py: Convert adpupa_prepbufr...[0m
+[38;21m2024-08-15 19:16:55,588 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_adpupa_prepbufr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,599 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/adpupa_prepbufr_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,599 - INFO     - run_bufr2ioda.py: Convert gnssro...[0m
+[38;21m2024-08-15 19:16:55,599 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gnssro.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,628 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/gnssro_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,628 - INFO     - run_bufr2ioda.py: Convert ozone_omi...[0m
+[38;21m2024-08-15 19:16:55,629 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_ozone_omi.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,642 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/ozone_omi_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,642 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_goes...[0m
+[38;21m2024-08-15 19:16:55,642 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_goes.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,671 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_goes_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,671 - INFO     - run_bufr2ioda.py: Convert adpsfc_prepbufr...[0m
+[38;21m2024-08-15 19:16:55,671 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_adpsfc_prepbufr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,683 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/adpsfc_prepbufr_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,683 - INFO     - run_bufr2ioda.py: Convert sevcsr...[0m
+[38;21m2024-08-15 19:16:55,683 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_sevcsr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,702 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/sevcsr_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,702 - INFO     - run_bufr2ioda.py: Convert ozone_ompsnp...[0m
+[38;21m2024-08-15 19:16:55,702 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_ozone_ompsnp.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,733 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/ozone_ompsnp_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,733 - INFO     - run_bufr2ioda.py: Convert adpupa...[0m
+[38;21m2024-08-15 19:16:55,733 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_adpupa.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,751 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/adpupa_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,751 - INFO     - run_bufr2ioda.py: Convert conventional_prepbufr_ps...[0m
+[38;21m2024-08-15 19:16:55,751 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_conventional_prepbufr_ps.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,777 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/conventional_prepbufr_ps_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,777 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_ahi...[0m
+[38;21m2024-08-15 19:16:55,777 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_ahi.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,793 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_ahi_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,793 - INFO     - run_bufr2ioda.py: Convert snocvr_bufr...[0m
+[38;21m2024-08-15 19:16:55,793 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_snocvr_bufr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,810 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/snocvr_bufr_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,810 - INFO     - run_bufr2ioda.py: Convert sfcshp_prepbufr...[0m
+[38;21m2024-08-15 19:16:55,810 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_sfcshp_prepbufr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,820 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/sfcshp_prepbufr_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,821 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_seviri...[0m
+[38;21m2024-08-15 19:16:55,821 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_seviri.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,832 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_seviri_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,832 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_viirs...[0m
+[38;21m2024-08-15 19:16:55,832 - INFO     - gen_bufr2ioda_json.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_viirs.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 0, 0), 'DMPDIR': PosixPath('/lfs/h2/emc/dump/noscrub/dump'), 'COM_OBS': PosixPath('/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs'), 'PDY': '20240224', 'cyc': '00'}[0m
+[38;21m2024-08-15 19:16:55,846 - INFO     - gen_bufr2ioda_json.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_viirs_2024022400.json[0m
+[38;21m2024-08-15 19:16:55,847 - INFO     - run_bufr2ioda.py: Convert atms...[0m
+[38;21m2024-08-15 19:16:55,847 - INFO     - gen_bufr2ioda_yaml.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_atms.yaml as input[0m
+[38;21m2024-08-15 19:16:55,911 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/atms_2024022400.yaml[0m
+[38;21m2024-08-15 19:16:55,911 - INFO     - run_bufr2ioda.py: Convert mtiasi...[0m
+[38;21m2024-08-15 19:16:55,912 - INFO     - gen_bufr2ioda_yaml.py: Using /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_mtiasi.yaml as input[0m
+[38;21m2024-08-15 19:16:55,983 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/mtiasi_2024022400.yaml[0m
+[38;21m2024-08-15 19:16:56,280 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_ozone_ompstc.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/ozone_ompstc_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,281 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_avhrr.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_avhrr_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,281 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_leogeo.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_leogeo_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,281 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwind_scat.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwind_scat_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,281 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_modis.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_modis_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,281 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_acft_profiles_prepbufr.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/acft_profiles_prepbufr_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,281 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_adpupa_prepbufr.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/adpupa_prepbufr_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,282 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gnssro.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/gnssro_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,282 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_ozone_omi.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/ozone_omi_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,282 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_goes.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_goes_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,282 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_adpsfc_prepbufr.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/adpsfc_prepbufr_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,283 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_sevcsr.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/sevcsr_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,283 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_ozone_ompsnp.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/ozone_ompsnp_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,283 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_adpupa.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/adpupa_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,284 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_conventional_prepbufr_ps.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/conventional_prepbufr_ps_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,284 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_ahi.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_ahi_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,284 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_snocvr_bufr.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/snocvr_bufr_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,285 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_sfcshp_prepbufr.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/sfcshp_prepbufr_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,285 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_viirs.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_viirs_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,285 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_seviri.py -c /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/satwnd_amv_seviri_2024022400.json[0m
+[38;21m2024-08-15 19:16:56,285 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/atms_2024022400.yaml[0m
+[38;21m2024-08-15 19:16:56,285 - INFO     - run_bufr2ioda.py: Executing /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/mtiasi_2024022400.yaml[0m
+PRE-MAIN-INFO BufrParser: Parsing file /lfs/h2/emc/dump/noscrub/dump/gdas.20240224/00/atmos/gdas.t00z.mtiasi.tm00.bufr_d
+PRE-MAIN-INFO Executing Queries
+PRE-MAIN-INFO BufrParser: Parsing file /lfs/h2/emc/dump/noscrub/dump/gdas.20240224/00/atmos/gdas.t00z.atms.tm00.bufr_d
+PRE-MAIN-INFO Executing Queries
+[38;21m2024-08-15 19:16:59,385 - INFO     - bufr2ioda_sevcsr.py: sensor_name = SEVIRI[0m
+[38;21m2024-08-15 19:16:59,385 - INFO     - bufr2ioda_sevcsr.py: sensor_full_name = Spinning Enhanced Visible Infra-Red Imager[0m
+[38;21m2024-08-15 19:16:59,385 - INFO     - bufr2ioda_sevcsr.py: sensor_id = 207[0m
+[38;21m2024-08-15 19:16:59,385 - INFO     - bufr2ioda_sevcsr.py: reference_time = 2024-02-24T00:00:00Z[0m
+[38;21m2024-08-15 19:16:59,386 - INFO     - bufr2ioda_sevcsr.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,389 - INFO     - bufr2ioda_sevcsr.py: Executing QuerySet to get ResultSet[0m
+PRE-MAIN-ERROR Exception: BadValue: No BUFR messages were found! Please make sure that /lfs/h2/emc/dump/noscrub/dump/gdas.20240224/00/atmos/gdas.t00z.sevcsr.tm00.bufr_d exists and is a valid BUFR file. 
+[38;21m2024-08-15 19:16:59,401 - INFO     - bufr2ioda_sevcsr.py: Return with BadValue: No BUFR messages were found! Please make sure that /lfs/h2/emc/dump/noscrub/dump/gdas.20240224/00/atmos/gdas.t00z.sevcsr.tm00.bufr_d exists and is a valid BUFR file.[0m
+[38;21m2024-08-15 19:16:59,401 - INFO     - bufr2ioda_sevcsr.py: Total running time: 0.021088361740112305 seconds[0m
+[38;21m2024-08-15 19:16:59,478 - INFO     - BUFR2IODA_adpupa.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_name = MODIS[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_name = VIIRS[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_full_name = Moderate Resolution Imaging Spectroradiometer[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_full_name = Visible Infrared Imaging Radiometer Suite[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_scat.py: sensor_name = ASCAT[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_id = 999[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_name = LEOGEO[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_id = 999[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_scat.py: sensor_full_name = Advanced Scatterometer[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: reference_time = 2024-02-24T00:00:00Z[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_full_name = Combined Platform LEO/GEO[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: reference_time = 2024-02-24T00:00:00Z[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_scat.py: sensor_id = 0[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_id = 999[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_scat.py: reference_time = 2024-02-24T00:00:00Z[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: reference_time = 2024-02-24T00:00:00Z[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_ozone_omi.py: Processing Level-2 retrieved total zone from Ozone Monitoring Instrument (OMI)[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_ozone_ompsnp.py: Processing OMPS NP is the ozone profile derived from Nadir Profile Spectrometeor in a single ground pixel of 250x250 km at nadir from SNPP; 5 ground pixel of 50x50 km at nadir from JPSS[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_ozone_omi.py: reference_time = 2024-02-24T00:00:00Z[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_ozone_ompsnp.py: reference_time = 2024-02-24T00:00:00Z[0m
+[38;21m2024-08-15 19:16:59,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_ozone_ompstc8.py: Processing OMPS TC is the Total Column Ozone derived from UV and near-infrared observations (between 300-380 nm) made by the OMPS Nadir Total Column Mapper S-NPP (50 km) and N-21 (10 km)[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_goes.py: sensor_name = ABI[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_scat.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_adpupa.py: Executing QuerySet for ADPUPA BUFR DUMP to get ResultSet ...[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_ozone_ompstc8.py: reference_time = 2024-02-24T00:00:00Z[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_goes.py: sensor_full_name = Advanced Baseline Imager[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_ozone_ompsnp.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_ozone_omi.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_name = AVHRR[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_goes.py: sensor_id = 617[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_name = AHI[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_full_name = Advanced Very High Resolution Radiometer[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_goes.py: reference_time = 2024-02-24T00:00:00Z[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_full_name = Advanced Himawari Imager[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_id = 999[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_name = SEVIRI[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_id = 999[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: reference_time = 2024-02-24T00:00:00Z[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: reference_time = 2024-02-24T00:00:00Z[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_full_name = Spinning Enhanced Visible and InfraRed Imager[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_goes.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_ozone_ompstc8.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_id = 999[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: reference_time = 2024-02-24T00:00:00Z[0m
+[38;21m2024-08-15 19:16:59,481 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,482 - INFO     - BUFR2IODA_satwind_scat.py: Executing QuerySet to get ResultSet[0m
+[38;21m2024-08-15 19:16:59,482 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2024-08-15 19:16:59,482 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2024-08-15 19:16:59,482 - INFO     - BUFR2IODA_ozone_omi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2024-08-15 19:16:59,482 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2024-08-15 19:16:59,482 - INFO     - BUFR2IODA_ozone_ompsnp.py: Executing QuerySet to get ResultSet[0m
+[38;21m2024-08-15 19:16:59,483 - INFO     - BUFR2IODA_ozone_ompstc8.py: Executing QuerySet to get ResultSet[0m
+[38;21m2024-08-15 19:16:59,483 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2024-08-15 19:16:59,483 - INFO     - BUFR2IODA_adpupa_prepbufr.py: reference_time = 2024-02-24T00:00:00Z[0m
+[38;21m2024-08-15 19:16:59,483 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2024-08-15 19:16:59,483 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Making QuerySet[0m
+[38;21m2024-08-15 19:16:59,483 - INFO     - BUFR2IODA_satwind_amv_goes.py: Executing QuerySet to get ResultSet[0m
+[38;21m2024-08-15 19:16:59,484 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2024-08-15 19:16:59,486 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Executing QuerySet to get ResultSet[0m
+Traceback (most recent call last):
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_adpupa.py", line 479, in <module>
+    bufr_to_ioda(config, logger)
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_adpupa.py", line 209, in bufr_to_ioda
+    specificHumidityOE = np.float32(np.ma.masked_array(np.full((len(qob)), 0.0)))
+UnboundLocalError: local variable 'qob' referenced before assignment
+[38;21m2024-08-15 19:16:59,945 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Generating Application and Quality Information SEARCH:[0m
+[38;21m2024-08-15 19:16:59,945 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Dimension size of GNAP (1192,4)[0m
+[38;21m2024-08-15 19:16:59,945 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Dimension size of PCCF (1192,4)[0m
+[38;21m2024-08-15 19:16:59,947 - INFO     - BUFR2IODA_satwind_amv_ahi.py: GNAP/PCCF found for column 0[0m
+PRE-MAIN-ERROR Exception: BadValue: No valid BUFR subsets were found from your queries! Please make sure you are querying for valid subsets that exist in /lfs/h2/emc/dump/noscrub/dump/gdas.20240224/00/atmos/gdas.t00z.satwnd.tm00.bufr_d. Otherwise there might be a problem with the BUFR file (no subsets). 
+[38;21m2024-08-15 19:16:59,948 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Return with BadValue: No valid BUFR subsets were found from your queries! Please make sure you are querying for valid subsets that exist in /lfs/h2/emc/dump/noscrub/dump/gdas.20240224/00/atmos/gdas.t00z.satwnd.tm00.bufr_d. Otherwise there might be a problem with the BUFR file (no subsets).[0m
+[38;21m2024-08-15 19:16:59,948 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total running time: 0.4726526737213135 seconds[0m
+[38;21m2024-08-15 19:16:59,949 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for executing QuerySet to get ResultSet : 0.4660935401916504 seconds[0m
+[38;21m2024-08-15 19:16:59,949 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Creating derived variables[0m
+Warning: Query String GNAP didn't apply to subset NC005072
+[38;21m2024-08-15 19:16:59,953 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for creating derived variables : 0.003565549850463867 seconds[0m
+[38;21m2024-08-15 19:16:59,953 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2024-08-15 19:16:59,953 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Number of Unique satellite identifiers: 3[0m
+[38;21m2024-08-15 19:16:59,954 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Unique satellite identifiers: [206 209 223][0m
+[38;21m2024-08-15 19:16:59,956 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.satwnd.avhrr_n15.tm00.nc[0m
+[38;21m2024-08-15 19:16:59,982 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.satwnd.avhrr_n18.tm00.nc[0m
+[38;21m2024-08-15 19:16:59,995 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.satwnd.avhrr_n19.tm00.nc[0m
+[38;21m2024-08-15 19:17:00,006 - INFO     - BUFR2IODA_satwind_amv_ahi.py: All Done![0m
+[38;21m2024-08-15 19:17:00,006 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total number of observation processed : 1192[0m
+[38;21m2024-08-15 19:17:00,008 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total running time: 0.5309491157531738 seconds[0m
+[38;21m2024-08-15 19:17:00,098 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Executing QuerySet: get metadata[0m
+[38;21m2024-08-15 19:17:00,296 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Executing QuerySet Done![0m
+[38;21m2024-08-15 19:17:00,297 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Running time for executing QuerySet to get ResultSet : 0.8110873699188232 seconds[0m
+[38;21m2024-08-15 19:17:00,297 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Creating derived variables - dateTime from hrdr[0m
+Running time for creating derived variables :  0.0006732940673828125 seconds
+[38;21m2024-08-15 19:17:01,118 - INFO     - BUFR2IODA_ozone_omi.py: Split data based on satellite id, Create IODA ObsSpace and Write IODA output[0m
+[38;21m2024-08-15 19:17:01,121 - INFO     - BUFR2IODA_ozone_omi.py: Number of Unique satellite identifiers : 1[0m
+[38;21m2024-08-15 19:17:01,121 - INFO     - BUFR2IODA_ozone_omi.py: Unique satellite identifiers: [785][0m
+[38;21m2024-08-15 19:17:01,125 - INFO     - BUFR2IODA_ozone_omi.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.omi_aura.tm00.nc[0m
+[38;21m2024-08-15 19:17:01,182 - INFO     - BUFR2IODA_ozone_ompsnp.py: Split data based on satellite id, Create IODA ObsSpace and Write IODA output[0m
+[38;21m2024-08-15 19:17:01,183 - INFO     - BUFR2IODA_ozone_ompsnp.py: Number of Unique satellite identifiers : 2[0m
+[38;21m2024-08-15 19:17:01,183 - INFO     - BUFR2IODA_ozone_ompsnp.py: Unique satellite identifiers: [224 225][0m
+[38;21m2024-08-15 19:17:01,190 - INFO     - BUFR2IODA_ozone_ompsnp.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.ompsnp_npp.tm00.nc[0m
+[38;21m2024-08-15 19:17:01,205 - INFO     - BUFR2IODA_ozone_ompsnp.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.ompsnp_n20.tm00.nc[0m
+[38;21m2024-08-15 19:17:01,224 - INFO     - BUFR2IODA_ozone_ompsnp.py: All Done![0m
+[38;21m2024-08-15 19:17:01,224 - INFO     - BUFR2IODA_ozone_ompsnp.py: Total number of observation processed : 0[0m
+[38;21m2024-08-15 19:17:01,227 - INFO     - BUFR2IODA_ozone_ompsnp.py: Total running time : 1.75004243850708 seconds[0m
+[38;21m2024-08-15 19:17:01,306 - INFO     - BUFR2IODA_ozone_omi.py: All Done![0m
+[38;21m2024-08-15 19:17:01,307 - INFO     - BUFR2IODA_ozone_omi.py: Total number of observation processed : 187022[0m
+[38;21m2024-08-15 19:17:01,471 - INFO     - BUFR2IODA_ozone_omi.py: Total running time : 1.9945077896118164 seconds[0m
+[38;21m2024-08-15 19:17:01,491 - INFO     - BUFR2IODA_satwind_scat.py: Creating derived variables[0m
+[38;21m2024-08-15 19:17:01,494 - INFO     - BUFR2IODA_satwind_scat.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2024-08-15 19:17:01,498 - INFO     - BUFR2IODA_satwind_scat.py: Number of Unique satellite identifiers : 2[0m
+[38;21m2024-08-15 19:17:01,498 - INFO     - BUFR2IODA_satwind_scat.py: Unique satellite identifiers : [3 5][0m
+[38;21m2024-08-15 19:17:01,505 - INFO     - BUFR2IODA_satwind_scat.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.ascatw.ascat_metop-b.tm00.nc[0m
+[38;21m2024-08-15 19:17:01,611 - INFO     - BUFR2IODA_satwind_scat.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.ascatw.ascat_metop-c.tm00.nc[0m
+[38;21m2024-08-15 19:17:01,706 - INFO     - BUFR2IODA_satwind_scat.py: All Done![0m
+[38;21m2024-08-15 19:17:01,706 - INFO     - BUFR2IODA_satwind_scat.py: Total number of observation processed : 238644[0m
+[38;21m2024-08-15 19:17:01,865 - INFO     - BUFR2IODA_satwind_scat.py: Total processing time : 2.3893160820007324 seconds[0m
+[38;21m2024-08-15 19:17:01,951 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Running time for creating derived variables : 1.6537394523620605 seconds[0m
+[38;21m2024-08-15 19:17:02,903 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for executing QuerySet to get ResultSet : 3.4211325645446777 seconds[0m
+[38;21m2024-08-15 19:17:02,904 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Creating derived variables[0m
+[38;21m2024-08-15 19:17:02,905 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for creating derived variables : 0.0017783641815185547 seconds[0m
+[38;21m2024-08-15 19:17:02,906 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2024-08-15 19:17:02,907 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Number of Unique satellite identifiers: 1[0m
+[38;21m2024-08-15 19:17:02,907 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Unique satellite identifiers: [854][0m
+[38;21m2024-08-15 19:17:02,913 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.satwnd.leogeo_multi.tm00.nc[0m
+[38;21m2024-08-15 19:17:03,011 - INFO     - BUFR2IODA_satwind_amv_ahi.py: All Done![0m
+[38;21m2024-08-15 19:17:03,011 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total number of observation processed : 67488[0m
+[38;21m2024-08-15 19:17:03,096 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total running time: 3.6201961040496826 seconds[0m
+[38;21m2024-08-15 19:17:03,133 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Generating Application and Quality Information SEARCH:[0m
+[38;21m2024-08-15 19:17:03,133 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Dimension size of GNAP (75799,4)[0m
+[38;21m2024-08-15 19:17:03,133 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Dimension size of PCCF (75799,4)[0m
+[38;21m2024-08-15 19:17:03,136 - INFO     - BUFR2IODA_satwind_amv_ahi.py: GNAP/PCCF found for column 1[0m
+[38;21m2024-08-15 19:17:03,218 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for executing QuerySet to get ResultSet : 3.7356884479522705 seconds[0m
+[38;21m2024-08-15 19:17:03,218 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Creating derived variables[0m
+[38;21m2024-08-15 19:17:03,220 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for creating derived variables : 0.0018227100372314453 seconds[0m
+[38;21m2024-08-15 19:17:03,220 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2024-08-15 19:17:03,221 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Number of Unique satellite identifiers: 2[0m
+[38;21m2024-08-15 19:17:03,221 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Unique satellite identifiers: [224 225][0m
+[38;21m2024-08-15 19:17:03,224 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.satwnd.viirs_npp.tm00.nc[0m
+[38;21m2024-08-15 19:17:03,309 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.satwnd.viirs_n20.tm00.nc[0m
+[38;21m2024-08-15 19:17:03,380 - INFO     - BUFR2IODA_satwind_amv_ahi.py: All Done![0m
+[38;21m2024-08-15 19:17:03,381 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total number of observation processed : 75799[0m
+[38;21m2024-08-15 19:17:03,480 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total running time: 4.0037007331848145 seconds[0m
+[38;21m2024-08-15 19:17:04,071 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Generating Application and Quality Information SEARCH:[0m
+[38;21m2024-08-15 19:17:04,071 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Dimension size of GNAP (138330,3)[0m
+[38;21m2024-08-15 19:17:04,071 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Dimension size of PCCF (138330,3)[0m
+[38;21m2024-08-15 19:17:04,075 - INFO     - BUFR2IODA_satwind_amv_ahi.py: GNAP/PCCF found for column 1[0m
+[38;21m2024-08-15 19:17:04,220 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for executing QuerySet to get ResultSet : 4.736379384994507 seconds[0m
+[38;21m2024-08-15 19:17:04,220 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Creating derived variables[0m
+[38;21m2024-08-15 19:17:04,223 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for creating derived variables : 0.0029821395874023438 seconds[0m
+[38;21m2024-08-15 19:17:04,223 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2024-08-15 19:17:04,225 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Number of Unique satellite identifiers: 1[0m
+[38;21m2024-08-15 19:17:04,225 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Unique satellite identifiers: [174][0m
+[38;21m2024-08-15 19:17:04,225 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Do not find this satellite id in the configuration: satid = 174[0m
+[38;21m2024-08-15 19:17:04,225 - INFO     - BUFR2IODA_satwind_amv_ahi.py: All Done![0m
+[38;21m2024-08-15 19:17:04,225 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total number of observation processed : 0[0m
+[38;21m2024-08-15 19:17:04,369 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total running time: 4.892184257507324 seconds[0m
+[38;21m2024-08-15 19:17:07,439 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Create output file: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.ADPUPA.tm00.nc[0m
+[38;21m2024-08-15 19:17:09,101 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Running time for splitting and output IODA: 8.803982019424438 seconds[0m
+[38;21m2024-08-15 19:17:09,101 - INFO     - BUFR2IODA_adpupa_prepbufr.py: All Done![0m
+[38;21m2024-08-15 19:17:09,114 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Total running time: 9.63418960571289 seconds[0m
+[38;21m2024-08-15 19:17:18,456 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for executing QuerySet to get ResultSet : 18.97230815887451 seconds[0m
+[38;21m2024-08-15 19:17:18,456 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Creating derived variables[0m
+[38;21m2024-08-15 19:17:18,464 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for creating derived variables : 0.0075304508209228516 seconds[0m
+[38;21m2024-08-15 19:17:18,464 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2024-08-15 19:17:18,470 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Number of Unique satellite identifiers: 2[0m
+[38;21m2024-08-15 19:17:18,470 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Unique satellite identifiers: [56 57][0m
+[38;21m2024-08-15 19:17:18,470 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Do not find this satellite id in the configuration: satid = 56[0m
+[38;21m2024-08-15 19:17:18,470 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Do not find this satellite id in the configuration: satid = 57[0m
+[38;21m2024-08-15 19:17:18,471 - INFO     - BUFR2IODA_satwind_amv_ahi.py: All Done![0m
+[38;21m2024-08-15 19:17:18,471 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total number of observation processed : 0[0m
+[38;21m2024-08-15 19:17:19,045 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total running time: 19.568452835083008 seconds[0m
+[38;21m2024-08-15 19:17:21,295 - INFO     - BUFR2IODA_ozone_ompstc8.py: Split data based on satellite id, Create IODA ObsSpace and Write IODA output[0m
+[38;21m2024-08-15 19:17:21,323 - INFO     - BUFR2IODA_ozone_ompstc8.py: Number of Unique satellite identifiers : 3[0m
+[38;21m2024-08-15 19:17:21,323 - INFO     - BUFR2IODA_ozone_ompstc8.py: Unique satellite identifiers: [224 225 226][0m
+[38;21m2024-08-15 19:17:21,334 - INFO     - BUFR2IODA_ozone_ompstc8.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.ompstc_npp.tm00.nc[0m
+[38;21m2024-08-15 19:17:21,380 - INFO     - BUFR2IODA_ozone_ompstc8.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.ompstc_n20.tm00.nc[0m
+[38;21m2024-08-15 19:17:21,525 - INFO     - BUFR2IODA_ozone_ompstc8.py: Do not find this satellite id in the configuration: satid = 226[0m
+[38;21m2024-08-15 19:17:21,525 - INFO     - BUFR2IODA_ozone_ompstc8.py: All Done![0m
+[38;21m2024-08-15 19:17:21,525 - INFO     - BUFR2IODA_ozone_ompstc8.py: Total number of observation processed : 198520[0m
+[38;21m2024-08-15 19:17:22,749 - INFO     - BUFR2IODA_ozone_ompstc8.py: Total running time : 23.272692680358887 seconds[0m
+PRE-MAIN-INFO Building Bufr Data
+[38;21m2024-08-15 19:18:48,224 - INFO     - BUFR2IODA_satwind_amv_goes.py: Processing time for executing QuerySet to get ResultSet : 108.74063992500305 seconds[0m
+[38;21m2024-08-15 19:18:48,224 - INFO     - BUFR2IODA_satwind_amv_goes.py: Creating derived variables[0m
+[38;21m2024-08-15 19:18:48,283 - INFO     - BUFR2IODA_satwind_amv_goes.py: Processing time for creating derived variables : 0.05842733383178711 seconds[0m
+[38;21m2024-08-15 19:18:48,283 - INFO     - BUFR2IODA_satwind_amv_goes.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2024-08-15 19:18:48,328 - INFO     - BUFR2IODA_satwind_amv_goes.py: Number of Unique satellite identifiers: 2[0m
+[38;21m2024-08-15 19:18:48,328 - INFO     - BUFR2IODA_satwind_amv_goes.py: Unique satellite identifiers: [270 272][0m
+[38;21m2024-08-15 19:18:48,372 - INFO     - BUFR2IODA_satwind_amv_goes.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.satwnd.abi_goes-16.tm00.nc[0m
+[38;21m2024-08-15 19:18:50,056 - INFO     - BUFR2IODA_satwind_amv_goes.py: Create output file : /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/gdas.20240224/00/obs/gdas.t00z.satwnd.abi_goes-18.tm00.nc[0m
+[38;21m2024-08-15 19:18:53,317 - INFO     - BUFR2IODA_satwind_amv_goes.py: All Done![0m
+[38;21m2024-08-15 19:18:53,317 - INFO     - BUFR2IODA_satwind_amv_goes.py: Total number of observation processed : 2496237[0m
+[38;21m2024-08-15 19:18:56,315 - INFO     - BUFR2IODA_satwind_amv_goes.py: Total running time: 116.83866810798645 seconds[0m
+PRE-MAIN-INFO Exporting Data
+PRE-MAIN-INFO Exporting variable = fieldOfViewNumber
+PRE-MAIN-INFO Exporting variable = heightOfStation
+PRE-MAIN-INFO Exporting variable = latitude
+PRE-MAIN-INFO Exporting variable = longitude
+PRE-MAIN-INFO Exporting variable = remappedBT
+PRE-MAIN-INFO RemappedBrightnessTemperatureVariable: nobs = 777595
+PRE-MAIN-INFO RemappedBrightnessTemperatureVariable: nchn = 22
+ ATMS_Spatial_Average: chechking bt_inout (original) ...
+ minval/maxval bt_inout (original) =    88.83000       292.8100    
+ ATMS_Spatial_Average: minval/maxval scanline =            1        8100
+ ATMS_Spatial_Average: chechking bt_inout (remapped) ...
+ minval/maxval bt_inout (remapped) =    131.3055      9.9999998E+10
+PRE-MAIN-INFO Exporting variable = satelliteIdentifier
+PRE-MAIN-INFO Exporting variable = satelliteInstrument
+PRE-MAIN-INFO Exporting variable = sensorAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorChannelNumber
+PRE-MAIN-INFO Exporting variable = sensorScanAngle
+PRE-MAIN-INFO Exporting variable = sensorZenithAngle
+PRE-MAIN-INFO Exporting variable = solarAzimuthAngle
+PRE-MAIN-INFO Exporting variable = solarZenithAngle
+PRE-MAIN-INFO Exporting variable = timestamp
+PRE-MAIN-INFO Exporting variable = fieldOfViewNumber
+PRE-MAIN-INFO Exporting variable = heightOfStation
+PRE-MAIN-INFO Exporting variable = latitude
+PRE-MAIN-INFO Exporting variable = longitude
+PRE-MAIN-INFO Exporting variable = remappedBT
+PRE-MAIN-INFO RemappedBrightnessTemperatureVariable: nobs = 762624
+PRE-MAIN-INFO RemappedBrightnessTemperatureVariable: nchn = 22
+ ATMS_Spatial_Average: chechking bt_inout (original) ...
+ minval/maxval bt_inout (original) =    131.5600       330.0200    
+ ATMS_Spatial_Average: minval/maxval scanline =            1        8100
+ ATMS_Spatial_Average: chechking bt_inout (remapped) ...
+ minval/maxval bt_inout (remapped) =    132.8035      9.9999998E+10
+PRE-MAIN-INFO Exporting variable = satelliteIdentifier
+PRE-MAIN-INFO Exporting variable = satelliteInstrument
+PRE-MAIN-INFO Exporting variable = sensorAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorChannelNumber
+PRE-MAIN-INFO Exporting variable = sensorScanAngle
+PRE-MAIN-INFO Exporting variable = sensorZenithAngle
+PRE-MAIN-INFO Exporting variable = solarAzimuthAngle
+PRE-MAIN-INFO Exporting variable = solarZenithAngle
+PRE-MAIN-INFO Exporting variable = timestamp
+PRE-MAIN-INFO Finished [130.342s]
+PRE-MAIN-INFO Building Bufr Data
+PRE-MAIN-INFO Exporting Data
+PRE-MAIN-INFO Exporting variable = fieldOfViewNumber
+PRE-MAIN-INFO Exporting variable = fractionOfClearPixelsInFOV
+PRE-MAIN-INFO Exporting variable = gqisFlagQual
+PRE-MAIN-INFO Exporting variable = latitude
+PRE-MAIN-INFO Exporting variable = longitude
+PRE-MAIN-INFO Exporting variable = satelliteId
+PRE-MAIN-INFO Exporting variable = scanLineNumber
+PRE-MAIN-INFO Exporting variable = sensorAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorChannelNumber
+PRE-MAIN-INFO Exporting variable = sensorId
+PRE-MAIN-INFO Exporting variable = sensorScanPosition
+PRE-MAIN-INFO Exporting variable = sensorViewAngle
+PRE-MAIN-INFO Exporting variable = sensorZenithAngle
+PRE-MAIN-INFO Exporting variable = solarAzimuthAngle
+PRE-MAIN-INFO Exporting variable = solarZenithAngle
+PRE-MAIN-INFO Exporting variable = spectralRadiance
+PRE-MAIN-INFO Exporting variable = stationElevation
+PRE-MAIN-INFO Exporting variable = timestamp
+PRE-MAIN-INFO Exporting variable = fieldOfViewNumber
+PRE-MAIN-INFO Exporting variable = fractionOfClearPixelsInFOV
+PRE-MAIN-INFO Exporting variable = gqisFlagQual
+PRE-MAIN-INFO Exporting variable = latitude
+PRE-MAIN-INFO Exporting variable = longitude
+PRE-MAIN-INFO Exporting variable = satelliteId
+PRE-MAIN-INFO Exporting variable = scanLineNumber
+PRE-MAIN-INFO Exporting variable = sensorAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorChannelNumber
+PRE-MAIN-INFO Exporting variable = sensorId
+PRE-MAIN-INFO Exporting variable = sensorScanPosition
+PRE-MAIN-INFO Exporting variable = sensorViewAngle
+PRE-MAIN-INFO Exporting variable = sensorZenithAngle
+PRE-MAIN-INFO Exporting variable = solarAzimuthAngle
+PRE-MAIN-INFO Exporting variable = solarZenithAngle
+PRE-MAIN-INFO Exporting variable = spectralRadiance
+PRE-MAIN-INFO Exporting variable = stationElevation
+PRE-MAIN-INFO Exporting variable = timestamp
+PRE-MAIN-INFO Exporting variable = fieldOfViewNumber
+PRE-MAIN-INFO Exporting variable = fractionOfClearPixelsInFOV
+PRE-MAIN-INFO Exporting variable = gqisFlagQual
+PRE-MAIN-INFO Exporting variable = latitude
+PRE-MAIN-INFO Exporting variable = longitude
+PRE-MAIN-INFO Exporting variable = satelliteId
+PRE-MAIN-INFO Exporting variable = scanLineNumber
+PRE-MAIN-INFO Exporting variable = sensorAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorChannelNumber
+PRE-MAIN-INFO Exporting variable = sensorId
+PRE-MAIN-INFO Exporting variable = sensorScanPosition
+PRE-MAIN-INFO Exporting variable = sensorViewAngle
+PRE-MAIN-INFO Exporting variable = sensorZenithAngle
+PRE-MAIN-INFO Exporting variable = solarAzimuthAngle
+PRE-MAIN-INFO Exporting variable = solarZenithAngle
+PRE-MAIN-INFO Exporting variable = spectralRadiance
+PRE-MAIN-INFO Exporting variable = stationElevation
+PRE-MAIN-INFO Exporting variable = timestamp
+PRE-MAIN-INFO Finished [218.461s]
+PRE-MAIN-WARNING   Skipped category metop-a
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib/python3.8/multiprocessing/pool.py", line 51, in starmapstar
+    return list(itertools.starmap(args[0], args[1]))
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush/run_bufr2ioda.py", line 28, in mp_bufr_converter
+    cmd()
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush/python/wxflow/executable.py", line 230, in __call__
+    raise ProcessError(f"Command exited with status {proc.returncode}:", long_msg)
+wxflow.executable.ProcessError: Command exited with status 1:
+'/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_adpupa.py' '-c' '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/adpupa_2024022400.json'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush/run_bufr2ioda.py", line 119, in <module>
+    bufr2ioda(args.current_cycle, args.RUN, args.DMPDIR, args.config_template_dir, args.COM_OBS)
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush/python/wxflow/logger.py", line 266, in wrapper
+    retval = func(*args, **kwargs)
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/ush/run_bufr2ioda.py", line 108, in bufr2ioda
+    pool.starmap(mp_bufr_converter, zip(exename, config_files))
+  File "/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib/python3.8/multiprocessing/pool.py", line 372, in starmap
+    return self._map_async(func, iterable, starmapstar, chunksize).get()
+  File "/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+wxflow.executable.ProcessError: Command exited with status 1:
+'/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_adpupa.py' '-c' '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400/prepatmobs.178491/adpupa_2024022400.json'
++ JGLOBAL_ATM_PREP_IODA_OBS[1]: postamble JGLOBAL_ATM_PREP_IODA_OBS 1723749412 1
++ preamble.sh[70]: set +x
+End JGLOBAL_ATM_PREP_IODA_OBS at 19:21:37 with error code 1 (time elapsed: 00:04:45)
++ prepatmiodaobs.sh[1]: postamble prepatmiodaobs.sh 1723749388 1
++ preamble.sh[70]: set +x
+End prepatmiodaobs.sh at 19:21:37 with error code 1 (time elapsed: 00:05:09)
+PBS: Running epilogue on parent mom node: nid001315...
+##### Job 148754603.cbqs01 - PBS Job Script:
+(Note: Duplicate #PBS entries are a function how PBS interprets and caches the original job script.)
+
+#! /bin/sh
+#PBS -N C96C48_ufs_hybatmDA_886a9f16_gdasprepatmiodaobs_00
+#PBS -A GFS-DEV
+#PBS -q dev
+#PBS -l walltime=00:30:00
+#PBS -l select=1:mpiprocs=128:ompthreads=1:ncpus=128
+#PBS -j oe -o /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_886a9f16/logs/2024022400/gdasprepatmiodaobs.log
+#PBS -l place=vscatter:shared
+export RUN_ENVIR='emc'
+export HOMEgfs='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow'
+export EXPDIR='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_886a9f16'
+export NET='gfs'
+export RUN='gdas'
+export CDATE='2024022400'
+export PDY='20240224'
+export cyc='00'
+export COMROOT='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/RUNTESTS/COMROOT'
+export DATAROOT='/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96C48_ufs_hybatmDA_886a9f16/gdas.2024022400'
+set -x
+/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2690/global-workflow/jobs/rocoto/prepatmiodaobs.sh
+##### End of job script
+------------------------------------------------------------------
+
