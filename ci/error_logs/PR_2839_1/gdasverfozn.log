@@ -1,0 +1,1298 @@
+Begin verfozn.sh at Wed Sep  4 16:12:43 UTC 2024
++ verfozn.sh[7]: source /work2/noaa/stmp/CI/HERCULES/2839/gfs/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) contrib/0.1                      41) grib-util/1.3.0
+  2) intel-oneapi-compilers/2023.1.0  42) g2tmpl/1.10.2
+  3) stack-intel/2021.9.0             43) gsi-ncdiag/1.1.2
+  4) intel-oneapi-mpi/2021.9.0        44) crtm-fix/2.4.0.1_emc
+  5) stack-intel-oneapi-mpi/2021.9.0  45) git-lfs/3.1.2
+  6) intel-oneapi-mkl/2023.1.0        46) crtm/2.4.0.1
+  7) zlib/1.2.13                      47) openblas/0.3.24
+  8) pigz/2.7                         48) py-setuptools/63.4.3
+  9) zstd/1.5.2                       49) py-numpy/1.23.4
+ 10) tar/1.34                         50) bufr/11.7.0
+ 11) gettext/0.21.1                   51) gmake/4.2.1
+ 12) libxcrypt/4.4.35                 52) wgrib2/2.0.8
+ 13) sqlite/3.43.2                    53) py-f90nml/1.4.3
+ 14) util-linux-uuid/2.38.1           54) py-cftime/1.0.3.4
+ 15) python/3.11.6                    55) py-netcdf4/1.5.8
+ 16) libjpeg/2.1.0                    56) libyaml/0.2.5
+ 17) jasper/2.0.32                    57) py-pyyaml/6.0
+ 18) libpng/1.6.37                    58) py-markupsafe/2.1.3
+ 19) openjpeg/2.3.1                   59) py-jinja2/3.1.2
+ 20) eccodes/2.32.0                   60) py-bottleneck/1.3.7
+ 21) fftw/3.3.10                      61) py-numexpr/2.8.4
+ 22) nghttp2/1.57.0                   62) py-et-xmlfile/1.0.1
+ 23) curl/8.4.0                       63) py-openpyxl/3.1.2
+ 24) proj/9.2.1                       64) py-pytz/2023.3
+ 25) udunits/2.2.28                   65) py-pyxlsb/1.0.10
+ 26) cdo/2.2.0                        66) py-xlrd/2.0.1
+ 27) hdf5/1.14.0                      67) py-xlsxwriter/3.1.7
+ 28) snappy/1.1.10                    68) py-xlwt/1.3.0
+ 29) c-blosc/1.21.5                   69) py-pandas/1.5.3
+ 30) netcdf-c/4.9.2                   70) py-six/1.16.0
+ 31) netcdf-fortran/4.6.1             71) py-python-dateutil/2.8.2
+ 32) antlr/2.7.7                      72) g2c/1.6.4
+ 33) gsl/2.7.1                        73) netcdf-cxx4/4.3.1
+ 34) nco/5.0.6                        74) met/9.1.3
+ 35) bacio/2.4.1                      75) metplus/3.1.1
+ 36) w3emc/2.10.0                     76) py-packaging/23.1
+ 37) prod_util/2.1.1                  77) py-xarray/2023.7.0
+ 38) g2/3.4.5                         78) prepobs/1.0.2
+ 39) sp/2.5.0                         79) fit2obs/1.1.2
+ 40) ip/4.3.0                         80) module_base.hercules
+
+ 
+
++ verfozn.sh[8]: status=0
++ verfozn.sh[9]: ((  status != 0  ))
++ verfozn.sh[11]: export job=verfozn
++ verfozn.sh[11]: job=verfozn
++ verfozn.sh[12]: export jobid=verfozn.3092485
++ verfozn.sh[12]: jobid=verfozn.3092485
++ verfozn.sh[16]: echo
+
++ verfozn.sh[17]: echo '=============== START TO RUN OZMON DATA EXTRACTION ==============='
+=============== START TO RUN OZMON DATA EXTRACTION ===============
++ verfozn.sh[19]: /work2/noaa/stmp/CI/HERCULES/2839/gfs/jobs/JGDAS_ATMOS_VERFOZN
+Begin JGDAS_ATMOS_VERFOZN at Wed Sep  4 16:12:48 UTC 2024
++ JGDAS_ATMOS_VERFOZN[7]: source /work2/noaa/stmp/CI/HERCULES/2839/gfs/ush/jjob_header.sh -e verfozn -c 'base verfozn'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=verfozn
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z verfozn ]]
+++ jjob_header.sh[68]: export DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_92dfc754/gdas.2021122100/verfozn.3092485
+++ jjob_header.sh[68]: DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_92dfc754/gdas.2021122100/verfozn.3092485
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_92dfc754/gdas.2021122100/verfozn.3092485
+++ jjob_header.sh[72]: mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_92dfc754/gdas.2021122100/verfozn.3092485
+++ jjob_header.sh[73]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_92dfc754/gdas.2021122100/verfozn.3092485
+++ jjob_header.sh[79]: export cycle=t00z
+++ jjob_header.sh[79]: cycle=t00z
+++ jjob_header.sh[80]: setpdy.sh
+sed: can't read /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/date/t00z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20211214
++++ PDY[1]: PDYm7=20211214
++++ PDY[2]: export PDYm6=20211215
++++ PDY[2]: PDYm6=20211215
++++ PDY[3]: export PDYm5=20211216
++++ PDY[3]: PDYm5=20211216
++++ PDY[4]: export PDYm4=20211217
++++ PDY[4]: PDYm4=20211217
++++ PDY[5]: export PDYm3=20211218
++++ PDY[5]: PDYm3=20211218
++++ PDY[6]: export PDYm2=20211219
++++ PDY[6]: PDYm2=20211219
++++ PDY[7]: export PDYm1=20211220
++++ PDY[7]: PDYm1=20211220
++++ PDY[8]: export PDY=20211221
++++ PDY[8]: PDY=20211221
++++ PDY[9]: export PDYp1=20211222
++++ PDY[9]: PDYp1=20211222
++++ PDY[10]: export PDYp2=20211223
++++ PDY[10]: PDYp2=20211223
++++ PDY[11]: export PDYp3=20211224
++++ PDY[11]: PDYp3=20211224
++++ PDY[12]: export PDYp4=20211225
++++ PDY[12]: PDYp4=20211225
++++ PDY[13]: export PDYp5=20211226
++++ PDY[13]: PDYp5=20211226
++++ PDY[14]: export PDYp6=20211227
++++ PDY[14]: PDYp6=20211227
++++ PDY[15]: export PDYp7=20211228
++++ PDY[15]: PDYp7=20211228
+++ jjob_header.sh[87]: export pid=3095087
+++ jjob_header.sh[87]: pid=3095087
+++ jjob_header.sh[88]: export pgmout=OUTPUT.3095087
+++ jjob_header.sh[88]: pgmout=OUTPUT.3095087
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/EXPDIR/C96C48_hybatmDA_92dfc754
+++ jjob_header.sh[95]: EXPDIR=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/EXPDIR/C96C48_hybatmDA_92dfc754
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/EXPDIR/C96C48_hybatmDA_92dfc754/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=HERCULES
++++ config.base[9]: machine=HERCULES
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=nems
++++ config.base[15]: ACCOUNT=nems
++++ config.base[16]: export QUEUE=batch
++++ config.base[16]: QUEUE=batch
++++ config.base[17]: export QUEUE_SERVICE=batch
++++ config.base[17]: QUEUE_SERVICE=batch
++++ config.base[18]: export PARTITION_BATCH=hercules
++++ config.base[18]: PARTITION_BATCH=hercules
++++ config.base[19]: export PARTITION_SERVICE=service
++++ config.base[19]: PARTITION_SERVICE=service
++++ config.base[20]: export RESERVATION=
++++ config.base[20]: RESERVATION=
++++ config.base[21]: export CLUSTERS=
++++ config.base[21]: CLUSTERS=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/work2/noaa/stmp/CI/HERCULES/2839/gfs
++++ config.base[27]: HOMEgfs=/work2/noaa/stmp/CI/HERCULES/2839/gfs
++++ config.base[28]: export EXECgfs=/work2/noaa/stmp/CI/HERCULES/2839/gfs/exec
++++ config.base[28]: EXECgfs=/work2/noaa/stmp/CI/HERCULES/2839/gfs/exec
++++ config.base[29]: export FIXgfs=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix
++++ config.base[29]: FIXgfs=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix
++++ config.base[30]: export PARMgfs=/work2/noaa/stmp/CI/HERCULES/2839/gfs/parm
++++ config.base[30]: PARMgfs=/work2/noaa/stmp/CI/HERCULES/2839/gfs/parm
++++ config.base[31]: export SCRgfs=/work2/noaa/stmp/CI/HERCULES/2839/gfs/scripts
++++ config.base[31]: SCRgfs=/work2/noaa/stmp/CI/HERCULES/2839/gfs/scripts
++++ config.base[32]: export USHgfs=/work2/noaa/stmp/CI/HERCULES/2839/gfs/ush
++++ config.base[32]: USHgfs=/work2/noaa/stmp/CI/HERCULES/2839/gfs/ush
++++ config.base[34]: export FIXam=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/am
++++ config.base[34]: FIXam=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/am
++++ config.base[35]: export FIXaer=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/aer
++++ config.base[35]: FIXaer=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/aer
++++ config.base[36]: export FIXcpl=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/cpl
++++ config.base[36]: FIXcpl=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/cpl
++++ config.base[37]: export FIXlut=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/lut
++++ config.base[37]: FIXlut=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/lut
++++ config.base[38]: export FIXcice=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/cice
++++ config.base[38]: FIXcice=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/cice
++++ config.base[39]: export FIXmom=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/mom6
++++ config.base[39]: FIXmom=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/mom6
++++ config.base[40]: export FIXreg2grb2=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/reg2grb2
++++ config.base[40]: FIXreg2grb2=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/reg2grb2
++++ config.base[41]: export FIXgdas=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/gdas
++++ config.base[41]: FIXgdas=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/gdas
++++ config.base[46]: export PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[46]: PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[47]: export COMROOT=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT
++++ config.base[47]: COMROOT=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT
++++ config.base[48]: export COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[48]: COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[49]: export DMPDIR=/work/noaa/rstprod/dump
++++ config.base[49]: DMPDIR=/work/noaa/rstprod/dump
++++ config.base[53]: export COMINecmwf=/work/noaa/global/glopara/data/external_gempak/ecmwf
++++ config.base[53]: COMINecmwf=/work/noaa/global/glopara/data/external_gempak/ecmwf
++++ config.base[54]: export COMINnam=/work/noaa/global/glopara/data/external_gempak/nam
++++ config.base[54]: COMINnam=/work/noaa/global/glopara/data/external_gempak/nam
++++ config.base[55]: export COMINukmet=/work/noaa/global/glopara/data/external_gempak/ukmet
++++ config.base[55]: COMINukmet=/work/noaa/global/glopara/data/external_gempak/ukmet
++++ config.base[58]: export HOMEDIR=/work/noaa/global/mterry
++++ config.base[58]: HOMEDIR=/work/noaa/global/mterry
++++ config.base[59]: export STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[59]: STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[60]: export PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[60]: PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[61]: export NOSCRUB=/work/noaa/global/mterry
++++ config.base[61]: NOSCRUB=/work/noaa/global/mterry
++++ config.base[64]: export BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[64]: BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[67]: export DO_GOES=NO
++++ config.base[67]: DO_GOES=NO
++++ config.base[68]: export DO_BUFRSND=NO
++++ config.base[68]: DO_BUFRSND=NO
++++ config.base[69]: export DO_GEMPAK=NO
++++ config.base[69]: DO_GEMPAK=NO
++++ config.base[70]: export DO_AWIPS=NO
++++ config.base[70]: DO_AWIPS=NO
++++ config.base[71]: export DO_NPOESS=NO
++++ config.base[71]: DO_NPOESS=NO
++++ config.base[72]: export DO_TRACKER=YES
++++ config.base[72]: DO_TRACKER=YES
++++ config.base[73]: export DO_GENESIS=YES
++++ config.base[73]: DO_GENESIS=YES
++++ config.base[74]: export DO_GENESIS_FSU=NO
++++ config.base[74]: DO_GENESIS_FSU=NO
++++ config.base[75]: export DO_VERFOZN=YES
++++ config.base[75]: DO_VERFOZN=YES
++++ config.base[76]: export DO_VERFRAD=YES
++++ config.base[76]: DO_VERFRAD=YES
++++ config.base[77]: export DO_VMINMON=YES
++++ config.base[77]: DO_VMINMON=YES
++++ config.base[78]: export DO_MOS=NO
++++ config.base[78]: DO_MOS=NO
++++ config.base[84]: export REALTIME=YES
++++ config.base[84]: REALTIME=YES
++++ config.base[87]: export MODE=cycled
++++ config.base[87]: MODE=cycled
++++ config.base[96]: export FIXgsi=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/gsi
++++ config.base[96]: FIXgsi=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/gsi
++++ config.base[97]: export HOMEpost=/work2/noaa/stmp/CI/HERCULES/2839/gfs
++++ config.base[97]: HOMEpost=/work2/noaa/stmp/CI/HERCULES/2839/gfs
++++ config.base[98]: export HOMEobsproc=/work/noaa/global/glopara/git_rocky9/obsproc/v1.1.2
++++ config.base[98]: HOMEobsproc=/work/noaa/global/glopara/git_rocky9/obsproc/v1.1.2
++++ config.base[101]: export 'NCP=/bin/cp -p'
++++ config.base[101]: NCP='/bin/cp -p'
++++ config.base[102]: export NMV=/bin/mv
++++ config.base[102]: NMV=/bin/mv
++++ config.base[103]: export 'NLN=/bin/ln -sf'
++++ config.base[103]: NLN='/bin/ln -sf'
++++ config.base[104]: export VERBOSE=YES
++++ config.base[104]: VERBOSE=YES
++++ config.base[105]: export KEEPDATA=NO
++++ config.base[105]: KEEPDATA=NO
++++ config.base[106]: export DEBUG_POSTSCRIPT=NO
++++ config.base[106]: DEBUG_POSTSCRIPT=NO
++++ config.base[107]: export CHGRP_RSTPROD=YES
++++ config.base[107]: CHGRP_RSTPROD=YES
++++ config.base[108]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[108]: CHGRP_CMD='chgrp rstprod'
++++ config.base[109]: export NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[109]: NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[110]: export NCLEN=/work2/noaa/stmp/CI/HERCULES/2839/gfs/ush/getncdimlen
++++ config.base[110]: NCLEN=/work2/noaa/stmp/CI/HERCULES/2839/gfs/ush/getncdimlen
++++ config.base[113]: export BASE_ENV=/work2/noaa/stmp/CI/HERCULES/2839/gfs/env
++++ config.base[113]: BASE_ENV=/work2/noaa/stmp/CI/HERCULES/2839/gfs/env
++++ config.base[114]: export BASE_JOB=/work2/noaa/stmp/CI/HERCULES/2839/gfs/jobs/rocoto
++++ config.base[114]: BASE_JOB=/work2/noaa/stmp/CI/HERCULES/2839/gfs/jobs/rocoto
++++ config.base[117]: export SDATE=2021122018
++++ config.base[117]: SDATE=2021122018
++++ config.base[118]: export EDATE=2021122106
++++ config.base[118]: EDATE=2021122106
++++ config.base[119]: export EXP_WARM_START=.false.
++++ config.base[119]: EXP_WARM_START=.false.
++++ config.base[120]: export assim_freq=6
++++ config.base[120]: assim_freq=6
++++ config.base[121]: export PSLOT=C96C48_hybatmDA_92dfc754
++++ config.base[121]: PSLOT=C96C48_hybatmDA_92dfc754
++++ config.base[122]: export EXPDIR=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/EXPDIR/C96C48_hybatmDA_92dfc754
++++ config.base[122]: EXPDIR=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/EXPDIR/C96C48_hybatmDA_92dfc754
++++ config.base[123]: export ROTDIR=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754
++++ config.base[123]: ROTDIR=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754
++++ config.base[124]: export ROTDIR_DUMP=YES
++++ config.base[124]: ROTDIR_DUMP=YES
++++ config.base[125]: export DUMP_SUFFIX=
++++ config.base[125]: DUMP_SUFFIX=
++++ config.base[126]: [[ 2021122100 -ge 2019092100 ]]
++++ config.base[126]: [[ 2021122100 -le 2019110700 ]]
++++ config.base[129]: export ARCDIR=/work/noaa/global/mterry/archive/C96C48_hybatmDA_92dfc754
++++ config.base[129]: ARCDIR=/work/noaa/global/mterry/archive/C96C48_hybatmDA_92dfc754
++++ config.base[130]: export ATARDIR=/work/noaa/global/mterry/archive_rotdir/C96C48_hybatmDA_92dfc754
++++ config.base[130]: ATARDIR=/work/noaa/global/mterry/archive_rotdir/C96C48_hybatmDA_92dfc754
++++ config.base[133]: export envir=prod
++++ config.base[133]: envir=prod
++++ config.base[134]: export NET=gfs
++++ config.base[134]: NET=gfs
++++ config.base[135]: export RUN=gdas
++++ config.base[135]: RUN=gdas
++++ config.base[138]: source /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/EXPDIR/C96C48_hybatmDA_92dfc754/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[78]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[79]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[81]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[82]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[83]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[84]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[85]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[86]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[87]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[88]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[90]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[91]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[92]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[93]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[94]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[95]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[96]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[97]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[99]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[100]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[101]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[103]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[141]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[141]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[142]: export LOGSCRIPT=
++++ config.base[142]: LOGSCRIPT=
++++ config.base[145]: export 'REDOUT=1>'
++++ config.base[145]: REDOUT='1>'
++++ config.base[146]: export 'REDERR=2>'
++++ config.base[146]: REDERR='2>'
++++ config.base[148]: export SENDECF=NO
++++ config.base[148]: SENDECF=NO
++++ config.base[149]: export SENDSDM=NO
++++ config.base[149]: SENDSDM=NO
++++ config.base[150]: export SENDDBN_NTC=NO
++++ config.base[150]: SENDDBN_NTC=NO
++++ config.base[151]: export SENDDBN=NO
++++ config.base[151]: SENDDBN=NO
++++ config.base[152]: export DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[152]: DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[155]: export APP=ATM
++++ config.base[155]: APP=ATM
++++ config.base[157]: shopt -s extglob
++++ config.base[159]: case "${RUN}" in
++++ config.base[166]: shopt -u extglob
++++ config.base[169]: export DO_ATM=YES
++++ config.base[169]: DO_ATM=YES
++++ config.base[170]: export DO_COUPLED=NO
++++ config.base[170]: DO_COUPLED=NO
++++ config.base[171]: export DO_WAVE=NO
++++ config.base[171]: DO_WAVE=NO
++++ config.base[172]: export DO_OCN=NO
++++ config.base[172]: DO_OCN=NO
++++ config.base[173]: export DO_ICE=NO
++++ config.base[173]: DO_ICE=NO
++++ config.base[174]: export DO_AERO=NO
++++ config.base[174]: DO_AERO=NO
++++ config.base[175]: export DO_PREP_OBS_AERO=NO
++++ config.base[175]: DO_PREP_OBS_AERO=NO
++++ config.base[176]: export AERO_FCST_RUN=
++++ config.base[176]: AERO_FCST_RUN=
++++ config.base[177]: export AERO_ANL_RUN=
++++ config.base[177]: AERO_ANL_RUN=
++++ config.base[178]: export WAVE_RUN=
++++ config.base[178]: WAVE_RUN=
++++ config.base[179]: export DOBNDPNT_WAVE=NO
++++ config.base[179]: DOBNDPNT_WAVE=NO
++++ config.base[180]: export DOIBP_WAV=NO
++++ config.base[180]: DOIBP_WAV=NO
++++ config.base[181]: export FRAC_GRID=.true.
++++ config.base[181]: FRAC_GRID=.true.
++++ config.base[182]: export DO_NEST=NO
++++ config.base[182]: DO_NEST=NO
++++ config.base[183]: [[ NO == \Y\E\S ]]
++++ config.base[189]: export ntiles=6
++++ config.base[189]: ntiles=6
++++ config.base[190]: export FIXugwd=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/ugwd
++++ config.base[190]: FIXugwd=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/ugwd
++++ config.base[191]: export FIXorog=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/orog
++++ config.base[191]: FIXorog=/work2/noaa/stmp/CI/HERCULES/2839/gfs/fix/orog
++++ config.base[195]: export OPS_RES=C768
++++ config.base[195]: OPS_RES=C768
++++ config.base[198]: export LEVS=128
++++ config.base[198]: LEVS=128
++++ config.base[199]: export CASE=C96
++++ config.base[199]: CASE=C96
++++ config.base[200]: export CASE_ENS=C48
++++ config.base[200]: CASE_ENS=C48
++++ config.base[201]: export OCNRES=500
++++ config.base[201]: OCNRES=500
++++ config.base[202]: export ICERES=500
++++ config.base[202]: ICERES=500
++++ config.base[205]: case "${CASE}" in
++++ config.base[210]: export waveGRD=uglo_100km
++++ config.base[210]: waveGRD=uglo_100km
++++ config.base[224]: case "${APP}" in
++++ config.base[265]: [[ gdas =~ gdas ]]
++++ config.base[266]: export FHCYC=1
++++ config.base[266]: FHCYC=1
++++ config.base[267]: export FTSFS=10
++++ config.base[267]: FTSFS=10
++++ config.base[273]: export FHMIN=0
++++ config.base[273]: FHMIN=0
++++ config.base[274]: export FHMAX=9
++++ config.base[274]: FHMAX=9
++++ config.base[275]: export FHOUT=3
++++ config.base[275]: FHOUT=3
++++ config.base[276]: export FHOUT_OCN=3
++++ config.base[276]: FHOUT_OCN=3
++++ config.base[277]: export FHOUT_ICE=3
++++ config.base[277]: FHOUT_ICE=3
++++ config.base[280]: export EUPD_CYC=gdas
++++ config.base[280]: EUPD_CYC=gdas
++++ config.base[283]: export gfs_cyc=1
++++ config.base[283]: gfs_cyc=1
++++ config.base[286]: export FHMIN_GFS=0
++++ config.base[286]: FHMIN_GFS=0
++++ config.base[287]: export FHMAX_GFS=120
++++ config.base[287]: FHMAX_GFS=120
++++ config.base[289]: breakpnts=
++++ config.base[290]: export FCST_SEGMENTS=0,120
++++ config.base[290]: FCST_SEGMENTS=0,120
++++ config.base[291]: export FHOUT_GFS=3
++++ config.base[291]: FHOUT_GFS=3
++++ config.base[292]: export FHMAX_HF_GFS=0
++++ config.base[292]: FHMAX_HF_GFS=0
++++ config.base[293]: export FHOUT_HF_GFS=1
++++ config.base[293]: FHOUT_HF_GFS=1
++++ config.base[294]: export FHOUT_OCN_GFS=6
++++ config.base[294]: FHOUT_OCN_GFS=6
++++ config.base[295]: export FHOUT_ICE_GFS=6
++++ config.base[295]: FHOUT_ICE_GFS=6
++++ config.base[296]: export FHMIN_WAV=0
++++ config.base[296]: FHMIN_WAV=0
++++ config.base[297]: export FHOUT_WAV=3
++++ config.base[297]: FHOUT_WAV=3
++++ config.base[298]: export FHMAX_HF_WAV=120
++++ config.base[298]: FHMAX_HF_WAV=120
++++ config.base[299]: export FHOUT_HF_WAV=1
++++ config.base[299]: FHOUT_HF_WAV=1
++++ config.base[300]: export FHMAX_WAV=9
++++ config.base[300]: FHMAX_WAV=9
++++ config.base[301]: export FHMAX_WAV_GFS=120
++++ config.base[301]: FHMAX_WAV_GFS=120
++++ config.base[302]: ((  gfs_cyc != 0  ))
++++ config.base[303]: export STEP_GFS=24
++++ config.base[303]: STEP_GFS=24
++++ config.base[308]: export ILPOST=1
++++ config.base[308]: ILPOST=1
++++ config.base[309]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[310]: export ILPOST=3
++++ config.base[310]: ILPOST=3
++++ config.base[314]: export FHMAX_GOES=180
++++ config.base[314]: FHMAX_GOES=180
++++ config.base[315]: export FHOUT_GOES=3
++++ config.base[315]: FHOUT_GOES=3
++++ config.base[316]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[317]: export FHMAX_GOES=120
++++ config.base[317]: FHMAX_GOES=120
++++ config.base[321]: export restart_interval_gfs=12
++++ config.base[321]: restart_interval_gfs=12
++++ config.base[326]: export QUILTING=.true.
++++ config.base[326]: QUILTING=.true.
++++ config.base[327]: export OUTPUT_GRID=gaussian_grid
++++ config.base[327]: OUTPUT_GRID=gaussian_grid
++++ config.base[328]: export WRITE_DOPOST=.true.
++++ config.base[328]: WRITE_DOPOST=.true.
++++ config.base[329]: export WRITE_NSFLIP=.true.
++++ config.base[329]: WRITE_NSFLIP=.true.
++++ config.base[332]: export DOIAU=YES
++++ config.base[332]: DOIAU=YES
++++ config.base[333]: export IAUFHRS=3,6,9
++++ config.base[333]: IAUFHRS=3,6,9
++++ config.base[334]: export IAU_FHROT=3
++++ config.base[334]: IAU_FHROT=3
++++ config.base[335]: export IAU_DELTHRS=6
++++ config.base[335]: IAU_DELTHRS=6
++++ config.base[336]: export IAU_OFFSET=6
++++ config.base[336]: IAU_OFFSET=6
++++ config.base[337]: export DOIAU_ENKF=YES
++++ config.base[337]: DOIAU_ENKF=YES
++++ config.base[338]: export IAUFHRS_ENKF=3,6,9
++++ config.base[338]: IAUFHRS_ENKF=3,6,9
++++ config.base[339]: export IAU_DELTHRS_ENKF=6
++++ config.base[339]: IAU_DELTHRS_ENKF=6
++++ config.base[342]: export lobsdiag_forenkf=.true.
++++ config.base[342]: lobsdiag_forenkf=.true.
++++ config.base[350]: export imp_physics=8
++++ config.base[350]: imp_physics=8
++++ config.base[354]: export DO_JEDIATMVAR=NO
++++ config.base[354]: DO_JEDIATMVAR=NO
++++ config.base[355]: export DO_JEDIATMENS=NO
++++ config.base[355]: DO_JEDIATMENS=NO
++++ config.base[356]: export DO_JEDIOCNVAR=NO
++++ config.base[356]: DO_JEDIOCNVAR=NO
++++ config.base[357]: export DO_JEDISNOWDA=NO
++++ config.base[357]: DO_JEDISNOWDA=NO
++++ config.base[358]: export DO_MERGENSST=NO
++++ config.base[358]: DO_MERGENSST=NO
++++ config.base[361]: export DOHYBVAR=YES
++++ config.base[361]: DOHYBVAR=YES
++++ config.base[362]: export NMEM_ENS=2
++++ config.base[362]: NMEM_ENS=2
++++ config.base[363]: export SMOOTH_ENKF=NO
++++ config.base[363]: SMOOTH_ENKF=NO
++++ config.base[364]: export l4densvar=.true.
++++ config.base[364]: l4densvar=.true.
++++ config.base[365]: export lwrite4danl=.true.
++++ config.base[365]: lwrite4danl=.true.
++++ config.base[366]: export DO_CALC_INCREMENT=NO
++++ config.base[366]: DO_CALC_INCREMENT=NO
++++ config.base[369]: export NMEM_ENS_GFS=30
++++ config.base[369]: NMEM_ENS_GFS=30
++++ config.base[370]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[370]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[371]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[371]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[374]: [[ YES = \Y\E\S ]]
++++ config.base[375]: export FHMIN_ENKF=3
++++ config.base[375]: FHMIN_ENKF=3
++++ config.base[376]: export FHMAX_ENKF=9
++++ config.base[376]: FHMAX_ENKF=9
++++ config.base[377]: export FHMAX_ENKF_GFS=12
++++ config.base[377]: FHMAX_ENKF_GFS=12
++++ config.base[378]: export FHOUT_ENKF_GFS=3
++++ config.base[378]: FHOUT_ENKF_GFS=3
++++ config.base[379]: [[ .true. = \.\t\r\u\e\. ]]
++++ config.base[380]: export FHOUT=1
++++ config.base[380]: FHOUT=1
++++ config.base[381]: export FHOUT_ENKF=1
++++ config.base[381]: FHOUT_ENKF=1
++++ config.base[388]: [[ YES == \N\O ]]
++++ config.base[396]: export ENKF_SPREAD=YES
++++ config.base[396]: ENKF_SPREAD=YES
++++ config.base[399]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[399]: [[ 2021122018 = \2\0\2\1\1\2\2\1\0\0 ]]
++++ config.base[399]: [[ YES = \N\O ]]
++++ config.base[399]: [[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[405]: [[ YES = \N\O ]]
++++ config.base[409]: [[ YES == \Y\E\S ]]
++++ config.base[410]: export restart_interval_enkfgdas=3
++++ config.base[410]: restart_interval_enkfgdas=3
++++ config.base[415]: export restart_interval_enkfgfs=3
++++ config.base[415]: restart_interval_enkfgfs=3
++++ config.base[417]: [[ YES == \Y\E\S ]]
++++ config.base[418]: export restart_interval_gdas=3
++++ config.base[418]: restart_interval_gdas=3
++++ config.base[423]: export GSI_SOILANAL=NO
++++ config.base[423]: GSI_SOILANAL=NO
++++ config.base[426]: export DONST=YES
++++ config.base[426]: DONST=YES
++++ config.base[427]: [[ YES = \Y\E\S ]]
++++ config.base[427]: export 'FNTSFA=        '
++++ config.base[427]: FNTSFA='        '
++++ config.base[430]: export nst_anl=.true.
++++ config.base[430]: nst_anl=.true.
++++ config.base[433]: export MAKE_NSSTBUFR=NO
++++ config.base[433]: MAKE_NSSTBUFR=NO
++++ config.base[436]: export MAKE_ACFTBUFR=NO
++++ config.base[436]: MAKE_ACFTBUFR=NO
++++ config.base[439]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[439]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[442]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[442]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[443]: export INCVARS_EFOLD=5
++++ config.base[443]: INCVARS_EFOLD=5
++++ config.base[448]: export netcdf_diag=.true.
++++ config.base[448]: netcdf_diag=.true.
++++ config.base[449]: export binary_diag=.false.
++++ config.base[449]: binary_diag=.false.
++++ config.base[452]: export DO_METP=YES
++++ config.base[452]: DO_METP=YES
++++ config.base[453]: export DO_FIT2OBS=YES
++++ config.base[453]: DO_FIT2OBS=YES
++++ config.base[454]: export DO_VRFY_OCEANDA=NO
++++ config.base[454]: DO_VRFY_OCEANDA=NO
++++ config.base[457]: export FHMAX_FITS=132
++++ config.base[457]: FHMAX_FITS=132
++++ config.base[458]: [[ 132 -gt 120 ]]
++++ config.base[458]: export FHMAX_FITS=120
++++ config.base[458]: FHMAX_FITS=120
++++ config.base[461]: export HPSSARCH=NO
++++ config.base[461]: HPSSARCH=NO
++++ config.base[462]: export LOCALARCH=NO
++++ config.base[462]: LOCALARCH=NO
++++ config.base[463]: [[ NO = \Y\E\S ]]
++++ config.base[467]: export ARCH_CYC=00
++++ config.base[467]: ARCH_CYC=00
++++ config.base[468]: export ARCH_WARMICFREQ=4
++++ config.base[468]: ARCH_WARMICFREQ=4
++++ config.base[469]: export ARCH_FCSTICFREQ=1
++++ config.base[469]: ARCH_FCSTICFREQ=1
++++ config.base[472]: [[ NO = \Y\E\S ]]
++++ config.base[480]: export REPLAY_ICS=NO
++++ config.base[480]: REPLAY_ICS=NO
++++ config.base[481]: export OFFSET_START_HOUR=0
++++ config.base[481]: OFFSET_START_HOUR=0
++++ config.base[484]: export NUM_SND_COLLECTIVES=9
++++ config.base[484]: NUM_SND_COLLECTIVES=9
++++ config.base[488]: [[ HERCULES =~ PW ]]
++++ config.base[495]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/EXPDIR/C96C48_hybatmDA_92dfc754/config.verfozn
++++ config.verfozn[4]: echo 'BEGIN: config.verfozn'
+BEGIN: config.verfozn
++++ config.verfozn[7]: . /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/EXPDIR/C96C48_hybatmDA_92dfc754/config.resources verfozn
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=verfozn
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[60]: max_tasks_per_node=80
+++++ config.resources[62]: mem_node_max=512GB
+++++ config.resources[143]: export max_tasks_per_node
+++++ config.resources[145]: case ${step} in
+++++ config.resources[914]: walltime=00:05:00
+++++ config.resources[915]: ntasks=1
+++++ config.resources[916]: threads_per_task=1
+++++ config.resources[917]: tasks_per_node=1
+++++ config.resources[918]: memory=1G
+++++ config.resources[1395]: [[ -f /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/EXPDIR/C96C48_hybatmDA_92dfc754/config.resources.HERCULES ]]
+++++ config.resources[1396]: source /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/EXPDIR/C96C48_hybatmDA_92dfc754/config.resources.HERCULES
++++++ config.resources.HERCULES[5]: case ${step} in
+++++ config.resources[1400]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1401]: run_resource_var=threads_per_task_gdas
+++++ config.resources[1402]: [[ -n '' ]]
+++++ config.resources[1404]: [[ -n 0 ]]
+++++ config.resources[1405]: export threads_per_task
+++++ config.resources[1400]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1401]: run_resource_var=ntasks_gdas
+++++ config.resources[1402]: [[ -n '' ]]
+++++ config.resources[1404]: [[ -n 0 ]]
+++++ config.resources[1405]: export ntasks
+++++ config.resources[1400]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1401]: run_resource_var=tasks_per_node_gdas
+++++ config.resources[1402]: [[ -n '' ]]
+++++ config.resources[1404]: [[ -n 0 ]]
+++++ config.resources[1405]: export tasks_per_node
+++++ config.resources[1400]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1401]: run_resource_var=NTASKS_gdas
+++++ config.resources[1402]: [[ -n '' ]]
+++++ config.resources[1404]: [[ -n '' ]]
+++++ config.resources[1400]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1401]: run_resource_var=memory_gdas
+++++ config.resources[1402]: [[ -n '' ]]
+++++ config.resources[1404]: [[ -n 0 ]]
+++++ config.resources[1405]: export memory
+++++ config.resources[1400]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1401]: run_resource_var=walltime_gdas
+++++ config.resources[1402]: [[ -n '' ]]
+++++ config.resources[1404]: [[ -n 0 ]]
+++++ config.resources[1405]: export walltime
+++++ config.resources[1409]: echo 'END: config.resources'
+END: config.resources
++++ config.verfozn[9]: export DO_DATA_RPT=1
++++ config.verfozn[9]: DO_DATA_RPT=1
++++ config.verfozn[10]: export OZN_AREA=glb
++++ config.verfozn[10]: OZN_AREA=glb
++++ config.verfozn[11]: export OZNMON_SUFFIX=gfs
++++ config.verfozn[11]: OZNMON_SUFFIX=gfs
++++ config.verfozn[12]: export SATYPE_FILE=/work2/noaa/stmp/CI/HERCULES/2839/gfs/parm/monitor/gdas_oznmon_satype.txt
++++ config.verfozn[12]: SATYPE_FILE=/work2/noaa/stmp/CI/HERCULES/2839/gfs/parm/monitor/gdas_oznmon_satype.txt
++++ config.verfozn[15]: . /work2/noaa/stmp/CI/HERCULES/2839/gfs/parm/monitor/gdas_oznmon.parm
+++++ gdas_oznmon.parm[4]: export COMPRESS=gzip
+++++ gdas_oznmon.parm[4]: COMPRESS=gzip
+++++ gdas_oznmon.parm[5]: export UNCOMPRESS=gunzip
+++++ gdas_oznmon.parm[5]: UNCOMPRESS=gunzip
+++++ gdas_oznmon.parm[6]: export VALIDATE_DATA=1
+++++ gdas_oznmon.parm[6]: VALIDATE_DATA=1
+++++ gdas_oznmon.parm[7]: export Z=gz
+++++ gdas_oznmon.parm[7]: Z=gz
++++ config.verfozn[18]: [[ 1 -eq 1 ]]
++++ config.verfozn[19]: export ozn_val_file=/work2/noaa/stmp/CI/HERCULES/2839/gfs/parm/monitor/gdas_oznmon_base.tar
++++ config.verfozn[19]: ozn_val_file=/work2/noaa/stmp/CI/HERCULES/2839/gfs/parm/monitor/gdas_oznmon_base.tar
++++ config.verfozn[22]: echo 'END: config.verfozn'
+END: config.verfozn
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /work2/noaa/stmp/CI/HERCULES/2839/gfs/env/HERCULES.env verfozn
++++ HERCULES.env[3]: [[ 1 -ne 1 ]]
++++ HERCULES.env[10]: step=verfozn
++++ HERCULES.env[12]: export 'launcher=srun -l --export=ALL'
++++ HERCULES.env[12]: launcher='srun -l --export=ALL'
++++ HERCULES.env[13]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[13]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[16]: export MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[16]: MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[17]: export MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[17]: MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[18]: export MPI_GROUP_MAX=256
++++ HERCULES.env[18]: MPI_GROUP_MAX=256
++++ HERCULES.env[19]: export MPI_MEMMAP_OFF=1
++++ HERCULES.env[19]: MPI_MEMMAP_OFF=1
++++ HERCULES.env[20]: export MP_STDOUTMODE=ORDERED
++++ HERCULES.env[20]: MP_STDOUTMODE=ORDERED
++++ HERCULES.env[21]: export KMP_AFFINITY=scatter
++++ HERCULES.env[21]: KMP_AFFINITY=scatter
++++ HERCULES.env[22]: export OMP_STACKSIZE=2048000
++++ HERCULES.env[22]: OMP_STACKSIZE=2048000
++++ HERCULES.env[23]: export NTHSTACK=1024000000
++++ HERCULES.env[23]: NTHSTACK=1024000000
++++ HERCULES.env[25]: export I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[25]: I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[26]: export I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[26]: I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[28]: ulimit -s unlimited
++++ HERCULES.env[29]: ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 2049808
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 1048576
+open files                          (-n) 131072
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) unlimited
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 1028698
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
++++ HERCULES.env[33]: [[ -n 1 ]]
++++ HERCULES.env[33]: [[ -n 80 ]]
++++ HERCULES.env[33]: [[ -n 1 ]]
++++ HERCULES.env[34]: max_threads_per_task=80
++++ HERCULES.env[35]: NTHREADSmax=1
++++ HERCULES.env[36]: NTHREADS1=1
++++ HERCULES.env[37]: [[ 1 -gt 80 ]]
++++ HERCULES.env[38]: [[ 1 -gt 80 ]]
++++ HERCULES.env[39]: APRUN='srun -l --export=ALL -n 1'
++++ HERCULES.env[45]: case ${step} in
++++ HERCULES.env[303]: echo 'WARNING: The job step verfozn does not specify Hercules-specific resources'
+WARNING: The job step verfozn does not specify Hercules-specific resources
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
+++ JGDAS_ATMOS_VERFOZN[13]: date --utc +%Y%m%d%H -d '20211221 00 - 6 hours'
++ JGDAS_ATMOS_VERFOZN[13]: GDATE=2021122018
++ JGDAS_ATMOS_VERFOZN[14]: export gPDY=20211220
++ JGDAS_ATMOS_VERFOZN[14]: gPDY=20211220
++ JGDAS_ATMOS_VERFOZN[15]: export gcyc=18
++ JGDAS_ATMOS_VERFOZN[15]: gcyc=18
++ JGDAS_ATMOS_VERFOZN[20]: YMD=20211221
++ JGDAS_ATMOS_VERFOZN[20]: HH=00
++ JGDAS_ATMOS_VERFOZN[20]: declare_from_tmpl -rx COM_ATMOS_ANALYSIS
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_ANALYSIS=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//analysis/atmos
++ JGDAS_ATMOS_VERFOZN[21]: YMD=20211221
++ JGDAS_ATMOS_VERFOZN[21]: HH=00
++ JGDAS_ATMOS_VERFOZN[21]: declare_from_tmpl -rx COM_ATMOS_OZNMON
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_OZNMON=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon
++ JGDAS_ATMOS_VERFOZN[23]: export oznstat=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//analysis/atmos/gdas.t00z.oznstat
++ JGDAS_ATMOS_VERFOZN[23]: oznstat=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//analysis/atmos/gdas.t00z.oznstat
++ JGDAS_ATMOS_VERFOZN[24]: export TANKverf_ozn=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon
++ JGDAS_ATMOS_VERFOZN[24]: TANKverf_ozn=/work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon
++ JGDAS_ATMOS_VERFOZN[26]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon ]]
++ JGDAS_ATMOS_VERFOZN[31]: /work2/noaa/stmp/CI/HERCULES/2839/gfs/scripts/exgdas_atmos_verfozn.sh
+Begin exgdas_atmos_verfozn.sh at Wed Sep  4 16:15:54 UTC 2024
++ exgdas_atmos_verfozn.sh[12]: err=0
++ exgdas_atmos_verfozn.sh[14]: data_available=0
++ exgdas_atmos_verfozn.sh[16]: [[ -s /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//analysis/atmos/gdas.t00z.oznstat ]]
++ exgdas_atmos_verfozn.sh[17]: data_available=1
++ exgdas_atmos_verfozn.sh[24]: /bin/cp -p /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//analysis/atmos/gdas.t00z.oznstat ./oznstat.2021122100
++ exgdas_atmos_verfozn.sh[26]: tar -xvf oznstat.2021122100
+diag_sbuv2_n19_ges.2021122100.nc4.gz
+diag_gome_metop-b_ges.2021122100.nc4.gz
+diag_omi_aura_ges.2021122100.nc4.gz
+diag_ompsnp_npp_ges.2021122100.nc4.gz
+diag_ompstc8_npp_ges.2021122100.nc4.gz
+diag_ompstc8_n20_ges.2021122100.nc4.gz
+diag_ompsnp_n20_ges.2021122100.nc4.gz
+diag_ompslp_npp_ges.2021122100.nc4.gz
+diag_sbuv2_n19_anl.2021122100.nc4.gz
+diag_gome_metop-b_anl.2021122100.nc4.gz
+diag_omi_aura_anl.2021122100.nc4.gz
+diag_ompsnp_npp_anl.2021122100.nc4.gz
+diag_ompstc8_npp_anl.2021122100.nc4.gz
+diag_ompstc8_n20_anl.2021122100.nc4.gz
+diag_ompsnp_n20_anl.2021122100.nc4.gz
+diag_ompslp_npp_anl.2021122100.nc4.gz
++ exgdas_atmos_verfozn.sh[27]: rm oznstat.2021122100
++ exgdas_atmos_verfozn.sh[29]: netcdf=0
+++ exgdas_atmos_verfozn.sh[30]: grep .nc4
+++ exgdas_atmos_verfozn.sh[30]: wc -l
+++ exgdas_atmos_verfozn.sh[30]: ls diag_gome_metop-b_anl.2021122100.nc4.gz diag_gome_metop-b_ges.2021122100.nc4.gz diag_omi_aura_anl.2021122100.nc4.gz diag_omi_aura_ges.2021122100.nc4.gz diag_ompslp_npp_anl.2021122100.nc4.gz diag_ompslp_npp_ges.2021122100.nc4.gz diag_ompsnp_n20_anl.2021122100.nc4.gz diag_ompsnp_n20_ges.2021122100.nc4.gz diag_ompsnp_npp_anl.2021122100.nc4.gz diag_ompsnp_npp_ges.2021122100.nc4.gz diag_ompstc8_n20_anl.2021122100.nc4.gz diag_ompstc8_n20_ges.2021122100.nc4.gz diag_ompstc8_npp_anl.2021122100.nc4.gz diag_ompstc8_npp_ges.2021122100.nc4.gz diag_sbuv2_n19_anl.2021122100.nc4.gz diag_sbuv2_n19_ges.2021122100.nc4.gz
++ exgdas_atmos_verfozn.sh[30]: count=16
++ exgdas_atmos_verfozn.sh[31]: '[' 16 -gt 0 ']'
++ exgdas_atmos_verfozn.sh[32]: netcdf=1
+++ exgdas_atmos_verfozn.sh[33]: ls diag_gome_metop-b_anl.2021122100.nc4.gz diag_gome_metop-b_ges.2021122100.nc4.gz diag_omi_aura_anl.2021122100.nc4.gz diag_omi_aura_ges.2021122100.nc4.gz diag_ompslp_npp_anl.2021122100.nc4.gz diag_ompslp_npp_ges.2021122100.nc4.gz diag_ompsnp_n20_anl.2021122100.nc4.gz diag_ompsnp_n20_ges.2021122100.nc4.gz diag_ompsnp_npp_anl.2021122100.nc4.gz diag_ompsnp_npp_ges.2021122100.nc4.gz diag_ompstc8_n20_anl.2021122100.nc4.gz diag_ompstc8_n20_ges.2021122100.nc4.gz diag_ompstc8_npp_anl.2021122100.nc4.gz diag_ompstc8_npp_ges.2021122100.nc4.gz diag_sbuv2_n19_anl.2021122100.nc4.gz diag_sbuv2_n19_ges.2021122100.nc4.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_gome_metop-b_anl.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_gome_metop-b_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_gome_metop-b_anl.2021122100.nc4.gz diag_gome_metop-b_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_gome_metop-b_ges.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_gome_metop-b_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_gome_metop-b_ges.2021122100.nc4.gz diag_gome_metop-b_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_omi_aura_anl.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_omi_aura_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_omi_aura_anl.2021122100.nc4.gz diag_omi_aura_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_omi_aura_ges.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_omi_aura_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_omi_aura_ges.2021122100.nc4.gz diag_omi_aura_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_ompslp_npp_anl.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_ompslp_npp_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_ompslp_npp_anl.2021122100.nc4.gz diag_ompslp_npp_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_ompslp_npp_ges.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_ompslp_npp_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_ompslp_npp_ges.2021122100.nc4.gz diag_ompslp_npp_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_ompsnp_n20_anl.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_ompsnp_n20_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_ompsnp_n20_anl.2021122100.nc4.gz diag_ompsnp_n20_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_ompsnp_n20_ges.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_ompsnp_n20_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_ompsnp_n20_ges.2021122100.nc4.gz diag_ompsnp_n20_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_ompsnp_npp_anl.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_ompsnp_npp_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_ompsnp_npp_anl.2021122100.nc4.gz diag_ompsnp_npp_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_ompsnp_npp_ges.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_ompsnp_npp_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_ompsnp_npp_ges.2021122100.nc4.gz diag_ompsnp_npp_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_ompstc8_n20_anl.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_ompstc8_n20_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_ompstc8_n20_anl.2021122100.nc4.gz diag_ompstc8_n20_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_ompstc8_n20_ges.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_ompstc8_n20_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_ompstc8_n20_ges.2021122100.nc4.gz diag_ompstc8_n20_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
+++ exgdas_atmos_verfozn.sh[34]: echo diag_ompstc8_npp_anl.2021122100.nc4.gz
++ exgdas_atmos_verfozn.sh[34]: file=diag_ompstc8_npp_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_ompstc8_npp_anl.2021122100.nc4.gz diag_ompstc8_npp_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_ompstc8_npp_ges.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_ompstc8_npp_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_ompstc8_npp_ges.2021122100.nc4.gz diag_ompstc8_npp_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
+++ exgdas_atmos_verfozn.sh[34]: echo diag_sbuv2_n19_anl.2021122100.nc4.gz
++ exgdas_atmos_verfozn.sh[34]: file=diag_sbuv2_n19_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_sbuv2_n19_anl.2021122100.nc4.gz diag_sbuv2_n19_anl.2021122100.gz
++ exgdas_atmos_verfozn.sh[33]: for filenc4 in $(ls diag*nc4.gz)
+++ exgdas_atmos_verfozn.sh[34]: echo diag_sbuv2_n19_ges.2021122100.nc4.gz
+++ exgdas_atmos_verfozn.sh[34]: cut -d. -f1-2
++ exgdas_atmos_verfozn.sh[34]: file=diag_sbuv2_n19_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[35]: mv diag_sbuv2_n19_ges.2021122100.nc4.gz diag_sbuv2_n19_ges.2021122100.gz
++ exgdas_atmos_verfozn.sh[39]: export OZNMON_NETCDF=1
++ exgdas_atmos_verfozn.sh[39]: OZNMON_NETCDF=1
++ exgdas_atmos_verfozn.sh[41]: /work2/noaa/stmp/CI/HERCULES/2839/gfs/ush/ozn_xtrct.sh
+Begin ozn_xtrct.sh at Wed Sep  4 16:16:24 UTC 2024
++ ozn_xtrct.sh[54]: iret=0
++ ozn_xtrct.sh[55]: export 'NCP=/bin/cp -p'
++ ozn_xtrct.sh[55]: NCP='/bin/cp -p'
++ ozn_xtrct.sh[56]: VALIDATE_DATA=1
++ ozn_xtrct.sh[57]: nregion=6
++ ozn_xtrct.sh[58]: DO_DATA_RPT=1
++ ozn_xtrct.sh[60]: netcdf_boolean=.false.
++ ozn_xtrct.sh[61]: [[ 1 -eq 1 ]]
++ ozn_xtrct.sh[62]: netcdf_boolean=.true.
++ ozn_xtrct.sh[65]: OZNMON_NEW_HDR=0
++ ozn_xtrct.sh[66]: new_hdr=F
++ ozn_xtrct.sh[67]: [[ 0 -eq 1 ]]
++ ozn_xtrct.sh[74]: validate=.FALSE.
++ ozn_xtrct.sh[75]: [[ 1 -eq 1 ]]
++ ozn_xtrct.sh[76]: [[ ! -e /work2/noaa/stmp/CI/HERCULES/2839/gfs/parm/monitor/gdas_oznmon_base.tar ]]
++ ozn_xtrct.sh[81]: validate=.TRUE.
+++ ozn_xtrct.sh[82]: basename /work2/noaa/stmp/CI/HERCULES/2839/gfs/parm/monitor/gdas_oznmon_base.tar
++ ozn_xtrct.sh[82]: val_file=gdas_oznmon_base.tar
++ ozn_xtrct.sh[83]: /bin/cp -p /work2/noaa/stmp/CI/HERCULES/2839/gfs/parm/monitor/gdas_oznmon_base.tar gdas_oznmon_base.tar
++ ozn_xtrct.sh[84]: tar -xvf gdas_oznmon_base.tar
+gome_metop-b.base
+omi_aura.base
+ompslp_npp.base
+ompsnp_n20.base
+ompsnp_npp.base
+ompstc8_n20.base
+ompstc8_npp.base
++ ozn_xtrct.sh[87]: echo 'VALIDATE_DATA, validate = 1, .TRUE. '
+VALIDATE_DATA, validate = 1, .TRUE. 
++ ozn_xtrct.sh[95]: ozn_ptype='ges anl'
+++ ozn_xtrct.sh[105]: gawk '{ print $2 "_" $3 }'
+++ ozn_xtrct.sh[105]: ls -1 diag_gome_metop-b_ges.2021122100.gz diag_omi_aura_ges.2021122100.gz diag_ompslp_npp_ges.2021122100.gz diag_ompsnp_n20_ges.2021122100.gz diag_ompsnp_npp_ges.2021122100.gz diag_ompstc8_n20_ges.2021122100.gz diag_ompstc8_npp_ges.2021122100.gz diag_sbuv2_n19_ges.2021122100.gz
+++ ozn_xtrct.sh[105]: sed -e 's/_/ /g;s/\./ /'
++ ozn_xtrct.sh[105]: avail_satype='gome_metop-b
+omi_aura
+ompslp_npp
+ompsnp_n20
+ompsnp_npp
+ompstc8_n20
+ompstc8_npp
+sbuv2_n19'
++ ozn_xtrct.sh[107]: [[ 1 -eq 1 ]]
++ ozn_xtrct.sh[108]: [[ -e /work2/noaa/stmp/CI/HERCULES/2839/gfs/parm/monitor/gdas_oznmon_satype.txt ]]
+++ ozn_xtrct.sh[109]: cat /work2/noaa/stmp/CI/HERCULES/2839/gfs/parm/monitor/gdas_oznmon_satype.txt
++ ozn_xtrct.sh[109]: satype='gome_metop-b gome_metop-c omi_aura ompsnp_npp ompstc8_npp ompsnp_n20 ompstc8_n20 ompslp_npp ompsnp_n21 ompstc8_n21'
++ ozn_xtrct.sh[110]: check_diag_files 2021122100 'gome_metop-b gome_metop-c omi_aura ompsnp_npp ompstc8_npp ompsnp_n20 ompstc8_n20 ompslp_npp ompsnp_n21 ompstc8_n21' 'gome_metop-b
+omi_aura
+ompslp_npp
+ompsnp_n20
+ompsnp_npp
+ompstc8_n20
+ompstc8_npp
+sbuv2_n19'
++ ozn_xtrct.sh[34]: pdate=2021122100
++ ozn_xtrct.sh[35]: found_satype='gome_metop-b gome_metop-c omi_aura ompsnp_npp ompstc8_npp ompsnp_n20 ompstc8_n20 ompslp_npp ompsnp_n21 ompstc8_n21'
++ ozn_xtrct.sh[36]: avail_satype='gome_metop-b
+omi_aura
+ompslp_npp
+ompsnp_n20
+ompsnp_npp
+ompstc8_n20
+ompstc8_npp
+sbuv2_n19'
++ ozn_xtrct.sh[38]: out_file=bad_diag.2021122100
++ ozn_xtrct.sh[40]: echo ''
+
++ ozn_xtrct.sh[40]: echo ''
+
++ ozn_xtrct.sh[40]: echo '--> check_diag_files'
+--> check_diag_files
++ ozn_xtrct.sh[42]: for type in ${found_satype}
+++ ozn_xtrct.sh[43]: grep gome_metop-b
+++ ozn_xtrct.sh[43]: echo 'gome_metop-b
+omi_aura
+ompslp_npp
+ompsnp_n20
+ompsnp_npp
+ompstc8_n20
+ompstc8_npp
+sbuv2_n19'
+++ ozn_xtrct.sh[43]: wc -c
++ ozn_xtrct.sh[43]: len_check=13
++ ozn_xtrct.sh[45]: [[ 13 -le 1 ]]
++ ozn_xtrct.sh[42]: for type in ${found_satype}
+++ ozn_xtrct.sh[43]: echo 'gome_metop-b
+omi_aura
+ompslp_npp
+ompsnp_n20
+ompsnp_npp
+ompstc8_n20
+ompstc8_npp
+sbuv2_n19'
+++ ozn_xtrct.sh[43]: grep gome_metop-c
+++ ozn_xtrct.sh[43]: wc -c
++ ozn_xtrct.sh[43]: len_check=0
++ ozn_xtrct.sh[45]: [[ 0 -le 1 ]]
++ ozn_xtrct.sh[46]: echo 'missing diag file -- diag_gome_metop-c_ges.2021122100.gz not found'
++ ozn_xtrct.sh[42]: for type in ${found_satype}
+++ ozn_xtrct.sh[43]: echo 'gome_metop-b
+omi_aura
+ompslp_npp
+ompsnp_n20
+ompsnp_npp
+ompstc8_n20
+ompstc8_npp
+sbuv2_n19'
+++ ozn_xtrct.sh[43]: wc -c
+++ ozn_xtrct.sh[43]: grep omi_aura
++ ozn_xtrct.sh[43]: len_check=9
++ ozn_xtrct.sh[45]: [[ 9 -le 1 ]]
++ ozn_xtrct.sh[42]: for type in ${found_satype}
+++ ozn_xtrct.sh[43]: wc -c
+++ ozn_xtrct.sh[43]: echo 'gome_metop-b
+omi_aura
+ompslp_npp
+ompsnp_n20
+ompsnp_npp
+ompstc8_n20
+ompstc8_npp
+sbuv2_n19'
+++ ozn_xtrct.sh[43]: grep ompsnp_npp
++ ozn_xtrct.sh[43]: len_check=11
++ ozn_xtrct.sh[45]: [[ 11 -le 1 ]]
++ ozn_xtrct.sh[42]: for type in ${found_satype}
+++ ozn_xtrct.sh[43]: echo 'gome_metop-b
+omi_aura
+ompslp_npp
+ompsnp_n20
+ompsnp_npp
+ompstc8_n20
+ompstc8_npp
+sbuv2_n19'
+++ ozn_xtrct.sh[43]: wc -c
+++ ozn_xtrct.sh[43]: grep ompstc8_npp
++ ozn_xtrct.sh[43]: len_check=12
++ ozn_xtrct.sh[45]: [[ 12 -le 1 ]]
++ ozn_xtrct.sh[42]: for type in ${found_satype}
+++ ozn_xtrct.sh[43]: echo 'gome_metop-b
+omi_aura
+ompslp_npp
+ompsnp_n20
+ompsnp_npp
+ompstc8_n20
+ompstc8_npp
+sbuv2_n19'
+++ ozn_xtrct.sh[43]: grep ompsnp_n20
+++ ozn_xtrct.sh[43]: wc -c
++ ozn_xtrct.sh[43]: len_check=11
++ ozn_xtrct.sh[45]: [[ 11 -le 1 ]]
++ ozn_xtrct.sh[42]: for type in ${found_satype}
+++ ozn_xtrct.sh[43]: grep ompstc8_n20
+++ ozn_xtrct.sh[43]: echo 'gome_metop-b
+omi_aura
+ompslp_npp
+ompsnp_n20
+ompsnp_npp
+ompstc8_n20
+ompstc8_npp
+sbuv2_n19'
+++ ozn_xtrct.sh[43]: wc -c
++ ozn_xtrct.sh[43]: len_check=12
++ ozn_xtrct.sh[45]: [[ 12 -le 1 ]]
++ ozn_xtrct.sh[42]: for type in ${found_satype}
+++ ozn_xtrct.sh[43]: echo 'gome_metop-b
+omi_aura
+ompslp_npp
+ompsnp_n20
+ompsnp_npp
+ompstc8_n20
+ompstc8_npp
+sbuv2_n19'
+++ ozn_xtrct.sh[43]: grep ompslp_npp
+++ ozn_xtrct.sh[43]: wc -c
++ ozn_xtrct.sh[43]: len_check=11
++ ozn_xtrct.sh[45]: [[ 11 -le 1 ]]
++ ozn_xtrct.sh[42]: for type in ${found_satype}
+++ ozn_xtrct.sh[43]: grep ompsnp_n21
+++ ozn_xtrct.sh[43]: echo 'gome_metop-b
+omi_aura
+ompslp_npp
+ompsnp_n20
+ompsnp_npp
+ompstc8_n20
+ompstc8_npp
+sbuv2_n19'
+++ ozn_xtrct.sh[43]: wc -c
++ ozn_xtrct.sh[43]: len_check=0
++ ozn_xtrct.sh[45]: [[ 0 -le 1 ]]
++ ozn_xtrct.sh[46]: echo 'missing diag file -- diag_ompsnp_n21_ges.2021122100.gz not found'
++ ozn_xtrct.sh[42]: for type in ${found_satype}
+++ ozn_xtrct.sh[43]: echo 'gome_metop-b
+omi_aura
+ompslp_npp
+ompsnp_n20
+ompsnp_npp
+ompstc8_n20
+ompstc8_npp
+sbuv2_n19'
+++ ozn_xtrct.sh[43]: wc -c
+++ ozn_xtrct.sh[43]: grep ompstc8_n21
++ ozn_xtrct.sh[43]: len_check=0
++ ozn_xtrct.sh[45]: [[ 0 -le 1 ]]
++ ozn_xtrct.sh[46]: echo 'missing diag file -- diag_ompstc8_n21_ges.2021122100.gz not found'
++ ozn_xtrct.sh[50]: echo '<-- check_diag_files'
+<-- check_diag_files
++ ozn_xtrct.sh[50]: echo ''
+
++ ozn_xtrct.sh[50]: echo ''
+
+++ ozn_xtrct.sh[116]: wc -c
+++ ozn_xtrct.sh[116]: echo -n 'gome_metop-b gome_metop-c omi_aura ompsnp_npp ompstc8_npp ompsnp_n20 ompstc8_n20 ompslp_npp ompsnp_n21 ompstc8_n21'
++ ozn_xtrct.sh[116]: len_satype=114
++ ozn_xtrct.sh[118]: [[ 114 -le 1 ]]
++ ozn_xtrct.sh[122]: echo 'gome_metop-b gome_metop-c omi_aura ompsnp_npp ompstc8_npp ompsnp_n20 ompstc8_n20 ompslp_npp ompsnp_n21 ompstc8_n21'
+gome_metop-b gome_metop-c omi_aura ompsnp_npp ompstc8_npp ompsnp_n20 ompstc8_n20 ompslp_npp ompsnp_n21 ompstc8_n21
+++ ozn_xtrct.sh[125]: echo -n 'gome_metop-b gome_metop-c omi_aura ompsnp_npp ompstc8_npp ompsnp_n20 ompstc8_n20 ompslp_npp ompsnp_n21 ompstc8_n21'
+++ ozn_xtrct.sh[125]: wc -c
++ ozn_xtrct.sh[125]: len_satype=114
++ ozn_xtrct.sh[127]: [[ 1 -eq 1 ]]
++ ozn_xtrct.sh[127]: [[ 114 -lt 1 ]]
++ ozn_xtrct.sh[135]: /bin/cp -p /work2/noaa/stmp/CI/HERCULES/2839/gfs/exec/oznmon_time.x ./oznmon_time.x
++ ozn_xtrct.sh[136]: [[ ! -e oznmon_time.x ]]
++ ozn_xtrct.sh[140]: /bin/cp -p /work2/noaa/stmp/CI/HERCULES/2839/gfs/exec/oznmon_horiz.x ./oznmon_horiz.x
++ ozn_xtrct.sh[141]: [[ ! -e oznmon_horiz.x ]]
++ ozn_xtrct.sh[150]: for ptype in ${ozn_ptype}
++ ozn_xtrct.sh[152]: iyy=2021
++ ozn_xtrct.sh[153]: imm=12
++ ozn_xtrct.sh[154]: idd=21
++ ozn_xtrct.sh[155]: ihh=00
++ ozn_xtrct.sh[157]: for type in ${avail_satype}
++ ozn_xtrct.sh[158]: [[ -f diag_gome_metop-b_ges.2021122100.gz ]]
++ ozn_xtrct.sh[159]: mv diag_gome_metop-b_ges.2021122100.gz gome_metop-b.ges.gz
++ ozn_xtrct.sh[160]: gunzip ./gome_metop-b.ges.gz
++ ozn_xtrct.sh[162]: echo 'processing ptype, type:  ges, gome_metop-b'
+processing ptype, type:  ges, gome_metop-b
++ ozn_xtrct.sh[163]: rm -f input
++ ozn_xtrct.sh[165]: cat
++ ozn_xtrct.sh[189]: echo 'oznmon_time.x HAS STARTED gome_metop-b'
+oznmon_time.x HAS STARTED gome_metop-b
++ ozn_xtrct.sh[191]: ./oznmon_time.x
++ ozn_xtrct.sh[193]: echo 'oznmon_time.x HAS ENDED gome_metop-b'
+oznmon_time.x HAS ENDED gome_metop-b
++ ozn_xtrct.sh[195]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time ]]
++ ozn_xtrct.sh[198]: /bin/cp -p gome_metop-b.ges.ctl /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[199]: /bin/cp -p gome_metop-b.ges.2021122100.ieee_d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[201]: /bin/cp -p bad_cnt.2021122100 bad_diag.2021122100 bad_pen.2021122100 /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[203]: rm -f input
++ ozn_xtrct.sh[205]: cat
++ ozn_xtrct.sh[220]: echo 'oznmon_horiz.x HAS STARTED gome_metop-b'
+oznmon_horiz.x HAS STARTED gome_metop-b
++ ozn_xtrct.sh[222]: ./oznmon_horiz.x
++ ozn_xtrct.sh[224]: echo 'oznmon_horiz.x HAS ENDED gome_metop-b'
+oznmon_horiz.x HAS ENDED gome_metop-b
++ ozn_xtrct.sh[226]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz ]]
++ ozn_xtrct.sh[229]: /bin/cp -p gome_metop-b.ges.ctl /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz/
++ ozn_xtrct.sh[231]: gzip gome_metop-b.ges.2021122100.ieee_d
++ ozn_xtrct.sh[232]: /bin/cp -p gome_metop-b.ges.2021122100.ieee_d.gz /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz/
++ ozn_xtrct.sh[235]: echo 'finished processing ptype, type:  ges, gome_metop-b'
+finished processing ptype, type:  ges, gome_metop-b
++ ozn_xtrct.sh[157]: for type in ${avail_satype}
++ ozn_xtrct.sh[158]: [[ -f diag_omi_aura_ges.2021122100.gz ]]
++ ozn_xtrct.sh[159]: mv diag_omi_aura_ges.2021122100.gz omi_aura.ges.gz
++ ozn_xtrct.sh[160]: gunzip ./omi_aura.ges.gz
++ ozn_xtrct.sh[162]: echo 'processing ptype, type:  ges, omi_aura'
+processing ptype, type:  ges, omi_aura
++ ozn_xtrct.sh[163]: rm -f input
++ ozn_xtrct.sh[165]: cat
++ ozn_xtrct.sh[189]: echo 'oznmon_time.x HAS STARTED omi_aura'
+oznmon_time.x HAS STARTED omi_aura
++ ozn_xtrct.sh[191]: ./oznmon_time.x
++ ozn_xtrct.sh[193]: echo 'oznmon_time.x HAS ENDED omi_aura'
+oznmon_time.x HAS ENDED omi_aura
++ ozn_xtrct.sh[195]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time ]]
++ ozn_xtrct.sh[198]: /bin/cp -p omi_aura.ges.ctl /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[199]: /bin/cp -p omi_aura.ges.2021122100.ieee_d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[201]: /bin/cp -p bad_cnt.2021122100 bad_diag.2021122100 bad_pen.2021122100 /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[203]: rm -f input
++ ozn_xtrct.sh[205]: cat
++ ozn_xtrct.sh[220]: echo 'oznmon_horiz.x HAS STARTED omi_aura'
+oznmon_horiz.x HAS STARTED omi_aura
++ ozn_xtrct.sh[222]: ./oznmon_horiz.x
++ ozn_xtrct.sh[224]: echo 'oznmon_horiz.x HAS ENDED omi_aura'
+oznmon_horiz.x HAS ENDED omi_aura
++ ozn_xtrct.sh[226]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz ]]
++ ozn_xtrct.sh[229]: /bin/cp -p omi_aura.ges.ctl /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz/
++ ozn_xtrct.sh[231]: gzip omi_aura.ges.2021122100.ieee_d
++ ozn_xtrct.sh[232]: /bin/cp -p omi_aura.ges.2021122100.ieee_d.gz /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz/
++ ozn_xtrct.sh[235]: echo 'finished processing ptype, type:  ges, omi_aura'
+finished processing ptype, type:  ges, omi_aura
++ ozn_xtrct.sh[157]: for type in ${avail_satype}
++ ozn_xtrct.sh[158]: [[ -f diag_ompslp_npp_ges.2021122100.gz ]]
++ ozn_xtrct.sh[159]: mv diag_ompslp_npp_ges.2021122100.gz ompslp_npp.ges.gz
++ ozn_xtrct.sh[160]: gunzip ./ompslp_npp.ges.gz
++ ozn_xtrct.sh[162]: echo 'processing ptype, type:  ges, ompslp_npp'
+processing ptype, type:  ges, ompslp_npp
++ ozn_xtrct.sh[163]: rm -f input
++ ozn_xtrct.sh[165]: cat
++ ozn_xtrct.sh[189]: echo 'oznmon_time.x HAS STARTED ompslp_npp'
+oznmon_time.x HAS STARTED ompslp_npp
++ ozn_xtrct.sh[191]: ./oznmon_time.x
++ ozn_xtrct.sh[193]: echo 'oznmon_time.x HAS ENDED ompslp_npp'
+oznmon_time.x HAS ENDED ompslp_npp
++ ozn_xtrct.sh[195]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time ]]
++ ozn_xtrct.sh[198]: /bin/cp -p ompslp_npp.ges.ctl /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[199]: /bin/cp -p ompslp_npp.ges.2021122100.ieee_d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[201]: /bin/cp -p bad_cnt.2021122100 bad_diag.2021122100 bad_pen.2021122100 /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[203]: rm -f input
++ ozn_xtrct.sh[205]: cat
++ ozn_xtrct.sh[220]: echo 'oznmon_horiz.x HAS STARTED ompslp_npp'
+oznmon_horiz.x HAS STARTED ompslp_npp
++ ozn_xtrct.sh[222]: ./oznmon_horiz.x
++ ozn_xtrct.sh[224]: echo 'oznmon_horiz.x HAS ENDED ompslp_npp'
+oznmon_horiz.x HAS ENDED ompslp_npp
++ ozn_xtrct.sh[226]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz ]]
++ ozn_xtrct.sh[229]: /bin/cp -p ompslp_npp.ges.ctl /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz/
++ ozn_xtrct.sh[231]: gzip ompslp_npp.ges.2021122100.ieee_d
++ ozn_xtrct.sh[232]: /bin/cp -p ompslp_npp.ges.2021122100.ieee_d.gz /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz/
++ ozn_xtrct.sh[235]: echo 'finished processing ptype, type:  ges, ompslp_npp'
+finished processing ptype, type:  ges, ompslp_npp
++ ozn_xtrct.sh[157]: for type in ${avail_satype}
++ ozn_xtrct.sh[158]: [[ -f diag_ompsnp_n20_ges.2021122100.gz ]]
++ ozn_xtrct.sh[159]: mv diag_ompsnp_n20_ges.2021122100.gz ompsnp_n20.ges.gz
++ ozn_xtrct.sh[160]: gunzip ./ompsnp_n20.ges.gz
++ ozn_xtrct.sh[162]: echo 'processing ptype, type:  ges, ompsnp_n20'
+processing ptype, type:  ges, ompsnp_n20
++ ozn_xtrct.sh[163]: rm -f input
++ ozn_xtrct.sh[165]: cat
++ ozn_xtrct.sh[189]: echo 'oznmon_time.x HAS STARTED ompsnp_n20'
+oznmon_time.x HAS STARTED ompsnp_n20
++ ozn_xtrct.sh[191]: ./oznmon_time.x
++ ozn_xtrct.sh[193]: echo 'oznmon_time.x HAS ENDED ompsnp_n20'
+oznmon_time.x HAS ENDED ompsnp_n20
++ ozn_xtrct.sh[195]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time ]]
++ ozn_xtrct.sh[198]: /bin/cp -p ompsnp_n20.ges.ctl /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[199]: /bin/cp -p ompsnp_n20.ges.2021122100.ieee_d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[201]: /bin/cp -p bad_cnt.2021122100 bad_diag.2021122100 bad_pen.2021122100 /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[203]: rm -f input
++ ozn_xtrct.sh[205]: cat
++ ozn_xtrct.sh[220]: echo 'oznmon_horiz.x HAS STARTED ompsnp_n20'
+oznmon_horiz.x HAS STARTED ompsnp_n20
++ ozn_xtrct.sh[222]: ./oznmon_horiz.x
++ ozn_xtrct.sh[224]: echo 'oznmon_horiz.x HAS ENDED ompsnp_n20'
+oznmon_horiz.x HAS ENDED ompsnp_n20
++ ozn_xtrct.sh[226]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz ]]
++ ozn_xtrct.sh[229]: /bin/cp -p ompsnp_n20.ges.ctl /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz/
++ ozn_xtrct.sh[231]: gzip ompsnp_n20.ges.2021122100.ieee_d
++ ozn_xtrct.sh[232]: /bin/cp -p ompsnp_n20.ges.2021122100.ieee_d.gz /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz/
++ ozn_xtrct.sh[235]: echo 'finished processing ptype, type:  ges, ompsnp_n20'
+finished processing ptype, type:  ges, ompsnp_n20
++ ozn_xtrct.sh[157]: for type in ${avail_satype}
++ ozn_xtrct.sh[158]: [[ -f diag_ompsnp_npp_ges.2021122100.gz ]]
++ ozn_xtrct.sh[159]: mv diag_ompsnp_npp_ges.2021122100.gz ompsnp_npp.ges.gz
++ ozn_xtrct.sh[160]: gunzip ./ompsnp_npp.ges.gz
++ ozn_xtrct.sh[162]: echo 'processing ptype, type:  ges, ompsnp_npp'
+processing ptype, type:  ges, ompsnp_npp
++ ozn_xtrct.sh[163]: rm -f input
++ ozn_xtrct.sh[165]: cat
++ ozn_xtrct.sh[189]: echo 'oznmon_time.x HAS STARTED ompsnp_npp'
+oznmon_time.x HAS STARTED ompsnp_npp
++ ozn_xtrct.sh[191]: ./oznmon_time.x
++ ozn_xtrct.sh[193]: echo 'oznmon_time.x HAS ENDED ompsnp_npp'
+oznmon_time.x HAS ENDED ompsnp_npp
++ ozn_xtrct.sh[195]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time ]]
++ ozn_xtrct.sh[198]: /bin/cp -p ompsnp_npp.ges.ctl /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[199]: /bin/cp -p ompsnp_npp.ges.2021122100.ieee_d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[201]: /bin/cp -p bad_cnt.2021122100 bad_diag.2021122100 bad_pen.2021122100 /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/time/
++ ozn_xtrct.sh[203]: rm -f input
++ ozn_xtrct.sh[205]: cat
++ ozn_xtrct.sh[220]: echo 'oznmon_horiz.x HAS STARTED ompsnp_npp'
+oznmon_horiz.x HAS STARTED ompsnp_npp
++ ozn_xtrct.sh[222]: ./oznmon_horiz.x
++ ozn_xtrct.sh[224]: echo 'oznmon_horiz.x HAS ENDED ompsnp_npp'
+oznmon_horiz.x HAS ENDED ompsnp_npp
++ ozn_xtrct.sh[226]: [[ ! -d /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz ]]
++ ozn_xtrct.sh[229]: /bin/cp -p ompsnp_npp.ges.ctl /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz/
++ ozn_xtrct.sh[231]: gzip ompsnp_npp.ges.2021122100.ieee_d
++ ozn_xtrct.sh[232]: /bin/cp -p ompsnp_npp.ges.2021122100.ieee_d.gz /work2/noaa/stmp/CI/HERCULES/2839/RUNTESTS/COMROOT/C96C48_hybatmDA_92dfc754/gdas.20211221/00//products/atmos/oznmon/horiz/
++ ozn_xtrct.sh[235]: echo 'finished processing ptype, type:  ges, ompsnp_npp'
+finished processing ptype, type:  ges, ompsnp_npp
++ ozn_xtrct.sh[157]: for type in ${avail_satype}
++ ozn_xtrct.sh[158]: [[ -f diag_ompstc8_n20_ges.2021122100.gz ]]
++ ozn_xtrct.sh[159]: mv diag_ompstc8_n20_ges.2021122100.gz ompstc8_n20.ges.gz
++ ozn_xtrct.sh[160]: gunzip ./ompstc8_n20.ges.gz
++ ozn_xtrct.sh[162]: echo 'processing ptype, type:  ges, ompstc8_n20'
+processing ptype, type:  ges, ompstc8_n20
++ ozn_xtrct.sh[163]: rm -f input
++ ozn_xtrct.sh[165]: cat
++ ozn_xtrct.sh[189]: echo 'oznmon_time.x HAS STARTED ompstc8_n20'
+oznmon_time.x HAS STARTED ompstc8_n20
++ ozn_xtrct.sh[191]: ./oznmon_time.x
+slurmstepd: error: *** JOB 2487241 ON hercules-01-02 CANCELLED AT 2024-09-04T11:17:43 DUE TO TIME LIMIT ***
