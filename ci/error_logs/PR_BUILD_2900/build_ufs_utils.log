@@ -1,0 +1,178 @@
++ OPTIND=1
++ getopts :j:dv option
++ case "${option}" in
++ BUILD_JOBS=1
++ getopts :j:dv option
++ shift 2
++ CMAKE_OPTS=-DGFS=ON
++ BUILD_TYPE=Release
++ BUILD_JOBS=1
++ BUILD_VERBOSE=
++ ./ufs_utils.fd/build_all.sh
+++ uname -s
++ [[ Linux == Darwin ]]
+++++ readlink -f -n ./ufs_utils.fd/build_all.sh
++++ dirname /scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build_all.sh
+++ cd /scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd
+++ pwd -P
++ readonly DIR_ROOT=/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd
++ DIR_ROOT=/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd
++ source /scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/sorc/machine-setup.sh
+++ __ms_function_name=setup__test_function__4107834
+++ eval 'setup__test_function__4107834() { /bin/true ; }'
++++ eval '__text="text" ; if [[ $__text =~ ^(t).* ]] ; then printf "%s" ${.sh.match[1]} ; fi'
++++ cat
+++ __ms_ksh_test=
++++ eval 'if ( set | grep setup__test_function__4107834 | grep -v name > /dev/null 2>&1 ) ; then echo t ; fi '
++++ cat
+++ __ms_bash_test=t
+++ [[ ! -z '' ]]
+++ [[ ! -z t ]]
+++ __ms_shell=bash
+++ target=
++++ echo Terry.McGuinness
++++ awk '{ print tolower($0)}'
+++ USERNAME=terry.mcguinness
+++ [[ -d /lfs4 ]]
+++ [[ -d /lfs/h1 ]]
+++ [[ -d /scratch1 ]]
+++ eval module help
+++ target=hera
+++ module purge
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ unset __ms_shell
+++ unset __ms_ksh_test
+++ unset __ms_bash_test
+++ unset setup__test_function__4107834
+++ unset __ms_function_name
++ target=hera
++ compiler=intel
++ [[ hera == \l\i\n\u\x\.\* ]]
++ [[ hera == \m\a\c\o\s\x\.\* ]]
++ set +x
+
+Currently Loaded Modules:
+  1) hpss/hpss                        19) libpng/1.6.37
+  2) intel/2022.1.2                   20) snappy/1.1.10
+  3) stack-intel/2021.5.0             21) zstd/1.5.2
+  4) impi/2022.1.2                    22) c-blosc/1.21.5
+  5) stack-intel-oneapi-mpi/2021.5.1  23) pkg-config/0.27.1
+  6) nghttp2/1.57.0                   24) hdf5/1.14.0
+  7) curl/8.4.0                       25) netcdf-c/4.9.2
+  8) cmake/3.23.1                     26) netcdf-fortran/4.6.1
+  9) bacio/2.4.1                      27) nccmp/1.9.0.1
+ 10) libjpeg/2.1.0                    28) parallel-netcdf/1.12.2
+ 11) jasper/2.0.32                    29) parallelio/2.5.10
+ 12) g2/3.4.5                         30) esmf/8.6.0
+ 13) ip/4.3.0                         31) antlr/2.7.7
+ 14) nemsio/2.5.4                     32) gsl/2.7.1
+ 15) sp/2.5.0                         33) udunits/2.2.28
+ 16) w3emc/2.10.0                     34) nco/5.0.6
+ 17) sigio/2.3.2                      35) build.hera.intel
+ 18) zlib/1.2.13
+
+ 
+
++ [[ ! -d /scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/ccpp-physics/physics ]]
++ CMAKE_FLAGS+=' -DCMAKE_BUILD_TYPE=Release'
++ CMAKE_FLAGS+=' -DCMAKE_INSTALL_PREFIX=/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd -DCMAKE_INSTALL_BINDIR=exec'
++ CMAKE_FLAGS+=' -DBUILD_TESTING=OFF'
++ CMAKE_OPTS=-DGFS=ON
++ BUILD_DIR=/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build
++ [[ YES =~ [yYtT] ]]
++ rm -rf /scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build
++ mkdir -p /scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build
++ cd /scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build
++ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd -DCMAKE_INSTALL_BINDIR=exec -DBUILD_TESTING=OFF -DGFS=ON /scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd
+-- The C compiler identification is Intel 2021.5.0.20211109
+-- The Fortran compiler identification is Intel 2021.5.0.20211109
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /apps/oneapi/compiler/2022.0.2/linux/bin/intel64/icc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /apps/oneapi/compiler/2022.0.2/linux/bin/intel64/ifort - skipped
+-- Building utilities specific to the GFS
+-- Found MPI_C: /apps/oneapi/mpi/2021.5.1/lib/libmpifort.so (found version "3.1") 
+-- Found MPI_Fortran: /apps/oneapi/mpi/2021.5.1/lib/libmpifort.so (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/include;/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-fortran-4.6.1-ifhqcwv/include (found suitable version "4.9.2", minimum required is "4.3.3") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k] Lib: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-fortran-4.6.1-ifhqcwv/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-fortran-4.6.1-ifhqcwv] Lib: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/netcdf-fortran-4.6.1-ifhqcwv/lib/libnetcdff.so 
+-- Found MPI: TRUE (found version "3.1") found components: C Fortran 
+-- Found ESMF library: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/esmf-8.6.0-nnuwc5z/lib/libesmf.a
+-- Found ESMF: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/esmf-8.6.0-nnuwc5z/lib (found suitable version "8.6.0", minimum required is "8.0.0")  
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Found bacio: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/bacio-2.4.1-wqq7qmr/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/w3emc-2.10.0-xer6twa/lib64/libw3emc_4.a (found version "2.10.0")
+-- Found bacio: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/bacio-2.4.1-wqq7qmr/lib/libbacio_4.a (found version "2.4.1")
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found sp: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/sp-2.5.0-2pqzhuv/lib64/libsp_4.a (found version "2.5.0")
+-- Found ip: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/ip-4.3.0-ozyjvbg/lib64/libip_4.a (found version "4.2.0")
+-- Found sp: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/sp-2.5.0-2pqzhuv/lib64/libsp_4.a (found version "2.5.0")
+-- Found ZLIB: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/zlib-1.2.13-eabxx4z/lib/libz.a (found version "1.2.13") 
+-- Found PNG: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/libpng-1.6.37-cha7kfi/lib64/libpng.so (found version "1.6.37") 
+-- Found g2: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/g2-3.4.5-77xve5x/lib64/libg2_4.a (found version "3.4.5")
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build
++ make -j 1 VERBOSE=
+Dependee "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/emcsfc_ice_blend.fd/CMakeFiles/emcsfc_ice_blend.dir/DependInfo.cmake" is newer than depender "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/emcsfc_ice_blend.fd/CMakeFiles/emcsfc_ice_blend.dir/depend.internal".
+Dependee "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/emcsfc_ice_blend.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/emcsfc_ice_blend.fd/CMakeFiles/emcsfc_ice_blend.dir/depend.internal".
+Scanning dependencies of target emcsfc_ice_blend
+[  1%] Building Fortran object sorc/emcsfc_ice_blend.fd/CMakeFiles/emcsfc_ice_blend.dir/emcsfc_ice_blend.f90.o
+[  2%] Linking Fortran executable emcsfc_ice_blend
+[  2%] Built target emcsfc_ice_blend
+Dependee "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/DependInfo.cmake" is newer than depender "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/depend.internal".
+Dependee "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/depend.internal".
+Scanning dependencies of target snow2mdl_lib
+[  3%] Building Fortran object sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/program_setup.F90.o
+[  5%] Building Fortran object sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/model_grid.F90.o
+[  6%] Building Fortran object sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/snowdat.F90.o
+[  7%] Building Fortran object sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/snow2mdl.F90.o
+[  8%] Building Fortran object sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/grib_utils.F90.o
+[ 10%] Linking Fortran static library libsnow2mdl_lib.a
+[ 10%] Built target snow2mdl_lib
+Dependee "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/emcsfc_snow2mdl.dir/DependInfo.cmake" is newer than depender "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/emcsfc_snow2mdl.dir/depend.internal".
+Dependee "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/emcsfc_snow2mdl.dir/depend.internal".
+Scanning dependencies of target emcsfc_snow2mdl
+[ 11%] Building Fortran object sorc/emcsfc_snow2mdl.fd/CMakeFiles/emcsfc_snow2mdl.dir/driver.F90.o
+[ 12%] Linking Fortran executable emcsfc_snow2mdl
+[ 12%] Built target emcsfc_snow2mdl
+Dependee "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/lsm_routines.fd/noah.fd/CMakeFiles/noah_lsm_routines.dir/DependInfo.cmake" is newer than depender "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/lsm_routines.fd/noah.fd/CMakeFiles/noah_lsm_routines.dir/depend.internal".
+Dependee "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/lsm_routines.fd/noah.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/lsm_routines.fd/noah.fd/CMakeFiles/noah_lsm_routines.dir/depend.internal".
+Scanning dependencies of target noah_lsm_routines
+[ 13%] Building Fortran object sorc/lsm_routines.fd/noah.fd/CMakeFiles/noah_lsm_routines.dir/bulk_snow_module.f90.o
+[ 15%] Building Fortran object sorc/lsm_routines.fd/noah.fd/CMakeFiles/noah_lsm_routines.dir/set_soilveg_snippet.f90.o
+[ 16%] Building Fortran object sorc/lsm_routines.fd/noah.fd/CMakeFiles/noah_lsm_routines.dir/sflx_snippet.f90.o
+[ 17%] Linking Fortran static library libnoah_lsm_routines.a
+[ 17%] Built target noah_lsm_routines
+Dependee "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/DependInfo.cmake" is newer than depender "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/depend.internal".
+Dependee "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/global_cycle.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/scratch1/NCEPDEV/global/CI/2900/gefs/sorc/ufs_utils.fd/build/sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/depend.internal".
+Scanning dependencies of target global_cycle_lib
+[ 18%] Building Fortran object sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/machine.f90.o
+[ 20%] Building Fortran object sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/__/__/ccpp-physics/physics/Interstitials/UFS_SCM_NEPTUNE/sfcsub.F.o
+[ 21%] Building Fortran object sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/read_write_data.f90.o
+[ 22%] Building Fortran object sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/utils.F90.o
+[ 24%] Building Fortran object sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/land_increments.f90.o
+[ 25%] Building Fortran object sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/num_parthds.f90.o
+ifort: error #10103: can't fork process: Resource temporarily unavailable
+make[2]: *** [sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/build.make:88: sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/num_parthds.f90.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:394: sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2
