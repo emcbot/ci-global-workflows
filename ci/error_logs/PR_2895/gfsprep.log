@@ -1,0 +1,2538 @@
+PBS: Running prologue on parent mom node: nid001211...
+Job 156168779.cbqs01 nodelist: nid[001211,001218]
++ /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/jobs/rocoto/prep.sh
+Begin prep.sh at Tue Sep 24 16:52:30 UTC 2024
++ prep.sh[7]: . /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Resetting modules to system default. Reseting $MODULEPATH back to system default. All extra directories will be removed from $MODULEPATH.
+
+Currently Loaded Modules:
+  1) craype-x86-rome     (H)  13) perl/5.32.0        25) met/9.1.3
+  2) libfabric/1.11.0.0. (H)  14) libjpeg/9c         26) metplus/3.1.1
+  3) craype-network-ofi  (H)  15) udunits/2.2.28     27) prepobs/1.1.0
+  4) envvar/1.0               16) gsl/2.7            28) fit2obs/1.1.4
+  5) PrgEnv-intel/8.1.0       17) cdo/1.9.8          29) mos_shared/2.7.2
+  6) craype/2.7.13            18) hdf5/1.10.6        30) module_base.wcoss2
+  7) intel/19.1.3.304         19) netcdf/4.7.4       31) grib_util/1.2.3
+  8) cray-mpich/8.1.9         20) nco/4.7.9          32) g2tmpl/1.10.2
+  9) cray-pals/1.0.17         21) prod_util/2.0.9    33) crtm/2.4.0.1
+ 10) cfp/2.0.4                22) bufr_dump/1.0.0    34) wgrib2/2.0.8
+ 11) python/3.8.6             23) util_shared/1.4.0
+ 12) gempak/7.14.1            24) ncdiag/1.0.0
+
+  Where:
+   H:  Hidden Module
+
+ 
+
++ prep.sh[8]: status=0
++ prep.sh[9]: [[ 0 -ne 0 ]]
++ prep.sh[12]: export job=prep
++ prep.sh[12]: job=prep
++ prep.sh[13]: export jobid=prep.131133
++ prep.sh[13]: jobid=prep.131133
++ prep.sh[14]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/ush/jjob_header.sh -e prep -c 'base prep'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=prep
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z prep ]]
+++ jjob_header.sh[68]: export DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
+++ jjob_header.sh[68]: DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
+++ jjob_header.sh[72]: mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
+++ jjob_header.sh[73]: cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
+++ jjob_header.sh[79]: export cycle=t00z
+++ jjob_header.sh[79]: cycle=t00z
+++ jjob_header.sh[80]: setpdy.sh
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20211214
++++ PDY[1]: PDYm7=20211214
++++ PDY[2]: export PDYm6=20211215
++++ PDY[2]: PDYm6=20211215
++++ PDY[3]: export PDYm5=20211216
++++ PDY[3]: PDYm5=20211216
++++ PDY[4]: export PDYm4=20211217
++++ PDY[4]: PDYm4=20211217
++++ PDY[5]: export PDYm3=20211218
++++ PDY[5]: PDYm3=20211218
++++ PDY[6]: export PDYm2=20211219
++++ PDY[6]: PDYm2=20211219
++++ PDY[7]: export PDYm1=20211220
++++ PDY[7]: PDYm1=20211220
++++ PDY[8]: export PDY=20211221
++++ PDY[8]: PDY=20211221
++++ PDY[9]: export PDYp1=20211222
++++ PDY[9]: PDYp1=20211222
++++ PDY[10]: export PDYp2=20211223
++++ PDY[10]: PDYp2=20211223
++++ PDY[11]: export PDYp3=20211224
++++ PDY[11]: PDYp3=20211224
++++ PDY[12]: export PDYp4=20211225
++++ PDY[12]: PDYp4=20211225
++++ PDY[13]: export PDYp5=20211226
++++ PDY[13]: PDYp5=20211226
++++ PDY[14]: export PDYp6=20211227
++++ PDY[14]: PDYp6=20211227
++++ PDY[15]: export PDYp7=20211228
++++ PDY[15]: PDYp7=20211228
+++ jjob_header.sh[87]: export pid=131133
+++ jjob_header.sh[87]: pid=131133
+++ jjob_header.sh[88]: export pgmout=OUTPUT.131133
+++ jjob_header.sh[88]: pgmout=OUTPUT.131133
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/EXPDIR/C96_atm3DVar_extended_fcbb6494
+++ jjob_header.sh[95]: EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/EXPDIR/C96_atm3DVar_extended_fcbb6494
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/EXPDIR/C96_atm3DVar_extended_fcbb6494/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=WCOSS2
++++ config.base[9]: machine=WCOSS2
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=GFS-DEV
++++ config.base[15]: ACCOUNT=GFS-DEV
++++ config.base[16]: export QUEUE=dev
++++ config.base[16]: QUEUE=dev
++++ config.base[17]: export QUEUE_SERVICE=dev_transfer
++++ config.base[17]: QUEUE_SERVICE=dev_transfer
++++ config.base[18]: export PARTITION_BATCH=
++++ config.base[18]: PARTITION_BATCH=
++++ config.base[19]: export PARTITION_SERVICE=
++++ config.base[19]: PARTITION_SERVICE=
++++ config.base[20]: export RESERVATION=
++++ config.base[20]: RESERVATION=
++++ config.base[21]: export CLUSTERS=
++++ config.base[21]: CLUSTERS=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow
++++ config.base[27]: HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow
++++ config.base[28]: export EXECgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/exec
++++ config.base[28]: EXECgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/exec
++++ config.base[29]: export FIXgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix
++++ config.base[29]: FIXgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix
++++ config.base[30]: export PARMgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/parm
++++ config.base[30]: PARMgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/parm
++++ config.base[31]: export SCRgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/scripts
++++ config.base[31]: SCRgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/scripts
++++ config.base[32]: export USHgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/ush
++++ config.base[32]: USHgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/ush
++++ config.base[34]: export FIXam=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/am
++++ config.base[34]: FIXam=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/am
++++ config.base[35]: export FIXaer=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/aer
++++ config.base[35]: FIXaer=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/aer
++++ config.base[36]: export FIXcpl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/cpl
++++ config.base[36]: FIXcpl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/cpl
++++ config.base[37]: export FIXlut=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/lut
++++ config.base[37]: FIXlut=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/lut
++++ config.base[38]: export FIXcice=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/cice
++++ config.base[38]: FIXcice=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/cice
++++ config.base[39]: export FIXmom=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/mom6
++++ config.base[39]: FIXmom=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/mom6
++++ config.base[40]: export FIXreg2grb2=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/reg2grb2
++++ config.base[40]: FIXreg2grb2=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/reg2grb2
++++ config.base[41]: export FIXgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/gdas
++++ config.base[41]: FIXgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/gdas
++++ config.base[46]: export PACKAGEROOT=/lfs/h1/ops/prod/packages
++++ config.base[46]: PACKAGEROOT=/lfs/h1/ops/prod/packages
++++ config.base[47]: export COMROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT
++++ config.base[47]: COMROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT
++++ config.base[48]: export COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.base[48]: COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.base[49]: export DMPDIR=/lfs/h2/emc/dump/noscrub/dump
++++ config.base[49]: DMPDIR=/lfs/h2/emc/dump/noscrub/dump
++++ config.base[53]: export COMINecmwf=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ecmwf
++++ config.base[53]: COMINecmwf=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ecmwf
++++ config.base[54]: export COMINnam=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/nam
++++ config.base[54]: COMINnam=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/nam
++++ config.base[55]: export COMINukmet=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ukmet
++++ config.base[55]: COMINukmet=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ukmet
++++ config.base[58]: export HOMEDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[58]: HOMEDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[59]: export STMP=/lfs/h2/emc/stmp/terry.mcguinness
++++ config.base[59]: STMP=/lfs/h2/emc/stmp/terry.mcguinness
++++ config.base[60]: export PTMP=/lfs/h2/emc/ptmp/terry.mcguinness
++++ config.base[60]: PTMP=/lfs/h2/emc/ptmp/terry.mcguinness
++++ config.base[61]: export NOSCRUB=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[61]: NOSCRUB=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[64]: export BASE_GIT=/lfs/h2/emc/global/save/emc.global/git
++++ config.base[64]: BASE_GIT=/lfs/h2/emc/global/save/emc.global/git
++++ config.base[67]: export DO_GOES=YES
++++ config.base[67]: DO_GOES=YES
++++ config.base[68]: export DO_BUFRSND=YES
++++ config.base[68]: DO_BUFRSND=YES
++++ config.base[69]: export DO_GEMPAK=YES
++++ config.base[69]: DO_GEMPAK=YES
++++ config.base[70]: export DO_AWIPS=NO
++++ config.base[70]: DO_AWIPS=NO
++++ config.base[71]: export DO_NPOESS=YES
++++ config.base[71]: DO_NPOESS=YES
++++ config.base[72]: export DO_TRACKER=YES
++++ config.base[72]: DO_TRACKER=YES
++++ config.base[73]: export DO_GENESIS=YES
++++ config.base[73]: DO_GENESIS=YES
++++ config.base[74]: export DO_GENESIS_FSU=NO
++++ config.base[74]: DO_GENESIS_FSU=NO
++++ config.base[75]: export DO_VERFOZN=YES
++++ config.base[75]: DO_VERFOZN=YES
++++ config.base[76]: export DO_VERFRAD=YES
++++ config.base[76]: DO_VERFRAD=YES
++++ config.base[77]: export DO_VMINMON=YES
++++ config.base[77]: DO_VMINMON=YES
++++ config.base[78]: export DO_MOS=NO
++++ config.base[78]: DO_MOS=NO
++++ config.base[84]: export REALTIME=YES
++++ config.base[84]: REALTIME=YES
++++ config.base[87]: export MODE=cycled
++++ config.base[87]: MODE=cycled
++++ config.base[96]: export FIXgsi=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/gsi
++++ config.base[96]: FIXgsi=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/gsi
++++ config.base[97]: export HOMEpost=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow
++++ config.base[97]: HOMEpost=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow
++++ config.base[98]: export HOMEobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0
++++ config.base[98]: HOMEobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0
++++ config.base[101]: export 'NCP=/bin/cp -p'
++++ config.base[101]: NCP='/bin/cp -p'
++++ config.base[102]: export NMV=/bin/mv
++++ config.base[102]: NMV=/bin/mv
++++ config.base[103]: export 'NLN=/bin/ln -sf'
++++ config.base[103]: NLN='/bin/ln -sf'
++++ config.base[104]: export VERBOSE=YES
++++ config.base[104]: VERBOSE=YES
++++ config.base[105]: export KEEPDATA=NO
++++ config.base[105]: KEEPDATA=NO
++++ config.base[106]: export DEBUG_POSTSCRIPT=NO
++++ config.base[106]: DEBUG_POSTSCRIPT=NO
++++ config.base[107]: export CHGRP_RSTPROD=YES
++++ config.base[107]: CHGRP_RSTPROD=YES
++++ config.base[108]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[108]: CHGRP_CMD='chgrp rstprod'
++++ config.base[109]: export NCDUMP=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin/ncdump
++++ config.base[109]: NCDUMP=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin/ncdump
++++ config.base[110]: export NCLEN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/ush/getncdimlen
++++ config.base[110]: NCLEN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/ush/getncdimlen
++++ config.base[113]: export BASE_ENV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/env
++++ config.base[113]: BASE_ENV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/env
++++ config.base[114]: export BASE_JOB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/jobs/rocoto
++++ config.base[114]: BASE_JOB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/jobs/rocoto
++++ config.base[117]: export SDATE=2021122018
++++ config.base[117]: SDATE=2021122018
++++ config.base[118]: export EDATE=2021122118
++++ config.base[118]: EDATE=2021122118
++++ config.base[119]: export EXP_WARM_START=.false.
++++ config.base[119]: EXP_WARM_START=.false.
++++ config.base[120]: export assim_freq=6
++++ config.base[120]: assim_freq=6
++++ config.base[121]: export PSLOT=C96_atm3DVar_extended_fcbb6494
++++ config.base[121]: PSLOT=C96_atm3DVar_extended_fcbb6494
++++ config.base[122]: export EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/EXPDIR/C96_atm3DVar_extended_fcbb6494
++++ config.base[122]: EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/EXPDIR/C96_atm3DVar_extended_fcbb6494
++++ config.base[123]: export ROTDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494
++++ config.base[123]: ROTDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494
++++ config.base[124]: export ROTDIR_DUMP=YES
++++ config.base[124]: ROTDIR_DUMP=YES
++++ config.base[125]: export DUMP_SUFFIX=
++++ config.base[125]: DUMP_SUFFIX=
++++ config.base[126]: [[ 2021122100 -ge 2019092100 ]]
++++ config.base[126]: [[ 2021122100 -le 2019110700 ]]
++++ config.base[129]: export ARCDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness/archive/C96_atm3DVar_extended_fcbb6494
++++ config.base[129]: ARCDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness/archive/C96_atm3DVar_extended_fcbb6494
++++ config.base[130]: export ATARDIR=/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C96_atm3DVar_extended_fcbb6494
++++ config.base[130]: ATARDIR=/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C96_atm3DVar_extended_fcbb6494
++++ config.base[133]: export envir=prod
++++ config.base[133]: envir=prod
++++ config.base[134]: export NET=gfs
++++ config.base[134]: NET=gfs
++++ config.base[135]: export RUN=gfs
++++ config.base[135]: RUN=gfs
++++ config.base[138]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/EXPDIR/C96_atm3DVar_extended_fcbb6494/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[78]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[79]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[81]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[82]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[83]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[84]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[85]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[86]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[87]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[88]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[90]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[91]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[92]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[93]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[94]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[95]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[96]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[97]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[99]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[100]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[101]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[103]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[141]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[141]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[142]: export LOGSCRIPT=
++++ config.base[142]: LOGSCRIPT=
++++ config.base[145]: export 'REDOUT=1>'
++++ config.base[145]: REDOUT='1>'
++++ config.base[146]: export 'REDERR=2>'
++++ config.base[146]: REDERR='2>'
++++ config.base[148]: export SENDECF=NO
++++ config.base[148]: SENDECF=NO
++++ config.base[149]: export SENDSDM=NO
++++ config.base[149]: SENDSDM=NO
++++ config.base[150]: export SENDDBN_NTC=NO
++++ config.base[150]: SENDDBN_NTC=NO
++++ config.base[151]: export SENDDBN=NO
++++ config.base[151]: SENDDBN=NO
++++ config.base[152]: export DBNROOT=/apps/ops/prod/nco/core/prod_util.v2.0.9/fakedbn
++++ config.base[152]: DBNROOT=/apps/ops/prod/nco/core/prod_util.v2.0.9/fakedbn
++++ config.base[155]: export APP=ATM
++++ config.base[155]: APP=ATM
++++ config.base[157]: shopt -s extglob
++++ config.base[159]: case "${RUN}" in
++++ config.base[166]: shopt -u extglob
++++ config.base[169]: export DO_ATM=YES
++++ config.base[169]: DO_ATM=YES
++++ config.base[170]: export DO_COUPLED=NO
++++ config.base[170]: DO_COUPLED=NO
++++ config.base[171]: export DO_WAVE=NO
++++ config.base[171]: DO_WAVE=NO
++++ config.base[172]: export DO_OCN=NO
++++ config.base[172]: DO_OCN=NO
++++ config.base[173]: export DO_ICE=NO
++++ config.base[173]: DO_ICE=NO
++++ config.base[174]: export DO_AERO=NO
++++ config.base[174]: DO_AERO=NO
++++ config.base[175]: export DO_PREP_OBS_AERO=NO
++++ config.base[175]: DO_PREP_OBS_AERO=NO
++++ config.base[176]: export AERO_FCST_RUN=
++++ config.base[176]: AERO_FCST_RUN=
++++ config.base[177]: export AERO_ANL_RUN=
++++ config.base[177]: AERO_ANL_RUN=
++++ config.base[178]: export WAVE_RUN=
++++ config.base[178]: WAVE_RUN=
++++ config.base[179]: export DOBNDPNT_WAVE=NO
++++ config.base[179]: DOBNDPNT_WAVE=NO
++++ config.base[180]: export DOIBP_WAV=NO
++++ config.base[180]: DOIBP_WAV=NO
++++ config.base[181]: export FRAC_GRID=.true.
++++ config.base[181]: FRAC_GRID=.true.
++++ config.base[182]: export DO_NEST=NO
++++ config.base[182]: DO_NEST=NO
++++ config.base[183]: [[ NO == \Y\E\S ]]
++++ config.base[189]: export ntiles=6
++++ config.base[189]: ntiles=6
++++ config.base[190]: export FIXugwd=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/ugwd
++++ config.base[190]: FIXugwd=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/ugwd
++++ config.base[191]: export FIXorog=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/orog
++++ config.base[191]: FIXorog=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/orog
++++ config.base[195]: export OPS_RES=C768
++++ config.base[195]: OPS_RES=C768
++++ config.base[198]: export LEVS=128
++++ config.base[198]: LEVS=128
++++ config.base[199]: export CASE=C96
++++ config.base[199]: CASE=C96
++++ config.base[200]: export CASE_ENS=@CASEENS@
++++ config.base[200]: CASE_ENS=@CASEENS@
++++ config.base[201]: export OCNRES=500
++++ config.base[201]: OCNRES=500
++++ config.base[202]: export ICERES=500
++++ config.base[202]: ICERES=500
++++ config.base[205]: case "${CASE}" in
++++ config.base[210]: export waveGRD=uglo_100km
++++ config.base[210]: waveGRD=uglo_100km
++++ config.base[224]: case "${APP}" in
++++ config.base[265]: [[ gfs =~ gdas ]]
++++ config.base[268]: [[ gfs =~ gfs ]]
++++ config.base[269]: export FHCYC=24
++++ config.base[269]: FHCYC=24
++++ config.base[273]: export FHMIN=0
++++ config.base[273]: FHMIN=0
++++ config.base[274]: export FHMAX=9
++++ config.base[274]: FHMAX=9
++++ config.base[275]: export FHOUT=3
++++ config.base[275]: FHOUT=3
++++ config.base[276]: export FHOUT_OCN=3
++++ config.base[276]: FHOUT_OCN=3
++++ config.base[277]: export FHOUT_ICE=3
++++ config.base[277]: FHOUT_ICE=3
++++ config.base[280]: export EUPD_CYC=gdas
++++ config.base[280]: EUPD_CYC=gdas
++++ config.base[283]: export gfs_cyc=4
++++ config.base[283]: gfs_cyc=4
++++ config.base[286]: export FHMIN_GFS=0
++++ config.base[286]: FHMIN_GFS=0
++++ config.base[287]: export FHMAX_GFS=384
++++ config.base[287]: FHMAX_GFS=384
++++ config.base[289]: breakpnts=192
++++ config.base[290]: export FCST_SEGMENTS=0,192,384
++++ config.base[290]: FCST_SEGMENTS=0,192,384
++++ config.base[291]: export FHOUT_GFS=3
++++ config.base[291]: FHOUT_GFS=3
++++ config.base[292]: export FHMAX_HF_GFS=120
++++ config.base[292]: FHMAX_HF_GFS=120
++++ config.base[293]: export FHOUT_HF_GFS=1
++++ config.base[293]: FHOUT_HF_GFS=1
++++ config.base[294]: export FHOUT_OCN_GFS=6
++++ config.base[294]: FHOUT_OCN_GFS=6
++++ config.base[295]: export FHOUT_ICE_GFS=6
++++ config.base[295]: FHOUT_ICE_GFS=6
++++ config.base[296]: export FHMIN_WAV=0
++++ config.base[296]: FHMIN_WAV=0
++++ config.base[297]: export FHOUT_WAV=3
++++ config.base[297]: FHOUT_WAV=3
++++ config.base[298]: export FHMAX_HF_WAV=120
++++ config.base[298]: FHMAX_HF_WAV=120
++++ config.base[299]: export FHOUT_HF_WAV=1
++++ config.base[299]: FHOUT_HF_WAV=1
++++ config.base[300]: export FHMAX_WAV=9
++++ config.base[300]: FHMAX_WAV=9
++++ config.base[301]: export FHMAX_WAV_GFS=384
++++ config.base[301]: FHMAX_WAV_GFS=384
++++ config.base[302]: ((  gfs_cyc != 0  ))
++++ config.base[303]: export STEP_GFS=6
++++ config.base[303]: STEP_GFS=6
++++ config.base[308]: export ILPOST=1
++++ config.base[308]: ILPOST=1
++++ config.base[309]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[314]: export FHMAX_GOES=180
++++ config.base[314]: FHMAX_GOES=180
++++ config.base[315]: export FHOUT_GOES=3
++++ config.base[315]: FHOUT_GOES=3
++++ config.base[316]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[321]: export restart_interval_gfs=12
++++ config.base[321]: restart_interval_gfs=12
++++ config.base[326]: export QUILTING=.true.
++++ config.base[326]: QUILTING=.true.
++++ config.base[327]: export OUTPUT_GRID=gaussian_grid
++++ config.base[327]: OUTPUT_GRID=gaussian_grid
++++ config.base[328]: export WRITE_DOPOST=.true.
++++ config.base[328]: WRITE_DOPOST=.true.
++++ config.base[329]: export WRITE_NSFLIP=.true.
++++ config.base[329]: WRITE_NSFLIP=.true.
++++ config.base[332]: export DOIAU=YES
++++ config.base[332]: DOIAU=YES
++++ config.base[333]: export IAUFHRS=3,6,9
++++ config.base[333]: IAUFHRS=3,6,9
++++ config.base[334]: export IAU_FHROT=3
++++ config.base[334]: IAU_FHROT=3
++++ config.base[335]: export IAU_DELTHRS=6
++++ config.base[335]: IAU_DELTHRS=6
++++ config.base[336]: export IAU_OFFSET=6
++++ config.base[336]: IAU_OFFSET=6
++++ config.base[337]: export DOIAU_ENKF=YES
++++ config.base[337]: DOIAU_ENKF=YES
++++ config.base[338]: export IAUFHRS_ENKF=3,6,9
++++ config.base[338]: IAUFHRS_ENKF=3,6,9
++++ config.base[339]: export IAU_DELTHRS_ENKF=6
++++ config.base[339]: IAU_DELTHRS_ENKF=6
++++ config.base[342]: export lobsdiag_forenkf=.true.
++++ config.base[342]: lobsdiag_forenkf=.true.
++++ config.base[350]: export imp_physics=8
++++ config.base[350]: imp_physics=8
++++ config.base[354]: export DO_JEDIATMVAR=NO
++++ config.base[354]: DO_JEDIATMVAR=NO
++++ config.base[355]: export DO_JEDIATMENS=NO
++++ config.base[355]: DO_JEDIATMENS=NO
++++ config.base[356]: export DO_JEDIOCNVAR=NO
++++ config.base[356]: DO_JEDIOCNVAR=NO
++++ config.base[357]: export DO_JEDISNOWDA=NO
++++ config.base[357]: DO_JEDISNOWDA=NO
++++ config.base[358]: export DO_MERGENSST=NO
++++ config.base[358]: DO_MERGENSST=NO
++++ config.base[361]: export DOHYBVAR=NO
++++ config.base[361]: DOHYBVAR=NO
++++ config.base[362]: export NMEM_ENS=0
++++ config.base[362]: NMEM_ENS=0
++++ config.base[363]: export SMOOTH_ENKF=NO
++++ config.base[363]: SMOOTH_ENKF=NO
++++ config.base[364]: export l4densvar=.true.
++++ config.base[364]: l4densvar=.true.
++++ config.base[365]: export lwrite4danl=.true.
++++ config.base[365]: lwrite4danl=.true.
++++ config.base[366]: export DO_CALC_INCREMENT=NO
++++ config.base[366]: DO_CALC_INCREMENT=NO
++++ config.base[369]: export NMEM_ENS_GFS=30
++++ config.base[369]: NMEM_ENS_GFS=30
++++ config.base[370]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[370]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[371]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[371]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[374]: [[ NO = \Y\E\S ]]
++++ config.base[388]: [[ NO == \N\O ]]
++++ config.base[388]: [[ YES == \Y\E\S ]]
++++ config.base[389]: export IAUFHRS=6,
++++ config.base[389]: IAUFHRS=6,
++++ config.base[390]: export IAU_FHROT=3
++++ config.base[390]: IAU_FHROT=3
++++ config.base[391]: export IAU_FILTER_INCREMENTS=.true.
++++ config.base[391]: IAU_FILTER_INCREMENTS=.true.
++++ config.base[392]: export IAUFHRS_ENKF=6,
++++ config.base[392]: IAUFHRS_ENKF=6,
++++ config.base[396]: export ENKF_SPREAD=YES
++++ config.base[396]: ENKF_SPREAD=YES
++++ config.base[399]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[399]: [[ 2021122018 = \2\0\2\1\1\2\2\1\0\0 ]]
++++ config.base[399]: [[ YES = \N\O ]]
++++ config.base[399]: [[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[405]: [[ YES = \N\O ]]
++++ config.base[409]: [[ YES == \Y\E\S ]]
++++ config.base[410]: export restart_interval_enkfgdas=3
++++ config.base[410]: restart_interval_enkfgdas=3
++++ config.base[415]: export restart_interval_enkfgfs=3
++++ config.base[415]: restart_interval_enkfgfs=3
++++ config.base[417]: [[ YES == \Y\E\S ]]
++++ config.base[418]: export restart_interval_gdas=3
++++ config.base[418]: restart_interval_gdas=3
++++ config.base[423]: export GSI_SOILANAL=NO
++++ config.base[423]: GSI_SOILANAL=NO
++++ config.base[426]: export DONST=YES
++++ config.base[426]: DONST=YES
++++ config.base[427]: [[ YES = \Y\E\S ]]
++++ config.base[427]: export 'FNTSFA=        '
++++ config.base[427]: FNTSFA='        '
++++ config.base[430]: export nst_anl=.true.
++++ config.base[430]: nst_anl=.true.
++++ config.base[433]: export MAKE_NSSTBUFR=NO
++++ config.base[433]: MAKE_NSSTBUFR=NO
++++ config.base[436]: export MAKE_ACFTBUFR=NO
++++ config.base[436]: MAKE_ACFTBUFR=NO
++++ config.base[439]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[439]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[442]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[442]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[443]: export INCVARS_EFOLD=5
++++ config.base[443]: INCVARS_EFOLD=5
++++ config.base[448]: export netcdf_diag=.true.
++++ config.base[448]: netcdf_diag=.true.
++++ config.base[449]: export binary_diag=.false.
++++ config.base[449]: binary_diag=.false.
++++ config.base[452]: export DO_METP=YES
++++ config.base[452]: DO_METP=YES
++++ config.base[453]: export DO_FIT2OBS=YES
++++ config.base[453]: DO_FIT2OBS=YES
++++ config.base[454]: export DO_VRFY_OCEANDA=NO
++++ config.base[454]: DO_VRFY_OCEANDA=NO
++++ config.base[457]: export FHMAX_FITS=132
++++ config.base[457]: FHMAX_FITS=132
++++ config.base[458]: [[ 132 -gt 384 ]]
++++ config.base[461]: export HPSSARCH=NO
++++ config.base[461]: HPSSARCH=NO
++++ config.base[462]: export LOCALARCH=NO
++++ config.base[462]: LOCALARCH=NO
++++ config.base[463]: [[ NO = \Y\E\S ]]
++++ config.base[467]: export ARCH_CYC=00
++++ config.base[467]: ARCH_CYC=00
++++ config.base[468]: export ARCH_WARMICFREQ=4
++++ config.base[468]: ARCH_WARMICFREQ=4
++++ config.base[469]: export ARCH_FCSTICFREQ=1
++++ config.base[469]: ARCH_FCSTICFREQ=1
++++ config.base[472]: [[ NO = \Y\E\S ]]
++++ config.base[480]: export REPLAY_ICS=NO
++++ config.base[480]: REPLAY_ICS=NO
++++ config.base[481]: export OFFSET_START_HOUR=0
++++ config.base[481]: OFFSET_START_HOUR=0
++++ config.base[484]: export NUM_SND_COLLECTIVES=9
++++ config.base[484]: NUM_SND_COLLECTIVES=9
++++ config.base[488]: [[ WCOSS2 =~ PW ]]
++++ config.base[497]: [[ WCOSS2 == \O\R\I\O\N ]]
++++ config.base[497]: [[ WCOSS2 == \H\E\R\C\U\L\E\S ]]
++++ config.base[502]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/EXPDIR/C96_atm3DVar_extended_fcbb6494/config.prep
++++ config.prep[6]: echo 'BEGIN: config.prep'
+BEGIN: config.prep
++++ config.prep[9]: . /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/EXPDIR/C96_atm3DVar_extended_fcbb6494/config.resources prep
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=prep
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[40]: max_tasks_per_node=128
+++++ config.resources[42]: mem_node_max=500GB
+++++ config.resources[143]: export max_tasks_per_node
+++++ config.resources[145]: case ${step} in
+++++ config.resources[147]: walltime=00:30:00
+++++ config.resources[148]: ntasks=4
+++++ config.resources[149]: tasks_per_node=2
+++++ config.resources[150]: threads_per_task=1
+++++ config.resources[151]: memory=40GB
+++++ config.resources[1425]: [[ -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/EXPDIR/C96_atm3DVar_extended_fcbb6494/config.resources.WCOSS2 ]]
+++++ config.resources[1426]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/EXPDIR/C96_atm3DVar_extended_fcbb6494/config.resources.WCOSS2
++++++ config.resources.WCOSS2[5]: case ${step} in
++++++ config.resources.WCOSS2[7]: export is_exclusive=True
++++++ config.resources.WCOSS2[7]: is_exclusive=True
++++++ config.resources.WCOSS2[8]: export memory=480GB
++++++ config.resources.WCOSS2[8]: memory=480GB
+++++ config.resources[1430]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1431]: run_resource_var=threads_per_task_gfs
+++++ config.resources[1432]: [[ -n '' ]]
+++++ config.resources[1434]: [[ -n 0 ]]
+++++ config.resources[1435]: export threads_per_task
+++++ config.resources[1430]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1431]: run_resource_var=ntasks_gfs
+++++ config.resources[1432]: [[ -n '' ]]
+++++ config.resources[1434]: [[ -n 0 ]]
+++++ config.resources[1435]: export ntasks
+++++ config.resources[1430]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1431]: run_resource_var=tasks_per_node_gfs
+++++ config.resources[1432]: [[ -n '' ]]
+++++ config.resources[1434]: [[ -n 0 ]]
+++++ config.resources[1435]: export tasks_per_node
+++++ config.resources[1430]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1431]: run_resource_var=NTASKS_gfs
+++++ config.resources[1432]: [[ -n '' ]]
+++++ config.resources[1434]: [[ -n '' ]]
+++++ config.resources[1430]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1431]: run_resource_var=memory_gfs
+++++ config.resources[1432]: [[ -n '' ]]
+++++ config.resources[1434]: [[ -n 0 ]]
+++++ config.resources[1435]: export memory
+++++ config.resources[1430]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1431]: run_resource_var=walltime_gfs
+++++ config.resources[1432]: [[ -n '' ]]
+++++ config.resources[1434]: [[ -n 0 ]]
+++++ config.resources[1435]: export walltime
+++++ config.resources[1439]: echo 'END: config.resources'
+END: config.resources
++++ config.prep[11]: export MAKE_PREPBUFR=YES
++++ config.prep[11]: MAKE_PREPBUFR=YES
++++ config.prep[12]: export cdate10=2021122100
++++ config.prep[12]: cdate10=2021122100
++++ config.prep[15]: export PROCESS_TROPCY=NO
++++ config.prep[15]: PROCESS_TROPCY=NO
++++ config.prep[16]: export TROPCYQCRELOSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/scripts/exglobal_atmos_tropcy_qc_reloc.sh
++++ config.prep[16]: TROPCYQCRELOSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/scripts/exglobal_atmos_tropcy_qc_reloc.sh
++++ config.prep[18]: export COMINtcvital=/lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos
++++ config.prep[18]: COMINtcvital=/lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos
++++ config.prep[19]: export COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.prep[19]: COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.prep[26]: export PRVT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/gsi/prepobs_errtable.global
++++ config.prep[26]: PRVT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/gsi/prepobs_errtable.global
++++ config.prep[30]: [[ emc == \e\m\c ]]
++++ config.prep[31]: [[ 2021122100 -ge 2019021900 ]]
++++ config.prep[31]: [[ 2021122100 -lt 2019110706 ]]
++++ config.prep[36]: [[ 2021122100 -ge 2019110706 ]]
++++ config.prep[36]: [[ 2021122100 -lt 2020040718 ]]
++++ config.prep[55]: [[ 2021122100 -ge 2020102200 ]]
++++ config.prep[56]: export 'DTYPS_nsst=sfcshp tesac bathy trkob'
++++ config.prep[56]: DTYPS_nsst='sfcshp tesac bathy trkob'
++++ config.prep[61]: echo 'END: config.prep'
+END: config.prep
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/env/WCOSS2.env prep
++++ WCOSS2.env[3]: [[ 1 -ne 1 ]]
++++ WCOSS2.env[10]: step=prep
++++ WCOSS2.env[13]: export 'launcher=mpiexec -l'
++++ WCOSS2.env[13]: launcher='mpiexec -l'
++++ WCOSS2.env[14]: export 'mpmd_opt=--cpu-bind verbose,core cfp'
++++ WCOSS2.env[14]: mpmd_opt='--cpu-bind verbose,core cfp'
++++ WCOSS2.env[18]: [[ -n 4 ]]
++++ WCOSS2.env[18]: [[ -n 128 ]]
++++ WCOSS2.env[18]: [[ -n 2 ]]
++++ WCOSS2.env[19]: max_threads_per_task=64
++++ WCOSS2.env[20]: NTHREADSmax=1
++++ WCOSS2.env[21]: NTHREADS1=1
++++ WCOSS2.env[22]: [[ 1 -gt 64 ]]
++++ WCOSS2.env[23]: [[ 1 -gt 64 ]]
++++ WCOSS2.env[24]: APRUN_default='mpiexec -l -n 4'
++++ WCOSS2.env[30]: [[ prep = \p\r\e\p ]]
++++ WCOSS2.env[32]: export POE=YES
++++ WCOSS2.env[32]: POE=YES
++++ WCOSS2.env[33]: export BACK=off
++++ WCOSS2.env[33]: BACK=off
++++ WCOSS2.env[34]: export sys_tp=wcoss2
++++ WCOSS2.env[34]: sys_tp=wcoss2
++++ WCOSS2.env[35]: export launcher_PREP=mpiexec
++++ WCOSS2.env[35]: launcher_PREP=mpiexec
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
++ prep.sh[17]: RUN_local=gfs
+++ prep.sh[23]: /apps/ops/prod/nco/core/prod_util.v2.0.9/exec/ndate -6 2021122100
++ prep.sh[23]: GDATE=2021122018
++ prep.sh[25]: gPDY=20211220
++ prep.sh[26]: gcyc=18
++ prep.sh[27]: GDUMP=gdas
++ prep.sh[29]: export OPREFIX=gfs.t00z.
++ prep.sh[29]: OPREFIX=gfs.t00z.
++ prep.sh[31]: YMD=20211221
++ prep.sh[31]: HH=00
++ prep.sh[31]: DUMP=gfs
++ prep.sh[31]: declare_from_tmpl -rx COM_OBS COM_OBSDMP
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_OBS=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
+declare_from_tmpl :: COM_OBSDMP=/lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos
++ prep.sh[33]: RUN=gdas
++ prep.sh[33]: DUMP=gdas
++ prep.sh[33]: YMD=20211220
++ prep.sh[33]: HH=18
++ prep.sh[33]: declare_from_tmpl -rx COM_OBS_PREV:COM_OBS_TMPL COM_OBSDMP_PREV:COM_OBSDMP_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_OBS_PREV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18/obs
+declare_from_tmpl :: COM_OBSDMP_PREV=/lfs/h2/emc/dump/noscrub/dump/gdas.20211220/18/atmos
++ prep.sh[37]: export MAKE_PREPBUFR=YES
++ prep.sh[37]: MAKE_PREPBUFR=YES
++ prep.sh[38]: [[ ! -d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs ]]
++ prep.sh[42]: [[ YES = \Y\E\S ]]
++ prep.sh[43]: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/ush/getdump.sh 2021122100 gfs /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
+Begin getdump.sh at Tue Sep 24 16:52:33 UTC 2024
++ getdump.sh[5](2021122100): COMPONENT=atmos
++ getdump.sh[7](2021122100): CDATE=2021122100
++ getdump.sh[8](2021122100): RUN=gfs
++ getdump.sh[9](2021122100): SOURCE_DIR=/lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos
++ getdump.sh[10](2021122100): TARGET_DIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
++ getdump.sh[12](2021122100): DUMP_SUFFIX=
++ getdump.sh[15](2021122100): '[' '!' -s /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos ']'
++ getdump.sh[22](2021122100): '[' '!' -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs ']'
+++ getdump.sh[26](2021122100): echo 2021122100
+++ getdump.sh[26](2021122100): cut -c 9-10
++ getdump.sh[26](2021122100): cyc=00
++ getdump.sh[27](2021122100): prefix=gfs.t00z.
++ getdump.sh[31](2021122100): cd /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos
++ getdump.sh[32](2021122100): '[' -s gfs.t00z.updated.status.tm00.bufr_d ']'
+++ getdump.sh[33](2021122100): ls gfs.t00z.1bamua.tm00.bufr_d gfs.t00z.1bhrs4.tm00.bufr_d gfs.t00z.1bmhs.tm00.bufr_d gfs.t00z.adpsfc.tm00.bufr_d gfs.t00z.adpupa.tm00.bufr_d gfs.t00z.ahicsr.tm00.bufr_d gfs.t00z.aircar.tm00.bufr_d gfs.t00z.aircft.tm00.bufr_d gfs.t00z.airsev.tm00.bufr_d gfs.t00z.ascatt.tm00.bufr_d gfs.t00z.ascatw.tm00.bufr_d gfs.t00z.atmsdb.tm00.bufr_d gfs.t00z.atms.tm00.bufr_d gfs.t00z.avcsam.tm00.bufr_d gfs.t00z.avcspm.tm00.bufr_d gfs.t00z.bathy.tm00.bufr_d gfs.t00z.crisf4.tm00.bufr_d gfs.t00z.crsfdb.tm00.bufr_d gfs.t00z.dump_alert_flag.tm00 gfs.t00z.engicegrb gfs.t00z.esamua.tm00.bufr_d gfs.t00z.esatms.tm00.bufr_d gfs.t00z.eshrs3.tm00.bufr_d gfs.t00z.esiasi.tm00.bufr_d gfs.t00z.esmhs.tm00.bufr_d gfs.t00z.geoimr.tm00.bufr_d gfs.t00z.gome.tm00.bufr_d gfs.t00z.gpsipw.tm00.bufr_d gfs.t00z.gpsro.tm00.bufr_d gfs.t00z.gsrasr.tm00.bufr_d gfs.t00z.gsrcsr.tm00.bufr_d gfs.t00z.hdob.tm00.bufr_d gfs.t00z.iasidb.tm00.bufr_d gfs.t00z.imssnow96.asc gfs.t00z.imssnow96.grib2 gfs.t00z.mtiasi.tm00.bufr_d gfs.t00z.NPR.SNWN.SP.S1200.MESH16.grb gfs.t00z.NPR.SNWS.SP.S1200.MESH16.grb gfs.t00z.nsstbufr gfs.t00z.omi.tm00.bufr_d gfs.t00z.ompslp.tm00.bufr_d gfs.t00z.ompsn8.tm00.bufr_d gfs.t00z.ompst8.tm00.bufr_d gfs.t00z.osbuv8.tm00.bufr_d gfs.t00z.prepbufr gfs.t00z.prepbufr.acft_profiles gfs.t00z.proflr.tm00.bufr_d gfs.t00z.rassda.tm00.bufr_d gfs.t00z.rtgssthr.grb gfs.t00z.rtgssthr.grib2 gfs.t00z.saphir.tm00.bufr_d gfs.t00z.satwnd.tm00.bufr_d gfs.t00z.seaice.5min.blend.grb gfs.t00z.seaice.5min.grb gfs.t00z.seaice.5min.grib2 gfs.t00z.sevcsr.tm00.bufr_d gfs.t00z.sfcshp.tm00.bufr_d gfs.t00z.sfcsno.tm00.bufr_d gfs.t00z.snocvr_snow.nc4 gfs.t00z.snogrb_t1534.3072.1536 gfs.t00z.ssmisu.tm00.bufr_d gfs.t00z.sstvcw.tm00.bufr_d gfs.t00z.sstvpw.tm00.bufr_d gfs.t00z.status.tm00.bufr_d gfs.t00z.syndata.tcvitals.tm00 gfs.t00z.tesac.tm00.bufr_d gfs.t00z.tideg.tm00.bufr_d gfs.t00z.trkob.tm00.bufr_d gfs.t00z.updated.status.tm00.bufr_d gfs.t00z.vadwnd.tm00.bufr_d gfs.t00z.viirs_n20.2021122100.nc4 gfs.t00z.viirs_npp.2021122100.nc4
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.1bamua.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.1bamua.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.1bhrs4.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.1bhrs4.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.1bmhs.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.1bmhs.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.adpsfc.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.adpsfc.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.adpupa.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.adpupa.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.ahicsr.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.ahicsr.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.aircar.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.aircar.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.aircft.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.aircft.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.airsev.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.airsev.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.ascatt.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.ascatt.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.ascatw.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.ascatw.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.atmsdb.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.atmsdb.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.atms.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.atms.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.avcsam.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.avcsam.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.avcspm.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.avcspm.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.bathy.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.bathy.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.crisf4.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.crisf4.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.crsfdb.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.crsfdb.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.dump_alert_flag.tm00 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.dump_alert_flag.tm00
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.engicegrb /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.engicegrb
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.esamua.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.esamua.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.esatms.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.esatms.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.eshrs3.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.eshrs3.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.esiasi.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.esiasi.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.esmhs.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.esmhs.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.geoimr.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.geoimr.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.gome.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.gome.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.gpsipw.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.gpsipw.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.gpsro.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.gpsro.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.gsrasr.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.gsrasr.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.gsrcsr.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.gsrcsr.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.hdob.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.hdob.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.iasidb.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.iasidb.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.imssnow96.asc /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.imssnow96.asc
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.imssnow96.grib2 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.imssnow96.grib2
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.mtiasi.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.mtiasi.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.NPR.SNWN.SP.S1200.MESH16.grb /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.NPR.SNWN.SP.S1200.MESH16.grb
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.NPR.SNWS.SP.S1200.MESH16.grb /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.NPR.SNWS.SP.S1200.MESH16.grb
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.nsstbufr /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.nsstbufr
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.omi.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.omi.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.ompslp.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.ompslp.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.ompsn8.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.ompsn8.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.ompst8.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.ompst8.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.osbuv8.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.osbuv8.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.prepbufr /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.prepbufr
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.prepbufr.acft_profiles /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.prepbufr.acft_profiles
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.proflr.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.proflr.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.rassda.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.rassda.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.rtgssthr.grb /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.rtgssthr.grb
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.rtgssthr.grib2 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.rtgssthr.grib2
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.saphir.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.saphir.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.satwnd.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.satwnd.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.seaice.5min.blend.grb /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.seaice.5min.blend.grb
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.seaice.5min.grb /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.seaice.5min.grb
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.seaice.5min.grib2 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.seaice.5min.grib2
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.sevcsr.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.sevcsr.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.sfcshp.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.sfcshp.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.sfcsno.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.sfcsno.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.snocvr_snow.nc4 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.snocvr_snow.nc4
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.snogrb_t1534.3072.1536 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.snogrb_t1534.3072.1536
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.ssmisu.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.ssmisu.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.sstvcw.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.sstvcw.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.sstvpw.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.sstvpw.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.status.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.status.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.syndata.tcvitals.tm00 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.syndata.tcvitals.tm00
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.tesac.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.tesac.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.tideg.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.tideg.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.trkob.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.trkob.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.updated.status.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.updated.status.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.vadwnd.tm00.bufr_d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.vadwnd.tm00.bufr_d
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.viirs_n20.2021122100.nc4 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.viirs_n20.2021122100.nc4
++ getdump.sh[33](2021122100): for file in $(ls ${prefix}*)
++ getdump.sh[34](2021122100): /bin/ln -sf /lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.viirs_npp.2021122100.nc4 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.viirs_npp.2021122100.nc4
++ getdump.sh[41](2021122100): exit 0
++ getdump.sh[1](2021122100): postamble getdump.sh 1727196753 0
++ preamble.sh[70](2021122100): set +x
+End getdump.sh at 16:52:34 with error code 0 (time elapsed: 00:00:01)
++ prep.sh[44]: status=0
++ prep.sh[45]: [[ 0 -ne 0 ]]
++ prep.sh[48]: [[ ! -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18/obs/gdas.t18z.updated.status.tm00.bufr_d ]]
+++ prep.sh[54]: find /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs -xtype l
+++ prep.sh[54]: wc -l
++ prep.sh[54]: [[ 0 -ge 1 ]]
+++ prep.sh[55]: find /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18/obs -xtype l
+++ prep.sh[55]: wc -l
++ prep.sh[55]: [[ 0 -ge 1 ]]
++ prep.sh[66]: [[ NO = \Y\E\S ]]
++ prep.sh[84]: [[ YES = \N\O ]]
++ prep.sh[90]: [[ YES = \Y\E\S ]]
++ prep.sh[91]: [[ YES = \Y\E\S ]]
++ prep.sh[92]: rm -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.prepbufr
++ prep.sh[93]: rm -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.prepbufr.acft_profiles
++ prep.sh[94]: rm -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.nsstbufr
++ prep.sh[97]: export job=jgfs_prep_00
++ prep.sh[97]: job=jgfs_prep_00
++ prep.sh[98]: export COMIN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
++ prep.sh[98]: COMIN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
++ prep.sh[99]: export COMOUT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
++ prep.sh[99]: COMOUT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
++ prep.sh[100]: RUN=gdas
++ prep.sh[100]: YMD=20211221
++ prep.sh[100]: HH=00
++ prep.sh[100]: declare_from_tmpl -rx COMINgdas:COM_ATMOS_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMINgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211221/00//model/atmos/history
++ prep.sh[101]: RUN=gfs
++ prep.sh[101]: YMD=20211221
++ prep.sh[101]: HH=00
++ prep.sh[101]: declare_from_tmpl -rx COMINgfs:COM_ATMOS_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMINgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00//model/atmos/history
++ prep.sh[102]: [[ YES = \N\O ]]
++ prep.sh[105]: export COMSP=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.
++ prep.sh[105]: COMSP=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.
++ prep.sh[107]: export COMSP=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.
++ prep.sh[107]: COMSP=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.
++ prep.sh[110]: [[ NO = \N\O ]]
++ prep.sh[111]: export MAKE_NSSTBUFR=NO
++ prep.sh[111]: MAKE_NSSTBUFR=NO
++ prep.sh[114]: /lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/jobs/JOBSPROC_GLOBAL_PREP
++ JOBSPROC_GLOBAL_PREP[3]: date -u
+Tue Sep 24 16:52:34 UTC 2024
++ JOBSPROC_GLOBAL_PREP[8]: export DEBUG_LEVEL=1
++ JOBSPROC_GLOBAL_PREP[8]: DEBUG_LEVEL=1
++ JOBSPROC_GLOBAL_PREP[9]: case $DEBUG_LEVEL in
++ JOBSPROC_GLOBAL_PREP[10]: export 'PS4=+ ${SECONDS}s + '
++ JOBSPROC_GLOBAL_PREP[10]: PS4='+ ${SECONDS}s + '
++ 0s + set +x
+
+cyc is 00
+envir is prod
+job is jgfs_prep_00
+DATAROOT is /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100
+
++ 0s + set +x
+
+####################################################################
+
+Current OBSPROC version is v1.1
+GFS version used by this job is v16.3.7
+
+####################################################################
+
++ 0s + set +x
+
+####################################################################
+
+
+Currently Loaded Modules:
+  1) craype-x86-rome     (H)  13) perl/5.32.0        25) met/9.1.3
+  2) libfabric/1.11.0.0. (H)  14) libjpeg/9c         26) metplus/3.1.1
+  3) craype-network-ofi  (H)  15) udunits/2.2.28     27) prepobs/1.1.0
+  4) envvar/1.0               16) gsl/2.7            28) fit2obs/1.1.4
+  5) PrgEnv-intel/8.1.0       17) cdo/1.9.8          29) mos_shared/2.7.2
+  6) craype/2.7.13            18) hdf5/1.10.6        30) module_base.wcoss2
+  7) intel/19.1.3.304         19) netcdf/4.7.4       31) grib_util/1.2.3
+  8) cray-mpich/8.1.9         20) nco/4.7.9          32) g2tmpl/1.10.2
+  9) cray-pals/1.0.17         21) prod_util/2.0.9    33) crtm/2.4.0.1
+ 10) cfp/2.0.4                22) bufr_dump/1.0.0    34) wgrib2/2.0.8
+ 11) python/3.8.6             23) util_shared/1.4.0
+ 12) gempak/7.14.1            24) ncdiag/1.0.0
+
+  Where:
+   H:  Hidden Module
+
+ 
+
+
+####################################################################
+
++ 0s + export obsNET=obsproc
++ 0s + obsNET=obsproc
++ 0s + export NET=gfs
++ 0s + NET=gfs
++ 0s + echo jgfs_prep_00
++ 0s + grep gfs
+jgfs_prep_00
++ 0s + err_gfs=0
++ 0s + echo jgfs_prep_00
++ 0s + grep gdas
++ 0s + err_gdas=1
++ 0s + '[' 0 = 0 ']'
++ 0s + export RUN=gfs
++ 0s + RUN=gfs
++ 0s + set +x
+
+obsNET is obsproc
+NET is gfs
+RUN is gfs
+
++ 0s + export cycle=t00z
++ 0s + cycle=t00z
++ 0s + export tmmark=tm00
++ 0s + tmmark=tm00
++ 0s + jobid=prep.131133
++ 0s + export DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
++ 0s + DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
++ 0s + rm -rf /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
++ 0s + mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
++ 0s + cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
++ 0s + export pgmout=OUTPUT.133333
++ 0s + pgmout=OUTPUT.133333
++ 0s + jlogfile=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/jlogfile
++ 0s + export SENDCOM=YES
++ 0s + SENDCOM=YES
++ 0s + export SENDECF=NO
++ 0s + SENDECF=NO
++ 0s + export SENDDBN=NO
++ 0s + SENDDBN=NO
++ 0s + export HOMEobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0
++ 0s + HOMEobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0
++ 0s + export SCRIPTSobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/scripts
++ 0s + SCRIPTSobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/scripts
++ 0s + export FIXprepobs=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix
++ 0s + FIXprepobs=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix
++ 0s + export USHprepobs=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
++ 0s + USHprepobs=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
++ 0s + export ushscript_prep=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
++ 0s + ushscript_prep=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
++ 0s + export EXECPREP=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec
++ 0s + EXECPREP=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec
++ 0s + export FIXPREP=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix
++ 0s + FIXPREP=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix
++ 0s + export PARMPREP=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm
++ 0s + PARMPREP=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm
++ 0s + export EXECSYND=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec
++ 0s + EXECSYND=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec
++ 0s + export FIXSYND=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix
++ 0s + FIXSYND=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix
++ 0s + export PARMSYND=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm
++ 0s + PARMSYND=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm
++ 0s + export DICTPREP=/decoders/decod_shared/dictionaries_
++ 0s + DICTPREP=/decoders/decod_shared/dictionaries_
++ 0s + export HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow
++ 0s + HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow
++ 0s + echo 'step ############# break ##############################'
++ 0s + cp /apps/ops/prod/nco/core/prod_util.v2.0.9/ush/err_chk .
++ 0s + chmod +x err_chk
++ 0s + cp /apps/ops/prod/nco/core/prod_util.v2.0.9/ush/err_exit .
++ 0s + chmod +x err_exit
++ 0s + cp /apps/ops/prod/nco/core/prod_util.v2.0.9/ush/prep_step .
++ 0s + chmod +x prep_step
++ 0s + cp /apps/ops/prod/nco/core/prod_util.v2.0.9/ush/postmsg .
++ 0s + chmod +x postmsg
++ 0s + cp /apps/ops/prod/nco/core/prod_util.v2.0.9/ush/setpdy.sh .
++ 0s + chmod +x setpdy.sh
++ 0s + ./setpdy.sh
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
++ 0s + . PDY
+++ 0s + export PDYm7=20211214
+++ 0s + PDYm7=20211214
+++ 0s + export PDYm6=20211215
+++ 0s + PDYm6=20211215
+++ 0s + export PDYm5=20211216
+++ 0s + PDYm5=20211216
+++ 0s + export PDYm4=20211217
+++ 0s + PDYm4=20211217
+++ 0s + export PDYm3=20211218
+++ 0s + PDYm3=20211218
+++ 0s + export PDYm2=20211219
+++ 0s + PDYm2=20211219
+++ 0s + export PDYm1=20211220
+++ 0s + PDYm1=20211220
+++ 0s + export PDY=20211221
+++ 0s + PDY=20211221
+++ 0s + export PDYp1=20211222
+++ 0s + PDYp1=20211222
+++ 0s + export PDYp2=20211223
+++ 0s + PDYp2=20211223
+++ 0s + export PDYp3=20211224
+++ 0s + PDYp3=20211224
+++ 0s + export PDYp4=20211225
+++ 0s + PDYp4=20211225
+++ 0s + export PDYp5=20211226
+++ 0s + PDYp5=20211226
+++ 0s + export PDYp6=20211227
+++ 0s + PDYp6=20211227
+++ 0s + export PDYp7=20211228
+++ 0s + PDYp7=20211228
++ 0s + export COMIN_ROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT
++ 0s + COMIN_ROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT
++ 0s + export COMPONENT=atmos
++ 0s + COMPONENT=atmos
++ 0s + [[ emc == nco ]]
++ 0s + export COMIN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
++ 0s + COMIN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
++ 0s + export COMINtcvital=/lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos
++ 0s + COMINtcvital=/lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos
++ 0s + export COMOUT_ROOT=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/com
++ 0s + COMOUT_ROOT=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/com
++ 0s + export COMOUT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
++ 0s + COMOUT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
++ 0s + mkdir -m 755 -p /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
++ 0s + export NEMSIO_IN=.false.
++ 0s + NEMSIO_IN=.false.
++ 0s + export NETCDF_IN=.true.
++ 0s + NETCDF_IN=.true.
++ 0s + export envir_getges=prod
++ 0s + envir_getges=prod
++ 0s + export GETGES_COM=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT
++ 0s + GETGES_COM=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT
++ 0s + export GETGES_NWG=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/nwges
++ 0s + GETGES_NWG=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/nwges
++ 0s + export COMINgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211221/00//model/atmos/history
++ 0s + COMINgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211221/00//model/atmos/history
++ 0s + export COMINgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00//model/atmos/history
++ 0s + COMINgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00//model/atmos/history
++ 0s + export POE=YES
++ 0s + POE=YES
++ 0s + export NSPLIT=12
++ 0s + NSPLIT=12
++ 0s + export 'BUFRLIST=uprair proflr aircar aircft satwnd adpupa adpsfc  sfcshp vadwnd wdsatr ascatw rassda gpsipw'
++ 0s + BUFRLIST='uprair proflr aircar aircft satwnd adpupa adpsfc  sfcshp vadwnd wdsatr ascatw rassda gpsipw'
++ 0s + export errPREPDATA_limit=4
++ 0s + errPREPDATA_limit=4
++ 0s + export SYNDATA=YES
++ 0s + SYNDATA=YES
++ 0s + export PREPACQC=YES
++ 0s + PREPACQC=YES
++ 0s + export PROCESS_ACQC=YES
++ 0s + PROCESS_ACQC=YES
++ 0s + export PROCESS_ACPF=NO
++ 0s + PROCESS_ACPF=NO
++ 0s + export PROFCQC=YES
++ 0s + PROFCQC=YES
++ 0s + export CQCVAD=YES
++ 0s + CQCVAD=YES
++ 0s + export CQCBUFR=YES
++ 0s + CQCBUFR=YES
++ 0s + export OIQCBUFR=NO
++ 0s + OIQCBUFR=NO
++ 0s + export PREPDATA=YES
++ 0s + PREPDATA=YES
++ 0s + export GETGUESS=YES
++ 0s + GETGUESS=YES
++ 0s + export DO_QC=YES
++ 0s + DO_QC=YES
++ 0s + export PROCESS_UNBLKBUFR=NO
++ 0s + PROCESS_UNBLKBUFR=NO
++ 0s + env
+envir=prod
+UDUNITS_LIBDIR=/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/lib
+FRAC_GRID=.true.
+waveGRD=uglo_100km
+CRAY_LMOD_MPI=cray-mpich/8.0
+G2TMPL_LIB=/apps/ops/para/libs/intel/19.1.3.304/g2tmpl/1.10.2/lib/libg2tmpl.a
+LMOD_FAMILY_CRAYPE_NETWORK_VERSION=false
+INCVARS_ZERO_STRAT='sphum_inc','liq_wat_inc','icmr_inc','rwmr_inc','snmr_inc','grle_inc'
+COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow
+PBS_ENVIRONMENT=PBS_BATCH
+intel_ver=19.1.3.304
+OS=Linux
+LD_LIBRARY_PATH=/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/lib:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/lib:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/lib64:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/lib:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib:/pe/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin:/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/lib/release:/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/lib:/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp/lib/intel64:/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin:/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb/lib/intel64/gcc4.8:/pe/intel/debugger_2020/python/intel64/lib:/pe/intel/debugger_2020/libipt/intel64/lib:/opt/cray/libfabric/1.11.0.0./lib64
+HOSTTYPE=x86_64
+LMOD_CUSTOM_PATHS=CNCM/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4:CNCM/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4:COMPILER/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304:COMPILER/apps/ops/prod/libs/modulefiles/compiler/intel/19.1.3.304:COMPILER/apps/prod/lmodules/intel/19.1.3.304
+SENDDBN_NTC=NO
+COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon
+threads_per_task=1
+PBS_O_LANG=en_US.UTF-8
+COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2
+ROTDIR_DUMP=YES
+SCRIPTSobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/scripts
+GEMDATA=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/data
+util_shared_ver=1.4.0
+_ModuleTable017_=bG9iYWwvZ2l0L3ByZXBvYnMvZ2ZzdjE3X3YxLjEuMC9tb2R1bGVmaWxlcy9wcmVwb2JzLzEuMS4wLmx1YSIsWyJmdWxsTmFtZSJdPSJwcmVwb2JzLzEuMS4wIixbImxvYWRPcmRlciJdPTI3LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InByZXBvYnMvMS4xLjAiLH0scHJvZF91dGlsPXtbImZuIl09Ii9hcHBzL29wcy9wcm9kL25jby9tb2R1bGVmaWxlcy9jb3JlL3Byb2RfdXRpbC8yLjAuOSIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMi4wLjkiLFsibG9hZE9yZGVyIl09MjEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHJvZF91dGlsLzIuMC45Iix9
+COMINnam=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/nam
+DICTPREP=/decoders/decod_shared/dictionaries_
+prepobs_run_ver=1.1.0
+WRITE_DOPOST=.true.
+JPEG_VER=9c
+GETGES_COM=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT
+__LMOD_REF_COUNT_PATH=/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin:1;/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin:1;/apps/ops/para/libs/intel/19.1.3.304/metplus/3.1.1/ush:1;/apps/ops/para/libs/intel/19.1.3.304/met/9.1.3/bin:1;/apps/ops/prod/libs/intel/19.1.3.304/wgrib2/2.0.8/bin:1;/apps/ops/prod/libs/intel/19.1.3.304/cray-mpich/8.1.4/ncdiag/1.0.0/bin:1;/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/ush:1;/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0/ush:1;/apps/ops/prod/libs/intel/19.1.3.304/grib_util/1.2.3/bin:1;/apps/ops/prod/nco/core/prod_util.v2.0.9/ush:1;/apps/prod/nco/4.7.9/intel/19.1.3.304/bin:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/bin:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/cdo/1.9.8/bin:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/bin:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/bin:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/bin:1;/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3/bin:1;/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/bin:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/bin:1;/apps/prod/cfp/2.0.4/intel/19.1.3.304/bin:1;/opt/cray/pe/pals/1.0.17/bin:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/bin/intel64:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/bin:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/bin:1;/pe/intel/debugger_2020/gdb/intel64/bin:1;/opt/cray/pe/craype/2.7.13/bin:1;/opt/cray/libfabric/1.11.0.0./bin:1;/u/terry.mcguinness/bin:2;/usr/local/bin:1;/usr/bin:1;/bin:2;/opt/pbs/bin:1;/sbin:1;.:1;/lfs/h2/emc/global/noscrub/terry.mcguinness/scripts:1;/opt/cray/pe/bin:1;/apps/prod/python-modules/3.8.6/intel/19.1.3.304/bin:1;/apps/prod/python-modules/3.8.6/intel/19.1.3.304/lib/python3.8/site-packages/bin:1;/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/bin:1;/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/ez:1;/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/nawips:1;/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/prnt:1;/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/decoder:1
+GEMNTS=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/nts
+_ModuleTable002_=b2FkT3JkZXIiXT01LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IlByZ0Vudi1pbnRlbC84LjEuMCIsfSxidWZyX2R1bXA9e1siZm4iXT0iL2FwcHMvb3BzL3Byb2QvbmNvL21vZHVsZWZpbGVzL2NvbXBpbGVyL2ludGVsLzE5LjEuMy4zMDQvYnVmcl9kdW1wLzEuMC4wLmx1YSIsWyJmdWxsTmFtZSJdPSJidWZyX2R1bXAvMS4wLjAiLFsibG9hZE9yZGVyIl09MjIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYnVmcl9kdW1wLzEuMC4wIix9LGNkbz17WyJmbiJdPSIvYXBwcy9wcm9kL2xtb2R1bGVzL0lOVEVMX2NyYXlfbXBpY2gvMTkuMS4zLjMwNC9jcmF5
+RUN=gfs
+NCO_SRC=/apps/prod/nco/4.7.9/intel/19.1.3.304/src
+BULL2SEQ=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/bull2seq
+INCLUDE=/apps/prod/nco/4.7.9/intel/19.1.3.304/include:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/include:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include
+LESSCLOSE=lessclose.sh %s %s
+CRAY_LD_LIBRARY_PATH=/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0/lib
+ARCH_WARMICFREQ=4
+__LMOD_REF_COUNT_DYLD_LIBRARY_PATH=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/lib:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/lib:1
+CRTM_FIX=/apps/ops/para/libs/intel/19.1.3.304/crtm/2.4.0.1/fix
+sys_tp=wcoss2
+XKEYSYMDB=/usr/X11R6/lib/X11/XKeysymDB
+COM_RTOFS_TMPL=${DMPDIR}
+PE_ENV=INTEL
+CWORDSH=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/cwordsh
+COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}
+__LMOD_REF_COUNT_C_INCLUDE_PATH=/apps/prod/nco/4.7.9/intel/19.1.3.304/include:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/include:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include:1
+__LMOD_REF_COUNT_PE_FORTRAN_PKGCONFIG_LIBS=mpichf90:1
+LMOD_FAMILY_CRAYPE_CPU=craype-x86-rome
+NUM_SND_COLLECTIVES=9
+CRAY_LMOD_COMPILER=intel/19.0
+LMOD_MODULERCFILE=/apps/prod/lmodules/.modulerc.lua
+PSLOT=C96_atm3DVar_extended_fcbb6494
+QUEUE=dev
+DOIAU=YES
+GEMPARM=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/parm
+PE_PRODUCT_LIST=CRAYPE:CRAYPE_X86_ROME
+PACKAGEROOT=/lfs/h1/ops/prod/packages
+LMOD_IGNORE_CACHE=yes
+NDATE=/apps/ops/prod/nco/core/prod_util.v2.0.9/exec/ndate
+LMOD_FAMILY_MPI_VERSION=8.1.9
+COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart
+libjpeg_ver=9c
+FHOUT_ICE=3
+PE_PERFTOOLS_MPICH_LIBDIR=/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0/lib
+ARCH_CYC=00
+PE_MPICH_GTL_DIR_amd_gfx906=-L/opt/cray/pe/mpich/8.1.9/gtl/lib
+LANG=en_US.UTF-8
+EUPD_CYC=gdas
+TZ=UTC
+NetCDF_VERSION=4.7.4
+crtm_VERSION=2.4.0.1
+_ModuleTable019_=dXRpbF9zaGFyZWQ9e1siZm4iXT0iL2FwcHMvb3BzL3Byb2QvbmNvL21vZHVsZWZpbGVzL2NvbXBpbGVyL2ludGVsLzE5LjEuMy4zMDQvdXRpbF9zaGFyZWQvMS40LjAiLFsiZnVsbE5hbWUiXT0idXRpbF9zaGFyZWQvMS40LjAiLFsibG9hZE9yZGVyIl09MjMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0idXRpbF9zaGFyZWQvMS40LjAiLH0sd2dyaWIyPXtbImZuIl09Ii9hcHBzL29wcy9wYXJhL2xpYnMvbW9kdWxlZmlsZXMvY29tcGlsZXIvaW50ZWwvMTkuMS4zLjMwNC93Z3JpYjIvMi4wLjgubHVhIixbImZ1bGxOYW1lIl09IndncmliMi8yLjAuOCIsWyJsb2FkT3JkZXIiXT0zNCxwcm9wVD17fSxbInN0YWNrRGVw
+EXECcfs=/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/exec
+cray_pals_ver=1.0.17
+PE_MPICH_GTL_DIR_amd_gfx908=-L/opt/cray/pe/mpich/8.1.9/gtl/lib
+COMLOGSROOT=/lfs/h1/ops/prod/com
+imp_physics=8
+WINDOWMANAGER=xterm
+METPLUS_ROOT=/apps/ops/para/libs/intel/19.1.3.304/metplus/3.1.1
+QUEUE_SERVICE=dev_transfer
+_ModuleTable008_=IixbImxvYWRPcmRlciJdPTI4LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImZpdDJvYnMvMS4xLjQiLH0sZzJ0bXBsPXtbImZuIl09Ii9hcHBzL29wcy9wYXJhL2xpYnMvbW9kdWxlZmlsZXMvY29tcGlsZXIvaW50ZWwvMTkuMS4zLjMwNC9nMnRtcGwvMS4xMC4yLmx1YSIsWyJmdWxsTmFtZSJdPSJnMnRtcGwvMS4xMC4yIixbImxvYWRPcmRlciJdPTMyLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImcydG1wbC8xLjEwLjIiLH0sZ2VtcGFrPXtbImZuIl09Ii9hcHBzL29wcy9wcm9kL25jby9tb2R1bGVmaWxlcy9jb21waWxlci9pbnRlbC8xOS4xLjMuMzA0
+COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf
+LESS=-M -I -R
+UDUNITS_LIB=/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/lib/libudunits2.a
+PE_MPICH_GTL_LIBS_nvidia70=-lmpi_gtl_cuda
+jlogfile=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/jlogfile
+COM_OBS=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
+__LMOD_REF_COUNT_INTEL_LICENSE_FILE=/pe/intel/compilers_and_libraries_2020.4.304/linux/licenses:1;/opt/intel/licenses:1;/intel/licenses:1
+SMOOTH_ENKF=NO
+HISTTIMEFORMAT=%F %T 
+LMOD_FAMILY_COMPILER_VERSION=19.1.3.304
+COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2
+IAU_DELTHRS_ENKF=6
+MET_BASE=/apps/ops/para/libs/intel/19.1.3.304/met/9.1.3/share/met
+cyc=00
+HOSTNAME=nid001211
+version=v16.3.7
+IPPROOT=/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp
+LMOD_SYSTEM_DEFAULT_MODULES=envvar/1.0
+gsl_ver=2.7
+OLDPWD=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
+COMINgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00//model/atmos/history
+NADATA1=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/data
+COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart
+MEL_BUFR_TABLES=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/tables/melbufr
+COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart
+PBS_O_HOME=/u/terry.mcguinness
+NADATA2=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/data
+SENDSDM=NO
+COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr
+__LMOD_REF_COUNT__LMFILES_=/opt/cray/pe/lmod/modulefiles/craype-targets/default/craype-x86-rome.lua:1;/opt/cray/modulefiles/libfabric/1.11.0.0.:1;/opt/cray/pe/lmod/modulefiles/craype-targets/default/craype-network-ofi.lua:1;/apps/prod/lmodules/sys_core/envvar/1.0:1;/opt/cray/pe/lmod/modulefiles/core/PrgEnv-intel/8.1.0.lua:1;/opt/cray/pe/lmod/modulefiles/core/craype/2.7.13.lua:1;/apps/prod/lmodules/core/intel/19.1.3.304.lua:1;/opt/cray/pe/lmod/modulefiles/comnet/intel/19.0/ofi/1.0/cray-mpich/8.1.9.lua:1;/opt/cray/pe/lmod/modulefiles/core/cray-pals/1.0.17.lua:1;/apps/prod/lmodules/core/cfp/2.0.4:1;/apps/prod/lmodules/intel/19.1.3.304/python/3.8.6:1;/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304/gempak/7.14.1:1;/apps/prod/lmodules/intel/19.1.3.304/perl/5.32.0:1;/apps/prod/lmodules/intel/19.1.3.304/libjpeg/9c:1;/apps/prod/lmodules/intel/19.1.3.304/udunits/2.2.28:1;/apps/prod/lmodules/intel/19.1.3.304/gsl/2.7:1;/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4/cdo/1.9.8.lua:1;/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4/hdf5/1.10.6.lua:1;/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4/netcdf/4.7.4.lua:1;/apps/prod/lmodules/intel/19.1.3.304/nco/4.7.9:1;/apps/ops/prod/nco/modulefiles/core/prod_util/2.0.9:1;/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304/bufr_dump/1.0.0.lua:1;/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304/util_shared/1.4.0:1;/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4/ncdiag/1.0.0.lua:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/met/9.1.3.lua:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/metplus/3.1.1.lua:1;/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/modulefiles/prepobs/1.1.0.lua:1;/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/modulefiles/fit2obs/1.1.4.lua:1;/apps/ops/prod/nco/models/modulefiles/mos_shared/2.7.2:1;/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/modulefiles/module_base.wcoss2.lua:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/grib_util/1.2.3.lua:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/g2tmpl/1.10.2.lua:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/crtm/2.4.0.1.lua:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/wgrib2/2.0.8.lua:1
+NMEM_ENS_GFS_OFFSET=20
+CONFIG_SITE=/usr/share/site/x86_64-unknown-linux-gnu
+libpng_ver=1.6.37
+CSHEDIT=emacs
+NETCDF_ROOT=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4
+C_INCLUDE_PATH=/apps/prod/nco/4.7.9/intel/19.1.3.304/include:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/include:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include
+HDF5_ROOT=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6
+CHGRP_CMD=chgrp rstprod
+DO_ICE=NO
+DO_FIT2OBS=YES
+met_ver=9.1.3
+DO_NEST=NO
+ncdiag_VERSION=1.0.0
+LMOD_CUSTOM_CNCM_INTEL_19_0_UCX_1_0_X86_ROME_1_0_CRAY_MPICH_8_0_PREFIX=/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4:/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4
+NAWIPS_HELP=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/help
+NETCDF_VERSION=4.7.4
+GETGES_NWG=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/nwges
+PBS_JOBID=156168779.cbqs01
+LMOD_CUSTOM_COMPILER_GNU_8_0_PREFIX=/apps/prod/lmodules/gcc/11.2.0:/apps/prod/lmodules/gcc/10.2.0
+ENVIRONMENT=BATCH
+GPG_TTY=not a tty
+PrgEnv_intel_ver=8.1.0
+LESS_ADVANCED_PREPROCESSOR=no
+PARMgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/parm
+COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep
+HDF5_LIBRARIES=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/lib
+GEMPTXT=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/txt/programs
+OS_INC=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/include
+BASE_ENV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/env
+NLN=/bin/ln -sf
+nst_anl=.true.
+COLORTERM=1
+ukmet_ver=v2.2
+USHbufr_dump=/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0/ush
+job=jgfs_prep_00
+RESERVATION=
+err_gdas=1
+LIBJPEG_ROOT=/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z
+PBS_JOBNAME=C96_atm3DVar_extended_fcbb6494_gfsprep_00
+gfs_cyc=4
+COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history
+UDUNITS_INC=/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include
+NCPUS=1
+_ModuleTable007_=Il09MzMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iY3J0bS8yLjQuMC4xIix9LGVudnZhcj17WyJmbiJdPSIvYXBwcy9wcm9kL2xtb2R1bGVzL3N5c19jb3JlL2VudnZhci8xLjAiLFsiZnVsbE5hbWUiXT0iZW52dmFyLzEuMCIsWyJsb2FkT3JkZXIiXT00LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImVudnZhci8xLjAiLH0sZml0Mm9icz17WyJmbiJdPSIvbGZzL2gyL2VtYy9nbG9iYWwvc2F2ZS9lbWMuZ2xvYmFsL2dpdC9GaXQyT2JzL3YxLjEuNC9tb2R1bGVmaWxlcy9maXQyb2JzLzEuMS40Lmx1YSIsWyJmdWxsTmFtZSJdPSJmaXQyb2JzLzEuMS40
+SUPVIT=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/supvit
+OIQCBUFR=NO
+PARMPREP=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm
+ntasks=4
+max_tasks_per_node=128
+USE_CFP=YES
+EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/EXPDIR/C96_atm3DVar_extended_fcbb6494
+OUTPUT_GRID=gaussian_grid
+__LMOD_REF_COUNT_NLSPATH=/pe/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64/locale/%l_%t/%N:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/locale/%l_%t/%N:1;/pe/intel/debugger_2020/gdb/intel64/share/locale/%l_%t/%N:1
+PARMcode=/apps/ops/prod/nco/models/mos_shared.v2.7.2/parm
+USHprepobs=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
+COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi
+EXECmos_shared=/apps/ops/prod/nco/models/mos_shared.v2.7.2/exec
+FHMIN=0
+launcher_PREP=mpiexec
+__LMOD_REF_COUNT_CPLUS_INCLUDE_PATH=/apps/prod/nco/4.7.9/intel/19.1.3.304/include:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/include:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include:1
+LMOD_FAMILY_CRAYPE_NETWORK=craype-network-ofi
+VERBOSE=YES
+TOCGRIB=/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/tocgrib
+SENDCOM=YES
+LMOD_FAMILY_CRAYPE_VERSION=2.7.13
+NHOUR=/apps/ops/prod/nco/core/prod_util.v2.0.9/exec/nhour
+NetCDF_INCLUDES=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/include
+FHMAX_GFS=384
+NCO_LIBDIR=/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64
+COMOUT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
+DYLD_LIBRARY_PATH=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/lib:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/lib
+__LMOD_REF_COUNT_INCLUDE=/apps/prod/nco/4.7.9/intel/19.1.3.304/include:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/include:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include:1
+memory=480GB
+MACHTYPE=x86_64-suse-linux
+DUMPJB=/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0/ush/dumpjb
+FIXreg2grb2=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/reg2grb2
+__LMOD_REF_COUNT_LD_LIBRARY_PATH=/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/lib:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/lib:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/lib64:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/lib:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/lib/release:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/lib:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp/lib/intel64:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb/lib/intel64/gcc4.8:1;/pe/intel/debugger_2020/python/intel64/lib:1;/pe/intel/debugger_2020/libipt/intel64/lib:1;/opt/cray/libfabric/1.11.0.0./lib64:1
+COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak
+CQCVAD=YES
+EDATE=2021122118
+__LMOD_REF_COUNT_PKG_CONFIG_PATH=/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/lib64/pkgconfig:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib/pkgconfig:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib/pkgconfig:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/bin/pkgconfig:1;/opt/cray/pe/craype/2.7.13/pkg-config:1;/opt/cray/libfabric/1.11.0.0./lib64/pkgconfig:1
+ATARDIR=/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C96_atm3DVar_extended_fcbb6494
+PBS_O_PATH=/apps/ops/test/nco/core/rocoto.v1.3.5/bin:/opt/cray/libfabric/1.11.0.0./bin:/u/terry.mcguinness/bin:/usr/local/bin:/usr/bin:/bin:/opt/pbs/bin:/sbin:.:/lfs/h2/emc/global/noscrub/terry.mcguinness/scripts
+LMOD_CUSTOM_CNCM_CRAYCLANG_10_0_UCX_1_0_PREFIX=/apps/prod/lmodules/cce/13.0.0:/apps/prod/lmodules/cce/12.0.3:/apps/prod/lmodules/cce/11.0.4
+DO_JEDIOCNVAR=NO
+WEBTITLE=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/webtitle
+PREPDATA=YES
+UTILROOT=/apps/ops/prod/nco/core/prod_util.v2.0.9
+_ModuleTable024_=aGFyZS9tb2R1bGVmaWxlcy9Db3JlOi91c3Ivc2hhcmUvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L29wdC9jcmF5L3BlL2xtb2QvbW9kdWxlZmlsZXMvY29yZTovb3B0L2NyYXkvcGUvbG1vZC9tb2R1bGVmaWxlcy9jcmF5cGUtdGFyZ2V0cy9kZWZhdWx0Oi9hcHBzL3Byb2QvbG1vZHVsZXMvc3lzX2NvcmU6L2FwcHMvb3BzL3Byb2QvbmNvL21vZHVsZWZpbGVzL2NvcmU6L2FwcHMvcHJvZC9sbW9kdWxlcy9jb3JlOi9vcHQvY3JheS9tb2R1bGVmaWxlcyIsfQ==
+udunits_ver=2.2.28
+mos_shared_ver=2.7.2
+err_gfs=0
+nco_ver=4.7.9
+PE_PKGCONFIG_PRODUCTS=PE_MPICH
+_ModuleTable015_=Lmx1YSIsWyJmdWxsTmFtZSJdPSJuY2RpYWcvMS4wLjAiLFsibG9hZE9yZGVyIl09MjQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibmNkaWFnLzEuMC4wIix9LG5jbz17WyJmbiJdPSIvYXBwcy9wcm9kL2xtb2R1bGVzL2ludGVsLzE5LjEuMy4zMDQvbmNvLzQuNy45IixbImZ1bGxOYW1lIl09Im5jby80LjcuOSIsWyJsb2FkT3JkZXIiXT0yMCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJuY28vNC43LjkiLH0sbmV0Y2RmPXtbImZuIl09Ii9hcHBzL3Byb2QvbG1vZHVsZXMvSU5URUxfY3JheV9tcGljaC8xOS4xLjMuMzA0L2NyYXktbXBpY2gvOC4xLjQv
+NAWIPS_TABLE=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/tables
+COMOUT_ROOT=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/com
+ASCII2SHP=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/ascii2shp
+CRAY_MPICH_BASEDIR=/opt/cray/pe/mpich/8.1.9/ofi
+OS_LIB=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/lib
+PE_MPICH_GTL_DIR_nvidia80=-L/opt/cray/pe/mpich/8.1.9/gtl/lib
+TOCGRIB2SUPER=/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/tocgrib2super
+_ModuleTable004_=LjAvY3JheS1tcGljaC84LjEuOS5sdWEiLFsiZnVsbE5hbWUiXT0iY3JheS1tcGljaC84LjEuOSIsWyJsb2FkT3JkZXIiXT04LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNyYXktbXBpY2gvOC4xLjkiLH0sWyJjcmF5LXBhbHMiXT17WyJmbiJdPSIvb3B0L2NyYXkvcGUvbG1vZC9tb2R1bGVmaWxlcy9jb3JlL2NyYXktcGFscy8xLjAuMTcubHVhIixbImZ1bGxOYW1lIl09ImNyYXktcGFscy8xLjAuMTciLFsibG9hZE9yZGVyIl09OSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJjcmF5LXBhbHMvMS4wLjE3Iix9LGNyYXlwZT17WyJmbiJdPSIvb3B0L2Ny
+FIXorog=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/orog
+FIXcfs=/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/fix
+COMINtcvital=/lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos
+PROCESS_ACQC=YES
+MINICOM=-c on
+FNTSFA=        
+HDF5_INCLUDES=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/include
+__LMOD_REF_COUNT_PYTHONPATH=/apps/ops/prod/nco/core/prod_util.v2.0.9/ush:1;/apps/prod/python-modules/3.8.6/intel/19.1.3.304/lib/python3.8/site-packages:1
+pgmout=OUTPUT.133333
+PARMshared=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/parm
+FHOUT_WAV=3
+FHOUT=3
+PARMmos_shared=/apps/ops/prod/nco/models/mos_shared.v2.7.2/parm
+DO_AWIPS=NO
+PE_MPICH_PKGCONFIG_VARIABLES=PE_MPICH_GTL_DIR_@accelerator@:PE_MPICH_GTL_LIBS_@accelerator@
+PARTITION_SERVICE=
+PE_MPICH_PKGCONFIG_LIBS=mpich
+INTEL_PYTHONHOME=/pe/intel/debugger_2020/python/intel64/
+FHOUT_OCN_GFS=6
+QT_SYSTEM_DIR=/usr/share/desktop-data
+QUILTING=.true.
+OSTYPE=linux
+launcher=mpiexec -l
+FHOUT_GFS=3
+HOMEcode=/apps/ops/prod/nco/models/mos_shared.v2.7.2
+NETCDF=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4
+FIXlut=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/lut
+CLASSPATH=/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/lib/mpi.jar
+NMEM_ENS=0
+COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice
+HOMEmos_shared=/apps/ops/prod/nco/models/mos_shared.v2.7.2
+FIXcpl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/cpl
+FIXugwd=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/ugwd
+lwrite4danl=.true.
+GRIB2GRIB=/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/grib2grib
+SDATE=2021122018
+FIXmos_shared=/apps/ops/prod/nco/models/mos_shared.v2.7.2/fix
+PBS_O_WORKDIR=/u/terry.mcguinness
+USER=terry.mcguinness
+OS_BIN=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/bin
+MODULES_SET_SHELL_STARTUP=0
+DMPDIR=/lfs/h2/emc/dump/noscrub/dump
+PAGER=less
+ARCH_FCSTICFREQ=1
+FIXmom=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/mom6
+METPLUS_VERSION=3.1.1
+MODULE_VERSION=3.2.10
+NetCDF_ROOT=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4
+PE_MPICH_GENCOMPILERS_INTEL=19.0
+crtm_ROOT=/apps/ops/para/libs/intel/19.1.3.304/crtm/2.4.0.1
+LMOD_CUSTOM_CNCM_GNU_8_0_OFI_1_0_X86_ROME_1_0_CRAY_MPICH_8_0_PREFIX=/apps/prod/lmodules/GCC_cray_mpich/10.2.0/cray-mpich/8.1.4
+NMEM_ENS_GFS=30
+LMOD_FAMILY_PRGENV_VERSION=8.1.0
+_ModuleTable023_=bGVmaWxlcy9jb3JlIiwiL29wdC9jcmF5L3BlL2xtb2QvbW9kdWxlZmlsZXMvY3JheXBlLXRhcmdldHMvZGVmYXVsdCIsIi9hcHBzL3Byb2QvbG1vZHVsZXMvc3lzX2NvcmUiLCIvYXBwcy9vcHMvcHJvZC9uY28vbW9kdWxlZmlsZXMvY29yZSIsIi9hcHBzL3Byb2QvbG1vZHVsZXMvY29yZSIsIi9vcHQvY3JheS9tb2R1bGVmaWxlcyIsIi9hcHBzL29wcy9wcm9kL25jby9tb2RlbHMvbW9kdWxlZmlsZXMiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3Vzci9zaGFyZS9tb2R1bGVzOi91c3Ivc2hhcmUvTW9kdWxlcy8kTU9EVUxFX1ZFUlNJT04vbW9kdWxlZmlsZXM6L3Vzci9zaGFyZS9tb2R1bGVzL21vZHVsZWZpbGVzOi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMvTGludXg6L3Vzci9z
+NPRINTER=
+_ModuleTable012_=ZXMvaW50ZWwvMTkuMS4zLjMwNC9saWJqcGVnLzljIixbImZ1bGxOYW1lIl09ImxpYmpwZWcvOWMiLFsibG9hZE9yZGVyIl09MTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibGlianBlZy85YyIsfSxtZXQ9e1siZm4iXT0iL2FwcHMvb3BzL3BhcmEvbGlicy9tb2R1bGVmaWxlcy9jb21waWxlci9pbnRlbC8xOS4xLjMuMzA0L21ldC85LjEuMy5sdWEiLFsiZnVsbE5hbWUiXT0ibWV0LzkuMS4zIixbImxvYWRPcmRlciJdPTI1LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im1ldC85LjEuMyIsfSxtZXRwbHVzPXtbImZuIl09Ii9hcHBzL29wcy9wYXJhL2xp
+COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix
+NAWIPS=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips
+FHMAX=9
+COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history
+LMOD_CUSTOM_CNCM_GNU_8_0_UCX_1_0_X86_ROME_1_0_CRAY_MPICH_8_0_PREFIX=/apps/prod/lmodules/GCC_cray_mpich/10.2.0/cray-mpich/8.1.4
+DO_QC=YES
+CRAY_CPU_TARGET=x86-rome
+DEGRIB2=/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/degrib2
+WGRIB=/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/wgrib
+PBS_NODEFILE=/var/spool/pbs/aux/156168779.cbqs01
+OS_ROOT=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64
+UDUNITS_SRC=/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/src
+LMOD_CUSTOM_CNCM_CRAYCLANG_10_0_UCX_1_0_X86_ROME_1_0_CRAY_MPICH_8_0_PREFIX=/apps/prod/lmodules/CCE_cray_mpich/11.0.4/cray-mpich/8.1.4
+__LMOD_REF_COUNT_MODULEPATH=/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/modulefiles:1;/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/modulefiles:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304:1;/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4:1;/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4:1;/opt/cray/pe/lmod/modulefiles/mpi/intel/19.0/ofi/1.0/cray-mpich/8.0:1;/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304:1;/apps/ops/prod/libs/modulefiles/compiler/intel/19.1.3.304:1;/apps/prod/lmodules/intel/19.1.3.304:1;/opt/cray/pe/lmod/modulefiles/comnet/intel/19.0/ofi/1.0:1;/apps/prod/lmodules/compiler/intel/19.0:1;/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/modulefiles:1;/opt/cray/pe/lmod/modulefiles/net/ofi/1.0:1;/opt/cray/pe/lmod/modulefiles/cpu/x86-rome/1.0:1;/usr/share/modules:1;/usr/share/Modules/$MODULE_VERSION/modulefiles:1;/usr/share/modules/modulefiles:1;/usr/share/modulefiles/Linux:1;/usr/share/modulefiles/Core:1;/usr/share/lmod/lmod/modulefiles/Core:1;/opt/cray/pe/lmod/modulefiles/core:1;/opt/cray/pe/lmod/modulefiles/craype-targets/default:1;/apps/prod/lmodules/sys_core:1;/apps/ops/prod/nco/modulefiles/core:1;/apps/prod/lmodules/core:1;/opt/cray/modulefiles:1;/apps/ops/prod/nco/models/modulefiles:1
+NCO_LDFLAGS_C=-L/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64 -lnco
+PKGCONFIG_ENABLED=1
+GRB2INDEX=/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/grb2index
+MORE=-sl
+BUFRFLAGS=-DNO_MSG_IPC -ansi -O
+PE_FORTRAN_PKGCONFIG_LIBS=mpichf90
+__LMOD_REF_COUNT_LOADEDMODULES=craype-x86-rome:1;libfabric/1.11.0.0.:1;craype-network-ofi:1;envvar/1.0:1;PrgEnv-intel/8.1.0:1;craype/2.7.13:1;intel/19.1.3.304:1;cray-mpich/8.1.9:1;cray-pals/1.0.17:1;cfp/2.0.4:1;python/3.8.6:1;gempak/7.14.1:1;perl/5.32.0:1;libjpeg/9c:1;udunits/2.2.28:1;gsl/2.7:1;cdo/1.9.8:1;hdf5/1.10.6:1;netcdf/4.7.4:1;nco/4.7.9:1;prod_util/2.0.9:1;bufr_dump/1.0.0:1;util_shared/1.4.0:1;ncdiag/1.0.0:1;met/9.1.3:1;metplus/3.1.1:1;prepobs/1.1.0:1;fit2obs/1.1.4:1;mos_shared/2.7.2:1;module_base.wcoss2:1;grib_util/1.2.3:1;g2tmpl/1.10.2:1;crtm/2.4.0.1:1;wgrib2/2.0.8:1
+PBS_TASKNUM=1
+__LMOD_REF_COUNT_CRAY_LD_LIBRARY_PATH=/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0/lib:1
+FIXprepobs=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix
+COM_OBS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/obs
+COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos
+COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo
+DO_CALC_INCREMENT_ENKF_GFS=NO
+DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
+USHfit2obs=/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/ush
+G2TMPL_INC=/apps/ops/para/libs/intel/19.1.3.304/g2tmpl/1.10.2/include
+INTEL_MAJOR_VERSION=19.1
+IAUFHRS=6,
+COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master
+OPS_RES=C768
+PWD=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
+MDATE=/apps/ops/prod/nco/core/prod_util.v2.0.9/exec/mdate
+GEMMAPS=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/maps
+WGRIB2_LIB=/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/lib/libwgrib2.a
+XUSERFILESEARCHPATH=./%N:/u/terry.mcguinness/%N:/u/terry.mcguinness/Resource/%N:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/resource/%N
+WRITE_NSFLIP=.true.
+NLPDEST=
+PE_MPICH_GTL_DIR_nvidia70=-L/opt/cray/pe/mpich/8.1.9/gtl/lib
+jobid=prep.131133
+COPYGB=/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/copygb
+HOME=/u/terry.mcguinness
+FHMIN_WAV=0
+GEMEXE=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/bin
+HOMEDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness
+MK125FLW=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/mk125flw
+REDOUT=1>
+g2tmpl_ver=1.10.2
+COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history
+NAWIPS_EXE=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/bin
+DO_NPOESS=YES
+PELOCAL_PRGENV=true
+MK125FLS=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/mk125fls
+RUN_ENVIR=emc
+CMAKE_PREFIX_PATH=/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z:/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk
+GEMINC=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/include
+ncdiag_ROOT=/apps/ops/prod/libs/intel/19.1.3.304/cray-mpich/8.1.4/ncdiag/1.0.0
+PARTITION_BATCH=
+UNPMGRB1=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/unpmgrb1
+LPFLAG=-P
+COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart
+HOMEpost=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow
+COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos
+IAU_FHROT=3
+prod_envir_ver=2.0.4
+HOST=nid001211
+DO_VMINMON=YES
+COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice
+obsproc_run_ver=1.2.0
+WGRIB2_INC=/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/include
+grib_util_ROOT=/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3
+LMOD_VERSION=8.3.1
+GEMTBL=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/tables
+tmmark=tm00
+XNLSPATH=/usr/share/X11/nls
+CPATH=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/include:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/include:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include/python3.8:/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp/include:/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/include:/pe/intel/compilers_and_libraries_2020.4.304/linux/pstl/include:/pe/intel/compilers_and_libraries_2020.4.304/linux/pstl/stdlib:/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb/include
+PE_MPICH_FORTRAN_PKGCONFIG_LIBS=mpichf90
+CDATE=2021122100
+PBS_MOMPORT=15003
+COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}
+ARCDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness/archive/C96_atm3DVar_extended_fcbb6494
+pid=131133
+NCO_LIB=/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64
+FCST_SEGMENTS=0,192,384
+restart_interval_enkfgdas=3
+__LMOD_REF_COUNT_INFOPATH=/pe/intel/documentation_2020/en/debugger/gdb-ia/info:1;/apps/docs/info:1
+CRAY_LMOD_CPU=x86-rome/1.0
+PE_MPICH_GTL_LIBS_nvidia80=-lmpi_gtl_cuda
+DO_VERFOZN=YES
+lobsdiag_forenkf=.true.
+grib_util_ver=1.2.3
+LMOD_FAMILY_CRAYPE_CPU_VERSION=false
+UKAUXFLD=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/ukauxfld
+BASH_ENV=/usr/share/lmod/lmod/init/bash
+COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}
+LOGSCRIPT=
+XDG_DATA_DIRS=/usr/share
+COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf
+COPYGB2=/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/copygb2
+assim_freq=6
+LIBJPEG_LIB=/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib/libjpeg.a
+FHMAX_FITS=132
+WAVE_RUN=
+ANOMGB=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/anomgb
+__LMOD_REF_COUNT_PE_MPICH_FORTRAN_PKGCONFIG_LIBS=mpichf90:1
+NCP=/bin/cp -p
+COM_OBSDMP=/lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos
+COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
+DO_JEDISNOWDA=NO
+NCDUMP=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin/ncdump
+AR=ar
+FIXam=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/am
+ROTDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494
+PDY=20211221
+PBS_ACCOUNT=GFS-DEV
+BULLPROI=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/bullproi
+OVERGRIDID=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/overgridid
+HOMEbufr_dump=/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0
+INTEL_MINOR_VERSION=3.304
+DOBNDPNT_WAVE=NO
+LMOD_CUSTOM_CNCM_INTEL_19_0_OFI_1_0_X86_ROME_1_0_CRAY_MPICH_8_0_PREFIX=/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4:/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4
+REPLAY_ICS=NO
+CRAY_LMOD_NET=ofi/1.0
+PROCESS_UNBLKBUFR=NO
+DOIAU_ENKF=YES
+FHMAX_GOES=180
+envir_getges=prod
+__LMOD_REF_COUNT_PE_PKGCONFIG_PRODUCTS=PE_MPICH:1
+BACK=off
+PE_MPICH_MODULE_NAME=cray-mpich
+NLSPATH=/pe/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64/locale/%l_%t/%N:/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/locale/%l_%t/%N:/pe/intel/debugger_2020/gdb/intel64/share/locale/%l_%t/%N
+PBS_JOBCOOKIE=320F0AE8774479041CC71CC238DD7CB5
+LMOD_CUSTOM_COMPILER_INTEL_19_0_PREFIX=/apps/prod/lmodules/intel/19.1.3.304:/apps/ops/prod/libs/modulefiles/compiler/intel/19.1.3.304:/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304
+ACCOUNT=GFS-DEV
+INCLUDES=-I/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/include -I/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/include
+PBS_O_SHELL=/bin/bash -l
+EXECPREP=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec
+DEBUG_LEVEL=1
+HOMEobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0
+__LMOD_REF_COUNT_PE_MPICH_FIXED_PRGENV=INTEL:1
+EXECcode=/apps/ops/prod/nco/models/mos_shared.v2.7.2/exec
+XLIBS=-lXm -lXt -lX11 -lSM -lICE -lXp -lXext -lXmu -lXft -ljpeg -lpng -lz
+__LMOD_REF_COUNT_LIBRARY_PATH=/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/lib64:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/lib:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib:1;/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3/lib:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp/lib/intel64:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb/lib/intel64/gcc4.8:2
+DO_BUFRSND=YES
+COMINukmet=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ukmet
+ushscript_prep=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
+NCO_INCLUDE=-I/apps/prod/nco/4.7.9/intel/19.1.3.304/include
+FHOUT_ICE_GFS=6
+tasks_per_node=2
+HOMEfit2obs=/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4
+COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem
+DO_JEDIATMVAR=NO
+gempak_ver=7.14.1
+DOIBP_WAV=NO
+UDUNITS_VER=2.2.28
+PROFILEREAD=true
+wgrib2_ver=2.0.8
+CDO_ROOT=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/cdo/1.9.8
+DOHYBVAR=NO
+TMPDIR=/var/tmp/pbs.156168779.cbqs01
+PDYp5=20211226
+LIBRARY_PATH=/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/lib64:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/lib:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib:/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3/lib:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib:/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp/lib/intel64:/pe/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin:/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin:/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb/lib/intel64/gcc4.8
+PDYp4=20211225
+PDYp7=20211228
+DO_ATM=YES
+mpmd_opt=--cpu-bind verbose,core cfp
+_ModuleTable021_=LjMuMzA0L2NyYXktbXBpY2gvOC4xLjQiLCIvb3B0L2NyYXkvcGUvbG1vZC9tb2R1bGVmaWxlcy9tcGkvaW50ZWwvMTkuMC9vZmkvMS4wL2NyYXktbXBpY2gvOC4wIiwiL2FwcHMvb3BzL3Byb2QvbmNvL21vZHVsZWZpbGVzL2NvbXBpbGVyL2ludGVsLzE5LjEuMy4zMDQiLCIvYXBwcy9vcHMvcHJvZC9saWJzL21vZHVsZWZpbGVzL2NvbXBpbGVyL2ludGVsLzE5LjEuMy4zMDQiLCIvYXBwcy9wcm9kL2xtb2R1bGVzL2ludGVsLzE5LjEuMy4zMDQiLCIvb3B0L2NyYXkvcGUvbG1vZC9tb2R1bGVmaWxlcy9jb21uZXQvaW50ZWwvMTkuMC9vZmkvMS4wIiwiL2FwcHMvcHJvZC9sbW9kdWxlcy9jb21waWxlci9pbnRlbC8xOS4wIiwiL2xmcy9oMi9lbWMvZ2xvYmFsL25vc2NydWIvZ2xv
+PDYp6=20211227
+PDYp1=20211222
+PDYp3=20211224
+DO_VERFRAD=YES
+__LMOD_REF_COUNT_CMAKE_PREFIX_PATH=/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z:1;/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk:1
+PDYp2=20211223
+REALTIME=YES
+LMOD_sys=Linux
+nam_ver=v4.2
+PE_PKGCONFIG_LIBS=mpich
+_ModuleTable010_=cm9kL2xtb2R1bGVzL2ludGVsLzE5LjEuMy4zMDQvZ3NsLzIuNyIsWyJmdWxsTmFtZSJdPSJnc2wvMi43IixbImxvYWRPcmRlciJdPTE2LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImdzbC8yLjciLH0saGRmNT17WyJmbiJdPSIvYXBwcy9wcm9kL2xtb2R1bGVzL0lOVEVMX2NyYXlfbXBpY2gvMTkuMS4zLjMwNC9jcmF5LW1waWNoLzguMS40L2hkZjUvMS4xMC42Lmx1YSIsWyJmdWxsTmFtZSJdPSJoZGY1LzEuMTAuNiIsWyJsb2FkT3JkZXIiXT0xOCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0yLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJoZGY1Iix9LGludGVsPXtbImZuIl09Ii9hcHBzL3Byb2Qv
+obsproc_ver=v1.1
+cdo_ver=1.9.8
+MAKE_PREPBUFR=YES
+HPSS_PROJECT=emc-global
+GRBINDEX=/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/grbindex
+COMSP=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.
+COMLISTROOT=/lfs/h1/ops/prod/config
+PARMSYND=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm
+IAU_DELTHRS=6
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbIlByZ0VudiJdPSJQcmdFbnYtaW50ZWwiLFsiY29tcGlsZXIiXT0iaW50ZWwiLFsiY3JheXBlIl09ImNyYXlwZSIsWyJjcmF5cGVfY3B1Il09ImNyYXlwZS14ODYtcm9tZSIsWyJjcmF5cGVfbmV0d29yayJdPSJjcmF5cGUtbmV0d29yay1vZmkiLFsibXBpIl09ImNyYXktbXBpY2giLH0sbVQ9e1siUHJnRW52LWludGVsIl09e1siZm4iXT0iL29wdC9jcmF5L3BlL2xtb2QvbW9kdWxlZmlsZXMvY29yZS9QcmdFbnYtaW50ZWwvOC4xLjAubHVhIixbImZ1bGxOYW1lIl09IlByZ0Vudi1pbnRlbC84LjEuMCIsWyJs
+REDERR=2>
+restart_interval_enkfgfs=3
+EXECprepobs=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec
+NEMSIO_IN=.false.
+COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean
+LOADEDMODULES=craype-x86-rome:libfabric/1.11.0.0.:craype-network-ofi:envvar/1.0:PrgEnv-intel/8.1.0:craype/2.7.13:intel/19.1.3.304:cray-mpich/8.1.9:cray-pals/1.0.17:cfp/2.0.4:python/3.8.6:gempak/7.14.1:perl/5.32.0:libjpeg/9c:udunits/2.2.28:gsl/2.7:cdo/1.9.8:hdf5/1.10.6:netcdf/4.7.4:nco/4.7.9:prod_util/2.0.9:bufr_dump/1.0.0:util_shared/1.4.0:ncdiag/1.0.0:met/9.1.3:metplus/3.1.1:prepobs/1.1.0:fit2obs/1.1.4:mos_shared/2.7.2:module_base.wcoss2:grib_util/1.2.3:g2tmpl/1.10.2:crtm/2.4.0.1:wgrib2/2.0.8
+COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history
+FHCYC=24
+LMOD_AVAIL_STYLE=en_grouped:system
+craype_ver=2.7.13
+COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean
+ICERES=500
+CRAYPE_NETWORK_TARGET=ofi
+errPREPDATA_limit=4
+DO_METP=YES
+DO_MOS=NO
+COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim
+OFFSET_START_HOUR=0
+__LMOD_REF_COUNT_ACLOCAL_PATH=/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/share/aclocal:1
+FIXshared=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/fix
+SENDDBN=NO
+TROPCYQCRELOSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/scripts/exglobal_atmos_tropcy_qc_reloc.sh
+__LMOD_REF_COUNT_MANPATH=/apps/ops/para/libs/intel/19.1.3.304/met/9.1.3/share/man:1;/apps/prod/nco/4.7.9/intel/19.1.3.304/share/man:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/share/man:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/share/man:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/share/man:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/share/man:1;/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3/man:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/share/man:1;/apps/prod/cfp/2.0.4/intel/19.1.3.304/man:1;/opt/cray/pe/pals/1.0.17/man:1;/opt/cray/pe/mpich/8.1.9/ofi/man:1;/opt/cray/pe/mpich/8.1.9/man/mpich:1;/pe/intel/man/common:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/man:1;/pe/intel/documentation_2020/en/debugger/gdb-ia/man:1;/opt/cray/pe/craype/2.7.13/man:1;/opt/cray/libfabric/1.11.0.0./share/man:1;/usr/share/lmod/lmod/share/man:1;/usr/share/man:1;/opt/pbs/share/man:1
+_ModuleTable006_=Il09ImNyYXlwZS1uZXR3b3JrLW9maSIsfSxbImNyYXlwZS14ODYtcm9tZSJdPXtbImZuIl09Ii9vcHQvY3JheS9wZS9sbW9kL21vZHVsZWZpbGVzL2NyYXlwZS10YXJnZXRzL2RlZmF1bHQvY3JheXBlLXg4Ni1yb21lLmx1YSIsWyJmdWxsTmFtZSJdPSJjcmF5cGUteDg2LXJvbWUiLFsibG9hZE9yZGVyIl09MSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJjcmF5cGUteDg2LXJvbWUiLH0sY3J0bT17WyJmbiJdPSIvYXBwcy9vcHMvcGFyYS9saWJzL21vZHVsZWZpbGVzL2NvbXBpbGVyL2ludGVsLzE5LjEuMy4zMDQvY3J0bS8yLjQuMC4xLmx1YSIsWyJmdWxsTmFtZSJdPSJjcnRtLzIuNC4wLjEiLFsibG9hZE9yZGVy
+NSPLIT=12
+GEMERR=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/error
+_ModuleTable003_=LW1waWNoLzguMS40L2Nkby8xLjkuOC5sdWEiLFsiZnVsbE5hbWUiXT0iY2RvLzEuOS44IixbImxvYWRPcmRlciJdPTE3LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNkby8xLjkuOCIsfSxjZnA9e1siZm4iXT0iL2FwcHMvcHJvZC9sbW9kdWxlcy9jb3JlL2NmcC8yLjAuNCIsWyJmdWxsTmFtZSJdPSJjZnAvMi4wLjQiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iY2ZwLzIuMC40Iix9LFsiY3JheS1tcGljaCJdPXtbImZuIl09Ii9vcHQvY3JheS9wZS9sbW9kL21vZHVsZWZpbGVzL2NvbW5ldC9pbnRlbC8xOS4wL29maS8x
+LIBJPEG_SRC=/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/src
+INTEL_LICENSE_FILE=/pe/intel/compilers_and_libraries_2020.4.304/linux/licenses:/opt/intel/licenses:/intel/licenses
+LMOD_ROOT=/usr/share/lmod
+machine=WCOSS2
+DO_GOES=YES
+CDO_VERSION=1.9.8
+CLUSTERS=
+COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon
+_ModuleTable022_=YmFsd29ya2Zsb3cuY2kvR0ZTX0NJX1JPT1QvUFIvMjg5NS9nbG9iYWwtd29ya2Zsb3cvbW9kdWxlZmlsZXMiLCIvb3B0L2NyYXkvcGUvbG1vZC9tb2R1bGVmaWxlcy9uZXQvb2ZpLzEuMCIsIi9vcHQvY3JheS9wZS9sbW9kL21vZHVsZWZpbGVzL2NwdS94ODYtcm9tZS8xLjAiLCIvdXNyL3NoYXJlL21vZHVsZXMiLCIvdXNyL3NoYXJlL01vZHVsZXMvJE1PRFVMRV9WRVJTSU9OL21vZHVsZWZpbGVzIiwiL3Vzci9zaGFyZS9tb2R1bGVzL21vZHVsZWZpbGVzIiwiL3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9MaW51eCIsIi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMvQ29yZSIsIi91c3Ivc2hhcmUvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLCIvb3B0L2NyYXkvcGUvbG1vZC9tb2R1
+CQCBUFR=YES
+MET_VERSION=9.1.3
+UDUNITS_ROOT=/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg
+FROM_HEADER=
+CRAY_MPICH_ROOTDIR=/opt/cray/pe/mpich/8.1.9
+_ModuleTable013_=YnMvbW9kdWxlZmlsZXMvY29tcGlsZXIvaW50ZWwvMTkuMS4zLjMwNC9tZXRwbHVzLzMuMS4xLmx1YSIsWyJmdWxsTmFtZSJdPSJtZXRwbHVzLzMuMS4xIixbImxvYWRPcmRlciJdPTI2LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im1ldHBsdXMvMy4xLjEiLH0sWyJtb2R1bGVfYmFzZS53Y29zczIiXT17WyJmbiJdPSIvbGZzL2gyL2VtYy9nbG9iYWwvbm9zY3J1Yi9nbG9iYWx3b3JrZmxvdy5jaS9HRlNfQ0lfUk9PVC9QUi8yODk1L2dsb2JhbC13b3JrZmxvdy9tb2R1bGVmaWxlcy9tb2R1bGVfYmFzZS53Y29zczIubHVhIixbImZ1bGxOYW1lIl09Im1vZHVsZV9iYXNlLndjb3NzMiIsWyJsb2FkT3JkZXIiXT0zMCxw
+PBS_O_QUEUE=dev
+COMIN_ROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT
+MAIL=/var/spool/mail/terry.mcguinness
+g2tmpl_ROOT=/apps/ops/para/libs/intel/19.1.3.304/g2tmpl/1.10.2
+ILPOST=1
+LPAODT=mpage -lo1 -zlpr -Z-P
+COM_OBS_PREV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18/obs
+GEMHLP=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/help
+PE_INTEL_FIXED_PKGCONFIG_PATH=/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0/lib/pkgconfig
+g2tmpl_VERSION=1.10.2
+GEMGTXT=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/txt/gemlib
+HPSSARCH=NO
+zlib_ver=1.2.11
+DO_GENESIS=YES
+COMPONENT=atmos
+COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery
+XMICONSEARCHPATH=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/icons/%N/%B
+_ModuleTable016_=bmV0Y2RmLzQuNy40Lmx1YSIsWyJmdWxsTmFtZSJdPSJuZXRjZGYvNC43LjQiLFsibG9hZE9yZGVyIl09MTkscHJvcFQ9e30sWyJyZWZfY291bnQiXT0xLFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im5ldGNkZi80LjcuNCIsfSxwZXJsPXtbImZuIl09Ii9hcHBzL3Byb2QvbG1vZHVsZXMvaW50ZWwvMTkuMS4zLjMwNC9wZXJsLzUuMzIuMCIsWyJmdWxsTmFtZSJdPSJwZXJsLzUuMzIuMCIsWyJsb2FkT3JkZXIiXT0xMyxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwZXJsLzUuMzIuMCIsfSxwcmVwb2JzPXtbImZuIl09Ii9sZnMvaDIvZW1jL2dsb2JhbC9zYXZlL2VtYy5n
+FHMIN_GFS=0
+binary_diag=.false.
+HOMEcfs=/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4
+ntiles=6
+DO_MERGENSST=NO
+cfp_ver=2.0.4
+AERO_ANL_RUN=
+LESSKEY=/etc/lesskey.bin
+__LMOD_REF_COUNT_PE_MPICH_GENCOMPILERS_INTEL=19.0:1
+STEP_GFS=6
+PROCESS_TROPCY=NO
+FIXSYND=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix
+_ModuleTable009_=L2dlbXBhay83LjE0LjEiLFsiZnVsbE5hbWUiXT0iZ2VtcGFrLzcuMTQuMSIsWyJsb2FkT3JkZXIiXT0xMixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJnZW1wYWsvNy4xNC4xIix9LGdyaWJfdXRpbD17WyJmbiJdPSIvYXBwcy9vcHMvcGFyYS9saWJzL21vZHVsZWZpbGVzL2NvbXBpbGVyL2ludGVsLzE5LjEuMy4zMDQvZ3JpYl91dGlsLzEuMi4zLmx1YSIsWyJmdWxsTmFtZSJdPSJncmliX3V0aWwvMS4yLjMiLFsibG9hZE9yZGVyIl09MzEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ3JpYl91dGlsLzEuMi4zIix9LGdzbD17WyJmbiJdPSIvYXBwcy9w
+SHELL=/bin/bash
+TERM=xterm
+NCO_LDFLAGS_CXX=-L/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64 -lnco_c++
+LIBJPEG_INC=/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include
+NCO_VER=4.7.9
+DUMP_SUFFIX=
+cray_mpich_ver=8.1.9
+CRAY_MPICH_VER=8.1.9
+FIXgsi=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/gsi
+LMOD_ADMIN_FILE=/apps/prod/lmodules/admin.list
+OCNRES=500
+COMROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT
+FIXgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/gdas
+LMOD_CUSTOM_COMPILER_GNU_8_0_UCX_1_0_PREFIX=/apps/prod/lmodules/gcc/11.2.0:/apps/prod/lmodules/gcc/10.2.0
+PE_MPICH_FIXED_PRGENV=INTEL
+NMV=/bin/mv
+FIXcice=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/cice
+hdf5_ver=1.10.6
+LMOD_CUSTOM_COMPILER_CRAYCLANG_10_0_PREFIX=/apps/prod/lmodules/cce/13.0.0:/apps/prod/lmodules/cce/12.0.3:/apps/prod/lmodules/cce/11.0.4
+COMINecmwf=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ecmwf
+cdate10=2021122100
+ncdiag_ver=1.0.0
+TOCGRIB2=/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/tocgrib2
+restart_interval_gdas=3
+LMOD_FAMILY_PRGENV=PrgEnv-intel
+MKGRB25=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/mkgrb25
+CASE=C96
+_ModuleTable_Sz_=24
+LPAODTFLAG=-P
+NMAP_RESTORE=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/nts/nmap/restore
+APP=ATM
+DO_COUPLED=NO
+LIBJPEG_LIBDIR=/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib
+GEMOLB=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/lib
+NCLEN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/ush/getncdimlen
+__LMOD_REF_COUNT_CPATH=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/include:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/include:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include/python3.8:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp/include:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/include:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/pstl/include:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/pstl/stdlib:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb/include:2
+XCURSOR_THEME=DMZ
+COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input
+NetCDF=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4
+OVERDATEGRIB=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/overdate.grib
+COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}
+l4densvar=.true.
+walltime=00:30:00
+wgrib2_ROOT=/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8
+LMOD_FAMILY_COMPILER=intel
+USHcfs=/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/ush
+COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded
+_ModuleTable018_=LHB5dGhvbj17WyJmbiJdPSIvYXBwcy9wcm9kL2xtb2R1bGVzL2ludGVsLzE5LjEuMy4zMDQvcHl0aG9uLzMuOC42IixbImZ1bGxOYW1lIl09InB5dGhvbi8zLjguNiIsWyJsb2FkT3JkZXIiXT0xMSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJweXRob24vMy44LjYiLH0sdWR1bml0cz17WyJmbiJdPSIvYXBwcy9wcm9kL2xtb2R1bGVzL2ludGVsLzE5LjEuMy4zMDQvdWR1bml0cy8yLjIuMjgiLFsiZnVsbE5hbWUiXT0idWR1bml0cy8yLjIuMjgiLFsibG9hZE9yZGVyIl09MTUscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0idWR1bml0cy8yLjIuMjgiLH0s
+PDYm6=20211215
+PDYm7=20211214
+IAU_FILTER_INCREMENTS=.true.
+PDYm4=20211217
+PDYm5=20211216
+PDYm2=20211219
+PDYm3=20211218
+FIXfit2obs=/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/fix
+PDYm1=20211220
+NCO_INC=/apps/prod/nco/4.7.9/intel/19.1.3.304/include
+PERL5LIB=/apps/prod/perl-modules/intel/19.1.3.304/perl-5.32.0/lib/perl5:/apps/prod/perl-modules/intel/19.1.3.304/perl-5.32.0/lib/perl5/XML/lib/perl5
+rtofs_ver=v2.3
+NCO_ROOT=/apps/prod/nco/4.7.9/intel/19.1.3.304
+LMOD_CUSTOM_CNCM_CRAYCLANG_10_0_OFI_1_0_X86_ROME_1_0_CRAY_MPICH_8_0_PREFIX=/apps/prod/lmodules/CCE_cray_mpich/11.0.4/cray-mpich/8.1.4
+MET_ROOT=/apps/ops/para/libs/intel/19.1.3.304/met/9.1.3
+envvar_ver=1.0
+TMOUT=1800
+MAKE_NSSTBUFR=NO
+COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input
+DATAROOT=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100
+DO_OCN=NO
+FIXaer=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/aer
+ecmwf_ver=v2.1
+PYTHONSTARTUP=/etc/pythonstart
+DO_GEMPAK=YES
+FHMAX_HF_WAV=120
+NETCDF_INCLUDES=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/include
+SHLVL=4
+SCRIPTSfit2obs=/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/scripts
+LANGUAGE=en_US.UTF-8
+PBS_O_HOST=clogin03.cactus.wcoss2.ncep.noaa.gov
+ENKF_SPREAD=YES
+HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow
+COMIN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs
+G_FILENAME_ENCODING=@locale,UTF-8,ISO-8859-15,CP1252
+PYTHONPATH=/apps/ops/prod/nco/core/prod_util.v2.0.9/ush:/apps/prod/python-modules/3.8.6/intel/19.1.3.304/lib/python3.8/site-packages:/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/ush:/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/ush/python
+DEBUG_POSTSCRIPT=NO
+netcdf_ver=4.7.4
+BUFR_DUMPLIST=/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0/fix/bufr_dumplist
+LMOD_CUSTOM_COMPILER_INTEL_19_0_UCX_1_0_PREFIX=/apps/prod/lmodules/intel/19.1.3.304:/apps/ops/prod/libs/modulefiles/compiler/intel/19.1.3.304:/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304
+metplus_ver=3.1.1
+HPC_OPT=/apps/ops/para/libs
+ACLOCAL_PATH=/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/share/aclocal
+DTYPS_nsst=sfcshp tesac bathy trkob
+FIXbufr_dump=/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0/fix
+NAWIPS_LIB=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/lib
+PBS_O_SYSTEM=Linux
+netcdf_diag=.true.
+MANPATH=/apps/ops/para/libs/intel/19.1.3.304/met/9.1.3/share/man:/apps/prod/nco/4.7.9/intel/19.1.3.304/share/man:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/share/man:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/share/man:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/share/man:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/share/man:/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3/man:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/share/man:/apps/prod/cfp/2.0.4/intel/19.1.3.304/man:/opt/cray/pe/pals/1.0.17/man:/opt/cray/pe/mpich/8.1.9/ofi/man:/opt/cray/pe/mpich/8.1.9/man/mpich:/pe/intel/man/common:/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/man:/pe/intel/documentation_2020/en/debugger/gdb-ia/man:/opt/cray/pe/craype/2.7.13/man:/opt/cray/libfabric/1.11.0.0./share/man:/usr/share/lmod/lmod/share/man:/usr/share/man:/opt/pbs/share/man
+DO_WAVE=NO
+__LMOD_REF_COUNT_CLASSPATH=/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/lib/mpi.jar:1
+METPLUS_PATH=/apps/ops/para/libs/intel/19.1.3.304/metplus/3.1.1
+NET=gfs
+INTEL_PATH=/pe/intel/compilers_and_libraries_2020.4.304
+NA_OS=linux5.3.18_x86_64
+CASE_ENS=@CASEENS@
+DO_PREP_OBS_AERO=NO
+bufr_dump_ver=1.0.0
+INTEL_VERSION=19.1.3.304
+MPICH_DIR=/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0
+OSCAR_HOME=/opt/oscar
+INCVARS_EFOLD=5
+python_ver=3.8.6
+PBS_O_LOGNAME=terry.mcguinness
+LIBJPEG_VER=9c
+LOCALARCH=NO
+COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}
+FHMAX_WAV_GFS=384
+mos_ver=5.4.3
+PBS_NODENUM=0
+MODULEPATH=/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/modulefiles:/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/modulefiles:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304:/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4:/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4:/opt/cray/pe/lmod/modulefiles/mpi/intel/19.0/ofi/1.0/cray-mpich/8.0:/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304:/apps/ops/prod/libs/modulefiles/compiler/intel/19.1.3.304:/apps/prod/lmodules/intel/19.1.3.304:/opt/cray/pe/lmod/modulefiles/comnet/intel/19.0/ofi/1.0:/apps/prod/lmodules/compiler/intel/19.0:/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/modulefiles:/opt/cray/pe/lmod/modulefiles/net/ofi/1.0:/opt/cray/pe/lmod/modulefiles/cpu/x86-rome/1.0:/usr/share/modules:/usr/share/Modules/$MODULE_VERSION/modulefiles:/usr/share/modules/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core:/opt/cray/pe/lmod/modulefiles/core:/opt/cray/pe/lmod/modulefiles/craype-targets/default:/apps/prod/lmodules/sys_core:/apps/ops/prod/nco/modulefiles/core:/apps/prod/lmodules/core:/opt/cray/modulefiles:/apps/ops/prod/nco/models/modulefiles
+PBS_JOBDIR=/u/terry.mcguinness
+CRTM_LIB=/apps/ops/para/libs/intel/19.1.3.304/crtm/2.4.0.1/lib/libcrtm.a
+jasper_ver=2.0.25
+CRAY_MPICH_DIR=/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0
+is_exclusive=True
+USHshared=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/ush
+restart_interval_gfs=12
+COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input
+__LMOD_REF_COUNT_PERL5LIB=/apps/prod/perl-modules/intel/19.1.3.304/perl-5.32.0/lib/perl5:1;/apps/prod/perl-modules/intel/19.1.3.304/perl-5.32.0/lib/perl5/XML/lib/perl5:1
+SCRIPTScfs=/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/scripts
+LMOD_FAMILY_CRAYPE=craype
+LOGNAME=terry.mcguinness
+FSYNC=/apps/ops/prod/nco/core/prod_util.v2.0.9/exec/fsync_file
+crtm_ver=2.4.0.1
+wgrib2_VERSION=2.0.8
+GEMPDF=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/pdf
+__LMOD_REF_COUNT_LMOD_CUSTOM_PATHS=CNCM/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4:1;CNCM/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4:1;COMPILER/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304:1;COMPILER/apps/ops/prod/libs/modulefiles/compiler/intel/19.1.3.304:1;COMPILER/apps/prod/lmodules/intel/19.1.3.304:1
+COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart
+DO_CALC_INCREMENT=NO
+CRAY_MPICH_VERSION=8.1.9
+ERRSCRIPT=eval [[ $err = 0 ]]
+COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon
+CRTM_INC=/apps/ops/para/libs/intel/19.1.3.304/crtm/2.4.0.1/include
+COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo
+COMINgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211221/00//model/atmos/history
+PROCESS_ACPF=NO
+MODULE_VERSION_STACK=3.2.10
+CPLUS_INCLUDE_PATH=/apps/prod/nco/4.7.9/intel/19.1.3.304/include:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/include:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include
+MKLROOT=/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl
+CNVGRIB=/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/cnvgrib
+LDFLAGS=-L/usr/lib64 -L/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/lib
+MODE=cycled
+NOSCRUB=/lfs/h2/emc/global/noscrub/terry.mcguinness
+FIXgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix
+COM_OBSDMP_PREV=/lfs/h2/emc/dump/noscrub/dump/gdas.20211220/18/atmos
+MODULEPATH_ROOT=/usr/share/modulefiles
+LMOD_PACKAGE_PATH=/apps/prod/lmodules
+GETGUESS=YES
+FHOUT_GOES=3
+__LMOD_REF_COUNT_PE_INTEL_FIXED_PKGCONFIG_PATH=/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0/lib/pkgconfig:1
+SYNDATA=YES
+USHgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/ush
+PE_MPICH_GTL_LIBS_amd_gfx906=-lmpi_gtl_hsa
+SENDECF=NO
+FHOUT_HF_GFS=1
+COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2
+JPEG_INC=/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include
+PSTLROOT=/pe/intel/compilers_and_libraries_2020.4.304/linux/pstl
+PROFCQC=YES
+EXECSYND=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec
+DO_JEDIATMENS=NO
+XDG_CONFIG_DIRS=/etc/xdg
+KEEPDATA=NO
+BASE_JOB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/jobs/rocoto
+OPREFIX=gfs.t00z.
+MAKE_ACFTBUFR=NO
+PATH=/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin:/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin:/apps/ops/para/libs/intel/19.1.3.304/metplus/3.1.1/ush:/apps/ops/para/libs/intel/19.1.3.304/met/9.1.3/bin:/apps/ops/prod/libs/intel/19.1.3.304/wgrib2/2.0.8/bin:/apps/ops/prod/libs/intel/19.1.3.304/cray-mpich/8.1.4/ncdiag/1.0.0/bin:/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/ush:/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0/ush:/apps/ops/prod/libs/intel/19.1.3.304/grib_util/1.2.3/bin:/apps/ops/prod/nco/core/prod_util.v2.0.9/ush:/apps/prod/nco/4.7.9/intel/19.1.3.304/bin:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/bin:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/cdo/1.9.8/bin:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/bin:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/bin:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/bin:/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3/bin:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/bin:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/bin:/apps/prod/cfp/2.0.4/intel/19.1.3.304/bin:/opt/cray/pe/pals/1.0.17/bin:/pe/intel/compilers_and_libraries_2020.4.304/linux/bin/intel64:/pe/intel/compilers_and_libraries_2020.4.304/linux/bin:/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/bin:/pe/intel/debugger_2020/gdb/intel64/bin:/opt/cray/pe/craype/2.7.13/bin:/opt/cray/libfabric/1.11.0.0./bin:/u/terry.mcguinness/bin:/usr/local/bin:/usr/bin:/bin:/opt/pbs/bin:/sbin:.:/lfs/h2/emc/global/noscrub/terry.mcguinness/scripts:/opt/cray/pe/bin:/apps/prod/python-modules/3.8.6/intel/19.1.3.304/bin:/apps/prod/python-modules/3.8.6/intel/19.1.3.304/lib/python3.8/site-packages/bin:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/bin:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/ez:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/nawips:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/prnt:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/decoder
+PE_MPICH_GTL_LIBS_amd_gfx908=-lmpi_gtl_hsa
+DO_TRACKER=YES
+_ModuleTable014_=cm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJtb2R1bGVfYmFzZS53Y29zczIiLH0sbW9zX3NoYXJlZD17WyJmbiJdPSIvYXBwcy9vcHMvcHJvZC9uY28vbW9kZWxzL21vZHVsZWZpbGVzL21vc19zaGFyZWQvMi43LjIiLFsiZnVsbE5hbWUiXT0ibW9zX3NoYXJlZC8yLjcuMiIsWyJsb2FkT3JkZXIiXT0yOSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJtb3Nfc2hhcmVkLzIuNy4yIix9LG5jZGlhZz17WyJmbiJdPSIvYXBwcy9vcHMvcHJvZC9saWJzL21vZHVsZWZpbGVzL21waS9pbnRlbC8xOS4xLjMuMzA0L2NyYXktbXBpY2gvOC4xLjQvbmNkaWFnLzEuMC4w
+TBBROOT=/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb
+PREPACQC=YES
+__LMOD_REF_COUNT_PE_PRODUCT_LIST=CRAYPE:1;CRAYPE_X86_ROME:1
+_LMFILES_=/opt/cray/pe/lmod/modulefiles/craype-targets/default/craype-x86-rome.lua:/opt/cray/modulefiles/libfabric/1.11.0.0.:/opt/cray/pe/lmod/modulefiles/craype-targets/default/craype-network-ofi.lua:/apps/prod/lmodules/sys_core/envvar/1.0:/opt/cray/pe/lmod/modulefiles/core/PrgEnv-intel/8.1.0.lua:/opt/cray/pe/lmod/modulefiles/core/craype/2.7.13.lua:/apps/prod/lmodules/core/intel/19.1.3.304.lua:/opt/cray/pe/lmod/modulefiles/comnet/intel/19.0/ofi/1.0/cray-mpich/8.1.9.lua:/opt/cray/pe/lmod/modulefiles/core/cray-pals/1.0.17.lua:/apps/prod/lmodules/core/cfp/2.0.4:/apps/prod/lmodules/intel/19.1.3.304/python/3.8.6:/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304/gempak/7.14.1:/apps/prod/lmodules/intel/19.1.3.304/perl/5.32.0:/apps/prod/lmodules/intel/19.1.3.304/libjpeg/9c:/apps/prod/lmodules/intel/19.1.3.304/udunits/2.2.28:/apps/prod/lmodules/intel/19.1.3.304/gsl/2.7:/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4/cdo/1.9.8.lua:/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4/hdf5/1.10.6.lua:/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4/netcdf/4.7.4.lua:/apps/prod/lmodules/intel/19.1.3.304/nco/4.7.9:/apps/ops/prod/nco/modulefiles/core/prod_util/2.0.9:/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304/bufr_dump/1.0.0.lua:/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304/util_shared/1.4.0:/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4/ncdiag/1.0.0.lua:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/met/9.1.3.lua:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/metplus/3.1.1.lua:/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/modulefiles/prepobs/1.1.0.lua:/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/modulefiles/fit2obs/1.1.4.lua:/apps/ops/prod/nco/models/modulefiles/mos_shared/2.7.2:/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/modulefiles/module_base.wcoss2.lua:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/grib_util/1.2.3.lua:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/g2tmpl/1.10.2.lua:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/crtm/2.4.0.1.lua:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/wgrib2/2.0.8.lua
+NetCDF_LIBRARIES=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/lib
+COMDATEROOT=/lfs/h1/ops/prod/com
+PRVT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/gsi/prepobs_errtable.global
+GSI_SOILANAL=NO
+DEBUFR=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/debufr
+GEMPAK=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak
+EXECgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/exec
+HDF5_VERSION=1.10.6
+cycle=t00z
+UTILSHAREDROOT=/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0
+AERO_FCST_RUN=
+LEVS=128
+PS4=+ ${SECONDS}s + 
+pgmerr=errfile
+ARFLAGS=rv
+EXECfit2obs=/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/exec
+perl_ver=5.32.0
+BASE_GIT=/lfs/h2/emc/global/save/emc.global/git
+PBS_QUEUE=dev
+NAWIPS_INC=/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/include
+MODULESHOME=/usr/share/lmod/lmod
+LMOD_SETTARG_FULL_SUPPORT=no
+PKG_CONFIG_PATH=/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/lib64/pkgconfig:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib/pkgconfig:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib/pkgconfig:/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/bin/pkgconfig:/opt/cray/pe/craype/2.7.13/pkg-config:/opt/cray/libfabric/1.11.0.0./lib64/pkgconfig
+INFOPATH=/pe/intel/documentation_2020/en/debugger/gdb-ia/info::/apps/docs/info
+G_BROKEN_FILENAMES=1
+I_MPI_ROOT=/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi
+COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital
+FHOUT_OCN=3
+_ModuleTable011_=bG1vZHVsZXMvY29yZS9pbnRlbC8xOS4xLjMuMzA0Lmx1YSIsWyJmdWxsTmFtZSJdPSJpbnRlbC8xOS4xLjMuMzA0IixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW50ZWwvMTkuMS4zLjMwNCIsfSxsaWJmYWJyaWM9e1siZm4iXT0iL29wdC9jcmF5L21vZHVsZWZpbGVzL2xpYmZhYnJpYy8xLjExLjAuMC4iLFsiZnVsbE5hbWUiXT0ibGliZmFicmljLzEuMTEuMC4wLiIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTIsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImxpYmZhYnJpYyIsfSxsaWJqcGVnPXtbImZuIl09Ii9hcHBzL3Byb2QvbG1vZHVs
+IAUFHRS_ENKF=6,
+BUFRLIST=uprair proflr aircar aircft satwnd adpupa adpsfc  sfcshp vadwnd wdsatr ascatw rassda gpsipw
+FIXPREP=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix
+HISTSIZE=10000
+DO_VRFY_OCEANDA=NO
+CRAYPE_DIR=/opt/cray/pe/craype/2.7.13
+LMOD_PKG=/usr/share/lmod/lmod
+INCREMENTS_TO_ZERO='liq_wat_inc','icmr_inc','rwmr_inc','snmr_inc','grle_inc'
+__LMOD_REF_COUNT_PE_MPICH_PKGCONFIG_LIBS=mpich:1
+DO_GENESIS_FSU=NO
+IAU_OFFSET=6
+prod_util_ver=2.0.9
+COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station
+FHMAX_HF_GFS=120
+CPU=x86_64
+__LMOD_REF_COUNT_PE_PKGCONFIG_LIBS=mpich:1
+COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf
+LD=ld
+CRAYPE_VERSION=2.7.13
+NETCDF_LIBRARIES=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/lib
+COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks
+PTMP=/lfs/h2/emc/ptmp/terry.mcguinness
+FHOUT_HF_WAV=1
+DONST=YES
+NETCDF_IN=.true.
+OS_VER=linux4.12.14_x86_64
+POE=YES
+LMOD_CMD=/usr/share/lmod/lmod/libexec/lmod
+_ModuleTable005_=YXkvcGUvbG1vZC9tb2R1bGVmaWxlcy9jb3JlL2NyYXlwZS8yLjcuMTMubHVhIixbImZ1bGxOYW1lIl09ImNyYXlwZS8yLjcuMTMiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJjcmF5cGUvMi43LjEzIix9LFsiY3JheXBlLW5ldHdvcmstb2ZpIl09e1siZm4iXT0iL29wdC9jcmF5L3BlL2xtb2QvbW9kdWxlZmlsZXMvY3JheXBlLXRhcmdldHMvZGVmYXVsdC9jcmF5cGUtbmV0d29yay1vZmkubHVhIixbImZ1bGxOYW1lIl09ImNyYXlwZS1uZXR3b3JrLW9maSIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1l
+SCRIPTSprepobs=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/scripts
+ens_tracker_ver=feature-GFSv17_com_reorg
+DO_AERO=NO
+STMP=/lfs/h2/emc/stmp/terry.mcguinness
+obsNET=obsproc
+CRAY_MPICH_PREFIX=/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0
+CHGRP_RSTPROD=YES
+CVS_RSH=ssh
+LP=lpr
+DBNROOT=/apps/ops/prod/nco/core/prod_util.v2.0.9/fakedbn
+WGRIB2=/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin/wgrib2
+FIXcode=/apps/ops/prod/nco/models/mos_shared.v2.7.2/fix
+PBS_O_MAIL=/var/spool/mail/terry.mcguinness
+OMP_NUM_THREADS=1
+LESSOPEN=lessopen.sh %s
+_ModuleTable020_=dGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJ3Z3JpYjIvMi4wLjgiLH0sfSxtcGF0aEE9eyIvbGZzL2gyL2VtYy9nbG9iYWwvc2F2ZS9lbWMuZ2xvYmFsL2dpdC9GaXQyT2JzL3YxLjEuNC9tb2R1bGVmaWxlcyIsIi9sZnMvaDIvZW1jL2dsb2JhbC9zYXZlL2VtYy5nbG9iYWwvZ2l0L3ByZXBvYnMvZ2ZzdjE3X3YxLjEuMC9tb2R1bGVmaWxlcyIsIi9hcHBzL29wcy9wYXJhL2xpYnMvbW9kdWxlZmlsZXMvY29tcGlsZXIvaW50ZWwvMTkuMS4zLjMwNCIsIi9hcHBzL29wcy9wcm9kL2xpYnMvbW9kdWxlZmlsZXMvbXBpL2ludGVsLzE5LjEuMy4zMDQvY3JheS1tcGljaC84LjEuNCIsIi9hcHBzL3Byb2QvbG1vZHVsZXMvSU5URUxfY3JheV9tcGljaC8xOS4x
+COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history
+EXP_WARM_START=.false.
+FHMAX_WAV=9
+LMOD_DIR=/usr/share/lmod/lmod/libexec
+gfs_ver=v16.3.7
+LC_TIME=C.UTF-8
+HOMEprepobs=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0
+JPEG_LIB=/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib/libjpeg.a
+LMOD_FAMILY_MPI=cray-mpich
+SCRgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/scripts
+fit2obs_ver=1.1.4
+BASH_FUNC_module%%=() {  eval $($LMOD_CMD bash "$@") && eval $(${LMOD_SETTARG_CMD:-:} -s sh)
+}
+BASH_FUNC_declare_from_tmpl%%=() {  if [[ ${DEBUG_WORKFLOW:-"NO"} == "NO" ]]; then
+ set +x;
+ fi;
+ local opts="-g";
+ local OPTIND=1;
+ while getopts "rx" option; do
+ opts="${opts}${option}";
+ done;
+ shift $((OPTIND-1));
+ for input in "$@";
+ do
+ IFS=':' read -ra args <<< "${input}";
+ local com_var="${args[0]}";
+ local template;
+ local value;
+ if (( ${#args[@]} > 1 )); then
+ template="${args[1]}";
+ else
+ template="${com_var}_TMPL";
+ fi;
+ if [[ ! -v "${template}" ]]; then
+ echo "FATAL ERROR in declare_from_tmpl: Requested template ${template} not defined!";
+ exit 2;
+ fi;
+ value=$(echo "${!template}" | envsubst);
+ declare ${opts} "${com_var}"="${value}";
+ echo "declare_from_tmpl :: ${com_var}=${value}";
+ done;
+ set_trace
+}
+BASH_FUNC_wait_for_file%%=() {  set +x;
+ local file_name=${1:?"wait_for_file() requires a file name"};
+ local sleep_interval=${2:-60};
+ local max_tries=${3:-100};
+ for ((iter=0; iter<max_tries; iter++ ))
+ do
+ if [[ -r ${file_name} ]]; then
+ set_trace;
+ return 0;
+ fi;
+ sleep "${sleep_interval}";
+ done;
+ set_trace;
+ return 1
+}
+BASH_FUNC_ml%%=() {  eval $($LMOD_DIR/ml_cmd "$@")
+}
+_=/usr/bin/env
++ 0s + '[' gfs = gdas ']'
++ 0s + /lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/scripts/exglobal_makeprepbufr.sh
+----------------------------------------------------------------------
+exglobal_makeprepbufr.sh     - Global (GDAS, GFS) model prepbufr      
+                               processing                             
+----------------------------------------------------------------------
+History:                                                              
+  Mar  1 2013 - Original script.                                      
+  Dec  3 2014 - CDAS network, split off into its own script           
+  excdas_makeprepbufr.sh  This script now                        
+  tailored exclusively to GDAS and GFS.                               
+  Mar 11 2017 - Update to handle nemsio filename patterns             
+  Mar 15 2019 - Added dbuoyb & mbuoyb to nsstfile content             
+  Jun 10 2019 - Added *buoyb qc (MAKE_NSST_BUOYB & bufr_latlonqc.sh)  
+  Jul 27 2020 - Added feature to use tstsp when generating nsstbufr   
+  files. Set MAKE_NSST_BUOYB default to NO.                           
+  Oct 09 2020 - Update to handle netcdf history filename patterns     
+                Update to remove obsolete functionality of adding     
+                bufr format buoy reports to nsstbufr file.  These data
+                are now included in the sfcshp file, already included 
+                in the nsstbufr file.                                 
+  Dec 16 2021 - Renamed all *.sh.ecf scripts to *.sh                  
+----------------------------------------------------------------------
+
++ 0.003s + cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
++ 0.138s + hostname
++ 0.195s + msg='HAS BEGUN on nid001211'
++ 0.195s + /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/postmsg /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/jlogfile 'HAS BEGUN on nid001211'
++ 0.204s + cat break
++ 0.208s + 1> OUTPUT.133333
++ 0.211s + CHGRP_RSTPROD=YES
++ 0.211s + MAKE_NSSTBUFR=NO
++ 0.211s + COMSP=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.
++ 0.211s + export COMSP
++ 0.211s + COMSPtcvital=/lfs/h2/emc/dump/noscrub/dump/gfs.20211221/00/atmos/gfs.t00z.
++ 0.211s + export COMSPtcvital
++ 0.211s + tstsp=/tmp/null/
++ 0.211s + export tstsp
++ 0.211s + [ YES '=' YES -a YES '=' YES -a -n '' -a -n '' ]
++ 0.211s + cdate10=2021122100
++ 0.211s + msg='CENTER TIME FOR PREPBUFR PROCESSING IS 2021122100'
++ 0.211s + /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/postmsg /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/jlogfile 'CENTER TIME FOR PREPBUFR PROCESSING IS 2021122100'
++ 0.218s + ksh /lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush/prepobs_makeprepbufr.sh 2021122100
++ 0.017s + NEMSIO_IN=.false.
++ 0.017s + NETCDF_IN=.true.
++ 0.017s + jlogfile=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/jlogfile
++ 0.017s + SENDDBN=NO
++ 0.017s + [ ! -d /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133 ]
++ 0.017s + cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
++ 0.017s + qid=133451
++ 0.017s + [ ! -x /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/err_exit ]
++ 0.017s + [ ! -x /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/err_chk ]
++ 0.017s + SITE=''
++ 0.017s + sys_tp=wcoss2
++ 0.017s + getsystp_err=0
++ 0.017s + [ 0 -ne 0 ]
++ 0.017s + echo sys_tp is set to: wcoss2
+sys_tp is set to: wcoss2
++ 0.017s + CDATEMM=''
++ 0.017s + [ 1 -eq 0 ]
++ 0.017s + CDATE10=2021122100
++ 0.017s + [ 10 -ne 10 ]
++ 0.018s + echo 2021122100
++ 0.018s + cut -c9-10
++ 0.020s + cycle=t00z
++ 0.020s + err0=0
++ 0.020s + [ 1 -eq 2 ]
++ 0.020s + test 0 -ne 0
++ 0.020s + echo 2021122100
++ 0.020s + cut -c9-10
++ 0.022s + cyc=00
++ 0.022s + expr 00 % 3
++ 0.024s + modhr=0
++ 0.024s + msg='CENTER DATE/TIME FOR PREPBUFR PROCESSING IS 2021122100'
++ 0.024s + [ -n '' ]
+
+CENTER DATE/TIME FOR PREPBUFR PROCESSING IS 2021122100
+
++ 0.024s + envir=prod
++ 0.024s + envir_getges=prod
++ 0.024s + [ gfs '=' cfs ]
++ 0.024s + [ 0 -eq 0 -o .false. '=' .true. -o .true. '=' .true. ]
++ 0.024s + network_getges=global
++ 0.024s + pgmout=OUTPUT.133333
++ 0.024s + tstsp=/tmp/null/
++ 0.024s + tmmark=tm00
++ 0.024s + BUFRLIST='uprair proflr aircar aircft satwnd adpupa adpsfc  sfcshp vadwnd wdsatr ascatw rassda gpsipw'
++ 0.024s + PREPDATA=YES
++ 0.024s + [ YES '!=' YES ]
++ 0.024s + set +u
++ 0.024s + [ -z YES -a off '=' YES ]
++ 0.024s + POE=YES
++ 0.024s + [ YES '!=' NO -a off '=' YES ]
++ 0.024s + BACK=off
++ 0.024s + PARALLEL=NO
++ 0.024s + [ YES '!=' NO -o off '=' YES ]
++ 0.024s + PARALLEL=YES
++ 0.024s + [ YES '!=' NO ]
++ 0.024s + launcher_PREP=mpiexec
++ 0.024s + [ mpiexec '!=' cfp -a mpiexec '!=' aprun ]
++ 0.024s + NPROCS=12
++ 0.024s + [ 12 -lt 12 ]
++ 0.024s + USHSYND=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
++ 0.024s + USHGLERL=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
++ 0.024s + USHPREV=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
++ 0.024s + USHCQC=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
++ 0.024s + USHPQC=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
++ 0.024s + USHVQC=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
++ 0.024s + USHAQC=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
++ 0.024s + USHOIQC=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
++ 0.024s + EXECPREP=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec
++ 0.024s + PARMPREP=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm
++ 0.024s + FIXPREP=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix
++ 0.024s + DICTPREP=/decoders/decod_shared/dictionaries_
++ 0.024s + EXECSYND=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec
++ 0.024s + PARMSYND=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm
++ 0.024s + FIXSYND=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix
++ 0.024s + GETGUESS=YES
++ 0.024s + [ YES '=' YES ]
++ 0.024s + USHGETGES=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush
++ 0.024s + [ .false. '=' .true. ]
++ 0.024s + [ .true. '=' .true. ]
++ 0.024s + GETGESprep_driver=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush/getges_driver.sh
++ 0.024s + GETGESprep=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush/getges_nc.sh
++ 0.024s + PREPDATA=YES
++ 0.024s + SYNDATA=YES
++ 0.024s + GLERLBUFR=NO
++ 0.024s + DO_QC=YES
++ 0.024s + PREVENTS=NO
++ 0.024s + CQCBUFR=YES
++ 0.024s + PROFCQC=YES
++ 0.024s + CQCVAD=YES
++ 0.024s + PREPACQC=YES
++ 0.024s + PROCESS_ACQC=YES
++ 0.024s + PROCESS_ACPF=NO
++ 0.024s + OIQCBUFR=NO
++ 0.024s + MPCOPYX=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec/prepobs_mpcopybufr
++ 0.024s + PRPX=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec/prepobs_prepdata
++ 0.024s + errPREPDATA_limit=4
++ 0.024s + PRPC=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm/prepobs_prepdata.gfs.parm
++ 0.024s + PRPT=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix/prepobs_prep.bufrtable
++ 0.024s + cp /lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix/prepobs_prep.bufrtable prep.bufrtable
++ 0.112s + LANDC=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix/prepobs_landc
++ 0.112s + [ gfs '=' gdas -o gfs '=' gfs ]
++ 0.112s + PRVT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/fix/gsi/prepobs_errtable.global
++ 0.112s + LISTHDX=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec/prepobs_listheaders
++ 0.112s + MONOBFRX=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec/prepobs_monoprepbufr
++ 0.112s + SYNDX=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec/syndat_syndata
++ 0.112s + SYNDC=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm/syndat_syndata.gfs.parm
++ 0.112s + GLRX=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec/prepobs_glerladj
++ 0.112s + GLRD=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix/glerldict.lmd
++ 0.112s + PREX=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec/prepobs_prevents
++ 0.112s + PREC=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm/prepobs_prevents.gfs.parm
++ 0.112s + AQCX=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec/prepobs_prepacqc
++ 0.112s + AQCC=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm/prepobs_prepacqc.gfs.parm
++ 0.112s + APFX=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec/prepobs_prepacpf
++ 0.112s + DICT=/decoders/decod_shared/dictionaries_/metar.tbl
++ 0.112s + PQCX=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec/prepobs_profcqc
++ 0.112s + PQCC=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm/prepobs_profcqc.gfs.parm
++ 0.113s + VQCX=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec/prepobs_cqcvad
++ 0.113s + CQCX=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec/prepobs_cqcbufr
++ 0.113s + CQCC=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm/prepobs_cqcbufr.gfs.parm
++ 0.113s + CQCS=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix/prepobs_cqc_statbge
++ 0.113s + OIQCX=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec/prepobs_oiqcbufr
++ 0.113s + [ gfs '=' cdas ]
++ 0.113s + OIQCT=/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix/prepobs_oiqc.oberrs
++ 0.113s + TIMEIT=''
++ 0.113s + [ -s /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/time ]
++ 0.113s + relo_rec=no
++ 0.113s + [ -s /tmp/null/tropcy_relocation_status.tm00 ]
++ 0.113s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.tropcy_relocation_status.tm00 ]
++ 0.113s + RELOCATION_HAS_RUN=NO
++ 0.113s + msg='Tropical cyclone RELOCATION did NOT run prior to this job'
++ 0.113s + [ -n /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/jlogfile ]
++ 0.113s + /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/postmsg /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/jlogfile 'Tropical cyclone RELOCATION did NOT run prior to this job'
++ 0.138s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.tropcy_relocation_status.tm00 ]
++ 0.139s + [ NO '!=' YES -a YES '!=' NO ]
++ 0.139s + [ 00 '=' 00 -o 00 '=' 06 -o 00 '=' 12 -o 00 '=' 18 ]
++ 0.139s + [ gfs '=' gfs -o gfs '=' gdas ]
++ 0.139s + [ .false. '=' .true. -o .true. '=' .true. ]
++ 0.139s + [ -3 '=' -3 ]
++ 0.139s + sges=sgm3prep
++ 0.139s + stype=natgm3
++ 0.139s + echo sgm3prep
+sgm3prep
++ 0.139s + [ ! -s sgm3prep ]
++ 0.139s + fhr=-3
+
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+           Tropical cylone relocation HAS NOT previously run
+     Get global atmospheric GUESS valid for -3 hrs relative to center
+                     PREPBUFR processing date/time
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
++ 0.139s + [ .false. '=' .true. -o .true. '=' .true. ]
++ 0.139s + /lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush/getges_driver.sh
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t21z.atm.logf000.txt
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t21z.atmf000.nc
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211220/18//model/atmos/history/gfs.t21z.atm.logf000.txt
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211220/18//model/atmos/history/gfs.t21z.atmf000.nc
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t18z.atm.logf003.txt
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t18z.atmf003.nc
++ 1.010s + errges=0
++ 1.010s + test 0 -ne 0
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
++ 1.010s + [ .false. '=' .true. -o .true. '=' .true. ]
++ 1.010s + [ +3 '=' -3 ]
++ 1.010s + sges=sgp3prep
++ 1.010s + stype=natgp3
++ 1.010s + echo sgp3prep
+sgp3prep
++ 1.010s + [ ! -s sgp3prep ]
++ 1.010s + fhr=+3
+
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+           Tropical cylone relocation HAS NOT previously run
+     Get global atmospheric GUESS valid for +3 hrs relative to center
+                     PREPBUFR processing date/time
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
++ 1.011s + [ .false. '=' .true. -o .true. '=' .true. ]
++ 1.011s + /lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush/getges_driver.sh
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t21z.atm.logf006.txt
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t21z.atmf006.nc
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211220/18//model/atmos/history/gfs.t21z.atm.logf006.txt
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211220/18//model/atmos/history/gfs.t21z.atmf006.nc
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t18z.atm.logf009.txt
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t18z.atmf009.nc
++ 1.666s + errges=0
++ 1.666s + test 0 -ne 0
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
++ 1.666s + [ YES '=' YES -o YES '=' YES -o NO '=' YES ]
++ 1.666s + SGES=/dev/null
++ 1.666s + SGESA=/dev/null
++ 1.666s + 1> sgesprep_pathname
++ 1.667s + 1> sgesprepA_pathname
++ 1.668s + [ YES '!=' NO ]
++ 1.668s + [ ! -s sgesprep ]
++ 1.668s + fhr=any
++ 1.668s + [ .false. '=' .true. -o .true. '=' .true. ]
++ 1.668s + dhr=0
++ 1.668s + stype=natges
++ 1.668s + [ 0 -eq 0 -o .false. '=' .true. -o .true. '=' .true. ]
++ 1.668s + [ '' '=' A ]
+
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+  Either center PREPBUFR processing date/time is a multiple of 3-hrs
+                                -OR-
+            global guess is nemsio-based or NetCDF-based
+   Use GETGES to get global sigio-based, nemsio-based, or NetCDF-based
+  GUESS valid for 0 hrs relative to center PREPBUFR processing date/time
+     Will be encoded into PREPBUFR file and used by q.c. programs
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
++ 1.668s + [ .false. '=' .true. -o .true. '=' .true. ]
++ 1.668s + /lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush/getges_driver.sh
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t21z.atm.logf003.txt
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t21z.atmf003.nc
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211220/18//model/atmos/history/gfs.t21z.atm.logf003.txt
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211220/18//model/atmos/history/gfs.t21z.atmf003.nc
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t18z.atm.logf006.txt
+Checking: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t18z.atmf006.nc
++ 1.727s + errges=0
++ 1.727s + test 0 -ne 0
++ 1.727s + date
+Tue Sep 24 16:52:37 UTC 2024
++ 1.729s + cat sgesprep_pathname
++ 1.729s + awk '{ print $1 }'
++ 1.736s + ls -l /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t18z.atmf006.nc
+-rw-r--r-- 1 terry.mcguinness global 601064729 Sep 24 15:48 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t18z.atmf006.nc
++ 1.740s + awk '{ print $1 }'
++ 1.740s + cat sgesprep_pathname
++ 1.742s + cp /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gdas.20211220/18//model/atmos/history/gdas.t18z.atmf006.nc sgesprep
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
++ 2.366s + eval SGES=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/sgesprep
++ 2.366s + SGES=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/sgesprep
++ 2.366s + [ ! -s sgesprepA ]
++ 2.366s + fhr=any
++ 2.366s + [ .false. '=' .true. -o .true. '=' .true. ]
++ 2.366s + dhr=0
++ 2.366s + stype=natges
++ 2.366s + [ 0 -eq 0 -o .false. '=' .true. -o .true. '=' .true. ]
++ 2.366s + [ A '=' A ]
++ 2.366s + break
++ 2.367s + [ YES '=' YES ]
++ 2.367s + cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133
++ 2.368s + set +u
++ 2.368s + [ -z '' -o YES '=' YES ]
++ 2.368s + set -u
++ 2.368s + [ ! -s /tmp/null/status.tm00.bufr_d -a ! -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.status.tm00.bufr_d ]
++ 2.368s + echo uprair proflr aircar aircft satwnd adpupa adpsfc sfcshp vadwnd wdsatr ascatw rassda gpsipw
++ 2.368s + grep adpsfc
+uprair proflr aircar aircft satwnd adpupa adpsfc sfcshp vadwnd wdsatr ascatw rassda gpsipw
++ 2.371s + grp_adpsfc=0
++ 2.371s + echo uprair proflr aircar aircft satwnd adpupa adpsfc sfcshp vadwnd wdsatr ascatw rassda gpsipw
++ 2.371s + grep adpupa
+uprair proflr aircar aircft satwnd adpupa adpsfc sfcshp vadwnd wdsatr ascatw rassda gpsipw
++ 2.373s + grp_adpupa=0
++ 2.373s + echo uprair proflr aircar aircft satwnd adpupa adpsfc sfcshp vadwnd wdsatr ascatw rassda gpsipw
++ 2.373s + grep uprair
+uprair proflr aircar aircft satwnd adpupa adpsfc sfcshp vadwnd wdsatr ascatw rassda gpsipw
++ 2.375s + grp_uprair=0
++ 2.375s + [ '(' ! -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.adpsfc.tm00.bufr_d -a ! -f /tmp/null/adpsfc.tm00.bufr_d -a 0 -eq 0 ')' -o '(' ! -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.adpupa.tm00.bufr_d -a ! -f /tmp/null/adpupa.tm00.bufr_d -a 0 -eq 0 -a ! -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.uprair.tm00.bufr_d -a ! -f /tmp/null/uprair.tm00.bufr_d -a 0 -eq 0 ')' ]
++ 2.375s + 1> uprair
++ 2.376s + [ -f /tmp/null/uprair.tm00.bufr_d ]
++ 2.376s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.uprair.tm00.bufr_d ]
++ 2.376s + 1> proflr
++ 2.377s + [ -f /tmp/null/proflr.tm00.bufr_d ]
++ 2.377s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.proflr.tm00.bufr_d ]
++ 2.377s + cp /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.proflr.tm00.bufr_d proflr
++ 2.401s + 1> aircar
++ 2.402s + [ -f /tmp/null/aircar.tm00.bufr_d ]
++ 2.402s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.aircar.tm00.bufr_d ]
++ 2.402s + cp /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.aircar.tm00.bufr_d aircar
++ 2.642s + 1> aircft
++ 2.643s + [ -f /tmp/null/aircft.tm00.bufr_d ]
++ 2.643s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.aircft.tm00.bufr_d ]
++ 2.643s + cp /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.aircft.tm00.bufr_d aircft
++ 2.680s + 1> satwnd
++ 2.681s + [ -f /tmp/null/satwnd.tm00.bufr_d ]
++ 2.681s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.satwnd.tm00.bufr_d ]
++ 2.681s + cp /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.satwnd.tm00.bufr_d satwnd
++ 3.187s + 1> adpupa
++ 3.188s + [ -f /tmp/null/adpupa.tm00.bufr_d ]
++ 3.188s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.adpupa.tm00.bufr_d ]
++ 3.188s + cp /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.adpupa.tm00.bufr_d adpupa
++ 3.213s + 1> adpsfc
++ 3.214s + [ -f /tmp/null/adpsfc.tm00.bufr_d ]
++ 3.214s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.adpsfc.tm00.bufr_d ]
++ 3.214s + cp /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.adpsfc.tm00.bufr_d adpsfc
++ 3.436s + 1> sfcshp
++ 3.438s + [ -f /tmp/null/sfcshp.tm00.bufr_d ]
++ 3.438s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.sfcshp.tm00.bufr_d ]
++ 3.438s + cp /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.sfcshp.tm00.bufr_d sfcshp
++ 3.504s + 1> vadwnd
++ 3.505s + [ -f /tmp/null/vadwnd.tm00.bufr_d ]
++ 3.505s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.vadwnd.tm00.bufr_d ]
++ 3.505s + cp /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.vadwnd.tm00.bufr_d vadwnd
++ 3.529s + 1> wdsatr
++ 3.531s + [ -f /tmp/null/wdsatr.tm00.bufr_d ]
++ 3.531s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.wdsatr.tm00.bufr_d ]
++ 3.531s + 1> ascatw
++ 3.532s + [ -f /tmp/null/ascatw.tm00.bufr_d ]
++ 3.532s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.ascatw.tm00.bufr_d ]
++ 3.532s + cp /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.ascatw.tm00.bufr_d ascatw
++ 3.576s + 1> rassda
++ 3.576s + [ -f /tmp/null/rassda.tm00.bufr_d ]
++ 3.577s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.rassda.tm00.bufr_d ]
++ 3.577s + cp /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.rassda.tm00.bufr_d rassda
++ 3.596s + 1> gpsipw
++ 3.597s + [ -f /tmp/null/gpsipw.tm00.bufr_d ]
++ 3.597s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.gpsipw.tm00.bufr_d ]
++ 3.597s + cp /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.gpsipw.tm00.bufr_d gpsipw
++ 3.621s + 1> prep_exec.cmd
++ 3.622s + 1> prepda.t00z
++ 3.623s + echo '      2021122100'
++ 3.623s + 1> cdate10.dat
++ 3.624s + [ -n '' ]
++ 3.624s + 1> prepdata.stdin
++ 3.627s + [ YES '!=' NO ]
++ 3.627s + echo ' &gblevn preven=true /'
++ 3.627s + 1>> prepdata.stdin
++ 3.634s + cat /lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0/parm/prepobs_prepdata.gfs.parm
++ 3.635s + 1>> prepdata.stdin
++ 3.654s + echo '   SUBSKP(004,007) = TRUE,'
++ 3.654s + 1> insert
++ 3.655s + [ -s /tmp/null/aircar_status_flag.tm00.bufr_d ]
++ 3.655s + [ -s /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/gfs.20211221/00/obs/gfs.t00z.aircar_status_flag.tm00.bufr_d ]
++ 3.656s + cat insert
++ 3.657s + grep -q -Fe '   SUBSKP(004,007) = TRUE,' prepdata.stdin
++ 3.660s + err_grep=1
++ 3.660s + [ 1 -ne 0 ]
++ 3.660s + cat
++ 3.660s + wc -l
++ 3.660s + 0< prepdata.stdin
++ 3.662s + nlines=150
++ 3.663s + cut -f1 -d:
++ 3.663s + grep -n -Fe '&LDTA' prepdata.stdin
++ 3.665s + line=9
++ 3.665s + head -n 9 prepdata.stdin
++ 3.670s + 1> top_part
++ 3.673s + expr 150 - 9
++ 3.675s + mlines=141
++ 3.675s + tail -n 141 prepdata.stdin
++ 3.679s + 1> bottom_part
++ 3.682s + [ 141 -gt 2 ]
++ 3.682s + cat top_part insert bottom_part
++ 3.682s + 1> prepdata.stdin
++ 4.080s + rm top_part bottom_part
++ 4.083s + rm insert
++ 4.088s + chmod 775 MP_PREPDATA
++ 4.090s + [ YES '=' YES ]
++ 4.090s + [ YES '!=' NO ]
++ 4.090s + echo '#!/bin/ksh'
++ 4.090s + tee -a /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+#!/bin/ksh
++ 4.104s + multi=-1
++ 4.104s + [ 0 -lt 12 ]
++ 4.104s + echo '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 0 '
++ 4.104s + tee -a /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 0 
++ 4.107s + [ 1 -lt 12 ]
++ 4.107s + echo '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 1 '
++ 4.107s + tee -a /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 1 
++ 4.109s + [ 2 -lt 12 ]
++ 4.109s + echo '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 2 '
++ 4.109s + tee -a /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 2 
++ 4.111s + [ 3 -lt 12 ]
++ 4.111s + echo '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 3 '
++ 4.111s + tee -a /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 3 
++ 4.113s + [ 4 -lt 12 ]
++ 4.113s + echo '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 4 '
++ 4.113s + tee -a /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 4 
++ 4.115s + [ 5 -lt 12 ]
++ 4.115s + echo '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 5 '
++ 4.115s + tee -a /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 5 
++ 4.117s + [ 6 -lt 12 ]
++ 4.117s + echo '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 6 '
++ 4.117s + tee -a /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 6 
++ 4.119s + [ 7 -lt 12 ]
++ 4.119s + echo '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 7 '
++ 4.119s + tee -a /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 7 
++ 4.121s + [ 8 -lt 12 ]
++ 4.122s + echo '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 8 '
++ 4.122s + tee -a /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 8 
++ 4.123s + [ 9 -lt 12 ]
++ 4.124s + echo '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 9 '
++ 4.124s + tee -a /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 9 
++ 4.125s + [ 10 -lt 12 ]
++ 4.126s + echo '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 10 '
++ 4.126s + tee -a /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 10 
++ 4.127s + [ 11 -lt 12 ]
++ 4.128s + echo '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 11 '
++ 4.128s + tee -a /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/MP_PREPDATA 11 
++ 4.130s + [ 12 -lt 12 ]
++ 4.130s + [ mpiexec '!=' cfp -a mpiexec '!=' aprun ]
++ 4.130s + multi=11
++ 4.130s + [ 12 -lt 12 ]
++ 4.130s + [ YES '!=' NO ]
++ 4.130s + [ mpiexec '=' mpirun ]
++ 4.130s + [ mpiexec '=' mpiexec ]
++ 4.130s + chmod 755 /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
++ 4.133s + mpiexec -n 12 cfp /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100/prep.131133/prep_exec.cmd
+WARNING: cpubind(default): CPU oversubscription detected for application
+WARNING: cpubind(default): CPU oversubscription detected for application
++ 25.663s + exit 0
++ 27.010s + exit 0
++ 26.970s + exit 0
++ 28.007s + exit 0
++ 41.926s + exit 0
++ 41.860s + exit 0
++ 42.367s + exit 0
++ 42.601s + exit 0
++ 42.783s + exit 0
++ 43.984s + exit 0
++ 44.020s + exit 0
++ 45.351s + exit 0
+CFP RANK   6    TOTAL RANK RUN TIME:  28.2 sec    Return status: 00000000 hex
+CFP RANK   7    TOTAL RANK RUN TIME:  27.2 sec    Return status: 00000000 hex
+CFP RANK  10    TOTAL RANK RUN TIME:  44.2 sec    Return status: 00000000 hex
+CFP RANK   3    TOTAL RANK RUN TIME:  42.1 sec    Return status: 00000000 hex
+CFP RANK   0    TOTAL RANK RUN TIME:  42.8 sec    Return status: 00000000 hex
+CFP RANK   1    TOTAL RANK RUN TIME:  42.6 sec    Return status: 00000000 hex
+CFP RANK   4    TOTAL RANK RUN TIME:  27.0 sec    Return status: 00000000 hex
+CFP RANK   5    TOTAL RANK RUN TIME:  25.7 sec    Return status: 00000000 hex
+CFP RANK   9    TOTAL RANK RUN TIME:  41.9 sec    Return status: 00000000 hex
+CFP RANK   8    TOTAL RANK RUN TIME:  42.4 sec    Return status: 00000000 hex
+CFP RANK   2    TOTAL RANK RUN TIME:  44.3 sec    Return status: 00000000 hex
+CFP RANK  11    TOTAL RANK RUN TIME:  45.6 sec    Return status: 00000000 hex
+=>> PBS: job killed: walltime 1810 exceeded limit 1800
+Signal forwarding failed: Application e0600cc1-66b5-4815-a9fd-b9f8628e56a6 not found
+++ prep.sh[1]: postamble prep.sh 1727196750 0
+++ preamble.sh[70]: set +x
+End prep.sh at 17:22:39 with error code 0 (time elapsed: 00:30:09)
+PBS: Running epilogue on parent mom node: nid001211...
+##### Job 156168779.cbqs01 - PBS Job Script:
+(Note: Duplicate #PBS entries are a function how PBS interprets and caches the original job script.)
+
+#! /bin/sh
+#PBS -N C96_atm3DVar_extended_fcbb6494_gfsprep_00
+#PBS -A GFS-DEV
+#PBS -q dev
+#PBS -l walltime=00:30:00
+#PBS -l select=2:mpiprocs=2:ompthreads=1:ncpus=2:mem=480GB
+#PBS -j oe -o /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT/C96_atm3DVar_extended_fcbb6494/logs/2021122100/gfsprep.log
+#PBS -l place=vscatter:exclhost
+export RUN_ENVIR='emc'
+export HOMEgfs='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow'
+export EXPDIR='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/EXPDIR/C96_atm3DVar_extended_fcbb6494'
+export NET='gfs'
+export RUN='gfs'
+export CDATE='2021122100'
+export PDY='20211221'
+export cyc='00'
+export COMROOT='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/RUNTESTS/COMROOT'
+export DATAROOT='/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_fcbb6494/gfs.2021122100'
+set -x
+/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2895/global-workflow/jobs/rocoto/prep.sh
+##### End of job script
+------------------------------------------------------------------
+
