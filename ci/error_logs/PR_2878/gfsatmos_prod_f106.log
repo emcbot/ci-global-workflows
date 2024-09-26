@@ -1,0 +1,1307 @@
+PBS: Running prologue on parent mom node: nid001154...
+Job 156424515.cbqs01 nodelist: nid001154
++ /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/jobs/rocoto/atmos_products.sh
+Begin atmos_products.sh at Thu Sep 26 23:08:22 UTC 2024
++ atmos_products.sh[11]: . /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Resetting modules to system default. Reseting $MODULEPATH back to system default. All extra directories will be removed from $MODULEPATH.
+
+Currently Loaded Modules:
+  1) craype-x86-rome     (H)  13) perl/5.32.0        25) met/9.1.3
+  2) libfabric/1.11.0.0. (H)  14) libjpeg/9c         26) metplus/3.1.1
+  3) craype-network-ofi  (H)  15) udunits/2.2.28     27) prepobs/1.1.0
+  4) envvar/1.0               16) gsl/2.7            28) fit2obs/1.1.4
+  5) PrgEnv-intel/8.1.0       17) cdo/1.9.8          29) mos_shared/2.7.2
+  6) craype/2.7.13            18) hdf5/1.10.6        30) module_base.wcoss2
+  7) intel/19.1.3.304         19) netcdf/4.7.4       31) grib_util/1.2.3
+  8) cray-mpich/8.1.9         20) nco/4.7.9          32) g2tmpl/1.10.2
+  9) cray-pals/1.0.17         21) prod_util/2.0.9    33) crtm/2.4.0.1
+ 10) cfp/2.0.4                22) bufr_dump/1.0.0    34) wgrib2/2.0.8
+ 11) python/3.8.6             23) util_shared/1.4.0
+ 12) gempak/7.14.1            24) ncdiag/1.0.0
+
+  Where:
+   H:  Hidden Module
+
+ 
+
++ atmos_products.sh[12]: status=0
++ atmos_products.sh[13]: ((  status != 0  ))
++ atmos_products.sh[15]: export job=atmos_products
++ atmos_products.sh[15]: job=atmos_products
++ atmos_products.sh[16]: export jobid=atmos_products.47505
++ atmos_products.sh[16]: jobid=atmos_products.47505
++ atmos_products.sh[19]: fhr3_base=10#106
++ atmos_products.sh[20]: export FORECAST_HOUR=106
++ atmos_products.sh[20]: FORECAST_HOUR=106
++ atmos_products.sh[25]: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/jobs/JGLOBAL_ATMOS_PRODUCTS
+Begin JGLOBAL_ATMOS_PRODUCTS at Thu Sep 26 23:08:24 UTC 2024
++ JGLOBAL_ATMOS_PRODUCTS[4]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/ush/jjob_header.sh -e atmos_products -c 'base atmos_products'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=atmos_products
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z atmos_products ]]
+++ jjob_header.sh[68]: export DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_e6c639aa/gfs.2021122118/atmos_products.47505
+++ jjob_header.sh[68]: DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_e6c639aa/gfs.2021122118/atmos_products.47505
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_e6c639aa/gfs.2021122118/atmos_products.47505
+++ jjob_header.sh[72]: mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_e6c639aa/gfs.2021122118/atmos_products.47505
+++ jjob_header.sh[73]: cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_e6c639aa/gfs.2021122118/atmos_products.47505
+++ jjob_header.sh[79]: export cycle=t18z
+++ jjob_header.sh[79]: cycle=t18z
+++ jjob_header.sh[80]: setpdy.sh
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20211214
++++ PDY[1]: PDYm7=20211214
++++ PDY[2]: export PDYm6=20211215
++++ PDY[2]: PDYm6=20211215
++++ PDY[3]: export PDYm5=20211216
++++ PDY[3]: PDYm5=20211216
++++ PDY[4]: export PDYm4=20211217
++++ PDY[4]: PDYm4=20211217
++++ PDY[5]: export PDYm3=20211218
++++ PDY[5]: PDYm3=20211218
++++ PDY[6]: export PDYm2=20211219
++++ PDY[6]: PDYm2=20211219
++++ PDY[7]: export PDYm1=20211220
++++ PDY[7]: PDYm1=20211220
++++ PDY[8]: export PDY=20211221
++++ PDY[8]: PDY=20211221
++++ PDY[9]: export PDYp1=20211222
++++ PDY[9]: PDYp1=20211222
++++ PDY[10]: export PDYp2=20211223
++++ PDY[10]: PDYp2=20211223
++++ PDY[11]: export PDYp3=20211224
++++ PDY[11]: PDYp3=20211224
++++ PDY[12]: export PDYp4=20211225
++++ PDY[12]: PDYp4=20211225
++++ PDY[13]: export PDYp5=20211226
++++ PDY[13]: PDYp5=20211226
++++ PDY[14]: export PDYp6=20211227
++++ PDY[14]: PDYp6=20211227
++++ PDY[15]: export PDYp7=20211228
++++ PDY[15]: PDYp7=20211228
+++ jjob_header.sh[87]: export pid=47948
+++ jjob_header.sh[87]: pid=47948
+++ jjob_header.sh[88]: export pgmout=OUTPUT.47948
+++ jjob_header.sh[88]: pgmout=OUTPUT.47948
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/EXPDIR/C96_atm3DVar_extended_e6c639aa
+++ jjob_header.sh[95]: EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/EXPDIR/C96_atm3DVar_extended_e6c639aa
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/EXPDIR/C96_atm3DVar_extended_e6c639aa/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=WCOSS2
++++ config.base[9]: machine=WCOSS2
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=GFS-DEV
++++ config.base[15]: ACCOUNT=GFS-DEV
++++ config.base[16]: export QUEUE=dev
++++ config.base[16]: QUEUE=dev
++++ config.base[17]: export QUEUE_SERVICE=dev_transfer
++++ config.base[17]: QUEUE_SERVICE=dev_transfer
++++ config.base[18]: export PARTITION_BATCH=
++++ config.base[18]: PARTITION_BATCH=
++++ config.base[19]: export PARTITION_SERVICE=
++++ config.base[19]: PARTITION_SERVICE=
++++ config.base[20]: export RESERVATION=
++++ config.base[20]: RESERVATION=
++++ config.base[21]: export CLUSTERS=
++++ config.base[21]: CLUSTERS=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow
++++ config.base[27]: HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow
++++ config.base[28]: export EXECgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/exec
++++ config.base[28]: EXECgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/exec
++++ config.base[29]: export FIXgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix
++++ config.base[29]: FIXgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix
++++ config.base[30]: export PARMgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/parm
++++ config.base[30]: PARMgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/parm
++++ config.base[31]: export SCRgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/scripts
++++ config.base[31]: SCRgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/scripts
++++ config.base[32]: export USHgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/ush
++++ config.base[32]: USHgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/ush
++++ config.base[34]: export FIXam=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/am
++++ config.base[34]: FIXam=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/am
++++ config.base[35]: export FIXaer=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/aer
++++ config.base[35]: FIXaer=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/aer
++++ config.base[36]: export FIXcpl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/cpl
++++ config.base[36]: FIXcpl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/cpl
++++ config.base[37]: export FIXlut=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/lut
++++ config.base[37]: FIXlut=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/lut
++++ config.base[38]: export FIXcice=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/cice
++++ config.base[38]: FIXcice=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/cice
++++ config.base[39]: export FIXmom=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/mom6
++++ config.base[39]: FIXmom=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/mom6
++++ config.base[40]: export FIXreg2grb2=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/reg2grb2
++++ config.base[40]: FIXreg2grb2=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/reg2grb2
++++ config.base[41]: export FIXgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/gdas
++++ config.base[41]: FIXgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/gdas
++++ config.base[46]: export PACKAGEROOT=/lfs/h1/ops/prod/packages
++++ config.base[46]: PACKAGEROOT=/lfs/h1/ops/prod/packages
++++ config.base[47]: export COMROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT
++++ config.base[47]: COMROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT
++++ config.base[48]: export COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.base[48]: COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.base[49]: export DMPDIR=/lfs/h2/emc/dump/noscrub/dump
++++ config.base[49]: DMPDIR=/lfs/h2/emc/dump/noscrub/dump
++++ config.base[53]: export COMINecmwf=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ecmwf
++++ config.base[53]: COMINecmwf=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ecmwf
++++ config.base[54]: export COMINnam=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/nam
++++ config.base[54]: COMINnam=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/nam
++++ config.base[55]: export COMINukmet=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ukmet
++++ config.base[55]: COMINukmet=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ukmet
++++ config.base[58]: export HOMEDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[58]: HOMEDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[59]: export STMP=/lfs/h2/emc/stmp/terry.mcguinness
++++ config.base[59]: STMP=/lfs/h2/emc/stmp/terry.mcguinness
++++ config.base[60]: export PTMP=/lfs/h2/emc/ptmp/terry.mcguinness
++++ config.base[60]: PTMP=/lfs/h2/emc/ptmp/terry.mcguinness
++++ config.base[61]: export NOSCRUB=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[61]: NOSCRUB=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[64]: export BASE_GIT=/lfs/h2/emc/global/save/emc.global/git
++++ config.base[64]: BASE_GIT=/lfs/h2/emc/global/save/emc.global/git
++++ config.base[67]: export DO_GOES=YES
++++ config.base[67]: DO_GOES=YES
++++ config.base[68]: export DO_BUFRSND=YES
++++ config.base[68]: DO_BUFRSND=YES
++++ config.base[69]: export DO_GEMPAK=YES
++++ config.base[69]: DO_GEMPAK=YES
++++ config.base[70]: export DO_AWIPS=NO
++++ config.base[70]: DO_AWIPS=NO
++++ config.base[71]: export DO_NPOESS=YES
++++ config.base[71]: DO_NPOESS=YES
++++ config.base[72]: export DO_TRACKER=YES
++++ config.base[72]: DO_TRACKER=YES
++++ config.base[73]: export DO_GENESIS=YES
++++ config.base[73]: DO_GENESIS=YES
++++ config.base[74]: export DO_GENESIS_FSU=NO
++++ config.base[74]: DO_GENESIS_FSU=NO
++++ config.base[75]: export DO_VERFOZN=YES
++++ config.base[75]: DO_VERFOZN=YES
++++ config.base[76]: export DO_VERFRAD=YES
++++ config.base[76]: DO_VERFRAD=YES
++++ config.base[77]: export DO_VMINMON=YES
++++ config.base[77]: DO_VMINMON=YES
++++ config.base[78]: export DO_MOS=NO
++++ config.base[78]: DO_MOS=NO
++++ config.base[84]: export REALTIME=YES
++++ config.base[84]: REALTIME=YES
++++ config.base[87]: export MODE=cycled
++++ config.base[87]: MODE=cycled
++++ config.base[96]: export FIXgsi=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/gsi
++++ config.base[96]: FIXgsi=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/gsi
++++ config.base[97]: export HOMEpost=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow
++++ config.base[97]: HOMEpost=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow
++++ config.base[98]: export HOMEobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0
++++ config.base[98]: HOMEobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0
++++ config.base[101]: export 'NCP=/bin/cp -p'
++++ config.base[101]: NCP='/bin/cp -p'
++++ config.base[102]: export NMV=/bin/mv
++++ config.base[102]: NMV=/bin/mv
++++ config.base[103]: export 'NLN=/bin/ln -sf'
++++ config.base[103]: NLN='/bin/ln -sf'
++++ config.base[104]: export VERBOSE=YES
++++ config.base[104]: VERBOSE=YES
++++ config.base[105]: export KEEPDATA=NO
++++ config.base[105]: KEEPDATA=NO
++++ config.base[106]: export DEBUG_POSTSCRIPT=NO
++++ config.base[106]: DEBUG_POSTSCRIPT=NO
++++ config.base[107]: export CHGRP_RSTPROD=YES
++++ config.base[107]: CHGRP_RSTPROD=YES
++++ config.base[108]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[108]: CHGRP_CMD='chgrp rstprod'
++++ config.base[109]: export NCDUMP=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin/ncdump
++++ config.base[109]: NCDUMP=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin/ncdump
++++ config.base[110]: export NCLEN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/ush/getncdimlen
++++ config.base[110]: NCLEN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/ush/getncdimlen
++++ config.base[113]: export BASE_ENV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/env
++++ config.base[113]: BASE_ENV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/env
++++ config.base[114]: export BASE_JOB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/jobs/rocoto
++++ config.base[114]: BASE_JOB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/jobs/rocoto
++++ config.base[117]: export SDATE=2021122018
++++ config.base[117]: SDATE=2021122018
++++ config.base[118]: export EDATE=2021122118
++++ config.base[118]: EDATE=2021122118
++++ config.base[119]: export EXP_WARM_START=.false.
++++ config.base[119]: EXP_WARM_START=.false.
++++ config.base[120]: export assim_freq=6
++++ config.base[120]: assim_freq=6
++++ config.base[121]: export PSLOT=C96_atm3DVar_extended_e6c639aa
++++ config.base[121]: PSLOT=C96_atm3DVar_extended_e6c639aa
++++ config.base[122]: export EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/EXPDIR/C96_atm3DVar_extended_e6c639aa
++++ config.base[122]: EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/EXPDIR/C96_atm3DVar_extended_e6c639aa
++++ config.base[123]: export ROTDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa
++++ config.base[123]: ROTDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa
++++ config.base[124]: export ROTDIR_DUMP=YES
++++ config.base[124]: ROTDIR_DUMP=YES
++++ config.base[125]: export DUMP_SUFFIX=
++++ config.base[125]: DUMP_SUFFIX=
++++ config.base[126]: [[ 2021122118 -ge 2019092100 ]]
++++ config.base[126]: [[ 2021122118 -le 2019110700 ]]
++++ config.base[129]: export ARCDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness/archive/C96_atm3DVar_extended_e6c639aa
++++ config.base[129]: ARCDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness/archive/C96_atm3DVar_extended_e6c639aa
++++ config.base[130]: export ATARDIR=/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C96_atm3DVar_extended_e6c639aa
++++ config.base[130]: ATARDIR=/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C96_atm3DVar_extended_e6c639aa
++++ config.base[133]: export envir=prod
++++ config.base[133]: envir=prod
++++ config.base[134]: export NET=gfs
++++ config.base[134]: NET=gfs
++++ config.base[135]: export RUN=gfs
++++ config.base[135]: RUN=gfs
++++ config.base[138]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/EXPDIR/C96_atm3DVar_extended_e6c639aa/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[78]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[79]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[81]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[82]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[83]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[84]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[85]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[86]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[87]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[88]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[90]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[91]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[92]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[93]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[94]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[95]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[96]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[97]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[99]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[100]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[101]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[103]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[141]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[141]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[142]: export LOGSCRIPT=
++++ config.base[142]: LOGSCRIPT=
++++ config.base[145]: export 'REDOUT=1>'
++++ config.base[145]: REDOUT='1>'
++++ config.base[146]: export 'REDERR=2>'
++++ config.base[146]: REDERR='2>'
++++ config.base[148]: export SENDECF=NO
++++ config.base[148]: SENDECF=NO
++++ config.base[149]: export SENDSDM=NO
++++ config.base[149]: SENDSDM=NO
++++ config.base[150]: export SENDDBN_NTC=NO
++++ config.base[150]: SENDDBN_NTC=NO
++++ config.base[151]: export SENDDBN=NO
++++ config.base[151]: SENDDBN=NO
++++ config.base[152]: export DBNROOT=/apps/ops/prod/nco/core/prod_util.v2.0.9/fakedbn
++++ config.base[152]: DBNROOT=/apps/ops/prod/nco/core/prod_util.v2.0.9/fakedbn
++++ config.base[155]: export APP=ATM
++++ config.base[155]: APP=ATM
++++ config.base[157]: shopt -s extglob
++++ config.base[159]: case "${RUN}" in
++++ config.base[166]: shopt -u extglob
++++ config.base[169]: export DO_ATM=YES
++++ config.base[169]: DO_ATM=YES
++++ config.base[170]: export DO_COUPLED=NO
++++ config.base[170]: DO_COUPLED=NO
++++ config.base[171]: export DO_WAVE=NO
++++ config.base[171]: DO_WAVE=NO
++++ config.base[172]: export DO_OCN=NO
++++ config.base[172]: DO_OCN=NO
++++ config.base[173]: export DO_ICE=NO
++++ config.base[173]: DO_ICE=NO
++++ config.base[174]: export DO_AERO=NO
++++ config.base[174]: DO_AERO=NO
++++ config.base[175]: export DO_PREP_OBS_AERO=NO
++++ config.base[175]: DO_PREP_OBS_AERO=NO
++++ config.base[176]: export AERO_FCST_RUN=
++++ config.base[176]: AERO_FCST_RUN=
++++ config.base[177]: export AERO_ANL_RUN=
++++ config.base[177]: AERO_ANL_RUN=
++++ config.base[178]: export WAVE_RUN=
++++ config.base[178]: WAVE_RUN=
++++ config.base[179]: export DOBNDPNT_WAVE=NO
++++ config.base[179]: DOBNDPNT_WAVE=NO
++++ config.base[180]: export DOIBP_WAV=NO
++++ config.base[180]: DOIBP_WAV=NO
++++ config.base[181]: export FRAC_GRID=.true.
++++ config.base[181]: FRAC_GRID=.true.
++++ config.base[182]: export DO_NEST=NO
++++ config.base[182]: DO_NEST=NO
++++ config.base[183]: [[ NO == \Y\E\S ]]
++++ config.base[189]: export ntiles=6
++++ config.base[189]: ntiles=6
++++ config.base[190]: export FIXugwd=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/ugwd
++++ config.base[190]: FIXugwd=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/ugwd
++++ config.base[191]: export FIXorog=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/orog
++++ config.base[191]: FIXorog=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/fix/orog
++++ config.base[195]: export OPS_RES=C768
++++ config.base[195]: OPS_RES=C768
++++ config.base[198]: export LEVS=128
++++ config.base[198]: LEVS=128
++++ config.base[199]: export CASE=C96
++++ config.base[199]: CASE=C96
++++ config.base[200]: export CASE_ENS=@CASEENS@
++++ config.base[200]: CASE_ENS=@CASEENS@
++++ config.base[201]: export OCNRES=500
++++ config.base[201]: OCNRES=500
++++ config.base[202]: export ICERES=500
++++ config.base[202]: ICERES=500
++++ config.base[205]: case "${CASE}" in
++++ config.base[210]: export waveGRD=uglo_100km
++++ config.base[210]: waveGRD=uglo_100km
++++ config.base[224]: case "${APP}" in
++++ config.base[265]: [[ gfs =~ gdas ]]
++++ config.base[268]: [[ gfs =~ gfs ]]
++++ config.base[269]: export FHCYC=24
++++ config.base[269]: FHCYC=24
++++ config.base[273]: export FHMIN=0
++++ config.base[273]: FHMIN=0
++++ config.base[274]: export FHMAX=9
++++ config.base[274]: FHMAX=9
++++ config.base[275]: export FHOUT=3
++++ config.base[275]: FHOUT=3
++++ config.base[276]: export FHOUT_OCN=3
++++ config.base[276]: FHOUT_OCN=3
++++ config.base[277]: export FHOUT_ICE=3
++++ config.base[277]: FHOUT_ICE=3
++++ config.base[280]: export EUPD_CYC=gdas
++++ config.base[280]: EUPD_CYC=gdas
++++ config.base[283]: export gfs_cyc=4
++++ config.base[283]: gfs_cyc=4
++++ config.base[286]: export FHMIN_GFS=0
++++ config.base[286]: FHMIN_GFS=0
++++ config.base[287]: export FHMAX_GFS=384
++++ config.base[287]: FHMAX_GFS=384
++++ config.base[289]: breakpnts=192
++++ config.base[290]: export FCST_SEGMENTS=0,192,384
++++ config.base[290]: FCST_SEGMENTS=0,192,384
++++ config.base[291]: export FHOUT_GFS=3
++++ config.base[291]: FHOUT_GFS=3
++++ config.base[292]: export FHMAX_HF_GFS=120
++++ config.base[292]: FHMAX_HF_GFS=120
++++ config.base[293]: export FHOUT_HF_GFS=1
++++ config.base[293]: FHOUT_HF_GFS=1
++++ config.base[294]: export FHOUT_OCN_GFS=6
++++ config.base[294]: FHOUT_OCN_GFS=6
++++ config.base[295]: export FHOUT_ICE_GFS=6
++++ config.base[295]: FHOUT_ICE_GFS=6
++++ config.base[296]: export FHMIN_WAV=0
++++ config.base[296]: FHMIN_WAV=0
++++ config.base[297]: export FHOUT_WAV=3
++++ config.base[297]: FHOUT_WAV=3
++++ config.base[298]: export FHMAX_HF_WAV=120
++++ config.base[298]: FHMAX_HF_WAV=120
++++ config.base[299]: export FHOUT_HF_WAV=1
++++ config.base[299]: FHOUT_HF_WAV=1
++++ config.base[300]: export FHMAX_WAV=9
++++ config.base[300]: FHMAX_WAV=9
++++ config.base[301]: export FHMAX_WAV_GFS=384
++++ config.base[301]: FHMAX_WAV_GFS=384
++++ config.base[302]: ((  gfs_cyc != 0  ))
++++ config.base[303]: export STEP_GFS=6
++++ config.base[303]: STEP_GFS=6
++++ config.base[308]: export ILPOST=1
++++ config.base[308]: ILPOST=1
++++ config.base[309]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[314]: export FHMAX_GOES=180
++++ config.base[314]: FHMAX_GOES=180
++++ config.base[315]: export FHOUT_GOES=3
++++ config.base[315]: FHOUT_GOES=3
++++ config.base[316]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[321]: export restart_interval_gfs=12
++++ config.base[321]: restart_interval_gfs=12
++++ config.base[326]: export QUILTING=.true.
++++ config.base[326]: QUILTING=.true.
++++ config.base[327]: export OUTPUT_GRID=gaussian_grid
++++ config.base[327]: OUTPUT_GRID=gaussian_grid
++++ config.base[328]: export WRITE_DOPOST=.true.
++++ config.base[328]: WRITE_DOPOST=.true.
++++ config.base[329]: export WRITE_NSFLIP=.true.
++++ config.base[329]: WRITE_NSFLIP=.true.
++++ config.base[332]: export DOIAU=YES
++++ config.base[332]: DOIAU=YES
++++ config.base[333]: export IAUFHRS=3,6,9
++++ config.base[333]: IAUFHRS=3,6,9
++++ config.base[334]: export IAU_FHROT=3
++++ config.base[334]: IAU_FHROT=3
++++ config.base[335]: export IAU_DELTHRS=6
++++ config.base[335]: IAU_DELTHRS=6
++++ config.base[336]: export IAU_OFFSET=6
++++ config.base[336]: IAU_OFFSET=6
++++ config.base[337]: export DOIAU_ENKF=YES
++++ config.base[337]: DOIAU_ENKF=YES
++++ config.base[338]: export IAUFHRS_ENKF=3,6,9
++++ config.base[338]: IAUFHRS_ENKF=3,6,9
++++ config.base[339]: export IAU_DELTHRS_ENKF=6
++++ config.base[339]: IAU_DELTHRS_ENKF=6
++++ config.base[342]: export lobsdiag_forenkf=.true.
++++ config.base[342]: lobsdiag_forenkf=.true.
++++ config.base[350]: export imp_physics=8
++++ config.base[350]: imp_physics=8
++++ config.base[354]: export DO_JEDIATMVAR=NO
++++ config.base[354]: DO_JEDIATMVAR=NO
++++ config.base[355]: export DO_JEDIATMENS=NO
++++ config.base[355]: DO_JEDIATMENS=NO
++++ config.base[356]: export DO_JEDIOCNVAR=NO
++++ config.base[356]: DO_JEDIOCNVAR=NO
++++ config.base[357]: export DO_JEDISNOWDA=NO
++++ config.base[357]: DO_JEDISNOWDA=NO
++++ config.base[358]: export DO_MERGENSST=NO
++++ config.base[358]: DO_MERGENSST=NO
++++ config.base[361]: export DOHYBVAR=NO
++++ config.base[361]: DOHYBVAR=NO
++++ config.base[362]: export NMEM_ENS=0
++++ config.base[362]: NMEM_ENS=0
++++ config.base[363]: export SMOOTH_ENKF=NO
++++ config.base[363]: SMOOTH_ENKF=NO
++++ config.base[364]: export l4densvar=.true.
++++ config.base[364]: l4densvar=.true.
++++ config.base[365]: export lwrite4danl=.true.
++++ config.base[365]: lwrite4danl=.true.
++++ config.base[366]: export DO_CALC_INCREMENT=NO
++++ config.base[366]: DO_CALC_INCREMENT=NO
++++ config.base[369]: export NMEM_ENS_GFS=30
++++ config.base[369]: NMEM_ENS_GFS=30
++++ config.base[370]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[370]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[371]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[371]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[374]: [[ NO = \Y\E\S ]]
++++ config.base[388]: [[ NO == \N\O ]]
++++ config.base[388]: [[ YES == \Y\E\S ]]
++++ config.base[389]: export IAUFHRS=6,
++++ config.base[389]: IAUFHRS=6,
++++ config.base[390]: export IAU_FHROT=3
++++ config.base[390]: IAU_FHROT=3
++++ config.base[391]: export IAU_FILTER_INCREMENTS=.true.
++++ config.base[391]: IAU_FILTER_INCREMENTS=.true.
++++ config.base[392]: export IAUFHRS_ENKF=6,
++++ config.base[392]: IAUFHRS_ENKF=6,
++++ config.base[396]: export ENKF_SPREAD=YES
++++ config.base[396]: ENKF_SPREAD=YES
++++ config.base[399]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[399]: [[ 2021122018 = \2\0\2\1\1\2\2\1\1\8 ]]
++++ config.base[399]: [[ YES = \N\O ]]
++++ config.base[399]: [[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[405]: [[ YES = \N\O ]]
++++ config.base[409]: [[ YES == \Y\E\S ]]
++++ config.base[410]: export restart_interval_enkfgdas=3
++++ config.base[410]: restart_interval_enkfgdas=3
++++ config.base[415]: export restart_interval_enkfgfs=3
++++ config.base[415]: restart_interval_enkfgfs=3
++++ config.base[417]: [[ YES == \Y\E\S ]]
++++ config.base[418]: export restart_interval_gdas=3
++++ config.base[418]: restart_interval_gdas=3
++++ config.base[423]: export GSI_SOILANAL=NO
++++ config.base[423]: GSI_SOILANAL=NO
++++ config.base[426]: export DONST=YES
++++ config.base[426]: DONST=YES
++++ config.base[427]: [[ YES = \Y\E\S ]]
++++ config.base[427]: export 'FNTSFA=        '
++++ config.base[427]: FNTSFA='        '
++++ config.base[430]: export nst_anl=.true.
++++ config.base[430]: nst_anl=.true.
++++ config.base[433]: export MAKE_NSSTBUFR=NO
++++ config.base[433]: MAKE_NSSTBUFR=NO
++++ config.base[436]: export MAKE_ACFTBUFR=NO
++++ config.base[436]: MAKE_ACFTBUFR=NO
++++ config.base[439]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[439]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[442]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[442]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[443]: export INCVARS_EFOLD=5
++++ config.base[443]: INCVARS_EFOLD=5
++++ config.base[448]: export netcdf_diag=.true.
++++ config.base[448]: netcdf_diag=.true.
++++ config.base[449]: export binary_diag=.false.
++++ config.base[449]: binary_diag=.false.
++++ config.base[452]: export DO_METP=YES
++++ config.base[452]: DO_METP=YES
++++ config.base[453]: export DO_FIT2OBS=YES
++++ config.base[453]: DO_FIT2OBS=YES
++++ config.base[454]: export DO_VRFY_OCEANDA=NO
++++ config.base[454]: DO_VRFY_OCEANDA=NO
++++ config.base[457]: export FHMAX_FITS=132
++++ config.base[457]: FHMAX_FITS=132
++++ config.base[458]: [[ 132 -gt 384 ]]
++++ config.base[461]: export HPSSARCH=NO
++++ config.base[461]: HPSSARCH=NO
++++ config.base[462]: export LOCALARCH=NO
++++ config.base[462]: LOCALARCH=NO
++++ config.base[463]: [[ NO = \Y\E\S ]]
++++ config.base[467]: export ARCH_CYC=00
++++ config.base[467]: ARCH_CYC=00
++++ config.base[468]: export ARCH_WARMICFREQ=4
++++ config.base[468]: ARCH_WARMICFREQ=4
++++ config.base[469]: export ARCH_FCSTICFREQ=1
++++ config.base[469]: ARCH_FCSTICFREQ=1
++++ config.base[472]: [[ NO = \Y\E\S ]]
++++ config.base[480]: export REPLAY_ICS=NO
++++ config.base[480]: REPLAY_ICS=NO
++++ config.base[481]: export OFFSET_START_HOUR=0
++++ config.base[481]: OFFSET_START_HOUR=0
++++ config.base[484]: export NUM_SND_COLLECTIVES=9
++++ config.base[484]: NUM_SND_COLLECTIVES=9
++++ config.base[488]: [[ WCOSS2 =~ PW ]]
++++ config.base[497]: [[ WCOSS2 == \O\R\I\O\N ]]
++++ config.base[497]: [[ WCOSS2 == \H\E\R\C\U\L\E\S ]]
++++ config.base[502]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/EXPDIR/C96_atm3DVar_extended_e6c639aa/config.atmos_products
++++ config.atmos_products[6]: echo 'BEGIN: config.atmos_products'
+BEGIN: config.atmos_products
++++ config.atmos_products[9]: . /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/EXPDIR/C96_atm3DVar_extended_e6c639aa/config.resources atmos_products
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=atmos_products
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[40]: max_tasks_per_node=128
+++++ config.resources[43]: mem_node_max=500GB
+++++ config.resources[144]: export max_tasks_per_node
+++++ config.resources[146]: case ${step} in
+++++ config.resources[923]: walltime=00:15:00
+++++ config.resources[924]: ntasks=24
+++++ config.resources[925]: threads_per_task=1
+++++ config.resources[926]: tasks_per_node=24
+++++ config.resources[927]: export is_exclusive=True
+++++ config.resources[927]: is_exclusive=True
+++++ config.resources[1426]: [[ -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/EXPDIR/C96_atm3DVar_extended_e6c639aa/config.resources.WCOSS2 ]]
+++++ config.resources[1427]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/EXPDIR/C96_atm3DVar_extended_e6c639aa/config.resources.WCOSS2
++++++ config.resources.WCOSS2[5]: case ${step} in
+++++ config.resources[1431]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1432]: run_resource_var=threads_per_task_gfs
+++++ config.resources[1433]: [[ -n '' ]]
+++++ config.resources[1435]: [[ -n 0 ]]
+++++ config.resources[1436]: export threads_per_task
+++++ config.resources[1431]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1432]: run_resource_var=ntasks_gfs
+++++ config.resources[1433]: [[ -n '' ]]
+++++ config.resources[1435]: [[ -n 0 ]]
+++++ config.resources[1436]: export ntasks
+++++ config.resources[1431]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1432]: run_resource_var=tasks_per_node_gfs
+++++ config.resources[1433]: [[ -n '' ]]
+++++ config.resources[1435]: [[ -n 0 ]]
+++++ config.resources[1436]: export tasks_per_node
+++++ config.resources[1431]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1432]: run_resource_var=NTASKS_gfs
+++++ config.resources[1433]: [[ -n '' ]]
+++++ config.resources[1435]: [[ -n '' ]]
+++++ config.resources[1431]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1432]: run_resource_var=memory_gfs
+++++ config.resources[1433]: [[ -n '' ]]
+++++ config.resources[1435]: [[ -n '' ]]
+++++ config.resources[1431]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1432]: run_resource_var=walltime_gfs
+++++ config.resources[1433]: [[ -n '' ]]
+++++ config.resources[1435]: [[ -n 0 ]]
+++++ config.resources[1436]: export walltime
+++++ config.resources[1440]: echo 'END: config.resources'
+END: config.resources
++++ config.atmos_products[12]: export NFHRS_PER_GROUP=3
++++ config.atmos_products[12]: NFHRS_PER_GROUP=3
++++ config.atmos_products[15]: export INTERP_ATMOS_MASTERSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/ush/interp_atmos_master.sh
++++ config.atmos_products[15]: INTERP_ATMOS_MASTERSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/ush/interp_atmos_master.sh
++++ config.atmos_products[16]: export INTERP_ATMOS_SFLUXSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/ush/interp_atmos_sflux.sh
++++ config.atmos_products[16]: INTERP_ATMOS_SFLUXSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/ush/interp_atmos_sflux.sh
++++ config.atmos_products[18]: [[ gfs == \g\d\a\s ]]
++++ config.atmos_products[24]: [[ gfs == \g\f\s ]]
++++ config.atmos_products[25]: export downset=2
++++ config.atmos_products[25]: downset=2
++++ config.atmos_products[26]: export FHOUT_PGBS=3
++++ config.atmos_products[26]: FHOUT_PGBS=3
++++ config.atmos_products[27]: export FLXGF=YES
++++ config.atmos_products[27]: FLXGF=YES
++++ config.atmos_products[28]: export WGNE=YES
++++ config.atmos_products[28]: WGNE=YES
++++ config.atmos_products[29]: export FHMAX_WGNE=180
++++ config.atmos_products[29]: FHMAX_WGNE=180
++++ config.atmos_products[32]: export APCP_MSG=597
++++ config.atmos_products[32]: APCP_MSG=597
++++ config.atmos_products[35]: export paramlista=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/parm/product/gfs.fFFF.paramlist.a.txt
++++ config.atmos_products[35]: paramlista=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/parm/product/gfs.fFFF.paramlist.a.txt
++++ config.atmos_products[36]: export paramlista_anl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/parm/product/gfs.anl.paramlist.a.txt
++++ config.atmos_products[36]: paramlista_anl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/parm/product/gfs.anl.paramlist.a.txt
++++ config.atmos_products[37]: export paramlista_f000=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/parm/product/gfs.f000.paramlist.a.txt
++++ config.atmos_products[37]: paramlista_f000=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/parm/product/gfs.f000.paramlist.a.txt
++++ config.atmos_products[38]: export paramlistb=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/parm/product/gfs.fFFF.paramlist.b.txt
++++ config.atmos_products[38]: paramlistb=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/parm/product/gfs.fFFF.paramlist.b.txt
++++ config.atmos_products[40]: echo 'END: config.atmos_products'
+END: config.atmos_products
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/env/WCOSS2.env atmos_products
++++ WCOSS2.env[3]: [[ 1 -ne 1 ]]
++++ WCOSS2.env[10]: step=atmos_products
++++ WCOSS2.env[13]: export 'launcher=mpiexec -l'
++++ WCOSS2.env[13]: launcher='mpiexec -l'
++++ WCOSS2.env[14]: export 'mpmd_opt=--cpu-bind verbose,core cfp'
++++ WCOSS2.env[14]: mpmd_opt='--cpu-bind verbose,core cfp'
++++ WCOSS2.env[18]: [[ -n 24 ]]
++++ WCOSS2.env[18]: [[ -n 128 ]]
++++ WCOSS2.env[18]: [[ -n 24 ]]
++++ WCOSS2.env[19]: max_threads_per_task=5
++++ WCOSS2.env[20]: NTHREADSmax=1
++++ WCOSS2.env[21]: NTHREADS1=1
++++ WCOSS2.env[22]: [[ 1 -gt 5 ]]
++++ WCOSS2.env[23]: [[ 1 -gt 5 ]]
++++ WCOSS2.env[24]: APRUN_default='mpiexec -l -n 24'
++++ WCOSS2.env[30]: [[ atmos_products = \p\r\e\p ]]
++++ WCOSS2.env[30]: [[ atmos_products = \p\r\e\p\b\u\f\r ]]
++++ WCOSS2.env[37]: [[ atmos_products = \p\r\e\p\s\n\o\w\o\b\s ]]
++++ WCOSS2.env[41]: [[ atmos_products = \p\r\e\p\_\e\m\i\s\s\i\o\n\s ]]
++++ WCOSS2.env[45]: [[ atmos_products = \w\a\v\e\i\n\i\t ]]
++++ WCOSS2.env[45]: [[ atmos_products = \w\a\v\e\p\r\e\p ]]
++++ WCOSS2.env[45]: [[ atmos_products = \w\a\v\e\p\o\s\t\s\b\s ]]
++++ WCOSS2.env[45]: [[ atmos_products = \w\a\v\e\p\o\s\t\b\n\d\p\n\t ]]
++++ WCOSS2.env[45]: [[ atmos_products = \w\a\v\e\p\o\s\t\b\n\d\p\n\t\b\l\l ]]
++++ WCOSS2.env[45]: [[ atmos_products = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ WCOSS2.env[51]: [[ atmos_products = \a\t\m\a\n\l\v\a\r ]]
++++ WCOSS2.env[56]: [[ atmos_products = \a\t\m\e\n\s\a\n\l\o\b\s ]]
++++ WCOSS2.env[61]: [[ atmos_products = \a\t\m\e\n\s\a\n\l\s\o\l ]]
++++ WCOSS2.env[66]: [[ atmos_products = \a\t\m\e\n\s\a\n\l\l\e\t\k\f ]]
++++ WCOSS2.env[71]: [[ atmos_products = \a\t\m\e\n\s\a\n\l\f\v\3\i\n\c ]]
++++ WCOSS2.env[76]: [[ atmos_products = \a\e\r\o\a\n\l\v\a\r ]]
++++ WCOSS2.env[83]: [[ atmos_products = \a\e\r\o\a\n\l\g\e\n\b ]]
++++ WCOSS2.env[88]: [[ atmos_products = \p\r\e\p\o\b\s\a\e\r\o ]]
++++ WCOSS2.env[93]: [[ atmos_products = \s\n\o\w\a\n\l ]]
++++ WCOSS2.env[100]: [[ atmos_products = \e\s\n\o\w\r\e\c\e\n ]]
++++ WCOSS2.env[107]: [[ atmos_products = \m\a\r\i\n\e\b\m\a\t ]]
++++ WCOSS2.env[112]: [[ atmos_products = \o\c\n\a\n\a\l\r\u\n ]]
++++ WCOSS2.env[118]: [[ atmos_products = \o\c\n\a\n\a\l\c\h\k\p\t ]]
++++ WCOSS2.env[124]: [[ atmos_products = \o\c\n\a\n\a\l\e\c\e\n ]]
++++ WCOSS2.env[129]: [[ atmos_products = \m\a\r\i\n\e\a\n\a\l\l\e\t\k\f ]]
++++ WCOSS2.env[134]: [[ atmos_products = \a\t\m\a\n\l\f\v\3\i\n\c ]]
++++ WCOSS2.env[139]: [[ atmos_products = \a\n\a\l ]]
++++ WCOSS2.env[139]: [[ atmos_products = \a\n\a\l\c\a\l\c ]]
++++ WCOSS2.env[173]: [[ atmos_products = \s\f\c\a\n\l ]]
++++ WCOSS2.env[179]: [[ atmos_products = \e\o\b\s ]]
++++ WCOSS2.env[192]: [[ atmos_products = \e\u\p\d ]]
++++ WCOSS2.env[206]: [[ atmos_products = \f\c\s\t ]]
++++ WCOSS2.env[206]: [[ atmos_products = \e\f\c\s ]]
++++ WCOSS2.env[224]: [[ atmos_products = \u\p\p ]]
++++ WCOSS2.env[229]: [[ atmos_products = \a\t\m\o\s\_\p\r\o\d\u\c\t\s ]]
++++ WCOSS2.env[231]: export USE_CFP=YES
++++ WCOSS2.env[231]: USE_CFP=YES
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
++ JGLOBAL_ATMOS_PRODUCTS[12]: YMD=20211221
++ JGLOBAL_ATMOS_PRODUCTS[12]: HH=18
++ JGLOBAL_ATMOS_PRODUCTS[12]: declare_from_tmpl -rx COM_ATMOS_ANALYSIS COM_ATMOS_HISTORY COM_ATMOS_MASTER
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_ANALYSIS=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa/gfs.20211221/18//analysis/atmos
+declare_from_tmpl :: COM_ATMOS_HISTORY=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa/gfs.20211221/18//model/atmos/history
+declare_from_tmpl :: COM_ATMOS_MASTER=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa/gfs.20211221/18//model/atmos/master
++ JGLOBAL_ATMOS_PRODUCTS[14]: for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[15]: prod_dir=COM_ATMOS_GRIB_0p25
++ JGLOBAL_ATMOS_PRODUCTS[16]: GRID=0p25
++ JGLOBAL_ATMOS_PRODUCTS[16]: YMD=20211221
++ JGLOBAL_ATMOS_PRODUCTS[16]: HH=18
++ JGLOBAL_ATMOS_PRODUCTS[16]: declare_from_tmpl -rx COM_ATMOS_GRIB_0p25:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_GRIB_0p25=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa/gfs.20211221/18//products/atmos/grib2/0p25
++ JGLOBAL_ATMOS_PRODUCTS[17]: [[ ! -d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa/gfs.20211221/18//products/atmos/grib2/0p25 ]]
++ JGLOBAL_ATMOS_PRODUCTS[14]: for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[15]: prod_dir=COM_ATMOS_GRIB_0p50
++ JGLOBAL_ATMOS_PRODUCTS[16]: GRID=0p50
++ JGLOBAL_ATMOS_PRODUCTS[16]: YMD=20211221
++ JGLOBAL_ATMOS_PRODUCTS[16]: HH=18
++ JGLOBAL_ATMOS_PRODUCTS[16]: declare_from_tmpl -rx COM_ATMOS_GRIB_0p50:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_GRIB_0p50=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa/gfs.20211221/18//products/atmos/grib2/0p50
++ JGLOBAL_ATMOS_PRODUCTS[17]: [[ ! -d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa/gfs.20211221/18//products/atmos/grib2/0p50 ]]
++ JGLOBAL_ATMOS_PRODUCTS[14]: for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[15]: prod_dir=COM_ATMOS_GRIB_1p00
++ JGLOBAL_ATMOS_PRODUCTS[16]: GRID=1p00
++ JGLOBAL_ATMOS_PRODUCTS[16]: YMD=20211221
++ JGLOBAL_ATMOS_PRODUCTS[16]: HH=18
++ JGLOBAL_ATMOS_PRODUCTS[16]: declare_from_tmpl -rx COM_ATMOS_GRIB_1p00:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_GRIB_1p00=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa/gfs.20211221/18//products/atmos/grib2/1p00
++ JGLOBAL_ATMOS_PRODUCTS[17]: [[ ! -d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa/gfs.20211221/18//products/atmos/grib2/1p00 ]]
++ JGLOBAL_ATMOS_PRODUCTS[21]: export PREFIX=gfs.t18z.
++ JGLOBAL_ATMOS_PRODUCTS[21]: PREFIX=gfs.t18z.
++ JGLOBAL_ATMOS_PRODUCTS[25]: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/scripts/exglobal_atmos_products.sh
+Begin exglobal_atmos_products.sh at Thu Sep 26 23:08:26 UTC 2024
++ exglobal_atmos_products.sh[6]: export WGRIB2=/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin/wgrib2
++ exglobal_atmos_products.sh[6]: WGRIB2=/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin/wgrib2
++ exglobal_atmos_products.sh[9]: INTERP_ATMOS_MASTERSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/ush/interp_atmos_master.sh
++ exglobal_atmos_products.sh[10]: INTERP_ATMOS_SFLUXSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/ush/interp_atmos_sflux.sh
++ exglobal_atmos_products.sh[13]: downset=2
++ exglobal_atmos_products.sh[14]: ntasks_atmos_products=8
++ exglobal_atmos_products.sh[17]: WGNE=YES
++ exglobal_atmos_products.sh[18]: FHMAX_WGNE=180
++ exglobal_atmos_products.sh[20]: cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_e6c639aa/gfs.2021122118/atmos_products.47505
++ exglobal_atmos_products.sh[24]: ((  FORECAST_HOUR <= 0  ))
+++ exglobal_atmos_products.sh[35]: printf f%03d 106
++ exglobal_atmos_products.sh[35]: fhr3=f106
++ exglobal_atmos_products.sh[36]: ((  FORECAST_HOUR%FHOUT_PGBS == 0  ))
++ exglobal_atmos_products.sh[45]: MASTER_FILE=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa/gfs.20211221/18//model/atmos/master/gfs.t18z.master.grb2f106
++ exglobal_atmos_products.sh[50]: /apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin/wgrib2 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa/gfs.20211221/18//model/atmos/master/gfs.t18z.master.grb2f106
++ exglobal_atmos_products.sh[50]: grep -F -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/parm/product/gfs.fFFF.paramlist.a.txt
++ exglobal_atmos_products.sh[50]: /apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin/wgrib2 -i -grib tmpfile_f106 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa/gfs.20211221/18//model/atmos/master/gfs.t18z.master.grb2f106
+1:0:d=2021122118:PRMSL:mean sea level:106 hour fcst:
+2:94037:d=2021122118:CLMR:1 hybrid level:106 hour fcst:
+3:110774:d=2021122118:ICMR:1 hybrid level:106 hour fcst:
+4:131818:d=2021122118:RWMR:1 hybrid level:106 hour fcst:
+5:174396:d=2021122118:SNMR:1 hybrid level:106 hour fcst:
+6:206332:d=2021122118:GRLE:1 hybrid level:106 hour fcst:
+7:215088:d=2021122118:REFD:1 hybrid level:106 hour fcst:
+8:310565:d=2021122118:REFD:2 hybrid level:106 hour fcst:
+9:405974:d=2021122118:REFC:entire atmosphere (considered as a single layer):106 hour fcst:
+10:508308:d=2021122118:VIS:surface:106 hour fcst:
+11:629470:d=2021122118:UGRD:planetary boundary layer:106 hour fcst:
+12:678918:d=2021122118:VGRD:planetary boundary layer:106 hour fcst:
+13:728893:d=2021122118:VRATE:planetary boundary layer:106 hour fcst:
+14:780967:d=2021122118:GUST:surface:106 hour fcst:
+15:832702:d=2021122118:HGT:0.01 mb:106 hour fcst:
+16:903573:d=2021122118:TMP:0.01 mb:106 hour fcst:
+17:944115:d=2021122118:RH:0.01 mb:106 hour fcst:
+18:963429:d=2021122118:SPFH:0.01 mb:106 hour fcst:
+19:1047216:d=2021122118:VVEL:0.01 mb:106 hour fcst:
+20:1131581:d=2021122118:DZDT:0.01 mb:106 hour fcst:
+21:1221711:d=2021122118:UGRD:0.01 mb:106 hour fcst:
+22:1268211:d=2021122118:VGRD:0.01 mb:106 hour fcst:
+23:1308587:d=2021122118:ABSV:0.01 mb:106 hour fcst:
+24:1374857:d=2021122118:O3MR:0.01 mb:106 hour fcst:
+25:1429221:d=2021122118:HGT:0.02 mb:106 hour fcst:
+26:1499071:d=2021122118:TMP:0.02 mb:106 hour fcst:
+27:1556970:d=2021122118:RH:0.02 mb:106 hour fcst:
+28:1582684:d=2021122118:SPFH:0.02 mb:106 hour fcst:
+29:1666931:d=2021122118:VVEL:0.02 mb:106 hour fcst:
+30:1769886:d=2021122118:DZDT:0.02 mb:106 hour fcst:
+31:1869817:d=2021122118:UGRD:0.02 mb:106 hour fcst:
+32:1917544:d=2021122118:VGRD:0.02 mb:106 hour fcst:
+33:1960581:d=2021122118:ABSV:0.02 mb:106 hour fcst:
+34:2030165:d=2021122118:O3MR:0.02 mb:106 hour fcst:
+35:2095091:d=2021122118:HGT:0.04 mb:106 hour fcst:
+36:2160226:d=2021122118:TMP:0.04 mb:106 hour fcst:
+37:2224315:d=2021122118:RH:0.04 mb:106 hour fcst:
+38:2261409:d=2021122118:SPFH:0.04 mb:106 hour fcst:
+39:2330798:d=2021122118:VVEL:0.04 mb:106 hour fcst:
+40:2436026:d=2021122118:DZDT:0.04 mb:106 hour fcst:
+41:2544306:d=2021122118:UGRD:0.04 mb:106 hour fcst:
+42:2589436:d=2021122118:VGRD:0.04 mb:106 hour fcst:
+43:2630580:d=2021122118:ABSV:0.04 mb:106 hour fcst:
+44:2701836:d=2021122118:O3MR:0.04 mb:106 hour fcst:
+45:2766806:d=2021122118:HGT:0.07 mb:106 hour fcst:
+46:2830234:d=2021122118:TMP:0.07 mb:106 hour fcst:
+47:2892664:d=2021122118:RH:0.07 mb:106 hour fcst:
+48:2922979:d=2021122118:SPFH:0.07 mb:106 hour fcst:
+49:2976314:d=2021122118:VVEL:0.07 mb:106 hour fcst:
+50:3064965:d=2021122118:DZDT:0.07 mb:106 hour fcst:
+51:3177341:d=2021122118:UGRD:0.07 mb:106 hour fcst:
+52:3222502:d=2021122118:VGRD:0.07 mb:106 hour fcst:
+53:3264364:d=2021122118:ABSV:0.07 mb:106 hour fcst:
+54:3335814:d=2021122118:O3MR:0.07 mb:106 hour fcst:
+55:3386313:d=2021122118:HGT:0.1 mb:106 hour fcst:
+56:3449042:d=2021122118:TMP:0.1 mb:106 hour fcst:
+57:3509167:d=2021122118:RH:0.1 mb:106 hour fcst:
+58:3535066:d=2021122118:SPFH:0.1 mb:106 hour fcst:
+59:3598052:d=2021122118:VVEL:0.1 mb:106 hour fcst:
+60:3690188:d=2021122118:DZDT:0.1 mb:106 hour fcst:
+61:3794030:d=2021122118:UGRD:0.1 mb:106 hour fcst:
+62:3837232:d=2021122118:VGRD:0.1 mb:106 hour fcst:
+63:3877265:d=2021122118:ABSV:0.1 mb:106 hour fcst:
+64:3946689:d=2021122118:O3MR:0.1 mb:106 hour fcst:
+65:4009441:d=2021122118:HGT:0.2 mb:106 hour fcst:
+66:4070526:d=2021122118:TMP:0.2 mb:106 hour fcst:
+67:4128433:d=2021122118:RH:0.2 mb:106 hour fcst:
+68:4145850:d=2021122118:SPFH:0.2 mb:106 hour fcst:
+69:4211337:d=2021122118:VVEL:0.2 mb:106 hour fcst:
+70:4309157:d=2021122118:DZDT:0.2 mb:106 hour fcst:
+71:4419563:d=2021122118:UGRD:0.2 mb:106 hour fcst:
+72:4461245:d=2021122118:VGRD:0.2 mb:106 hour fcst:
+73:4498907:d=2021122118:ABSV:0.2 mb:106 hour fcst:
+74:4565663:d=2021122118:O3MR:0.2 mb:106 hour fcst:
+75:4634079:d=2021122118:HGT:0.4 mb:106 hour fcst:
+76:4693356:d=2021122118:TMP:0.4 mb:106 hour fcst:
+77:4750554:d=2021122118:RH:0.4 mb:106 hour fcst:
+78:4770667:d=2021122118:SPFH:0.4 mb:106 hour fcst:
+79:4849092:d=2021122118:VVEL:0.4 mb:106 hour fcst:
+80:4953471:d=2021122118:DZDT:0.4 mb:106 hour fcst:
+81:5053526:d=2021122118:UGRD:0.4 mb:106 hour fcst:
+82:5093868:d=2021122118:VGRD:0.4 mb:106 hour fcst:
+83:5156553:d=2021122118:ABSV:0.4 mb:106 hour fcst:
+84:5221134:d=2021122118:O3MR:0.4 mb:106 hour fcst:
+85:5292888:d=2021122118:HGT:0.7 mb:106 hour fcst:
+86:5351155:d=2021122118:TMP:0.7 mb:106 hour fcst:
+87:5407875:d=2021122118:RH:0.7 mb:106 hour fcst:
+88:5421208:d=2021122118:SPFH:0.7 mb:106 hour fcst:
+89:5495717:d=2021122118:VVEL:0.7 mb:106 hour fcst:
+90:5604884:d=2021122118:DZDT:0.7 mb:106 hour fcst:
+91:5698230:d=2021122118:UGRD:0.7 mb:106 hour fcst:
+92:5736986:d=2021122118:VGRD:0.7 mb:106 hour fcst:
+93:5771462:d=2021122118:ABSV:0.7 mb:106 hour fcst:
+94:5834787:d=2021122118:O3MR:0.7 mb:106 hour fcst:
+95:5910956:d=2021122118:HGT:1 mb:106 hour fcst:
+96:5968503:d=2021122118:TMP:1 mb:106 hour fcst:
+97:6024193:d=2021122118:RH:1 mb:106 hour fcst:
+98:6041285:d=2021122118:SPFH:1 mb:106 hour fcst:
+99:6105932:d=2021122118:VVEL:1 mb:106 hour fcst:
+100:6208123:d=2021122118:DZDT:1 mb:106 hour fcst:
+101:6317584:d=2021122118:UGRD:1 mb:106 hour fcst:
+102:6355514:d=2021122118:VGRD:1 mb:106 hour fcst:
+103:6389401:d=2021122118:ABSV:1 mb:106 hour fcst:
+104:6451240:d=2021122118:O3MR:1 mb:106 hour fcst:
+105:6531439:d=2021122118:HGT:2 mb:106 hour fcst:
+106:6586645:d=2021122118:TMP:2 mb:106 hour fcst:
+107:6644203:d=2021122118:RH:2 mb:106 hour fcst:
+108:6660263:d=2021122118:SPFH:2 mb:106 hour fcst:
+109:6729741:d=2021122118:VVEL:2 mb:106 hour fcst:
+110:6816579:d=2021122118:DZDT:2 mb:106 hour fcst:
+111:6926399:d=2021122118:UGRD:2 mb:106 hour fcst:
+112:6964382:d=2021122118:VGRD:2 mb:106 hour fcst:
+113:6998571:d=2021122118:ABSV:2 mb:106 hour fcst:
+114:7060840:d=2021122118:O3MR:2 mb:106 hour fcst:
+115:7135507:d=2021122118:HGT:3 mb:106 hour fcst:
+116:7189062:d=2021122118:TMP:3 mb:106 hour fcst:
+117:7245832:d=2021122118:RH:3 mb:106 hour fcst:
+118:7255374:d=2021122118:SPFH:3 mb:106 hour fcst:
+119:7329615:d=2021122118:VVEL:3 mb:106 hour fcst:
+120:7419839:d=2021122118:DZDT:3 mb:106 hour fcst:
+121:7526787:d=2021122118:UGRD:3 mb:106 hour fcst:
+122:7564009:d=2021122118:VGRD:3 mb:106 hour fcst:
+123:7597420:d=2021122118:ABSV:3 mb:106 hour fcst:
+124:7658826:d=2021122118:O3MR:3 mb:106 hour fcst:
+125:7741043:d=2021122118:HGT:5 mb:106 hour fcst:
+126:7801039:d=2021122118:TMP:5 mb:106 hour fcst:
+127:7858257:d=2021122118:RH:5 mb:106 hour fcst:
+128:7865710:d=2021122118:SPFH:5 mb:106 hour fcst:
+129:7934609:d=2021122118:VVEL:5 mb:106 hour fcst:
+130:8030252:d=2021122118:DZDT:5 mb:106 hour fcst:
+131:8135335:d=2021122118:UGRD:5 mb:106 hour fcst:
+132:8172278:d=2021122118:VGRD:5 mb:106 hour fcst:
+133:8206037:d=2021122118:ABSV:5 mb:106 hour fcst:
+134:8268719:d=2021122118:O3MR:5 mb:106 hour fcst:
+135:8342175:d=2021122118:HGT:7 mb:106 hour fcst:
+136:8401039:d=2021122118:TMP:7 mb:106 hour fcst:
+137:8456913:d=2021122118:RH:7 mb:106 hour fcst:
+138:8467155:d=2021122118:SPFH:7 mb:106 hour fcst:
+139:8528402:d=2021122118:VVEL:7 mb:106 hour fcst:
+140:8627271:d=2021122118:DZDT:7 mb:106 hour fcst:
+141:8730573:d=2021122118:UGRD:7 mb:106 hour fcst:
+142:8767375:d=2021122118:VGRD:7 mb:106 hour fcst:
+143:8800548:d=2021122118:ABSV:7 mb:106 hour fcst:
+144:8862575:d=2021122118:O3MR:7 mb:106 hour fcst:
+145:8936274:d=2021122118:HGT:10 mb:106 hour fcst:
+146:8994255:d=2021122118:TMP:10 mb:106 hour fcst:
+147:9048839:d=2021122118:RH:10 mb:106 hour fcst:
+148:9054727:d=2021122118:SPFH:10 mb:106 hour fcst:
+149:9116172:d=2021122118:VVEL:10 mb:106 hour fcst:
+150:9219385:d=2021122118:DZDT:10 mb:106 hour fcst:
+151:9321711:d=2021122118:UGRD:10 mb:106 hour fcst:
+152:9358247:d=2021122118:VGRD:10 mb:106 hour fcst:
+153:9391784:d=2021122118:ABSV:10 mb:106 hour fcst:
+154:9454843:d=2021122118:O3MR:10 mb:106 hour fcst:
+155:9532084:d=2021122118:HGT:15 mb:106 hour fcst:
+156:9588612:d=2021122118:TMP:15 mb:106 hour fcst:
+157:9644009:d=2021122118:RH:15 mb:106 hour fcst:
+158:9653674:d=2021122118:SPFH:15 mb:106 hour fcst:
+159:9717990:d=2021122118:VVEL:15 mb:106 hour fcst:
+160:9826023:d=2021122118:DZDT:15 mb:106 hour fcst:
+161:9927169:d=2021122118:UGRD:15 mb:106 hour fcst:
+162:9964973:d=2021122118:VGRD:15 mb:106 hour fcst:
+163:9999762:d=2021122118:ABSV:15 mb:106 hour fcst:
+164:10064422:d=2021122118:O3MR:15 mb:106 hour fcst:
+165:10145325:d=2021122118:HGT:20 mb:106 hour fcst:
+166:10201560:d=2021122118:TMP:20 mb:106 hour fcst:
+167:10256021:d=2021122118:RH:20 mb:106 hour fcst:
+168:10266065:d=2021122118:SPFH:20 mb:106 hour fcst:
+169:10340960:d=2021122118:VVEL:20 mb:106 hour fcst:
+170:10453436:d=2021122118:DZDT:20 mb:106 hour fcst:
+171:10554826:d=2021122118:UGRD:20 mb:106 hour fcst:
+172:10592293:d=2021122118:VGRD:20 mb:106 hour fcst:
+173:10653265:d=2021122118:ABSV:20 mb:106 hour fcst:
+174:10716316:d=2021122118:O3MR:20 mb:106 hour fcst:
+175:10806843:d=2021122118:HGT:30 mb:106 hour fcst:
+176:10871327:d=2021122118:TMP:30 mb:106 hour fcst:
+177:10924913:d=2021122118:RH:30 mb:106 hour fcst:
+178:10940234:d=2021122118:SPFH:30 mb:106 hour fcst:
+179:11020291:d=2021122118:VVEL:30 mb:106 hour fcst:
+180:11137063:d=2021122118:DZDT:30 mb:106 hour fcst:
+181:11236191:d=2021122118:UGRD:30 mb:106 hour fcst:
+182:11299202:d=2021122118:VGRD:30 mb:106 hour fcst:
+183:11358619:d=2021122118:ABSV:30 mb:106 hour fcst:
+184:11419507:d=2021122118:O3MR:30 mb:106 hour fcst:
+185:11512329:d=2021122118:HGT:40 mb:106 hour fcst:
+186:11576251:d=2021122118:TMP:40 mb:106 hour fcst:
+187:11631488:d=2021122118:RH:40 mb:106 hour fcst:
+188:11649693:d=2021122118:SPFH:40 mb:106 hour fcst:
+189:11721709:d=2021122118:VVEL:40 mb:106 hour fcst:
+190:11831636:d=2021122118:DZDT:40 mb:106 hour fcst:
+191:11930443:d=2021122118:UGRD:40 mb:106 hour fcst:
+192:11995009:d=2021122118:VGRD:40 mb:106 hour fcst:
+193:12056573:d=2021122118:ABSV:40 mb:106 hour fcst:
+194:12120483:d=2021122118:O3MR:40 mb:106 hour fcst:
+195:12216145:d=2021122118:HGT:50 mb:106 hour fcst:
+196:12279897:d=2021122118:TMP:50 mb:106 hour fcst:
+197:12335236:d=2021122118:RH:50 mb:106 hour fcst:
+198:12355071:d=2021122118:TCDC:50 mb:106 hour fcst:
+199:12355250:d=2021122118:SPFH:50 mb:106 hour fcst:
+200:12426484:d=2021122118:VVEL:50 mb:106 hour fcst:
+201:12539364:d=2021122118:DZDT:50 mb:106 hour fcst:
+202:12637492:d=2021122118:UGRD:50 mb:106 hour fcst:
+203:12702144:d=2021122118:VGRD:50 mb:106 hour fcst:
+204:12763763:d=2021122118:ABSV:50 mb:106 hour fcst:
+205:12827309:d=2021122118:CLMR:50 mb:106 hour fcst:
+206:12827488:d=2021122118:ICMR:50 mb:106 hour fcst:
+207:12827667:d=2021122118:RWMR:50 mb:106 hour fcst:
+208:12827846:d=2021122118:SNMR:50 mb:106 hour fcst:
+209:12828025:d=2021122118:GRLE:50 mb:106 hour fcst:
+210:12828204:d=2021122118:O3MR:50 mb:106 hour fcst:
+211:12921915:d=2021122118:HGT:70 mb:106 hour fcst:
+212:12986673:d=2021122118:TMP:70 mb:106 hour fcst:
+213:13044855:d=2021122118:RH:70 mb:106 hour fcst:
+215:13073729:d=2021122118:SPFH:70 mb:106 hour fcst:
+216:13155542:d=2021122118:VVEL:70 mb:106 hour fcst:
+217:13250968:d=2021122118:DZDT:70 mb:106 hour fcst:
+218:13349925:d=2021122118:UGRD:70 mb:106 hour fcst:
+219:13417192:d=2021122118:VGRD:70 mb:106 hour fcst:
+220:13481516:d=2021122118:ABSV:70 mb:106 hour fcst:
+226:13549495:d=2021122118:O3MR:70 mb:106 hour fcst:
+227:13641396:d=2021122118:HGT:100 mb:106 hour fcst:
+228:13708364:d=2021122118:TMP:100 mb:106 hour fcst:
+229:13768756:d=2021122118:RH:100 mb:106 hour fcst:
+230:13804029:d=2021122118:TCDC:100 mb:106 hour fcst:
+231:13805164:d=2021122118:SPFH:100 mb:106 hour fcst:
+232:13893797:d=2021122118:VVEL:100 mb:106 hour fcst:
+233:13996137:d=2021122118:DZDT:100 mb:106 hour fcst:
+234:14096730:d=2021122118:UGRD:100 mb:106 hour fcst:
+235:14167389:d=2021122118:VGRD:100 mb:106 hour fcst:
+236:14236507:d=2021122118:ABSV:100 mb:106 hour fcst:
+237:14309005:d=2021122118:CLMR:100 mb:106 hour fcst:
+238:14309184:d=2021122118:ICMR:100 mb:106 hour fcst:
+239:14313697:d=2021122118:RWMR:100 mb:106 hour fcst:
+240:14313876:d=2021122118:SNMR:100 mb:106 hour fcst:
+241:14317749:d=2021122118:GRLE:100 mb:106 hour fcst:
+242:14317928:d=2021122118:O3MR:100 mb:106 hour fcst:
+259:15162830:d=2021122118:HGT:150 mb:106 hour fcst:
+260:15232239:d=2021122118:TMP:150 mb:106 hour fcst:
+261:15293469:d=2021122118:RH:150 mb:106 hour fcst:
+262:15336057:d=2021122118:TCDC:150 mb:106 hour fcst:
+263:15351260:d=2021122118:SPFH:150 mb:106 hour fcst:
+264:15437898:d=2021122118:VVEL:150 mb:106 hour fcst:
+265:15518047:d=2021122118:DZDT:150 mb:106 hour fcst:
+266:15623445:d=2021122118:UGRD:150 mb:106 hour fcst:
+267:15668794:d=2021122118:VGRD:150 mb:106 hour fcst:
+268:15741738:d=2021122118:ABSV:150 mb:106 hour fcst:
+269:15819248:d=2021122118:CLMR:150 mb:106 hour fcst:
+270:15819427:d=2021122118:ICMR:150 mb:106 hour fcst:
+271:15838436:d=2021122118:RWMR:150 mb:106 hour fcst:
+272:15838615:d=2021122118:SNMR:150 mb:106 hour fcst:
+273:15841902:d=2021122118:GRLE:150 mb:106 hour fcst:
+274:15842351:d=2021122118:O3MR:150 mb:106 hour fcst:
+291:16693987:d=2021122118:HGT:200 mb:106 hour fcst:
+292:16766029:d=2021122118:TMP:200 mb:106 hour fcst:
+293:16830138:d=2021122118:RH:200 mb:106 hour fcst:
+294:16886803:d=2021122118:TCDC:200 mb:106 hour fcst:
+295:16914626:d=2021122118:SPFH:200 mb:106 hour fcst:
+296:17010401:d=2021122118:VVEL:200 mb:106 hour fcst:
+297:17097861:d=2021122118:DZDT:200 mb:106 hour fcst:
+298:17197769:d=2021122118:UGRD:200 mb:106 hour fcst:
+299:17246974:d=2021122118:VGRD:200 mb:106 hour fcst:
+300:17295433:d=2021122118:ABSV:200 mb:106 hour fcst:
+301:17377971:d=2021122118:CLMR:200 mb:106 hour fcst:
+302:17378150:d=2021122118:ICMR:200 mb:106 hour fcst:
+303:17410018:d=2021122118:RWMR:200 mb:106 hour fcst:
+304:17410197:d=2021122118:SNMR:200 mb:106 hour fcst:
+305:17421520:d=2021122118:GRLE:200 mb:106 hour fcst:
+306:17421905:d=2021122118:O3MR:200 mb:106 hour fcst:
+323:18324239:d=2021122118:HGT:250 mb:106 hour fcst:
+324:18398425:d=2021122118:TMP:250 mb:106 hour fcst:
+325:18463353:d=2021122118:RH:250 mb:106 hour fcst:
+326:18527193:d=2021122118:TCDC:250 mb:106 hour fcst:
+327:18563232:d=2021122118:SPFH:250 mb:106 hour fcst:
+328:18659145:d=2021122118:VVEL:250 mb:106 hour fcst:
+329:18752688:d=2021122118:DZDT:250 mb:106 hour fcst:
+330:18855150:d=2021122118:UGRD:250 mb:106 hour fcst:
+331:18906387:d=2021122118:VGRD:250 mb:106 hour fcst:
+332:18958710:d=2021122118:ABSV:250 mb:106 hour fcst:
+333:19045995:d=2021122118:CLMR:250 mb:106 hour fcst:
+334:19046174:d=2021122118:ICMR:250 mb:106 hour fcst:
+335:19091814:d=2021122118:RWMR:250 mb:106 hour fcst:
+336:19091993:d=2021122118:SNMR:250 mb:106 hour fcst:
+337:19113662:d=2021122118:GRLE:250 mb:106 hour fcst:
+338:19114059:d=2021122118:O3MR:250 mb:106 hour fcst:
+355:20105559:d=2021122118:HGT:300 mb:106 hour fcst:
+356:20179643:d=2021122118:TMP:300 mb:106 hour fcst:
+357:20244832:d=2021122118:RH:300 mb:106 hour fcst:
+358:20312584:d=2021122118:TCDC:300 mb:106 hour fcst:
+359:20352946:d=2021122118:SPFH:300 mb:106 hour fcst:
+360:20450181:d=2021122118:VVEL:300 mb:106 hour fcst:
+361:20547375:d=2021122118:DZDT:300 mb:106 hour fcst:
+362:20651127:d=2021122118:UGRD:300 mb:106 hour fcst:
+363:20703830:d=2021122118:VGRD:300 mb:106 hour fcst:
+364:20757953:d=2021122118:ABSV:300 mb:106 hour fcst:
+365:20848567:d=2021122118:CLMR:300 mb:106 hour fcst:
+366:20848746:d=2021122118:ICMR:300 mb:106 hour fcst:
+367:20901087:d=2021122118:RWMR:300 mb:106 hour fcst:
+368:20901266:d=2021122118:SNMR:300 mb:106 hour fcst:
+369:20930725:d=2021122118:GRLE:300 mb:106 hour fcst:
+370:20931202:d=2021122118:O3MR:300 mb:106 hour fcst:
+387:21955668:d=2021122118:HGT:350 mb:106 hour fcst:
+388:22030271:d=2021122118:TMP:350 mb:106 hour fcst:
+389:22094645:d=2021122118:RH:350 mb:106 hour fcst:
+390:22163081:d=2021122118:TCDC:350 mb:106 hour fcst:
+391:22204476:d=2021122118:SPFH:350 mb:106 hour fcst:
+392:22301532:d=2021122118:VVEL:350 mb:106 hour fcst:
+393:22400131:d=2021122118:DZDT:350 mb:106 hour fcst:
+394:22503058:d=2021122118:UGRD:350 mb:106 hour fcst:
+395:22555033:d=2021122118:VGRD:350 mb:106 hour fcst:
+396:22608687:d=2021122118:ABSV:350 mb:106 hour fcst:
+397:22698305:d=2021122118:CLMR:350 mb:106 hour fcst:
+398:22698643:d=2021122118:ICMR:350 mb:106 hour fcst:
+399:22753281:d=2021122118:RWMR:350 mb:106 hour fcst:
+400:22753524:d=2021122118:SNMR:350 mb:106 hour fcst:
+401:22790607:d=2021122118:GRLE:350 mb:106 hour fcst:
+402:22791603:d=2021122118:O3MR:350 mb:106 hour fcst:
+419:2382
+*** FATAL ERROR: write error ***
+
+2594:d=2021122118:HGT:400 mb:106 hour fcst:
+420:23896604:d=2021122118:TMP:400 mb:106 hour fcst:
+421:23961269:d=2021122118:RH:400 mb:106 hour fcst:
+422:24030616:d=2021122118:TCDC:400 mb:106 hour fcst:
+423:24071682:d=2021122118:SPFH:400 mb:106 hour fcst:
+424:24176080:d=2021122118:VVEL:400 mb:106 hour fcst:
+425:24275801:d=2021122118:DZDT:400 mb:106 hour fcst:
+426:24388844:d=2021122118:UGRD:400 mb:106 hour fcst:
+427:24440057:d=2021122118:VGRD:400 mb:106 hour fcst:
+428:24492661:d=2021122118:ABSV:400 mb:106 hour fcst:
+429:24581151:d=2021122118:CLMR:400 mb:106 hour fcst:
+430:24584023:d=2021122118:ICMR:400 mb:106 hour fcst:
+431:24638821:d=2021122118:RWMR:400 mb:106 hour fcst:
+432:24639589:d=2021122118:SNMR:400 mb:106 hour fcst:
+433:24677593:d=2021122118:GRLE:400 mb:106 hour fcst:
+434:24678681:d=2021122118:O3MR:400 mb:106 hour fcst:
+451:25717063:d=2021122118:HGT:450 mb:106 hour fcst:
+452:25799733:d=2021122118:TMP:450 mb:106 hour fcst:
+453:25864755:d=2021122118:RH:450 mb:106 hour fcst:
+454:25934784:d=2021122118:TCDC:450 mb:106 hour fcst:
+455:25974342:d=2021122118:SPFH:450 mb:106 hour fcst:
+456:26074984:d=2021122118:VVEL:450 mb:106 hour fcst:
+457:26175183:d=2021122118:DZDT:450 mb:106 hour fcst:
+458:26287449:d=2021122118:UGRD:450 mb:106 hour fcst:
+459:26337609:d=2021122118:VGRD:450 mb:106 hour fcst:
+460:26388575:d=2021122118:ABSV:450 mb:106 hour fcst:
+461:26475819:d=2021122118:CLMR:450 mb:106 hour fcst:
+462:26481678:d=2021122118:ICMR:450 mb:106 hour fcst:
+463:26534019:d=2021122118:RWMR:450 mb:106 hour fcst:
+464:26536835:d=2021122118:SNMR:450 mb:106 hour fcst:
+465:26577296:d=2021122118:GRLE:450 mb:106 hour fcst:
+466:26579581:d=2021122118:O3MR:450 mb:106 hour fcst:
+483:27618688:d=2021122118:HGT:500 mb:106 hour fcst:
+484:27701557:d=2021122118:TMP:500 mb:106 hour fcst:
+485:27766906:d=2021122118:RH:500 mb:106 hour fcst:
+486:27837454:d=2021122118:TCDC:500 mb:106 hour fcst:
+487:27876283:d=2021122118:SPFH:500 mb:106 hour fcst:
+488:27982384:d=2021122118:VVEL:500 mb:106 hour fcst:
+489:28083062:d=2021122118:DZDT:500 mb:106 hour fcst:
+490:28194549:d=2021122118:UGRD:500 mb:106 hour fcst:
+491:28242996:d=2021122118:VGRD:500 mb:106 hour fcst:
+492:28292805:d=2021122118:ABSV:500 mb:106 hour fcst:
+493:28378762:d=2021122118:CLMR:500 mb:106 hour fcst:
+494:28388861:d=2021122118:ICMR:500 mb:106 hour fcst:
+495:28437154:d=2021122118:RWMR:500 mb:106 hour fcst:
+496:28441898:d=2021122118:SNMR:500 mb:106 hour fcst:
+497:28483561:d=2021122118:GRLE:500 mb:106 hour fcst:
+498:28487077:d=2021122118:O3MR:500 mb:106 hour fcst:
+515:29615030:d=2021122118:HGT:550 mb:106 hour fcst:
+516:29697423:d=2021122118:TMP:550 mb:106 hour fcst:
+517:29763778:d=2021122118:RH:550 mb:106 hour fcst:
+518:29834808:d=2021122118:TCDC:550 mb:106 hour fcst:
+519:29873904:d=2021122118:SPFH:550 mb:106 hour fcst:
+520:29984600:d=2021122118:VVEL:550 mb:106 hour fcst:
+521:30086370:d=2021122118:DZDT:550 mb:106 hour fcst:
+522:30197213:d=2021122118:UGRD:550 mb:106 hour fcst:
+523:30275319:d=2021122118:VGRD:550 mb:106 hour fcst:
+524:30354879:d=2021122118:ABSV:550 mb:106 hour fcst:
+525:30439960:d=2021122118:CLMR:550 mb:106 hour fcst:
+526:30453722:d=2021122118:ICMR:550 mb:106 hour fcst:
+527:30502994:d=2021122118:RWMR:550 mb:106 hour fcst:
+528:30510661:d=2021122118:SNMR:550 mb:106 hour fcst:
+529:30553274:d=2021122118:GRLE:550 mb:106 hour fcst:
+530:30559509:d=2021122118:O3MR:550 mb:106 hour fcst:
+547:31706663:d=2021122118:HGT:600 mb:106 hour fcst:
+548:31791568:d=2021122118:TMP:600 mb:106 hour fcst:
+549:31858616:d=2021122118:RH:600 mb:106 hour fcst:
+550:31930112:d=2021122118:TCDC:600 mb:106 hour fcst:
+551:31968557:d=2021122118:SPFH:600 mb:106 hour fcst:
+552:32072491:d=2021122118:VVEL:600 mb:106 hour fcst:
+553:32174416:d=2021122118:DZDT:600 mb:106 hour fcst:
+554:32284714:d=2021122118:UGRD:600 mb:106 hour fcst:
+555:32362105:d=2021122118:VGRD:600 mb:106 hour fcst:
+556:32441085:d=2021122118:ABSV:600 mb:106 hour fcst:
+557:32525497:d=2021122118:CLMR:600 mb:106 hour fcst:
+558:32542774:d=2021122118:ICMR:600 mb:106 hour fcst:
+559:32583765:d=2021122118:RWMR:600 mb:106 hour fcst:
+560:32595446:d=2021122118:SNMR:600 mb:106 hour fcst:
+561:32641280:d=2021122118:GRLE:600 mb:106 hour fcst:
+562:32647545:d=2021122118:O3MR:600 mb:106 hour fcst:
+579:33793697:d=2021122118:HGT:650 mb:106 hour fcst:
+580:33878512:d=2021122118:TMP:650 mb:106 hour fcst:
+581:33946031:d=2021122118:RH:650 mb:106 hour fcst:
+582:34017619:d=2021122118:TCDC:650 mb:106 hour fcst:
+583:34054508:d=2021122118:SPFH:650 mb:106 hour fcst:
+584:34157434:d=2021122118:VVEL:650 mb:106 hour fcst:
+585:34259694:d=2021122118:DZDT:650 mb:106 hour fcst:
+586:34369432:d=2021122118:UGRD:650 mb:106 hour fcst:
+587:34445843:d=2021122118:VGRD:650 mb:106 hour fcst:
+588:34524247:d=2021122118:ABSV:650 mb:106 hour fcst:
+589:34608319:d=2021122118:CLMR:650 mb:106 hour fcst:
+590:34628203:d=2021122118:ICMR:650 mb:106 hour fcst:
+591:34664729:d=2021122118:RWMR:650 mb:106 hour fcst:
+592:34677940:d=2021122118:SNMR:650 mb:106 hour fcst:
+593:34720671:d=2021122118:GRLE:650 mb:106 hour fcst:
+594:34728140:d=2021122118:O3MR:650 mb:106 hour fcst:
+611:35878854:d=2021122118:HGT:700 mb:106 hour fcst:
+612:35964246:d=2021122118:TMP:700 mb:106 hour fcst:
+613:36033213:d=2021122118:RH:700 mb:106 hour fcst:
+614:36104731:d=2021122118:TCDC:700 mb:106 hour fcst:
+615:36141112:d=2021122118:SPFH:700 mb:106 hour fcst:
+616:36247213:d=2021122118:VVEL:700 mb:106 hour fcst:
+617:36349707:d=2021122118:DZDT:700 mb:106 hour fcst:
+618:36459090:d=2021122118:UGRD:700 mb:106 hour fcst:
+619:36535915:d=2021122118:VGRD:700 mb:106 hour fcst:
+620:36614133:d=2021122118:ABSV:700 mb:106 hour fcst:
+621:36698132:d=2021122118:CLMR:700 mb:106 hour fcst:
+622:36720604:d=2021122118:ICMR:700 mb:106 hour fcst:
+623:36752350:d=2021122118:RWMR:700 mb:106 hour fcst:
+624:36767780:d=2021122118:SNMR:700 mb:106 hour fcst:
+625:36807187:d=2021122118:GRLE:700 mb:106 hour fcst:
+626:36813279:d=2021122118:O3MR:700 mb:106 hour fcst:
+643:37967051:d=2021122118:HGT:750 mb:106 hour fcst:
+644:38052679:d=2021122118:TMP:750 mb:106 hour fcst:
+645:38123050:d=2021122118:RH:750 mb:106 hour fcst:
+646:38195116:d=2021122118:TCDC:750 mb:106 hour fcst:
+647:38233508:d=2021122118:SPFH:750 mb:106 hour fcst:
+648:38341842:d=2021122118:VVEL:750 mb:106 hour fcst:
+649:38444771:d=2021122118:DZDT:750 mb:106 hour fcst:
+650:38554009:d=2021122118:UGRD:750 mb:106 hour fcst:
+651:38630945:d=2021122118:VGRD:750 mb:106 hour fcst:
+652:38709301:d=2021122118:ABSV:750 mb:106 hour fcst:
+653:38793528:d=2021122118:CLMR:750 mb:106 hour fcst:
+654:38822398:d=2021122118:ICMR:750 mb:106 hour fcst:
+655:38853362:d=2021122118:RWMR:750 mb:106 hour fcst:
+656:38870473:d=2021122118:SNMR:750 mb:106 hour fcst:
+657:38908377:d=2021122118:GRLE:750 mb:106 hour fcst:
+658:38914137:d=2021122118:O3MR:750 mb:106 hour fcst:
+675:40091978:d=2021122118:HGT:800 mb:106 hour fcst:
+676:40178279:d=2021122118:TMP:800 mb:106 hour fcst:
+677:40250304:d=2021122118:RH:800 mb:106 hour fcst:
+678:40323091:d=2021122118:TCDC:800 mb:106 hour fcst:
+679:40365093:d=2021122118:SPFH:800 mb:106 hour fcst:
+680:40475147:d=2021122118:VVEL:800 mb:106 hour fcst:
+681:40578118:d=2021122118:DZDT:800 mb:106 hour fcst:
+682:40686994:d=2021122118:UGRD:800 mb:106 hour fcst:
+683:40764374:d=2021122118:VGRD:800 mb:106 hour fcst:
+684:40843268:d=2021122118:ABSV:800 mb:106 hour fcst:
+685:40928277:d=2021122118:CLMR:800 mb:106 hour fcst:
+686:40965105:d=2021122118:ICMR:800 mb:106 hour fcst:
+687:40994601:d=2021122118:RWMR:800 mb:106 hour fcst:
+688:41018365:d=2021122118:SNMR:800 mb:106 hour fcst:
+689:41055496:d=2021122118:GRLE:800 mb:106 hour fcst:
+690:41062385:d=2021122118:O3MR:800 mb:106 hour fcst:
+707:42266096:d=2021122118:HGT:850 mb:106 hour fcst:
+708:42353248:d=2021122118:TMP:850 mb:106 hour fcst:
+709:42427131:d=2021122118:RH:850 mb:106 hour fcst:
+710:42500435:d=2021122118:TCDC:850 mb:106 hour fcst:
+711:42548388:d=2021122118:SPFH:850 mb:106 hour fcst:
+712:42659691:d=2021122118:VVEL:850 mb:106 hour fcst:
+713:42761564:d=2021122118:DZDT:850 mb:106 hour fcst:
+714:42869637:d=2021122118:UGRD:850 mb:106 hour fcst:
+715:42947742:d=2021122118:VGRD:850 mb:106 hour fcst:
+716:43027157:d=2021122118:ABSV:850 mb:106 hour fcst:
+717:43112851+ exglobal_atmos_products.sh[1]: postamble exglobal_atmos_products.sh 1727392106 8
++ preamble.sh[70]: set +x
+End exglobal_atmos_products.sh at 23:08:27 with error code 8 (time elapsed: 00:00:01)
++ JGLOBAL_ATMOS_PRODUCTS[1]: postamble JGLOBAL_ATMOS_PRODUCTS 1727392104 8
++ preamble.sh[70]: set +x
+End JGLOBAL_ATMOS_PRODUCTS at 23:08:27 with error code 8 (time elapsed: 00:00:03)
++ atmos_products.sh[1]: postamble atmos_products.sh 1727392102 8
++ preamble.sh[70]: set +x
+End atmos_products.sh at 23:08:27 with error code 8 (time elapsed: 00:00:05)
+PBS: Running epilogue on parent mom node: nid001154...
+##### Job 156424515.cbqs01 - PBS Job Script:
+(Note: Duplicate #PBS entries are a function how PBS interprets and caches the original job script.)
+
+#! /bin/sh
+#PBS -N C96_atm3DVar_extended_e6c639aa_gfsatmos_prod_f106_18
+#PBS -A GFS-DEV
+#PBS -q dev
+#PBS -l walltime=00:15:00
+#PBS -l select=1:mpiprocs=24:ompthreads=1:ncpus=24
+#PBS -j oe -o /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT/C96_atm3DVar_extended_e6c639aa/logs/2021122118/gfsatmos_prod_f106.log
+#PBS -l place=vscatter:exclhost
+export RUN_ENVIR='emc'
+export HOMEgfs='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow'
+export EXPDIR='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/EXPDIR/C96_atm3DVar_extended_e6c639aa'
+export NET='gfs'
+export RUN='gfs'
+export CDATE='2021122118'
+export PDY='20211221'
+export cyc='18'
+export COMROOT='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/RUNTESTS/COMROOT'
+export DATAROOT='/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_e6c639aa/gfs.2021122118'
+export FHR3='106'
+export COMPONENT='atmos'
+set -x
+/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2878/global-workflow/jobs/rocoto/atmos_products.sh
+##### End of job script
+------------------------------------------------------------------
+
