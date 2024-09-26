@@ -1,0 +1,694 @@
+PBS: Running prologue on parent mom node: nid001179...
+Job 156421642.cbqs01 nodelist: nid001179
++ /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/jobs/rocoto/stage_ic.sh
+Begin stage_ic.sh at Thu Sep 26 22:29:01 UTC 2024
++ stage_ic.sh[6]: . /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Resetting modules to system default. Reseting $MODULEPATH back to system default. All extra directories will be removed from $MODULEPATH.
+
+Currently Loaded Modules:
+  1) craype-x86-rome     (H)  13) perl/5.32.0        25) met/9.1.3
+  2) libfabric/1.11.0.0. (H)  14) libjpeg/9c         26) metplus/3.1.1
+  3) craype-network-ofi  (H)  15) udunits/2.2.28     27) prepobs/1.1.0
+  4) envvar/1.0               16) gsl/2.7            28) fit2obs/1.1.4
+  5) PrgEnv-intel/8.1.0       17) cdo/1.9.8          29) mos_shared/2.7.2
+  6) craype/2.7.13            18) hdf5/1.10.6        30) module_base.wcoss2
+  7) intel/19.1.3.304         19) netcdf/4.7.4       31) grib_util/1.2.3
+  8) cray-mpich/8.1.9         20) nco/4.7.9          32) g2tmpl/1.10.2
+  9) cray-pals/1.0.17         21) prod_util/2.0.9    33) crtm/2.4.0.1
+ 10) cfp/2.0.4                22) bufr_dump/1.0.0    34) wgrib2/2.0.8
+ 11) python/3.8.6             23) util_shared/1.4.0
+ 12) gempak/7.14.1            24) ncdiag/1.0.0
+
+  Where:
+   H:  Hidden Module
+
+ 
+
++ stage_ic.sh[7]: status=0
++ stage_ic.sh[8]: [[ 0 -ne 0 ]]
++ stage_ic.sh[10]: export job=stage_ic
++ stage_ic.sh[10]: job=stage_ic
++ stage_ic.sh[11]: export jobid=stage_ic.73863
++ stage_ic.sh[11]: jobid=stage_ic.73863
++ stage_ic.sh[14]: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/jobs/JGLOBAL_STAGE_IC
+Begin JGLOBAL_STAGE_IC at Thu Sep 26 22:29:02 UTC 2024
++ JGLOBAL_STAGE_IC[4]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush/jjob_header.sh -e stage_ic -c 'base stage_ic'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=stage_ic
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z stage_ic ]]
+++ jjob_header.sh[68]: export DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_S2SWA_gefs_replay_ics_b0d0cd46/gefs.2020110100/stage_ic.73863
+++ jjob_header.sh[68]: DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_S2SWA_gefs_replay_ics_b0d0cd46/gefs.2020110100/stage_ic.73863
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_S2SWA_gefs_replay_ics_b0d0cd46/gefs.2020110100/stage_ic.73863
+++ jjob_header.sh[72]: mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_S2SWA_gefs_replay_ics_b0d0cd46/gefs.2020110100/stage_ic.73863
+++ jjob_header.sh[73]: cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_S2SWA_gefs_replay_ics_b0d0cd46/gefs.2020110100/stage_ic.73863
+++ jjob_header.sh[79]: export cycle=t00z
+++ jjob_header.sh[79]: cycle=t00z
+++ jjob_header.sh[80]: setpdy.sh
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20201025
++++ PDY[1]: PDYm7=20201025
++++ PDY[2]: export PDYm6=20201026
++++ PDY[2]: PDYm6=20201026
++++ PDY[3]: export PDYm5=20201027
++++ PDY[3]: PDYm5=20201027
++++ PDY[4]: export PDYm4=20201028
++++ PDY[4]: PDYm4=20201028
++++ PDY[5]: export PDYm3=20201029
++++ PDY[5]: PDYm3=20201029
++++ PDY[6]: export PDYm2=20201030
++++ PDY[6]: PDYm2=20201030
++++ PDY[7]: export PDYm1=20201031
++++ PDY[7]: PDYm1=20201031
++++ PDY[8]: export PDY=20201101
++++ PDY[8]: PDY=20201101
++++ PDY[9]: export PDYp1=20201102
++++ PDY[9]: PDYp1=20201102
++++ PDY[10]: export PDYp2=20201103
++++ PDY[10]: PDYp2=20201103
++++ PDY[11]: export PDYp3=20201104
++++ PDY[11]: PDYp3=20201104
++++ PDY[12]: export PDYp4=20201105
++++ PDY[12]: PDYp4=20201105
++++ PDY[13]: export PDYp5=20201106
++++ PDY[13]: PDYp5=20201106
++++ PDY[14]: export PDYp6=20201107
++++ PDY[14]: PDYp6=20201107
++++ PDY[15]: export PDYp7=20201108
++++ PDY[15]: PDYp7=20201108
+++ jjob_header.sh[87]: export pid=74310
+++ jjob_header.sh[87]: pid=74310
+++ jjob_header.sh[88]: export pgmout=OUTPUT.74310
+++ jjob_header.sh[88]: pgmout=OUTPUT.74310
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/EXPDIR/C96_S2SWA_gefs_replay_ics_b0d0cd46
+++ jjob_header.sh[95]: EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/EXPDIR/C96_S2SWA_gefs_replay_ics_b0d0cd46
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/EXPDIR/C96_S2SWA_gefs_replay_ics_b0d0cd46/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=WCOSS2
++++ config.base[9]: machine=WCOSS2
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=GFS-DEV
++++ config.base[15]: ACCOUNT=GFS-DEV
++++ config.base[16]: export QUEUE=dev
++++ config.base[16]: QUEUE=dev
++++ config.base[17]: export QUEUE_SERVICE=dev_transfer
++++ config.base[17]: QUEUE_SERVICE=dev_transfer
++++ config.base[18]: export PARTITION_BATCH=
++++ config.base[18]: PARTITION_BATCH=
++++ config.base[19]: export PARTITION_SERVICE=
++++ config.base[19]: PARTITION_SERVICE=
++++ config.base[20]: export RESERVATION=
++++ config.base[20]: RESERVATION=
++++ config.base[23]: export HPSS_PROJECT=emc-global
++++ config.base[23]: HPSS_PROJECT=emc-global
++++ config.base[26]: export HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow
++++ config.base[26]: HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow
++++ config.base[27]: export EXECgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/exec
++++ config.base[27]: EXECgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/exec
++++ config.base[28]: export FIXgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/fix
++++ config.base[28]: FIXgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/fix
++++ config.base[29]: export PARMgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/parm
++++ config.base[29]: PARMgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/parm
++++ config.base[30]: export SCRgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/scripts
++++ config.base[30]: SCRgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/scripts
++++ config.base[31]: export USHgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush
++++ config.base[31]: USHgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush
++++ config.base[32]: export FIXorog=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/fix/orog
++++ config.base[32]: FIXorog=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/fix/orog
++++ config.base[33]: export FIXugwd=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/fix/ugwd
++++ config.base[33]: FIXugwd=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/fix/ugwd
++++ config.base[38]: export PACKAGEROOT=/lfs/h1/ops/prod/packages
++++ config.base[38]: PACKAGEROOT=/lfs/h1/ops/prod/packages
++++ config.base[39]: export COMROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT
++++ config.base[39]: COMROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT
++++ config.base[40]: export COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.base[40]: COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.base[43]: export HOMEDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/GLOBAL
++++ config.base[43]: HOMEDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/GLOBAL
++++ config.base[44]: export STMP=/lfs/h2/emc/stmp/terry.mcguinness
++++ config.base[44]: STMP=/lfs/h2/emc/stmp/terry.mcguinness
++++ config.base[45]: export PTMP=/lfs/h2/emc/ptmp/terry.mcguinness
++++ config.base[45]: PTMP=/lfs/h2/emc/ptmp/terry.mcguinness
++++ config.base[46]: export NOSCRUB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/GLOBAL
++++ config.base[46]: NOSCRUB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/GLOBAL
++++ config.base[49]: export BASE_GIT=/lfs/h2/emc/global/save/emc.global/git
++++ config.base[49]: BASE_GIT=/lfs/h2/emc/global/save/emc.global/git
++++ config.base[52]: export BASE_DATA=/lfs/h2/emc/global/noscrub/emc.global/data
++++ config.base[52]: BASE_DATA=/lfs/h2/emc/global/noscrub/emc.global/data
++++ config.base[55]: export DO_BUFRSND=NO
++++ config.base[55]: DO_BUFRSND=NO
++++ config.base[56]: export DO_GEMPAK=NO
++++ config.base[56]: DO_GEMPAK=NO
++++ config.base[57]: export DO_AWIPS=NO
++++ config.base[57]: DO_AWIPS=NO
++++ config.base[63]: export REALTIME=YES
++++ config.base[63]: REALTIME=YES
++++ config.base[66]: export MODE=forecast-only
++++ config.base[66]: MODE=forecast-only
++++ config.base[75]: export HOMEpost=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow
++++ config.base[75]: HOMEpost=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow
++++ config.base[78]: export 'NCP=/bin/cp -p'
++++ config.base[78]: NCP='/bin/cp -p'
++++ config.base[79]: export NMV=/bin/mv
++++ config.base[79]: NMV=/bin/mv
++++ config.base[80]: export 'NLN=/bin/ln -sf'
++++ config.base[80]: NLN='/bin/ln -sf'
++++ config.base[81]: export VERBOSE=YES
++++ config.base[81]: VERBOSE=YES
++++ config.base[82]: export KEEPDATA=NO
++++ config.base[82]: KEEPDATA=NO
++++ config.base[83]: export DEBUG_POSTSCRIPT=NO
++++ config.base[83]: DEBUG_POSTSCRIPT=NO
++++ config.base[84]: export CHGRP_RSTPROD=YES
++++ config.base[84]: CHGRP_RSTPROD=YES
++++ config.base[85]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[85]: CHGRP_CMD='chgrp rstprod'
++++ config.base[86]: export NCDUMP=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin/ncdump
++++ config.base[86]: NCDUMP=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin/ncdump
++++ config.base[87]: export NCLEN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush/getncdimlen
++++ config.base[87]: NCLEN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush/getncdimlen
++++ config.base[90]: export BASE_ENV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/env
++++ config.base[90]: BASE_ENV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/env
++++ config.base[91]: export BASE_JOB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/jobs/rocoto
++++ config.base[91]: BASE_JOB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/jobs/rocoto
++++ config.base[94]: export SDATE=2020110100
++++ config.base[94]: SDATE=2020110100
++++ config.base[95]: export EDATE=2020110100
++++ config.base[95]: EDATE=2020110100
++++ config.base[96]: export EXP_WARM_START=.true.
++++ config.base[96]: EXP_WARM_START=.true.
++++ config.base[97]: export assim_freq=6
++++ config.base[97]: assim_freq=6
++++ config.base[98]: export PSLOT=C96_S2SWA_gefs_replay_ics_b0d0cd46
++++ config.base[98]: PSLOT=C96_S2SWA_gefs_replay_ics_b0d0cd46
++++ config.base[99]: export EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/EXPDIR/C96_S2SWA_gefs_replay_ics_b0d0cd46
++++ config.base[99]: EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/EXPDIR/C96_S2SWA_gefs_replay_ics_b0d0cd46
++++ config.base[100]: export ROTDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT/C96_S2SWA_gefs_replay_ics_b0d0cd46
++++ config.base[100]: ROTDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT/C96_S2SWA_gefs_replay_ics_b0d0cd46
++++ config.base[102]: export ARCDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/GLOBAL/archive/C96_S2SWA_gefs_replay_ics_b0d0cd46
++++ config.base[102]: ARCDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/GLOBAL/archive/C96_S2SWA_gefs_replay_ics_b0d0cd46
++++ config.base[103]: export ATARDIR=/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C96_S2SWA_gefs_replay_ics_b0d0cd46
++++ config.base[103]: ATARDIR=/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C96_S2SWA_gefs_replay_ics_b0d0cd46
++++ config.base[106]: export envir=prod
++++ config.base[106]: envir=prod
++++ config.base[107]: export NET=gefs
++++ config.base[107]: NET=gefs
++++ config.base[108]: export RUN=gefs
++++ config.base[108]: RUN=gefs
++++ config.base[111]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/EXPDIR/C96_S2SWA_gefs_replay_ics_b0d0cd46/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[78]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[79]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[81]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[82]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[83]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[84]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[85]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[86]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[87]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[88]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[90]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[91]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[92]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[93]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[94]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[95]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[96]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[97]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[99]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[100]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[101]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[103]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[114]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[114]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[115]: export LOGSCRIPT=
++++ config.base[115]: LOGSCRIPT=
++++ config.base[118]: export 'REDOUT=1>'
++++ config.base[118]: REDOUT='1>'
++++ config.base[119]: export 'REDERR=2>'
++++ config.base[119]: REDERR='2>'
++++ config.base[121]: export SENDECF=NO
++++ config.base[121]: SENDECF=NO
++++ config.base[122]: export SENDSDM=NO
++++ config.base[122]: SENDSDM=NO
++++ config.base[123]: export SENDDBN_NTC=NO
++++ config.base[123]: SENDDBN_NTC=NO
++++ config.base[124]: export SENDDBN=NO
++++ config.base[124]: SENDDBN=NO
++++ config.base[125]: export DBNROOT=/apps/ops/prod/nco/core/prod_util.v2.0.9/fakedbn
++++ config.base[125]: DBNROOT=/apps/ops/prod/nco/core/prod_util.v2.0.9/fakedbn
++++ config.base[128]: export APP=S2SWA
++++ config.base[128]: APP=S2SWA
++++ config.base[131]: export DO_ATM=YES
++++ config.base[131]: DO_ATM=YES
++++ config.base[132]: export DO_COUPLED=NO
++++ config.base[132]: DO_COUPLED=NO
++++ config.base[133]: export DO_WAVE=NO
++++ config.base[133]: DO_WAVE=NO
++++ config.base[134]: export DO_OCN=NO
++++ config.base[134]: DO_OCN=NO
++++ config.base[135]: export DO_ICE=NO
++++ config.base[135]: DO_ICE=NO
++++ config.base[136]: export DO_AERO=NO
++++ config.base[136]: DO_AERO=NO
++++ config.base[137]: export DO_EXTRACTVARS=YES
++++ config.base[137]: DO_EXTRACTVARS=YES
++++ config.base[138]: export AERO_FCST_RUN=
++++ config.base[138]: AERO_FCST_RUN=
++++ config.base[139]: export AERO_ANL_RUN=
++++ config.base[139]: AERO_ANL_RUN=
++++ config.base[140]: export WAVE_RUN=
++++ config.base[140]: WAVE_RUN=
++++ config.base[141]: export DOBNDPNT_WAVE=NO
++++ config.base[141]: DOBNDPNT_WAVE=NO
++++ config.base[142]: export DOIBP_WAV=NO
++++ config.base[142]: DOIBP_WAV=NO
++++ config.base[143]: export FRAC_GRID=.true.
++++ config.base[143]: FRAC_GRID=.true.
++++ config.base[144]: export DO_NEST=NO
++++ config.base[144]: DO_NEST=NO
++++ config.base[145]: [[ NO == \Y\E\S ]]
++++ config.base[149]: export ntiles=6
++++ config.base[149]: ntiles=6
++++ config.base[153]: export OPS_RES=C768
++++ config.base[153]: OPS_RES=C768
++++ config.base[156]: export LEVS=128
++++ config.base[156]: LEVS=128
++++ config.base[157]: export CASE=C96
++++ config.base[157]: CASE=C96
++++ config.base[158]: export CASE_ENS=C96
++++ config.base[158]: CASE_ENS=C96
++++ config.base[159]: export OCNRES=100
++++ config.base[159]: OCNRES=100
++++ config.base[160]: export ICERES=100
++++ config.base[160]: ICERES=100
++++ config.base[162]: case "${CASE}" in
++++ config.base[167]: export waveGRD=glo_100
++++ config.base[167]: waveGRD=glo_100
++++ config.base[181]: case "${APP}" in
++++ config.base[200]: export DO_COUPLED=YES
++++ config.base[200]: DO_COUPLED=YES
++++ config.base[201]: export DO_OCN=YES
++++ config.base[201]: DO_OCN=YES
++++ config.base[202]: export DO_ICE=YES
++++ config.base[202]: DO_ICE=YES
++++ config.base[204]: [[ S2SWA =~ A$ ]]
++++ config.base[205]: export DO_AERO=YES
++++ config.base[205]: DO_AERO=YES
++++ config.base[206]: export AERO_ANL_RUN=both
++++ config.base[206]: AERO_ANL_RUN=both
++++ config.base[207]: export AERO_FCST_RUN=gdas
++++ config.base[207]: AERO_FCST_RUN=gdas
++++ config.base[210]: [[ S2SWA =~ ^S2SW ]]
++++ config.base[211]: export DO_WAVE=YES
++++ config.base[211]: DO_WAVE=YES
++++ config.base[212]: export WAVE_RUN=both
++++ config.base[212]: WAVE_RUN=both
++++ config.base[213]: export cplwav2atm=.true.
++++ config.base[213]: cplwav2atm=.true.
++++ config.base[223]: export FHMIN=0
++++ config.base[223]: FHMIN=0
++++ config.base[224]: export FHMAX=9
++++ config.base[224]: FHMAX=9
++++ config.base[225]: export FHOUT=3
++++ config.base[225]: FHOUT=3
++++ config.base[226]: export FHOUT_OCN=3
++++ config.base[226]: FHOUT_OCN=3
++++ config.base[227]: export FHOUT_ICE=3
++++ config.base[227]: FHOUT_ICE=3
++++ config.base[230]: export gfs_cyc=1
++++ config.base[230]: gfs_cyc=1
++++ config.base[233]: export REPLAY_ICS=YES
++++ config.base[233]: REPLAY_ICS=YES
++++ config.base[234]: [[ YES == \Y\E\S ]]
++++ config.base[235]: export OFFSET_START_HOUR=3
++++ config.base[235]: OFFSET_START_HOUR=3
++++ config.base[242]: export FHMIN_GFS=0
++++ config.base[242]: FHMIN_GFS=0
++++ config.base[243]: export FHMAX_GFS=48
++++ config.base[243]: FHMAX_GFS=48
++++ config.base[245]: breakpnts=
++++ config.base[246]: export FCST_SEGMENTS=0,48
++++ config.base[246]: FCST_SEGMENTS=0,48
++++ config.base[248]: export FHOUT_GFS=6
++++ config.base[248]: FHOUT_GFS=6
++++ config.base[249]: export FHMAX_HF_GFS=24
++++ config.base[249]: FHMAX_HF_GFS=24
++++ config.base[250]: export FHOUT_HF_GFS=3
++++ config.base[250]: FHOUT_HF_GFS=3
++++ config.base[251]: export FHOUT_OCN_GFS=24
++++ config.base[251]: FHOUT_OCN_GFS=24
++++ config.base[252]: export FHOUT_ICE_GFS=24
++++ config.base[252]: FHOUT_ICE_GFS=24
++++ config.base[253]: export FHMIN_WAV=3
++++ config.base[253]: FHMIN_WAV=3
++++ config.base[254]: export FHOUT_WAV=3
++++ config.base[254]: FHOUT_WAV=3
++++ config.base[255]: export FHMAX_HF_WAV=120
++++ config.base[255]: FHMAX_HF_WAV=120
++++ config.base[256]: export FHOUT_HF_WAV=1
++++ config.base[256]: FHOUT_HF_WAV=1
++++ config.base[257]: export FHMAX_WAV=48
++++ config.base[257]: FHMAX_WAV=48
++++ config.base[258]: ((  gfs_cyc != 0  ))
++++ config.base[259]: export STEP_GFS=24
++++ config.base[259]: STEP_GFS=24
++++ config.base[263]: export ILPOST=1
++++ config.base[263]: ILPOST=1
++++ config.base[265]: export FHMIN_ENKF=0
++++ config.base[265]: FHMIN_ENKF=0
++++ config.base[266]: export FHMAX_ENKF=48
++++ config.base[266]: FHMAX_ENKF=48
++++ config.base[267]: export FHOUT_ENKF=6
++++ config.base[267]: FHOUT_ENKF=6
++++ config.base[268]: export FHOUT_OCN=24
++++ config.base[268]: FHOUT_OCN=24
++++ config.base[269]: export FHOUT_ICE=24
++++ config.base[269]: FHOUT_ICE=24
++++ config.base[272]: export restart_interval_gfs=12
++++ config.base[272]: restart_interval_gfs=12
++++ config.base[273]: export restart_interval_enkfgfs=12
++++ config.base[273]: restart_interval_enkfgfs=12
++++ config.base[278]: export QUILTING=.true.
++++ config.base[278]: QUILTING=.true.
++++ config.base[279]: export OUTPUT_GRID=gaussian_grid
++++ config.base[279]: OUTPUT_GRID=gaussian_grid
++++ config.base[280]: export WRITE_DOPOST=.true.
++++ config.base[280]: WRITE_DOPOST=.true.
++++ config.base[281]: export WRITE_NSFLIP=.true.
++++ config.base[281]: WRITE_NSFLIP=.true.
++++ config.base[284]: export imp_physics=8
++++ config.base[284]: imp_physics=8
++++ config.base[288]: export DO_JEDIATMVAR=NO
++++ config.base[288]: DO_JEDIATMVAR=NO
++++ config.base[289]: export DO_JEDIATMENS=NO
++++ config.base[289]: DO_JEDIATMENS=NO
++++ config.base[290]: export DO_JEDIOCNVAR=NO
++++ config.base[290]: DO_JEDIOCNVAR=NO
++++ config.base[291]: export DO_JEDISNOWDA=NO
++++ config.base[291]: DO_JEDISNOWDA=NO
++++ config.base[292]: export DO_MERGENSST=NO
++++ config.base[292]: DO_MERGENSST=NO
++++ config.base[295]: export NMEM_ENS=2
++++ config.base[295]: NMEM_ENS=2
++++ config.base[299]: export ENSMEM=000
++++ config.base[299]: ENSMEM=000
++++ config.base[300]: export MEMDIR=mem000
++++ config.base[300]: MEMDIR=mem000
++++ config.base[302]: export DOIAU=NO
++++ config.base[302]: DOIAU=NO
++++ config.base[304]: [[ .true. = \.\f\a\l\s\e\. ]]
++++ config.base[307]: [[ NO = \Y\E\S ]]
++++ config.base[310]: export IAU_FHROT=0
++++ config.base[310]: IAU_FHROT=0
++++ config.base[315]: export DONST=YES
++++ config.base[315]: DONST=YES
++++ config.base[316]: [[ YES = \Y\E\S ]]
++++ config.base[316]: export 'FNTSFA=        '
++++ config.base[316]: FNTSFA='        '
++++ config.base[319]: export nst_anl=.true.
++++ config.base[319]: nst_anl=.true.
++++ config.base[322]: export MAKE_NSSTBUFR=NO
++++ config.base[322]: MAKE_NSSTBUFR=NO
++++ config.base[325]: export MAKE_ACFTBUFR=NO
++++ config.base[325]: MAKE_ACFTBUFR=NO
++++ config.base[328]: export DO_METP=NO
++++ config.base[328]: DO_METP=NO
++++ config.base[329]: export DO_FIT2OBS=NO
++++ config.base[329]: DO_FIT2OBS=NO
++++ config.base[332]: export HPSSARCH=NO
++++ config.base[332]: HPSSARCH=NO
++++ config.base[333]: export LOCALARCH=NO
++++ config.base[333]: LOCALARCH=NO
++++ config.base[334]: [[ NO = \Y\E\S ]]
++++ config.base[338]: export ARCH_CYC=00
++++ config.base[338]: ARCH_CYC=00
++++ config.base[339]: export ARCH_WARMICFREQ=4
++++ config.base[339]: ARCH_WARMICFREQ=4
++++ config.base[340]: export ARCH_FCSTICFREQ=1
++++ config.base[340]: ARCH_FCSTICFREQ=1
++++ config.base[342]: export DELETE_COM_IN_ARCHIVE_JOB=YES
++++ config.base[342]: DELETE_COM_IN_ARCHIVE_JOB=YES
++++ config.base[345]: export NUM_SND_COLLECTIVES=9
++++ config.base[345]: NUM_SND_COLLECTIVES=9
++++ config.base[349]: [[ WCOSS2 =~ PW ]]
++++ config.base[353]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/EXPDIR/C96_S2SWA_gefs_replay_ics_b0d0cd46/config.stage_ic
++++ config.stage_ic[5]: echo 'BEGIN: config.stage_ic'
+BEGIN: config.stage_ic
++++ config.stage_ic[8]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/EXPDIR/C96_S2SWA_gefs_replay_ics_b0d0cd46/config.resources stage_ic
+++++ config.resources[7]: ((  1 != 1  ))
+++++ config.resources[14]: step=stage_ic
+++++ config.resources[16]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[18]: case ${machine} in
+++++ config.resources[19]: max_tasks_per_node=128
+++++ config.resources[59]: export max_tasks_per_node
+++++ config.resources[61]: case ${step} in
+++++ config.resources[64]: export walltime=00:15:00
+++++ config.resources[64]: walltime=00:15:00
+++++ config.resources[65]: export ntasks=1
+++++ config.resources[65]: ntasks=1
+++++ config.resources[66]: export tasks_per_node=1
+++++ config.resources[66]: tasks_per_node=1
+++++ config.resources[67]: export threads_per_task=1
+++++ config.resources[67]: threads_per_task=1
+++++ config.resources[68]: export is_exclusive=True
+++++ config.resources[68]: is_exclusive=True
+++++ config.resources[314]: [[ -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/EXPDIR/C96_S2SWA_gefs_replay_ics_b0d0cd46/config.resources.WCOSS2 ]]
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=threads_per_task_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n 0 ]]
+++++ config.resources[324]: export threads_per_task
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=ntasks_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n 0 ]]
+++++ config.resources[324]: export ntasks
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=tasks_per_node_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n 0 ]]
+++++ config.resources[324]: export tasks_per_node
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=NTASKS_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n '' ]]
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=memory_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n '' ]]
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=walltime_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n 0 ]]
+++++ config.resources[324]: export walltime
+++++ config.resources[328]: echo 'END: config.resources'
+END: config.resources
++++ config.stage_ic[10]: export ICSDIR=UNDEFINED/REPLAY_ICs/CI
++++ config.stage_ic[10]: ICSDIR=UNDEFINED/REPLAY_ICs/CI
++++ config.stage_ic[11]: export BASE_IC=/lfs/h2/emc/global/noscrub/emc.global/data/ICSDIR
++++ config.stage_ic[11]: BASE_IC=/lfs/h2/emc/global/noscrub/emc.global/data/ICSDIR
++++ config.stage_ic[13]: export STAGE_IC_YAML_TMPL=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/parm/stage/master_gefs.yaml.j2
++++ config.stage_ic[13]: STAGE_IC_YAML_TMPL=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/parm/stage/master_gefs.yaml.j2
++++ config.stage_ic[17]: [[ -z UNDEFINED/REPLAY_ICs/CI ]]
++++ config.stage_ic[33]: echo 'END: config.stage_ic'
+END: config.stage_ic
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/env/WCOSS2.env stage_ic
++++ WCOSS2.env[3]: [[ 1 -ne 1 ]]
++++ WCOSS2.env[10]: step=stage_ic
++++ WCOSS2.env[13]: export 'launcher=mpiexec -l'
++++ WCOSS2.env[13]: launcher='mpiexec -l'
++++ WCOSS2.env[14]: export 'mpmd_opt=--cpu-bind verbose,core cfp'
++++ WCOSS2.env[14]: mpmd_opt='--cpu-bind verbose,core cfp'
++++ WCOSS2.env[18]: [[ -n 1 ]]
++++ WCOSS2.env[18]: [[ -n 128 ]]
++++ WCOSS2.env[18]: [[ -n 1 ]]
++++ WCOSS2.env[19]: max_threads_per_task=128
++++ WCOSS2.env[20]: NTHREADSmax=1
++++ WCOSS2.env[21]: NTHREADS1=1
++++ WCOSS2.env[22]: [[ 1 -gt 128 ]]
++++ WCOSS2.env[23]: [[ 1 -gt 128 ]]
++++ WCOSS2.env[24]: APRUN_default='mpiexec -l -n 1'
++++ WCOSS2.env[30]: [[ stage_ic = \p\r\e\p ]]
++++ WCOSS2.env[30]: [[ stage_ic = \p\r\e\p\b\u\f\r ]]
++++ WCOSS2.env[37]: [[ stage_ic = \p\r\e\p\s\n\o\w\o\b\s ]]
++++ WCOSS2.env[41]: [[ stage_ic = \p\r\e\p\_\e\m\i\s\s\i\o\n\s ]]
++++ WCOSS2.env[45]: [[ stage_ic = \w\a\v\e\i\n\i\t ]]
++++ WCOSS2.env[45]: [[ stage_ic = \w\a\v\e\p\r\e\p ]]
++++ WCOSS2.env[45]: [[ stage_ic = \w\a\v\e\p\o\s\t\s\b\s ]]
++++ WCOSS2.env[45]: [[ stage_ic = \w\a\v\e\p\o\s\t\b\n\d\p\n\t ]]
++++ WCOSS2.env[45]: [[ stage_ic = \w\a\v\e\p\o\s\t\b\n\d\p\n\t\b\l\l ]]
++++ WCOSS2.env[45]: [[ stage_ic = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ WCOSS2.env[51]: [[ stage_ic = \a\t\m\a\n\l\v\a\r ]]
++++ WCOSS2.env[56]: [[ stage_ic = \a\t\m\e\n\s\a\n\l\o\b\s ]]
++++ WCOSS2.env[61]: [[ stage_ic = \a\t\m\e\n\s\a\n\l\s\o\l ]]
++++ WCOSS2.env[66]: [[ stage_ic = \a\t\m\e\n\s\a\n\l\l\e\t\k\f ]]
++++ WCOSS2.env[71]: [[ stage_ic = \a\t\m\e\n\s\a\n\l\f\v\3\i\n\c ]]
++++ WCOSS2.env[76]: [[ stage_ic = \a\e\r\o\a\n\l\v\a\r ]]
++++ WCOSS2.env[83]: [[ stage_ic = \a\e\r\o\a\n\l\g\e\n\b ]]
++++ WCOSS2.env[88]: [[ stage_ic = \p\r\e\p\o\b\s\a\e\r\o ]]
++++ WCOSS2.env[93]: [[ stage_ic = \s\n\o\w\a\n\l ]]
++++ WCOSS2.env[100]: [[ stage_ic = \e\s\n\o\w\r\e\c\e\n ]]
++++ WCOSS2.env[107]: [[ stage_ic = \m\a\r\i\n\e\b\m\a\t ]]
++++ WCOSS2.env[112]: [[ stage_ic = \o\c\n\a\n\a\l\r\u\n ]]
++++ WCOSS2.env[118]: [[ stage_ic = \o\c\n\a\n\a\l\c\h\k\p\t ]]
++++ WCOSS2.env[124]: [[ stage_ic = \o\c\n\a\n\a\l\e\c\e\n ]]
++++ WCOSS2.env[129]: [[ stage_ic = \m\a\r\i\n\e\a\n\a\l\l\e\t\k\f ]]
++++ WCOSS2.env[134]: [[ stage_ic = \a\t\m\a\n\l\f\v\3\i\n\c ]]
++++ WCOSS2.env[139]: [[ stage_ic = \a\n\a\l ]]
++++ WCOSS2.env[139]: [[ stage_ic = \a\n\a\l\c\a\l\c ]]
++++ WCOSS2.env[173]: [[ stage_ic = \s\f\c\a\n\l ]]
++++ WCOSS2.env[179]: [[ stage_ic = \e\o\b\s ]]
++++ WCOSS2.env[192]: [[ stage_ic = \e\u\p\d ]]
++++ WCOSS2.env[206]: [[ stage_ic = \f\c\s\t ]]
++++ WCOSS2.env[206]: [[ stage_ic = \e\f\c\s ]]
++++ WCOSS2.env[224]: [[ stage_ic = \u\p\p ]]
++++ WCOSS2.env[229]: [[ stage_ic = \a\t\m\o\s\_\p\r\o\d\u\c\t\s ]]
++++ WCOSS2.env[233]: [[ stage_ic = \o\c\e\a\n\i\c\e\_\p\r\o\d\u\c\t\s ]]
++++ WCOSS2.env[238]: [[ stage_ic = \e\c\e\n ]]
++++ WCOSS2.env[255]: [[ stage_ic = \e\s\f\c ]]
++++ WCOSS2.env[264]: [[ stage_ic = \e\p\o\s ]]
++++ WCOSS2.env[269]: [[ stage_ic = \p\o\s\t\s\n\d ]]
++++ WCOSS2.env[281]: [[ stage_ic = \a\w\i\p\s ]]
++++ WCOSS2.env[286]: [[ stage_ic = \g\e\m\p\a\k ]]
++++ WCOSS2.env[291]: [[ stage_ic = \f\i\t\2\o\b\s ]]
++++ WCOSS2.env[296]: [[ stage_ic = \w\a\v\e\a\w\i\p\s\b\u\l\l\s ]]
++++ WCOSS2.env[300]: [[ sta = \m\o\s ]]
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
++ JGLOBAL_STAGE_IC[7]: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/scripts/exglobal_stage_ic.py
+[38;21m2024-09-26 22:29:07,596 - INFO     - root        : BEGIN: __main__.main[0m
+[38;5;39m2024-09-26 22:29:07,596 - DEBUG    - root        : (  )[0m
+[38;21m2024-09-26 22:29:07,606 - INFO     - stage_ic    : BEGIN: Stage.__init__[0m
+[38;5;39m2024-09-26 22:29:07,606 - DEBUG    - stage_ic    : ( <pygfs.task.stage_ic.Stage object at 0x14aa3ce84c40>, {'envir': 'prod', 'UDUNITS_LIBDIR': '/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/lib', 'FRAC_GRID': True, 'waveGRD': 'glo_100', 'CRAY_LMOD_MPI': 'cray-mpich/8.0', 'G2TMPL_LIB': '/apps/ops/para/libs/intel/19.1.3.304/g2tmpl/1.10.2/lib/libg2tmpl.a', 'LMOD_FAMILY_CRAYPE_NETWORK_VERSION': False, 'COM_SNOW_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow', 'PBS_ENVIRONMENT': 'PBS_BATCH', 'intel_ver': '19.1.3.304', 'OS': 'Linux', 'LD_LIBRARY_PATH': '/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/lib:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/lib:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/lib64:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/lib:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib:/pe/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin:/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/lib/release:/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/lib:/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp/lib/intel64:/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin:/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb/lib/intel64/gcc4.8:/pe/intel/debugger_2020/python/intel64/lib:/pe/intel/debugger_2020/libipt/intel64/lib:/opt/cray/libfabric/1.11.0.0./lib64', 'HOSTTYPE': 'x86_64', 'LMOD_CUSTOM_PATHS': 'CNCM/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4:CNCM/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4:COMPILER/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304:COMPILER/apps/ops/prod/libs/modulefiles/compiler/intel/19.1.3.304:COMPILER/apps/prod/lmodules/intel/19.1.3.304', 'SENDDBN_NTC': False, 'COM_ATMOS_RADMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon', 'threads_per_task': 1, 'COM_ICE_GRIB_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2', 'PBS_O_LANG': 'en_US.UTF-8', 'cplwav2atm': True, 'GEMDATA': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/data', 'util_shared_ver': '1.4.0', '_ModuleTable017_': 'bG9iYWwvZ2l0L3ByZXBvYnMvZ2ZzdjE3X3YxLjEuMC9tb2R1bGVmaWxlcy9wcmVwb2JzLzEuMS4wLmx1YSIsWyJmdWxsTmFtZSJdPSJwcmVwb2JzLzEuMS4wIixbImxvYWRPcmRlciJdPTI3LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InByZXBvYnMvMS4xLjAiLH0scHJvZF91dGlsPXtbImZuIl09Ii9hcHBzL29wcy9wcm9kL25jby9tb2R1bGVmaWxlcy9jb3JlL3Byb2RfdXRpbC8yLjAuOSIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMi4wLjkiLFsibG9hZE9yZGVyIl09MjEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHJvZF91dGlsLzIuMC45Iix9', 'WRITE_DOPOST': True, 'prepobs_run_ver': '1.1.0', 'ENSMEM': 0, 'JPEG_VER': '9c', '__LMOD_REF_COUNT_PATH': '/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin:1;/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin:1;/apps/ops/para/libs/intel/19.1.3.304/metplus/3.1.1/ush:1;/apps/ops/para/libs/intel/19.1.3.304/met/9.1.3/bin:1;/apps/ops/prod/libs/intel/19.1.3.304/wgrib2/2.0.8/bin:1;/apps/ops/prod/libs/intel/19.1.3.304/cray-mpich/8.1.4/ncdiag/1.0.0/bin:1;/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/ush:1;/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0/ush:1;/apps/ops/prod/libs/intel/19.1.3.304/grib_util/1.2.3/bin:1;/apps/ops/prod/nco/core/prod_util.v2.0.9/ush:1;/apps/prod/nco/4.7.9/intel/19.1.3.304/bin:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/bin:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/cdo/1.9.8/bin:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/bin:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/bin:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/bin:1;/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3/bin:1;/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/bin:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/bin:1;/apps/prod/cfp/2.0.4/intel/19.1.3.304/bin:1;/opt/cray/pe/pals/1.0.17/bin:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/bin/intel64:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/bin:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/bin:1;/pe/intel/debugger_2020/gdb/intel64/bin:1;/opt/cray/pe/craype/2.7.13/bin:1;/opt/cray/libfabric/1.11.0.0./bin:1;/u/terry.mcguinness/bin:2;/usr/local/bin:1;/usr/bin:1;/bin:2;/opt/pbs/bin:1;/sbin:1;.:1;/lfs/h2/emc/global/noscrub/terry.mcguinness/scripts:1;/opt/cray/pe/bin:1;/apps/prod/python-modules/3.8.6/intel/19.1.3.304/bin:1;/apps/prod/python-modules/3.8.6/intel/19.1.3.304/lib/python3.8/site-packages/bin:1;/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/bin:1;/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/ez:1;/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/nawips:1;/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/prnt:1;/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/decoder:1', 'GEMNTS': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/nts', '_ModuleTable002_': 'b2FkT3JkZXIiXT01LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IlByZ0Vudi1pbnRlbC84LjEuMCIsfSxidWZyX2R1bXA9e1siZm4iXT0iL2FwcHMvb3BzL3Byb2QvbmNvL21vZHVsZWZpbGVzL2NvbXBpbGVyL2ludGVsLzE5LjEuMy4zMDQvYnVmcl9kdW1wLzEuMC4wLmx1YSIsWyJmdWxsTmFtZSJdPSJidWZyX2R1bXAvMS4wLjAiLFsibG9hZE9yZGVyIl09MjIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYnVmcl9kdW1wLzEuMC4wIix9LGNkbz17WyJmbiJdPSIvYXBwcy9wcm9kL2xtb2R1bGVzL0lOVEVMX2NyYXlfbXBpY2gvMTkuMS4zLjMwNC9jcmF5', 'RUN': 'gefs', 'NCO_SRC': '/apps/prod/nco/4.7.9/intel/19.1.3.304/src', 'BULL2SEQ': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/bull2seq', 'INCLUDE': '/apps/prod/nco/4.7.9/intel/19.1.3.304/include:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/include:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include', 'FHMAX_ENKF': 48, 'LESSCLOSE': 'lessclose.sh %s %s', 'ARCH_WARMICFREQ': 4, 'CRAY_LD_LIBRARY_PATH': '/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0/lib', '__LMOD_REF_COUNT_DYLD_LIBRARY_PATH': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/lib:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/lib:1', 'CRTM_FIX': '/apps/ops/para/libs/intel/19.1.3.304/crtm/2.4.0.1/fix', 'COM_RTOFS_TMPL': '${DMPDIR}', 'XKEYSYMDB': '/usr/X11R6/lib/X11/XKeysymDB', 'PE_ENV': 'INTEL', 'COM_ATMOS_GRIB_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}', 'CWORDSH': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/cwordsh', '__LMOD_REF_COUNT_C_INCLUDE_PATH': '/apps/prod/nco/4.7.9/intel/19.1.3.304/include:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/include:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include:1', '__LMOD_REF_COUNT_PE_FORTRAN_PKGCONFIG_LIBS': 'mpichf90:1', 'LMOD_FAMILY_CRAYPE_CPU': 'craype-x86-rome', 'NUM_SND_COLLECTIVES': 9, 'CRAY_LMOD_COMPILER': 'intel/19.0', 'PSLOT': 'C96_S2SWA_gefs_replay_ics_b0d0cd46', 'LMOD_MODULERCFILE': '/apps/prod/lmodules/.modulerc.lua', 'QUEUE': 'dev', 'DOIAU': False, 'GEMPARM': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/parm', 'PACKAGEROOT': '/lfs/h1/ops/prod/packages', 'PE_PRODUCT_LIST': 'CRAYPE:CRAYPE_X86_ROME', 'LMOD_IGNORE_CACHE': True, 'NDATE': '/apps/ops/prod/nco/core/prod_util.v2.0.9/exec/ndate', 'COM_ICE_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart', 'LMOD_FAMILY_MPI_VERSION': '8.1.9', 'libjpeg_ver': '9c', 'FHOUT_ICE': 24, 'PE_PERFTOOLS_MPICH_LIBDIR': '/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0/lib', 'ARCH_CYC': 0, 'PE_MPICH_GTL_DIR_amd_gfx906': '-L/opt/cray/pe/mpich/8.1.9/gtl/lib', 'LANG': 'en_US.UTF-8', 'TZ': 'UTC', 'NetCDF_VERSION': '4.7.4', 'crtm_VERSION': '2.4.0.1', '_ModuleTable019_': 'dXRpbF9zaGFyZWQ9e1siZm4iXT0iL2FwcHMvb3BzL3Byb2QvbmNvL21vZHVsZWZpbGVzL2NvbXBpbGVyL2ludGVsLzE5LjEuMy4zMDQvdXRpbF9zaGFyZWQvMS40LjAiLFsiZnVsbE5hbWUiXT0idXRpbF9zaGFyZWQvMS40LjAiLFsibG9hZE9yZGVyIl09MjMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0idXRpbF9zaGFyZWQvMS40LjAiLH0sd2dyaWIyPXtbImZuIl09Ii9hcHBzL29wcy9wYXJhL2xpYnMvbW9kdWxlZmlsZXMvY29tcGlsZXIvaW50ZWwvMTkuMS4zLjMwNC93Z3JpYjIvMi4wLjgubHVhIixbImZ1bGxOYW1lIl09IndncmliMi8yLjAuOCIsWyJsb2FkT3JkZXIiXT0zNCxwcm9wVD17fSxbInN0YWNrRGVw', 'EXECcfs': '/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/exec', 'cray_pals_ver': '1.0.17', 'PE_MPICH_GTL_DIR_amd_gfx908': '-L/opt/cray/pe/mpich/8.1.9/gtl/lib', 'COMLOGSROOT': '/lfs/h1/ops/prod/com', 'imp_physics': 8, 'QUEUE_SERVICE': 'dev_transfer', 'WINDOWMANAGER': 'xterm', 'METPLUS_ROOT': '/apps/ops/para/libs/intel/19.1.3.304/metplus/3.1.1', 'COM_ICE_NETCDF_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf', '_ModuleTable008_': 'IixbImxvYWRPcmRlciJdPTI4LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImZpdDJvYnMvMS4xLjQiLH0sZzJ0bXBsPXtbImZuIl09Ii9hcHBzL29wcy9wYXJhL2xpYnMvbW9kdWxlZmlsZXMvY29tcGlsZXIvaW50ZWwvMTkuMS4zLjMwNC9nMnRtcGwvMS4xMC4yLmx1YSIsWyJmdWxsTmFtZSJdPSJnMnRtcGwvMS4xMC4yIixbImxvYWRPcmRlciJdPTMyLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImcydG1wbC8xLjEwLjIiLH0sZ2VtcGFrPXtbImZuIl09Ii9hcHBzL29wcy9wcm9kL25jby9tb2R1bGVmaWxlcy9jb21waWxlci9pbnRlbC8xOS4xLjMuMzA0', 'LESS': '-M -I -R', 'UDUNITS_LIB': '/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/lib/libudunits2.a', 'PE_MPICH_GTL_LIBS_nvidia70': '-lmpi_gtl_cuda', '__LMOD_REF_COUNT_INTEL_LICENSE_FILE': '/pe/intel/compilers_and_libraries_2020.4.304/linux/licenses:1;/opt/intel/licenses:1;/intel/licenses:1', 'HISTTIMEFORMAT': '%F %T ', 'LMOD_FAMILY_COMPILER_VERSION': '19.1.3.304', 'COM_ATMOS_GRIB_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2', 'MET_BASE': '/apps/ops/para/libs/intel/19.1.3.304/met/9.1.3/share/met', 'cyc': 0, 'HOSTNAME': 'nid001179', 'version': 'v16.3.7', 'IPPROOT': '/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp', 'LMOD_SYSTEM_DEFAULT_MODULES': 'envvar/1.0', 'gsl_ver': 2.7, 'OLDPWD': '/u/terry.mcguinness', 'DO_EXTRACTVARS': True, 'NADATA1': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/data', 'COM_WAVE_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart', 'COM_ATMOS_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart', 'MEL_BUFR_TABLES': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/tables/melbufr', 'PBS_O_HOME': '/u/terry.mcguinness', 'NADATA2': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/data', 'SENDSDM': False, 'COM_ATMOS_BUFR_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr', '__LMOD_REF_COUNT__LMFILES_': '/opt/cray/pe/lmod/modulefiles/craype-targets/default/craype-x86-rome.lua:1;/opt/cray/modulefiles/libfabric/1.11.0.0.:1;/opt/cray/pe/lmod/modulefiles/craype-targets/default/craype-network-ofi.lua:1;/apps/prod/lmodules/sys_core/envvar/1.0:1;/opt/cray/pe/lmod/modulefiles/core/PrgEnv-intel/8.1.0.lua:1;/opt/cray/pe/lmod/modulefiles/core/craype/2.7.13.lua:1;/apps/prod/lmodules/core/intel/19.1.3.304.lua:1;/opt/cray/pe/lmod/modulefiles/comnet/intel/19.0/ofi/1.0/cray-mpich/8.1.9.lua:1;/opt/cray/pe/lmod/modulefiles/core/cray-pals/1.0.17.lua:1;/apps/prod/lmodules/core/cfp/2.0.4:1;/apps/prod/lmodules/intel/19.1.3.304/python/3.8.6:1;/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304/gempak/7.14.1:1;/apps/prod/lmodules/intel/19.1.3.304/perl/5.32.0:1;/apps/prod/lmodules/intel/19.1.3.304/libjpeg/9c:1;/apps/prod/lmodules/intel/19.1.3.304/udunits/2.2.28:1;/apps/prod/lmodules/intel/19.1.3.304/gsl/2.7:1;/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4/cdo/1.9.8.lua:1;/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4/hdf5/1.10.6.lua:1;/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4/netcdf/4.7.4.lua:1;/apps/prod/lmodules/intel/19.1.3.304/nco/4.7.9:1;/apps/ops/prod/nco/modulefiles/core/prod_util/2.0.9:1;/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304/bufr_dump/1.0.0.lua:1;/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304/util_shared/1.4.0:1;/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4/ncdiag/1.0.0.lua:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/met/9.1.3.lua:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/metplus/3.1.1.lua:1;/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/modulefiles/prepobs/1.1.0.lua:1;/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/modulefiles/fit2obs/1.1.4.lua:1;/apps/ops/prod/nco/models/modulefiles/mos_shared/2.7.2:1;/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/modulefiles/module_base.wcoss2.lua:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/grib_util/1.2.3.lua:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/g2tmpl/1.10.2.lua:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/crtm/2.4.0.1.lua:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/wgrib2/2.0.8.lua:1', 'CONFIG_SITE': '/usr/share/site/x86_64-unknown-linux-gnu', 'libpng_ver': '1.6.37', 'CSHEDIT': 'emacs', 'NETCDF_ROOT': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4', 'C_INCLUDE_PATH': '/apps/prod/nco/4.7.9/intel/19.1.3.304/include:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/include:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include', 'HDF5_ROOT': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6', 'DO_FIT2OBS': False, 'DO_ICE': True, 'CHGRP_CMD': 'chgrp rstprod', 'DO_NEST': False, 'met_ver': '9.1.3', 'ncdiag_VERSION': '1.0.0', 'BASE_IC': '/lfs/h2/emc/global/noscrub/emc.global/data/ICSDIR', 'LMOD_CUSTOM_CNCM_INTEL_19_0_UCX_1_0_X86_ROME_1_0_CRAY_MPICH_8_0_PREFIX': '/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4:/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4', 'NAWIPS_HELP': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/help', 'NETCDF_VERSION': '4.7.4', 'PBS_JOBID': '156421642.cbqs01', 'LMOD_CUSTOM_COMPILER_GNU_8_0_PREFIX': '/apps/prod/lmodules/gcc/11.2.0:/apps/prod/lmodules/gcc/10.2.0', 'ENVIRONMENT': 'BATCH', 'GPG_TTY': 'not a tty', 'PrgEnv_intel_ver': '8.1.0', 'LESS_ADVANCED_PREPROCESSOR': False, 'PARMgfs': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/parm', 'COM_WAVE_PREP_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep', 'HDF5_LIBRARIES': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/lib', 'GEMPTXT': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/txt/programs', 'OS_INC': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/include', 'BASE_ENV': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/env', 'NLN': '/bin/ln -sf', 'nst_anl': True, 'COLORTERM': 1, 'ukmet_ver': 'v2.2', 'USHbufr_dump': '/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0/ush', 'job': 'stage_ic', 'RESERVATION': '', 'LIBJPEG_ROOT': '/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z', 'gfs_cyc': 1, 'PBS_JOBNAME': 'C96_S2SWA_gefs_replay_ics_b0d0cd46_stage_ic_00', 'COM_CHEM_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history', 'UDUNITS_INC': '/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include', 'NCPUS': 1, '_ModuleTable007_': 'Il09MzMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iY3J0bS8yLjQuMC4xIix9LGVudnZhcj17WyJmbiJdPSIvYXBwcy9wcm9kL2xtb2R1bGVzL3N5c19jb3JlL2VudnZhci8xLjAiLFsiZnVsbE5hbWUiXT0iZW52dmFyLzEuMCIsWyJsb2FkT3JkZXIiXT00LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImVudnZhci8xLjAiLH0sZml0Mm9icz17WyJmbiJdPSIvbGZzL2gyL2VtYy9nbG9iYWwvc2F2ZS9lbWMuZ2xvYmFsL2dpdC9GaXQyT2JzL3YxLjEuNC9tb2R1bGVmaWxlcy9maXQyb2JzLzEuMS40Lmx1YSIsWyJmdWxsTmFtZSJdPSJmaXQyb2JzLzEuMS40', 'SUPVIT': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/supvit', 'ntasks': 1, 'max_tasks_per_node': 128, 'USE_CFP': True, 'OUTPUT_GRID': 'gaussian_grid', 'EXPDIR': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/EXPDIR/C96_S2SWA_gefs_replay_ics_b0d0cd46', 'COM_OBS_JEDI': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi', '__LMOD_REF_COUNT_NLSPATH': '/pe/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64/locale/%l_%t/%N:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/locale/%l_%t/%N:1;/pe/intel/debugger_2020/gdb/intel64/share/locale/%l_%t/%N:1', 'PARMcode': '/apps/ops/prod/nco/models/mos_shared.v2.7.2/parm', 'USHprepobs': '/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/ush', 'FHMIN': 0, 'EXECmos_shared': '/apps/ops/prod/nco/models/mos_shared.v2.7.2/exec', '__LMOD_REF_COUNT_CPLUS_INCLUDE_PATH': '/apps/prod/nco/4.7.9/intel/19.1.3.304/include:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/include:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include:1', 'LMOD_FAMILY_CRAYPE_NETWORK': 'craype-network-ofi', 'VERBOSE': True, 'TOCGRIB': '/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/tocgrib', 'LMOD_FAMILY_CRAYPE_VERSION': '2.7.13', 'NHOUR': '/apps/ops/prod/nco/core/prod_util.v2.0.9/exec/nhour', 'NetCDF_INCLUDES': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/include', 'FHMAX_GFS': 48, 'NCO_LIBDIR': '/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64', 'DYLD_LIBRARY_PATH': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/lib:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/lib', '__LMOD_REF_COUNT_INCLUDE': '/apps/prod/nco/4.7.9/intel/19.1.3.304/include:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/include:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include:1', 'MACHTYPE': 'x86_64-suse-linux', 'DUMPJB': '/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0/ush/dumpjb', 'COM_WAVE_GEMPAK_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak', '__LMOD_REF_COUNT_LD_LIBRARY_PATH': '/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/lib:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/lib:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/lib64:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/lib:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/lib/release:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/lib:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp/lib/intel64:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb/lib/intel64/gcc4.8:1;/pe/intel/debugger_2020/python/intel64/lib:1;/pe/intel/debugger_2020/libipt/intel64/lib:1;/opt/cray/libfabric/1.11.0.0./lib64:1', 'EDATE': datetime.datetime(2020, 11, 1, 0, 0), '__LMOD_REF_COUNT_PKG_CONFIG_PATH': '/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/lib64/pkgconfig:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib/pkgconfig:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib/pkgconfig:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/bin/pkgconfig:1;/opt/cray/pe/craype/2.7.13/pkg-config:1;/opt/cray/libfabric/1.11.0.0./lib64/pkgconfig:1', 'ATARDIR': '/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C96_S2SWA_gefs_replay_ics_b0d0cd46', 'DO_JEDIOCNVAR': False, 'PBS_O_PATH': '/apps/ops/test/nco/core/rocoto.v1.3.5/bin:/opt/cray/libfabric/1.11.0.0./bin:/u/terry.mcguinness/bin:/usr/local/bin:/usr/bin:/bin:/opt/pbs/bin:/sbin:.:/lfs/h2/emc/global/noscrub/terry.mcguinness/scripts', 'LMOD_CUSTOM_CNCM_CRAYCLANG_10_0_UCX_1_0_PREFIX': '/apps/prod/lmodules/cce/13.0.0:/apps/prod/lmodules/cce/12.0.3:/apps/prod/lmodules/cce/11.0.4', 'WEBTITLE': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/webtitle', 'UTILROOT': '/apps/ops/prod/nco/core/prod_util.v2.0.9', '_ModuleTable024_': 'aGFyZS9tb2R1bGVmaWxlcy9Db3JlOi91c3Ivc2hhcmUvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L29wdC9jcmF5L3BlL2xtb2QvbW9kdWxlZmlsZXMvY29yZTovb3B0L2NyYXkvcGUvbG1vZC9tb2R1bGVmaWxlcy9jcmF5cGUtdGFyZ2V0cy9kZWZhdWx0Oi9hcHBzL3Byb2QvbG1vZHVsZXMvc3lzX2NvcmU6L2FwcHMvb3BzL3Byb2QvbmNvL21vZHVsZWZpbGVzL2NvcmU6L2FwcHMvcHJvZC9sbW9kdWxlcy9jb3JlOi9vcHQvY3JheS9tb2R1bGVmaWxlcyIsfQ==', 'udunits_ver': '2.2.28', 'mos_shared_ver': '2.7.2', 'nco_ver': '4.7.9', 'PE_PKGCONFIG_PRODUCTS': 'PE_MPICH', '_ModuleTable015_': 'Lmx1YSIsWyJmdWxsTmFtZSJdPSJuY2RpYWcvMS4wLjAiLFsibG9hZE9yZGVyIl09MjQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibmNkaWFnLzEuMC4wIix9LG5jbz17WyJmbiJdPSIvYXBwcy9wcm9kL2xtb2R1bGVzL2ludGVsLzE5LjEuMy4zMDQvbmNvLzQuNy45IixbImZ1bGxOYW1lIl09Im5jby80LjcuOSIsWyJsb2FkT3JkZXIiXT0yMCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJuY28vNC43LjkiLH0sbmV0Y2RmPXtbImZuIl09Ii9hcHBzL3Byb2QvbG1vZHVsZXMvSU5URUxfY3JheV9tcGljaC8xOS4xLjMuMzA0L2NyYXktbXBpY2gvOC4xLjQv', 'NAWIPS_TABLE': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/tables', 'ASCII2SHP': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/ascii2shp', 'CRAY_MPICH_BASEDIR': '/opt/cray/pe/mpich/8.1.9/ofi', 'OS_LIB': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/lib', 'PE_MPICH_GTL_DIR_nvidia80': '-L/opt/cray/pe/mpich/8.1.9/gtl/lib', 'TOCGRIB2SUPER': '/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/tocgrib2super', '_ModuleTable004_': 'LjAvY3JheS1tcGljaC84LjEuOS5sdWEiLFsiZnVsbE5hbWUiXT0iY3JheS1tcGljaC84LjEuOSIsWyJsb2FkT3JkZXIiXT04LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNyYXktbXBpY2gvOC4xLjkiLH0sWyJjcmF5LXBhbHMiXT17WyJmbiJdPSIvb3B0L2NyYXkvcGUvbG1vZC9tb2R1bGVmaWxlcy9jb3JlL2NyYXktcGFscy8xLjAuMTcubHVhIixbImZ1bGxOYW1lIl09ImNyYXktcGFscy8xLjAuMTciLFsibG9hZE9yZGVyIl09OSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJjcmF5LXBhbHMvMS4wLjE3Iix9LGNyYXlwZT17WyJmbiJdPSIvb3B0L2Ny', 'FIXorog': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/fix/orog', 'FIXcfs': '/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/fix', 'FNTSFA': '        ', 'MINICOM': '-c on', 'HDF5_INCLUDES': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/include', 'pgmout': 'OUTPUT.74310', '__LMOD_REF_COUNT_PYTHONPATH': '/apps/ops/prod/nco/core/prod_util.v2.0.9/ush:1;/apps/prod/python-modules/3.8.6/intel/19.1.3.304/lib/python3.8/site-packages:1', 'FHOUT_WAV': 3, 'PARMshared': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/parm', 'FHOUT': 3, 'PARMmos_shared': '/apps/ops/prod/nco/models/mos_shared.v2.7.2/parm', 'DO_AWIPS': False, 'PARTITION_SERVICE': '', 'PE_MPICH_PKGCONFIG_VARIABLES': 'PE_MPICH_GTL_DIR_@accelerator@:PE_MPICH_GTL_LIBS_@accelerator@', 'PE_MPICH_PKGCONFIG_LIBS': 'mpich', 'FHOUT_OCN_GFS': 24, 'INTEL_PYTHONHOME': '/pe/intel/debugger_2020/python/intel64/', 'QUILTING': True, 'QT_SYSTEM_DIR': '/usr/share/desktop-data', 'OSTYPE': 'linux', 'launcher': 'mpiexec -l', 'FHOUT_GFS': 6, 'HOMEcode': '/apps/ops/prod/nco/models/mos_shared.v2.7.2', 'NETCDF': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4', 'CLASSPATH': '/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/lib/mpi.jar', 'NMEM_ENS': 2, 'COM_ICE_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice', 'FIXugwd': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/fix/ugwd', 'HOMEmos_shared': '/apps/ops/prod/nco/models/mos_shared.v2.7.2', 'GRIB2GRIB': '/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/grib2grib', 'SDATE': datetime.datetime(2020, 11, 1, 0, 0), 'FIXmos_shared': '/apps/ops/prod/nco/models/mos_shared.v2.7.2/fix', 'PBS_O_WORKDIR': '/u/terry.mcguinness', 'USER': 'terry.mcguinness', 'OS_BIN': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/bin', 'MODULES_SET_SHELL_STARTUP': 0, 'ARCH_FCSTICFREQ': 1, 'PAGER': 'less', 'METPLUS_VERSION': '3.1.1', 'MODULE_VERSION': '3.2.10', 'NetCDF_ROOT': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4', 'PE_MPICH_GENCOMPILERS_INTEL': 19.0, 'crtm_ROOT': '/apps/ops/para/libs/intel/19.1.3.304/crtm/2.4.0.1', 'LMOD_CUSTOM_CNCM_GNU_8_0_OFI_1_0_X86_ROME_1_0_CRAY_MPICH_8_0_PREFIX': '/apps/prod/lmodules/GCC_cray_mpich/10.2.0/cray-mpich/8.1.4', 'LMOD_FAMILY_PRGENV_VERSION': '8.1.0', '_ModuleTable023_': 'bGVmaWxlcy9jb3JlIiwiL29wdC9jcmF5L3BlL2xtb2QvbW9kdWxlZmlsZXMvY3JheXBlLXRhcmdldHMvZGVmYXVsdCIsIi9hcHBzL3Byb2QvbG1vZHVsZXMvc3lzX2NvcmUiLCIvYXBwcy9vcHMvcHJvZC9uY28vbW9kdWxlZmlsZXMvY29yZSIsIi9hcHBzL3Byb2QvbG1vZHVsZXMvY29yZSIsIi9vcHQvY3JheS9tb2R1bGVmaWxlcyIsIi9hcHBzL29wcy9wcm9kL25jby9tb2RlbHMvbW9kdWxlZmlsZXMiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3Vzci9zaGFyZS9tb2R1bGVzOi91c3Ivc2hhcmUvTW9kdWxlcy8kTU9EVUxFX1ZFUlNJT04vbW9kdWxlZmlsZXM6L3Vzci9zaGFyZS9tb2R1bGVzL21vZHVsZWZpbGVzOi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMvTGludXg6L3Vzci9z', 'NPRINTER': '', '_ModuleTable012_': 'ZXMvaW50ZWwvMTkuMS4zLjMwNC9saWJqcGVnLzljIixbImZ1bGxOYW1lIl09ImxpYmpwZWcvOWMiLFsibG9hZE9yZGVyIl09MTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibGlianBlZy85YyIsfSxtZXQ9e1siZm4iXT0iL2FwcHMvb3BzL3BhcmEvbGlicy9tb2R1bGVmaWxlcy9jb21waWxlci9pbnRlbC8xOS4xLjMuMzA0L21ldC85LjEuMy5sdWEiLFsiZnVsbE5hbWUiXT0ibWV0LzkuMS4zIixbImxvYWRPcmRlciJdPTI1LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im1ldC85LjEuMyIsfSxtZXRwbHVzPXtbImZuIl09Ii9hcHBzL29wcy9wYXJhL2xp', 'COM_CHEM_BMAT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix', 'FHMAX': 9, 'NAWIPS': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips', 'COM_WAVE_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history', 'LMOD_CUSTOM_CNCM_GNU_8_0_UCX_1_0_X86_ROME_1_0_CRAY_MPICH_8_0_PREFIX': '/apps/prod/lmodules/GCC_cray_mpich/10.2.0/cray-mpich/8.1.4', 'CRAY_CPU_TARGET': 'x86-rome', 'DEGRIB2': '/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/degrib2', 'WGRIB': '/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/wgrib', 'PBS_NODEFILE': '/var/spool/pbs/aux/156421642.cbqs01', 'OS_ROOT': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64', 'UDUNITS_SRC': '/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/src', 'LMOD_CUSTOM_CNCM_CRAYCLANG_10_0_UCX_1_0_X86_ROME_1_0_CRAY_MPICH_8_0_PREFIX': '/apps/prod/lmodules/CCE_cray_mpich/11.0.4/cray-mpich/8.1.4', '__LMOD_REF_COUNT_MODULEPATH': '/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/modulefiles:1;/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/modulefiles:1;/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304:1;/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4:1;/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4:1;/opt/cray/pe/lmod/modulefiles/mpi/intel/19.0/ofi/1.0/cray-mpich/8.0:1;/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304:1;/apps/ops/prod/libs/modulefiles/compiler/intel/19.1.3.304:1;/apps/prod/lmodules/intel/19.1.3.304:1;/opt/cray/pe/lmod/modulefiles/comnet/intel/19.0/ofi/1.0:1;/apps/prod/lmodules/compiler/intel/19.0:1;/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/modulefiles:1;/opt/cray/pe/lmod/modulefiles/net/ofi/1.0:1;/opt/cray/pe/lmod/modulefiles/cpu/x86-rome/1.0:1;/usr/share/modules:1;/usr/share/Modules/$MODULE_VERSION/modulefiles:1;/usr/share/modules/modulefiles:1;/usr/share/modulefiles/Linux:1;/usr/share/modulefiles/Core:1;/usr/share/lmod/lmod/modulefiles/Core:1;/opt/cray/pe/lmod/modulefiles/core:1;/opt/cray/pe/lmod/modulefiles/craype-targets/default:1;/apps/prod/lmodules/sys_core:1;/apps/ops/prod/nco/modulefiles/core:1;/apps/prod/lmodules/core:1;/opt/cray/modulefiles:1;/apps/ops/prod/nco/models/modulefiles:1', 'NCO_LDFLAGS_C': '-L/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64 -lnco', 'PKGCONFIG_ENABLED': 1, 'GRB2INDEX': '/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/grb2index', 'MORE': '-sl', 'BUFRFLAGS': '-DNO_MSG_IPC -ansi -O', 'PE_FORTRAN_PKGCONFIG_LIBS': 'mpichf90', '__LMOD_REF_COUNT_LOADEDMODULES': 'craype-x86-rome:1;libfabric/1.11.0.0.:1;craype-network-ofi:1;envvar/1.0:1;PrgEnv-intel/8.1.0:1;craype/2.7.13:1;intel/19.1.3.304:1;cray-mpich/8.1.9:1;cray-pals/1.0.17:1;cfp/2.0.4:1;python/3.8.6:1;gempak/7.14.1:1;perl/5.32.0:1;libjpeg/9c:1;udunits/2.2.28:1;gsl/2.7:1;cdo/1.9.8:1;hdf5/1.10.6:1;netcdf/4.7.4:1;nco/4.7.9:1;prod_util/2.0.9:1;bufr_dump/1.0.0:1;util_shared/1.4.0:1;ncdiag/1.0.0:1;met/9.1.3:1;metplus/3.1.1:1;prepobs/1.1.0:1;fit2obs/1.1.4:1;mos_shared/2.7.2:1;module_base.wcoss2:1;grib_util/1.2.3:1;g2tmpl/1.10.2:1;crtm/2.4.0.1:1;wgrib2/2.0.8:1', 'PBS_TASKNUM': 1, '__LMOD_REF_COUNT_CRAY_LD_LIBRARY_PATH': '/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0/lib:1', 'COM_OBS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/obs', 'FIXprepobs': '/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/fix', 'COM_ATMOS_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos', 'FHMIN_ENKF': 0, 'COM_WAVE_WMO_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo', 'DATA': '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_S2SWA_gefs_replay_ics_b0d0cd46/gefs.2020110100/stage_ic.73863', 'USHfit2obs': '/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/ush', 'G2TMPL_INC': '/apps/ops/para/libs/intel/19.1.3.304/g2tmpl/1.10.2/include', 'INTEL_MAJOR_VERSION': 19.1, 'COM_ATMOS_MASTER_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master', 'OPS_RES': 'C768', 'PWD': '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_S2SWA_gefs_replay_ics_b0d0cd46/gefs.2020110100/stage_ic.73863', 'MDATE': '/apps/ops/prod/nco/core/prod_util.v2.0.9/exec/mdate', 'GEMMAPS': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/maps', 'WGRIB2_LIB': '/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/lib/libwgrib2.a', 'XUSERFILESEARCHPATH': './%N:/u/terry.mcguinness/%N:/u/terry.mcguinness/Resource/%N:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/resource/%N', 'WRITE_NSFLIP': True, 'NLPDEST': '', 'PE_MPICH_GTL_DIR_nvidia70': '-L/opt/cray/pe/mpich/8.1.9/gtl/lib', 'jobid': 'stage_ic.73863', 'COPYGB': '/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/copygb', 'STAGE_IC_YAML_TMPL': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/parm/stage/master_gefs.yaml.j2', 'FHMIN_WAV': 3, 'HOME': '/u/terry.mcguinness', 'GEMEXE': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/bin', 'HOMEDIR': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/GLOBAL', 'REDOUT': '1>', 'MK125FLW': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/mk125flw', 'COM_ICE_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history', 'g2tmpl_ver': '1.10.2', 'NAWIPS_EXE': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/bin', 'PELOCAL_PRGENV': True, 'MK125FLS': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/mk125fls', 'RUN_ENVIR': 'emc', 'CMAKE_PREFIX_PATH': '/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z:/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk', 'PARTITION_BATCH': '', 'GEMINC': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/include', 'ncdiag_ROOT': '/apps/ops/prod/libs/intel/19.1.3.304/cray-mpich/8.1.4/ncdiag/1.0.0', 'UNPMGRB1': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/unpmgrb1', 'COM_OCEAN_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart', 'LPFLAG': '-P', 'IAU_FHROT': 0, 'COM_OBSDMP_TMPL': '${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos', 'HOMEpost': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow', 'prod_envir_ver': '2.0.4', 'HOST': 'nid001179', 'COM_ICE_BMATRIX_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice', 'obsproc_run_ver': '1.2.0', 'WGRIB2_INC': '/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/include', 'grib_util_ROOT': '/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3', 'LMOD_VERSION': '8.3.1', 'GEMTBL': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/tables', 'XNLSPATH': '/usr/share/X11/nls', 'CPATH': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/include:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/include:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include/python3.8:/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp/include:/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/include:/pe/intel/compilers_and_libraries_2020.4.304/linux/pstl/include:/pe/intel/compilers_and_libraries_2020.4.304/linux/pstl/stdlib:/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb/include', 'PE_MPICH_FORTRAN_PKGCONFIG_LIBS': 'mpichf90', 'CDATE': datetime.datetime(2020, 11, 1, 0, 0), 'PBS_MOMPORT': 15003, 'COM_ATMOS_GEMPAK_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}', 'ARCDIR': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/GLOBAL/archive/C96_S2SWA_gefs_replay_ics_b0d0cd46', 'FHOUT_ENKF': 6, 'pid': 74310, 'NCO_LIB': '/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64', 'FCST_SEGMENTS': [0, 48], '__LMOD_REF_COUNT_INFOPATH': '/pe/intel/documentation_2020/en/debugger/gdb-ia/info:1;/apps/docs/info:1', 'CRAY_LMOD_CPU': 'x86-rome/1.0', 'PE_MPICH_GTL_LIBS_nvidia80': '-lmpi_gtl_cuda', 'grib_util_ver': '1.2.3', 'LMOD_FAMILY_CRAYPE_CPU_VERSION': False, 'UKAUXFLD': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/ukauxfld', 'BASH_ENV': '/usr/share/lmod/lmod/init/bash', 'LOGSCRIPT': '', 'COM_TOP_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}', 'COM_OCEAN_NETCDF_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf', 'XDG_DATA_DIRS': '/usr/share', 'assim_freq': 6, 'COPYGB2': '/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/copygb2', 'LIBJPEG_LIB': '/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib/libjpeg.a', 'WAVE_RUN': 'both', 'ANOMGB': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/anomgb', 'NCP': '/bin/cp -p', '__LMOD_REF_COUNT_PE_MPICH_FORTRAN_PKGCONFIG_LIBS': 'mpichf90:1', 'DO_JEDISNOWDA': False, 'COMINsyn': '/lfs/h1/ops/prod/com/gfs/v16.3/syndat', 'NCDUMP': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin/ncdump', 'AR': 'ar', 'ROTDIR': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT/C96_S2SWA_gefs_replay_ics_b0d0cd46', 'PDY': datetime.datetime(2020, 11, 1, 0, 0), 'PBS_ACCOUNT': 'GFS-DEV', 'BULLPROI': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/bullproi', 'OVERGRIDID': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/overgridid', 'DOBNDPNT_WAVE': False, 'HOMEbufr_dump': '/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0', 'INTEL_MINOR_VERSION': 3.304, 'LMOD_CUSTOM_CNCM_INTEL_19_0_OFI_1_0_X86_ROME_1_0_CRAY_MPICH_8_0_PREFIX': '/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4:/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4', 'REPLAY_ICS': True, 'CRAY_LMOD_NET': 'ofi/1.0', 'MEMDIR': 'mem000', '__LMOD_REF_COUNT_PE_PKGCONFIG_PRODUCTS': 'PE_MPICH:1', 'PE_MPICH_MODULE_NAME': 'cray-mpich', 'NLSPATH': '/pe/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64/locale/%l_%t/%N:/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/locale/%l_%t/%N:/pe/intel/debugger_2020/gdb/intel64/share/locale/%l_%t/%N', 'PBS_JOBCOOKIE': '23AD65775A78A0FB31CCAACC5BC29816', 'LMOD_CUSTOM_COMPILER_INTEL_19_0_PREFIX': '/apps/prod/lmodules/intel/19.1.3.304:/apps/ops/prod/libs/modulefiles/compiler/intel/19.1.3.304:/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304', 'ACCOUNT': 'GFS-DEV', 'INCLUDES': '-I/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/include -I/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/include', 'PBS_O_SHELL': '/bin/bash -l', '__LMOD_REF_COUNT_PE_MPICH_FIXED_PRGENV': 'INTEL:1', 'EXECcode': '/apps/ops/prod/nco/models/mos_shared.v2.7.2/exec', 'XLIBS': '-lXm -lXt -lX11 -lSM -lICE -lXp -lXext -lXmu -lXft -ljpeg -lpng -lz', 'DO_BUFRSND': False, '__LMOD_REF_COUNT_LIBRARY_PATH': '/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/lib64:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/lib:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib:1;/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3/lib:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp/lib/intel64:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb/lib/intel64/gcc4.8:2', 'tasks_per_node': 1, 'FHOUT_ICE_GFS': 24, 'NCO_INCLUDE': '-I/apps/prod/nco/4.7.9/intel/19.1.3.304/include', 'HOMEfit2obs': '/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4', 'ICSDIR': 'UNDEFINED/REPLAY_ICs/CI', 'COM_CHEM_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem', 'DO_JEDIATMVAR': False, 'DOIBP_WAV': False, 'gempak_ver': '7.14.1', 'UDUNITS_VER': '2.2.28', 'PROFILEREAD': True, 'wgrib2_ver': '2.0.8', 'CDO_ROOT': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/cdo/1.9.8', 'PDYp5': datetime.datetime(2020, 11, 6, 0, 0), 'TMPDIR': '/var/tmp/pbs.156421642.cbqs01', 'PDYp4': datetime.datetime(2020, 11, 5, 0, 0), 'LIBRARY_PATH': '/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/lib64:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/lib:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib:/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3/lib:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib:/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp/lib/intel64:/pe/intel/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin:/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin:/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb/lib/intel64/gcc4.8', 'mpmd_opt': ['--cpu-bind verbose', 'core cfp'], 'DO_ATM': True, 'PDYp7': datetime.datetime(2020, 11, 8, 0, 0), 'PDYp6': datetime.datetime(2020, 11, 7, 0, 0), '_ModuleTable021_': 'LjMuMzA0L2NyYXktbXBpY2gvOC4xLjQiLCIvb3B0L2NyYXkvcGUvbG1vZC9tb2R1bGVmaWxlcy9tcGkvaW50ZWwvMTkuMC9vZmkvMS4wL2NyYXktbXBpY2gvOC4wIiwiL2FwcHMvb3BzL3Byb2QvbmNvL21vZHVsZWZpbGVzL2NvbXBpbGVyL2ludGVsLzE5LjEuMy4zMDQiLCIvYXBwcy9vcHMvcHJvZC9saWJzL21vZHVsZWZpbGVzL2NvbXBpbGVyL2ludGVsLzE5LjEuMy4zMDQiLCIvYXBwcy9wcm9kL2xtb2R1bGVzL2ludGVsLzE5LjEuMy4zMDQiLCIvb3B0L2NyYXkvcGUvbG1vZC9tb2R1bGVmaWxlcy9jb21uZXQvaW50ZWwvMTkuMC9vZmkvMS4wIiwiL2FwcHMvcHJvZC9sbW9kdWxlcy9jb21waWxlci9pbnRlbC8xOS4wIiwiL2xmcy9oMi9lbWMvZ2xvYmFsL25vc2NydWIvZ2xv', 'PDYp1': datetime.datetime(2020, 11, 2, 0, 0), 'PDYp3': datetime.datetime(2020, 11, 4, 0, 0), 'REALTIME': True, 'PDYp2': datetime.datetime(2020, 11, 3, 0, 0), '__LMOD_REF_COUNT_CMAKE_PREFIX_PATH': '/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb:1;/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z:1;/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk:1', 'LMOD_sys': 'Linux', 'nam_ver': 'v4.2', 'PE_PKGCONFIG_LIBS': 'mpich', '_ModuleTable010_': 'cm9kL2xtb2R1bGVzL2ludGVsLzE5LjEuMy4zMDQvZ3NsLzIuNyIsWyJmdWxsTmFtZSJdPSJnc2wvMi43IixbImxvYWRPcmRlciJdPTE2LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImdzbC8yLjciLH0saGRmNT17WyJmbiJdPSIvYXBwcy9wcm9kL2xtb2R1bGVzL0lOVEVMX2NyYXlfbXBpY2gvMTkuMS4zLjMwNC9jcmF5LW1waWNoLzguMS40L2hkZjUvMS4xMC42Lmx1YSIsWyJmdWxsTmFtZSJdPSJoZGY1LzEuMTAuNiIsWyJsb2FkT3JkZXIiXT0xOCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0yLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJoZGY1Iix9LGludGVsPXtbImZuIl09Ii9hcHBzL3Byb2Qv', 'obsproc_ver': 'v1.1', 'cdo_ver': '1.9.8', 'HPSS_PROJECT': 'emc-global', 'GRBINDEX': '/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/grbindex', 'BASE_DATA': '/lfs/h2/emc/global/noscrub/emc.global/data', 'COMLISTROOT': '/lfs/h1/ops/prod/config', '_ModuleTable001_': 'X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbIlByZ0VudiJdPSJQcmdFbnYtaW50ZWwiLFsiY29tcGlsZXIiXT0iaW50ZWwiLFsiY3JheXBlIl09ImNyYXlwZSIsWyJjcmF5cGVfY3B1Il09ImNyYXlwZS14ODYtcm9tZSIsWyJjcmF5cGVfbmV0d29yayJdPSJjcmF5cGUtbmV0d29yay1vZmkiLFsibXBpIl09ImNyYXktbXBpY2giLH0sbVQ9e1siUHJnRW52LWludGVsIl09e1siZm4iXT0iL29wdC9jcmF5L3BlL2xtb2QvbW9kdWxlZmlsZXMvY29yZS9QcmdFbnYtaW50ZWwvOC4xLjAubHVhIixbImZ1bGxOYW1lIl09IlByZ0Vudi1pbnRlbC84LjEuMCIsWyJs', 'restart_interval_enkfgfs': 12, 'REDERR': '2>', 'EXECprepobs': '/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/exec', 'COM_OCEAN_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean', 'LOADEDMODULES': 'craype-x86-rome:libfabric/1.11.0.0.:craype-network-ofi:envvar/1.0:PrgEnv-intel/8.1.0:craype/2.7.13:intel/19.1.3.304:cray-mpich/8.1.9:cray-pals/1.0.17:cfp/2.0.4:python/3.8.6:gempak/7.14.1:perl/5.32.0:libjpeg/9c:udunits/2.2.28:gsl/2.7:cdo/1.9.8:hdf5/1.10.6:netcdf/4.7.4:nco/4.7.9:prod_util/2.0.9:bufr_dump/1.0.0:util_shared/1.4.0:ncdiag/1.0.0:met/9.1.3:metplus/3.1.1:prepobs/1.1.0:fit2obs/1.1.4:mos_shared/2.7.2:module_base.wcoss2:grib_util/1.2.3:g2tmpl/1.10.2:crtm/2.4.0.1:wgrib2/2.0.8', 'COM_ATMOS_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history', 'COM_OCEAN_BMATRIX_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean', 'LMOD_AVAIL_STYLE': 'en_grouped:system', 'craype_ver': '2.7.13', 'ICERES': 100, 'CRAYPE_NETWORK_TARGET': 'ofi', 'DO_METP': False, 'OFFSET_START_HOUR': 3, 'COM_ATMOS_GOES_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim', '__LMOD_REF_COUNT_ACLOCAL_PATH': '/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/share/aclocal:1', 'FIXshared': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/fix', 'SENDDBN': False, '__LMOD_REF_COUNT_MANPATH': '/apps/ops/para/libs/intel/19.1.3.304/met/9.1.3/share/man:1;/apps/prod/nco/4.7.9/intel/19.1.3.304/share/man:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/share/man:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/share/man:1;/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/share/man:1;/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/share/man:1;/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3/man:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/share/man:1;/apps/prod/cfp/2.0.4/intel/19.1.3.304/man:1;/opt/cray/pe/pals/1.0.17/man:1;/opt/cray/pe/mpich/8.1.9/ofi/man:1;/opt/cray/pe/mpich/8.1.9/man/mpich:1;/pe/intel/man/common:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/man:1;/pe/intel/documentation_2020/en/debugger/gdb-ia/man:1;/opt/cray/pe/craype/2.7.13/man:1;/opt/cray/libfabric/1.11.0.0./share/man:1;/usr/share/lmod/lmod/share/man:1;/usr/share/man:1;/opt/pbs/share/man:1', '_ModuleTable006_': 'Il09ImNyYXlwZS1uZXR3b3JrLW9maSIsfSxbImNyYXlwZS14ODYtcm9tZSJdPXtbImZuIl09Ii9vcHQvY3JheS9wZS9sbW9kL21vZHVsZWZpbGVzL2NyYXlwZS10YXJnZXRzL2RlZmF1bHQvY3JheXBlLXg4Ni1yb21lLmx1YSIsWyJmdWxsTmFtZSJdPSJjcmF5cGUteDg2LXJvbWUiLFsibG9hZE9yZGVyIl09MSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJjcmF5cGUteDg2LXJvbWUiLH0sY3J0bT17WyJmbiJdPSIvYXBwcy9vcHMvcGFyYS9saWJzL21vZHVsZWZpbGVzL2NvbXBpbGVyL2ludGVsLzE5LjEuMy4zMDQvY3J0bS8yLjQuMC4xLmx1YSIsWyJmdWxsTmFtZSJdPSJjcnRtLzIuNC4wLjEiLFsibG9hZE9yZGVy', 'GEMERR': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/error', '_ModuleTable003_': 'LW1waWNoLzguMS40L2Nkby8xLjkuOC5sdWEiLFsiZnVsbE5hbWUiXT0iY2RvLzEuOS44IixbImxvYWRPcmRlciJdPTE3LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNkby8xLjkuOCIsfSxjZnA9e1siZm4iXT0iL2FwcHMvcHJvZC9sbW9kdWxlcy9jb3JlL2NmcC8yLjAuNCIsWyJmdWxsTmFtZSJdPSJjZnAvMi4wLjQiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iY2ZwLzIuMC40Iix9LFsiY3JheS1tcGljaCJdPXtbImZuIl09Ii9vcHQvY3JheS9wZS9sbW9kL21vZHVsZWZpbGVzL2NvbW5ldC9pbnRlbC8xOS4wL29maS8x', 'LIBJPEG_SRC': '/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/src', 'INTEL_LICENSE_FILE': '/pe/intel/compilers_and_libraries_2020.4.304/linux/licenses:/opt/intel/licenses:/intel/licenses', 'machine': 'WCOSS2', 'LMOD_ROOT': '/usr/share/lmod', 'CDO_VERSION': '1.9.8', 'COM_ATMOS_MINMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon', '_ModuleTable022_': 'YmFsd29ya2Zsb3cuY2kvR0ZTX0NJX1JPT1QvUFIvMjc4OC9nbG9iYWwtd29ya2Zsb3cvbW9kdWxlZmlsZXMiLCIvb3B0L2NyYXkvcGUvbG1vZC9tb2R1bGVmaWxlcy9uZXQvb2ZpLzEuMCIsIi9vcHQvY3JheS9wZS9sbW9kL21vZHVsZWZpbGVzL2NwdS94ODYtcm9tZS8xLjAiLCIvdXNyL3NoYXJlL21vZHVsZXMiLCIvdXNyL3NoYXJlL01vZHVsZXMvJE1PRFVMRV9WRVJTSU9OL21vZHVsZWZpbGVzIiwiL3Vzci9zaGFyZS9tb2R1bGVzL21vZHVsZWZpbGVzIiwiL3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9MaW51eCIsIi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMvQ29yZSIsIi91c3Ivc2hhcmUvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLCIvb3B0L2NyYXkvcGUvbG1vZC9tb2R1', 'MET_VERSION': '9.1.3', 'UDUNITS_ROOT': '/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg', 'FROM_HEADER': '', 'CRAY_MPICH_ROOTDIR': '/opt/cray/pe/mpich/8.1.9', '_ModuleTable013_': 'YnMvbW9kdWxlZmlsZXMvY29tcGlsZXIvaW50ZWwvMTkuMS4zLjMwNC9tZXRwbHVzLzMuMS4xLmx1YSIsWyJmdWxsTmFtZSJdPSJtZXRwbHVzLzMuMS4xIixbImxvYWRPcmRlciJdPTI2LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im1ldHBsdXMvMy4xLjEiLH0sWyJtb2R1bGVfYmFzZS53Y29zczIiXT17WyJmbiJdPSIvbGZzL2gyL2VtYy9nbG9iYWwvbm9zY3J1Yi9nbG9iYWx3b3JrZmxvdy5jaS9HRlNfQ0lfUk9PVC9QUi8yNzg4L2dsb2JhbC13b3JrZmxvdy9tb2R1bGVmaWxlcy9tb2R1bGVfYmFzZS53Y29zczIubHVhIixbImZ1bGxOYW1lIl09Im1vZHVsZV9iYXNlLndjb3NzMiIsWyJsb2FkT3JkZXIiXT0zMCxw', 'PBS_O_QUEUE': 'dev', 'ILPOST': 1, 'MAIL': '/var/spool/mail/terry.mcguinness', 'g2tmpl_ROOT': '/apps/ops/para/libs/intel/19.1.3.304/g2tmpl/1.10.2', 'LPAODT': 'mpage -lo1 -zlpr -Z-P', 'GEMHLP': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/help', 'PE_INTEL_FIXED_PKGCONFIG_PATH': '/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0/lib/pkgconfig', 'g2tmpl_VERSION': '1.10.2', 'GEMGTXT': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/txt/gemlib', 'HPSSARCH': False, 'zlib_ver': '1.2.11', 'COM_ATMOS_IMAGERY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery', 'XMICONSEARCHPATH': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/icons/%N/%B', 'FHMIN_GFS': 0, '_ModuleTable016_': 'bmV0Y2RmLzQuNy40Lmx1YSIsWyJmdWxsTmFtZSJdPSJuZXRjZGYvNC43LjQiLFsibG9hZE9yZGVyIl09MTkscHJvcFQ9e30sWyJyZWZfY291bnQiXT0xLFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im5ldGNkZi80LjcuNCIsfSxwZXJsPXtbImZuIl09Ii9hcHBzL3Byb2QvbG1vZHVsZXMvaW50ZWwvMTkuMS4zLjMwNC9wZXJsLzUuMzIuMCIsWyJmdWxsTmFtZSJdPSJwZXJsLzUuMzIuMCIsWyJsb2FkT3JkZXIiXT0xMyxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwZXJsLzUuMzIuMCIsfSxwcmVwb2JzPXtbImZuIl09Ii9sZnMvaDIvZW1jL2dsb2JhbC9zYXZlL2VtYy5n', 'ntiles': 6, 'HOMEcfs': '/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4', 'DO_MERGENSST': False, 'AERO_ANL_RUN': 'both', 'cfp_ver': '2.0.4', 'LESSKEY': '/etc/lesskey.bin', '__LMOD_REF_COUNT_PE_MPICH_GENCOMPILERS_INTEL': '19.0:1', 'STEP_GFS': 24, '_ModuleTable009_': 'L2dlbXBhay83LjE0LjEiLFsiZnVsbE5hbWUiXT0iZ2VtcGFrLzcuMTQuMSIsWyJsb2FkT3JkZXIiXT0xMixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJnZW1wYWsvNy4xNC4xIix9LGdyaWJfdXRpbD17WyJmbiJdPSIvYXBwcy9vcHMvcGFyYS9saWJzL21vZHVsZWZpbGVzL2NvbXBpbGVyL2ludGVsLzE5LjEuMy4zMDQvZ3JpYl91dGlsLzEuMi4zLmx1YSIsWyJmdWxsTmFtZSJdPSJncmliX3V0aWwvMS4yLjMiLFsibG9hZE9yZGVyIl09MzEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ3JpYl91dGlsLzEuMi4zIix9LGdzbD17WyJmbiJdPSIvYXBwcy9w', 'SHELL': '/bin/bash', 'TERM': 'xterm', 'NCO_LDFLAGS_CXX': '-L/apps/prod/nco/4.7.9/intel/19.1.3.304/lib64 -lnco_c++', 'LIBJPEG_INC': '/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include', 'NCO_VER': '4.7.9', 'cray_mpich_ver': '8.1.9', 'CRAY_MPICH_VER': '8.1.9', 'LMOD_ADMIN_FILE': '/apps/prod/lmodules/admin.list', 'OCNRES': 100, 'COMROOT': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT', 'LMOD_CUSTOM_COMPILER_GNU_8_0_UCX_1_0_PREFIX': '/apps/prod/lmodules/gcc/11.2.0:/apps/prod/lmodules/gcc/10.2.0', 'NMV': '/bin/mv', 'PE_MPICH_FIXED_PRGENV': 'INTEL', 'hdf5_ver': '1.10.6', 'LMOD_CUSTOM_COMPILER_CRAYCLANG_10_0_PREFIX': '/apps/prod/lmodules/cce/13.0.0:/apps/prod/lmodules/cce/12.0.3:/apps/prod/lmodules/cce/11.0.4', 'ncdiag_ver': '1.0.0', 'TOCGRIB2': '/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/tocgrib2', 'LMOD_FAMILY_PRGENV': 'PrgEnv-intel', 'CASE': 'C96', 'MKGRB25': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/mkgrb25', '_ModuleTable_Sz_': 24, 'LPAODTFLAG': '-P', 'NMAP_RESTORE': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/nts/nmap/restore', 'APP': 'S2SWA', 'DO_COUPLED': True, 'LIBJPEG_LIBDIR': '/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib', 'NCLEN': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush/getncdimlen', 'GEMOLB': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/lib', '__LMOD_REF_COUNT_CPATH': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/include:1;/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/include:1;/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include/python3.8:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/ipp/include:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/include:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/pstl/include:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/pstl/stdlib:1;/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb/include:2', 'COM_ICE_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input', 'XCURSOR_THEME': 'DMZ', 'NetCDF': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4', 'OVERDATEGRIB': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/overdate.grib', 'COM_OCEAN_GRIB_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}', 'walltime': '00:15:00', 'wgrib2_ROOT': '/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8', 'LMOD_FAMILY_COMPILER': 'intel', 'COM_WAVE_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded', 'USHcfs': '/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/ush', '_ModuleTable018_': 'LHB5dGhvbj17WyJmbiJdPSIvYXBwcy9wcm9kL2xtb2R1bGVzL2ludGVsLzE5LjEuMy4zMDQvcHl0aG9uLzMuOC42IixbImZ1bGxOYW1lIl09InB5dGhvbi8zLjguNiIsWyJsb2FkT3JkZXIiXT0xMSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJweXRob24vMy44LjYiLH0sdWR1bml0cz17WyJmbiJdPSIvYXBwcy9wcm9kL2xtb2R1bGVzL2ludGVsLzE5LjEuMy4zMDQvdWR1bml0cy8yLjIuMjgiLFsiZnVsbE5hbWUiXT0idWR1bml0cy8yLjIuMjgiLFsibG9hZE9yZGVyIl09MTUscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0idWR1bml0cy8yLjIuMjgiLH0s', 'PDYm6': datetime.datetime(2020, 10, 26, 0, 0), 'PDYm7': datetime.datetime(2020, 10, 25, 0, 0), 'PDYm4': datetime.datetime(2020, 10, 28, 0, 0), 'PDYm5': datetime.datetime(2020, 10, 27, 0, 0), 'PDYm2': datetime.datetime(2020, 10, 30, 0, 0), 'PDYm3': datetime.datetime(2020, 10, 29, 0, 0), 'FIXfit2obs': '/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/fix', 'PDYm1': datetime.datetime(2020, 10, 31, 0, 0), 'NCO_INC': '/apps/prod/nco/4.7.9/intel/19.1.3.304/include', 'PERL5LIB': '/apps/prod/perl-modules/intel/19.1.3.304/perl-5.32.0/lib/perl5:/apps/prod/perl-modules/intel/19.1.3.304/perl-5.32.0/lib/perl5/XML/lib/perl5', 'rtofs_ver': 'v2.3', 'NCO_ROOT': '/apps/prod/nco/4.7.9/intel/19.1.3.304', 'LMOD_CUSTOM_CNCM_CRAYCLANG_10_0_OFI_1_0_X86_ROME_1_0_CRAY_MPICH_8_0_PREFIX': '/apps/prod/lmodules/CCE_cray_mpich/11.0.4/cray-mpich/8.1.4', 'MET_ROOT': '/apps/ops/para/libs/intel/19.1.3.304/met/9.1.3', 'envvar_ver': 1.0, 'TMOUT': 1800, 'MAKE_NSSTBUFR': False, 'COM_OCEAN_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input', 'DELETE_COM_IN_ARCHIVE_JOB': True, 'DATAROOT': '/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_S2SWA_gefs_replay_ics_b0d0cd46/gefs.2020110100', 'DO_OCN': True, 'ecmwf_ver': 'v2.1', 'DO_GEMPAK': False, 'PYTHONSTARTUP': '/etc/pythonstart', 'FHMAX_HF_WAV': 120, 'NETCDF_INCLUDES': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/include', 'SHLVL': 4, 'SCRIPTSfit2obs': '/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/scripts', 'LANGUAGE': 'en_US.UTF-8', 'PBS_O_HOST': 'clogin03.cactus.wcoss2.ncep.noaa.gov', 'HOMEgfs': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow', 'DEBUG_POSTSCRIPT': False, 'G_FILENAME_ENCODING': ['@locale', 'UTF-8', 'ISO-8859-15', 'CP1252'], 'PYTHONPATH': '/apps/ops/prod/nco/core/prod_util.v2.0.9/ush:/apps/prod/python-modules/3.8.6/intel/19.1.3.304/lib/python3.8/site-packages:/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush:/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush/python', 'netcdf_ver': '4.7.4', 'BUFR_DUMPLIST': '/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0/fix/bufr_dumplist', 'LMOD_CUSTOM_COMPILER_INTEL_19_0_UCX_1_0_PREFIX': '/apps/prod/lmodules/intel/19.1.3.304:/apps/ops/prod/libs/modulefiles/compiler/intel/19.1.3.304:/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304', 'metplus_ver': '3.1.1', 'HPC_OPT': '/apps/ops/para/libs', 'ACLOCAL_PATH': '/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/share/aclocal', 'FIXbufr_dump': '/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0/fix', 'NAWIPS_LIB': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/lib', 'PBS_O_SYSTEM': 'Linux', 'DO_WAVE': True, 'MANPATH': '/apps/ops/para/libs/intel/19.1.3.304/met/9.1.3/share/man:/apps/prod/nco/4.7.9/intel/19.1.3.304/share/man:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/share/man:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/share/man:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/share/man:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/share/man:/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3/man:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/share/man:/apps/prod/cfp/2.0.4/intel/19.1.3.304/man:/opt/cray/pe/pals/1.0.17/man:/opt/cray/pe/mpich/8.1.9/ofi/man:/opt/cray/pe/mpich/8.1.9/man/mpich:/pe/intel/man/common:/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/man:/pe/intel/documentation_2020/en/debugger/gdb-ia/man:/opt/cray/pe/craype/2.7.13/man:/opt/cray/libfabric/1.11.0.0./share/man:/usr/share/lmod/lmod/share/man:/usr/share/man:/opt/pbs/share/man', '__LMOD_REF_COUNT_CLASSPATH': '/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/lib/mpi.jar:1', 'METPLUS_PATH': '/apps/ops/para/libs/intel/19.1.3.304/metplus/3.1.1', 'NET': 'gefs', 'INTEL_PATH': '/pe/intel/compilers_and_libraries_2020.4.304', 'NA_OS': 'linux5.3.18_x86_64', 'CASE_ENS': 'C96', 'bufr_dump_ver': '1.0.0', 'INTEL_VERSION': '19.1.3.304', 'MPICH_DIR': '/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0', 'OSCAR_HOME': '/opt/oscar', 'python_ver': '3.8.6', 'LOCALARCH': False, 'PBS_O_LOGNAME': 'terry.mcguinness', 'LIBJPEG_VER': '9c', 'COM_ICE_GRIB_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}', 'mos_ver': '5.4.3', 'PBS_NODENUM': 0, 'MODULEPATH': '/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/modulefiles:/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/modulefiles:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304:/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4:/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4:/opt/cray/pe/lmod/modulefiles/mpi/intel/19.0/ofi/1.0/cray-mpich/8.0:/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304:/apps/ops/prod/libs/modulefiles/compiler/intel/19.1.3.304:/apps/prod/lmodules/intel/19.1.3.304:/opt/cray/pe/lmod/modulefiles/comnet/intel/19.0/ofi/1.0:/apps/prod/lmodules/compiler/intel/19.0:/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/modulefiles:/opt/cray/pe/lmod/modulefiles/net/ofi/1.0:/opt/cray/pe/lmod/modulefiles/cpu/x86-rome/1.0:/usr/share/modules:/usr/share/Modules/$MODULE_VERSION/modulefiles:/usr/share/modules/modulefiles:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core:/opt/cray/pe/lmod/modulefiles/core:/opt/cray/pe/lmod/modulefiles/craype-targets/default:/apps/prod/lmodules/sys_core:/apps/ops/prod/nco/modulefiles/core:/apps/prod/lmodules/core:/opt/cray/modulefiles:/apps/ops/prod/nco/models/modulefiles', 'PBS_JOBDIR': '/u/terry.mcguinness', 'CRTM_LIB': '/apps/ops/para/libs/intel/19.1.3.304/crtm/2.4.0.1/lib/libcrtm.a', 'is_exclusive': True, 'jasper_ver': '2.0.25', 'CRAY_MPICH_DIR': '/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0', 'USHshared': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/ush', 'restart_interval_gfs': 12, 'COM_ATMOS_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input', '__LMOD_REF_COUNT_PERL5LIB': '/apps/prod/perl-modules/intel/19.1.3.304/perl-5.32.0/lib/perl5:1;/apps/prod/perl-modules/intel/19.1.3.304/perl-5.32.0/lib/perl5/XML/lib/perl5:1', 'SCRIPTScfs': '/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/scripts', 'LMOD_FAMILY_CRAYPE': 'craype', 'LOGNAME': 'terry.mcguinness', 'FSYNC': '/apps/ops/prod/nco/core/prod_util.v2.0.9/exec/fsync_file', 'crtm_ver': '2.4.0.1', 'wgrib2_VERSION': '2.0.8', 'GEMPDF': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/pdf', 'COM_MED_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart', '__LMOD_REF_COUNT_LMOD_CUSTOM_PATHS': 'CNCM/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4:1;CNCM/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4:1;COMPILER/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304:1;COMPILER/apps/ops/prod/libs/modulefiles/compiler/intel/19.1.3.304:1;COMPILER/apps/prod/lmodules/intel/19.1.3.304:1', 'ERRSCRIPT': 'eval [[ $err = 0 ]]', 'CRAY_MPICH_VERSION': '8.1.9', 'COM_ATMOS_OZNMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon', 'CRTM_INC': '/apps/ops/para/libs/intel/19.1.3.304/crtm/2.4.0.1/include', 'COM_ATMOS_WMO_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo', 'MODULE_VERSION_STACK': '3.2.10', 'CPLUS_INCLUDE_PATH': '/apps/prod/nco/4.7.9/intel/19.1.3.304/include:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/include:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/include:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/include', 'MKLROOT': '/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl', 'MODE': 'forecast-only', 'CNVGRIB': '/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin/cnvgrib', 'LDFLAGS': '-L/usr/lib64 -L/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/lib', 'NOSCRUB': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/GLOBAL', 'FIXgfs': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/fix', 'MODULEPATH_ROOT': '/usr/share/modulefiles', 'LMOD_PACKAGE_PATH': '/apps/prod/lmodules', '__LMOD_REF_COUNT_PE_INTEL_FIXED_PKGCONFIG_PATH': '/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0/lib/pkgconfig:1', 'USHgfs': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush', 'FHOUT_HF_GFS': 3, 'SENDECF': False, 'PE_MPICH_GTL_LIBS_amd_gfx906': '-lmpi_gtl_hsa', 'COM_OCEAN_GRIB_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2', 'JPEG_INC': '/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/include', 'PSTLROOT': '/pe/intel/compilers_and_libraries_2020.4.304/linux/pstl', 'DO_JEDIATMENS': False, 'BASE_JOB': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/jobs/rocoto', 'KEEPDATA': False, 'XDG_CONFIG_DIRS': '/etc/xdg', 'MAKE_ACFTBUFR': False, 'PATH': '/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin:/apps/ops/para/libs/intel/19.1.3.304/grib_util/1.2.3/bin:/apps/ops/para/libs/intel/19.1.3.304/metplus/3.1.1/ush:/apps/ops/para/libs/intel/19.1.3.304/met/9.1.3/bin:/apps/ops/prod/libs/intel/19.1.3.304/wgrib2/2.0.8/bin:/apps/ops/prod/libs/intel/19.1.3.304/cray-mpich/8.1.4/ncdiag/1.0.0/bin:/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/ush:/apps/ops/prod/nco/intel/19.1.3.304/bufr_dump.v1.0.0/ush:/apps/ops/prod/libs/intel/19.1.3.304/grib_util/1.2.3/bin:/apps/ops/prod/nco/core/prod_util.v2.0.9/ush:/apps/prod/nco/4.7.9/intel/19.1.3.304/bin:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/hdf5/1.10.6/bin:/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/cdo/1.9.8/bin:/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/bin:/apps/spack/udunits/2.2.28/intel/19.1.3.304/vcyezvmxp635k4aochioodzoduja3ntg/bin:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/bin:/apps/spack/perl/5.32.0/intel/19.1.3.304/hozp6ca3uy2t5wk4dk5wmvt4hu6yqbn3/bin:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/os/linux5.3.18_x86_64/bin:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/bin:/apps/prod/cfp/2.0.4/intel/19.1.3.304/bin:/opt/cray/pe/pals/1.0.17/bin:/pe/intel/compilers_and_libraries_2020.4.304/linux/bin/intel64:/pe/intel/compilers_and_libraries_2020.4.304/linux/bin:/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/bin:/pe/intel/debugger_2020/gdb/intel64/bin:/opt/cray/pe/craype/2.7.13/bin:/opt/cray/libfabric/1.11.0.0./bin:/u/terry.mcguinness/bin:/usr/local/bin:/usr/bin:/bin:/opt/pbs/bin:/sbin:.:/lfs/h2/emc/global/noscrub/terry.mcguinness/scripts:/opt/cray/pe/bin:/apps/prod/python-modules/3.8.6/intel/19.1.3.304/bin:/apps/prod/python-modules/3.8.6/intel/19.1.3.304/lib/python3.8/site-packages/bin:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/bin:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/ez:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/nawips:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/prnt:/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/scripts/decoder', 'PE_MPICH_GTL_LIBS_amd_gfx908': '-lmpi_gtl_hsa', '_ModuleTable014_': 'cm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJtb2R1bGVfYmFzZS53Y29zczIiLH0sbW9zX3NoYXJlZD17WyJmbiJdPSIvYXBwcy9vcHMvcHJvZC9uY28vbW9kZWxzL21vZHVsZWZpbGVzL21vc19zaGFyZWQvMi43LjIiLFsiZnVsbE5hbWUiXT0ibW9zX3NoYXJlZC8yLjcuMiIsWyJsb2FkT3JkZXIiXT0yOSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJtb3Nfc2hhcmVkLzIuNy4yIix9LG5jZGlhZz17WyJmbiJdPSIvYXBwcy9vcHMvcHJvZC9saWJzL21vZHVsZWZpbGVzL21waS9pbnRlbC8xOS4xLjMuMzA0L2NyYXktbXBpY2gvOC4xLjQvbmNkaWFnLzEuMC4w', 'TBBROOT': '/pe/intel/compilers_and_libraries_2020.4.304/linux/tbb', '__LMOD_REF_COUNT_PE_PRODUCT_LIST': 'CRAYPE:1;CRAYPE_X86_ROME:1', '_LMFILES_': '/opt/cray/pe/lmod/modulefiles/craype-targets/default/craype-x86-rome.lua:/opt/cray/modulefiles/libfabric/1.11.0.0.:/opt/cray/pe/lmod/modulefiles/craype-targets/default/craype-network-ofi.lua:/apps/prod/lmodules/sys_core/envvar/1.0:/opt/cray/pe/lmod/modulefiles/core/PrgEnv-intel/8.1.0.lua:/opt/cray/pe/lmod/modulefiles/core/craype/2.7.13.lua:/apps/prod/lmodules/core/intel/19.1.3.304.lua:/opt/cray/pe/lmod/modulefiles/comnet/intel/19.0/ofi/1.0/cray-mpich/8.1.9.lua:/opt/cray/pe/lmod/modulefiles/core/cray-pals/1.0.17.lua:/apps/prod/lmodules/core/cfp/2.0.4:/apps/prod/lmodules/intel/19.1.3.304/python/3.8.6:/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304/gempak/7.14.1:/apps/prod/lmodules/intel/19.1.3.304/perl/5.32.0:/apps/prod/lmodules/intel/19.1.3.304/libjpeg/9c:/apps/prod/lmodules/intel/19.1.3.304/udunits/2.2.28:/apps/prod/lmodules/intel/19.1.3.304/gsl/2.7:/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4/cdo/1.9.8.lua:/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4/hdf5/1.10.6.lua:/apps/prod/lmodules/INTEL_cray_mpich/19.1.3.304/cray-mpich/8.1.4/netcdf/4.7.4.lua:/apps/prod/lmodules/intel/19.1.3.304/nco/4.7.9:/apps/ops/prod/nco/modulefiles/core/prod_util/2.0.9:/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304/bufr_dump/1.0.0.lua:/apps/ops/prod/nco/modulefiles/compiler/intel/19.1.3.304/util_shared/1.4.0:/apps/ops/prod/libs/modulefiles/mpi/intel/19.1.3.304/cray-mpich/8.1.4/ncdiag/1.0.0.lua:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/met/9.1.3.lua:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/metplus/3.1.1.lua:/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/modulefiles/prepobs/1.1.0.lua:/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/modulefiles/fit2obs/1.1.4.lua:/apps/ops/prod/nco/models/modulefiles/mos_shared/2.7.2:/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/modulefiles/module_base.wcoss2.lua:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/grib_util/1.2.3.lua:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/g2tmpl/1.10.2.lua:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/crtm/2.4.0.1.lua:/apps/ops/para/libs/modulefiles/compiler/intel/19.1.3.304/wgrib2/2.0.8.lua', 'NetCDF_LIBRARIES': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/lib', 'COMDATEROOT': '/lfs/h1/ops/prod/com', 'DEBUFR': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0/bin/debufr', 'EXECgfs': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/exec', 'GEMPAK': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak', 'cycle': 't00z', 'HDF5_VERSION': '1.10.6', 'UTILSHAREDROOT': '/apps/ops/prod/nco/intel/19.1.3.304/util_shared.v1.4.0', 'LEVS': 128, 'AERO_FCST_RUN': 'gdas', 'pgmerr': 'errfile', 'PS4': '+ $(basename ${BASH_SOURCE[0]:-${FUNCNAME[0]:-"Unknown"}})[${LINENO}]: ', 'ARFLAGS': 'rv', 'EXECfit2obs': '/lfs/h2/emc/global/save/emc.global/git/Fit2Obs/v1.1.4/exec', 'perl_ver': '5.32.0', 'BASE_GIT': '/lfs/h2/emc/global/save/emc.global/git', 'PBS_QUEUE': 'dev', 'NAWIPS_INC': '/apps/ops/prod/nco/intel/19.1.3.304/gempak.v7.14.1/nawips/gempak/include', 'MODULESHOME': '/usr/share/lmod/lmod', 'LMOD_SETTARG_FULL_SUPPORT': False, 'PKG_CONFIG_PATH': '/apps/spack/gsl/2.7/intel/19.1.3.304/xks7dxbowrdxhjck5zxc4rompopocevb/lib64/pkgconfig:/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib/pkgconfig:/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib/pkgconfig:/pe/intel/compilers_and_libraries_2020.4.304/linux/mkl/bin/pkgconfig:/opt/cray/pe/craype/2.7.13/pkg-config:/opt/cray/libfabric/1.11.0.0./lib64/pkgconfig', 'INFOPATH': '/pe/intel/documentation_2020/en/debugger/gdb-ia/info::/apps/docs/info', 'G_BROKEN_FILENAMES': 1, 'FHOUT_OCN': 24, 'COM_ATMOS_GENESIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital', 'I_MPI_ROOT': '/pe/intel/compilers_and_libraries_2020.4.304/linux/mpi', '_ModuleTable011_': 'bG1vZHVsZXMvY29yZS9pbnRlbC8xOS4xLjMuMzA0Lmx1YSIsWyJmdWxsTmFtZSJdPSJpbnRlbC8xOS4xLjMuMzA0IixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW50ZWwvMTkuMS4zLjMwNCIsfSxsaWJmYWJyaWM9e1siZm4iXT0iL29wdC9jcmF5L21vZHVsZWZpbGVzL2xpYmZhYnJpYy8xLjExLjAuMC4iLFsiZnVsbE5hbWUiXT0ibGliZmFicmljLzEuMTEuMC4wLiIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTIsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImxpYmZhYnJpYyIsfSxsaWJqcGVnPXtbImZuIl09Ii9hcHBzL3Byb2QvbG1vZHVs', 'HISTSIZE': 10000, 'CRAYPE_DIR': '/opt/cray/pe/craype/2.7.13', 'LMOD_PKG': '/usr/share/lmod/lmod', '__LMOD_REF_COUNT_PE_MPICH_PKGCONFIG_LIBS': 'mpich:1', 'prod_util_ver': '2.0.9', 'FHMAX_HF_GFS': 24, 'COM_WAVE_STATION_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station', 'COM_CONF_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf', 'CPU': 'x86_64', '__LMOD_REF_COUNT_PE_PKGCONFIG_LIBS': 'mpich:1', 'LD': 'ld', 'CRAYPE_VERSION': '2.7.13', 'COM_ATMOS_TRACK_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks', 'NETCDF_LIBRARIES': '/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/lib', 'PTMP': '/lfs/h2/emc/ptmp/terry.mcguinness', 'FHOUT_HF_WAV': 1, 'DONST': True, 'OS_VER': 'linux4.12.14_x86_64', 'LMOD_CMD': '/usr/share/lmod/lmod/libexec/lmod', '_ModuleTable005_': 'YXkvcGUvbG1vZC9tb2R1bGVmaWxlcy9jb3JlL2NyYXlwZS8yLjcuMTMubHVhIixbImZ1bGxOYW1lIl09ImNyYXlwZS8yLjcuMTMiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJjcmF5cGUvMi43LjEzIix9LFsiY3JheXBlLW5ldHdvcmstb2ZpIl09e1siZm4iXT0iL29wdC9jcmF5L3BlL2xtb2QvbW9kdWxlZmlsZXMvY3JheXBlLXRhcmdldHMvZGVmYXVsdC9jcmF5cGUtbmV0d29yay1vZmkubHVhIixbImZ1bGxOYW1lIl09ImNyYXlwZS1uZXR3b3JrLW9maSIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1l', 'SCRIPTSprepobs': '/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0/scripts', 'ens_tracker_ver': 'feature-GFSv17_com_reorg', 'DO_AERO': True, 'STMP': '/lfs/h2/emc/stmp/terry.mcguinness', 'CRAY_MPICH_PREFIX': '/opt/cray/pe/mpich/8.1.9/ofi/intel/19.0', 'CHGRP_RSTPROD': True, 'DBNROOT': '/apps/ops/prod/nco/core/prod_util.v2.0.9/fakedbn', 'CVS_RSH': 'ssh', 'LP': 'lpr', 'WGRIB2': '/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin/wgrib2', 'FIXcode': '/apps/ops/prod/nco/models/mos_shared.v2.7.2/fix', 'PBS_O_MAIL': '/var/spool/mail/terry.mcguinness', 'OMP_NUM_THREADS': 1, 'LESSOPEN': 'lessopen.sh %s', '_ModuleTable020_': 'dGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJ3Z3JpYjIvMi4wLjgiLH0sfSxtcGF0aEE9eyIvbGZzL2gyL2VtYy9nbG9iYWwvc2F2ZS9lbWMuZ2xvYmFsL2dpdC9GaXQyT2JzL3YxLjEuNC9tb2R1bGVmaWxlcyIsIi9sZnMvaDIvZW1jL2dsb2JhbC9zYXZlL2VtYy5nbG9iYWwvZ2l0L3ByZXBvYnMvZ2ZzdjE3X3YxLjEuMC9tb2R1bGVmaWxlcyIsIi9hcHBzL29wcy9wYXJhL2xpYnMvbW9kdWxlZmlsZXMvY29tcGlsZXIvaW50ZWwvMTkuMS4zLjMwNCIsIi9hcHBzL29wcy9wcm9kL2xpYnMvbW9kdWxlZmlsZXMvbXBpL2ludGVsLzE5LjEuMy4zMDQvY3JheS1tcGljaC84LjEuNCIsIi9hcHBzL3Byb2QvbG1vZHVsZXMvSU5URUxfY3JheV9tcGljaC8xOS4x', 'COM_OCEAN_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history', 'EXP_WARM_START': True, 'FHMAX_WAV': 48, 'LMOD_DIR': '/usr/share/lmod/lmod/libexec', 'gfs_ver': 'v16.3.7', 'LC_TIME': 'C.UTF-8', 'SCRgfs': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/scripts', 'HOMEprepobs': '/lfs/h2/emc/global/save/emc.global/git/prepobs/gfsv17_v1.1.0', 'JPEG_LIB': '/apps/spack/libjpeg/9c/intel/19.1.3.304/jkr3isi257ktoouprwaxcn4twtye747z/lib/libjpeg.a', 'LMOD_FAMILY_MPI': 'cray-mpich', 'fit2obs_ver': '1.1.4', 'BASH_FUNC_module%%': '() {  eval $($LMOD_CMD bash "$@") && eval $(${LMOD_SETTARG_CMD:-:} -s sh)\n}', 'BASH_FUNC_declare_from_tmpl%%': '() {  if [[ ${DEBUG_WORKFLOW:-"NO"} == "NO" ]]; then\n set +x;\n fi;\n local opts="-g";\n local OPTIND=1;\n while getopts "rx" option; do\n opts="${opts}${option}";\n done;\n shift $((OPTIND-1));\n for input in "$@";\n do\n IFS=\':\' read -ra args <<< "${input}";\n local com_var="${args[0]}";\n local template;\n local value;\n if (( ${#args[@]} > 1 )); then\n template="${args[1]}";\n else\n template="${com_var}_TMPL";\n fi;\n if [[ ! -v "${template}" ]]; then\n echo "FATAL ERROR in declare_from_tmpl: Requested template ${template} not defined!";\n exit 2;\n fi;\n value=$(echo "${!template}" | envsubst);\n declare ${opts} "${com_var}"="${value}";\n echo "declare_from_tmpl :: ${com_var}=${value}";\n done;\n set_trace\n}', 'BASH_FUNC_wait_for_file%%': '() {  set +x;\n local file_name=${1:?"wait_for_file() requires a file name"};\n local sleep_interval=${2:-60};\n local max_tries=${3:-100};\n for ((iter=0; iter<max_tries; iter++ ))\n do\n if [[ -r ${file_name} ]]; then\n set_trace;\n return 0;\n fi;\n sleep "${sleep_interval}";\n done;\n set_trace;\n return 1\n}', 'BASH_FUNC_ml%%': '() {  eval $($LMOD_DIR/ml_cmd "$@")\n}', '_': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/scripts/exglobal_stage_ic.py'} )[0m
+[38;5;39m2024-09-26 22:29:07,610 - DEBUG    - task        : current cycle: 2020-11-01 00:00:00[0m
+[38;5;39m2024-09-26 22:29:07,610 - DEBUG    - task        : previous cycle: 2020-10-31 18:00:00[0m
+[38;21m2024-09-26 22:29:07,610 - INFO     - stage_ic    :   END: Stage.__init__[0m
+[38;5;39m2024-09-26 22:29:07,611 - DEBUG    - stage_ic    :  returning: None[0m
+[38;21m2024-09-26 22:29:07,611 - INFO     - stage_ic    : BEGIN: pygfs.task.stage_ic.execute_stage[0m
+[38;5;39m2024-09-26 22:29:07,611 - DEBUG    - stage_ic    : ( <pygfs.task.stage_ic.Stage object at 0x14aa3ce84c40>, {'RUN': 'gefs', 'MODE': 'forecast-only', 'EXP_WARM_START': True, 'NMEM_ENS': 2, 'assim_freq': 6, 'current_cycle': datetime.datetime(2020, 11, 1, 0, 0), 'previous_cycle': datetime.datetime(2020, 10, 31, 18, 0), 'ROTDIR': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT/C96_S2SWA_gefs_replay_ics_b0d0cd46', 'ICSDIR': 'UNDEFINED/REPLAY_ICs/CI', 'STAGE_IC_YAML_TMPL': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/parm/stage/master_gefs.yaml.j2', 'DO_JEDIATMVAR': False, 'OCNRES': '100', 'waveGRD': 'glo_100', 'ntiles': 6, 'DOIAU': False, 'DO_JEDIOCNVAR': False, 'REPLAY_ICS': True, 'DO_WAVE': True, 'DO_OCN': True, 'DO_ICE': True, 'DO_NEST': False, 'COM_SNOW_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow', 'COM_ATMOS_RADMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon', 'COM_ICE_GRIB_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2', 'COM_RTOFS_TMPL': '${DMPDIR}', 'COM_ATMOS_GRIB_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}', 'COM_ICE_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart', 'COMLOGSROOT': '/lfs/h1/ops/prod/com', 'COM_ICE_NETCDF_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf', 'COM_ATMOS_GRIB_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2', 'COM_WAVE_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart', 'COM_ATMOS_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart', 'COM_ATMOS_BUFR_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr', 'COM_WAVE_PREP_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep', 'COM_CHEM_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history', 'COM_OBS_JEDI': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi', 'COM_WAVE_GEMPAK_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak', 'COM_ICE_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice', 'COM_CHEM_BMAT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix', 'COM_WAVE_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history', 'COM_OBS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/obs', 'COM_ATMOS_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos', 'COM_WAVE_WMO_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo', 'COM_ATMOS_MASTER_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master', 'COM_ICE_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history', 'COM_OCEAN_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart', 'COM_OBSDMP_TMPL': '${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos', 'COM_ICE_BMATRIX_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice', 'COM_ATMOS_GEMPAK_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}', 'COM_TOP_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}', 'COM_OCEAN_NETCDF_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf', 'COMINsyn': '/lfs/h1/ops/prod/com/gfs/v16.3/syndat', 'COM_CHEM_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem', 'COMLISTROOT': '/lfs/h1/ops/prod/config', 'COM_OCEAN_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean', 'COM_ATMOS_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history', 'COM_OCEAN_BMATRIX_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean', 'COM_ATMOS_GOES_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim', 'COM_ATMOS_MINMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon', 'COM_ATMOS_IMAGERY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery', 'COMROOT': '/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT', 'COM_ICE_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input', 'COM_OCEAN_GRIB_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}', 'COM_WAVE_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded', 'COM_OCEAN_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input', 'COM_ICE_GRIB_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}', 'COM_ATMOS_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input', 'COM_MED_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart', 'COM_ATMOS_OZNMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon', 'COM_ATMOS_WMO_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo', 'COM_OCEAN_GRIB_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2', 'COMDATEROOT': '/lfs/h1/ops/prod/com', 'COM_ATMOS_GENESIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital', 'COM_WAVE_STATION_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station', 'COM_CONF_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf', 'COM_ATMOS_TRACK_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks', 'COM_OCEAN_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'} )[0m
+[38;21m2024-09-26 22:29:07,932 - INFO     - file_utils  : Created /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT/C96_S2SWA_gefs_replay_ics_b0d0cd46/gefs.20201031/18/mem000/model/atmos/restart[0m
+[38;21m2024-09-26 22:29:07,933 - INFO     - file_utils  : Created /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT/C96_S2SWA_gefs_replay_ics_b0d0cd46/gefs.20201031/18/mem001/model/atmos/restart[0m
+[38;21m2024-09-26 22:29:07,933 - INFO     - file_utils  : Created /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT/C96_S2SWA_gefs_replay_ics_b0d0cd46/gefs.20201031/18/mem002/model/atmos/restart[0m
+Traceback (most recent call last):
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush/python/wxflow/fsutils.py", line 85, in cp
+    shutil.copy2(source, target)
+  File "/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib/python3.8/shutil.py", line 432, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/apps/spack/python/3.8.6/intel/19.1.3.304/pjn2nzkjvqgmjw4hmyz43v5x4jbxjzpk/lib/python3.8/shutil.py", line 261, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'UNDEFINED/REPLAY_ICs/CI/gefs.20201031/18/mem000/model/atmos/restart/20201101.030000.coupler.res'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/scripts/exglobal_stage_ic.py", line 44, in <module>
+    main()
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush/python/wxflow/logger.py", line 266, in wrapper
+    retval = func(*args, **kwargs)
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/scripts/exglobal_stage_ic.py", line 40, in main
+    stage.execute_stage(stage_dict)
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush/python/wxflow/logger.py", line 266, in wrapper
+    retval = func(*args, **kwargs)
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush/python/pygfs/task/stage_ic.py", line 64, in execute_stage
+    FileHandler(stage_set[key]).sync()
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush/python/wxflow/file_utils.py", line 43, in sync
+    sync_factory[action](files)
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush/python/wxflow/file_utils.py", line 63, in _copy_files
+    cp(src, dest)
+  File "/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/ush/python/wxflow/fsutils.py", line 87, in cp
+    raise OSError(f"unable to copy {source} to {target}")
+OSError: unable to copy UNDEFINED/REPLAY_ICs/CI/gefs.20201031/18/mem000/model/atmos/restart/20201101.030000.coupler.res to /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT/C96_S2SWA_gefs_replay_ics_b0d0cd46/gefs.20201031/18/mem000/model/atmos/restart/20201101.030000.coupler.res
++ JGLOBAL_STAGE_IC[1]: postamble JGLOBAL_STAGE_IC 1727389742 1
++ preamble.sh[70]: set +x
+End JGLOBAL_STAGE_IC at 22:29:08 with error code 1 (time elapsed: 00:00:06)
++ stage_ic.sh[1]: postamble stage_ic.sh 1727389741 1
++ preamble.sh[70]: set +x
+End stage_ic.sh at 22:29:08 with error code 1 (time elapsed: 00:00:07)
+PBS: Running epilogue on parent mom node: nid001179...
+##### Job 156421642.cbqs01 - PBS Job Script:
+(Note: Duplicate #PBS entries are a function how PBS interprets and caches the original job script.)
+
+#! /bin/sh
+#PBS -N C96_S2SWA_gefs_replay_ics_b0d0cd46_stage_ic_00
+#PBS -A GFS-DEV
+#PBS -q dev
+#PBS -l walltime=00:15:00
+#PBS -l select=1:mpiprocs=1:ompthreads=1:ncpus=1
+#PBS -j oe -o /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT/C96_S2SWA_gefs_replay_ics_b0d0cd46/logs/2020110100/stage_ic.log
+#PBS -l place=vscatter:exclhost
+export RUN_ENVIR='emc'
+export HOMEgfs='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow'
+export EXPDIR='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/EXPDIR/C96_S2SWA_gefs_replay_ics_b0d0cd46'
+export NET='gefs'
+export RUN='gefs'
+export CDATE='2020110100'
+export PDY='20201101'
+export cyc='00'
+export COMROOT='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/RUNTESTS/COMROOT'
+export DATAROOT='/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_S2SWA_gefs_replay_ics_b0d0cd46/gefs.2020110100'
+set -x
+/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2788/global-workflow/jobs/rocoto/stage_ic.sh
+##### End of job script
+------------------------------------------------------------------
+
