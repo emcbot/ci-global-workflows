@@ -1,0 +1,841 @@
+PBS: Running prologue on parent mom node: nid001672...
+Job 158647824.cbqs01 nodelist: nid001672
++ /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/jobs/rocoto/atmos_products.sh
+Begin atmos_products.sh at Fri Oct 18 20:24:22 UTC 2024
++ atmos_products.sh[11]: . /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Resetting modules to system default. Reseting $MODULEPATH back to system default. All extra directories will be removed from $MODULEPATH.
+
+Currently Loaded Modules:
+  1) craype-x86-rome     (H)  13) perl/5.32.0        25) met/9.1.3
+  2) libfabric/1.11.0.0. (H)  14) libjpeg/9c         26) metplus/3.1.1
+  3) craype-network-ofi  (H)  15) udunits/2.2.28     27) prepobs/1.1.0
+  4) envvar/1.0               16) gsl/2.7            28) fit2obs/1.1.4
+  5) PrgEnv-intel/8.1.0       17) cdo/1.9.8          29) mos_shared/2.7.2
+  6) craype/2.7.13            18) hdf5/1.10.6        30) module_base.wcoss2
+  7) intel/19.1.3.304         19) netcdf/4.7.4       31) grib_util/1.2.3
+  8) cray-mpich/8.1.9         20) nco/4.7.9          32) g2tmpl/1.10.2
+  9) cray-pals/1.0.17         21) prod_util/2.0.9    33) crtm/2.4.0.1
+ 10) cfp/2.0.4                22) bufr_dump/1.0.0    34) wgrib2/2.0.8
+ 11) python/3.8.6             23) util_shared/1.4.0
+ 12) gempak/7.14.1            24) ncdiag/1.0.0
+
+  Where:
+   H:  Hidden Module
+
+ 
+
++ atmos_products.sh[12]: status=0
++ atmos_products.sh[13]: ((  status != 0  ))
++ atmos_products.sh[15]: export job=atmos_products
++ atmos_products.sh[15]: job=atmos_products
++ atmos_products.sh[16]: export jobid=atmos_products.154346
++ atmos_products.sh[16]: jobid=atmos_products.154346
++ atmos_products.sh[19]: fhr3_base=10#004
++ atmos_products.sh[20]: export FORECAST_HOUR=4
++ atmos_products.sh[20]: FORECAST_HOUR=4
++ atmos_products.sh[25]: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/jobs/JGLOBAL_ATMOS_PRODUCTS
+Begin JGLOBAL_ATMOS_PRODUCTS at Fri Oct 18 20:24:24 UTC 2024
++ JGLOBAL_ATMOS_PRODUCTS[4]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/ush/jjob_header.sh -e atmos_products -c 'base atmos_products'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=atmos_products
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z atmos_products ]]
+++ jjob_header.sh[68]: export DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_2b6c45de/gfs.2021122100/atmos_products.154346
+++ jjob_header.sh[68]: DATA=/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_2b6c45de/gfs.2021122100/atmos_products.154346
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_2b6c45de/gfs.2021122100/atmos_products.154346
+++ jjob_header.sh[72]: mkdir -p /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_2b6c45de/gfs.2021122100/atmos_products.154346
+++ jjob_header.sh[73]: cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_2b6c45de/gfs.2021122100/atmos_products.154346
+++ jjob_header.sh[79]: export cycle=t00z
+++ jjob_header.sh[79]: cycle=t00z
+++ jjob_header.sh[80]: setpdy.sh
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20211214
++++ PDY[1]: PDYm7=20211214
++++ PDY[2]: export PDYm6=20211215
++++ PDY[2]: PDYm6=20211215
++++ PDY[3]: export PDYm5=20211216
++++ PDY[3]: PDYm5=20211216
++++ PDY[4]: export PDYm4=20211217
++++ PDY[4]: PDYm4=20211217
++++ PDY[5]: export PDYm3=20211218
++++ PDY[5]: PDYm3=20211218
++++ PDY[6]: export PDYm2=20211219
++++ PDY[6]: PDYm2=20211219
++++ PDY[7]: export PDYm1=20211220
++++ PDY[7]: PDYm1=20211220
++++ PDY[8]: export PDY=20211221
++++ PDY[8]: PDY=20211221
++++ PDY[9]: export PDYp1=20211222
++++ PDY[9]: PDYp1=20211222
++++ PDY[10]: export PDYp2=20211223
++++ PDY[10]: PDYp2=20211223
++++ PDY[11]: export PDYp3=20211224
++++ PDY[11]: PDYp3=20211224
++++ PDY[12]: export PDYp4=20211225
++++ PDY[12]: PDYp4=20211225
++++ PDY[13]: export PDYp5=20211226
++++ PDY[13]: PDYp5=20211226
++++ PDY[14]: export PDYp6=20211227
++++ PDY[14]: PDYp6=20211227
++++ PDY[15]: export PDYp7=20211228
++++ PDY[15]: PDYp7=20211228
+++ jjob_header.sh[87]: export pid=154792
+++ jjob_header.sh[87]: pid=154792
+++ jjob_header.sh[88]: export pgmout=OUTPUT.154792
+++ jjob_header.sh[88]: pgmout=OUTPUT.154792
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/EXPDIR/C96_atm3DVar_extended_2b6c45de
+++ jjob_header.sh[95]: EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/EXPDIR/C96_atm3DVar_extended_2b6c45de
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/EXPDIR/C96_atm3DVar_extended_2b6c45de/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=WCOSS2
++++ config.base[9]: machine=WCOSS2
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=GFS-DEV
++++ config.base[15]: ACCOUNT=GFS-DEV
++++ config.base[16]: export QUEUE=dev
++++ config.base[16]: QUEUE=dev
++++ config.base[17]: export QUEUE_SERVICE=dev_transfer
++++ config.base[17]: QUEUE_SERVICE=dev_transfer
++++ config.base[18]: export PARTITION_BATCH=
++++ config.base[18]: PARTITION_BATCH=
++++ config.base[19]: export PARTITION_SERVICE=
++++ config.base[19]: PARTITION_SERVICE=
++++ config.base[20]: export RESERVATION=
++++ config.base[20]: RESERVATION=
++++ config.base[21]: export CLUSTERS=
++++ config.base[21]: CLUSTERS=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow
++++ config.base[27]: HOMEgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow
++++ config.base[28]: export EXECgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/exec
++++ config.base[28]: EXECgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/exec
++++ config.base[29]: export FIXgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix
++++ config.base[29]: FIXgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix
++++ config.base[30]: export PARMgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/parm
++++ config.base[30]: PARMgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/parm
++++ config.base[31]: export SCRgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/scripts
++++ config.base[31]: SCRgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/scripts
++++ config.base[32]: export USHgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/ush
++++ config.base[32]: USHgfs=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/ush
++++ config.base[34]: export FIXam=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/am
++++ config.base[34]: FIXam=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/am
++++ config.base[35]: export FIXaer=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/aer
++++ config.base[35]: FIXaer=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/aer
++++ config.base[36]: export FIXcpl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/cpl
++++ config.base[36]: FIXcpl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/cpl
++++ config.base[37]: export FIXlut=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/lut
++++ config.base[37]: FIXlut=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/lut
++++ config.base[38]: export FIXcice=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/cice
++++ config.base[38]: FIXcice=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/cice
++++ config.base[39]: export FIXmom=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/mom6
++++ config.base[39]: FIXmom=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/mom6
++++ config.base[40]: export FIXreg2grb2=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/reg2grb2
++++ config.base[40]: FIXreg2grb2=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/reg2grb2
++++ config.base[41]: export FIXgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/gdas
++++ config.base[41]: FIXgdas=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/gdas
++++ config.base[46]: export PACKAGEROOT=/lfs/h1/ops/prod/packages
++++ config.base[46]: PACKAGEROOT=/lfs/h1/ops/prod/packages
++++ config.base[47]: export COMROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT
++++ config.base[47]: COMROOT=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT
++++ config.base[48]: export COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.base[48]: COMINsyn=/lfs/h1/ops/prod/com/gfs/v16.3/syndat
++++ config.base[49]: export DMPDIR=/lfs/h2/emc/dump/noscrub/dump
++++ config.base[49]: DMPDIR=/lfs/h2/emc/dump/noscrub/dump
++++ config.base[53]: export COMINecmwf=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ecmwf
++++ config.base[53]: COMINecmwf=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ecmwf
++++ config.base[54]: export COMINnam=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/nam
++++ config.base[54]: COMINnam=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/nam
++++ config.base[55]: export COMINukmet=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ukmet
++++ config.base[55]: COMINukmet=/lfs/h2/emc/global/noscrub/emc.global/data/external_gempak/ukmet
++++ config.base[58]: export HOMEDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[58]: HOMEDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[59]: export STMP=/lfs/h2/emc/stmp/terry.mcguinness
++++ config.base[59]: STMP=/lfs/h2/emc/stmp/terry.mcguinness
++++ config.base[60]: export PTMP=/lfs/h2/emc/ptmp/terry.mcguinness
++++ config.base[60]: PTMP=/lfs/h2/emc/ptmp/terry.mcguinness
++++ config.base[61]: export NOSCRUB=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[61]: NOSCRUB=/lfs/h2/emc/global/noscrub/terry.mcguinness
++++ config.base[64]: export BASE_GIT=/lfs/h2/emc/global/save/emc.global/git
++++ config.base[64]: BASE_GIT=/lfs/h2/emc/global/save/emc.global/git
++++ config.base[67]: export BASE_DATA=/lfs/h2/emc/global/noscrub/emc.global/data
++++ config.base[67]: BASE_DATA=/lfs/h2/emc/global/noscrub/emc.global/data
++++ config.base[70]: export DO_GOES=YES
++++ config.base[70]: DO_GOES=YES
++++ config.base[71]: export DO_BUFRSND=YES
++++ config.base[71]: DO_BUFRSND=YES
++++ config.base[72]: export DO_GEMPAK=YES
++++ config.base[72]: DO_GEMPAK=YES
++++ config.base[73]: export DO_AWIPS=NO
++++ config.base[73]: DO_AWIPS=NO
++++ config.base[74]: export DO_NPOESS=YES
++++ config.base[74]: DO_NPOESS=YES
++++ config.base[75]: export DO_TRACKER=YES
++++ config.base[75]: DO_TRACKER=YES
++++ config.base[76]: export DO_GENESIS=YES
++++ config.base[76]: DO_GENESIS=YES
++++ config.base[77]: export DO_GENESIS_FSU=NO
++++ config.base[77]: DO_GENESIS_FSU=NO
++++ config.base[78]: export DO_VERFOZN=YES
++++ config.base[78]: DO_VERFOZN=YES
++++ config.base[79]: export DO_VERFRAD=YES
++++ config.base[79]: DO_VERFRAD=YES
++++ config.base[80]: export DO_VMINMON=YES
++++ config.base[80]: DO_VMINMON=YES
++++ config.base[81]: export DO_MOS=NO
++++ config.base[81]: DO_MOS=NO
++++ config.base[87]: export REALTIME=YES
++++ config.base[87]: REALTIME=YES
++++ config.base[90]: export MODE=cycled
++++ config.base[90]: MODE=cycled
++++ config.base[99]: export FIXgsi=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/gsi
++++ config.base[99]: FIXgsi=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/gsi
++++ config.base[100]: export HOMEpost=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow
++++ config.base[100]: HOMEpost=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow
++++ config.base[101]: export HOMEobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0
++++ config.base[101]: HOMEobsproc=/lfs/h2/emc/global/save/emc.global/git/obsproc/v1.2.0
++++ config.base[104]: export 'NCP=/bin/cp -p'
++++ config.base[104]: NCP='/bin/cp -p'
++++ config.base[105]: export NMV=/bin/mv
++++ config.base[105]: NMV=/bin/mv
++++ config.base[106]: export 'NLN=/bin/ln -sf'
++++ config.base[106]: NLN='/bin/ln -sf'
++++ config.base[107]: export VERBOSE=YES
++++ config.base[107]: VERBOSE=YES
++++ config.base[108]: export KEEPDATA=NO
++++ config.base[108]: KEEPDATA=NO
++++ config.base[109]: export DEBUG_POSTSCRIPT=NO
++++ config.base[109]: DEBUG_POSTSCRIPT=NO
++++ config.base[110]: export CHGRP_RSTPROD=YES
++++ config.base[110]: CHGRP_RSTPROD=YES
++++ config.base[111]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[111]: CHGRP_CMD='chgrp rstprod'
++++ config.base[112]: export NCDUMP=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin/ncdump
++++ config.base[112]: NCDUMP=/apps/prod/hpc-stack/intel-19.1.3.304/cray-mpich-8.1.4/netcdf/4.7.4/bin/ncdump
++++ config.base[113]: export NCLEN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/ush/getncdimlen
++++ config.base[113]: NCLEN=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/ush/getncdimlen
++++ config.base[116]: export BASE_ENV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/env
++++ config.base[116]: BASE_ENV=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/env
++++ config.base[117]: export BASE_JOB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/jobs/rocoto
++++ config.base[117]: BASE_JOB=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/jobs/rocoto
++++ config.base[120]: export SDATE=2021122018
++++ config.base[120]: SDATE=2021122018
++++ config.base[121]: export EDATE=2021122118
++++ config.base[121]: EDATE=2021122118
++++ config.base[122]: export EXP_WARM_START=.false.
++++ config.base[122]: EXP_WARM_START=.false.
++++ config.base[123]: export assim_freq=6
++++ config.base[123]: assim_freq=6
++++ config.base[124]: export PSLOT=C96_atm3DVar_extended_2b6c45de
++++ config.base[124]: PSLOT=C96_atm3DVar_extended_2b6c45de
++++ config.base[125]: export EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/EXPDIR/C96_atm3DVar_extended_2b6c45de
++++ config.base[125]: EXPDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/EXPDIR/C96_atm3DVar_extended_2b6c45de
++++ config.base[126]: export ROTDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de
++++ config.base[126]: ROTDIR=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de
++++ config.base[127]: export ROTDIR_DUMP=YES
++++ config.base[127]: ROTDIR_DUMP=YES
++++ config.base[128]: export DUMP_SUFFIX=
++++ config.base[128]: DUMP_SUFFIX=
++++ config.base[129]: [[ 2021122100 -ge 2019092100 ]]
++++ config.base[129]: [[ 2021122100 -le 2019110700 ]]
++++ config.base[132]: export ARCDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness/archive/C96_atm3DVar_extended_2b6c45de
++++ config.base[132]: ARCDIR=/lfs/h2/emc/global/noscrub/terry.mcguinness/archive/C96_atm3DVar_extended_2b6c45de
++++ config.base[133]: export ATARDIR=/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C96_atm3DVar_extended_2b6c45de
++++ config.base[133]: ATARDIR=/NCEPDEV/emc-global/1year/terry.mcguinness/WCOSS2/scratch/C96_atm3DVar_extended_2b6c45de
++++ config.base[136]: export envir=prod
++++ config.base[136]: envir=prod
++++ config.base[137]: export NET=gfs
++++ config.base[137]: NET=gfs
++++ config.base[138]: export RUN=gfs
++++ config.base[138]: RUN=gfs
++++ config.base[141]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/EXPDIR/C96_atm3DVar_extended_2b6c45de/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[78]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[79]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[81]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[82]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[83]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[84]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[85]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[86]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[87]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[88]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[90]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[91]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[92]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[93]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[94]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[95]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[96]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[97]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[99]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[100]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[101]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[103]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[144]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[144]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[145]: export LOGSCRIPT=
++++ config.base[145]: LOGSCRIPT=
++++ config.base[148]: export 'REDOUT=1>'
++++ config.base[148]: REDOUT='1>'
++++ config.base[149]: export 'REDERR=2>'
++++ config.base[149]: REDERR='2>'
++++ config.base[151]: export SENDECF=NO
++++ config.base[151]: SENDECF=NO
++++ config.base[152]: export SENDSDM=NO
++++ config.base[152]: SENDSDM=NO
++++ config.base[153]: export SENDDBN_NTC=NO
++++ config.base[153]: SENDDBN_NTC=NO
++++ config.base[154]: export SENDDBN=NO
++++ config.base[154]: SENDDBN=NO
++++ config.base[155]: export DBNROOT=/apps/ops/prod/nco/core/prod_util.v2.0.9/fakedbn
++++ config.base[155]: DBNROOT=/apps/ops/prod/nco/core/prod_util.v2.0.9/fakedbn
++++ config.base[158]: export APP=ATM
++++ config.base[158]: APP=ATM
++++ config.base[160]: shopt -s extglob
++++ config.base[162]: case "${RUN}" in
++++ config.base[169]: shopt -u extglob
++++ config.base[172]: export DO_ATM=YES
++++ config.base[172]: DO_ATM=YES
++++ config.base[173]: export DO_COUPLED=NO
++++ config.base[173]: DO_COUPLED=NO
++++ config.base[174]: export DO_WAVE=NO
++++ config.base[174]: DO_WAVE=NO
++++ config.base[175]: export DO_OCN=NO
++++ config.base[175]: DO_OCN=NO
++++ config.base[176]: export DO_ICE=NO
++++ config.base[176]: DO_ICE=NO
++++ config.base[177]: export DO_AERO=NO
++++ config.base[177]: DO_AERO=NO
++++ config.base[178]: export DO_PREP_OBS_AERO=NO
++++ config.base[178]: DO_PREP_OBS_AERO=NO
++++ config.base[179]: export AERO_FCST_RUN=
++++ config.base[179]: AERO_FCST_RUN=
++++ config.base[180]: export AERO_ANL_RUN=
++++ config.base[180]: AERO_ANL_RUN=
++++ config.base[181]: export WAVE_RUN=
++++ config.base[181]: WAVE_RUN=
++++ config.base[182]: export DOBNDPNT_WAVE=NO
++++ config.base[182]: DOBNDPNT_WAVE=NO
++++ config.base[183]: export DOIBP_WAV=NO
++++ config.base[183]: DOIBP_WAV=NO
++++ config.base[184]: export FRAC_GRID=.true.
++++ config.base[184]: FRAC_GRID=.true.
++++ config.base[185]: export DO_NEST=NO
++++ config.base[185]: DO_NEST=NO
++++ config.base[186]: [[ NO == \Y\E\S ]]
++++ config.base[192]: export ntiles=6
++++ config.base[192]: ntiles=6
++++ config.base[193]: export FIXugwd=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/ugwd
++++ config.base[193]: FIXugwd=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/ugwd
++++ config.base[194]: export FIXorog=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/orog
++++ config.base[194]: FIXorog=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/fix/orog
++++ config.base[198]: export OPS_RES=C768
++++ config.base[198]: OPS_RES=C768
++++ config.base[201]: export LEVS=128
++++ config.base[201]: LEVS=128
++++ config.base[202]: export CASE=C96
++++ config.base[202]: CASE=C96
++++ config.base[203]: export CASE_ENS=@CASEENS@
++++ config.base[203]: CASE_ENS=@CASEENS@
++++ config.base[204]: export OCNRES=500
++++ config.base[204]: OCNRES=500
++++ config.base[205]: export ICERES=500
++++ config.base[205]: ICERES=500
++++ config.base[208]: case "${CASE}" in
++++ config.base[213]: export waveGRD=uglo_100km
++++ config.base[213]: waveGRD=uglo_100km
++++ config.base[227]: case "${APP}" in
++++ config.base[268]: [[ gfs =~ gdas ]]
++++ config.base[271]: [[ gfs =~ gfs ]]
++++ config.base[272]: export FHCYC=24
++++ config.base[272]: FHCYC=24
++++ config.base[276]: export FHMIN=0
++++ config.base[276]: FHMIN=0
++++ config.base[277]: export FHMAX=9
++++ config.base[277]: FHMAX=9
++++ config.base[278]: export FHOUT=3
++++ config.base[278]: FHOUT=3
++++ config.base[279]: export FHOUT_OCN=3
++++ config.base[279]: FHOUT_OCN=3
++++ config.base[280]: export FHOUT_ICE=3
++++ config.base[280]: FHOUT_ICE=3
++++ config.base[283]: export EUPD_CYC=gdas
++++ config.base[283]: EUPD_CYC=gdas
++++ config.base[286]: export INTERVAL_GFS=6
++++ config.base[286]: INTERVAL_GFS=6
++++ config.base[287]: export SDATE_GFS=2021122100
++++ config.base[287]: SDATE_GFS=2021122100
++++ config.base[290]: export FHMIN_GFS=0
++++ config.base[290]: FHMIN_GFS=0
++++ config.base[291]: export FHMAX_GFS=384
++++ config.base[291]: FHMAX_GFS=384
++++ config.base[293]: breakpnts=192
++++ config.base[294]: export FCST_SEGMENTS=0,192,384
++++ config.base[294]: FCST_SEGMENTS=0,192,384
++++ config.base[295]: export FHOUT_GFS=3
++++ config.base[295]: FHOUT_GFS=3
++++ config.base[296]: export FHMAX_HF_GFS=120
++++ config.base[296]: FHMAX_HF_GFS=120
++++ config.base[297]: export FHOUT_HF_GFS=1
++++ config.base[297]: FHOUT_HF_GFS=1
++++ config.base[298]: export FHOUT_OCN_GFS=6
++++ config.base[298]: FHOUT_OCN_GFS=6
++++ config.base[299]: export FHOUT_ICE_GFS=6
++++ config.base[299]: FHOUT_ICE_GFS=6
++++ config.base[300]: export FHMIN_WAV=0
++++ config.base[300]: FHMIN_WAV=0
++++ config.base[301]: export FHOUT_WAV=3
++++ config.base[301]: FHOUT_WAV=3
++++ config.base[302]: export FHMAX_HF_WAV=120
++++ config.base[302]: FHMAX_HF_WAV=120
++++ config.base[303]: export FHOUT_HF_WAV=1
++++ config.base[303]: FHOUT_HF_WAV=1
++++ config.base[304]: export FHMAX_WAV=9
++++ config.base[304]: FHMAX_WAV=9
++++ config.base[305]: export FHMAX_WAV_GFS=384
++++ config.base[305]: FHMAX_WAV_GFS=384
++++ config.base[308]: export ILPOST=1
++++ config.base[308]: ILPOST=1
++++ config.base[309]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[314]: export FHMAX_GOES=180
++++ config.base[314]: FHMAX_GOES=180
++++ config.base[315]: export FHOUT_GOES=3
++++ config.base[315]: FHOUT_GOES=3
++++ config.base[316]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[321]: export restart_interval_gfs=12
++++ config.base[321]: restart_interval_gfs=12
++++ config.base[326]: export QUILTING=.true.
++++ config.base[326]: QUILTING=.true.
++++ config.base[327]: export OUTPUT_GRID=gaussian_grid
++++ config.base[327]: OUTPUT_GRID=gaussian_grid
++++ config.base[328]: export WRITE_DOPOST=.true.
++++ config.base[328]: WRITE_DOPOST=.true.
++++ config.base[329]: export WRITE_NSFLIP=.true.
++++ config.base[329]: WRITE_NSFLIP=.true.
++++ config.base[332]: export DOIAU=YES
++++ config.base[332]: DOIAU=YES
++++ config.base[333]: export IAUFHRS=3,6,9
++++ config.base[333]: IAUFHRS=3,6,9
++++ config.base[334]: export IAU_FHROT=3
++++ config.base[334]: IAU_FHROT=3
++++ config.base[335]: export IAU_DELTHRS=6
++++ config.base[335]: IAU_DELTHRS=6
++++ config.base[336]: export IAU_OFFSET=6
++++ config.base[336]: IAU_OFFSET=6
++++ config.base[337]: export DOIAU_ENKF=YES
++++ config.base[337]: DOIAU_ENKF=YES
++++ config.base[338]: export IAUFHRS_ENKF=3,6,9
++++ config.base[338]: IAUFHRS_ENKF=3,6,9
++++ config.base[339]: export IAU_DELTHRS_ENKF=6
++++ config.base[339]: IAU_DELTHRS_ENKF=6
++++ config.base[342]: export lobsdiag_forenkf=.true.
++++ config.base[342]: lobsdiag_forenkf=.true.
++++ config.base[350]: export imp_physics=8
++++ config.base[350]: imp_physics=8
++++ config.base[354]: export DO_JEDIATMVAR=NO
++++ config.base[354]: DO_JEDIATMVAR=NO
++++ config.base[355]: export DO_JEDIATMENS=NO
++++ config.base[355]: DO_JEDIATMENS=NO
++++ config.base[356]: export DO_JEDIOCNVAR=NO
++++ config.base[356]: DO_JEDIOCNVAR=NO
++++ config.base[357]: export DO_JEDISNOWDA=NO
++++ config.base[357]: DO_JEDISNOWDA=NO
++++ config.base[358]: export DO_MERGENSST=NO
++++ config.base[358]: DO_MERGENSST=NO
++++ config.base[361]: export DOHYBVAR=NO
++++ config.base[361]: DOHYBVAR=NO
++++ config.base[362]: export NMEM_ENS=0
++++ config.base[362]: NMEM_ENS=0
++++ config.base[363]: export SMOOTH_ENKF=NO
++++ config.base[363]: SMOOTH_ENKF=NO
++++ config.base[364]: export l4densvar=.true.
++++ config.base[364]: l4densvar=.true.
++++ config.base[365]: export lwrite4danl=.true.
++++ config.base[365]: lwrite4danl=.true.
++++ config.base[366]: export DO_CALC_INCREMENT=NO
++++ config.base[366]: DO_CALC_INCREMENT=NO
++++ config.base[369]: export NMEM_ENS_GFS=30
++++ config.base[369]: NMEM_ENS_GFS=30
++++ config.base[370]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[370]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[371]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[371]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[374]: [[ NO = \Y\E\S ]]
++++ config.base[388]: [[ NO == \N\O ]]
++++ config.base[388]: [[ YES == \Y\E\S ]]
++++ config.base[389]: export IAUFHRS=6,
++++ config.base[389]: IAUFHRS=6,
++++ config.base[390]: export IAU_FHROT=3
++++ config.base[390]: IAU_FHROT=3
++++ config.base[391]: export IAU_FILTER_INCREMENTS=.true.
++++ config.base[391]: IAU_FILTER_INCREMENTS=.true.
++++ config.base[392]: export IAUFHRS_ENKF=6,
++++ config.base[392]: IAUFHRS_ENKF=6,
++++ config.base[396]: export ENKF_SPREAD=YES
++++ config.base[396]: ENKF_SPREAD=YES
++++ config.base[399]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[399]: [[ 2021122018 = \2\0\2\1\1\2\2\1\0\0 ]]
++++ config.base[399]: [[ YES = \N\O ]]
++++ config.base[399]: [[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[405]: [[ YES = \N\O ]]
++++ config.base[409]: [[ YES == \Y\E\S ]]
++++ config.base[410]: export restart_interval_enkfgdas=3
++++ config.base[410]: restart_interval_enkfgdas=3
++++ config.base[415]: export restart_interval_enkfgfs=3
++++ config.base[415]: restart_interval_enkfgfs=3
++++ config.base[417]: [[ YES == \Y\E\S ]]
++++ config.base[418]: export restart_interval_gdas=3
++++ config.base[418]: restart_interval_gdas=3
++++ config.base[423]: export GSI_SOILANAL=NO
++++ config.base[423]: GSI_SOILANAL=NO
++++ config.base[426]: export DONST=YES
++++ config.base[426]: DONST=YES
++++ config.base[427]: [[ YES = \Y\E\S ]]
++++ config.base[427]: export 'FNTSFA=        '
++++ config.base[427]: FNTSFA='        '
++++ config.base[430]: export nst_anl=.true.
++++ config.base[430]: nst_anl=.true.
++++ config.base[433]: export MAKE_NSSTBUFR=NO
++++ config.base[433]: MAKE_NSSTBUFR=NO
++++ config.base[436]: export MAKE_ACFTBUFR=NO
++++ config.base[436]: MAKE_ACFTBUFR=NO
++++ config.base[439]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[439]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[442]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[442]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[443]: export INCVARS_EFOLD=5
++++ config.base[443]: INCVARS_EFOLD=5
++++ config.base[448]: export netcdf_diag=.true.
++++ config.base[448]: netcdf_diag=.true.
++++ config.base[449]: export binary_diag=.false.
++++ config.base[449]: binary_diag=.false.
++++ config.base[452]: export DO_METP=YES
++++ config.base[452]: DO_METP=YES
++++ config.base[453]: export DO_FIT2OBS=YES
++++ config.base[453]: DO_FIT2OBS=YES
++++ config.base[454]: export DO_VRFY_OCEANDA=NO
++++ config.base[454]: DO_VRFY_OCEANDA=NO
++++ config.base[457]: export FHMAX_FITS=132
++++ config.base[457]: FHMAX_FITS=132
++++ config.base[458]: [[ 132 -gt 384 ]]
++++ config.base[461]: export HPSSARCH=NO
++++ config.base[461]: HPSSARCH=NO
++++ config.base[462]: export LOCALARCH=NO
++++ config.base[462]: LOCALARCH=NO
++++ config.base[463]: [[ NO = \Y\E\S ]]
++++ config.base[467]: export ARCH_CYC=00
++++ config.base[467]: ARCH_CYC=00
++++ config.base[468]: export ARCH_WARMICFREQ=4
++++ config.base[468]: ARCH_WARMICFREQ=4
++++ config.base[469]: export ARCH_FCSTICFREQ=1
++++ config.base[469]: ARCH_FCSTICFREQ=1
++++ config.base[472]: [[ NO = \Y\E\S ]]
++++ config.base[480]: export REPLAY_ICS=NO
++++ config.base[480]: REPLAY_ICS=NO
++++ config.base[481]: export OFFSET_START_HOUR=0
++++ config.base[481]: OFFSET_START_HOUR=0
++++ config.base[484]: export NUM_SND_COLLECTIVES=9
++++ config.base[484]: NUM_SND_COLLECTIVES=9
++++ config.base[488]: [[ WCOSS2 =~ PW ]]
++++ config.base[497]: [[ WCOSS2 == \O\R\I\O\N ]]
++++ config.base[497]: [[ WCOSS2 == \H\E\R\C\U\L\E\S ]]
++++ config.base[502]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/EXPDIR/C96_atm3DVar_extended_2b6c45de/config.atmos_products
++++ config.atmos_products[6]: echo 'BEGIN: config.atmos_products'
+BEGIN: config.atmos_products
++++ config.atmos_products[9]: . /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/EXPDIR/C96_atm3DVar_extended_2b6c45de/config.resources atmos_products
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=atmos_products
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[40]: max_tasks_per_node=128
+++++ config.resources[43]: mem_node_max=500GB
+++++ config.resources[144]: export max_tasks_per_node
+++++ config.resources[146]: case ${step} in
+++++ config.resources[923]: walltime=00:15:00
+++++ config.resources[924]: ntasks=24
+++++ config.resources[925]: threads_per_task=1
+++++ config.resources[926]: tasks_per_node=24
+++++ config.resources[927]: export is_exclusive=True
+++++ config.resources[927]: is_exclusive=True
+++++ config.resources[1424]: [[ -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/EXPDIR/C96_atm3DVar_extended_2b6c45de/config.resources.WCOSS2 ]]
+++++ config.resources[1425]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/EXPDIR/C96_atm3DVar_extended_2b6c45de/config.resources.WCOSS2
++++++ config.resources.WCOSS2[5]: case ${step} in
+++++ config.resources[1429]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1430]: run_resource_var=threads_per_task_gfs
+++++ config.resources[1431]: [[ -n '' ]]
+++++ config.resources[1433]: [[ -n 0 ]]
+++++ config.resources[1434]: export threads_per_task
+++++ config.resources[1429]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1430]: run_resource_var=ntasks_gfs
+++++ config.resources[1431]: [[ -n '' ]]
+++++ config.resources[1433]: [[ -n 0 ]]
+++++ config.resources[1434]: export ntasks
+++++ config.resources[1429]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1430]: run_resource_var=tasks_per_node_gfs
+++++ config.resources[1431]: [[ -n '' ]]
+++++ config.resources[1433]: [[ -n 0 ]]
+++++ config.resources[1434]: export tasks_per_node
+++++ config.resources[1429]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1430]: run_resource_var=NTASKS_gfs
+++++ config.resources[1431]: [[ -n '' ]]
+++++ config.resources[1433]: [[ -n '' ]]
+++++ config.resources[1429]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1430]: run_resource_var=memory_gfs
+++++ config.resources[1431]: [[ -n '' ]]
+++++ config.resources[1433]: [[ -n '' ]]
+++++ config.resources[1429]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1430]: run_resource_var=walltime_gfs
+++++ config.resources[1431]: [[ -n '' ]]
+++++ config.resources[1433]: [[ -n 0 ]]
+++++ config.resources[1434]: export walltime
+++++ config.resources[1438]: echo 'END: config.resources'
+END: config.resources
++++ config.atmos_products[12]: export NFHRS_PER_GROUP=3
++++ config.atmos_products[12]: NFHRS_PER_GROUP=3
++++ config.atmos_products[15]: export INTERP_ATMOS_MASTERSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/ush/interp_atmos_master.sh
++++ config.atmos_products[15]: INTERP_ATMOS_MASTERSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/ush/interp_atmos_master.sh
++++ config.atmos_products[16]: export INTERP_ATMOS_SFLUXSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/ush/interp_atmos_sflux.sh
++++ config.atmos_products[16]: INTERP_ATMOS_SFLUXSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/ush/interp_atmos_sflux.sh
++++ config.atmos_products[18]: [[ gfs == \g\d\a\s ]]
++++ config.atmos_products[24]: [[ gfs == \g\f\s ]]
++++ config.atmos_products[25]: export downset=2
++++ config.atmos_products[25]: downset=2
++++ config.atmos_products[26]: export FHOUT_PGBS=3
++++ config.atmos_products[26]: FHOUT_PGBS=3
++++ config.atmos_products[27]: export FLXGF=YES
++++ config.atmos_products[27]: FLXGF=YES
++++ config.atmos_products[28]: export WGNE=YES
++++ config.atmos_products[28]: WGNE=YES
++++ config.atmos_products[29]: export FHMAX_WGNE=180
++++ config.atmos_products[29]: FHMAX_WGNE=180
++++ config.atmos_products[32]: export APCP_MSG=597
++++ config.atmos_products[32]: APCP_MSG=597
++++ config.atmos_products[35]: export paramlista=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/parm/product/gfs.fFFF.paramlist.a.txt
++++ config.atmos_products[35]: paramlista=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/parm/product/gfs.fFFF.paramlist.a.txt
++++ config.atmos_products[36]: export paramlista_anl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/parm/product/gfs.anl.paramlist.a.txt
++++ config.atmos_products[36]: paramlista_anl=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/parm/product/gfs.anl.paramlist.a.txt
++++ config.atmos_products[37]: export paramlista_f000=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/parm/product/gfs.f000.paramlist.a.txt
++++ config.atmos_products[37]: paramlista_f000=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/parm/product/gfs.f000.paramlist.a.txt
++++ config.atmos_products[38]: export paramlistb=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/parm/product/gfs.fFFF.paramlist.b.txt
++++ config.atmos_products[38]: paramlistb=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/parm/product/gfs.fFFF.paramlist.b.txt
++++ config.atmos_products[40]: echo 'END: config.atmos_products'
+END: config.atmos_products
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/env/WCOSS2.env atmos_products
++++ WCOSS2.env[3]: [[ 1 -ne 1 ]]
++++ WCOSS2.env[10]: step=atmos_products
++++ WCOSS2.env[13]: export 'launcher=mpiexec -l'
++++ WCOSS2.env[13]: launcher='mpiexec -l'
++++ WCOSS2.env[14]: export 'mpmd_opt=--cpu-bind verbose,core cfp'
++++ WCOSS2.env[14]: mpmd_opt='--cpu-bind verbose,core cfp'
++++ WCOSS2.env[18]: [[ -n 24 ]]
++++ WCOSS2.env[18]: [[ -n 128 ]]
++++ WCOSS2.env[18]: [[ -n 24 ]]
++++ WCOSS2.env[19]: max_threads_per_task=5
++++ WCOSS2.env[20]: NTHREADSmax=1
++++ WCOSS2.env[21]: NTHREADS1=1
++++ WCOSS2.env[22]: [[ 1 -gt 5 ]]
++++ WCOSS2.env[23]: [[ 1 -gt 5 ]]
++++ WCOSS2.env[24]: APRUN_default='mpiexec -l -n 24'
++++ WCOSS2.env[30]: [[ atmos_products = \p\r\e\p ]]
++++ WCOSS2.env[30]: [[ atmos_products = \p\r\e\p\b\u\f\r ]]
++++ WCOSS2.env[37]: [[ atmos_products = \p\r\e\p\s\n\o\w\o\b\s ]]
++++ WCOSS2.env[41]: [[ atmos_products = \p\r\e\p\_\e\m\i\s\s\i\o\n\s ]]
++++ WCOSS2.env[45]: [[ atmos_products = \w\a\v\e\i\n\i\t ]]
++++ WCOSS2.env[45]: [[ atmos_products = \w\a\v\e\p\r\e\p ]]
++++ WCOSS2.env[45]: [[ atmos_products = \w\a\v\e\p\o\s\t\s\b\s ]]
++++ WCOSS2.env[45]: [[ atmos_products = \w\a\v\e\p\o\s\t\b\n\d\p\n\t ]]
++++ WCOSS2.env[45]: [[ atmos_products = \w\a\v\e\p\o\s\t\b\n\d\p\n\t\b\l\l ]]
++++ WCOSS2.env[45]: [[ atmos_products = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ WCOSS2.env[51]: [[ atmos_products = \a\t\m\a\n\l\v\a\r ]]
++++ WCOSS2.env[56]: [[ atmos_products = \a\t\m\e\n\s\a\n\l\o\b\s ]]
++++ WCOSS2.env[61]: [[ atmos_products = \a\t\m\e\n\s\a\n\l\s\o\l ]]
++++ WCOSS2.env[66]: [[ atmos_products = \a\t\m\e\n\s\a\n\l\l\e\t\k\f ]]
++++ WCOSS2.env[71]: [[ atmos_products = \a\t\m\e\n\s\a\n\l\f\v\3\i\n\c ]]
++++ WCOSS2.env[76]: [[ atmos_products = \a\e\r\o\a\n\l\v\a\r ]]
++++ WCOSS2.env[83]: [[ atmos_products = \a\e\r\o\a\n\l\g\e\n\b ]]
++++ WCOSS2.env[88]: [[ atmos_products = \p\r\e\p\o\b\s\a\e\r\o ]]
++++ WCOSS2.env[93]: [[ atmos_products = \s\n\o\w\a\n\l ]]
++++ WCOSS2.env[100]: [[ atmos_products = \e\s\n\o\w\r\e\c\e\n ]]
++++ WCOSS2.env[107]: [[ atmos_products = \m\a\r\i\n\e\b\m\a\t ]]
++++ WCOSS2.env[112]: [[ atmos_products = \o\c\n\a\n\a\l\r\u\n ]]
++++ WCOSS2.env[118]: [[ atmos_products = \o\c\n\a\n\a\l\c\h\k\p\t ]]
++++ WCOSS2.env[124]: [[ atmos_products = \o\c\n\a\n\a\l\e\c\e\n ]]
++++ WCOSS2.env[129]: [[ atmos_products = \m\a\r\i\n\e\a\n\a\l\l\e\t\k\f ]]
++++ WCOSS2.env[134]: [[ atmos_products = \a\t\m\a\n\l\f\v\3\i\n\c ]]
++++ WCOSS2.env[139]: [[ atmos_products = \a\n\a\l ]]
++++ WCOSS2.env[139]: [[ atmos_products = \a\n\a\l\c\a\l\c ]]
++++ WCOSS2.env[173]: [[ atmos_products = \s\f\c\a\n\l ]]
++++ WCOSS2.env[179]: [[ atmos_products = \e\o\b\s ]]
++++ WCOSS2.env[192]: [[ atmos_products = \e\u\p\d ]]
++++ WCOSS2.env[206]: [[ atmos_products = \f\c\s\t ]]
++++ WCOSS2.env[206]: [[ atmos_products = \e\f\c\s ]]
++++ WCOSS2.env[224]: [[ atmos_products = \u\p\p ]]
++++ WCOSS2.env[229]: [[ atmos_products = \a\t\m\o\s\_\p\r\o\d\u\c\t\s ]]
++++ WCOSS2.env[231]: export USE_CFP=YES
++++ WCOSS2.env[231]: USE_CFP=YES
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
++ JGLOBAL_ATMOS_PRODUCTS[12]: YMD=20211221
++ JGLOBAL_ATMOS_PRODUCTS[12]: HH=00
++ JGLOBAL_ATMOS_PRODUCTS[12]: declare_from_tmpl -rx COM_ATMOS_ANALYSIS COM_ATMOS_HISTORY COM_ATMOS_MASTER
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_ANALYSIS=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//analysis/atmos
+declare_from_tmpl :: COM_ATMOS_HISTORY=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//model/atmos/history
+declare_from_tmpl :: COM_ATMOS_MASTER=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//model/atmos/master
++ JGLOBAL_ATMOS_PRODUCTS[14]: for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[15]: prod_dir=COM_ATMOS_GRIB_0p25
++ JGLOBAL_ATMOS_PRODUCTS[16]: GRID=0p25
++ JGLOBAL_ATMOS_PRODUCTS[16]: YMD=20211221
++ JGLOBAL_ATMOS_PRODUCTS[16]: HH=00
++ JGLOBAL_ATMOS_PRODUCTS[16]: declare_from_tmpl -rx COM_ATMOS_GRIB_0p25:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_GRIB_0p25=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//products/atmos/grib2/0p25
++ JGLOBAL_ATMOS_PRODUCTS[17]: [[ ! -d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//products/atmos/grib2/0p25 ]]
++ JGLOBAL_ATMOS_PRODUCTS[14]: for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[15]: prod_dir=COM_ATMOS_GRIB_0p50
++ JGLOBAL_ATMOS_PRODUCTS[16]: GRID=0p50
++ JGLOBAL_ATMOS_PRODUCTS[16]: YMD=20211221
++ JGLOBAL_ATMOS_PRODUCTS[16]: HH=00
++ JGLOBAL_ATMOS_PRODUCTS[16]: declare_from_tmpl -rx COM_ATMOS_GRIB_0p50:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_GRIB_0p50=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//products/atmos/grib2/0p50
++ JGLOBAL_ATMOS_PRODUCTS[17]: [[ ! -d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//products/atmos/grib2/0p50 ]]
++ JGLOBAL_ATMOS_PRODUCTS[14]: for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[15]: prod_dir=COM_ATMOS_GRIB_1p00
++ JGLOBAL_ATMOS_PRODUCTS[16]: GRID=1p00
++ JGLOBAL_ATMOS_PRODUCTS[16]: YMD=20211221
++ JGLOBAL_ATMOS_PRODUCTS[16]: HH=00
++ JGLOBAL_ATMOS_PRODUCTS[16]: declare_from_tmpl -rx COM_ATMOS_GRIB_1p00:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_GRIB_1p00=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//products/atmos/grib2/1p00
++ JGLOBAL_ATMOS_PRODUCTS[17]: [[ ! -d /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//products/atmos/grib2/1p00 ]]
++ JGLOBAL_ATMOS_PRODUCTS[21]: export PREFIX=gfs.t00z.
++ JGLOBAL_ATMOS_PRODUCTS[21]: PREFIX=gfs.t00z.
++ JGLOBAL_ATMOS_PRODUCTS[25]: /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/scripts/exglobal_atmos_products.sh
+Begin exglobal_atmos_products.sh at Fri Oct 18 20:24:26 UTC 2024
++ exglobal_atmos_products.sh[6]: export WGRIB2=/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin/wgrib2
++ exglobal_atmos_products.sh[6]: WGRIB2=/apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin/wgrib2
++ exglobal_atmos_products.sh[9]: INTERP_ATMOS_MASTERSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/ush/interp_atmos_master.sh
++ exglobal_atmos_products.sh[10]: INTERP_ATMOS_SFLUXSH=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/ush/interp_atmos_sflux.sh
++ exglobal_atmos_products.sh[13]: downset=2
++ exglobal_atmos_products.sh[14]: ntasks_atmos_products=8
++ exglobal_atmos_products.sh[17]: WGNE=YES
++ exglobal_atmos_products.sh[18]: FHMAX_WGNE=180
++ exglobal_atmos_products.sh[20]: cd /lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_2b6c45de/gfs.2021122100/atmos_products.154346
++ exglobal_atmos_products.sh[24]: ((  FORECAST_HOUR <= 0  ))
+++ exglobal_atmos_products.sh[35]: printf f%03d 4
++ exglobal_atmos_products.sh[35]: fhr3=f004
++ exglobal_atmos_products.sh[36]: ((  FORECAST_HOUR%FHOUT_PGBS == 0  ))
++ exglobal_atmos_products.sh[45]: MASTER_FILE=/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//model/atmos/master/gfs.t00z.master.grb2f004
++ exglobal_atmos_products.sh[50]: /apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin/wgrib2 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//model/atmos/master/gfs.t00z.master.grb2f004
++ exglobal_atmos_products.sh[50]: grep -F -f /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/parm/product/gfs.fFFF.paramlist.a.txt
++ exglobal_atmos_products.sh[50]: /apps/ops/para/libs/intel/19.1.3.304/wgrib2/2.0.8/bin/wgrib2 -i -grib tmpfile_f004 /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//model/atmos/master/gfs.t00z.master.grb2f004
+
+*** FATAL ERROR: missing input file /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//model/atmos/master/gfs.t00z.master.grb2f004 ***
+
+
+*** FATAL ERROR: missing input file /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/gfs.20211221/00//model/atmos/master/gfs.t00z.master.grb2f004 ***
+
++ exglobal_atmos_products.sh[1]: postamble exglobal_atmos_products.sh 1729283066 8
++ preamble.sh[70]: set +x
+End exglobal_atmos_products.sh at 20:24:26 with error code 8 (time elapsed: 00:00:00)
++ JGLOBAL_ATMOS_PRODUCTS[1]: postamble JGLOBAL_ATMOS_PRODUCTS 1729283064 8
++ preamble.sh[70]: set +x
+End JGLOBAL_ATMOS_PRODUCTS at 20:24:26 with error code 8 (time elapsed: 00:00:02)
++ atmos_products.sh[1]: postamble atmos_products.sh 1729283062 8
++ preamble.sh[70]: set +x
+End atmos_products.sh at 20:24:26 with error code 8 (time elapsed: 00:00:04)
+PBS: Running epilogue on parent mom node: nid001672...
+##### Job 158647824.cbqs01 - PBS Job Script:
+(Note: Duplicate #PBS entries are a function how PBS interprets and caches the original job script.)
+
+#! /bin/sh
+#PBS -N C96_atm3DVar_extended_2b6c45de_gfs_atmos_prod_f004_00
+#PBS -A GFS-DEV
+#PBS -q dev
+#PBS -l walltime=00:15:00
+#PBS -l select=1:mpiprocs=24:ompthreads=1:ncpus=24
+#PBS -j oe -o /lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT/C96_atm3DVar_extended_2b6c45de/logs/2021122100/gfs_atmos_prod_f004.log
+#PBS -l place=vscatter:exclhost
+export RUN_ENVIR='emc'
+export HOMEgfs='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow'
+export EXPDIR='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/EXPDIR/C96_atm3DVar_extended_2b6c45de'
+export NET='gfs'
+export RUN='gfs'
+export CDATE='2021122100'
+export PDY='20211221'
+export cyc='00'
+export COMROOT='/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/RUNTESTS/COMROOT'
+export DATAROOT='/lfs/h2/emc/stmp/terry.mcguinness/RUNDIRS/C96_atm3DVar_extended_2b6c45de/gfs.2021122100'
+export FHR3='004'
+export COMPONENT='atmos'
+set -x
+/lfs/h2/emc/global/noscrub/globalworkflow.ci/GFS_CI_ROOT/PR/2928/global-workflow/jobs/rocoto/atmos_products.sh
+##### End of job script
+------------------------------------------------------------------
+
