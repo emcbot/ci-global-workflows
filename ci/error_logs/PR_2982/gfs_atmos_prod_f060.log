@@ -1,0 +1,1326 @@
+Begin atmos_products.sh at Mon Nov  4 12:06:38 UTC 2024
++ atmos_products.sh[11]: . /work2/noaa/global/CI/HERCULES/2982/gfs/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /work2/noaa/global/CI/HERCULES/2982/gfs/modulefiles
+
+Currently Loaded Modules:
+  1) contrib/0.1                      41) grib-util/1.3.0
+  2) intel-oneapi-compilers/2023.1.0  42) g2tmpl/1.10.2
+  3) stack-intel/2021.9.0             43) gsi-ncdiag/1.1.2
+  4) intel-oneapi-mpi/2021.9.0        44) crtm-fix/2.4.0.1_emc
+  5) stack-intel-oneapi-mpi/2021.9.0  45) git-lfs/3.1.2
+  6) intel-oneapi-mkl/2023.1.0        46) crtm/2.4.0.1
+  7) zlib/1.2.13                      47) openblas/0.3.24
+  8) pigz/2.7                         48) py-setuptools/63.4.3
+  9) zstd/1.5.2                       49) py-numpy/1.23.4
+ 10) tar/1.34                         50) bufr/11.7.0
+ 11) gettext/0.21.1                   51) gmake/4.2.1
+ 12) libxcrypt/4.4.35                 52) wgrib2/2.0.8
+ 13) sqlite/3.43.2                    53) py-f90nml/1.4.3
+ 14) util-linux-uuid/2.38.1           54) py-cftime/1.0.3.4
+ 15) python/3.11.6                    55) py-netcdf4/1.5.8
+ 16) libjpeg/2.1.0                    56) libyaml/0.2.5
+ 17) jasper/2.0.32                    57) py-pyyaml/6.0
+ 18) libpng/1.6.37                    58) py-markupsafe/2.1.3
+ 19) openjpeg/2.3.1                   59) py-jinja2/3.1.2
+ 20) eccodes/2.32.0                   60) py-bottleneck/1.3.7
+ 21) fftw/3.3.10                      61) py-numexpr/2.8.4
+ 22) nghttp2/1.57.0                   62) py-et-xmlfile/1.0.1
+ 23) curl/8.4.0                       63) py-openpyxl/3.1.2
+ 24) proj/9.2.1                       64) py-pytz/2023.3
+ 25) udunits/2.2.28                   65) py-pyxlsb/1.0.10
+ 26) cdo/2.2.0                        66) py-xlrd/2.0.1
+ 27) hdf5/1.14.0                      67) py-xlsxwriter/3.1.7
+ 28) snappy/1.1.10                    68) py-xlwt/1.3.0
+ 29) c-blosc/1.21.5                   69) py-pandas/1.5.3
+ 30) netcdf-c/4.9.2                   70) py-six/1.16.0
+ 31) netcdf-fortran/4.6.1             71) py-python-dateutil/2.8.2
+ 32) antlr/2.7.7                      72) g2c/1.6.4
+ 33) gsl/2.7.1                        73) netcdf-cxx4/4.3.1
+ 34) nco/5.0.6                        74) met/9.1.3
+ 35) bacio/2.4.1                      75) metplus/3.1.1
+ 36) w3emc/2.10.0                     76) py-packaging/23.1
+ 37) prod_util/2.1.1                  77) py-xarray/2023.7.0
+ 38) g2/3.4.5                         78) prepobs/1.1.0
+ 39) sp/2.5.0                         79) fit2obs/1.1.4
+ 40) ip/4.3.0                         80) module_base.hercules
+
+ 
+
++ atmos_products.sh[12]: status=0
++ atmos_products.sh[13]: ((  status != 0  ))
++ atmos_products.sh[15]: export job=atmos_products
++ atmos_products.sh[15]: job=atmos_products
++ atmos_products.sh[16]: export jobid=atmos_products.1428146
++ atmos_products.sh[16]: jobid=atmos_products.1428146
++ atmos_products.sh[19]: fhr3_base=10#060
++ atmos_products.sh[20]: export FORECAST_HOUR=60
++ atmos_products.sh[20]: FORECAST_HOUR=60
++ atmos_products.sh[25]: /work2/noaa/global/CI/HERCULES/2982/gfs/jobs/JGLOBAL_ATMOS_PRODUCTS
+Begin JGLOBAL_ATMOS_PRODUCTS at Mon Nov  4 12:06:41 UTC 2024
++ JGLOBAL_ATMOS_PRODUCTS[4]: source /work2/noaa/global/CI/HERCULES/2982/gfs/ush/jjob_header.sh -e atmos_products -c 'base atmos_products'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=atmos_products
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z atmos_products ]]
+++ jjob_header.sh[68]: export DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_2ecfe5c2/gfs.2021122100/atmos_products.1428146
+++ jjob_header.sh[68]: DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_2ecfe5c2/gfs.2021122100/atmos_products.1428146
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_2ecfe5c2/gfs.2021122100/atmos_products.1428146
+++ jjob_header.sh[72]: mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_2ecfe5c2/gfs.2021122100/atmos_products.1428146
+++ jjob_header.sh[73]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_2ecfe5c2/gfs.2021122100/atmos_products.1428146
+++ jjob_header.sh[79]: export cycle=t00z
+++ jjob_header.sh[79]: cycle=t00z
+++ jjob_header.sh[80]: setpdy.sh
+sed: can't read /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/date/t00z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20211214
++++ PDY[1]: PDYm7=20211214
++++ PDY[2]: export PDYm6=20211215
++++ PDY[2]: PDYm6=20211215
++++ PDY[3]: export PDYm5=20211216
++++ PDY[3]: PDYm5=20211216
++++ PDY[4]: export PDYm4=20211217
++++ PDY[4]: PDYm4=20211217
++++ PDY[5]: export PDYm3=20211218
++++ PDY[5]: PDYm3=20211218
++++ PDY[6]: export PDYm2=20211219
++++ PDY[6]: PDYm2=20211219
++++ PDY[7]: export PDYm1=20211220
++++ PDY[7]: PDYm1=20211220
++++ PDY[8]: export PDY=20211221
++++ PDY[8]: PDY=20211221
++++ PDY[9]: export PDYp1=20211222
++++ PDY[9]: PDYp1=20211222
++++ PDY[10]: export PDYp2=20211223
++++ PDY[10]: PDYp2=20211223
++++ PDY[11]: export PDYp3=20211224
++++ PDY[11]: PDYp3=20211224
++++ PDY[12]: export PDYp4=20211225
++++ PDY[12]: PDYp4=20211225
++++ PDY[13]: export PDYp5=20211226
++++ PDY[13]: PDYp5=20211226
++++ PDY[14]: export PDYp6=20211227
++++ PDY[14]: PDYp6=20211227
++++ PDY[15]: export PDYp7=20211228
++++ PDY[15]: PDYp7=20211228
+++ jjob_header.sh[87]: export pid=1428623
+++ jjob_header.sh[87]: pid=1428623
+++ jjob_header.sh[88]: export pgmout=OUTPUT.1428623
+++ jjob_header.sh[88]: pgmout=OUTPUT.1428623
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C96C48_hybatmDA_2ecfe5c2
+++ jjob_header.sh[95]: EXPDIR=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C96C48_hybatmDA_2ecfe5c2
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C96C48_hybatmDA_2ecfe5c2/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=HERCULES
++++ config.base[9]: machine=HERCULES
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=nems
++++ config.base[15]: ACCOUNT=nems
++++ config.base[16]: export QUEUE=batch
++++ config.base[16]: QUEUE=batch
++++ config.base[17]: export QUEUE_SERVICE=batch
++++ config.base[17]: QUEUE_SERVICE=batch
++++ config.base[18]: export PARTITION_BATCH=hercules
++++ config.base[18]: PARTITION_BATCH=hercules
++++ config.base[19]: export PARTITION_SERVICE=service
++++ config.base[19]: PARTITION_SERVICE=service
++++ config.base[20]: export RESERVATION=
++++ config.base[20]: RESERVATION=
++++ config.base[21]: export CLUSTERS=
++++ config.base[21]: CLUSTERS=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/work2/noaa/global/CI/HERCULES/2982/gfs
++++ config.base[27]: HOMEgfs=/work2/noaa/global/CI/HERCULES/2982/gfs
++++ config.base[28]: export EXECgfs=/work2/noaa/global/CI/HERCULES/2982/gfs/exec
++++ config.base[28]: EXECgfs=/work2/noaa/global/CI/HERCULES/2982/gfs/exec
++++ config.base[29]: export FIXgfs=/work2/noaa/global/CI/HERCULES/2982/gfs/fix
++++ config.base[29]: FIXgfs=/work2/noaa/global/CI/HERCULES/2982/gfs/fix
++++ config.base[30]: export PARMgfs=/work2/noaa/global/CI/HERCULES/2982/gfs/parm
++++ config.base[30]: PARMgfs=/work2/noaa/global/CI/HERCULES/2982/gfs/parm
++++ config.base[31]: export SCRgfs=/work2/noaa/global/CI/HERCULES/2982/gfs/scripts
++++ config.base[31]: SCRgfs=/work2/noaa/global/CI/HERCULES/2982/gfs/scripts
++++ config.base[32]: export USHgfs=/work2/noaa/global/CI/HERCULES/2982/gfs/ush
++++ config.base[32]: USHgfs=/work2/noaa/global/CI/HERCULES/2982/gfs/ush
++++ config.base[34]: export FIXam=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/am
++++ config.base[34]: FIXam=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/am
++++ config.base[35]: export FIXaer=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/aer
++++ config.base[35]: FIXaer=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/aer
++++ config.base[36]: export FIXcpl=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/cpl
++++ config.base[36]: FIXcpl=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/cpl
++++ config.base[37]: export FIXlut=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/lut
++++ config.base[37]: FIXlut=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/lut
++++ config.base[38]: export FIXcice=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/cice
++++ config.base[38]: FIXcice=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/cice
++++ config.base[39]: export FIXmom=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/mom6
++++ config.base[39]: FIXmom=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/mom6
++++ config.base[40]: export FIXreg2grb2=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/reg2grb2
++++ config.base[40]: FIXreg2grb2=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/reg2grb2
++++ config.base[41]: export FIXgdas=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/gdas
++++ config.base[41]: FIXgdas=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/gdas
++++ config.base[46]: export PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[46]: PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[47]: export COMROOT=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT
++++ config.base[47]: COMROOT=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT
++++ config.base[48]: export COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[48]: COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[49]: export DMPDIR=/work/noaa/rstprod/dump
++++ config.base[49]: DMPDIR=/work/noaa/rstprod/dump
++++ config.base[53]: export COMINecmwf=/work/noaa/global/glopara/data/external_gempak/ecmwf
++++ config.base[53]: COMINecmwf=/work/noaa/global/glopara/data/external_gempak/ecmwf
++++ config.base[54]: export COMINnam=/work/noaa/global/glopara/data/external_gempak/nam
++++ config.base[54]: COMINnam=/work/noaa/global/glopara/data/external_gempak/nam
++++ config.base[55]: export COMINukmet=/work/noaa/global/glopara/data/external_gempak/ukmet
++++ config.base[55]: COMINukmet=/work/noaa/global/glopara/data/external_gempak/ukmet
++++ config.base[58]: export HOMEDIR=/work/noaa/global/mterry
++++ config.base[58]: HOMEDIR=/work/noaa/global/mterry
++++ config.base[59]: export STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[59]: STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[60]: export PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[60]: PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[61]: export NOSCRUB=/work/noaa/global/mterry
++++ config.base[61]: NOSCRUB=/work/noaa/global/mterry
++++ config.base[64]: export BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[64]: BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[67]: export BASE_DATA=/work/noaa/global/glopara/data
++++ config.base[67]: BASE_DATA=/work/noaa/global/glopara/data
++++ config.base[70]: export DO_GOES=NO
++++ config.base[70]: DO_GOES=NO
++++ config.base[71]: export DO_BUFRSND=NO
++++ config.base[71]: DO_BUFRSND=NO
++++ config.base[72]: export DO_GEMPAK=NO
++++ config.base[72]: DO_GEMPAK=NO
++++ config.base[73]: export DO_AWIPS=NO
++++ config.base[73]: DO_AWIPS=NO
++++ config.base[74]: export DO_NPOESS=NO
++++ config.base[74]: DO_NPOESS=NO
++++ config.base[75]: export DO_TRACKER=YES
++++ config.base[75]: DO_TRACKER=YES
++++ config.base[76]: export DO_GENESIS=YES
++++ config.base[76]: DO_GENESIS=YES
++++ config.base[77]: export DO_GENESIS_FSU=NO
++++ config.base[77]: DO_GENESIS_FSU=NO
++++ config.base[78]: export DO_VERFOZN=YES
++++ config.base[78]: DO_VERFOZN=YES
++++ config.base[79]: export DO_VERFRAD=YES
++++ config.base[79]: DO_VERFRAD=YES
++++ config.base[80]: export DO_VMINMON=YES
++++ config.base[80]: DO_VMINMON=YES
++++ config.base[81]: export DO_MOS=NO
++++ config.base[81]: DO_MOS=NO
++++ config.base[87]: export REALTIME=YES
++++ config.base[87]: REALTIME=YES
++++ config.base[90]: export MODE=cycled
++++ config.base[90]: MODE=cycled
++++ config.base[99]: export FIXgsi=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/gsi
++++ config.base[99]: FIXgsi=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/gsi
++++ config.base[100]: export HOMEpost=/work2/noaa/global/CI/HERCULES/2982/gfs
++++ config.base[100]: HOMEpost=/work2/noaa/global/CI/HERCULES/2982/gfs
++++ config.base[101]: export HOMEobsproc=/work/noaa/global/glopara/git_rocky9/obsproc/v1.2.0
++++ config.base[101]: HOMEobsproc=/work/noaa/global/glopara/git_rocky9/obsproc/v1.2.0
++++ config.base[104]: export 'NCP=/bin/cp -p'
++++ config.base[104]: NCP='/bin/cp -p'
++++ config.base[105]: export NMV=/bin/mv
++++ config.base[105]: NMV=/bin/mv
++++ config.base[106]: export 'NLN=/bin/ln -sf'
++++ config.base[106]: NLN='/bin/ln -sf'
++++ config.base[107]: export VERBOSE=YES
++++ config.base[107]: VERBOSE=YES
++++ config.base[108]: export KEEPDATA=NO
++++ config.base[108]: KEEPDATA=NO
++++ config.base[109]: export DEBUG_POSTSCRIPT=NO
++++ config.base[109]: DEBUG_POSTSCRIPT=NO
++++ config.base[110]: export CHGRP_RSTPROD=YES
++++ config.base[110]: CHGRP_RSTPROD=YES
++++ config.base[111]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[111]: CHGRP_CMD='chgrp rstprod'
++++ config.base[112]: export NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[112]: NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[113]: export NCLEN=/work2/noaa/global/CI/HERCULES/2982/gfs/ush/getncdimlen
++++ config.base[113]: NCLEN=/work2/noaa/global/CI/HERCULES/2982/gfs/ush/getncdimlen
++++ config.base[116]: export BASE_ENV=/work2/noaa/global/CI/HERCULES/2982/gfs/env
++++ config.base[116]: BASE_ENV=/work2/noaa/global/CI/HERCULES/2982/gfs/env
++++ config.base[117]: export BASE_JOB=/work2/noaa/global/CI/HERCULES/2982/gfs/jobs/rocoto
++++ config.base[117]: BASE_JOB=/work2/noaa/global/CI/HERCULES/2982/gfs/jobs/rocoto
++++ config.base[120]: export SDATE=2021122018
++++ config.base[120]: SDATE=2021122018
++++ config.base[121]: export EDATE=2021122106
++++ config.base[121]: EDATE=2021122106
++++ config.base[122]: export EXP_WARM_START=.false.
++++ config.base[122]: EXP_WARM_START=.false.
++++ config.base[123]: export assim_freq=6
++++ config.base[123]: assim_freq=6
++++ config.base[124]: export PSLOT=C96C48_hybatmDA_2ecfe5c2
++++ config.base[124]: PSLOT=C96C48_hybatmDA_2ecfe5c2
++++ config.base[125]: export EXPDIR=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C96C48_hybatmDA_2ecfe5c2
++++ config.base[125]: EXPDIR=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C96C48_hybatmDA_2ecfe5c2
++++ config.base[126]: export ROTDIR=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2
++++ config.base[126]: ROTDIR=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2
++++ config.base[127]: export ROTDIR_DUMP=YES
++++ config.base[127]: ROTDIR_DUMP=YES
++++ config.base[128]: export DUMP_SUFFIX=
++++ config.base[128]: DUMP_SUFFIX=
++++ config.base[129]: [[ 2021122100 -ge 2019092100 ]]
++++ config.base[129]: [[ 2021122100 -le 2019110700 ]]
++++ config.base[132]: export ARCDIR=/work/noaa/global/mterry/archive/C96C48_hybatmDA_2ecfe5c2
++++ config.base[132]: ARCDIR=/work/noaa/global/mterry/archive/C96C48_hybatmDA_2ecfe5c2
++++ config.base[133]: export ATARDIR=/work/noaa/global/mterry/archive_rotdir/C96C48_hybatmDA_2ecfe5c2
++++ config.base[133]: ATARDIR=/work/noaa/global/mterry/archive_rotdir/C96C48_hybatmDA_2ecfe5c2
++++ config.base[136]: export envir=prod
++++ config.base[136]: envir=prod
++++ config.base[137]: export NET=gfs
++++ config.base[137]: NET=gfs
++++ config.base[138]: export RUN=gfs
++++ config.base[138]: RUN=gfs
++++ config.base[141]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C96C48_hybatmDA_2ecfe5c2/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[78]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[79]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[81]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[82]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[83]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[84]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[85]: declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[86]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[87]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[88]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[89]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[91]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[92]: declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[93]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[94]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[95]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[96]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[97]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[98]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[99]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[101]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[102]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[103]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[105]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[144]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[144]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[145]: export LOGSCRIPT=
++++ config.base[145]: LOGSCRIPT=
++++ config.base[148]: export 'REDOUT=1>'
++++ config.base[148]: REDOUT='1>'
++++ config.base[149]: export 'REDERR=2>'
++++ config.base[149]: REDERR='2>'
++++ config.base[151]: export SENDECF=NO
++++ config.base[151]: SENDECF=NO
++++ config.base[152]: export SENDSDM=NO
++++ config.base[152]: SENDSDM=NO
++++ config.base[153]: export SENDDBN_NTC=NO
++++ config.base[153]: SENDDBN_NTC=NO
++++ config.base[154]: export SENDDBN=NO
++++ config.base[154]: SENDDBN=NO
++++ config.base[155]: export DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[155]: DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[158]: export APP=ATM
++++ config.base[158]: APP=ATM
++++ config.base[160]: shopt -s extglob
++++ config.base[162]: case "${RUN}" in
++++ config.base[169]: shopt -u extglob
++++ config.base[172]: export DO_ATM=YES
++++ config.base[172]: DO_ATM=YES
++++ config.base[173]: export DO_COUPLED=NO
++++ config.base[173]: DO_COUPLED=NO
++++ config.base[174]: export DO_WAVE=NO
++++ config.base[174]: DO_WAVE=NO
++++ config.base[175]: export DO_OCN=NO
++++ config.base[175]: DO_OCN=NO
++++ config.base[176]: export DO_ICE=NO
++++ config.base[176]: DO_ICE=NO
++++ config.base[177]: export DO_AERO=NO
++++ config.base[177]: DO_AERO=NO
++++ config.base[178]: export DO_PREP_OBS_AERO=NO
++++ config.base[178]: DO_PREP_OBS_AERO=NO
++++ config.base[179]: export AERO_FCST_RUN=gdas
++++ config.base[179]: AERO_FCST_RUN=gdas
++++ config.base[180]: export AERO_ANL_RUN=both
++++ config.base[180]: AERO_ANL_RUN=both
++++ config.base[181]: export WAVE_RUN=both
++++ config.base[181]: WAVE_RUN=both
++++ config.base[182]: export DOBNDPNT_WAVE=NO
++++ config.base[182]: DOBNDPNT_WAVE=NO
++++ config.base[183]: export DOIBP_WAV=NO
++++ config.base[183]: DOIBP_WAV=NO
++++ config.base[184]: export FRAC_GRID=.true.
++++ config.base[184]: FRAC_GRID=.true.
++++ config.base[185]: export DO_NEST=NO
++++ config.base[185]: DO_NEST=NO
++++ config.base[186]: [[ NO == \Y\E\S ]]
++++ config.base[192]: export ntiles=6
++++ config.base[192]: ntiles=6
++++ config.base[193]: export FIXugwd=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/ugwd
++++ config.base[193]: FIXugwd=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/ugwd
++++ config.base[194]: export FIXorog=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/orog
++++ config.base[194]: FIXorog=/work2/noaa/global/CI/HERCULES/2982/gfs/fix/orog
++++ config.base[198]: export OPS_RES=C768
++++ config.base[198]: OPS_RES=C768
++++ config.base[201]: export LEVS=128
++++ config.base[201]: LEVS=128
++++ config.base[202]: export CASE=C96
++++ config.base[202]: CASE=C96
++++ config.base[203]: export CASE_ENS=C48
++++ config.base[203]: CASE_ENS=C48
++++ config.base[204]: export OCNRES=500
++++ config.base[204]: OCNRES=500
++++ config.base[205]: export ICERES=500
++++ config.base[205]: ICERES=500
++++ config.base[208]: case "${CASE}" in
++++ config.base[213]: export waveGRD=uglo_100km
++++ config.base[213]: waveGRD=uglo_100km
++++ config.base[227]: case "${APP}" in
++++ config.base[262]: [[ gfs =~ gdas ]]
++++ config.base[265]: [[ gfs =~ gfs ]]
++++ config.base[266]: export FHCYC=24
++++ config.base[266]: FHCYC=24
++++ config.base[270]: export FHMIN=0
++++ config.base[270]: FHMIN=0
++++ config.base[271]: export FHMAX=9
++++ config.base[271]: FHMAX=9
++++ config.base[272]: export FHOUT=3
++++ config.base[272]: FHOUT=3
++++ config.base[273]: export FHOUT_OCN=3
++++ config.base[273]: FHOUT_OCN=3
++++ config.base[274]: export FHOUT_ICE=3
++++ config.base[274]: FHOUT_ICE=3
++++ config.base[275]: export FHOUT_AERO=3
++++ config.base[275]: FHOUT_AERO=3
++++ config.base[278]: export EUPD_CYC=gdas
++++ config.base[278]: EUPD_CYC=gdas
++++ config.base[281]: export INTERVAL_GFS=24
++++ config.base[281]: INTERVAL_GFS=24
++++ config.base[282]: export SDATE_GFS=2021122100
++++ config.base[282]: SDATE_GFS=2021122100
++++ config.base[285]: export FHMIN_GFS=0
++++ config.base[285]: FHMIN_GFS=0
++++ config.base[286]: export FHMAX_GFS=120
++++ config.base[286]: FHMAX_GFS=120
++++ config.base[288]: breakpnts=
++++ config.base[289]: export FCST_SEGMENTS=0,120
++++ config.base[289]: FCST_SEGMENTS=0,120
++++ config.base[290]: export FHOUT_GFS=3
++++ config.base[290]: FHOUT_GFS=3
++++ config.base[291]: export FHMAX_HF_GFS=0
++++ config.base[291]: FHMAX_HF_GFS=0
++++ config.base[292]: export FHOUT_HF_GFS=1
++++ config.base[292]: FHOUT_HF_GFS=1
++++ config.base[293]: export FHOUT_OCN_GFS=6
++++ config.base[293]: FHOUT_OCN_GFS=6
++++ config.base[294]: export FHOUT_ICE_GFS=6
++++ config.base[294]: FHOUT_ICE_GFS=6
++++ config.base[295]: export FHMIN_WAV=0
++++ config.base[295]: FHMIN_WAV=0
++++ config.base[296]: export FHOUT_WAV=3
++++ config.base[296]: FHOUT_WAV=3
++++ config.base[297]: export FHMAX_HF_WAV=120
++++ config.base[297]: FHMAX_HF_WAV=120
++++ config.base[298]: export FHOUT_HF_WAV=1
++++ config.base[298]: FHOUT_HF_WAV=1
++++ config.base[299]: export FHMAX_WAV=9
++++ config.base[299]: FHMAX_WAV=9
++++ config.base[300]: export FHMAX_WAV_GFS=120
++++ config.base[300]: FHMAX_WAV_GFS=120
++++ config.base[303]: export ILPOST=1
++++ config.base[303]: ILPOST=1
++++ config.base[304]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[305]: export ILPOST=3
++++ config.base[305]: ILPOST=3
++++ config.base[309]: export FHMAX_GOES=180
++++ config.base[309]: FHMAX_GOES=180
++++ config.base[310]: export FHOUT_GOES=3
++++ config.base[310]: FHOUT_GOES=3
++++ config.base[311]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[312]: export FHMAX_GOES=120
++++ config.base[312]: FHMAX_GOES=120
++++ config.base[316]: export restart_interval_gfs=12
++++ config.base[316]: restart_interval_gfs=12
++++ config.base[321]: export QUILTING=.true.
++++ config.base[321]: QUILTING=.true.
++++ config.base[322]: export OUTPUT_GRID=gaussian_grid
++++ config.base[322]: OUTPUT_GRID=gaussian_grid
++++ config.base[323]: export WRITE_DOPOST=.true.
++++ config.base[323]: WRITE_DOPOST=.true.
++++ config.base[324]: export WRITE_NSFLIP=.true.
++++ config.base[324]: WRITE_NSFLIP=.true.
++++ config.base[327]: export DOIAU=YES
++++ config.base[327]: DOIAU=YES
++++ config.base[328]: export IAUFHRS=3,6,9
++++ config.base[328]: IAUFHRS=3,6,9
++++ config.base[329]: export IAU_FHROT=3
++++ config.base[329]: IAU_FHROT=3
++++ config.base[330]: export IAU_DELTHRS=6
++++ config.base[330]: IAU_DELTHRS=6
++++ config.base[331]: export IAU_OFFSET=6
++++ config.base[331]: IAU_OFFSET=6
++++ config.base[332]: export DOIAU_ENKF=YES
++++ config.base[332]: DOIAU_ENKF=YES
++++ config.base[333]: export IAUFHRS_ENKF=3,6,9
++++ config.base[333]: IAUFHRS_ENKF=3,6,9
++++ config.base[334]: export IAU_DELTHRS_ENKF=6
++++ config.base[334]: IAU_DELTHRS_ENKF=6
++++ config.base[337]: export lobsdiag_forenkf=.true.
++++ config.base[337]: lobsdiag_forenkf=.true.
++++ config.base[345]: export imp_physics=8
++++ config.base[345]: imp_physics=8
++++ config.base[349]: export DO_JEDIATMVAR=NO
++++ config.base[349]: DO_JEDIATMVAR=NO
++++ config.base[350]: export DO_JEDIATMENS=NO
++++ config.base[350]: DO_JEDIATMENS=NO
++++ config.base[351]: export DO_JEDIOCNVAR=NO
++++ config.base[351]: DO_JEDIOCNVAR=NO
++++ config.base[352]: export DO_JEDISNOWDA=NO
++++ config.base[352]: DO_JEDISNOWDA=NO
++++ config.base[353]: export DO_MERGENSST=NO
++++ config.base[353]: DO_MERGENSST=NO
++++ config.base[356]: export DOHYBVAR=YES
++++ config.base[356]: DOHYBVAR=YES
++++ config.base[357]: export NMEM_ENS=2
++++ config.base[357]: NMEM_ENS=2
++++ config.base[358]: export SMOOTH_ENKF=NO
++++ config.base[358]: SMOOTH_ENKF=NO
++++ config.base[359]: export l4densvar=.true.
++++ config.base[359]: l4densvar=.true.
++++ config.base[360]: export lwrite4danl=.true.
++++ config.base[360]: lwrite4danl=.true.
++++ config.base[361]: export DO_CALC_INCREMENT=NO
++++ config.base[361]: DO_CALC_INCREMENT=NO
++++ config.base[364]: export NMEM_ENS_GFS=30
++++ config.base[364]: NMEM_ENS_GFS=30
++++ config.base[365]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[365]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[366]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[366]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[369]: [[ YES = \Y\E\S ]]
++++ config.base[370]: export FHMIN_ENKF=3
++++ config.base[370]: FHMIN_ENKF=3
++++ config.base[371]: export FHMAX_ENKF=9
++++ config.base[371]: FHMAX_ENKF=9
++++ config.base[372]: export FHMAX_ENKF_GFS=12
++++ config.base[372]: FHMAX_ENKF_GFS=12
++++ config.base[373]: export FHOUT_ENKF_GFS=3
++++ config.base[373]: FHOUT_ENKF_GFS=3
++++ config.base[374]: [[ .true. = \.\t\r\u\e\. ]]
++++ config.base[375]: export FHOUT=1
++++ config.base[375]: FHOUT=1
++++ config.base[376]: export FHOUT_ENKF=1
++++ config.base[376]: FHOUT_ENKF=1
++++ config.base[383]: [[ YES == \N\O ]]
++++ config.base[391]: export ENKF_SPREAD=YES
++++ config.base[391]: ENKF_SPREAD=YES
++++ config.base[394]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[394]: [[ 2021122018 = \2\0\2\1\1\2\2\1\0\0 ]]
++++ config.base[394]: [[ YES = \N\O ]]
++++ config.base[394]: [[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[400]: [[ YES = \N\O ]]
++++ config.base[404]: [[ YES == \Y\E\S ]]
++++ config.base[405]: export restart_interval_enkfgdas=3
++++ config.base[405]: restart_interval_enkfgdas=3
++++ config.base[410]: export restart_interval_enkfgfs=3
++++ config.base[410]: restart_interval_enkfgfs=3
++++ config.base[412]: [[ YES == \Y\E\S ]]
++++ config.base[413]: export restart_interval_gdas=3
++++ config.base[413]: restart_interval_gdas=3
++++ config.base[418]: export GSI_SOILANAL=NO
++++ config.base[418]: GSI_SOILANAL=NO
++++ config.base[421]: export DONST=YES
++++ config.base[421]: DONST=YES
++++ config.base[422]: [[ YES = \Y\E\S ]]
++++ config.base[422]: export 'FNTSFA=        '
++++ config.base[422]: FNTSFA='        '
++++ config.base[425]: export nst_anl=.true.
++++ config.base[425]: nst_anl=.true.
++++ config.base[428]: export MAKE_NSSTBUFR=NO
++++ config.base[428]: MAKE_NSSTBUFR=NO
++++ config.base[431]: export MAKE_ACFTBUFR=NO
++++ config.base[431]: MAKE_ACFTBUFR=NO
++++ config.base[434]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[434]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[437]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[437]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[438]: export INCVARS_EFOLD=5
++++ config.base[438]: INCVARS_EFOLD=5
++++ config.base[443]: export netcdf_diag=.true.
++++ config.base[443]: netcdf_diag=.true.
++++ config.base[444]: export binary_diag=.false.
++++ config.base[444]: binary_diag=.false.
++++ config.base[447]: export DO_METP=YES
++++ config.base[447]: DO_METP=YES
++++ config.base[448]: export DO_FIT2OBS=YES
++++ config.base[448]: DO_FIT2OBS=YES
++++ config.base[449]: export DO_VRFY_OCEANDA=NO
++++ config.base[449]: DO_VRFY_OCEANDA=NO
++++ config.base[452]: export FHMAX_FITS=132
++++ config.base[452]: FHMAX_FITS=132
++++ config.base[453]: [[ 132 -gt 120 ]]
++++ config.base[453]: export FHMAX_FITS=120
++++ config.base[453]: FHMAX_FITS=120
++++ config.base[456]: export HPSSARCH=NO
++++ config.base[456]: HPSSARCH=NO
++++ config.base[457]: export LOCALARCH=NO
++++ config.base[457]: LOCALARCH=NO
++++ config.base[458]: [[ NO = \Y\E\S ]]
++++ config.base[462]: export ARCH_CYC=00
++++ config.base[462]: ARCH_CYC=00
++++ config.base[463]: export ARCH_WARMICFREQ=4
++++ config.base[463]: ARCH_WARMICFREQ=4
++++ config.base[464]: export ARCH_FCSTICFREQ=1
++++ config.base[464]: ARCH_FCSTICFREQ=1
++++ config.base[467]: [[ NO = \Y\E\S ]]
++++ config.base[475]: export REPLAY_ICS=NO
++++ config.base[475]: REPLAY_ICS=NO
++++ config.base[476]: export OFFSET_START_HOUR=0
++++ config.base[476]: OFFSET_START_HOUR=0
++++ config.base[479]: export NUM_SND_COLLECTIVES=9
++++ config.base[479]: NUM_SND_COLLECTIVES=9
++++ config.base[483]: [[ HERCULES =~ PW ]]
++++ config.base[492]: [[ HERCULES == \O\R\I\O\N ]]
++++ config.base[492]: [[ HERCULES == \H\E\R\C\U\L\E\S ]]
++++ config.base[493]: export DO_TRACKER=NO
++++ config.base[493]: DO_TRACKER=NO
++++ config.base[494]: export DO_GENESIS=NO
++++ config.base[494]: DO_GENESIS=NO
++++ config.base[497]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C96C48_hybatmDA_2ecfe5c2/config.atmos_products
++++ config.atmos_products[6]: echo 'BEGIN: config.atmos_products'
+BEGIN: config.atmos_products
++++ config.atmos_products[9]: . /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C96C48_hybatmDA_2ecfe5c2/config.resources atmos_products
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=atmos_products
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[61]: max_tasks_per_node=80
+++++ config.resources[63]: mem_node_max=500GB
+++++ config.resources[144]: export max_tasks_per_node
+++++ config.resources[146]: case ${step} in
+++++ config.resources[923]: walltime=00:15:00
+++++ config.resources[924]: ntasks=24
+++++ config.resources[925]: threads_per_task=1
+++++ config.resources[926]: tasks_per_node=24
+++++ config.resources[927]: export is_exclusive=True
+++++ config.resources[927]: is_exclusive=True
+++++ config.resources[1424]: [[ -f /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C96C48_hybatmDA_2ecfe5c2/config.resources.HERCULES ]]
+++++ config.resources[1425]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C96C48_hybatmDA_2ecfe5c2/config.resources.HERCULES
++++++ config.resources.HERCULES[5]: case ${step} in
+++++ config.resources[1429]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1430]: run_resource_var=threads_per_task_gfs
+++++ config.resources[1431]: [[ -n '' ]]
+++++ config.resources[1433]: [[ -n 0 ]]
+++++ config.resources[1434]: export threads_per_task
+++++ config.resources[1429]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1430]: run_resource_var=ntasks_gfs
+++++ config.resources[1431]: [[ -n '' ]]
+++++ config.resources[1433]: [[ -n 0 ]]
+++++ config.resources[1434]: export ntasks
+++++ config.resources[1429]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1430]: run_resource_var=tasks_per_node_gfs
+++++ config.resources[1431]: [[ -n '' ]]
+++++ config.resources[1433]: [[ -n 0 ]]
+++++ config.resources[1434]: export tasks_per_node
+++++ config.resources[1429]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1430]: run_resource_var=NTASKS_gfs
+++++ config.resources[1431]: [[ -n '' ]]
+++++ config.resources[1433]: [[ -n '' ]]
+++++ config.resources[1429]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1430]: run_resource_var=memory_gfs
+++++ config.resources[1431]: [[ -n '' ]]
+++++ config.resources[1433]: [[ -n '' ]]
+++++ config.resources[1429]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1430]: run_resource_var=walltime_gfs
+++++ config.resources[1431]: [[ -n '' ]]
+++++ config.resources[1433]: [[ -n 0 ]]
+++++ config.resources[1434]: export walltime
+++++ config.resources[1438]: echo 'END: config.resources'
+END: config.resources
++++ config.atmos_products[12]: export NFHRS_PER_GROUP=3
++++ config.atmos_products[12]: NFHRS_PER_GROUP=3
++++ config.atmos_products[15]: export INTERP_ATMOS_MASTERSH=/work2/noaa/global/CI/HERCULES/2982/gfs/ush/interp_atmos_master.sh
++++ config.atmos_products[15]: INTERP_ATMOS_MASTERSH=/work2/noaa/global/CI/HERCULES/2982/gfs/ush/interp_atmos_master.sh
++++ config.atmos_products[16]: export INTERP_ATMOS_SFLUXSH=/work2/noaa/global/CI/HERCULES/2982/gfs/ush/interp_atmos_sflux.sh
++++ config.atmos_products[16]: INTERP_ATMOS_SFLUXSH=/work2/noaa/global/CI/HERCULES/2982/gfs/ush/interp_atmos_sflux.sh
++++ config.atmos_products[18]: [[ gfs == \g\d\a\s ]]
++++ config.atmos_products[24]: [[ gfs == \g\f\s ]]
++++ config.atmos_products[25]: export downset=2
++++ config.atmos_products[25]: downset=2
++++ config.atmos_products[26]: export FHOUT_PGBS=3
++++ config.atmos_products[26]: FHOUT_PGBS=3
++++ config.atmos_products[27]: export FLXGF=YES
++++ config.atmos_products[27]: FLXGF=YES
++++ config.atmos_products[28]: export WGNE=YES
++++ config.atmos_products[28]: WGNE=YES
++++ config.atmos_products[29]: export FHMAX_WGNE=180
++++ config.atmos_products[29]: FHMAX_WGNE=180
++++ config.atmos_products[32]: export APCP_MSG=597
++++ config.atmos_products[32]: APCP_MSG=597
++++ config.atmos_products[35]: export paramlista=/work2/noaa/global/CI/HERCULES/2982/gfs/parm/product/gfs.fFFF.paramlist.a.txt
++++ config.atmos_products[35]: paramlista=/work2/noaa/global/CI/HERCULES/2982/gfs/parm/product/gfs.fFFF.paramlist.a.txt
++++ config.atmos_products[36]: export paramlista_anl=/work2/noaa/global/CI/HERCULES/2982/gfs/parm/product/gfs.anl.paramlist.a.txt
++++ config.atmos_products[36]: paramlista_anl=/work2/noaa/global/CI/HERCULES/2982/gfs/parm/product/gfs.anl.paramlist.a.txt
++++ config.atmos_products[37]: export paramlista_f000=/work2/noaa/global/CI/HERCULES/2982/gfs/parm/product/gfs.f000.paramlist.a.txt
++++ config.atmos_products[37]: paramlista_f000=/work2/noaa/global/CI/HERCULES/2982/gfs/parm/product/gfs.f000.paramlist.a.txt
++++ config.atmos_products[38]: export paramlistb=/work2/noaa/global/CI/HERCULES/2982/gfs/parm/product/gfs.fFFF.paramlist.b.txt
++++ config.atmos_products[38]: paramlistb=/work2/noaa/global/CI/HERCULES/2982/gfs/parm/product/gfs.fFFF.paramlist.b.txt
++++ config.atmos_products[40]: echo 'END: config.atmos_products'
+END: config.atmos_products
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /work2/noaa/global/CI/HERCULES/2982/gfs/env/HERCULES.env atmos_products
++++ HERCULES.env[3]: [[ 1 -ne 1 ]]
++++ HERCULES.env[10]: step=atmos_products
++++ HERCULES.env[12]: export 'launcher=srun -l --export=ALL --hint=nomultithread'
++++ HERCULES.env[12]: launcher='srun -l --export=ALL --hint=nomultithread'
++++ HERCULES.env[13]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[13]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[16]: export MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[16]: MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[17]: export MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[17]: MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[18]: export MPI_GROUP_MAX=256
++++ HERCULES.env[18]: MPI_GROUP_MAX=256
++++ HERCULES.env[19]: export MPI_MEMMAP_OFF=1
++++ HERCULES.env[19]: MPI_MEMMAP_OFF=1
++++ HERCULES.env[20]: export MP_STDOUTMODE=ORDERED
++++ HERCULES.env[20]: MP_STDOUTMODE=ORDERED
++++ HERCULES.env[21]: export KMP_AFFINITY=scatter
++++ HERCULES.env[21]: KMP_AFFINITY=scatter
++++ HERCULES.env[22]: export OMP_STACKSIZE=2048000
++++ HERCULES.env[22]: OMP_STACKSIZE=2048000
++++ HERCULES.env[23]: export NTHSTACK=1024000000
++++ HERCULES.env[23]: NTHSTACK=1024000000
++++ HERCULES.env[25]: export I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[25]: I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[26]: export I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[26]: I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[28]: ulimit -s unlimited
++++ HERCULES.env[29]: ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 2049808
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 520192000
+open files                          (-n) 131072
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) unlimited
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 1028698
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
++++ HERCULES.env[33]: [[ -n 24 ]]
++++ HERCULES.env[33]: [[ -n 80 ]]
++++ HERCULES.env[33]: [[ -n 24 ]]
++++ HERCULES.env[34]: max_threads_per_task=3
++++ HERCULES.env[35]: NTHREADSmax=1
++++ HERCULES.env[36]: NTHREADS1=1
++++ HERCULES.env[37]: [[ 1 -gt 3 ]]
++++ HERCULES.env[38]: [[ 1 -gt 3 ]]
++++ HERCULES.env[39]: APRUN_default='srun -l --export=ALL --hint=nomultithread -n 24'
++++ HERCULES.env[45]: case ${step} in
++++ HERCULES.env[233]: export USE_CFP=YES
++++ HERCULES.env[233]: USE_CFP=YES
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
++ JGLOBAL_ATMOS_PRODUCTS[12]: YMD=20211221
++ JGLOBAL_ATMOS_PRODUCTS[12]: HH=00
++ JGLOBAL_ATMOS_PRODUCTS[12]: declare_from_tmpl -rx COM_ATMOS_ANALYSIS COM_ATMOS_HISTORY COM_ATMOS_MASTER
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_ANALYSIS=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2/gfs.20211221/00//analysis/atmos
+declare_from_tmpl :: COM_ATMOS_HISTORY=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2/gfs.20211221/00//model/atmos/history
+declare_from_tmpl :: COM_ATMOS_MASTER=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2/gfs.20211221/00//model/atmos/master
++ JGLOBAL_ATMOS_PRODUCTS[14]: for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[15]: prod_dir=COM_ATMOS_GRIB_0p25
++ JGLOBAL_ATMOS_PRODUCTS[16]: GRID=0p25
++ JGLOBAL_ATMOS_PRODUCTS[16]: YMD=20211221
++ JGLOBAL_ATMOS_PRODUCTS[16]: HH=00
++ JGLOBAL_ATMOS_PRODUCTS[16]: declare_from_tmpl -rx COM_ATMOS_GRIB_0p25:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_GRIB_0p25=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2/gfs.20211221/00//products/atmos/grib2/0p25
++ JGLOBAL_ATMOS_PRODUCTS[17]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2/gfs.20211221/00//products/atmos/grib2/0p25 ]]
++ JGLOBAL_ATMOS_PRODUCTS[14]: for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[15]: prod_dir=COM_ATMOS_GRIB_0p50
++ JGLOBAL_ATMOS_PRODUCTS[16]: GRID=0p50
++ JGLOBAL_ATMOS_PRODUCTS[16]: YMD=20211221
++ JGLOBAL_ATMOS_PRODUCTS[16]: HH=00
++ JGLOBAL_ATMOS_PRODUCTS[16]: declare_from_tmpl -rx COM_ATMOS_GRIB_0p50:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_GRIB_0p50=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2/gfs.20211221/00//products/atmos/grib2/0p50
++ JGLOBAL_ATMOS_PRODUCTS[17]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2/gfs.20211221/00//products/atmos/grib2/0p50 ]]
++ JGLOBAL_ATMOS_PRODUCTS[14]: for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[15]: prod_dir=COM_ATMOS_GRIB_1p00
++ JGLOBAL_ATMOS_PRODUCTS[16]: GRID=1p00
++ JGLOBAL_ATMOS_PRODUCTS[16]: YMD=20211221
++ JGLOBAL_ATMOS_PRODUCTS[16]: HH=00
++ JGLOBAL_ATMOS_PRODUCTS[16]: declare_from_tmpl -rx COM_ATMOS_GRIB_1p00:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_GRIB_1p00=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2/gfs.20211221/00//products/atmos/grib2/1p00
++ JGLOBAL_ATMOS_PRODUCTS[17]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2/gfs.20211221/00//products/atmos/grib2/1p00 ]]
++ JGLOBAL_ATMOS_PRODUCTS[21]: export PREFIX=gfs.t00z.
++ JGLOBAL_ATMOS_PRODUCTS[21]: PREFIX=gfs.t00z.
++ JGLOBAL_ATMOS_PRODUCTS[25]: /work2/noaa/global/CI/HERCULES/2982/gfs/scripts/exglobal_atmos_products.sh
+Begin exglobal_atmos_products.sh at Mon Nov  4 12:06:58 UTC 2024
++ exglobal_atmos_products.sh[6]: export WGRIB2=wgrib2
++ exglobal_atmos_products.sh[6]: WGRIB2=wgrib2
++ exglobal_atmos_products.sh[9]: INTERP_ATMOS_MASTERSH=/work2/noaa/global/CI/HERCULES/2982/gfs/ush/interp_atmos_master.sh
++ exglobal_atmos_products.sh[10]: INTERP_ATMOS_SFLUXSH=/work2/noaa/global/CI/HERCULES/2982/gfs/ush/interp_atmos_sflux.sh
++ exglobal_atmos_products.sh[13]: downset=2
++ exglobal_atmos_products.sh[14]: ntasks_atmos_products=8
++ exglobal_atmos_products.sh[17]: WGNE=YES
++ exglobal_atmos_products.sh[18]: FHMAX_WGNE=180
++ exglobal_atmos_products.sh[20]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C96C48_hybatmDA_2ecfe5c2/gfs.2021122100/atmos_products.1428146
++ exglobal_atmos_products.sh[24]: ((  FORECAST_HOUR <= 0  ))
+++ exglobal_atmos_products.sh[35]: printf f%03d 60
++ exglobal_atmos_products.sh[35]: fhr3=f060
++ exglobal_atmos_products.sh[36]: ((  FORECAST_HOUR%FHOUT_PGBS == 0  ))
++ exglobal_atmos_products.sh[37]: PGBS=YES
++ exglobal_atmos_products.sh[45]: MASTER_FILE=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2/gfs.20211221/00//model/atmos/master/gfs.t00z.master.grb2f060
++ exglobal_atmos_products.sh[50]: wgrib2 /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2/gfs.20211221/00//model/atmos/master/gfs.t00z.master.grb2f060
++ exglobal_atmos_products.sh[50]: wgrib2 -i -grib tmpfile_f060 /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C96C48_hybatmDA_2ecfe5c2/gfs.20211221/00//model/atmos/master/gfs.t00z.master.grb2f060
++ exglobal_atmos_products.sh[50]: grep -F -f /work2/noaa/global/CI/HERCULES/2982/gfs/parm/product/gfs.fFFF.paramlist.a.txt
+1:0:d=2021122100:PRMSL:mean sea level:60 hour fcst:
+2:90638:d=2021122100:CLMR:1 hybrid level:60 hour fcst:
+3:100718:d=2021122100:ICMR:1 hybrid level:60 hour fcst:
+4:121527:d=2021122100:RWMR:1 hybrid level:60 hour fcst:
+5:161777:d=2021122100:SNMR:1 hybrid level:60 hour fcst:
+6:192355:d=2021122100:GRLE:1 hybrid level:60 hour fcst:
+7:199614:d=2021122100:REFD:1 hybrid level:60 hour fcst:
+8:293376:d=2021122100:REFD:2 hybrid level:60 hour fcst:
+9:387101:d=2021122100:REFC:entire atmosphere (considered as a single layer):60 hour fcst:
+10:489278:d=2021122100:VIS:surface:60 hour fcst:
+11:610424:d=2021122100:UGRD:planetary boundary layer:60 hour fcst:
+12:660182:d=2021122100:VGRD:planetary boundary layer:60 hour fcst:
+13:710249:d=2021122100:VRATE:planetary boundary layer:60 hour fcst:
+14:762523:d=2021122100:GUST:surface:60 hour fcst:
+15:813629:d=2021122100:HGT:0.01 mb:60 hour fcst:
+16:884643:d=2021122100:TMP:0.01 mb:60 hour fcst:
+17:925464:d=2021122100:RH:0.01 mb:60 hour fcst:
+18:946794:d=2021122100:SPFH:0.01 mb:60 hour fcst:
+19:1027375:d=2021122100:VVEL:0.01 mb:60 hour fcst:
+20:1111803:d=2021122100:DZDT:0.01 mb:60 hour fcst:
+21:1200971:d=2021122100:UGRD:0.01 mb:60 hour fcst:
+22:1246089:d=2021122100:VGRD:0.01 mb:60 hour fcst:
+23:1286249:d=2021122100:ABSV:0.01 mb:60 hour fcst:
+24:1351288:d=2021122100:O3MR:0.01 mb:60 hour fcst:
+25:1406838:d=2021122100:HGT:0.02 mb:60 hour fcst:
+26:1476626:d=2021122100:TMP:0.02 mb:60 hour fcst:
+27:1535440:d=2021122100:RH:0.02 mb:60 hour fcst:
+28:1551328:d=2021122100:SPFH:0.02 mb:60 hour fcst:
+29:1631577:d=2021122100:VVEL:0.02 mb:60 hour fcst:
+30:1735059:d=2021122100:DZDT:0.02 mb:60 hour fcst:
+31:1835272:d=2021122100:UGRD:0.02 mb:60 hour fcst:
+32:1883828:d=2021122100:VGRD:0.02 mb:60 hour fcst:
+33:1926872:d=2021122100:ABSV:0.02 mb:60 hour fcst:
+34:1997086:d=2021122100:O3MR:0.02 mb:60 hour fcst:
+35:2062852:d=2021122100:HGT:0.04 mb:60 hour fcst:
+36:2127305:d=2021122100:TMP:0.04 mb:60 hour fcst:
+37:2191382:d=2021122100:RH:0.04 mb:60 hour fcst:
+38:2212850:d=2021122100:SPFH:0.04 mb:60 hour fcst:
+39:2277001:d=2021122100:VVEL:0.04 mb:60 hour fcst:
+40:2360594:d=2021122100:DZDT:0.04 mb:60 hour fcst:
+41:2459936:d=2021122100:UGRD:0.04 mb:60 hour fcst:
+42:2505668:d=2021122100:VGRD:0.04 mb:60 hour fcst:
+43:2546312:d=2021122100:ABSV:0.04 mb:60 hour fcst:
+44:2619067:d=2021122100:O3MR:0.04 mb:60 hour fcst:
+45:2684360:d=2021122100:HGT:0.07 mb:60 hour fcst:
+46:2747647:d=2021122100:TMP:0.07 mb:60 hour fcst:
+47:2810181:d=2021122100:RH:0.07 mb:60 hour fcst:
+48:2827860:d=2021122100:SPFH:0.07 mb:60 hour fcst:
+49:2887637:d=2021122100:VVEL:0.07 mb:60 hour fcst:
+50:2977046:d=2021122100:DZDT:0.07 mb:60 hour fcst:
+51:3078792:d=2021122100:UGRD:0.07 mb:60 hour fcst:
+52:3124680:d=2021122100:VGRD:0.07 mb:60 hour fcst:
+53:3166620:d=2021122100:ABSV:0.07 mb:60 hour fcst:
+54:3210027:d=2021122100:O3MR:0.07 mb:60 hour fcst:
+55:3259336:d=2021122100:HGT:0.1 mb:60 hour fcst:
+56:3322059:d=2021122100:TMP:0.1 mb:60 hour fcst:
+57:3382863:d=2021122100:RH:0.1 mb:60 hour fcst:
+58:3409505:d=2021122100:SPFH:0.1 mb:60 hour fcst:
+59:3471511:d=2021122100:VVEL:0.1 mb:60 hour fcst:
+60:3562920:d=2021122100:DZDT:0.1 mb:60 hour fcst:
+61:3666601:d=2021122100:UGRD:0.1 mb:60 hour fcst:
+62:3710809:d=2021122100:VGRD:0.1 mb:60 hour fcst:
+63:3751023:d=2021122100:ABSV:0.1 mb:60 hour fcst:
+64:3822652:d=2021122100:O3MR:0.1 mb:60 hour fcst:
+65:3905350:d=2021122100:HGT:0.2 mb:60 hour fcst:
+66:3966543:d=2021122100:TMP:0.2 mb:60 hour fcst:
+67:4025304:d=2021122100:RH:0.2 mb:60 hour fcst:
+68:4042766:d=2021122100:SPFH:0.2 mb:60 hour fcst:
+69:4101100:d=2021122100:VVEL:0.2 mb:60 hour fcst:
+70:4199223:d=2021122100:DZDT:0.2 mb:60 hour fcst:
+71:4286948:d=2021122100:UGRD:0.2 mb:60 hour fcst:
+72:4329287:d=2021122100:VGRD:0.2 mb:60 hour fcst:
+73:4367978:d=2021122100:ABSV:0.2 mb:60 hour fcst:
+74:4436820:d=2021122100:O3MR:0.2 mb:60 hour fcst:
+75:4504915:d=2021122100:HGT:0.4 mb:60 hour fcst:
+76:4564473:d=2021122100:TMP:0.4 mb:60 hour fcst:
+77:4622594:d=2021122100:RH:0.4 mb:60 hour fcst:
+78:4643255:d=2021122100:SPFH:0.4 mb:60 hour fcst:
+79:4721261:d=2021122100:VVEL:0.4 mb:60 hour fcst:
+80:4826229:d=2021122100:DZDT:0.4 mb:60 hour fcst:
+81:4926277:d=2021122100:UGRD:0.4 mb:60 hour fcst:
+82:4966894:d=2021122100:VGRD:0.4 mb:60 hour fcst:
+83:5003952:d=2021122100:ABSV:0.4 mb:60 hour fcst:
+84:5070487:d=2021122100:O3MR:0.4 mb:60 hour fcst:
+85:5143564:d=2021122100:HGT:0.7 mb:60 hour fcst:
+86:5201977:d=2021122100:TMP:0.7 mb:60 hour fcst:
+87:5259505:d=2021122100:RH:0.7 mb:60 hour fcst:
+88:5272776:d=2021122100:SPFH:0.7 mb:60 hour fcst:
+89:5345346:d=2021122100:VVEL:0.7 mb:60 hour fcst:
+90:5454523:d=2021122100:DZDT:0.7 mb:60 hour fcst:
+91:5548834:d=2021122100:UGRD:0.7 mb:60 hour fcst:
+92:5588233:d=2021122100:VGRD:0.7 mb:60 hour fcst:
+93:5624948:d=2021122100:ABSV:0.7 mb:60 hour fcst:
+94:5689638:d=2021122100:O3MR:0.7 mb:60 hour fcst:
+95:5767572:d=2021122100:HGT:1 mb:60 hour fcst:
+96:5825372:d=2021122100:TMP:1 mb:60 hour fcst:
+97:5882814:d=2021122100:RH:1 mb:60 hour fcst:
+98:5899650:d=2021122100:SPFH:1 mb:60 hour fcst:
+99:5965839:d=2021122100:VVEL:1 mb:60 hour fcst:
+100:6068746:d=2021122100:DZDT:1 mb:60 hour fcst:
+101:6178493:d=2021122100:UGRD:1 mb:60 hour fcst:
+102:6217077:d=2021122100:VGRD:1 mb:60 hour fcst:
+103:6252385:d=2021122100:ABSV:1 mb:60 hour fcst:
+104:6315930:d=2021122100:O3MR:1 mb:60 hour fcst:
+105:6397145:d=2021122100:HGT:2 mb:60 hour fcst:
+106:6452297:d=2021122100:TMP:2 mb:60 hour fcst:
+107:6511138:d=2021122100:RH:2 mb:60 hour fcst:
+108:6526977:d=2021122100:SPFH:2 mb:60 hour fcst:
+109:6603105:d=2021122100:VVEL:2 mb:60 hour fcst:
+110:6690521:d=2021122100:DZDT:2 mb:60 hour fcst:
+111:6800598:d=2021122100:UGRD:2 mb:60 hour fcst:
+112:6839077:d=2021122100:VGRD:2 mb:60 hour fcst:
+113:6874980:d=2021122100:ABSV:2 mb:60 hour fcst:
+114:6939364:d=2021122100:O3MR:2 mb:60 hour fcst:
+115:7015083:d=2021122100:HGT:3 mb:60 hour fcst:
+116:7068169:d=2021122100:TMP:3 mb:60 hour fcst:
+117:7125570:d=2021122100:RH:3 mb:60 hour fcst:
+118:7135816:d=2021122100:SPFH:3 mb:60 hour fcst:
+119:7207773:d=2021122100:VVEL:3 mb:60 hour fcst:
+120:7298537:d=2021122100:DZDT:3 mb:60 hour fcst:
+121:7406199:d=2021122100:UGRD:3 mb:60 hour fcst:
+122:7443248:d=2021122100:VGRD:3 mb:60 hour fcst:
+123:7477505:d=2021122100:ABSV:3 mb:60 hour fcst:
+124:7540504:d=2021122100:O3MR:3 mb:60 hour fcst:
+125:7623516:d=2021122100:HGT:5 mb:60 hour fcst:
+126:7683272:d=2021122100:TMP:5 mb:60 hour fcst:
+127:7741125:d=2021122100:RH:5 mb:60 hour fcst:
+128:7748704:d=2021122100:SPFH:5 mb:60 hour fcst:
+129:7813786:d=2021122100:VVEL:5 mb:60 hour fcst:
+130:7910352:d=2021122100:DZDT:5 mb:60 hour fcst:
+131:8016411:d=2021122100:UGRD:5 mb:60 hour fcst:
+132:8054305:d=2021122100:VGRD:5 mb:60 hour fcst:
+133:8088624:d=2021122100:ABSV:5 mb:60 hour fcst:
+134:8153327:d=2021122100:O3MR:5 mb:60 hour fcst:
+135:8228012:d=2021122100:HGT:7 mb:60 hour fcst:
+136:8286735:d=2021122100:TMP:7 mb:60 hour fcst:
+137:8342474:d=2021122100:RH:7 mb:60 hour fcst:
+138:8346594:d=2021122100:SPFH:7 mb:60 hour fcst:
+139:8402267:d=2021122100:VVEL:7 mb:60 hour fcst:
+140:8501609:d=2021122100:DZDT:7 mb:60 hour fcst:
+141:8605723:d=2021122100:UGRD:7 mb:60 hour fcst:
+142:8642446:d=2021122100:VGRD:7 mb:60 hour fcst:
+143:8676669:d=2021122100:ABSV:7 mb:60 hour fcst:
+144:8741740:d=2021122100:O3MR:7 mb:60 hour fcst:
+145:8817324:d=2021122100:HGT:10 mb:60 hour fcst:
+146:8875084:d=2021122100:TMP:10 mb:60 hour fcst:
+147:8931047:d=2021122100:RH:10 mb:60 hour fcst:
+148:8937090:d=2021122100:SPFH:10 mb:60 hour fcst:
+149:8992861:d=2021122100:VVEL:10 mb:60 hour fcst:
+150:9096589:d=2021122100:DZDT:10 mb:60 hour fcst:
+151:9199398:d=2021122100:UGRD:10 mb:60 hour fcst:
+152:9236258:d=2021122100:VGRD:10 mb:60 hour fcst:
+153:9270094:d=2021122100:ABSV:10 mb:60 hour fcst:
+154:9335133:d=2021122100:O3MR:10 mb:60 hour fcst:
+155:9414323:d=2021122100:HGT:15 mb:60 hour fcst:
+156:9471583:d=2021122100:TMP:15 mb:60 hour fcst:
+157:9527000:d=2021122100:RH:15 mb:60 hour fcst:
+158:9536027:d=2021122100:SPFH:15 mb:60 hour fcst:
+159:9594722:d=2021122100:VVEL:15 mb:60 hour fcst:
+160:9703301:d=2021122100:DZDT:15 mb:60 hour fcst:
+161:9804902:d=2021122100:UGRD:15 mb:60 hour fcst:
+162:9842184:d=2021122100:VGRD:15 mb:60 hour fcst:
+163:9904770:d=2021122100:ABSV:15 mb:60 hour fcst:
+164:9970167:d=2021122100:O3MR:15 mb:60 hour fcst:
+165:10052070:d=2021122100:HGT:20 mb:60 hour fcst:
+166:10108399:d=2021122100:TMP:20 mb:60 hour fcst:
+167:10163579:d=2021122100:RH:20 mb:60 hour fcst:
+168:10174389:d=2021122100:SPFH:20 mb:60 hour fcst:
+169:10236789:d=2021122100:VVEL:20 mb:60 hour fcst:
+170:10350065:d=2021122100:DZDT:20 mb:60 hour fcst:
+171:10451139:d=2021122100:UGRD:20 mb:60 hour fcst:
+172:10487842:d=2021122100:VGRD:20 mb:60 hour fcst:
+173:10549810:d=2021122100:ABSV:20 mb:60 hour fcst:
+174:10614241:d=2021122100:O3MR:20 mb:60 hour fcst:
+175:10707393:d=2021122100:HGT:30 mb:60 hour fcst:
+176:10771985:d=2021122100:TMP:30 mb:60 hour fcst:
+177:10826245:d=2021122100:RH:30 mb:60 hour fcst:
+178:10842042:d=2021122100:SPFH:30 mb:60 hour fcst:
+179:10920677:d=2021122100:VVEL:30 mb:60 hour fcst:
+180:11037918:d=2021122100:DZDT:30 mb:60 hour fcst:
+181:11137347:d=2021122100:UGRD:30 mb:60 hour fcst:
+182:11200622:d=2021122100:VGRD:30 mb:60 hour fcst:
+183:11261378:d=2021122100:ABSV:30 mb:60 hour fcst:
+184:11323374:d=2021122100:O3MR:30 mb:60 hour fcst:
+185:11416316:d=2021122100:HGT:40 mb:60 hour fcst:
+186:11480307:d=2021122100:TMP:40 mb:60 hour fcst:
+187:11536256:d=2021122100:RH:40 mb:60 hour fcst:
+188:11554469:d=2021122100:SPFH:40 mb:60 hour fcst:
+189:11626460:d=2021122100:VVEL:40 mb:60 hour fcst:
+190:11737400:d=2021122100:DZDT:40 mb:60 hour fcst:
+191:11836592:d=2021122100:UGRD:40 mb:60 hour fcst:
+192:11901616:d=2021122100:VGRD:40 mb:60 hour fcst:
+193:11963787:d=2021122100:ABSV:40 mb:60 hour fcst:
+194:12029272:d=2021122100:O3MR:40 mb:60 hour fcst:
+195:12126707:d=2021122100:HGT:50 mb:60 hour fcst:
+196:12190592:d=2021122100:TMP:50 mb:60 hour fcst:
+197:12246468:d=2021122100:RH:50 mb:60 hour fcst:
+198:12266226:d=2021122100:TCDC:50 mb:60 hour fcst:
+199:12266405:d=2021122100:SPFH:50 mb:60 hour fcst:
+200:12338237:d=2021122100:VVEL:50 mb:60 hour fcst:
+201:12428730:d=2021122100:DZDT:50 mb:60 hour fcst:
+202:12526943:d=2021122100:UGRD:50 mb:60 hour fcst:
+203:12591902:d=2021122100:VGRD:50 mb:60 hour fcst:
+204:12654646:d=2021122100:ABSV:50 mb:60 hour fcst:
+205:12720736:d=2021122100:CLMR:50 mb:60 hour fcst:
+206:12720915:d=2021122100:ICMR:50 mb:60 hour fcst:
+207:12721094:d=2021122100:RWMR:50 mb:60 hour fcst:
+208:12721273:d=2021122100:SNMR:50 mb:60 hour fcst:
+209:12721452:d=2021122100:GRLE:50 mb:60 hour fcst:
+210:12721631:d=2021122100:O3MR:50 mb:60 hour fcst:
+211:12816930:d=2021122100:HGT:70 mb:60 hour fcst:
+212:12881719:d=2021122100:TMP:70 mb:60 hour fcst:
+213:12940222:d=2021122100:RH:70 mb:60 hour fcst:
+215:12969176:d=2021122100:SPFH:70 mb:60 hour fcst:
+216:13043799:d=2021122100:VVEL:70 mb:60 hour fcst:
+217:13139084:d=2021122100:DZDT:70 mb:60 hour fcst:
+218:13237247:d=2021122100:UGRD:70 mb:60 hour fcst:
+219:13305042:d=2021122100:VGRD:70 mb:60 hour fcst:
+220:13370673:d=2021122100:ABSV:70 mb:60 hour fcst:
+226:13441108:d=2021122100:O3MR:70 mb:60 hour fcst:
+227:13534497:d=2021122100:HGT:100 mb:60 hour fcst:
+228:13600795:d=2021122100:TMP:100 mb:60 hour fcst:
+229:13660293:d=2021122100:RH:100 mb:60 hour fcst:
+230:13694231:d=2021122100:TCDC:100 mb:60 hour fcst:
+231:13694615:d=2021122100:SPFH:100 mb:60 hour fcst:
+232:13783773:d=2021122100:VVEL:100 mb:60 hour fcst:
+233:13886514:d=2021122100:DZDT:100 mb:60 hour fcst:
+234:13987492:d=2021122100:UGRD:100 mb:60 hour fcst:
+235:14059301:d=2021122100:VGRD:100 mb:60 hour fcst:
+236:14129132:d=2021122100:ABSV:100 mb:60 hour fcst:
+237:14202696:d=2021122100:CLMR:100 mb:60 hour fcst:
+238:14202875:d=2021122100:ICMR:100 mb:60 hour fcst:
+239:14208145:d=2021122100:RWMR:100 mb:60 hour fcst:
+240:14208324:d=2021122100:SNMR:100 mb:60 hour fcst:
+241:14215966:d=2021122100:GRLE:100 mb:60 hour fcst:
+242:14216229:d=2021122100:O3MR:100 mb:60 hour fcst:
+259:15068696:d=2021122100:HGT:150 mb:60 hour fcst:
+260:15137109:d=2021122100:TMP:150 mb:60 hour fcst:
+261:15197877:d=2021122100:RH:150 mb:60 hour fcst:
+262:15240150:d=2021122100:TCDC:150 mb:60 hour fcst:
+263:15251996:d=2021122100:SPFH:150 mb:60 hour fcst:
+264:15346692:d=2021122100:VVEL:150 mb:60 hour fcst:
+265:15426815:d=2021122100:DZDT:150 mb:60 hour fcst:
+266:15532174:d=2021122100:UGRD:150 mb:60 hour fcst:
+267:15577505:d=2021122100:VGRD:150 mb:60 hour fcst:
+268:15650353:d=2021122100:ABSV:150 mb:60 hour fcst:
+269:15728032:d=2021122100:CLMR:150 mb:60 hour fcst:
+270:15728211:d=2021122100:ICMR:150 mb:60 hour fcst:
+271:15743743:d=2021122100:RWMR:150 mb:60 hour fcst:
+272:15743922:d=2021122100:SNMR:150 mb:60 hour fcst:
+273:15746097:d=2021122100:GRLE:150 mb:60 hour fcst:
+274:15746584:d=2021122100:O3MR:150 mb:60 hour fcst:
+291:16613865:d=2021122100:HGT:200 mb:60 hour fcst:
+292:16685195:d=2021122100:TMP:200 mb:60 hour fcst:
+293:16748839:d=2021122100:RH:200 mb:60 hour fcst:
+294:16804144:d=2021122100:TCDC:200 mb:60 hour fcst:
+295:16831123:d=2021122100:SPFH:200 mb:60 hour fcst:
+296:16925341:d=2021122100:VVEL:200 mb:60 hour fcst:
+297:17012150:d=2021122100:DZDT:200 mb:60 hour fcst:
+298:17111420:d=2021122100:UGRD:200 mb:60 hour fcst:
+299:17160027:d=2021122100:VGRD:200 mb:60 hour fcst:
+300:17208064:d=2021122100:ABSV:200 mb:60 hour fcst:
+301:17290288:d=2021122100:CLMR:200 mb:60 hour fcst:
+302:17290467:d=2021122100:ICMR:200 mb:60 hour fcst:
+303:17321915:d=2021122100:RWMR:200 mb:60 hour fcst:
+304:17322094:d=2021122100:SNMR:200 mb:60 hour fcst:
+305:17332292:d=2021122100:GRLE:200 mb:60 hour fcst:
+306:17332619:d=2021122100:O3MR:200 mb:60 hour fcst:
+323:18247705:d=2021122100:HGT:250 mb:60 hour fcst:
+324:18321248:d=2021122100:TMP:250 mb:60 hour fcst:
+325:18385859:d=2021122100:RH:250 mb:60 hour fcst:
+326:18449487:d=2021122100:TCDC:250 mb:60 hour fcst:
+327:18485431:d=2021122100:SPFH:250 mb:60 hour fcst:
+328:18580762:d=2021122100:VVEL:250 mb:60 hour fcst:
+329:18673361:d=2021122100:DZDT:250 mb:60 hour fcst:
+330:18774733:d=2021122100:UGRD:250 mb:60 hour fcst:
+331:18825755:d=2021122100:VGRD:250 mb:60 hour fcst:
+332:18877148:d=2021122100:ABSV:250 mb:60 hour fcst:
+333:18964266:d=2021122100:CLMR:250 mb:60 hour fcst:
+334:18964445:d=2021122100:ICMR:250 mb:60 hour fcst:
+335:19009878:d=2021122100:RWMR:250 mb:60 hour fcst:
+336:19010057:d=2021122100:SNMR:250 mb:60 hour fcst:
+337:19030783:d=2021122100:GRLE:250 mb:60 hour fcst:
+338:19031161:d=2021122100:O3MR:250 mb:60 hour fcst:
+355:20040238:d=2021122100:HGT:300 mb:60 hour fcst:
+356:20114463:d=2021122100:TMP:300 mb:60 hour fcst:
+357:20179059:d=2021122100:RH:300 mb:60 hour fcst:
+358:20246655:d=2021122100:TCDC:300 mb:60 hour fcst:
+359:20286251:d=2021122100:SPFH:300 mb:60 hour fcst:
+360:20383070:d=2021122100:VVEL:300 mb:60 hour fcst:
+361:20480421:d=2021122100:DZDT:300 mb:60 hour fcst:
+362:20584312:d=2021122100:UGRD:300 mb:60 hour fcst:
+363:20636916:d=2021122100:VGRD:300 mb:60 hour fcst:
+364:20690877:d=2021122100:ABSV:300 mb:60 hour fcst:
+365:20780785:d=2021122100:CLMR:300 mb:60 hour fcst:
+366:20780964:d=2021122100:ICMR:300 mb:60 hour fcst:
+367:20833995:d=2021122100:RWMR:300 mb:60 hour fcst:
+368:20834174:d=2021122100:SNMR:300 mb:60 hour fcst:
+369:20864749:d=2021122100:GRLE:300 mb:60 hour fcst:
+370:20865377:d=2021122100:O3MR:300 mb:60 hour fcst:
+387:21888199:d=2021122100:HGT:350 mb:60 hour fcst:
+388:21962146:d=2021122100:TMP:350 mb:60 hour fcst:
+389:22026238:d=2021122100:RH:350 mb:60 hour fcst:
+390:22094221:d=2021122100:TCDC:350 mb:60 hour fcst:
+391:22135513:d=2021122100:SPFH:350 mb:60 hour fcst:
+392:22232179:d=2021122100:VVEL:350 mb:60 hour fcst:
+393:22331448:d=2021122100:DZDT:350 mb:60 hour fcst:
+394:22435706:d=2021122100:UGRD:350 mb:60 hour fcst:
+395:22487598:d=2021122100:VGRD:350 mb:60 hour fcst:
+396:22540867:d=2021122100:ABSV:350 mb:60 hour fcst:
+397:22630185:d=2021122100:CLMR:350 mb:60 hour fcst:
+398:22630518:d=2021122100:ICMR:350 mb:60 hour fcst:
+399:22686444:d=2021122100:RWMR:350 mb:60 hour fcst:
+400:22686623:d=2021122100:SNMR:350 mb:60 hour fcst:
+401:22725114:d=2021122100:GRLE:350 mb:60 hour fcst:
+402:22726549:d=2021122100:O3MR:350 mb:60 hour fcst:
+419:23748583:d=2021122100:HGT:400 mb:60 hour fcst:
+420:23831222:d=2021122100:TMP:400 mb:60 hour fcst:
+421:23895332:d=2021122100:RH:400 mb:60 hour fcst:
+422:23963487:d=2021122100:TCDC:400 mb:60 hour fcst:
+423:24003937:d=2021122100:SPFH:400 mb:60 hour fcst:
+424:24107487:d=2021122100:VVEL:400 mb:60 hour fcst:
+425:24207702:d=20
+*** FATAL ERROR: write error ***
+
+21122100:DZDT:400 mb:60 hour fcst:
+426:24311564:d=2021122100:UGRD:400 mb:60 hour fcst:
+427:24361638:d=2021122100:VGRD:400 mb:60 hour fcst:
+428:24413865:d=2021122100:ABSV:400 mb:60 hour fcst:
+429:24501949:d=2021122100:CLMR:400 mb:60 hour fcst:
+430:24503774:d=2021122100:ICMR:400 mb:60 hour fcst:
+431:24558655:d=2021122100:RWMR:400 mb:60 hour fcst:
+432:24559452:d=2021122100:SNMR:400 mb:60 hour fcst:
+433:24600749:d=2021122100:GRLE:400 mb:60 hour fcst:
+434:24603553:d=2021122100:O3MR:400 mb:60 hour fcst:
+451:25634442:d=2021122100:HGT:450 mb:60 hour fcst:
+452:25716487:d=2021122100:TMP:450 mb:60 hour fcst:
+453:25780994:d=2021122100:RH:450 mb:60 hour fcst:
+454:25849667:d=2021122100:TCDC:450 mb:60 hour fcst:
+455:25888803:d=2021122100:SPFH:450 mb:60 hour fcst:
+456:25989103:d=2021122100:VVEL:450 mb:60 hour fcst:
+457:26089835:d=2021122100:DZDT:450 mb:60 hour fcst:
+458:26192880:d=2021122100:UGRD:450 mb:60 hour fcst:
+459:26242407:d=2021122100:VGRD:450 mb:60 hour fcst:
+460:26293148:d=2021122100:ABSV:450 mb:60 hour fcst:
+461:26379738:d=2021122100:CLMR:450 mb:60 hour fcst:
+462:26384160:d=2021122100:ICMR:450 mb:60 hour fcst:
+463:26435778:d=2021122100:RWMR:450 mb:60 hour fcst:
+464:26437769:d=2021122100:SNMR:450 mb:60 hour fcst:
+465:26477499:d=2021122100:GRLE:450 mb:60 hour fcst:
+466:26480024:d=2021122100:O3MR:450 mb:60 hour fcst:
+483:27527801:d=2021122100:HGT:500 mb:60 hour fcst:
+484:27609786:d=2021122100:TMP:500 mb:60 hour fcst:
+485:27674669:d=2021122100:RH:500 mb:60 hour fcst:
+486:27743695:d=2021122100:TCDC:500 mb:60 hour fcst:
+487:27781675:d=2021122100:SPFH:500 mb:60 hour fcst:
+488:27886595:d=2021122100:VVEL:500 mb:60 hour fcst:
+489:27987664:d=2021122100:DZDT:500 mb:60 hour fcst:
+490:28089255:d=2021122100:UGRD:500 mb:60 hour fcst:
+491:28167508:d=2021122100:VGRD:500 mb:60 hour fcst:
+492:28247149:d=2021122100:ABSV:500 mb:60 hour fcst:
+493:28332413:d=2021122100:CLMR:500 mb:60 hour fcst:
+494:28340907:d=2021122100:ICMR:500 mb:60 hour fcst:
+495:28388769:d=2021122100:RWMR:500 mb:60 hour fcst:
+496:28392490:d=2021122100:SNMR:500 mb:60 hour fcst:
+497:28433118:d=2021122100:GRLE:500 mb:60 hour fcst:
+498:28437543:d=2021122100:O3MR:500 mb:60 hour fcst:
+515:29549857:d=2021122100:HGT:550 mb:60 hour fcst:
+516:29631292:d=2021122100:TMP:550 mb:60 hour fcst:
+517:29697300:d=2021122100:RH:550 mb:60 hour fcst:
+518:29767041:d=2021122100:TCDC:550 mb:60 hour fcst:
+519:29805660:d=2021122100:SPFH:550 mb:60 hour fcst:
+520:29914574:d=2021122100:VVEL:550 mb:60 hour fcst:
+521:30015793:d=2021122100:DZDT:550 mb:60 hour fcst:
+522:30126098:d=2021122100:UGRD:550 mb:60 hour fcst:
+523:30203479:d=2021122100:VGRD:550 mb:60 hour fcst:
+524:30282224:d=2021122100:ABSV:550 mb:60 hour fcst:
+525:30366474:d=2021122100:CLMR:550 mb:60 hour fcst:
+526:30379550:d=2021122100:ICMR:550 mb:60 hour fcst:
+527:30423983:d=2021122100:RWMR:550 mb:60 hour fcst:
+528:30431182:d=2021122100:SNMR:550 mb:60 hour fcst:
+529:30472393:d=2021122100:GRLE:550 mb:60 hour fcst:
+530:30478692:d=2021122100:O3MR:550 mb:60 hour fcst:
+547:31621280:d=2021122100:HGT:600 mb:60 hour fcst:
+548:31705855:d=2021122100:TMP:600 mb:60 hour fcst:
+549:31772270:d=2021122100:RH:600 mb:60 hour fcst:
+550:31842688:d=2021122100:TCDC:600 mb:60 hour fcst:
+551:31881294:d=2021122100:SPFH:600 mb:60 hour fcst:
+552:31984327:d=2021122100:VVEL:600 mb:60 hour fcst:
+553:32085525:d=2021122100:DZDT:600 mb:60 hour fcst:
+554:32195073:d=2021122100:UGRD:600 mb:60 hour fcst:
+555:32272001:d=2021122100:VGRD:600 mb:60 hour fcst:
+556:32350297:d=2021122100:ABSV:600 mb:60 hour fcst:
+557:32434184:d=2021122100:CLMR:600 mb:60 hour fcst:
+558:32450795:d=2021122100:ICMR:600 mb:60 hour fcst:
+559:32492063:d=2021122100:RWMR:600 mb:60 hour fcst:
+560:32502923:d=2021122100:SNMR:600 mb:60 hour fcst:
+561:32547704:d=2021122100:GRLE:600 mb:60 hour fcst:
+562:32554949:d=2021122100:O3MR:600 mb:60 hour fcst:
+579:33693767:d=2021122100:HGT:650 mb:60 hour fcst:
+580:33778401:d=2021122100:TMP:650 mb:60 hour fcst:
+581:33845205:d=2021122100:RH:650 mb:60 hour fcst:
+582:33916021:d=2021122100:TCDC:650 mb:60 hour fcst:
+583:33952584:d=2021122100:SPFH:650 mb:60 hour fcst:
+584:34065135:d=2021122100:VVEL:650 mb:60 hour fcst:
+585:34166588:d=2021122100:DZDT:650 mb:60 hour fcst:
+586:34275820:d=2021122100:UGRD:650 mb:60 hour fcst:
+587:34352243:d=2021122100:VGRD:650 mb:60 hour fcst:
+588:34430222:d=2021122100:ABSV:650 mb:60 hour fcst:
+589:34513916:d=2021122100:CLMR:650 mb:60 hour fcst:
+590:34532422:d=2021122100:ICMR:650 mb:60 hour fcst:
+591:34568293:d=2021122100:RWMR:650 mb:60 hour fcst:
+592:34583082:d=2021122100:SNMR:650 mb:60 hour fcst:
+593:34625904:d=2021122100:GRLE:650 mb:60 hour fcst:
+594:34633046:d=2021122100:O3MR:650 mb:60 hour fcst:
+611:35767429:d=2021122100:HGT:700 mb:60 hour fcst:
+612:35852216:d=2021122100:TMP:700 mb:60 hour fcst:
+613:35919803:d=2021122100:RH:700 mb:60 hour fcst:
+614:35990838:d=2021122100:TCDC:700 mb:60 hour fcst:
+615:36027805:d=2021122100:SPFH:700 mb:60 hour fcst:
+616:36133505:d=2021122100:VVEL:700 mb:60 hour fcst:
+617:36235242:d=2021122100:DZDT:700 mb:60 hour fcst:
+618:36344008:d=2021122100:UGRD:700 mb:60 hour fcst:
+619:36420144:d=2021122100:VGRD:700 mb:60 hour fcst:
+620:36497941:d=2021122100:ABSV:700 mb:60 hour fcst:
+621:36581506:d=2021122100:CLMR:700 mb:60 hour fcst:
+622:36602760:d=2021122100:ICMR:700 mb:60 hour fcst:
+623:36634684:d=2021122100:RWMR:700 mb:60 hour fcst:
+624:36651598:d=2021122100:SNMR:700 mb:60 hour fcst:
+625:36691861:d=2021122100:GRLE:700 mb:60 hour fcst:
+626:36696915:d=2021122100:O3MR:700 mb:60 hour fcst:
+643:37853208:d=2021122100:HGT:750 mb:60 hour fcst:
+644:37938354:d=2021122100:TMP:750 mb:60 hour fcst:
+645:38007627:d=2021122100:RH:750 mb:60 hour fcst:
+646:38079699:d=2021122100:TCDC:750 mb:60 hour fcst:
+647:38119144:d=2021122100:SPFH:750 mb:60 hour fcst:
+648:38227278:d=2021122100:VVEL:750 mb:60 hour fcst:
+649:38330911:d=2021122100:DZDT:750 mb:60 hour fcst:
+650:38439444:d=2021122100:UGRD:750 mb:60 hour fcst:
+651:38515115:d=2021122100:VGRD:750 mb:60 hour fcst:
+652:38593000:d=2021122100:ABSV:750 mb:60 hour fcst:
+653:38676767:d=2021122100:CLMR:750 mb:60 hour fcst:
+654:38703648:d=2021122100:ICMR:750 mb:60 hour fcst:
+655:38734385:d=2021122100:RWMR:750 mb:60 hour fcst:
+656:38753245:d=2021122100:SNMR:750 mb:60 hour fcst:
+657:38791136:d=2021122100:GRLE:750 mb:60 hour fcst:
+658:38796021:d=2021122100:O3MR:750 mb:60 hour fcst:
+675:39972851:d=2021122100:HGT:800 mb:60 hour fcst:
+676:40058605:d=2021122100:TMP:800 mb:60 hour fcst:
+677:40129973:d=2021122100:RH:800 mb:60 hour fcst:
+678:40202891:d=2021122100:TCDC:800 mb:60 hour fcst:
+679:40245422:d=2021122100:SPFH:800 mb:60 hour fcst:
+680:40355368:d=2021122100:VVEL:800 mb:60 hour fcst:
+681:40458549:d=2021122100:DZDT:800 mb:60 hour fcst:
+682:40566683:d=2021122100:UGRD:800 mb:60 hour fcst:
+683:40643650:d=2021122100:VGRD:800 mb:60 hour fcst:
+684:40722026:d=2021122100:ABSV:800 mb:60 hour fcst:
+685:40806472:d=2021122100:CLMR:800 mb:60 hour fcst:
+686:40839153:d=2021122100:ICMR:800 mb:60 hour fcst:
+687:40868465:d=2021122100:RWMR:800 mb:60 hour fcst:
+688:40889179:d=2021122100:SNMR:800 mb:60 hour fcst:
+689:40926982:d=2021122100:GRLE:800 mb:60 hour fcst:
+690:40933092:d=2021122100:O3MR:800 mb:60 hour fcst:
+707:42127061:d=2021122100:HGT:850 mb:60 hour fcst:
+708:42213622:d=2021122100:TMP:850 mb:60 hour fcst:
+709:42286928:d=2021122100:RH:850 mb:60 hour fcst:
+710:42360478:d=2021122100:TCDC:850 mb:60 hour fcst:
+711:42408361:d=2021122100:SPFH:850 mb:60 hour fcst:
+712:42519658:d=2021122100:VVEL:850 mb:60 hour fcst:
+713:42621795:d=2021122100:DZDT:850 mb:60 hour fcst:
+714:42729243:d=2021122100:UGRD:850 mb:60 hour fcst:
+715:42806798:d=2021122100:VGRD:850 mb:60 hour fcst:
+716:42885703:d=2021122100:ABSV:850 mb:60 hour fcst:
+717:42970782+ exglobal_atmos_products.sh[1]: postamble exglobal_atmos_products.sh 1730722018 8
++ preamble.sh[70]: set +x
+End exglobal_atmos_products.sh at 12:06:59 with error code 8 (time elapsed: 00:00:01)
++ JGLOBAL_ATMOS_PRODUCTS[1]: postamble JGLOBAL_ATMOS_PRODUCTS 1730722001 8
++ preamble.sh[70]: set +x
+End JGLOBAL_ATMOS_PRODUCTS at 12:06:59 with error code 8 (time elapsed: 00:00:18)
++ atmos_products.sh[1]: postamble atmos_products.sh 1730721998 8
++ preamble.sh[70]: set +x
+End atmos_products.sh at 12:06:59 with error code 8 (time elapsed: 00:00:21)
