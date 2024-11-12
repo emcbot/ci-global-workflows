@@ -1,0 +1,2421 @@
+Begin fcst.sh at Tue Nov 12 17:52:15 UTC 2024
++ fcst.sh[8]: source /work2/noaa/global/CI/HERCULES/2982/gefs/ush/detect_machine.sh
+++ detect_machine.sh[12]: [[ -n '' ]]
+++ detect_machine.sh[15]: case $(hostname -f) in
++++ detect_machine.sh[15]: hostname -f
+++ detect_machine.sh[45]: MACHINE_ID=UNKNOWN
+++ detect_machine.sh[48]: [[ UNKNOWN == \U\N\K\N\O\W\N ]]
+++ detect_machine.sh[49]: case ${PW_CSP:-} in
+++ detect_machine.sh[51]: PW_CSP=UNKNOWN
+++ detect_machine.sh[56]: MACHINE_ID=UNKNOWN
+++ detect_machine.sh[59]: [[ UNKNOWN != \U\N\K\N\O\W\N ]]
+++ detect_machine.sh[64]: [[ -d /lfs/h3 ]]
+++ detect_machine.sh[67]: [[ -d /lfs/h1 ]]
+++ detect_machine.sh[70]: [[ -d /mnt/lfs5 ]]
+++ detect_machine.sh[73]: [[ -d /scratch1 ]]
+++ detect_machine.sh[76]: [[ -d /work ]]
++++ detect_machine.sh[78]: findmnt -n -o SOURCE /home
+++ detect_machine.sh[78]: mount=hercules-nfs.hpc.msstate.edu:/home-hercules
+++ detect_machine.sh[79]: [[ hercules-nfs.hpc.msstate.edu:/home-hercules =~ hercules ]]
+++ detect_machine.sh[80]: MACHINE_ID=hercules
++ fcst.sh[9]: [[ hercules == \w\c\o\s\s\2 ]]
++ fcst.sh[12]: . /work2/noaa/global/CI/HERCULES/2982/gefs/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /work2/noaa/global/CI/HERCULES/2982/gefs/modulefiles
+
+Currently Loaded Modules:
+  1) contrib/0.1                      41) grib-util/1.3.0
+  2) intel-oneapi-compilers/2023.1.0  42) g2tmpl/1.10.2
+  3) stack-intel/2021.9.0             43) gsi-ncdiag/1.1.2
+  4) intel-oneapi-mpi/2021.9.0        44) crtm-fix/2.4.0.1_emc
+  5) stack-intel-oneapi-mpi/2021.9.0  45) git-lfs/3.1.2
+  6) intel-oneapi-mkl/2023.1.0        46) crtm/2.4.0.1
+  7) zlib/1.2.13                      47) openblas/0.3.24
+  8) pigz/2.7                         48) py-setuptools/63.4.3
+  9) zstd/1.5.2                       49) py-numpy/1.23.4
+ 10) tar/1.34                         50) bufr/11.7.0
+ 11) gettext/0.21.1                   51) gmake/4.2.1
+ 12) libxcrypt/4.4.35                 52) wgrib2/2.0.8
+ 13) sqlite/3.43.2                    53) py-f90nml/1.4.3
+ 14) util-linux-uuid/2.38.1           54) py-cftime/1.0.3.4
+ 15) python/3.11.6                    55) py-netcdf4/1.5.8
+ 16) libjpeg/2.1.0                    56) libyaml/0.2.5
+ 17) jasper/2.0.32                    57) py-pyyaml/6.0
+ 18) libpng/1.6.37                    58) py-markupsafe/2.1.3
+ 19) openjpeg/2.3.1                   59) py-jinja2/3.1.2
+ 20) eccodes/2.32.0                   60) py-bottleneck/1.3.7
+ 21) fftw/3.3.10                      61) py-numexpr/2.8.4
+ 22) nghttp2/1.57.0                   62) py-et-xmlfile/1.0.1
+ 23) curl/8.4.0                       63) py-openpyxl/3.1.2
+ 24) proj/9.2.1                       64) py-pytz/2023.3
+ 25) udunits/2.2.28                   65) py-pyxlsb/1.0.10
+ 26) cdo/2.2.0                        66) py-xlrd/2.0.1
+ 27) hdf5/1.14.0                      67) py-xlsxwriter/3.1.7
+ 28) snappy/1.1.10                    68) py-xlwt/1.3.0
+ 29) c-blosc/1.21.5                   69) py-pandas/1.5.3
+ 30) netcdf-c/4.9.2                   70) py-six/1.16.0
+ 31) netcdf-fortran/4.6.1             71) py-python-dateutil/2.8.2
+ 32) antlr/2.7.7                      72) g2c/1.6.4
+ 33) gsl/2.7.1                        73) netcdf-cxx4/4.3.1
+ 34) nco/5.0.6                        74) met/9.1.3
+ 35) bacio/2.4.1                      75) metplus/3.1.1
+ 36) w3emc/2.10.0                     76) py-packaging/23.1
+ 37) prod_util/2.1.1                  77) py-xarray/2023.7.0
+ 38) g2/3.4.5                         78) prepobs/1.1.0
+ 39) sp/2.5.0                         79) fit2obs/1.1.4
+ 40) ip/4.3.0                         80) module_base.hercules
+
+ 
+
++ fcst.sh[14]: status=0
++ fcst.sh[15]: [[ 0 -ne 0 ]]
++ fcst.sh[17]: export job=fcst
++ fcst.sh[17]: job=fcst
++ fcst.sh[18]: export jobid=fcst.2642889
++ fcst.sh[18]: jobid=fcst.2642889
++ fcst.sh[21]: /work2/noaa/global/CI/HERCULES/2982/gefs/jobs/JGLOBAL_FORECAST
+Begin JGLOBAL_FORECAST at Tue Nov 12 17:52:18 UTC 2024
++ JGLOBAL_FORECAST[5]: ((  10#002 > 0  ))
++ JGLOBAL_FORECAST[6]: export DATAjob=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312
++ JGLOBAL_FORECAST[6]: DATAjob=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312
++ JGLOBAL_FORECAST[7]: export DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889
++ JGLOBAL_FORECAST[7]: DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889
++ JGLOBAL_FORECAST[8]: source /work2/noaa/global/CI/HERCULES/2982/gefs/ush/jjob_header.sh -e efcs -c 'base fcst efcs'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=efcs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z efcs ]]
+++ jjob_header.sh[68]: export DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889
+++ jjob_header.sh[68]: DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889
+++ jjob_header.sh[72]: mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889
+++ jjob_header.sh[73]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889
+++ jjob_header.sh[79]: export cycle=t12z
+++ jjob_header.sh[79]: cycle=t12z
+++ jjob_header.sh[80]: setpdy.sh
+sed: can't read /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/date/t12z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20210316
++++ PDY[1]: PDYm7=20210316
++++ PDY[2]: export PDYm6=20210317
++++ PDY[2]: PDYm6=20210317
++++ PDY[3]: export PDYm5=20210318
++++ PDY[3]: PDYm5=20210318
++++ PDY[4]: export PDYm4=20210319
++++ PDY[4]: PDYm4=20210319
++++ PDY[5]: export PDYm3=20210320
++++ PDY[5]: PDYm3=20210320
++++ PDY[6]: export PDYm2=20210321
++++ PDY[6]: PDYm2=20210321
++++ PDY[7]: export PDYm1=20210322
++++ PDY[7]: PDYm1=20210322
++++ PDY[8]: export PDY=20210323
++++ PDY[8]: PDY=20210323
++++ PDY[9]: export PDYp1=20210324
++++ PDY[9]: PDYp1=20210324
++++ PDY[10]: export PDYp2=20210325
++++ PDY[10]: PDYp2=20210325
++++ PDY[11]: export PDYp3=20210326
++++ PDY[11]: PDYp3=20210326
++++ PDY[12]: export PDYp4=20210327
++++ PDY[12]: PDYp4=20210327
++++ PDY[13]: export PDYp5=20210328
++++ PDY[13]: PDYp5=20210328
++++ PDY[14]: export PDYp6=20210329
++++ PDY[14]: PDYp6=20210329
++++ PDY[15]: export PDYp7=20210330
++++ PDY[15]: PDYp7=20210330
+++ jjob_header.sh[87]: export pid=2643385
+++ jjob_header.sh[87]: pid=2643385
+++ jjob_header.sh[88]: export pgmout=OUTPUT.2643385
+++ jjob_header.sh[88]: pgmout=OUTPUT.2643385
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f
+++ jjob_header.sh[95]: EXPDIR=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=HERCULES
++++ config.base[9]: machine=HERCULES
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=nems
++++ config.base[15]: ACCOUNT=nems
++++ config.base[16]: export QUEUE=batch
++++ config.base[16]: QUEUE=batch
++++ config.base[17]: export QUEUE_SERVICE=batch
++++ config.base[17]: QUEUE_SERVICE=batch
++++ config.base[18]: export PARTITION_BATCH=hercules
++++ config.base[18]: PARTITION_BATCH=hercules
++++ config.base[19]: export PARTITION_SERVICE=service
++++ config.base[19]: PARTITION_SERVICE=service
++++ config.base[20]: export RESERVATION=
++++ config.base[20]: RESERVATION=
++++ config.base[23]: export HPSS_PROJECT=emc-global
++++ config.base[23]: HPSS_PROJECT=emc-global
++++ config.base[26]: export HOMEgfs=/work2/noaa/global/CI/HERCULES/2982/gefs
++++ config.base[26]: HOMEgfs=/work2/noaa/global/CI/HERCULES/2982/gefs
++++ config.base[27]: export EXECgfs=/work2/noaa/global/CI/HERCULES/2982/gefs/exec
++++ config.base[27]: EXECgfs=/work2/noaa/global/CI/HERCULES/2982/gefs/exec
++++ config.base[28]: export FIXgfs=/work2/noaa/global/CI/HERCULES/2982/gefs/fix
++++ config.base[28]: FIXgfs=/work2/noaa/global/CI/HERCULES/2982/gefs/fix
++++ config.base[29]: export PARMgfs=/work2/noaa/global/CI/HERCULES/2982/gefs/parm
++++ config.base[29]: PARMgfs=/work2/noaa/global/CI/HERCULES/2982/gefs/parm
++++ config.base[30]: export SCRgfs=/work2/noaa/global/CI/HERCULES/2982/gefs/scripts
++++ config.base[30]: SCRgfs=/work2/noaa/global/CI/HERCULES/2982/gefs/scripts
++++ config.base[31]: export USHgfs=/work2/noaa/global/CI/HERCULES/2982/gefs/ush
++++ config.base[31]: USHgfs=/work2/noaa/global/CI/HERCULES/2982/gefs/ush
++++ config.base[32]: export FIXorog=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog
++++ config.base[32]: FIXorog=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog
++++ config.base[33]: export FIXugwd=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd
++++ config.base[33]: FIXugwd=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd
++++ config.base[38]: export PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[38]: PACKAGEROOT=/work/noaa/global/glopara/nwpara
++++ config.base[39]: export COMROOT=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT
++++ config.base[39]: COMROOT=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT
++++ config.base[40]: export COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[40]: COMINsyn=/work/noaa/global/glopara/com/gfs/prod/syndat
++++ config.base[43]: export HOMEDIR=/work/noaa/global/mterry
++++ config.base[43]: HOMEDIR=/work/noaa/global/mterry
++++ config.base[44]: export STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[44]: STMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[45]: export PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[45]: PTMP=/work/noaa/stmp/mterry/HERCULES
++++ config.base[46]: export NOSCRUB=/work/noaa/global/mterry
++++ config.base[46]: NOSCRUB=/work/noaa/global/mterry
++++ config.base[49]: export BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[49]: BASE_GIT=/work/noaa/global/glopara/git_rocky9
++++ config.base[52]: export BASE_DATA=/work/noaa/global/glopara/data
++++ config.base[52]: BASE_DATA=/work/noaa/global/glopara/data
++++ config.base[55]: export DO_BUFRSND=NO
++++ config.base[55]: DO_BUFRSND=NO
++++ config.base[56]: export DO_GEMPAK=NO
++++ config.base[56]: DO_GEMPAK=NO
++++ config.base[57]: export DO_AWIPS=NO
++++ config.base[57]: DO_AWIPS=NO
++++ config.base[63]: export REALTIME=YES
++++ config.base[63]: REALTIME=YES
++++ config.base[66]: export MODE=forecast-only
++++ config.base[66]: MODE=forecast-only
++++ config.base[75]: export HOMEpost=/work2/noaa/global/CI/HERCULES/2982/gefs
++++ config.base[75]: HOMEpost=/work2/noaa/global/CI/HERCULES/2982/gefs
++++ config.base[78]: export 'NCP=/bin/cp -p'
++++ config.base[78]: NCP='/bin/cp -p'
++++ config.base[79]: export NMV=/bin/mv
++++ config.base[79]: NMV=/bin/mv
++++ config.base[80]: export 'NLN=/bin/ln -sf'
++++ config.base[80]: NLN='/bin/ln -sf'
++++ config.base[81]: export VERBOSE=YES
++++ config.base[81]: VERBOSE=YES
++++ config.base[82]: export KEEPDATA=NO
++++ config.base[82]: KEEPDATA=NO
++++ config.base[83]: export DEBUG_POSTSCRIPT=NO
++++ config.base[83]: DEBUG_POSTSCRIPT=NO
++++ config.base[84]: export CHGRP_RSTPROD=YES
++++ config.base[84]: CHGRP_RSTPROD=YES
++++ config.base[85]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[85]: CHGRP_CMD='chgrp rstprod'
++++ config.base[86]: export NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[86]: NCDUMP=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/ncdump
++++ config.base[87]: export NCLEN=/work2/noaa/global/CI/HERCULES/2982/gefs/ush/getncdimlen
++++ config.base[87]: NCLEN=/work2/noaa/global/CI/HERCULES/2982/gefs/ush/getncdimlen
++++ config.base[90]: export BASE_ENV=/work2/noaa/global/CI/HERCULES/2982/gefs/env
++++ config.base[90]: BASE_ENV=/work2/noaa/global/CI/HERCULES/2982/gefs/env
++++ config.base[91]: export BASE_JOB=/work2/noaa/global/CI/HERCULES/2982/gefs/jobs/rocoto
++++ config.base[91]: BASE_JOB=/work2/noaa/global/CI/HERCULES/2982/gefs/jobs/rocoto
++++ config.base[94]: export SDATE=2021032312
++++ config.base[94]: SDATE=2021032312
++++ config.base[95]: export EDATE=2021032312
++++ config.base[95]: EDATE=2021032312
++++ config.base[96]: export EXP_WARM_START=.false.
++++ config.base[96]: EXP_WARM_START=.false.
++++ config.base[97]: export assim_freq=6
++++ config.base[97]: assim_freq=6
++++ config.base[98]: export PSLOT=C48_S2SWA_gefs_4d85e36f
++++ config.base[98]: PSLOT=C48_S2SWA_gefs_4d85e36f
++++ config.base[99]: export EXPDIR=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f
++++ config.base[99]: EXPDIR=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f
++++ config.base[100]: export ROTDIR=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f
++++ config.base[100]: ROTDIR=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f
++++ config.base[102]: export ARCDIR=/work/noaa/global/mterry/archive/C48_S2SWA_gefs_4d85e36f
++++ config.base[102]: ARCDIR=/work/noaa/global/mterry/archive/C48_S2SWA_gefs_4d85e36f
++++ config.base[103]: export ATARDIR=/work/noaa/global/mterry/archive_rotdir/C48_S2SWA_gefs_4d85e36f
++++ config.base[103]: ATARDIR=/work/noaa/global/mterry/archive_rotdir/C48_S2SWA_gefs_4d85e36f
++++ config.base[106]: export envir=prod
++++ config.base[106]: envir=prod
++++ config.base[107]: export NET=gefs
++++ config.base[107]: NET=gefs
++++ config.base[108]: export RUN=gefs
++++ config.base[108]: RUN=gefs
++++ config.base[111]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[78]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[79]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[81]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[82]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[83]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[84]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[85]: declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[86]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[87]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[88]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[89]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[91]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[92]: declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[93]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[94]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[95]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[96]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[97]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[98]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[99]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[101]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[102]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[103]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[105]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[114]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[114]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[115]: export LOGSCRIPT=
++++ config.base[115]: LOGSCRIPT=
++++ config.base[118]: export 'REDOUT=1>'
++++ config.base[118]: REDOUT='1>'
++++ config.base[119]: export 'REDERR=2>'
++++ config.base[119]: REDERR='2>'
++++ config.base[121]: export SENDECF=NO
++++ config.base[121]: SENDECF=NO
++++ config.base[122]: export SENDSDM=NO
++++ config.base[122]: SENDSDM=NO
++++ config.base[123]: export SENDDBN_NTC=NO
++++ config.base[123]: SENDDBN_NTC=NO
++++ config.base[124]: export SENDDBN=NO
++++ config.base[124]: SENDDBN=NO
++++ config.base[125]: export DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[125]: DBNROOT=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/fakedbn
++++ config.base[128]: export APP=S2SWA
++++ config.base[128]: APP=S2SWA
++++ config.base[131]: export DO_ATM=YES
++++ config.base[131]: DO_ATM=YES
++++ config.base[132]: export DO_COUPLED=NO
++++ config.base[132]: DO_COUPLED=NO
++++ config.base[133]: export DO_WAVE=NO
++++ config.base[133]: DO_WAVE=NO
++++ config.base[134]: export DO_OCN=NO
++++ config.base[134]: DO_OCN=NO
++++ config.base[135]: export DO_ICE=NO
++++ config.base[135]: DO_ICE=NO
++++ config.base[136]: export DO_AERO=NO
++++ config.base[136]: DO_AERO=NO
++++ config.base[137]: export DO_EXTRACTVARS=NO
++++ config.base[137]: DO_EXTRACTVARS=NO
++++ config.base[138]: export AERO_FCST_RUN=gefs
++++ config.base[138]: AERO_FCST_RUN=gefs
++++ config.base[139]: export WAVE_RUN=gefs
++++ config.base[139]: WAVE_RUN=gefs
++++ config.base[140]: export DOBNDPNT_WAVE=NO
++++ config.base[140]: DOBNDPNT_WAVE=NO
++++ config.base[141]: export DOIBP_WAV=NO
++++ config.base[141]: DOIBP_WAV=NO
++++ config.base[142]: export FRAC_GRID=.true.
++++ config.base[142]: FRAC_GRID=.true.
++++ config.base[143]: export DO_NEST=NO
++++ config.base[143]: DO_NEST=NO
++++ config.base[144]: [[ NO == \Y\E\S ]]
++++ config.base[148]: export ntiles=6
++++ config.base[148]: ntiles=6
++++ config.base[152]: export OPS_RES=C768
++++ config.base[152]: OPS_RES=C768
++++ config.base[155]: export LEVS=128
++++ config.base[155]: LEVS=128
++++ config.base[156]: export CASE=C48
++++ config.base[156]: CASE=C48
++++ config.base[157]: export CASE_ENS=C48
++++ config.base[157]: CASE_ENS=C48
++++ config.base[158]: export OCNRES=500
++++ config.base[158]: OCNRES=500
++++ config.base[159]: export ICERES=500
++++ config.base[159]: ICERES=500
++++ config.base[161]: case "${CASE}" in
++++ config.base[163]: export waveGRD=glo_500
++++ config.base[163]: waveGRD=glo_500
++++ config.base[180]: case "${APP}" in
++++ config.base[199]: export DO_COUPLED=YES
++++ config.base[199]: DO_COUPLED=YES
++++ config.base[200]: export DO_OCN=YES
++++ config.base[200]: DO_OCN=YES
++++ config.base[201]: export DO_ICE=YES
++++ config.base[201]: DO_ICE=YES
++++ config.base[203]: [[ S2SWA =~ A$ ]]
++++ config.base[204]: export DO_AERO=YES
++++ config.base[204]: DO_AERO=YES
++++ config.base[207]: [[ S2SWA =~ ^S2SW ]]
++++ config.base[208]: export DO_WAVE=YES
++++ config.base[208]: DO_WAVE=YES
++++ config.base[209]: export cplwav2atm=.true.
++++ config.base[209]: cplwav2atm=.true.
++++ config.base[219]: export FHMIN=0
++++ config.base[219]: FHMIN=0
++++ config.base[220]: export FHMAX=9
++++ config.base[220]: FHMAX=9
++++ config.base[221]: export FHOUT=3
++++ config.base[221]: FHOUT=3
++++ config.base[222]: export FHOUT_OCN=3
++++ config.base[222]: FHOUT_OCN=3
++++ config.base[223]: export FHOUT_ICE=3
++++ config.base[223]: FHOUT_ICE=3
++++ config.base[224]: export FHOUT_AERO=3
++++ config.base[224]: FHOUT_AERO=3
++++ config.base[227]: export INTERVAL_GFS=24
++++ config.base[227]: INTERVAL_GFS=24
++++ config.base[228]: export SDATE_GFS=2021032312
++++ config.base[228]: SDATE_GFS=2021032312
++++ config.base[231]: export REPLAY_ICS=NO
++++ config.base[231]: REPLAY_ICS=NO
++++ config.base[232]: [[ NO == \Y\E\S ]]
++++ config.base[235]: export OFFSET_START_HOUR=0
++++ config.base[235]: OFFSET_START_HOUR=0
++++ config.base[240]: export FHMIN_GFS=0
++++ config.base[240]: FHMIN_GFS=0
++++ config.base[241]: export FHMAX_GFS=120
++++ config.base[241]: FHMAX_GFS=120
++++ config.base[243]: breakpnts=48
++++ config.base[244]: export FCST_SEGMENTS=0,48,120
++++ config.base[244]: FCST_SEGMENTS=0,48,120
++++ config.base[246]: export FHOUT_GFS=6
++++ config.base[246]: FHOUT_GFS=6
++++ config.base[247]: export FHMAX_HF_GFS=0
++++ config.base[247]: FHMAX_HF_GFS=0
++++ config.base[248]: export FHOUT_HF_GFS=1
++++ config.base[248]: FHOUT_HF_GFS=1
++++ config.base[249]: export FHOUT_OCN_GFS=6
++++ config.base[249]: FHOUT_OCN_GFS=6
++++ config.base[250]: export FHOUT_ICE_GFS=6
++++ config.base[250]: FHOUT_ICE_GFS=6
++++ config.base[251]: export FHMIN_WAV=0
++++ config.base[251]: FHMIN_WAV=0
++++ config.base[252]: export FHOUT_WAV=3
++++ config.base[252]: FHOUT_WAV=3
++++ config.base[253]: export FHMAX_HF_WAV=120
++++ config.base[253]: FHMAX_HF_WAV=120
++++ config.base[254]: export FHOUT_HF_WAV=1
++++ config.base[254]: FHOUT_HF_WAV=1
++++ config.base[255]: export FHMAX_WAV=120
++++ config.base[255]: FHMAX_WAV=120
++++ config.base[256]: export ILPOST=1
++++ config.base[256]: ILPOST=1
++++ config.base[258]: export FHMIN_ENKF=0
++++ config.base[258]: FHMIN_ENKF=0
++++ config.base[259]: export FHMAX_ENKF=120
++++ config.base[259]: FHMAX_ENKF=120
++++ config.base[260]: export FHOUT_ENKF=6
++++ config.base[260]: FHOUT_ENKF=6
++++ config.base[261]: export FHOUT_OCN=6
++++ config.base[261]: FHOUT_OCN=6
++++ config.base[262]: export FHOUT_ICE=6
++++ config.base[262]: FHOUT_ICE=6
++++ config.base[265]: export restart_interval_gfs=12
++++ config.base[265]: restart_interval_gfs=12
++++ config.base[266]: export restart_interval_enkfgfs=12
++++ config.base[266]: restart_interval_enkfgfs=12
++++ config.base[271]: export QUILTING=.true.
++++ config.base[271]: QUILTING=.true.
++++ config.base[272]: export OUTPUT_GRID=gaussian_grid
++++ config.base[272]: OUTPUT_GRID=gaussian_grid
++++ config.base[273]: export WRITE_DOPOST=.true.
++++ config.base[273]: WRITE_DOPOST=.true.
++++ config.base[274]: export WRITE_NSFLIP=.true.
++++ config.base[274]: WRITE_NSFLIP=.true.
++++ config.base[277]: export imp_physics=8
++++ config.base[277]: imp_physics=8
++++ config.base[281]: export DO_JEDIATMVAR=NO
++++ config.base[281]: DO_JEDIATMVAR=NO
++++ config.base[282]: export DO_JEDIATMENS=NO
++++ config.base[282]: DO_JEDIATMENS=NO
++++ config.base[283]: export DO_JEDIOCNVAR=NO
++++ config.base[283]: DO_JEDIOCNVAR=NO
++++ config.base[284]: export DO_JEDISNOWDA=NO
++++ config.base[284]: DO_JEDISNOWDA=NO
++++ config.base[285]: export DO_MERGENSST=NO
++++ config.base[285]: DO_MERGENSST=NO
++++ config.base[288]: export NMEM_ENS=2
++++ config.base[288]: NMEM_ENS=2
++++ config.base[292]: export ENSMEM=002
++++ config.base[292]: ENSMEM=002
++++ config.base[293]: export MEMDIR=mem002
++++ config.base[293]: MEMDIR=mem002
++++ config.base[295]: export DOIAU=NO
++++ config.base[295]: DOIAU=NO
++++ config.base[297]: [[ .false. = \.\t\r\u\e\. ]]
++++ config.base[306]: export DONST=YES
++++ config.base[306]: DONST=YES
++++ config.base[307]: [[ YES = \Y\E\S ]]
++++ config.base[307]: export 'FNTSFA=        '
++++ config.base[307]: FNTSFA='        '
++++ config.base[310]: export nst_anl=.true.
++++ config.base[310]: nst_anl=.true.
++++ config.base[313]: export MAKE_NSSTBUFR=NO
++++ config.base[313]: MAKE_NSSTBUFR=NO
++++ config.base[316]: export MAKE_ACFTBUFR=NO
++++ config.base[316]: MAKE_ACFTBUFR=NO
++++ config.base[319]: export DO_METP=NO
++++ config.base[319]: DO_METP=NO
++++ config.base[320]: export DO_FIT2OBS=NO
++++ config.base[320]: DO_FIT2OBS=NO
++++ config.base[323]: export HPSSARCH=NO
++++ config.base[323]: HPSSARCH=NO
++++ config.base[324]: export LOCALARCH=NO
++++ config.base[324]: LOCALARCH=NO
++++ config.base[325]: [[ NO = \Y\E\S ]]
++++ config.base[329]: export ARCH_CYC=00
++++ config.base[329]: ARCH_CYC=00
++++ config.base[330]: export ARCH_WARMICFREQ=4
++++ config.base[330]: ARCH_WARMICFREQ=4
++++ config.base[331]: export ARCH_FCSTICFREQ=1
++++ config.base[331]: ARCH_FCSTICFREQ=1
++++ config.base[333]: export DELETE_COM_IN_ARCHIVE_JOB=YES
++++ config.base[333]: DELETE_COM_IN_ARCHIVE_JOB=YES
++++ config.base[336]: export NUM_SND_COLLECTIVES=9
++++ config.base[336]: NUM_SND_COLLECTIVES=9
++++ config.base[340]: [[ HERCULES =~ PW ]]
++++ config.base[344]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.fcst
++++ config.fcst[6]: echo 'BEGIN: config.fcst'
+BEGIN: config.fcst
++++ config.fcst[8]: export USE_ESMF_THREADING=YES
++++ config.fcst[8]: USE_ESMF_THREADING=YES
++++ config.fcst[9]: export COPY_FINAL_RESTARTS=NO
++++ config.fcst[9]: COPY_FINAL_RESTARTS=NO
++++ config.fcst[12]: case ${WAVE_RUN} in
++++ config.fcst[18]: case ${AERO_FCST_RUN} in
++++ config.fcst[24]: string='--fv3 C48'
++++ config.fcst[25]: [[ YES == \Y\E\S ]]
++++ config.fcst[25]: string='--fv3 C48 --mom6 500'
++++ config.fcst[26]: [[ YES == \Y\E\S ]]
++++ config.fcst[26]: string='--fv3 C48 --mom6 500 --cice6 500'
++++ config.fcst[27]: [[ YES == \Y\E\S ]]
++++ config.fcst[27]: string='--fv3 C48 --mom6 500 --cice6 500 --ww3 glo_500'
++++ config.fcst[28]: [[ YES == \Y\E\S ]]
++++ config.fcst[28]: string='--fv3 C48 --mom6 500 --cice6 500 --ww3 glo_500 --gocart'
++++ config.fcst[31]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.ufs --fv3 C48 --mom6 500 --cice6 500 --ww3 glo_500 --gocart
+++++ config.ufs[9]: echo 'BEGIN: config.ufs'
+BEGIN: config.ufs
+++++ config.ufs[11]: ((  9 <= 1  ))
+++++ config.ufs[26]: skip_mom6=true
+++++ config.ufs[27]: skip_cice6=true
+++++ config.ufs[28]: skip_ww3=true
+++++ config.ufs[29]: skip_gocart=true
+++++ config.ufs[30]: skip_mediator=true
+++++ config.ufs[33]: ((  9 > 0  ))
+++++ config.ufs[34]: key=--fv3
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[37]: fv3_res=C48
+++++ config.ufs[38]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  7 > 0  ))
+++++ config.ufs[34]: key=--mom6
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[41]: mom6_res=500
+++++ config.ufs[42]: skip_mom6=false
+++++ config.ufs[43]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  5 > 0  ))
+++++ config.ufs[34]: key=--cice6
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[46]: cice6_res=500
+++++ config.ufs[47]: skip_cice6=false
+++++ config.ufs[48]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  3 > 0  ))
+++++ config.ufs[34]: key=--ww3
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[51]: ww3_res=glo_500
+++++ config.ufs[52]: skip_ww3=false
+++++ config.ufs[53]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  1 > 0  ))
+++++ config.ufs[34]: key=--gocart
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[56]: skip_gocart=false
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  0 > 0  ))
+++++ config.ufs[67]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[68]: skip_mediator=false
+++++ config.ufs[72]: case "${fv3_res}" in
+++++ config.ufs[74]: export DELTIM=1200
+++++ config.ufs[74]: DELTIM=1200
+++++ config.ufs[75]: export layout_x=1
+++++ config.ufs[75]: layout_x=1
+++++ config.ufs[76]: export layout_y=1
+++++ config.ufs[76]: layout_y=1
+++++ config.ufs[77]: export layout_x_gfs=1
+++++ config.ufs[77]: layout_x_gfs=1
+++++ config.ufs[78]: export layout_y_gfs=1
+++++ config.ufs[78]: layout_y_gfs=1
+++++ config.ufs[79]: export nthreads_fv3=1
+++++ config.ufs[79]: nthreads_fv3=1
+++++ config.ufs[80]: export nthreads_fv3_gfs=1
+++++ config.ufs[80]: nthreads_fv3_gfs=1
+++++ config.ufs[81]: export nthreads_ufs=1
+++++ config.ufs[81]: nthreads_ufs=1
+++++ config.ufs[82]: export nthreads_ufs_gfs=1
+++++ config.ufs[82]: nthreads_ufs_gfs=1
+++++ config.ufs[83]: export xr_cnvcld=.false.
+++++ config.ufs[83]: xr_cnvcld=.false.
+++++ config.ufs[84]: export cdmbgwd=0.071,2.1,1.0,1.0
+++++ config.ufs[84]: cdmbgwd=0.071,2.1,1.0,1.0
+++++ config.ufs[85]: export cdmbgwd_gsl=40.0,1.77,1.0,1.0
+++++ config.ufs[85]: cdmbgwd_gsl=40.0,1.77,1.0,1.0
+++++ config.ufs[86]: export k_split=1
+++++ config.ufs[86]: k_split=1
+++++ config.ufs[87]: export n_split=4
+++++ config.ufs[87]: n_split=4
+++++ config.ufs[88]: export tau=10.0
+++++ config.ufs[88]: tau=10.0
+++++ config.ufs[89]: export rf_cutoff=100.0
+++++ config.ufs[89]: rf_cutoff=100.0
+++++ config.ufs[90]: export fv_sg_adj=3600
+++++ config.ufs[90]: fv_sg_adj=3600
+++++ config.ufs[91]: export knob_ugwp_tauamp=6.0e-3
+++++ config.ufs[91]: knob_ugwp_tauamp=6.0e-3
+++++ config.ufs[92]: export WRITE_GROUP=1
+++++ config.ufs[92]: WRITE_GROUP=1
+++++ config.ufs[93]: export WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[93]: WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[94]: export WRITE_GROUP_GFS=1
+++++ config.ufs[94]: WRITE_GROUP_GFS=1
+++++ config.ufs[95]: export WRTTASK_PER_GROUP_PER_THREAD_PER_TILE_GFS=1
+++++ config.ufs[95]: WRTTASK_PER_GROUP_PER_THREAD_PER_TILE_GFS=1
+++++ config.ufs[242]: ((  WRTTASK_PER_GROUP_PER_THREAD = WRTTASK_PER_GROUP_PER_THREAD_PER_TILE * 6  ))
+++++ config.ufs[243]: ((  WRTTASK_PER_GROUP_PER_THREAD_GFS = WRTTASK_PER_GROUP_PER_THREAD_PER_TILE_GFS * 6  ))
+++++ config.ufs[244]: export WRTTASK_PER_GROUP_PER_THREAD
+++++ config.ufs[245]: export WRTTASK_PER_GROUP_PER_THREAD_GFS
+++++ config.ufs[247]: ((  ntasks_fv3 = layout_x * layout_y * 6  ))
+++++ config.ufs[248]: ((  ntasks_fv3_gfs = layout_x_gfs * layout_y_gfs * 6  ))
+++++ config.ufs[249]: export ntasks_fv3
+++++ config.ufs[250]: export ntasks_fv3_gfs
+++++ config.ufs[252]: ((  ntasks_quilt = WRITE_GROUP * WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.ufs[253]: ((  ntasks_quilt_gfs = WRITE_GROUP_GFS * WRTTASK_PER_GROUP_PER_THREAD_GFS  ))
+++++ config.ufs[254]: export ntasks_quilt
+++++ config.ufs[255]: export ntasks_quilt_gfs
+++++ config.ufs[259]: case ${fv3_res} in
+++++ config.ufs[261]: zstandard_level=0
+++++ config.ufs[262]: ideflate=0
+++++ config.ufs[263]: quantize_nsd=0
+++++ config.ufs[264]: OUTPUT_FILETYPE_ATM=netcdf
+++++ config.ufs[265]: OUTPUT_FILETYPE_SFC=netcdf
+++++ config.ufs[283]: export zstandard_level ideflate quantize_nsd
+++++ config.ufs[284]: export OUTPUT_FILETYPE_ATM OUTPUT_FILETYPE_SFC
+++++ config.ufs[287]: export cpl=.false.
+++++ config.ufs[287]: cpl=.false.
+++++ config.ufs[288]: export cplflx=.false.
+++++ config.ufs[288]: cplflx=.false.
+++++ config.ufs[289]: export cplice=.false.
+++++ config.ufs[289]: cplice=.false.
+++++ config.ufs[290]: export cplchm=.false.
+++++ config.ufs[290]: cplchm=.false.
+++++ config.ufs[291]: export cplwav=.false.
+++++ config.ufs[291]: cplwav=.false.
+++++ config.ufs[292]: export cplwav2atm=.false.
+++++ config.ufs[292]: cplwav2atm=.false.
+++++ config.ufs[293]: export CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[293]: CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[294]: model_list=atm
+++++ config.ufs[297]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[298]: export cpl=.true.
+++++ config.ufs[298]: cpl=.true.
+++++ config.ufs[299]: export nthreads_mediator=1
+++++ config.ufs[299]: nthreads_mediator=1
+++++ config.ufs[300]: export CCPP_SUITE=FV3_GFS_v17_coupled_p8_ugwpv1
+++++ config.ufs[300]: CCPP_SUITE=FV3_GFS_v17_coupled_p8_ugwpv1
+++++ config.ufs[304]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[305]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.ocn
++++++ config.ocn[3]: echo 'BEGIN: config.ocn'
+BEGIN: config.ocn
++++++ config.ocn[5]: export MESH_OCN=mesh.mx500.nc
++++++ config.ocn[5]: MESH_OCN=mesh.mx500.nc
++++++ config.ocn[7]: export DO_OCN_SPPT=NO
++++++ config.ocn[7]: DO_OCN_SPPT=NO
++++++ config.ocn[8]: export DO_OCN_PERT_EPBL=NO
++++++ config.ocn[8]: DO_OCN_PERT_EPBL=NO
++++++ config.ocn[11]: export MOM6_USE_LI2016=True
++++++ config.ocn[11]: MOM6_USE_LI2016=True
++++++ config.ocn[12]: export MOM6_THERMO_SPAN=False
++++++ config.ocn[12]: MOM6_THERMO_SPAN=False
++++++ config.ocn[14]: [[ NO == \Y\E\S ]]
++++++ config.ocn[17]: export ODA_INCUPD=False
++++++ config.ocn[17]: ODA_INCUPD=False
++++++ config.ocn[21]: [[ NO == \Y\E\S ]]
++++++ config.ocn[24]: export ODA_INCUPD_NHOURS=3.0
++++++ config.ocn[24]: ODA_INCUPD_NHOURS=3.0
++++++ config.ocn[29]: echo 'END: config.ocn'
+END: config.ocn
+++++ config.ufs[306]: export cplflx=.true.
+++++ config.ufs[306]: cplflx=.true.
+++++ config.ufs[307]: model_list=atm.ocean
+++++ config.ufs[308]: nthreads_mom6=1
+++++ config.ufs[309]: case "${mom6_res}" in
+++++ config.ufs[311]: ntasks_mom6=8
+++++ config.ufs[312]: OCNTIM=3600
+++++ config.ufs[313]: NX_GLB=72
+++++ config.ufs[314]: NY_GLB=35
+++++ config.ufs[315]: DT_DYNAM_MOM6=3600
+++++ config.ufs[316]: DT_THERM_MOM6=3600
+++++ config.ufs[317]: FRUNOFF=
+++++ config.ufs[318]: CHLCLIM=seawifs_1998-2006_smoothed_2X.nc
+++++ config.ufs[319]: MOM6_RESTART_SETTING=r
+++++ config.ufs[320]: MOM6_RIVER_RUNOFF=False
+++++ config.ufs[321]: [[ gefs == \g\f\s ]]
+++++ config.ufs[321]: [[ gefs == \g\e\f\s ]]
+++++ config.ufs[322]: MOM6_DIAG_MISVAL=-1e34
+++++ config.ufs[326]: eps_imesh=4.0e-1
+++++ config.ufs[327]: MOM6_DIAG_COORD_DEF_Z_FILE=oceanda_zgrid_25L.nc
+++++ config.ufs[328]: MOM6_ALLOW_LANDMASK_CHANGES=False
+++++ config.ufs[329]: TOPOEDITS=
+++++ config.ufs[403]: export nthreads_mom6 ntasks_mom6
+++++ config.ufs[404]: export OCNTIM
+++++ config.ufs[405]: export NX_GLB NY_GLB
+++++ config.ufs[406]: export DT_DYNAM_MOM6 DT_THERM_MOM6
+++++ config.ufs[407]: export FRUNOFF
+++++ config.ufs[408]: export CHLCLIM
+++++ config.ufs[409]: export TOPOEDITS
+++++ config.ufs[410]: export MOM6_RIVER_RUNOFF
+++++ config.ufs[411]: export MOM6_RESTART_SETTING
+++++ config.ufs[412]: export eps_imesh
+++++ config.ufs[413]: export MOM6_DIAG_COORD_DEF_Z_FILE
+++++ config.ufs[414]: export MOM6_DIAG_MISVAL
+++++ config.ufs[415]: export MOM6_ALLOW_LANDMASK_CHANGES
+++++ config.ufs[419]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[420]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.ice
++++++ config.ice[3]: echo 'BEGIN: config.ice'
+BEGIN: config.ice
++++++ config.ice[6]: export min_seaice=1.0e-6
++++++ config.ice[6]: min_seaice=1.0e-6
++++++ config.ice[7]: export use_cice_alb=.true.
++++++ config.ice[7]: use_cice_alb=.true.
++++++ config.ice[9]: export MESH_ICE=mesh.mx500.nc
++++++ config.ice[9]: MESH_ICE=mesh.mx500.nc
++++++ config.ice[11]: export CICE_GRID=grid_cice_NEMS_mx500.nc
++++++ config.ice[11]: CICE_GRID=grid_cice_NEMS_mx500.nc
++++++ config.ice[12]: export CICE_MASK=kmtu_cice_NEMS_mx500.nc
++++++ config.ice[12]: CICE_MASK=kmtu_cice_NEMS_mx500.nc
++++++ config.ice[14]: echo 'END: config.ice'
+END: config.ice
+++++ config.ufs[421]: export cplice=.true.
+++++ config.ufs[421]: cplice=.true.
+++++ config.ufs[422]: model_list=atm.ocean.ice
+++++ config.ufs[424]: [[ false == \t\r\u\e ]]
+++++ config.ufs[429]: nthreads_cice6=1
+++++ config.ufs[430]: case "${cice6_res}" in
+++++ config.ufs[432]: ntasks_cice6=4
+++++ config.ufs[433]: cice6_processor_shape=slenderX1
+++++ config.ufs[454]: export nthreads_cice6 ntasks_cice6
+++++ config.ufs[455]: export cice6_processor_shape
+++++ config.ufs[459]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[460]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.wave
++++++ config.wave[6]: echo 'BEGIN: config.wave'
+BEGIN: config.wave
++++++ config.wave[13]: export RUNwave=gefswave
++++++ config.wave[13]: RUNwave=gefswave
++++++ config.wave[16]: export RUNRSTwave=gdas
++++++ config.wave[16]: RUNRSTwave=gdas
++++++ config.wave[19]: export waveGRDN=1
++++++ config.wave[19]: waveGRDN=1
++++++ config.wave[20]: export waveGRDG=10
++++++ config.wave[20]: waveGRDG=10
++++++ config.wave[21]: export USE_WAV_RMP=NO
++++++ config.wave[21]: USE_WAV_RMP=NO
++++++ config.wave[22]: export waveMULTIGRID=.false.
++++++ config.wave[22]: waveMULTIGRID=.false.
++++++ config.wave[23]: export MESH_WAV=mesh.glo_500.nc
++++++ config.wave[23]: MESH_WAV=mesh.glo_500.nc
++++++ config.wave[24]: export 'waveesmfGRD= '
++++++ config.wave[24]: waveesmfGRD=' '
++++++ config.wave[27]: case "${waveGRD}" in
++++++ config.wave[73]: export waveinterpGRD=
++++++ config.wave[73]: waveinterpGRD=
++++++ config.wave[74]: export wavepostGRD=glo_500
++++++ config.wave[74]: wavepostGRD=glo_500
++++++ config.wave[75]: export waveuoutpGRD=glo_500
++++++ config.wave[75]: waveuoutpGRD=glo_500
++++++ config.wave[84]: export WAVEWND_DID=
++++++ config.wave[84]: WAVEWND_DID=
++++++ config.wave[85]: export WAVEWND_FID=
++++++ config.wave[85]: WAVEWND_FID=
++++++ config.wave[88]: export WAVHINDH=0
++++++ config.wave[88]: WAVHINDH=0
++++++ config.wave[89]: export FHMAX_WAV_IBP=180
++++++ config.wave[89]: FHMAX_WAV_IBP=180
++++++ config.wave[90]: ((  FHMAX_WAV < FHMAX_WAV_IBP  ))
++++++ config.wave[90]: export FHMAX_WAV_IBP=120
++++++ config.wave[90]: FHMAX_WAV_IBP=120
++++++ config.wave[93]: export DTFLD_WAV=3600
++++++ config.wave[93]: DTFLD_WAV=3600
++++++ config.wave[94]: export DTPNT_WAV=3600
++++++ config.wave[94]: DTPNT_WAV=3600
++++++ config.wave[95]: export FHINCP_WAV=1
++++++ config.wave[95]: FHINCP_WAV=1
++++++ config.wave[98]: export 'OUTPARS_WAV=WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++++ config.wave[98]: OUTPARS_WAV='WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++++ config.wave[101]: export WAVHCYC=6
++++++ config.wave[101]: WAVHCYC=6
++++++ config.wave[102]: export FHMAX_WAV_CUR=192
++++++ config.wave[102]: FHMAX_WAV_CUR=192
++++++ config.wave[106]: export RSTTYPE_WAV=T
++++++ config.wave[106]: RSTTYPE_WAV=T
++++++ config.wave[107]: rst_dt_gfs=43200
++++++ config.wave[108]: [[ 43200 -gt 0 ]]
++++++ config.wave[109]: export DT_1_RST_WAV=0
++++++ config.wave[109]: DT_1_RST_WAV=0
++++++ config.wave[112]: export DT_2_RST_WAV=43200
++++++ config.wave[112]: DT_2_RST_WAV=43200
++++++ config.wave[118]: export RSTIOFF_WAV=0
++++++ config.wave[118]: RSTIOFF_WAV=0
++++++ config.wave[122]: export RUNMEM=-1
++++++ config.wave[122]: RUNMEM=-1
++++++ config.wave[125]: ((  RUNMEM == -1  ))
++++++ config.wave[127]: export waveMEMB=
++++++ config.wave[127]: waveMEMB=
++++++ config.wave[134]: export WW3ATMINP=CPL
++++++ config.wave[134]: WW3ATMINP=CPL
++++++ config.wave[135]: [[ YES == \Y\E\S ]]
++++++ config.wave[136]: export WW3ICEINP=CPL
++++++ config.wave[136]: WW3ICEINP=CPL
++++++ config.wave[137]: export WAVEICE_FID=
++++++ config.wave[137]: WAVEICE_FID=
++++++ config.wave[143]: export WAVECUR_DID=rtofs
++++++ config.wave[143]: WAVECUR_DID=rtofs
++++++ config.wave[144]: [[ YES == \Y\E\S ]]
++++++ config.wave[145]: export WW3CURINP=CPL
++++++ config.wave[145]: WW3CURINP=CPL
++++++ config.wave[146]: export WAVECUR_FID=
++++++ config.wave[146]: WAVECUR_FID=
++++++ config.wave[153]: export WW3ATMIENS=F
++++++ config.wave[153]: WW3ATMIENS=F
++++++ config.wave[154]: export WW3ICEIENS=F
++++++ config.wave[154]: WW3ICEIENS=F
++++++ config.wave[155]: export WW3CURIENS=F
++++++ config.wave[155]: WW3CURIENS=F
++++++ config.wave[157]: export GOFILETYPE=1
++++++ config.wave[157]: GOFILETYPE=1
++++++ config.wave[158]: export POFILETYPE=1
++++++ config.wave[158]: POFILETYPE=1
++++++ config.wave[162]: export FUNIPNT=T
++++++ config.wave[162]: FUNIPNT=T
++++++ config.wave[164]: export IOSRV=1
++++++ config.wave[164]: IOSRV=1
++++++ config.wave[166]: export FPNTPROC=T
++++++ config.wave[166]: FPNTPROC=T
++++++ config.wave[168]: export FGRDPROC=F
++++++ config.wave[168]: FGRDPROC=F
++++++ config.wave[170]: export FLAGMASKCOMP=F
++++++ config.wave[170]: FLAGMASKCOMP=F
++++++ config.wave[172]: export FLAGMASKOUT=F
++++++ config.wave[172]: FLAGMASKOUT=F
++++++ config.wave[174]: echo 'END: config.wave'
+END: config.wave
+++++ config.ufs[461]: export cplwav=.true.
+++++ config.ufs[461]: cplwav=.true.
+++++ config.ufs[462]: export cplwav2atm=.true.
+++++ config.ufs[462]: cplwav2atm=.true.
+++++ config.ufs[463]: model_list=atm.ocean.ice.wave
+++++ config.ufs[464]: nthreads_ww3=2
+++++ config.ufs[465]: case "${ww3_res}" in
+++++ config.ufs[484]: ntasks_ww3=12
+++++ config.ufs[485]: nthreads_ww3=1
+++++ config.ufs[495]: export ntasks_ww3 nthreads_ww3
+++++ config.ufs[499]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[500]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.aero
++++++ config.aero[10]: case ${machine} in
++++++ config.aero[15]: AERO_INPUTS_DIR=/work2/noaa/global/wkolczyn/noscrub/global-workflow/gocart_emissions
++++++ config.aero[34]: export AERO_INPUTS_DIR
++++++ config.aero[36]: export AERO_DIAG_TABLE=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/fv3/diag_table.aero
++++++ config.aero[36]: AERO_DIAG_TABLE=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/fv3/diag_table.aero
++++++ config.aero[37]: export AERO_FIELD_TABLE=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/fv3/field_table.aero
++++++ config.aero[37]: AERO_FIELD_TABLE=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/fv3/field_table.aero
++++++ config.aero[39]: export AERO_EMIS_FIRE=qfed
++++++ config.aero[39]: AERO_EMIS_FIRE=qfed
++++++ config.aero[41]: export AERO_CONFIG_DIR=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/gocart
++++++ config.aero[41]: AERO_CONFIG_DIR=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/gocart
++++++ config.aero[46]: export 'fscav_aero='\''*:0.3'\'','\''so2:0.0'\'','\''msa:0.0'\'','\''dms:0.0'\'','\''nh3:0.4'\'','\''nh4:0.6'\'','\''bc1:0.6'\'','\''bc2:0.6'\'','\''oc1:0.4'\'','\''oc2:0.4'\'','\''dust1:0.6'\'','\''dust2:0.6'\'', '\''dust3:0.6'\'','\''dust4:0.6'\'','\''dust5:0.6'\'','\''seas1:0.5'\'','\''seas2:0.5'\'','\''seas3:0.5'\'','\''seas4:0.5'\'','\''seas5:0.5'\'''
++++++ config.aero[46]: fscav_aero=''\''*:0.3'\'','\''so2:0.0'\'','\''msa:0.0'\'','\''dms:0.0'\'','\''nh3:0.4'\'','\''nh4:0.6'\'','\''bc1:0.6'\'','\''bc2:0.6'\'','\''oc1:0.4'\'','\''oc2:0.4'\'','\''dust1:0.6'\'','\''dust2:0.6'\'', '\''dust3:0.6'\'','\''dust4:0.6'\'','\''dust5:0.6'\'','\''seas1:0.5'\'','\''seas2:0.5'\'','\''seas3:0.5'\'','\''seas4:0.5'\'','\''seas5:0.5'\'''
++++++ config.aero[49]: export dnats_aero=2
++++++ config.aero[49]: dnats_aero=2
+++++ config.ufs[501]: export cplchm=.true.
+++++ config.ufs[501]: cplchm=.true.
+++++ config.ufs[502]: model_list=atm.ocean.ice.wave.aero
+++++ config.ufs[507]: [[ YES == \Y\E\S ]]
+++++ config.ufs[508]: tmpl_suffix=_esmf
+++++ config.ufs[510]: case "${model_list}" in
+++++ config.ufs[530]: default_template=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/ufs.configure.s2swa_esmf.IN
+++++ config.ufs[539]: export ufs_configure_template=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/ufs.configure.s2swa_esmf.IN
+++++ config.ufs[539]: ufs_configure_template=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/ufs.configure.s2swa_esmf.IN
+++++ config.ufs[540]: unset model_list default_template
+++++ config.ufs[542]: [[ ! -r /work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/ufs.configure.s2swa_esmf.IN ]]
+++++ config.ufs[547]: echo 'END: config.ufs'
+END: config.ufs
++++ config.fcst[34]: IFS=', '
++++ config.fcst[34]: read -ra segments
++++ config.fcst[36]: export FHMIN=0
++++ config.fcst[36]: FHMIN=0
++++ config.fcst[37]: export FHMAX=48
++++ config.fcst[37]: FHMAX=48
++++ config.fcst[39]: export FHMIN_WAV=0
++++ config.fcst[39]: FHMIN_WAV=0
++++ config.fcst[40]: export FHMAX_HF=0
++++ config.fcst[40]: FHMAX_HF=0
++++ config.fcst[41]: export FHMAX_WAV=48
++++ config.fcst[41]: FHMAX_WAV=48
++++ config.fcst[43]: export FHOUT=6
++++ config.fcst[43]: FHOUT=6
++++ config.fcst[44]: export FHOUT_HF=1
++++ config.fcst[44]: FHOUT_HF=1
++++ config.fcst[45]: export FHOUT_OCN=6
++++ config.fcst[45]: FHOUT_OCN=6
++++ config.fcst[46]: export FHOUT_ICE=6
++++ config.fcst[46]: FHOUT_ICE=6
++++ config.fcst[49]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.resources fcst
+++++ config.resources[7]: ((  1 != 1  ))
+++++ config.resources[14]: step=fcst
+++++ config.resources[16]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[18]: case ${machine} in
+++++ config.resources[22]: max_tasks_per_node=80
+++++ config.resources[59]: export max_tasks_per_node
+++++ config.resources[61]: case ${step} in
+++++ config.resources[89]: export is_exclusive=True
+++++ config.resources[89]: is_exclusive=True
+++++ config.resources[91]: export layout_x=1
+++++ config.resources[91]: layout_x=1
+++++ config.resources[92]: export layout_y=1
+++++ config.resources[92]: layout_y=1
+++++ config.resources[93]: export WRITE_GROUP=1
+++++ config.resources[93]: WRITE_GROUP=1
+++++ config.resources[94]: export WRTTASK_PER_GROUP_PER_THREAD=6
+++++ config.resources[94]: WRTTASK_PER_GROUP_PER_THREAD=6
+++++ config.resources[95]: ntasks_fv3=6
+++++ config.resources[96]: ntasks_quilt=6
+++++ config.resources[97]: nthreads_fv3=1
+++++ config.resources[98]: nthreads_ufs=1
+++++ config.resources[102]: [[ YES == \Y\E\S ]]
+++++ config.resources[103]: export UFS_THREADS=1
+++++ config.resources[103]: UFS_THREADS=1
+++++ config.resources[114]: ((  FV3PETS = ntasks_fv3 * nthreads_fv3  ))
+++++ config.resources[115]: echo 'FV3 using (nthreads, PETS) = (1, 6)'
+FV3 using (nthreads, PETS) = (1, 6)
+++++ config.resources[118]: [[ .true. == \.\t\r\u\e\. ]]
+++++ config.resources[119]: ((  QUILTPETS = ntasks_quilt * nthreads_fv3  ))
+++++ config.resources[120]: ((  WRTTASK_PER_GROUP = WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.resources[121]: export WRTTASK_PER_GROUP
+++++ config.resources[125]: echo 'QUILT using (nthreads, PETS) = (1, 6)'
+QUILT using (nthreads, PETS) = (1, 6)
+++++ config.resources[128]: ATMTHREADS=1
+++++ config.resources[129]: ((  ATMPETS = FV3PETS + QUILTPETS  ))
+++++ config.resources[130]: export ATMPETS ATMTHREADS
+++++ config.resources[131]: echo 'FV3ATM using (nthreads, PETS) = (1, 12)'
+FV3ATM using (nthreads, PETS) = (1, 12)
+++++ config.resources[134]: NTASKS_TOT=12
+++++ config.resources[140]: MEDTHREADS=1
+++++ config.resources[141]: MEDPETS=6
+++++ config.resources[142]: ((  6 > 300  ))
+++++ config.resources[143]: export MEDPETS MEDTHREADS
+++++ config.resources[144]: echo 'MEDIATOR using (threads, PETS) = (1, 6)'
+MEDIATOR using (threads, PETS) = (1, 6)
+++++ config.resources[146]: CHMPETS=0
+++++ config.resources[146]: CHMTHREADS=0
+++++ config.resources[147]: [[ YES == \Y\E\S ]]
+++++ config.resources[149]: ((  CHMTHREADS = ATMTHREADS  ))
+++++ config.resources[150]: ((  CHMPETS = FV3PETS  ))
+++++ config.resources[152]: echo 'GOCART using (threads, PETS) = (1, 6)'
+GOCART using (threads, PETS) = (1, 6)
+++++ config.resources[154]: export CHMPETS CHMTHREADS
+++++ config.resources[156]: WAVPETS=0
+++++ config.resources[156]: WAVTHREADS=0
+++++ config.resources[157]: [[ YES == \Y\E\S ]]
+++++ config.resources[158]: ((  WAVPETS = ntasks_ww3 * nthreads_ww3  ))
+++++ config.resources[159]: ((  WAVTHREADS = nthreads_ww3  ))
+++++ config.resources[160]: echo 'WW3 using (threads, PETS) = (1, 12)'
+WW3 using (threads, PETS) = (1, 12)
+++++ config.resources[161]: ((  NTASKS_TOT = NTASKS_TOT + WAVPETS  ))
+++++ config.resources[163]: export WAVPETS WAVTHREADS
+++++ config.resources[165]: OCNPETS=0
+++++ config.resources[165]: OCNTHREADS=0
+++++ config.resources[166]: [[ YES == \Y\E\S ]]
+++++ config.resources[167]: ((  OCNPETS = ntasks_mom6 * nthreads_mom6  ))
+++++ config.resources[168]: ((  OCNTHREADS = nthreads_mom6  ))
+++++ config.resources[169]: echo 'MOM6 using (threads, PETS) = (1, 8)'
+MOM6 using (threads, PETS) = (1, 8)
+++++ config.resources[170]: ((  NTASKS_TOT = NTASKS_TOT + OCNPETS  ))
+++++ config.resources[172]: export OCNPETS OCNTHREADS
+++++ config.resources[174]: ICEPETS=0
+++++ config.resources[174]: ICETHREADS=0
+++++ config.resources[175]: [[ YES == \Y\E\S ]]
+++++ config.resources[176]: ((  ICEPETS = ntasks_cice6 * nthreads_cice6  ))
+++++ config.resources[177]: ((  ICETHREADS = nthreads_cice6  ))
+++++ config.resources[178]: echo 'CICE6 using (threads, PETS) = (1, 4)'
+CICE6 using (threads, PETS) = (1, 4)
+++++ config.resources[179]: ((  NTASKS_TOT = NTASKS_TOT + ICEPETS  ))
+++++ config.resources[181]: export ICEPETS ICETHREADS
+++++ config.resources[183]: echo 'Total PETS = 36'
+Total PETS = 36
+++++ config.resources[185]: declare -x ntasks=36
+++++ config.resources[186]: declare -x threads_per_task=1
+++++ config.resources[187]: declare -x tasks_per_node=80
+++++ config.resources[189]: case "${CASE}" in
+++++ config.resources[191]: declare -x walltime=03:00:00
+++++ config.resources[202]: unset NTASKS_TOT
+++++ config.resources[314]: [[ -f /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.resources.HERCULES ]]
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=threads_per_task_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n 0 ]]
+++++ config.resources[324]: export threads_per_task
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=ntasks_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n 0 ]]
+++++ config.resources[324]: export ntasks
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=tasks_per_node_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n 0 ]]
+++++ config.resources[324]: export tasks_per_node
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=NTASKS_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n '' ]]
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=memory_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n '' ]]
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=walltime_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n 0 ]]
+++++ config.resources[324]: export walltime
+++++ config.resources[328]: echo 'END: config.resources'
+END: config.resources
++++ config.fcst[50]: export domains_stack_size=16000000
++++ config.fcst[50]: domains_stack_size=16000000
++++ config.fcst[53]: [[ YES == \Y\E\S ]]
++++ config.fcst[54]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.nsst
+++++ config.nsst[6]: echo 'BEGIN: config.nsst'
+BEGIN: config.nsst
+++++ config.nsst[11]: export NST_MODEL=2
+++++ config.nsst[11]: NST_MODEL=2
+++++ config.nsst[14]: export NST_SPINUP=0
+++++ config.nsst[14]: NST_SPINUP=0
+++++ config.nsst[15]: cdate=2021032312
+++++ config.nsst[16]: ((  cdate < 2017072000  ))
+++++ config.nsst[21]: export NST_RESV=0
+++++ config.nsst[21]: NST_RESV=0
+++++ config.nsst[24]: export ZSEA1=0
+++++ config.nsst[24]: ZSEA1=0
+++++ config.nsst[25]: export ZSEA2=0
+++++ config.nsst[25]: ZSEA2=0
+++++ config.nsst[27]: export NST_GSI=3
+++++ config.nsst[27]: NST_GSI=3
+++++ config.nsst[31]: export NSTINFO=0
+++++ config.nsst[31]: NSTINFO=0
+++++ config.nsst[32]: ((  NST_GSI > 0  ))
+++++ config.nsst[32]: export NSTINFO=4
+++++ config.nsst[32]: NSTINFO=4
+++++ config.nsst[34]: echo 'END: config.nsst'
+END: config.nsst
++++ config.fcst[57]: export esmf_profile=.false.
++++ config.fcst[57]: esmf_profile=.false.
++++ config.fcst[58]: export esmf_logkind=ESMF_LOGKIND_MULTI_ON_ERROR
++++ config.fcst[58]: esmf_logkind=ESMF_LOGKIND_MULTI_ON_ERROR
++++ config.fcst[63]: export FORECASTSH=/work2/noaa/global/CI/HERCULES/2982/gefs/scripts/exglobal_forecast.sh
++++ config.fcst[63]: FORECASTSH=/work2/noaa/global/CI/HERCULES/2982/gefs/scripts/exglobal_forecast.sh
++++ config.fcst[65]: export FCSTEXEC=ufs_model.x
++++ config.fcst[65]: FCSTEXEC=ufs_model.x
++++ config.fcst[69]: export TYPE=nh
++++ config.fcst[69]: TYPE=nh
++++ config.fcst[70]: export MONO=non-mono
++++ config.fcst[70]: MONO=non-mono
++++ config.fcst[73]: export h2o_phys=.true.
++++ config.fcst[73]: h2o_phys=.true.
++++ config.fcst[76]: export new_o3forc=YES
++++ config.fcst[76]: new_o3forc=YES
++++ config.fcst[78]: export gwd_opt=2
++++ config.fcst[78]: gwd_opt=2
++++ config.fcst[83]: ((  gwd_opt == 1  ))
++++ config.fcst[93]: ((  gwd_opt == 2  ))
++++ config.fcst[109]: export knob_ugwp_version=1
++++ config.fcst[109]: knob_ugwp_version=1
++++ config.fcst[110]: export do_ugwp=.false.
++++ config.fcst[110]: do_ugwp=.false.
++++ config.fcst[111]: export do_tofd=.false.
++++ config.fcst[111]: do_tofd=.false.
++++ config.fcst[112]: export do_ugwp_v0=.false.
++++ config.fcst[112]: do_ugwp_v0=.false.
++++ config.fcst[113]: export do_ugwp_v1=.true.
++++ config.fcst[113]: do_ugwp_v1=.true.
++++ config.fcst[114]: export do_ugwp_v0_orog_only=.false.
++++ config.fcst[114]: do_ugwp_v0_orog_only=.false.
++++ config.fcst[115]: export do_ugwp_v0_nst_only=.false.
++++ config.fcst[115]: do_ugwp_v0_nst_only=.false.
++++ config.fcst[116]: export do_gsl_drag_ls_bl=.true.
++++ config.fcst[116]: do_gsl_drag_ls_bl=.true.
++++ config.fcst[117]: export do_gsl_drag_ss=.false.
++++ config.fcst[117]: do_gsl_drag_ss=.false.
++++ config.fcst[118]: export do_gsl_drag_tofd=.true.
++++ config.fcst[118]: do_gsl_drag_tofd=.true.
++++ config.fcst[119]: export do_gwd_opt_psl=.true.
++++ config.fcst[119]: do_gwd_opt_psl=.true.
++++ config.fcst[120]: export do_ugwp_v1_orog_only=.false.
++++ config.fcst[120]: do_ugwp_v1_orog_only=.false.
+++++ config.fcst[121]: echo 128/2.35
+++++ config.fcst[121]: bc
++++ config.fcst[121]: launch_level=54
++++ config.fcst[122]: export launch_level
++++ config.fcst[126]: export d2_bg_k1=0.20
++++ config.fcst[126]: d2_bg_k1=0.20
++++ config.fcst[127]: export d2_bg_k2=0.04
++++ config.fcst[127]: d2_bg_k2=0.04
++++ config.fcst[128]: export dz_min=6
++++ config.fcst[128]: dz_min=6
++++ config.fcst[129]: export n_sponge=42
++++ config.fcst[129]: n_sponge=42
++++ config.fcst[132]: export hybedmf=.false.
++++ config.fcst[132]: hybedmf=.false.
++++ config.fcst[133]: export satmedmf=.true.
++++ config.fcst[133]: satmedmf=.true.
++++ config.fcst[134]: export isatmedmf=1
++++ config.fcst[134]: isatmedmf=1
++++ config.fcst[135]: tbf=
++++ config.fcst[136]: [[ .true. == \.\t\r\u\e\. ]]
++++ config.fcst[136]: tbf=_satmedmf
++++ config.fcst[139]: export progsigma=.true.
++++ config.fcst[139]: progsigma=.true.
++++ config.fcst[140]: tbp=
++++ config.fcst[141]: [[ .true. == \.\t\r\u\e\. ]]
++++ config.fcst[141]: tbp=_progsigma
++++ config.fcst[144]: [[ YES == \Y\E\S ]]
++++ config.fcst[145]: export IAER=2011
++++ config.fcst[145]: IAER=2011
++++ config.fcst[149]: export iovr_lw=3
++++ config.fcst[149]: iovr_lw=3
++++ config.fcst[150]: export iovr_sw=3
++++ config.fcst[150]: iovr_sw=3
++++ config.fcst[151]: export iovr=3
++++ config.fcst[151]: iovr=3
++++ config.fcst[152]: export icliq_sw=2
++++ config.fcst[152]: icliq_sw=2
++++ config.fcst[153]: export isubc_sw=2
++++ config.fcst[153]: isubc_sw=2
++++ config.fcst[154]: export isubc_lw=2
++++ config.fcst[154]: isubc_lw=2
++++ config.fcst[157]: export do_RRTMGP=.false.
++++ config.fcst[157]: do_RRTMGP=.false.
++++ config.fcst[158]: export doGP_cldoptics_LUT=.false.
++++ config.fcst[158]: doGP_cldoptics_LUT=.false.
++++ config.fcst[159]: export doGP_lwscat=.false.
++++ config.fcst[159]: doGP_lwscat=.false.
++++ config.fcst[163]: export iopt_sfc=3
++++ config.fcst[163]: iopt_sfc=3
++++ config.fcst[164]: export iopt_trs=2
++++ config.fcst[164]: iopt_trs=2
++++ config.fcst[167]: export dnats=0
++++ config.fcst[167]: dnats=0
++++ config.fcst[168]: export cal_pre=.true.
++++ config.fcst[168]: cal_pre=.true.
++++ config.fcst[169]: export do_sat_adj=.false.
++++ config.fcst[169]: do_sat_adj=.false.
++++ config.fcst[170]: export random_clds=.true.
++++ config.fcst[170]: random_clds=.true.
++++ config.fcst[172]: case ${imp_physics} in
++++ config.fcst[184]: export ncld=2
++++ config.fcst[184]: ncld=2
++++ config.fcst[185]: export FIELD_TABLE=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/fv3/field_table_thompson_noaero_tke_progsigma
++++ config.fcst[185]: FIELD_TABLE=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/fv3/field_table_thompson_noaero_tke_progsigma
++++ config.fcst[186]: export nwat=6
++++ config.fcst[186]: nwat=6
++++ config.fcst[188]: export cal_pre=.false.
++++ config.fcst[188]: cal_pre=.false.
++++ config.fcst[189]: export random_clds=.false.
++++ config.fcst[189]: random_clds=.false.
++++ config.fcst[190]: export effr_in=.true.
++++ config.fcst[190]: effr_in=.true.
++++ config.fcst[191]: export ltaerosol=.false.
++++ config.fcst[191]: ltaerosol=.false.
++++ config.fcst[192]: export lradar=.true.
++++ config.fcst[192]: lradar=.true.
++++ config.fcst[193]: export ttendlim=-999
++++ config.fcst[193]: ttendlim=-999
++++ config.fcst[194]: export dt_inner=600
++++ config.fcst[194]: dt_inner=600
++++ config.fcst[195]: export sedi_semi=.true.
++++ config.fcst[195]: sedi_semi=.true.
++++ config.fcst[196]: [[ .true. == .true. ]]
++++ config.fcst[196]: export dt_inner=1200
++++ config.fcst[196]: dt_inner=1200
++++ config.fcst[197]: [[ dt_inner -gt 300 ]]
++++ config.fcst[197]: export dt_inner=300
++++ config.fcst[197]: dt_inner=300
++++ config.fcst[198]: export decfl=10
++++ config.fcst[198]: decfl=10
++++ config.fcst[200]: export hord_mt_nh_nonmono=5
++++ config.fcst[200]: hord_mt_nh_nonmono=5
++++ config.fcst[201]: export hord_xx_nh_nonmono=5
++++ config.fcst[201]: hord_xx_nh_nonmono=5
++++ config.fcst[202]: export vtdm4_nh_nonmono=0.02
++++ config.fcst[202]: vtdm4_nh_nonmono=0.02
++++ config.fcst[203]: export nord=2
++++ config.fcst[203]: nord=2
++++ config.fcst[204]: export dddmp=0.1
++++ config.fcst[204]: dddmp=0.1
++++ config.fcst[205]: export d4_bg=0.12
++++ config.fcst[205]: d4_bg=0.12
++++ config.fcst[230]: export DO_SPPT=NO
++++ config.fcst[230]: DO_SPPT=NO
++++ config.fcst[231]: export DO_SKEB=NO
++++ config.fcst[231]: DO_SKEB=NO
++++ config.fcst[232]: export DO_SHUM=NO
++++ config.fcst[232]: DO_SHUM=NO
++++ config.fcst[233]: export DO_LAND_PERT=NO
++++ config.fcst[233]: DO_LAND_PERT=NO
++++ config.fcst[234]: export DO_CA=YES
++++ config.fcst[234]: DO_CA=YES
++++ config.fcst[237]: export cplmode=ufs.frac
++++ config.fcst[237]: cplmode=ufs.frac
++++ config.fcst[238]: [[ .true. == \.\f\a\l\s\e\. ]]
++++ config.fcst[241]: export psm_bc=1
++++ config.fcst[241]: psm_bc=1
++++ config.fcst[243]: export min_lakeice=0.15
++++ config.fcst[243]: min_lakeice=0.15
++++ config.fcst[244]: export min_seaice=1.0e-6
++++ config.fcst[244]: min_seaice=1.0e-6
++++ config.fcst[245]: export use_cice_alb=.true.
++++ config.fcst[245]: use_cice_alb=.true.
++++ config.fcst[247]: export FSICL=0
++++ config.fcst[247]: FSICL=0
++++ config.fcst[248]: export FSICS=0
++++ config.fcst[248]: FSICS=0
++++ config.fcst[252]: [[ NO == \Y\E\S ]]
++++ config.fcst[255]: export DIAG_TABLE=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/fv3/diag_table
++++ config.fcst[255]: DIAG_TABLE=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/fv3/diag_table
++++ config.fcst[259]: export restart_interval=12
++++ config.fcst[259]: restart_interval=12
++++ config.fcst[262]: export adjust_dry_mass=.false.
++++ config.fcst[262]: adjust_dry_mass=.false.
++++ config.fcst[265]: [[ C48 = C768 ]]
++++ config.fcst[268]: export io_layout=1,1
++++ config.fcst[268]: io_layout=1,1
++++ config.fcst[271]: ((  OFFSET_START_HOUR != 0  ))
++++ config.fcst[278]: echo 'END: config.fcst'
+END: config.fcst
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.efcs
++++ config.efcs[6]: echo 'BEGIN: config.efcs'
+BEGIN: config.efcs
++++ config.efcs[14]: export CASE=C48
++++ config.efcs[14]: CASE=C48
++++ config.efcs[17]: string='--fv3 C48'
++++ config.efcs[19]: [[ YES == \Y\E\S ]]
++++ config.efcs[19]: string='--fv3 C48 --mom6 500'
++++ config.efcs[20]: [[ YES == \Y\E\S ]]
++++ config.efcs[20]: string='--fv3 C48 --mom6 500 --cice6 500'
++++ config.efcs[21]: [[ YES == \Y\E\S ]]
++++ config.efcs[21]: string='--fv3 C48 --mom6 500 --cice6 500 --ww3 glo_500'
++++ config.efcs[22]: [[ YES == \Y\E\S ]]
++++ config.efcs[22]: string='--fv3 C48 --mom6 500 --cice6 500 --ww3 glo_500 --gocart'
++++ config.efcs[24]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.ufs --fv3 C48 --mom6 500 --cice6 500 --ww3 glo_500 --gocart
+++++ config.ufs[9]: echo 'BEGIN: config.ufs'
+BEGIN: config.ufs
+++++ config.ufs[11]: ((  9 <= 1  ))
+++++ config.ufs[26]: skip_mom6=true
+++++ config.ufs[27]: skip_cice6=true
+++++ config.ufs[28]: skip_ww3=true
+++++ config.ufs[29]: skip_gocart=true
+++++ config.ufs[30]: skip_mediator=true
+++++ config.ufs[33]: ((  9 > 0  ))
+++++ config.ufs[34]: key=--fv3
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[37]: fv3_res=C48
+++++ config.ufs[38]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  7 > 0  ))
+++++ config.ufs[34]: key=--mom6
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[41]: mom6_res=500
+++++ config.ufs[42]: skip_mom6=false
+++++ config.ufs[43]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  5 > 0  ))
+++++ config.ufs[34]: key=--cice6
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[46]: cice6_res=500
+++++ config.ufs[47]: skip_cice6=false
+++++ config.ufs[48]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  3 > 0  ))
+++++ config.ufs[34]: key=--ww3
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[51]: ww3_res=glo_500
+++++ config.ufs[52]: skip_ww3=false
+++++ config.ufs[53]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  1 > 0  ))
+++++ config.ufs[34]: key=--gocart
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[56]: skip_gocart=false
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  0 > 0  ))
+++++ config.ufs[67]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[68]: skip_mediator=false
+++++ config.ufs[72]: case "${fv3_res}" in
+++++ config.ufs[74]: export DELTIM=1200
+++++ config.ufs[74]: DELTIM=1200
+++++ config.ufs[75]: export layout_x=1
+++++ config.ufs[75]: layout_x=1
+++++ config.ufs[76]: export layout_y=1
+++++ config.ufs[76]: layout_y=1
+++++ config.ufs[77]: export layout_x_gfs=1
+++++ config.ufs[77]: layout_x_gfs=1
+++++ config.ufs[78]: export layout_y_gfs=1
+++++ config.ufs[78]: layout_y_gfs=1
+++++ config.ufs[79]: export nthreads_fv3=1
+++++ config.ufs[79]: nthreads_fv3=1
+++++ config.ufs[80]: export nthreads_fv3_gfs=1
+++++ config.ufs[80]: nthreads_fv3_gfs=1
+++++ config.ufs[81]: export nthreads_ufs=1
+++++ config.ufs[81]: nthreads_ufs=1
+++++ config.ufs[82]: export nthreads_ufs_gfs=1
+++++ config.ufs[82]: nthreads_ufs_gfs=1
+++++ config.ufs[83]: export xr_cnvcld=.false.
+++++ config.ufs[83]: xr_cnvcld=.false.
+++++ config.ufs[84]: export cdmbgwd=0.071,2.1,1.0,1.0
+++++ config.ufs[84]: cdmbgwd=0.071,2.1,1.0,1.0
+++++ config.ufs[85]: export cdmbgwd_gsl=40.0,1.77,1.0,1.0
+++++ config.ufs[85]: cdmbgwd_gsl=40.0,1.77,1.0,1.0
+++++ config.ufs[86]: export k_split=1
+++++ config.ufs[86]: k_split=1
+++++ config.ufs[87]: export n_split=4
+++++ config.ufs[87]: n_split=4
+++++ config.ufs[88]: export tau=10.0
+++++ config.ufs[88]: tau=10.0
+++++ config.ufs[89]: export rf_cutoff=100.0
+++++ config.ufs[89]: rf_cutoff=100.0
+++++ config.ufs[90]: export fv_sg_adj=3600
+++++ config.ufs[90]: fv_sg_adj=3600
+++++ config.ufs[91]: export knob_ugwp_tauamp=6.0e-3
+++++ config.ufs[91]: knob_ugwp_tauamp=6.0e-3
+++++ config.ufs[92]: export WRITE_GROUP=1
+++++ config.ufs[92]: WRITE_GROUP=1
+++++ config.ufs[93]: export WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[93]: WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[94]: export WRITE_GROUP_GFS=1
+++++ config.ufs[94]: WRITE_GROUP_GFS=1
+++++ config.ufs[95]: export WRTTASK_PER_GROUP_PER_THREAD_PER_TILE_GFS=1
+++++ config.ufs[95]: WRTTASK_PER_GROUP_PER_THREAD_PER_TILE_GFS=1
+++++ config.ufs[242]: ((  WRTTASK_PER_GROUP_PER_THREAD = WRTTASK_PER_GROUP_PER_THREAD_PER_TILE * 6  ))
+++++ config.ufs[243]: ((  WRTTASK_PER_GROUP_PER_THREAD_GFS = WRTTASK_PER_GROUP_PER_THREAD_PER_TILE_GFS * 6  ))
+++++ config.ufs[244]: export WRTTASK_PER_GROUP_PER_THREAD
+++++ config.ufs[245]: export WRTTASK_PER_GROUP_PER_THREAD_GFS
+++++ config.ufs[247]: ((  ntasks_fv3 = layout_x * layout_y * 6  ))
+++++ config.ufs[248]: ((  ntasks_fv3_gfs = layout_x_gfs * layout_y_gfs * 6  ))
+++++ config.ufs[249]: export ntasks_fv3
+++++ config.ufs[250]: export ntasks_fv3_gfs
+++++ config.ufs[252]: ((  ntasks_quilt = WRITE_GROUP * WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.ufs[253]: ((  ntasks_quilt_gfs = WRITE_GROUP_GFS * WRTTASK_PER_GROUP_PER_THREAD_GFS  ))
+++++ config.ufs[254]: export ntasks_quilt
+++++ config.ufs[255]: export ntasks_quilt_gfs
+++++ config.ufs[259]: case ${fv3_res} in
+++++ config.ufs[261]: zstandard_level=0
+++++ config.ufs[262]: ideflate=0
+++++ config.ufs[263]: quantize_nsd=0
+++++ config.ufs[264]: OUTPUT_FILETYPE_ATM=netcdf
+++++ config.ufs[265]: OUTPUT_FILETYPE_SFC=netcdf
+++++ config.ufs[283]: export zstandard_level ideflate quantize_nsd
+++++ config.ufs[284]: export OUTPUT_FILETYPE_ATM OUTPUT_FILETYPE_SFC
+++++ config.ufs[287]: export cpl=.false.
+++++ config.ufs[287]: cpl=.false.
+++++ config.ufs[288]: export cplflx=.false.
+++++ config.ufs[288]: cplflx=.false.
+++++ config.ufs[289]: export cplice=.false.
+++++ config.ufs[289]: cplice=.false.
+++++ config.ufs[290]: export cplchm=.false.
+++++ config.ufs[290]: cplchm=.false.
+++++ config.ufs[291]: export cplwav=.false.
+++++ config.ufs[291]: cplwav=.false.
+++++ config.ufs[292]: export cplwav2atm=.false.
+++++ config.ufs[292]: cplwav2atm=.false.
+++++ config.ufs[293]: export CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[293]: CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[294]: model_list=atm
+++++ config.ufs[297]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[298]: export cpl=.true.
+++++ config.ufs[298]: cpl=.true.
+++++ config.ufs[299]: export nthreads_mediator=1
+++++ config.ufs[299]: nthreads_mediator=1
+++++ config.ufs[300]: export CCPP_SUITE=FV3_GFS_v17_coupled_p8_ugwpv1
+++++ config.ufs[300]: CCPP_SUITE=FV3_GFS_v17_coupled_p8_ugwpv1
+++++ config.ufs[304]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[305]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.ocn
++++++ config.ocn[3]: echo 'BEGIN: config.ocn'
+BEGIN: config.ocn
++++++ config.ocn[5]: export MESH_OCN=mesh.mx500.nc
++++++ config.ocn[5]: MESH_OCN=mesh.mx500.nc
++++++ config.ocn[7]: export DO_OCN_SPPT=NO
++++++ config.ocn[7]: DO_OCN_SPPT=NO
++++++ config.ocn[8]: export DO_OCN_PERT_EPBL=NO
++++++ config.ocn[8]: DO_OCN_PERT_EPBL=NO
++++++ config.ocn[11]: export MOM6_USE_LI2016=True
++++++ config.ocn[11]: MOM6_USE_LI2016=True
++++++ config.ocn[12]: export MOM6_THERMO_SPAN=False
++++++ config.ocn[12]: MOM6_THERMO_SPAN=False
++++++ config.ocn[14]: [[ NO == \Y\E\S ]]
++++++ config.ocn[17]: export ODA_INCUPD=False
++++++ config.ocn[17]: ODA_INCUPD=False
++++++ config.ocn[21]: [[ NO == \Y\E\S ]]
++++++ config.ocn[24]: export ODA_INCUPD_NHOURS=3.0
++++++ config.ocn[24]: ODA_INCUPD_NHOURS=3.0
++++++ config.ocn[29]: echo 'END: config.ocn'
+END: config.ocn
+++++ config.ufs[306]: export cplflx=.true.
+++++ config.ufs[306]: cplflx=.true.
+++++ config.ufs[307]: model_list=atm.ocean
+++++ config.ufs[308]: nthreads_mom6=1
+++++ config.ufs[309]: case "${mom6_res}" in
+++++ config.ufs[311]: ntasks_mom6=8
+++++ config.ufs[312]: OCNTIM=3600
+++++ config.ufs[313]: NX_GLB=72
+++++ config.ufs[314]: NY_GLB=35
+++++ config.ufs[315]: DT_DYNAM_MOM6=3600
+++++ config.ufs[316]: DT_THERM_MOM6=3600
+++++ config.ufs[317]: FRUNOFF=
+++++ config.ufs[318]: CHLCLIM=seawifs_1998-2006_smoothed_2X.nc
+++++ config.ufs[319]: MOM6_RESTART_SETTING=r
+++++ config.ufs[320]: MOM6_RIVER_RUNOFF=False
+++++ config.ufs[321]: [[ gefs == \g\f\s ]]
+++++ config.ufs[321]: [[ gefs == \g\e\f\s ]]
+++++ config.ufs[322]: MOM6_DIAG_MISVAL=-1e34
+++++ config.ufs[326]: eps_imesh=4.0e-1
+++++ config.ufs[327]: MOM6_DIAG_COORD_DEF_Z_FILE=oceanda_zgrid_25L.nc
+++++ config.ufs[328]: MOM6_ALLOW_LANDMASK_CHANGES=False
+++++ config.ufs[329]: TOPOEDITS=
+++++ config.ufs[403]: export nthreads_mom6 ntasks_mom6
+++++ config.ufs[404]: export OCNTIM
+++++ config.ufs[405]: export NX_GLB NY_GLB
+++++ config.ufs[406]: export DT_DYNAM_MOM6 DT_THERM_MOM6
+++++ config.ufs[407]: export FRUNOFF
+++++ config.ufs[408]: export CHLCLIM
+++++ config.ufs[409]: export TOPOEDITS
+++++ config.ufs[410]: export MOM6_RIVER_RUNOFF
+++++ config.ufs[411]: export MOM6_RESTART_SETTING
+++++ config.ufs[412]: export eps_imesh
+++++ config.ufs[413]: export MOM6_DIAG_COORD_DEF_Z_FILE
+++++ config.ufs[414]: export MOM6_DIAG_MISVAL
+++++ config.ufs[415]: export MOM6_ALLOW_LANDMASK_CHANGES
+++++ config.ufs[419]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[420]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.ice
++++++ config.ice[3]: echo 'BEGIN: config.ice'
+BEGIN: config.ice
++++++ config.ice[6]: export min_seaice=1.0e-6
++++++ config.ice[6]: min_seaice=1.0e-6
++++++ config.ice[7]: export use_cice_alb=.true.
++++++ config.ice[7]: use_cice_alb=.true.
++++++ config.ice[9]: export MESH_ICE=mesh.mx500.nc
++++++ config.ice[9]: MESH_ICE=mesh.mx500.nc
++++++ config.ice[11]: export CICE_GRID=grid_cice_NEMS_mx500.nc
++++++ config.ice[11]: CICE_GRID=grid_cice_NEMS_mx500.nc
++++++ config.ice[12]: export CICE_MASK=kmtu_cice_NEMS_mx500.nc
++++++ config.ice[12]: CICE_MASK=kmtu_cice_NEMS_mx500.nc
++++++ config.ice[14]: echo 'END: config.ice'
+END: config.ice
+++++ config.ufs[421]: export cplice=.true.
+++++ config.ufs[421]: cplice=.true.
+++++ config.ufs[422]: model_list=atm.ocean.ice
+++++ config.ufs[424]: [[ false == \t\r\u\e ]]
+++++ config.ufs[429]: nthreads_cice6=1
+++++ config.ufs[430]: case "${cice6_res}" in
+++++ config.ufs[432]: ntasks_cice6=4
+++++ config.ufs[433]: cice6_processor_shape=slenderX1
+++++ config.ufs[454]: export nthreads_cice6 ntasks_cice6
+++++ config.ufs[455]: export cice6_processor_shape
+++++ config.ufs[459]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[460]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.wave
++++++ config.wave[6]: echo 'BEGIN: config.wave'
+BEGIN: config.wave
++++++ config.wave[13]: export RUNwave=gefswave
++++++ config.wave[13]: RUNwave=gefswave
++++++ config.wave[16]: export RUNRSTwave=gdas
++++++ config.wave[16]: RUNRSTwave=gdas
++++++ config.wave[19]: export waveGRDN=1
++++++ config.wave[19]: waveGRDN=1
++++++ config.wave[20]: export waveGRDG=10
++++++ config.wave[20]: waveGRDG=10
++++++ config.wave[21]: export USE_WAV_RMP=NO
++++++ config.wave[21]: USE_WAV_RMP=NO
++++++ config.wave[22]: export waveMULTIGRID=.false.
++++++ config.wave[22]: waveMULTIGRID=.false.
++++++ config.wave[23]: export MESH_WAV=mesh.glo_500.nc
++++++ config.wave[23]: MESH_WAV=mesh.glo_500.nc
++++++ config.wave[24]: export 'waveesmfGRD= '
++++++ config.wave[24]: waveesmfGRD=' '
++++++ config.wave[27]: case "${waveGRD}" in
++++++ config.wave[73]: export waveinterpGRD=
++++++ config.wave[73]: waveinterpGRD=
++++++ config.wave[74]: export wavepostGRD=glo_500
++++++ config.wave[74]: wavepostGRD=glo_500
++++++ config.wave[75]: export waveuoutpGRD=glo_500
++++++ config.wave[75]: waveuoutpGRD=glo_500
++++++ config.wave[84]: export WAVEWND_DID=
++++++ config.wave[84]: WAVEWND_DID=
++++++ config.wave[85]: export WAVEWND_FID=
++++++ config.wave[85]: WAVEWND_FID=
++++++ config.wave[88]: export WAVHINDH=0
++++++ config.wave[88]: WAVHINDH=0
++++++ config.wave[89]: export FHMAX_WAV_IBP=180
++++++ config.wave[89]: FHMAX_WAV_IBP=180
++++++ config.wave[90]: ((  FHMAX_WAV < FHMAX_WAV_IBP  ))
++++++ config.wave[90]: export FHMAX_WAV_IBP=48
++++++ config.wave[90]: FHMAX_WAV_IBP=48
++++++ config.wave[93]: export DTFLD_WAV=3600
++++++ config.wave[93]: DTFLD_WAV=3600
++++++ config.wave[94]: export DTPNT_WAV=3600
++++++ config.wave[94]: DTPNT_WAV=3600
++++++ config.wave[95]: export FHINCP_WAV=1
++++++ config.wave[95]: FHINCP_WAV=1
++++++ config.wave[98]: export 'OUTPARS_WAV=WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++++ config.wave[98]: OUTPARS_WAV='WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++++ config.wave[101]: export WAVHCYC=6
++++++ config.wave[101]: WAVHCYC=6
++++++ config.wave[102]: export FHMAX_WAV_CUR=192
++++++ config.wave[102]: FHMAX_WAV_CUR=192
++++++ config.wave[106]: export RSTTYPE_WAV=T
++++++ config.wave[106]: RSTTYPE_WAV=T
++++++ config.wave[107]: rst_dt_gfs=43200
++++++ config.wave[108]: [[ 43200 -gt 0 ]]
++++++ config.wave[109]: export DT_1_RST_WAV=0
++++++ config.wave[109]: DT_1_RST_WAV=0
++++++ config.wave[112]: export DT_2_RST_WAV=43200
++++++ config.wave[112]: DT_2_RST_WAV=43200
++++++ config.wave[118]: export RSTIOFF_WAV=0
++++++ config.wave[118]: RSTIOFF_WAV=0
++++++ config.wave[122]: export RUNMEM=-1
++++++ config.wave[122]: RUNMEM=-1
++++++ config.wave[125]: ((  RUNMEM == -1  ))
++++++ config.wave[127]: export waveMEMB=
++++++ config.wave[127]: waveMEMB=
++++++ config.wave[134]: export WW3ATMINP=CPL
++++++ config.wave[134]: WW3ATMINP=CPL
++++++ config.wave[135]: [[ YES == \Y\E\S ]]
++++++ config.wave[136]: export WW3ICEINP=CPL
++++++ config.wave[136]: WW3ICEINP=CPL
++++++ config.wave[137]: export WAVEICE_FID=
++++++ config.wave[137]: WAVEICE_FID=
++++++ config.wave[143]: export WAVECUR_DID=rtofs
++++++ config.wave[143]: WAVECUR_DID=rtofs
++++++ config.wave[144]: [[ YES == \Y\E\S ]]
++++++ config.wave[145]: export WW3CURINP=CPL
++++++ config.wave[145]: WW3CURINP=CPL
++++++ config.wave[146]: export WAVECUR_FID=
++++++ config.wave[146]: WAVECUR_FID=
++++++ config.wave[153]: export WW3ATMIENS=F
++++++ config.wave[153]: WW3ATMIENS=F
++++++ config.wave[154]: export WW3ICEIENS=F
++++++ config.wave[154]: WW3ICEIENS=F
++++++ config.wave[155]: export WW3CURIENS=F
++++++ config.wave[155]: WW3CURIENS=F
++++++ config.wave[157]: export GOFILETYPE=1
++++++ config.wave[157]: GOFILETYPE=1
++++++ config.wave[158]: export POFILETYPE=1
++++++ config.wave[158]: POFILETYPE=1
++++++ config.wave[162]: export FUNIPNT=T
++++++ config.wave[162]: FUNIPNT=T
++++++ config.wave[164]: export IOSRV=1
++++++ config.wave[164]: IOSRV=1
++++++ config.wave[166]: export FPNTPROC=T
++++++ config.wave[166]: FPNTPROC=T
++++++ config.wave[168]: export FGRDPROC=F
++++++ config.wave[168]: FGRDPROC=F
++++++ config.wave[170]: export FLAGMASKCOMP=F
++++++ config.wave[170]: FLAGMASKCOMP=F
++++++ config.wave[172]: export FLAGMASKOUT=F
++++++ config.wave[172]: FLAGMASKOUT=F
++++++ config.wave[174]: echo 'END: config.wave'
+END: config.wave
+++++ config.ufs[461]: export cplwav=.true.
+++++ config.ufs[461]: cplwav=.true.
+++++ config.ufs[462]: export cplwav2atm=.true.
+++++ config.ufs[462]: cplwav2atm=.true.
+++++ config.ufs[463]: model_list=atm.ocean.ice.wave
+++++ config.ufs[464]: nthreads_ww3=2
+++++ config.ufs[465]: case "${ww3_res}" in
+++++ config.ufs[484]: ntasks_ww3=12
+++++ config.ufs[485]: nthreads_ww3=1
+++++ config.ufs[495]: export ntasks_ww3 nthreads_ww3
+++++ config.ufs[499]: [[ false == \f\a\l\s\e ]]
+++++ config.ufs[500]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.aero
++++++ config.aero[10]: case ${machine} in
++++++ config.aero[15]: AERO_INPUTS_DIR=/work2/noaa/global/wkolczyn/noscrub/global-workflow/gocart_emissions
++++++ config.aero[34]: export AERO_INPUTS_DIR
++++++ config.aero[36]: export AERO_DIAG_TABLE=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/fv3/diag_table.aero
++++++ config.aero[36]: AERO_DIAG_TABLE=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/fv3/diag_table.aero
++++++ config.aero[37]: export AERO_FIELD_TABLE=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/fv3/field_table.aero
++++++ config.aero[37]: AERO_FIELD_TABLE=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/fv3/field_table.aero
++++++ config.aero[39]: export AERO_EMIS_FIRE=qfed
++++++ config.aero[39]: AERO_EMIS_FIRE=qfed
++++++ config.aero[41]: export AERO_CONFIG_DIR=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/gocart
++++++ config.aero[41]: AERO_CONFIG_DIR=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/gocart
++++++ config.aero[46]: export 'fscav_aero='\''*:0.3'\'','\''so2:0.0'\'','\''msa:0.0'\'','\''dms:0.0'\'','\''nh3:0.4'\'','\''nh4:0.6'\'','\''bc1:0.6'\'','\''bc2:0.6'\'','\''oc1:0.4'\'','\''oc2:0.4'\'','\''dust1:0.6'\'','\''dust2:0.6'\'', '\''dust3:0.6'\'','\''dust4:0.6'\'','\''dust5:0.6'\'','\''seas1:0.5'\'','\''seas2:0.5'\'','\''seas3:0.5'\'','\''seas4:0.5'\'','\''seas5:0.5'\'''
++++++ config.aero[46]: fscav_aero=''\''*:0.3'\'','\''so2:0.0'\'','\''msa:0.0'\'','\''dms:0.0'\'','\''nh3:0.4'\'','\''nh4:0.6'\'','\''bc1:0.6'\'','\''bc2:0.6'\'','\''oc1:0.4'\'','\''oc2:0.4'\'','\''dust1:0.6'\'','\''dust2:0.6'\'', '\''dust3:0.6'\'','\''dust4:0.6'\'','\''dust5:0.6'\'','\''seas1:0.5'\'','\''seas2:0.5'\'','\''seas3:0.5'\'','\''seas4:0.5'\'','\''seas5:0.5'\'''
++++++ config.aero[49]: export dnats_aero=2
++++++ config.aero[49]: dnats_aero=2
+++++ config.ufs[501]: export cplchm=.true.
+++++ config.ufs[501]: cplchm=.true.
+++++ config.ufs[502]: model_list=atm.ocean.ice.wave.aero
+++++ config.ufs[507]: [[ YES == \Y\E\S ]]
+++++ config.ufs[508]: tmpl_suffix=_esmf
+++++ config.ufs[510]: case "${model_list}" in
+++++ config.ufs[530]: default_template=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/ufs.configure.s2swa_esmf.IN
+++++ config.ufs[539]: export ufs_configure_template=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/ufs.configure.s2swa_esmf.IN
+++++ config.ufs[539]: ufs_configure_template=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/ufs.configure.s2swa_esmf.IN
+++++ config.ufs[540]: unset model_list default_template
+++++ config.ufs[542]: [[ ! -r /work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/ufs.configure.s2swa_esmf.IN ]]
+++++ config.ufs[547]: echo 'END: config.ufs'
+END: config.ufs
++++ config.efcs[27]: source /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.resources efcs
+++++ config.resources[7]: ((  1 != 1  ))
+++++ config.resources[14]: step=efcs
+++++ config.resources[16]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[18]: case ${machine} in
+++++ config.resources[22]: max_tasks_per_node=80
+++++ config.resources[59]: export max_tasks_per_node
+++++ config.resources[61]: case ${step} in
+++++ config.resources[89]: export is_exclusive=True
+++++ config.resources[89]: is_exclusive=True
+++++ config.resources[91]: export layout_x=1
+++++ config.resources[91]: layout_x=1
+++++ config.resources[92]: export layout_y=1
+++++ config.resources[92]: layout_y=1
+++++ config.resources[93]: export WRITE_GROUP=1
+++++ config.resources[93]: WRITE_GROUP=1
+++++ config.resources[94]: export WRTTASK_PER_GROUP_PER_THREAD=6
+++++ config.resources[94]: WRTTASK_PER_GROUP_PER_THREAD=6
+++++ config.resources[95]: ntasks_fv3=6
+++++ config.resources[96]: ntasks_quilt=6
+++++ config.resources[97]: nthreads_fv3=1
+++++ config.resources[98]: nthreads_ufs=1
+++++ config.resources[102]: [[ YES == \Y\E\S ]]
+++++ config.resources[103]: export UFS_THREADS=1
+++++ config.resources[103]: UFS_THREADS=1
+++++ config.resources[114]: ((  FV3PETS = ntasks_fv3 * nthreads_fv3  ))
+++++ config.resources[115]: echo 'FV3 using (nthreads, PETS) = (1, 6)'
+FV3 using (nthreads, PETS) = (1, 6)
+++++ config.resources[118]: [[ .true. == \.\t\r\u\e\. ]]
+++++ config.resources[119]: ((  QUILTPETS = ntasks_quilt * nthreads_fv3  ))
+++++ config.resources[120]: ((  WRTTASK_PER_GROUP = WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.resources[121]: export WRTTASK_PER_GROUP
+++++ config.resources[125]: echo 'QUILT using (nthreads, PETS) = (1, 6)'
+QUILT using (nthreads, PETS) = (1, 6)
+++++ config.resources[128]: ATMTHREADS=1
+++++ config.resources[129]: ((  ATMPETS = FV3PETS + QUILTPETS  ))
+++++ config.resources[130]: export ATMPETS ATMTHREADS
+++++ config.resources[131]: echo 'FV3ATM using (nthreads, PETS) = (1, 12)'
+FV3ATM using (nthreads, PETS) = (1, 12)
+++++ config.resources[134]: NTASKS_TOT=12
+++++ config.resources[140]: MEDTHREADS=1
+++++ config.resources[141]: MEDPETS=6
+++++ config.resources[142]: ((  6 > 300  ))
+++++ config.resources[143]: export MEDPETS MEDTHREADS
+++++ config.resources[144]: echo 'MEDIATOR using (threads, PETS) = (1, 6)'
+MEDIATOR using (threads, PETS) = (1, 6)
+++++ config.resources[146]: CHMPETS=0
+++++ config.resources[146]: CHMTHREADS=0
+++++ config.resources[147]: [[ YES == \Y\E\S ]]
+++++ config.resources[149]: ((  CHMTHREADS = ATMTHREADS  ))
+++++ config.resources[150]: ((  CHMPETS = FV3PETS  ))
+++++ config.resources[152]: echo 'GOCART using (threads, PETS) = (1, 6)'
+GOCART using (threads, PETS) = (1, 6)
+++++ config.resources[154]: export CHMPETS CHMTHREADS
+++++ config.resources[156]: WAVPETS=0
+++++ config.resources[156]: WAVTHREADS=0
+++++ config.resources[157]: [[ YES == \Y\E\S ]]
+++++ config.resources[158]: ((  WAVPETS = ntasks_ww3 * nthreads_ww3  ))
+++++ config.resources[159]: ((  WAVTHREADS = nthreads_ww3  ))
+++++ config.resources[160]: echo 'WW3 using (threads, PETS) = (1, 12)'
+WW3 using (threads, PETS) = (1, 12)
+++++ config.resources[161]: ((  NTASKS_TOT = NTASKS_TOT + WAVPETS  ))
+++++ config.resources[163]: export WAVPETS WAVTHREADS
+++++ config.resources[165]: OCNPETS=0
+++++ config.resources[165]: OCNTHREADS=0
+++++ config.resources[166]: [[ YES == \Y\E\S ]]
+++++ config.resources[167]: ((  OCNPETS = ntasks_mom6 * nthreads_mom6  ))
+++++ config.resources[168]: ((  OCNTHREADS = nthreads_mom6  ))
+++++ config.resources[169]: echo 'MOM6 using (threads, PETS) = (1, 8)'
+MOM6 using (threads, PETS) = (1, 8)
+++++ config.resources[170]: ((  NTASKS_TOT = NTASKS_TOT + OCNPETS  ))
+++++ config.resources[172]: export OCNPETS OCNTHREADS
+++++ config.resources[174]: ICEPETS=0
+++++ config.resources[174]: ICETHREADS=0
+++++ config.resources[175]: [[ YES == \Y\E\S ]]
+++++ config.resources[176]: ((  ICEPETS = ntasks_cice6 * nthreads_cice6  ))
+++++ config.resources[177]: ((  ICETHREADS = nthreads_cice6  ))
+++++ config.resources[178]: echo 'CICE6 using (threads, PETS) = (1, 4)'
+CICE6 using (threads, PETS) = (1, 4)
+++++ config.resources[179]: ((  NTASKS_TOT = NTASKS_TOT + ICEPETS  ))
+++++ config.resources[181]: export ICEPETS ICETHREADS
+++++ config.resources[183]: echo 'Total PETS = 36'
+Total PETS = 36
+++++ config.resources[185]: declare -x ntasks=36
+++++ config.resources[186]: declare -x threads_per_task=1
+++++ config.resources[187]: declare -x tasks_per_node=80
+++++ config.resources[189]: case "${CASE}" in
+++++ config.resources[191]: declare -x walltime=03:00:00
+++++ config.resources[202]: unset NTASKS_TOT
+++++ config.resources[314]: [[ -f /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/EXPDIR/C48_S2SWA_gefs_4d85e36f/config.resources.HERCULES ]]
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=threads_per_task_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n 0 ]]
+++++ config.resources[324]: export threads_per_task
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=ntasks_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n 0 ]]
+++++ config.resources[324]: export ntasks
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=tasks_per_node_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n 0 ]]
+++++ config.resources[324]: export tasks_per_node
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=NTASKS_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n '' ]]
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=memory_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n '' ]]
+++++ config.resources[319]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[320]: run_resource_var=walltime_gefs
+++++ config.resources[321]: [[ -n '' ]]
+++++ config.resources[323]: [[ -n 0 ]]
+++++ config.resources[324]: export walltime
+++++ config.resources[328]: echo 'END: config.resources'
+END: config.resources
++++ config.efcs[30]: export DO_SKEB=YES
++++ config.efcs[30]: DO_SKEB=YES
++++ config.efcs[31]: export SKEB=0.8,-999,-999,-999,-999
++++ config.efcs[31]: SKEB=0.8,-999,-999,-999,-999
++++ config.efcs[32]: export SKEB_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[32]: SKEB_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[33]: export SKEB_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[33]: SKEB_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[34]: export SKEBNORM=1
++++ config.efcs[34]: SKEBNORM=1
++++ config.efcs[35]: export SKEB_NPASS=30
++++ config.efcs[35]: SKEB_NPASS=30
++++ config.efcs[36]: export SKEB_VDOF=5
++++ config.efcs[36]: SKEB_VDOF=5
++++ config.efcs[37]: export DO_SPPT=YES
++++ config.efcs[37]: DO_SPPT=YES
++++ config.efcs[38]: export SPPT=0.56,0.28,0.14,0.056,0.028
++++ config.efcs[38]: SPPT=0.56,0.28,0.14,0.056,0.028
++++ config.efcs[39]: export SPPT_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[39]: SPPT_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[40]: export SPPT_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[40]: SPPT_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[41]: export SPPT_LOGIT=.true.
++++ config.efcs[41]: SPPT_LOGIT=.true.
++++ config.efcs[42]: export SPPT_SFCLIMIT=.true.
++++ config.efcs[42]: SPPT_SFCLIMIT=.true.
++++ config.efcs[43]: export DO_CA=YES
++++ config.efcs[43]: DO_CA=YES
++++ config.efcs[45]: export DO_OCN_SPPT=YES
++++ config.efcs[45]: DO_OCN_SPPT=YES
++++ config.efcs[46]: export OCNSPPT=0.8,0.4,0.2,0.08,0.04
++++ config.efcs[46]: OCNSPPT=0.8,0.4,0.2,0.08,0.04
++++ config.efcs[47]: export OCNSPPT_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[47]: OCNSPPT_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[48]: export OCNSPPT_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[48]: OCNSPPT_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[49]: export DO_OCN_PERT_EPBL=YES
++++ config.efcs[49]: DO_OCN_PERT_EPBL=YES
++++ config.efcs[50]: export EPBL=0.8,0.4,0.2,0.08,0.04
++++ config.efcs[50]: EPBL=0.8,0.4,0.2,0.08,0.04
++++ config.efcs[51]: export EPBL_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[51]: EPBL_TAU=2.16E4,2.592E5,2.592E6,7.776E6,3.1536E7
++++ config.efcs[52]: export EPBL_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[52]: EPBL_LSCALE=500.E3,1000.E3,2000.E3,2000.E3,2000.E3
++++ config.efcs[54]: [[ NO == \Y\E\S ]]
++++ config.efcs[63]: export ODA_INCUPD=False
++++ config.efcs[63]: ODA_INCUPD=False
++++ config.efcs[65]: export restart_interval=12
++++ config.efcs[65]: restart_interval=12
++++ config.efcs[67]: echo 'END: config.efcs'
+END: config.efcs
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /work2/noaa/global/CI/HERCULES/2982/gefs/env/HERCULES.env efcs
++++ HERCULES.env[3]: [[ 1 -ne 1 ]]
++++ HERCULES.env[10]: step=efcs
++++ HERCULES.env[12]: export 'launcher=srun -l --export=ALL --hint=nomultithread'
++++ HERCULES.env[12]: launcher='srun -l --export=ALL --hint=nomultithread'
++++ HERCULES.env[13]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[13]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ HERCULES.env[16]: export MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[16]: MPI_BUFS_PER_PROC=2048
++++ HERCULES.env[17]: export MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[17]: MPI_BUFS_PER_HOST=2048
++++ HERCULES.env[18]: export MPI_GROUP_MAX=256
++++ HERCULES.env[18]: MPI_GROUP_MAX=256
++++ HERCULES.env[19]: export MPI_MEMMAP_OFF=1
++++ HERCULES.env[19]: MPI_MEMMAP_OFF=1
++++ HERCULES.env[20]: export MP_STDOUTMODE=ORDERED
++++ HERCULES.env[20]: MP_STDOUTMODE=ORDERED
++++ HERCULES.env[21]: export KMP_AFFINITY=scatter
++++ HERCULES.env[21]: KMP_AFFINITY=scatter
++++ HERCULES.env[22]: export OMP_STACKSIZE=2048000
++++ HERCULES.env[22]: OMP_STACKSIZE=2048000
++++ HERCULES.env[23]: export NTHSTACK=1024000000
++++ HERCULES.env[23]: NTHSTACK=1024000000
++++ HERCULES.env[25]: export I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[25]: I_MPI_EXTRA_FILESYSTEM=1
++++ HERCULES.env[26]: export I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[26]: I_MPI_EXTRA_FILESYSTEM_LIST=lustre
++++ HERCULES.env[28]: ulimit -s unlimited
++++ HERCULES.env[29]: ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 2049808
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 520192000
+open files                          (-n) 131072
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) unlimited
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 1028698
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
++++ HERCULES.env[33]: [[ -n 36 ]]
++++ HERCULES.env[33]: [[ -n 80 ]]
++++ HERCULES.env[33]: [[ -n 80 ]]
++++ HERCULES.env[34]: max_threads_per_task=1
++++ HERCULES.env[35]: NTHREADSmax=1
++++ HERCULES.env[36]: NTHREADS1=1
++++ HERCULES.env[37]: [[ 1 -gt 1 ]]
++++ HERCULES.env[38]: [[ 1 -gt 1 ]]
++++ HERCULES.env[39]: APRUN_default='srun -l --export=ALL --hint=nomultithread -n 36'
++++ HERCULES.env[45]: case ${step} in
++++ HERCULES.env[214]: export OMP_STACKSIZE=512M
++++ HERCULES.env[214]: OMP_STACKSIZE=512M
++++ HERCULES.env[216]: ((  nnodes = (ntasks+tasks_per_node-1)/tasks_per_node  ))
++++ HERCULES.env[217]: ((  ufs_ntasks = nnodes*tasks_per_node  ))
++++ HERCULES.env[219]: export 'APRUN_UFS=srun -l --export=ALL --hint=nomultithread -n 80'
++++ HERCULES.env[219]: APRUN_UFS='srun -l --export=ALL --hint=nomultithread -n 80'
++++ HERCULES.env[220]: unset nnodes ufs_ntasks
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
++ JGLOBAL_FORECAST[16]: export DATArestart=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/restart
++ JGLOBAL_FORECAST[16]: DATArestart=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/restart
++ JGLOBAL_FORECAST[17]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/restart ]]
++ JGLOBAL_FORECAST[18]: export DATAoutput=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/output
++ JGLOBAL_FORECAST[18]: DATAoutput=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/output
++ JGLOBAL_FORECAST[19]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/output ]]
++ JGLOBAL_FORECAST[26]: rCDUMP=gefs
++ JGLOBAL_FORECAST[27]: export rCDUMP=gefs
++ JGLOBAL_FORECAST[27]: rCDUMP=gefs
+++ JGLOBAL_FORECAST[31]: date --utc -d '20210323 12 - 6 hours' +%Y%m%d%H
++ JGLOBAL_FORECAST[31]: GDATE=2021032306
++ JGLOBAL_FORECAST[32]: declare -rx GDATE
++ JGLOBAL_FORECAST[34]: declare -rx gPDY=20210323
++ JGLOBAL_FORECAST[35]: declare -rx gcyc=06
++ JGLOBAL_FORECAST[38]: YMD=20210323
++ JGLOBAL_FORECAST[38]: HH=12
++ JGLOBAL_FORECAST[38]: declare_from_tmpl -rx COMIN_ATMOS_INPUT:COM_ATMOS_INPUT_TMPL COMIN_ATMOS_ANALYSIS:COM_ATMOS_ANALYSIS_TMPL COMOUT_CONF:COM_CONF_TMPL COMOUT_ATMOS_RESTART:COM_ATMOS_RESTART_TMPL COMOUT_ATMOS_HISTORY:COM_ATMOS_HISTORY_TMPL COMOUT_ATMOS_MASTER:COM_ATMOS_MASTER_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ATMOS_INPUT=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/atmos/input
+declare_from_tmpl :: COMIN_ATMOS_ANALYSIS=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/analysis/atmos
+declare_from_tmpl :: COMOUT_CONF=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/conf
+declare_from_tmpl :: COMOUT_ATMOS_RESTART=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/atmos/restart
+declare_from_tmpl :: COMOUT_ATMOS_HISTORY=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/atmos/history
+declare_from_tmpl :: COMOUT_ATMOS_MASTER=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/atmos/master
++ JGLOBAL_FORECAST[46]: RUN=gefs
++ JGLOBAL_FORECAST[46]: YMD=20210323
++ JGLOBAL_FORECAST[46]: HH=06
++ JGLOBAL_FORECAST[46]: declare_from_tmpl -rx COMIN_ATMOS_RESTART_PREV:COM_ATMOS_RESTART_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ATMOS_RESTART_PREV=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/06/mem002/model/atmos/restart
++ JGLOBAL_FORECAST[49]: [[ YES == \Y\E\S ]]
++ JGLOBAL_FORECAST[50]: YMD=20210323
++ JGLOBAL_FORECAST[50]: HH=12
++ JGLOBAL_FORECAST[50]: declare_from_tmpl -rx COMIN_WAVE_PREP:COM_WAVE_PREP_TMPL COMOUT_WAVE_RESTART:COM_WAVE_RESTART_TMPL COMOUT_WAVE_HISTORY:COM_WAVE_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_WAVE_PREP=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/wave/prep
+declare_from_tmpl :: COMOUT_WAVE_RESTART=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/wave/restart
+declare_from_tmpl :: COMOUT_WAVE_HISTORY=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/wave/history
++ JGLOBAL_FORECAST[54]: RUN=gefs
++ JGLOBAL_FORECAST[54]: YMD=20210323
++ JGLOBAL_FORECAST[54]: HH=06
++ JGLOBAL_FORECAST[54]: declare_from_tmpl -rx COMIN_WAVE_RESTART_PREV:COM_WAVE_RESTART_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_WAVE_RESTART_PREV=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/06/mem002/model/wave/restart
++ JGLOBAL_FORECAST[58]: [[ YES == \Y\E\S ]]
++ JGLOBAL_FORECAST[59]: YMD=20210323
++ JGLOBAL_FORECAST[59]: HH=12
++ JGLOBAL_FORECAST[59]: declare_from_tmpl -rx COMIN_OCEAN_ANALYSIS:COM_OCEAN_ANALYSIS_TMPL COMIN_OCEAN_INPUT:COM_OCEAN_INPUT_TMPL COMOUT_MED_RESTART:COM_MED_RESTART_TMPL COMOUT_OCEAN_RESTART:COM_OCEAN_RESTART_TMPL COMOUT_OCEAN_HISTORY:COM_OCEAN_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_OCEAN_ANALYSIS=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/analysis/ocean
+declare_from_tmpl :: COMIN_OCEAN_INPUT=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/ocean/input
+declare_from_tmpl :: COMOUT_MED_RESTART=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/med/restart
+declare_from_tmpl :: COMOUT_OCEAN_RESTART=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/ocean/restart
+declare_from_tmpl :: COMOUT_OCEAN_HISTORY=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/ocean/history
++ JGLOBAL_FORECAST[65]: RUN=gefs
++ JGLOBAL_FORECAST[65]: YMD=20210323
++ JGLOBAL_FORECAST[65]: HH=06
++ JGLOBAL_FORECAST[65]: declare_from_tmpl -rx COMIN_OCEAN_RESTART_PREV:COM_OCEAN_RESTART_TMPL COMIN_MED_RESTART_PREV:COM_MED_RESTART_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_OCEAN_RESTART_PREV=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/06/mem002/model/ocean/restart
+declare_from_tmpl :: COMIN_MED_RESTART_PREV=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/06/mem002/model/med/restart
++ JGLOBAL_FORECAST[70]: [[ YES == \Y\E\S ]]
++ JGLOBAL_FORECAST[71]: YMD=20210323
++ JGLOBAL_FORECAST[71]: HH=12
++ JGLOBAL_FORECAST[71]: declare_from_tmpl -rx COMIN_ICE_INPUT:COM_ICE_INPUT_TMPL COMIN_ICE_ANALYSIS:COM_ICE_ANALYSIS_TMPL COMOUT_ICE_RESTART:COM_ICE_RESTART_TMPL COMOUT_ICE_HISTORY:COM_ICE_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ICE_INPUT=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/ice/input
+declare_from_tmpl :: COMIN_ICE_ANALYSIS=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/analysis/ice
+declare_from_tmpl :: COMOUT_ICE_RESTART=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/ice/restart
+declare_from_tmpl :: COMOUT_ICE_HISTORY=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/ice/history
++ JGLOBAL_FORECAST[76]: RUN=gefs
++ JGLOBAL_FORECAST[76]: YMD=20210323
++ JGLOBAL_FORECAST[76]: HH=06
++ JGLOBAL_FORECAST[76]: declare_from_tmpl -rx COMIN_ICE_RESTART_PREV:COM_ICE_RESTART_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ICE_RESTART_PREV=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/06/mem002/model/ice/restart
++ JGLOBAL_FORECAST[80]: [[ YES == \Y\E\S ]]
++ JGLOBAL_FORECAST[81]: YMD=20210323
++ JGLOBAL_FORECAST[81]: HH=12
++ JGLOBAL_FORECAST[81]: declare_from_tmpl -rx COMOUT_CHEM_HISTORY:COM_CHEM_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMOUT_CHEM_HISTORY=/work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/chem/history
++ JGLOBAL_FORECAST[89]: /work2/noaa/global/CI/HERCULES/2982/gefs/scripts/exglobal_forecast.sh
+Begin exglobal_forecast.sh at Tue Nov 12 17:52:48 UTC 2024
++ exglobal_forecast.sh[83]: source /work2/noaa/global/CI/HERCULES/2982/gefs/ush/forecast_predet.sh
++ exglobal_forecast.sh[84]: source /work2/noaa/global/CI/HERCULES/2982/gefs/ush/forecast_det.sh
++ exglobal_forecast.sh[85]: source /work2/noaa/global/CI/HERCULES/2982/gefs/ush/forecast_postdet.sh
++ exglobal_forecast.sh[86]: source /work2/noaa/global/CI/HERCULES/2982/gefs/ush/parsing_ufs_configure.sh
++ exglobal_forecast.sh[88]: source /work2/noaa/global/CI/HERCULES/2982/gefs/ush/atparse.bash
++ exglobal_forecast.sh[91]: cpl=.true.
++ exglobal_forecast.sh[92]: cplflx=.true.
++ exglobal_forecast.sh[93]: cplwav=.true.
++ exglobal_forecast.sh[94]: cplchm=.true.
++ exglobal_forecast.sh[95]: cplice=.true.
++ exglobal_forecast.sh[97]: OCNTIM=3600
++ exglobal_forecast.sh[98]: DELTIM=1200
++ exglobal_forecast.sh[99]: ICETIM=1200
++ exglobal_forecast.sh[101]: CPL_SLOW=3600
++ exglobal_forecast.sh[102]: CPL_FAST=1200
++ exglobal_forecast.sh[104]: echo 'MAIN: Loading common variables before determination of run type'
+MAIN: Loading common variables before determination of run type
++ exglobal_forecast.sh[105]: common_predet
++ forecast_predet.sh[73]: echo 'SUB common_predet: Defining variables for shared through model components'
+SUB common_predet: Defining variables for shared through model components
++ forecast_predet.sh[75]: RUN=gefs
++ forecast_predet.sh[76]: rCDUMP=gefs
++ forecast_predet.sh[78]: CDATE=2021032312
++ forecast_predet.sh[79]: ENSMEM=002
++ forecast_predet.sh[80]: MEMBER=2
++ forecast_predet.sh[83]: half_window=3
++ forecast_predet.sh[84]: current_cycle=2021032312
+++ forecast_predet.sh[85]: date --utc -d '20210323 12 - 6 hours' +%Y%m%d%H
++ forecast_predet.sh[85]: previous_cycle=2021032306
+++ forecast_predet.sh[86]: date --utc -d '20210323 12 + 6 hours' +%Y%m%d%H
++ forecast_predet.sh[86]: next_cycle=2021032318
+++ forecast_predet.sh[87]: date --utc -d '20210323 12 - 3 hours' +%Y%m%d%H
++ forecast_predet.sh[87]: current_cycle_begin=2021032309
+++ forecast_predet.sh[88]: date --utc -d '20210323 12 + 3 hours' +%Y%m%d%H
++ forecast_predet.sh[88]: current_cycle_end=2021032315
+++ forecast_predet.sh[89]: date --utc -d '20210323 18 - 3 hours' +%Y%m%d%H
++ forecast_predet.sh[89]: next_cycle_begin=2021032315
+++ forecast_predet.sh[90]: date --utc -d '20210323 12 + 48 hours' +%Y%m%d%H
++ forecast_predet.sh[90]: forecast_end_cycle=2021032512
++ forecast_predet.sh[93]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[97]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[100]: model_start_date_current_cycle=2021032312
++ forecast_predet.sh[102]: model_start_date_next_cycle=2021032318
++ forecast_predet.sh[105]: FHMIN=0
++ forecast_predet.sh[106]: FHMAX=48
++ forecast_predet.sh[107]: FHOUT=6
++ forecast_predet.sh[108]: FHMAX_HF=0
++ forecast_predet.sh[109]: FHOUT_HF=1
++ forecast_predet.sh[111]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/conf ]]
++ forecast_predet.sh[113]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889
++ forecast_predet.sh[116]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT ]]
++ forecast_predet.sh[116]: mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT
++ exglobal_forecast.sh[107]: echo 'MAIN: Loading variables before determination of run type'
+MAIN: Loading variables before determination of run type
++ exglobal_forecast.sh[108]: FV3_predet
++ forecast_predet.sh[122]: echo 'SUB FV3_predet: Defining variables for FV3'
+SUB FV3_predet: Defining variables for FV3
++ forecast_predet.sh[124]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/atmos/history ]]
++ forecast_predet.sh[125]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/atmos/master ]]
++ forecast_predet.sh[126]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/atmos/restart ]]
++ forecast_predet.sh[127]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/restart/FV3_RESTART ]]
++ forecast_predet.sh[128]: /bin/ln -sf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/restart/FV3_RESTART /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/RESTART
++ forecast_predet.sh[130]: FHZER=6
++ forecast_predet.sh[131]: FHCYC=24
++ forecast_predet.sh[132]: restart_interval=12
++ forecast_predet.sh[135]: ((  restart_interval == 0  ))
++ forecast_predet.sh[140]: mapfile -t FV3_RESTART_FH
+++ forecast_predet.sh[140]: seq 12 12 48
++ forecast_predet.sh[142]: local nrestarts=4
++ forecast_predet.sh[143]: ((  FV3_RESTART_FH[nrestarts-1] != FHMAX  ))
++ forecast_predet.sh[150]: FV3_OUTPUT_FH=
++ forecast_predet.sh[151]: local fhr=0
++ forecast_predet.sh[152]: ((  FHOUT_HF > 0 && FHMAX_HF > 0  ))
+++ forecast_predet.sh[156]: seq -s ' ' 0 6 48
++ forecast_predet.sh[156]: FV3_OUTPUT_FH=' 0 6 12 18 24 30 36 42 48'
++ forecast_predet.sh[161]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[184]: FV3_OUTPUT_FH_NML=' 0 6 12 18 24 30 36 42 48'
++ forecast_predet.sh[188]: PREFIX_ATMINC=
++ forecast_predet.sh[191]: IAUFHRS=0
++ forecast_predet.sh[192]: IAU_DELTHRS=0
++ forecast_predet.sh[197]: res=48
++ forecast_predet.sh[198]: resp=49
++ forecast_predet.sh[199]: npx=49
++ forecast_predet.sh[200]: npy=49
++ forecast_predet.sh[201]: npz=127
++ forecast_predet.sh[202]: io_layout=1,1
++ forecast_predet.sh[206]: JCAP_CASE=94
++ forecast_predet.sh[207]: LONB_CASE=192
++ forecast_predet.sh[208]: LATB_CASE=96
++ forecast_predet.sh[210]: JCAP=94
++ forecast_predet.sh[211]: LONB=192
++ forecast_predet.sh[212]: LATB=96
++ forecast_predet.sh[214]: LONB_IMO=192
++ forecast_predet.sh[215]: LATB_JMO=96
++ forecast_predet.sh[225]: NST_MODEL=2
++ forecast_predet.sh[226]: NST_SPINUP=0
++ forecast_predet.sh[227]: NST_RESV=0
++ forecast_predet.sh[228]: ZSEA1=0
++ forecast_predet.sh[229]: ZSEA2=0
++ forecast_predet.sh[230]: nstf_name=2,0,0,0,0
++ forecast_predet.sh[231]: nst_anl=.true.
++ forecast_predet.sh[237]: blocksize=32
++ forecast_predet.sh[240]: filtered_terrain=.true.
++ forecast_predet.sh[241]: gfs_dwinds=.true.
++ forecast_predet.sh[244]: no_dycore=.false.
++ forecast_predet.sh[245]: dycore_only=.false.
++ forecast_predet.sh[246]: chksum_debug=.false.
++ forecast_predet.sh[247]: print_freq=6
++ forecast_predet.sh[253]: na_init=1
++ forecast_predet.sh[255]: local suite_file=/work2/noaa/global/CI/HERCULES/2982/gefs/sorc/ufs_model.fd/FV3/ccpp/suites/suite_FV3_GFS_v17_coupled_p8_ugwpv1.xml
++ forecast_predet.sh[256]: [[ ! -f /work2/noaa/global/CI/HERCULES/2982/gefs/sorc/ufs_model.fd/FV3/ccpp/suites/suite_FV3_GFS_v17_coupled_p8_ugwpv1.xml ]]
++ forecast_predet.sh[262]: local num_noahmpdrv
+++ forecast_predet.sh[263]: grep -c noahmpdrv /work2/noaa/global/CI/HERCULES/2982/gefs/sorc/ufs_model.fd/FV3/ccpp/suites/suite_FV3_GFS_v17_coupled_p8_ugwpv1.xml
++ forecast_predet.sh[263]: num_noahmpdrv=1
++ forecast_predet.sh[264]: ((  num_noahmpdrv > 0  ))
++ forecast_predet.sh[265]: lsm=2
++ forecast_predet.sh[266]: lheatstrg=.false.
++ forecast_predet.sh[267]: landice=.false.
++ forecast_predet.sh[268]: iopt_dveg=4
++ forecast_predet.sh[269]: iopt_crs=2
++ forecast_predet.sh[270]: iopt_btr=1
++ forecast_predet.sh[271]: iopt_run=1
++ forecast_predet.sh[272]: iopt_sfc=3
++ forecast_predet.sh[273]: iopt_frz=1
++ forecast_predet.sh[274]: iopt_inf=1
++ forecast_predet.sh[275]: iopt_rad=3
++ forecast_predet.sh[276]: iopt_alb=1
++ forecast_predet.sh[277]: iopt_snf=4
++ forecast_predet.sh[278]: iopt_tbot=2
++ forecast_predet.sh[279]: iopt_stc=3
++ forecast_predet.sh[280]: IALB=2
++ forecast_predet.sh[281]: IEMS=2
++ forecast_predet.sh[302]: [[ nh == \n\h ]]
++ forecast_predet.sh[303]: hydrostatic=.false.
++ forecast_predet.sh[304]: phys_hydrostatic=.false.
++ forecast_predet.sh[305]: use_hydro_pressure=.false.
++ forecast_predet.sh[306]: make_nh=.true.
++ forecast_predet.sh[307]: pass_full_omega_to_physics_in_non_hydrostatic_mode=.true.
++ forecast_predet.sh[316]: consv_te=1.
++ forecast_predet.sh[317]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[322]: consv_te=1.
++ forecast_predet.sh[323]: k_split=1
++ forecast_predet.sh[327]: n_split=4
++ forecast_predet.sh[329]: [[ non- == \m\o\n\o ]]
++ forecast_predet.sh[340]: d_con=1.
++ forecast_predet.sh[341]: do_vort_damp=.true.
++ forecast_predet.sh[342]: [[ nh == \n\h ]]
++ forecast_predet.sh[343]: hord_mt=5
++ forecast_predet.sh[344]: hord_xx=5
++ forecast_predet.sh[351]: [[ non- != \m\o\n\o ]]
++ forecast_predet.sh[351]: [[ nh == \n\h ]]
++ forecast_predet.sh[352]: vtdm4=0.02
++ forecast_predet.sh[358]: nggps_ic=.true.
++ forecast_predet.sh[359]: ncep_ic=.false.
++ forecast_predet.sh[360]: external_ic=.true.
++ forecast_predet.sh[361]: mountain=.false.
++ forecast_predet.sh[362]: warm_start=.false.
++ forecast_predet.sh[363]: read_increment=.false.
++ forecast_predet.sh[364]: res_latlon_dynamics='""'
++ forecast_predet.sh[367]: do_skeb=.false.
++ forecast_predet.sh[368]: do_shum=.false.
++ forecast_predet.sh[369]: do_sppt=.false.
++ forecast_predet.sh[370]: do_ca=.false.
++ forecast_predet.sh[371]: ISEED=0
++ forecast_predet.sh[372]: ((  MEMBER > 0  ))
++ forecast_predet.sh[373]: local imem=2
++ forecast_predet.sh[374]: local base_seed=20210323120200
++ forecast_predet.sh[376]: [[ YES == \Y\E\S ]]
++ forecast_predet.sh[377]: do_skeb=.true.
++ forecast_predet.sh[378]: ISEED_SKEB=20210323120201
++ forecast_predet.sh[381]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[386]: [[ YES == \Y\E\S ]]
++ forecast_predet.sh[387]: do_sppt=.true.
++ forecast_predet.sh[388]: ISEED_SPPT=20210323120203,20210323120204,20210323120205,20210323120206,20210323120207
++ forecast_predet.sh[391]: [[ YES == \Y\E\S ]]
++ forecast_predet.sh[392]: do_ca=.true.
++ forecast_predet.sh[393]: ISEED_CA=354518301
++ forecast_predet.sh[396]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[411]: FNGLAC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_glacier.2x2.grb
++ forecast_predet.sh[412]: FNMXIC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_maxice.2x2.grb
++ forecast_predet.sh[413]: FNTSFC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/RTGSST.1982.2012.monthly.clim.grb
++ forecast_predet.sh[414]: FNSNOC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_snoclim.1.875.grb
++ forecast_predet.sh[415]: FNZORC=igbp
++ forecast_predet.sh[416]: FNAISC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/IMS-NIC.blended.ice.monthly.clim.grb
++ forecast_predet.sh[417]: FNALBC2=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/sfc/C48.mx500.facsf.tileX.nc
++ forecast_predet.sh[418]: FNTG3C=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/sfc/C48.mx500.substrate_temperature.tileX.nc
++ forecast_predet.sh[419]: FNVEGC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/sfc/C48.mx500.vegetation_greenness.tileX.nc
++ forecast_predet.sh[420]: FNMSKH=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_slmask.t1534.3072.1536.grb
++ forecast_predet.sh[421]: FNVMNC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/sfc/C48.mx500.vegetation_greenness.tileX.nc
++ forecast_predet.sh[422]: FNVMXC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/sfc/C48.mx500.vegetation_greenness.tileX.nc
++ forecast_predet.sh[423]: FNSLPC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/sfc/C48.mx500.slope_type.tileX.nc
++ forecast_predet.sh[424]: FNALBC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/sfc/C48.mx500.snowfree_albedo.tileX.nc
++ forecast_predet.sh[425]: FNVETC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/sfc/C48.mx500.vegetation_type.tileX.nc
++ forecast_predet.sh[426]: FNSOTC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/sfc/C48.mx500.soil_type.tileX.nc
++ forecast_predet.sh[427]: FNSOCC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/sfc/C48.mx500.soil_color.tileX.nc
++ forecast_predet.sh[428]: FNABSC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/sfc/C48.mx500.maximum_snow_albedo.tileX.nc
++ forecast_predet.sh[429]: FNSMCC=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_soilmgldas.statsgo.t94.192.96.grb
++ forecast_predet.sh[432]: [[ ! -f /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_soilmgldas.statsgo.t94.192.96.grb ]]
++ forecast_predet.sh[435]: [[ .true. == \.\f\a\l\s\e\. ]]
++ forecast_predet.sh[438]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/C48_mosaic.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/C48_mosaic.nc
++ forecast_predet.sh[442]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd/ugwp_limb_tau.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/ugwp_limb_tau.nc
++ forecast_predet.sh[445]: local tt
++ forecast_predet.sh[446]: (( tt = 1 ))
++ forecast_predet.sh[446]: (( tt <= ntiles ))
++ forecast_predet.sh[447]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/C48.mx500_oro_data.tile1.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data.tile1.nc
++ forecast_predet.sh[448]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/C48_grid.tile1.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/C48_grid.tile1.nc
++ forecast_predet.sh[449]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd/C48/C48_oro_data_ls.tile1.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data_ls.tile1.nc
++ forecast_predet.sh[450]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd/C48/C48_oro_data_ss.tile1.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data_ss.tile1.nc
++ forecast_predet.sh[446]: (( tt++  ))
++ forecast_predet.sh[446]: (( tt <= ntiles ))
++ forecast_predet.sh[447]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/C48.mx500_oro_data.tile2.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data.tile2.nc
++ forecast_predet.sh[448]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/C48_grid.tile2.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/C48_grid.tile2.nc
++ forecast_predet.sh[449]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd/C48/C48_oro_data_ls.tile2.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data_ls.tile2.nc
++ forecast_predet.sh[450]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd/C48/C48_oro_data_ss.tile2.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data_ss.tile2.nc
++ forecast_predet.sh[446]: (( tt++  ))
++ forecast_predet.sh[446]: (( tt <= ntiles ))
++ forecast_predet.sh[447]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/C48.mx500_oro_data.tile3.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data.tile3.nc
++ forecast_predet.sh[448]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/C48_grid.tile3.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/C48_grid.tile3.nc
++ forecast_predet.sh[449]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd/C48/C48_oro_data_ls.tile3.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data_ls.tile3.nc
++ forecast_predet.sh[450]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd/C48/C48_oro_data_ss.tile3.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data_ss.tile3.nc
++ forecast_predet.sh[446]: (( tt++  ))
++ forecast_predet.sh[446]: (( tt <= ntiles ))
++ forecast_predet.sh[447]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/C48.mx500_oro_data.tile4.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data.tile4.nc
++ forecast_predet.sh[448]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/C48_grid.tile4.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/C48_grid.tile4.nc
++ forecast_predet.sh[449]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd/C48/C48_oro_data_ls.tile4.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data_ls.tile4.nc
++ forecast_predet.sh[450]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd/C48/C48_oro_data_ss.tile4.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data_ss.tile4.nc
++ forecast_predet.sh[446]: (( tt++  ))
++ forecast_predet.sh[446]: (( tt <= ntiles ))
++ forecast_predet.sh[447]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/C48.mx500_oro_data.tile5.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data.tile5.nc
++ forecast_predet.sh[448]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/C48_grid.tile5.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/C48_grid.tile5.nc
++ forecast_predet.sh[449]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd/C48/C48_oro_data_ls.tile5.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data_ls.tile5.nc
++ forecast_predet.sh[450]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd/C48/C48_oro_data_ss.tile5.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data_ss.tile5.nc
++ forecast_predet.sh[446]: (( tt++  ))
++ forecast_predet.sh[446]: (( tt <= ntiles ))
++ forecast_predet.sh[447]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/C48.mx500_oro_data.tile6.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data.tile6.nc
++ forecast_predet.sh[448]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/orog/C48/C48_grid.tile6.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/C48_grid.tile6.nc
++ forecast_predet.sh[449]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd/C48/C48_oro_data_ls.tile6.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data_ls.tile6.nc
++ forecast_predet.sh[450]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/ugwd/C48/C48_oro_data_ss.tile6.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/oro_data_ss.tile6.nc
++ forecast_predet.sh[446]: (( tt++  ))
++ forecast_predet.sh[446]: (( tt <= ntiles ))
++ forecast_predet.sh[452]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[461]: local noahmptablefile=/work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/noahmptable.tbl
++ forecast_predet.sh[462]: [[ ! -f /work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/noahmptable.tbl ]]
++ forecast_predet.sh[466]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/noahmptable.tbl /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/noahmptable.tbl
++ forecast_predet.sh[470]: ((  imp_physics == 8  ))
++ forecast_predet.sh[471]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/CCN_ACTIVATE.BIN /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/CCN_ACTIVATE.BIN
++ forecast_predet.sh[472]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/freezeH2O.dat /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/freezeH2O.dat
++ forecast_predet.sh[473]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/qr_acr_qgV2.dat /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/qr_acr_qgV2.dat
++ forecast_predet.sh[474]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/qr_acr_qsV2.dat /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/qr_acr_qsV2.dat
++ forecast_predet.sh[477]: [[ YES == \Y\E\S ]]
++ forecast_predet.sh[478]: O3FORC=ozprdlos_2015_new_sbuvO3_tclm15_nuchem.f77
++ forecast_predet.sh[482]: H2OFORC=global_h2o_pltc.f77
++ forecast_predet.sh[483]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/ozprdlos_2015_new_sbuvO3_tclm15_nuchem.f77 /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/global_o3prdlos.f77
++ forecast_predet.sh[484]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_h2o_pltc.f77 /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/global_h2oprdlos.f77
++ forecast_predet.sh[488]: ISOL=2
++ forecast_predet.sh[490]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_solarconstant_noaa_an.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/solarconstant_noaa_an.txt
++ forecast_predet.sh[491]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_sfc_emissivity_idx.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/sfc_emissivity_idx.txt
++ forecast_predet.sh[494]: IAER=2011
++ forecast_predet.sh[497]: ((  IAER == 1011  ))
++ forecast_predet.sh[505]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_climaeropac_global.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/aerosol.dat
++ forecast_predet.sh[506]: ((  IAER > 0  ))
++ forecast_predet.sh[507]: local file
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1850-1859.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1850-1859.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1850-1859.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1860-1869.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1860-1869.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1860-1869.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1870-1879.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1870-1879.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1870-1879.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1880-1889.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1880-1889.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1880-1889.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1890-1899.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1890-1899.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1890-1899.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1900-1909.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1900-1909.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1900-1909.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1910-1919.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1910-1919.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1910-1919.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1920-1929.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1920-1929.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1920-1929.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1930-1939.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1930-1939.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1930-1939.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1940-1949.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1940-1949.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1940-1949.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1950-1959.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1950-1959.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1950-1959.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1960-1969.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1960-1969.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1960-1969.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1970-1979.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1970-1979.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1970-1979.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1980-1989.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1980-1989.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1980-1989.txt
++ forecast_predet.sh[508]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[509]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/volcanic_aerosols_1990-1999.txt
++ forecast_predet.sh[509]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_volcanic_aerosols_1990-1999.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/volcanic_aerosols_1990-1999.txt
++ forecast_predet.sh[513]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/lut/optics_BC.v1_3.dat /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/optics_BC.dat
++ forecast_predet.sh[514]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/lut/optics_OC.v1_3.dat /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/optics_OC.dat
++ forecast_predet.sh[515]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/lut/optics_DU.v15_3.dat /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/optics_DU.dat
++ forecast_predet.sh[516]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/lut/optics_SS.v3_3.dat /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/optics_SS.dat
++ forecast_predet.sh[517]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/lut/optics_SU.v1_3.dat /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/optics_SU.dat
++ forecast_predet.sh[520]: ICO2=2
++ forecast_predet.sh[522]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/global_co2historicaldata_glob.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_glob.txt
++ forecast_predet.sh[523]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/co2monthlycyc.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2monthlycyc.txt
++ forecast_predet.sh[526]: local co2dir
++ forecast_predet.sh[527]: co2dir=fix_co2_proj
++ forecast_predet.sh[528]: [[ '' == \Y\E\S ]]
++ forecast_predet.sh[531]: ((  ICO2 > 0  ))
++ forecast_predet.sh[532]: local file
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2009.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2009.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2009.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2010.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2010.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2010.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2011.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2011.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2011.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2012.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2012.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2012.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2013.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2013.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2013.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2014.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2014.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2014.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2015.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2015.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2015.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2016.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2016.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2016.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2017.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2017.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2017.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2018.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2018.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2018.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2019.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2019.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2019.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2020.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2020.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2020.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2021.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2021.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2021.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2022.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2022.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2022.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2023.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2023.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2023.txt
++ forecast_predet.sh[533]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[534]: basename /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/co2historicaldata_2024.txt
++ forecast_predet.sh[534]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/am/fix_co2_proj/global_co2historicaldata_2024.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/co2historicaldata_2024.txt
++ forecast_predet.sh[539]: [[ .true. == \.\t\r\u\e\. ]]
++ forecast_predet.sh[540]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/parm/post/params_grib2_tbl_new /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/params_grib2_tbl_new
++ forecast_predet.sh[541]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/parm/ufs/post_itag_gfs /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/itag
++ forecast_predet.sh[543]: [[ gefs =~ gdas ]]
++ forecast_predet.sh[543]: [[ gefs =~ gfs ]]
++ forecast_predet.sh[546]: [[ gefs == \g\e\f\s ]]
++ forecast_predet.sh[547]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/parm/post/gefs/postxconfig-NT-gefs.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/postxconfig-NT.txt
++ forecast_predet.sh[548]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/parm/post/gefs/postxconfig-NT-gefs-f00.txt /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/postxconfig-NT_FH00.txt
++ exglobal_forecast.sh[109]: [[ .true. = .true. ]]
++ exglobal_forecast.sh[109]: CMEPS_predet
++ forecast_predet.sh[701]: echo 'SUB CMEPS_predet: CMEPS before run type determination'
+SUB CMEPS_predet: CMEPS before run type determination
++ forecast_predet.sh[703]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/med/restart ]]
++ forecast_predet.sh[705]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/restart/CMEPS_RESTART ]]
++ forecast_predet.sh[706]: /bin/ln -sf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/restart/CMEPS_RESTART /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/CMEPS_RESTART
++ exglobal_forecast.sh[110]: [[ .true. = .true. ]]
++ exglobal_forecast.sh[110]: MOM6_predet
++ forecast_predet.sh[656]: echo 'SUB MOM6_predet: MOM6 before run type determination'
+SUB MOM6_predet: MOM6 before run type determination
++ forecast_predet.sh[658]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/ocean/history ]]
++ forecast_predet.sh[659]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/ocean/restart ]]
++ forecast_predet.sh[660]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/ocean/input ]]
++ forecast_predet.sh[662]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/MOM6_OUTPUT ]]
++ forecast_predet.sh[662]: mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/MOM6_OUTPUT
++ forecast_predet.sh[663]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/restart/MOM6_RESTART ]]
++ forecast_predet.sh[664]: /bin/ln -sf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/restart/MOM6_RESTART /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/MOM6_RESTART
+++ forecast_predet.sh[668]: seq -s ' ' 0 6 48
++ forecast_predet.sh[668]: MOM6_OUTPUT_FH='0 6 12 18 24 30 36 42 48'
++ forecast_predet.sh[672]: ((  MEMBER > 0  ))
++ forecast_predet.sh[673]: local imem=2
++ forecast_predet.sh[674]: local base_seed=20210323120200
++ forecast_predet.sh[676]: [[ YES == \Y\E\S ]]
++ forecast_predet.sh[677]: ISEED_OCNSPPT=20210323120208,20210323120209,20210323120210,20210323120211,20210323120212
++ forecast_predet.sh[680]: [[ YES == \Y\E\S ]]
++ forecast_predet.sh[681]: ISEED_EPBL=20210323120213,20210323120214,20210323120215,20210323120216,20210323120217
++ forecast_predet.sh[686]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/mom6/500/MOM_override /work2/noaa/global/CI/HERCULES/2982/gefs/fix/mom6/500/hycom1_25.nc /work2/noaa/global/CI/HERCULES/2982/gefs/fix/mom6/500/layer_coord25.nc /work2/noaa/global/CI/HERCULES/2982/gefs/fix/mom6/500/ocean_hgrid.nc /work2/noaa/global/CI/HERCULES/2982/gefs/fix/mom6/500/ocean_mask.nc /work2/noaa/global/CI/HERCULES/2982/gefs/fix/mom6/500/ocean_mosaic.nc /work2/noaa/global/CI/HERCULES/2982/gefs/fix/mom6/500/ocean_topog.nc /work2/noaa/global/CI/HERCULES/2982/gefs/fix/mom6/500/oceanda_zgrid_25L.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/
++ forecast_predet.sh[689]: local spec_file
++ forecast_predet.sh[690]: spec_file=/work2/noaa/global/CI/HERCULES/2982/gefs/fix/cpl/aC48o500/grid_spec.nc
++ forecast_predet.sh[691]: [[ -s /work2/noaa/global/CI/HERCULES/2982/gefs/fix/cpl/aC48o500/grid_spec.nc ]]
++ forecast_predet.sh[692]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/cpl/aC48o500/grid_spec.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/INPUT/
++ exglobal_forecast.sh[111]: [[ .true. = .true. ]]
++ exglobal_forecast.sh[111]: WW3_predet
++ forecast_predet.sh[556]: echo 'SUB WW3_predet: WW3 before run type determination'
+SUB WW3_predet: WW3 before run type determination
++ forecast_predet.sh[558]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/wave/history ]]
++ forecast_predet.sh[559]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/wave/restart ]]
++ forecast_predet.sh[561]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/restart/WW3_RESTART ]]
++ forecast_predet.sh[566]: local ww3_grid
++ forecast_predet.sh[567]: [[ .false. == \.\t\r\u\e\. ]]
++ forecast_predet.sh[580]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/wave/prep/gefswave.mod_def.glo_500 /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/mod_def.ww3
++ forecast_predet.sh[584]: [[ CPL == \Y\E\S ]]
++ forecast_predet.sh[594]: [[ CPL == \Y\E\S ]]
++ forecast_predet.sh[606]: [[ mesh.glo_500.nc == \m\e\s\h\.\m\x\5\0\0\.\n\c ]]
++ forecast_predet.sh[609]: echo 'Wave is NOT on the same mesh as ocean'
+Wave is NOT on the same mesh as ocean
++ forecast_predet.sh[610]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/wave/mesh.glo_500.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/
++ forecast_predet.sh[613]: WAV_MOD_TAG=gefswave
++ forecast_predet.sh[614]: [[ NO == \Y\E\S ]]
++ exglobal_forecast.sh[112]: [[ .true. = .true. ]]
++ exglobal_forecast.sh[112]: CICE_predet
++ forecast_predet.sh[632]: echo 'SUB CICE_predet: CICE before run type determination'
+SUB CICE_predet: CICE before run type determination
++ forecast_predet.sh[634]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/ice/history ]]
++ forecast_predet.sh[635]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/ice/restart ]]
++ forecast_predet.sh[636]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/ice/input ]]
++ forecast_predet.sh[638]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/CICE_OUTPUT ]]
++ forecast_predet.sh[638]: mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/CICE_OUTPUT
++ forecast_predet.sh[639]: [[ ! -d /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/restart/CICE_RESTART ]]
++ forecast_predet.sh[640]: /bin/ln -sf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/restart/CICE_RESTART /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/CICE_RESTART
++ forecast_predet.sh[645]: mapfile -t CICE_OUTPUT_FH
+++ forecast_predet.sh[645]: seq 0 6 48
++ forecast_predet.sh[648]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/cice/500/grid_cice_NEMS_mx500.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/
++ forecast_predet.sh[649]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/cice/500/kmtu_cice_NEMS_mx500.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/
++ forecast_predet.sh[650]: /bin/cp -p /work2/noaa/global/CI/HERCULES/2982/gefs/fix/cice/500/mesh.mx500.nc /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48_S2SWA_gefs_4d85e36f/gefs.2021032312/gefsefcs002.2021032312/fcst.2642889/
++ exglobal_forecast.sh[113]: [[ .true. = .true. ]]
++ exglobal_forecast.sh[113]: GOCART_predet
++ forecast_predet.sh[712]: echo 'SUB GOCART_predet: GOCART before run type determination'
+SUB GOCART_predet: GOCART before run type determination
++ forecast_predet.sh[714]: [[ ! -d /work2/noaa/global/CI/HERCULES/2982/RUNTESTS/COMROOT/C48_S2SWA_gefs_4d85e36f/gefs.20210323/12/mem002/model/chem/history ]]
+/work2/noaa/global/CI/HERCULES/2982/gefs/ush/forecast_predet.sh: line 716: FHROT: unbound variable
+++ forecast_predet.sh[1]: postamble exglobal_forecast.sh 1731433968 1
+++ preamble.sh[70]: set +x
+End exglobal_forecast.sh at 17:52:59 with error code 1 (time elapsed: 00:00:11)
++ JGLOBAL_FORECAST[1]: postamble JGLOBAL_FORECAST 1731433938 1
++ preamble.sh[70]: set +x
+End JGLOBAL_FORECAST at 17:52:59 with error code 1 (time elapsed: 00:00:41)
++ fcst.sh[1]: postamble fcst.sh 1731433935 1
++ preamble.sh[70]: set +x
+End fcst.sh at 17:52:59 with error code 1 (time elapsed: 00:00:44)
