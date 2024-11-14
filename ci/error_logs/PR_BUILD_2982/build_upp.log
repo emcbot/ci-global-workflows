@@ -1,0 +1,194 @@
+++ dirname ./build_upp.sh
++ script_dir=.
++ cd .
++ OPTIND=1
++ _opts=
++ getopts :dj:v option
++ case "${option}" in
++ BUILD_JOBS=1
++ getopts :dj:v option
++ shift 2
++ [[ ! -d ../exec ]]
++ cd ufs_model.fd/FV3/upp/tests
++ BUILD_JOBS=1
++ ./compile_upp.sh
+Building for machine hercules, compiler intel
+
+Currently Loaded Modules:
+  1) intel-oneapi-compilers/2023.1.0  18) netcdf-c/4.9.2
+  2) stack-intel/2021.9.0             19) netcdf-fortran/4.6.1
+  3) intel-oneapi-mpi/2021.9.0        20) bacio/2.4.1
+  4) stack-intel-oneapi-mpi/2021.9.0  21) crtm-fix/2.4.0.1_emc
+  5) nghttp2/1.57.0                   22) git-lfs/3.1.2
+  6) curl/8.4.0                       23) crtm/2.4.0.1
+  7) cmake/3.23.1                     24) g2/3.5.1
+  8) sqlite/3.39.4                    25) g2tmpl/1.13.0
+  9) python/3.10.8                    26) ip/4.3.0
+ 10) libjpeg/2.1.0                    27) sp/2.5.0
+ 11) jasper/2.0.32                    28) w3emc/2.10.0
+ 12) zlib/1.2.13                      29) nemsio/2.5.4
+ 13) libpng/1.6.37                    30) sigio/2.3.2
+ 14) hdf5/1.14.0                      31) wrf-io/1.2.0
+ 15) snappy/1.1.10                    32) upp_common
+ 16) zstd/1.5.2                       33) hercules
+ 17) c-blosc/1.21.5
+
+ 
+
++ BUILD_DIR=build
++ rm -rf build install
++ mkdir -p build
++ cd build
++ cmake -DCMAKE_INSTALL_PREFIX=../install -DBUILD_WITH_NEMSIO=ON -DBUILD_WITH_WRFIO=ON -DBUILD_WITH_GTG=OFF -DBUILD_WITH_IFI=OFF /work2/noaa/global/CI/HERCULES/2982/gefs/sorc/ufs_model.fd/FV3/upp
+-- The Fortran compiler identification is Intel 2021.9.0.20230302
+-- The C compiler identification is Intel 2021.9.0.20230302
+-- The CXX compiler identification is Intel 2021.9.0.20230302
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiifort - skipped
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiicc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiicpc - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Setting build type to 'Release' as none was specified.
+-- Found MPI_C: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiicc (found version "3.1") 
+-- Found MPI_CXX: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiicpc (found version "3.1") 
+-- Found MPI_Fortran: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiifort (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/bacio-2.4.1-kocc5wj/lib/libbacio_4.a (found version "2.4.1")
+-- Found crtm: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/crtm-2.4.0.1-wlgbu5r/lib/libcrtm.a (found version "2.4.0")
+-- Found ZLIB: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/zlib-1.2.13-xsm2i7j/lib/libz.so (found version "1.2.13") 
+-- Found PNG: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/libpng-1.6.37-bnpuvlu/lib64/libpng.so (found version "1.6.37") 
+-- Found g2: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/upp-addon-env/install/intel/2021.9.0/g2-3.5.1-rve3nlh/lib64/libg2_4.a (found version "3.5.1")
+-- Found g2tmpl: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/upp-addon-env/install/intel/2021.9.0/g2tmpl-1.13.0-ifdzkel/lib64/libg2tmpl.a (found version "1.13.0")
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/bacio-2.4.1-kocc5wj/lib/libbacio_4.a (found version "2.4.1")
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/bacio-2.4.1-kocc5wj/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/w3emc-2.10.0-zc33leo/lib64/libw3emc_4.a (found version "2.10.0")
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found nemsio: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/nemsio-2.5.4-nxfp7tp/lib64/libnemsio.a (found version "2.5.4")
+-- Found sigio: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/sigio-2.3.2-kesxayk/lib/libsigio.a (found version "2.3.0")
+-- Found sp: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/sp-2.5.0-hidqzcr/lib64/libsp_4.a (found version "2.5.0")
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/bacio-2.4.1-kocc5wj/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/w3emc-2.10.0-zc33leo/lib64/libw3emc_4.a (found version "2.10.0")
+-- Found wrf_io: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/wrf-io-1.2.0-xe4onp6/lib/libwrf_io.a (found version "1.2.0")
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /work2/noaa/global/CI/HERCULES/2982/gefs/sorc/ufs_model.fd/FV3/upp/tests/build
++ make -j1
+Scanning dependencies of target upp
+[  1%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CMASSI.f.o
+[  2%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CTLBLK.f.o
+[  2%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/machine.f.o
+[  3%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/physcons.f.o
+[  3%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GFIP3.f.o
+[  4%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GRIDSPEC.f.o
+[  5%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/RQSTFLD.f.o
+[  5%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/IFI.F.o
+[  6%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/LOOKUP.f.o
+[  7%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MASKS_mod.f.o
+[  8%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/PMICRPH.f.o
+[  9%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/RHGRD.f.o
+[ 10%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SOIL_mod.f.o
+[ 11%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/UPP_MATH.f.o
+[ 11%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/xml_perl_data.f.o
+[ 11%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/grib2_module.f.o
+[ 12%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/params.F.o
+[ 13%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/VRBLS2D_mod.f.o
+[ 14%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/VRBLS3D_mod.f.o
+[ 14%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/UPP_PHYSICS.f.o
+[ 14%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/VRBLS4D_mod.f.o
+[ 14%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/cuparm.f.o
+[ 15%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_ctlblk.F90.o
+[ 15%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_filter.F90.o
+[ 16%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_indices.F90.o
+[ 17%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_read_config.F90.o
+[ 18%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/kinds_mod.F.o
+[ 19%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/native_endianness.f.o
+[ 20%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/svptbl.f.o
+[ 20%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/AllGETHERV_GSD.f.o
+[ 21%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/ALLOCATE_ALL.f.o
+[ 21%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/AVIATION.f.o
+[ 22%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/BNDLYR.f.o
+[ 23%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/BOUND.f.o
+[ 23%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALDRG.f.o
+[ 24%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALDWP.f.o
+[ 25%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALGUST.f.o
+[ 25%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALHEL.f.o
+[ 26%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALHEL2.f.o
+[ 27%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALHEL3.f.o
+[ 27%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALLCL.f.o
+[ 28%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALMCVG.f.o
+[ 28%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALMICT.f.o
+[ 29%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALPBL.f.o
+[ 30%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALPBLREGIME.f.o
+[ 30%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALPOT.f.o
+[ 31%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALPW.f.o
+[ 32%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALRAD_WCLOUD_newcrtm.f.o
+[ 32%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALRCH.f.o
+[ 33%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALSTRM.f.o
+[ 34%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALTAU.f.o
+[ 34%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALTHTE.f.o
+[ 35%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALUPDHEL.f.o
+[ 36%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALVESSEL.f.o
+[ 36%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALVIS.f.o
+[ 37%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALVIS_GSD.f.o
+[ 37%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALWXT_BOURG.f.o
+[ 38%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALWXT_DOMINANT.f.o
+[ 39%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALWXT_EXPLICIT.f.o
+[ 39%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALWXT.f.o
+[ 40%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALWXT_RAMER.f.o
+[ 41%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALWXT_REVISED.f.o
+[ 41%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CANRES.f.o
+[ 42%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CLDFRAC_ZHAO.f.o
+[ 43%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CLDRAD.f.o
+[ 43%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CLMAX.f.o
+[ 44%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/COLLECT.f.o
+[ 44%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/COLLECT_LOC.f.o
+[ 45%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/DEALLOCATE.f.o
+[ 46%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/DEWPOINT.f.o
+[ 46%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/ETCALC.f.o
+[ 47%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/ETAMP_Q2F.f.o
+[ 48%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/EXCH.f.o
+[ 48%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/EXCH_c_float.f.o
+[ 49%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/FDLVL.f.o
+[ 50%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/FGAMMA.f.o
+[ 50%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/FILL_PSETFLD.f.o
+[ 51%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/FIXED.f.o
+[ 51%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/FRZLVL2.f.o
+[ 52%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/FRZLVL.f.o
+[ 53%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GEO_ZENITH_ANGLE.f.o
+[ 53%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GET_BITS.f.o
+[ 54%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GETGBANDSCATTER.f.o
+[ 55%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/get_postfilename.f.o
+[ 56%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GFSPOST.F.o
+[ 57%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GPVS.f.o
+[ 58%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/ICAOHEIGHT.f.o
+[ 58%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/LFMFLD.f.o
+[ 59%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/LFMFLD_GFS.f.o
+[ 60%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MAPSSLP.f.o
+[ 60%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MDL2AGL.f.o
+[ 61%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MDL2P.f.o
+[ 62%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MDL2SIGMA2.f.o
+[ 62%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MDL2SIGMA.f.o
+[ 63%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MDL2THANDPV.f.o
+ifort: error #10106: Fatal error in /apps/spack-managed/gcc-11.3.1/intel-oneapi-compilers-2023.1.0-sb753366rvywq75zeg4ml5k5c72xgj72/compiler/2023.1.0/linux/bin/intel64/../../bin/intel64/fortcom, terminated by terminate signal
+compilation aborted for /work2/noaa/global/CI/HERCULES/2982/gefs/sorc/ufs_model.fd/FV3/upp/sorc/ncep_post.fd/MDL2THANDPV.f (code 1)
+make[2]: *** [sorc/ncep_post.fd/CMakeFiles/upp.dir/build.make:1063: sorc/ncep_post.fd/CMakeFiles/upp.dir/MDL2THANDPV.f.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:115: sorc/ncep_post.fd/CMakeFiles/upp.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2
