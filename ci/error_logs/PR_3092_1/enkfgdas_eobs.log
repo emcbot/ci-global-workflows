@@ -1,0 +1,1251 @@
+Begin eobs.sh at Fri Nov 15 10:30:28 UTC 2024
++ eobs.sh[7]: . /scratch1/NCEPDEV/global/CI/3092/gfs/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/CI/3092/gfs/modulefiles
+
+Currently Loaded Modules:
+  1) contrib                          43) ip/4.3.0
+  2) intel/2022.1.2                   44) grib-util/1.3.0
+  3) stack-intel/2021.5.0             45) g2tmpl/1.10.2
+  4) impi/2022.1.2                    46) gsi-ncdiag/1.1.2
+  5) stack-intel-oneapi-mpi/2021.5.1  47) crtm-fix/2.4.0.1_emc
+  6) gettext/0.19.8.1                 48) git-lfs/2.10.0
+  7) libxcrypt/4.4.35                 49) crtm/2.4.0.1
+  8) zlib/1.2.13                      50) openblas/0.3.24
+  9) sqlite/3.43.2                    51) py-setuptools/63.4.3
+ 10) util-linux-uuid/2.38.1           52) py-numpy/1.23.4
+ 11) python/3.11.6                    53) bufr/11.7.0
+ 12) hpss/hpss                        54) gmake/3.82
+ 13) gempak/7.17.0                    55) wgrib2/2.0.8
+ 14) ncl/6.6.2                        56) py-f90nml/1.4.3
+ 15) libjpeg/2.1.0                    57) py-cftime/1.0.3.4
+ 16) jasper/2.0.32                    58) py-netcdf4/1.5.8
+ 17) libpng/1.6.37                    59) libyaml/0.2.5
+ 18) openjpeg/2.3.1                   60) py-pyyaml/6.0
+ 19) eccodes/2.32.0                   61) py-markupsafe/2.1.3
+ 20) fftw/3.3.10                      62) py-jinja2/3.1.2
+ 21) nghttp2/1.57.0                   63) py-bottleneck/1.3.7
+ 22) curl/8.4.0                       64) py-numexpr/2.8.4
+ 23) proj/8.1.0                       65) py-et-xmlfile/1.0.1
+ 24) udunits/2.2.28                   66) py-openpyxl/3.1.2
+ 25) cdo/2.2.0                        67) py-pytz/2023.3
+ 26) R/3.6.1                          68) py-pyxlsb/1.0.10
+ 27) perl/5.38.0                      69) py-xlrd/2.0.1
+ 28) pkg-config/0.27.1                70) py-xlsxwriter/3.1.7
+ 29) hdf5/1.14.0                      71) py-xlwt/1.3.0
+ 30) snappy/1.1.10                    72) py-pandas/1.5.3
+ 31) zstd/1.5.2                       73) py-six/1.16.0
+ 32) c-blosc/1.21.5                   74) py-python-dateutil/2.8.2
+ 33) netcdf-c/4.9.2                   75) g2c/1.6.4
+ 34) netcdf-fortran/4.6.1             76) netcdf-cxx4/4.3.1
+ 35) antlr/2.7.7                      77) met/9.1.3
+ 36) gsl/2.7.1                        78) metplus/3.1.1
+ 37) nco/5.0.6                        79) py-packaging/23.1
+ 38) bacio/2.4.1                      80) py-xarray/2023.7.0
+ 39) w3emc/2.10.0                     81) prepobs/1.1.0
+ 40) prod_util/2.1.1                  82) fit2obs/1.1.4
+ 41) g2/3.4.5                         83) module_base.hera
+ 42) sp/2.5.0
+
+ 
+
++ eobs.sh[8]: status=0
++ eobs.sh[9]: [[ 0 -ne 0 ]]
++ eobs.sh[11]: export job=eobs
++ eobs.sh[11]: job=eobs
++ eobs.sh[12]: export jobid=eobs.205430
++ eobs.sh[12]: jobid=eobs.205430
++ eobs.sh[16]: /scratch1/NCEPDEV/global/CI/3092/gfs/jobs/JGDAS_ENKF_SELECT_OBS
+Begin JGDAS_ENKF_SELECT_OBS at Fri Nov 15 10:30:32 UTC 2024
++ JGDAS_ENKF_SELECT_OBS[4]: source /scratch1/NCEPDEV/global/CI/3092/gfs/ush/jjob_header.sh -e eobs -c 'base anal eobs'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=eobs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z eobs ]]
+++ jjob_header.sh[68]: export DATA=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.2021122018/eobs.205430
+++ jjob_header.sh[68]: DATA=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.2021122018/eobs.205430
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.2021122018/eobs.205430
+++ jjob_header.sh[72]: mkdir -p /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.2021122018/eobs.205430
+++ jjob_header.sh[73]: cd /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.2021122018/eobs.205430
+++ jjob_header.sh[79]: export cycle=t18z
+++ jjob_header.sh[79]: cycle=t18z
+++ jjob_header.sh[80]: setpdy.sh
+sed: can't read /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/date/t18z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20211213
++++ PDY[1]: PDYm7=20211213
++++ PDY[2]: export PDYm6=20211214
++++ PDY[2]: PDYm6=20211214
++++ PDY[3]: export PDYm5=20211215
++++ PDY[3]: PDYm5=20211215
++++ PDY[4]: export PDYm4=20211216
++++ PDY[4]: PDYm4=20211216
++++ PDY[5]: export PDYm3=20211217
++++ PDY[5]: PDYm3=20211217
++++ PDY[6]: export PDYm2=20211218
++++ PDY[6]: PDYm2=20211218
++++ PDY[7]: export PDYm1=20211219
++++ PDY[7]: PDYm1=20211219
++++ PDY[8]: export PDY=20211220
++++ PDY[8]: PDY=20211220
++++ PDY[9]: export PDYp1=20211221
++++ PDY[9]: PDYp1=20211221
++++ PDY[10]: export PDYp2=20211222
++++ PDY[10]: PDYp2=20211222
++++ PDY[11]: export PDYp3=20211223
++++ PDY[11]: PDYp3=20211223
++++ PDY[12]: export PDYp4=20211224
++++ PDY[12]: PDYp4=20211224
++++ PDY[13]: export PDYp5=20211225
++++ PDY[13]: PDYp5=20211225
++++ PDY[14]: export PDYp6=20211226
++++ PDY[14]: PDYp6=20211226
++++ PDY[15]: export PDYp7=20211227
++++ PDY[15]: PDYp7=20211227
+++ jjob_header.sh[87]: export pid=205903
+++ jjob_header.sh[87]: pid=205903
+++ jjob_header.sh[88]: export pgmout=OUTPUT.205903
+++ jjob_header.sh[88]: pgmout=OUTPUT.205903
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52
+++ jjob_header.sh[95]: EXPDIR=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=HERA
++++ config.base[9]: machine=HERA
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=fv3-cpu
++++ config.base[15]: ACCOUNT=fv3-cpu
++++ config.base[16]: export QUEUE=batch
++++ config.base[16]: QUEUE=batch
++++ config.base[17]: export QUEUE_SERVICE=batch
++++ config.base[17]: QUEUE_SERVICE=batch
++++ config.base[18]: export PARTITION_BATCH=hera
++++ config.base[18]: PARTITION_BATCH=hera
++++ config.base[19]: export PARTITION_SERVICE=service
++++ config.base[19]: PARTITION_SERVICE=service
++++ config.base[20]: export RESERVATION=
++++ config.base[20]: RESERVATION=
++++ config.base[21]: export CLUSTERS=
++++ config.base[21]: CLUSTERS=
++++ config.base[24]: export HPSS_PROJECT=emc-global
++++ config.base[24]: HPSS_PROJECT=emc-global
++++ config.base[27]: export HOMEgfs=/scratch1/NCEPDEV/global/CI/3092/gfs
++++ config.base[27]: HOMEgfs=/scratch1/NCEPDEV/global/CI/3092/gfs
++++ config.base[28]: export EXECgfs=/scratch1/NCEPDEV/global/CI/3092/gfs/exec
++++ config.base[28]: EXECgfs=/scratch1/NCEPDEV/global/CI/3092/gfs/exec
++++ config.base[29]: export FIXgfs=/scratch1/NCEPDEV/global/CI/3092/gfs/fix
++++ config.base[29]: FIXgfs=/scratch1/NCEPDEV/global/CI/3092/gfs/fix
++++ config.base[30]: export PARMgfs=/scratch1/NCEPDEV/global/CI/3092/gfs/parm
++++ config.base[30]: PARMgfs=/scratch1/NCEPDEV/global/CI/3092/gfs/parm
++++ config.base[31]: export SCRgfs=/scratch1/NCEPDEV/global/CI/3092/gfs/scripts
++++ config.base[31]: SCRgfs=/scratch1/NCEPDEV/global/CI/3092/gfs/scripts
++++ config.base[32]: export USHgfs=/scratch1/NCEPDEV/global/CI/3092/gfs/ush
++++ config.base[32]: USHgfs=/scratch1/NCEPDEV/global/CI/3092/gfs/ush
++++ config.base[34]: export FIXam=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/am
++++ config.base[34]: FIXam=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/am
++++ config.base[35]: export FIXaer=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/aer
++++ config.base[35]: FIXaer=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/aer
++++ config.base[36]: export FIXcpl=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/cpl
++++ config.base[36]: FIXcpl=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/cpl
++++ config.base[37]: export FIXlut=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/lut
++++ config.base[37]: FIXlut=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/lut
++++ config.base[38]: export FIXcice=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/cice
++++ config.base[38]: FIXcice=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/cice
++++ config.base[39]: export FIXmom=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/mom6
++++ config.base[39]: FIXmom=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/mom6
++++ config.base[40]: export FIXreg2grb2=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/reg2grb2
++++ config.base[40]: FIXreg2grb2=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/reg2grb2
++++ config.base[41]: export FIXgdas=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/gdas
++++ config.base[41]: FIXgdas=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/gdas
++++ config.base[46]: export PACKAGEROOT=/scratch1/NCEPDEV/global/glopara/nwpara
++++ config.base[46]: PACKAGEROOT=/scratch1/NCEPDEV/global/glopara/nwpara
++++ config.base[47]: export COMROOT=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT
++++ config.base[47]: COMROOT=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT
++++ config.base[48]: export COMINsyn=/scratch1/NCEPDEV/global/glopara/com/gfs/prod/syndat
++++ config.base[48]: COMINsyn=/scratch1/NCEPDEV/global/glopara/com/gfs/prod/syndat
++++ config.base[49]: export DMPDIR=/scratch1/NCEPDEV/global/glopara/dump
++++ config.base[49]: DMPDIR=/scratch1/NCEPDEV/global/glopara/dump
++++ config.base[53]: export COMINecmwf=/scratch1/NCEPDEV/global/glopara/data/external_gempak/ecmwf
++++ config.base[53]: COMINecmwf=/scratch1/NCEPDEV/global/glopara/data/external_gempak/ecmwf
++++ config.base[54]: export COMINnam=/scratch1/NCEPDEV/global/glopara/data/external_gempak/nam
++++ config.base[54]: COMINnam=/scratch1/NCEPDEV/global/glopara/data/external_gempak/nam
++++ config.base[55]: export COMINukmet=/scratch1/NCEPDEV/global/glopara/data/external_gempak/ukmet
++++ config.base[55]: COMINukmet=/scratch1/NCEPDEV/global/glopara/data/external_gempak/ukmet
++++ config.base[58]: export HOMEDIR=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[58]: HOMEDIR=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[59]: export STMP=/scratch1/NCEPDEV/stmp2/Terry.McGuinness
++++ config.base[59]: STMP=/scratch1/NCEPDEV/stmp2/Terry.McGuinness
++++ config.base[60]: export PTMP=/scratch1/NCEPDEV/stmp4/Terry.McGuinness
++++ config.base[60]: PTMP=/scratch1/NCEPDEV/stmp4/Terry.McGuinness
++++ config.base[61]: export NOSCRUB=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[61]: NOSCRUB=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[64]: export BASE_GIT=/scratch1/NCEPDEV/global/glopara/git
++++ config.base[64]: BASE_GIT=/scratch1/NCEPDEV/global/glopara/git
++++ config.base[67]: export BASE_DATA=/scratch1/NCEPDEV/global/glopara/data
++++ config.base[67]: BASE_DATA=/scratch1/NCEPDEV/global/glopara/data
++++ config.base[70]: export DO_GOES=NO
++++ config.base[70]: DO_GOES=NO
++++ config.base[71]: export DO_BUFRSND=NO
++++ config.base[71]: DO_BUFRSND=NO
++++ config.base[72]: export DO_GEMPAK=NO
++++ config.base[72]: DO_GEMPAK=NO
++++ config.base[73]: export DO_AWIPS=NO
++++ config.base[73]: DO_AWIPS=NO
++++ config.base[74]: export DO_NPOESS=NO
++++ config.base[74]: DO_NPOESS=NO
++++ config.base[75]: export DO_TRACKER=YES
++++ config.base[75]: DO_TRACKER=YES
++++ config.base[76]: export DO_GENESIS=YES
++++ config.base[76]: DO_GENESIS=YES
++++ config.base[77]: export DO_GENESIS_FSU=NO
++++ config.base[77]: DO_GENESIS_FSU=NO
++++ config.base[78]: export DO_VERFOZN=YES
++++ config.base[78]: DO_VERFOZN=YES
++++ config.base[79]: export DO_VERFRAD=YES
++++ config.base[79]: DO_VERFRAD=YES
++++ config.base[80]: export DO_VMINMON=YES
++++ config.base[80]: DO_VMINMON=YES
++++ config.base[81]: export DO_MOS=NO
++++ config.base[81]: DO_MOS=NO
++++ config.base[87]: export REALTIME=YES
++++ config.base[87]: REALTIME=YES
++++ config.base[90]: export MODE=cycled
++++ config.base[90]: MODE=cycled
++++ config.base[99]: export FIXgsi=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/gsi
++++ config.base[99]: FIXgsi=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/gsi
++++ config.base[100]: export HOMEpost=/scratch1/NCEPDEV/global/CI/3092/gfs
++++ config.base[100]: HOMEpost=/scratch1/NCEPDEV/global/CI/3092/gfs
++++ config.base[101]: export HOMEobsproc=/scratch1/NCEPDEV/global/glopara/git/obsproc/v1.2.0
++++ config.base[101]: HOMEobsproc=/scratch1/NCEPDEV/global/glopara/git/obsproc/v1.2.0
++++ config.base[104]: export 'NCP=/bin/cp -p'
++++ config.base[104]: NCP='/bin/cp -p'
++++ config.base[105]: export NMV=/bin/mv
++++ config.base[105]: NMV=/bin/mv
++++ config.base[106]: export 'NLN=/bin/ln -sf'
++++ config.base[106]: NLN='/bin/ln -sf'
++++ config.base[107]: export VERBOSE=YES
++++ config.base[107]: VERBOSE=YES
++++ config.base[108]: export KEEPDATA=NO
++++ config.base[108]: KEEPDATA=NO
++++ config.base[109]: export DEBUG_POSTSCRIPT=NO
++++ config.base[109]: DEBUG_POSTSCRIPT=NO
++++ config.base[110]: export CHGRP_RSTPROD=YES
++++ config.base[110]: CHGRP_RSTPROD=YES
++++ config.base[111]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[111]: CHGRP_CMD='chgrp rstprod'
++++ config.base[112]: export NCDUMP=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/bin/ncdump
++++ config.base[112]: NCDUMP=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/bin/ncdump
++++ config.base[113]: export NCLEN=/scratch1/NCEPDEV/global/CI/3092/gfs/ush/getncdimlen
++++ config.base[113]: NCLEN=/scratch1/NCEPDEV/global/CI/3092/gfs/ush/getncdimlen
++++ config.base[116]: export BASE_ENV=/scratch1/NCEPDEV/global/CI/3092/gfs/env
++++ config.base[116]: BASE_ENV=/scratch1/NCEPDEV/global/CI/3092/gfs/env
++++ config.base[117]: export BASE_JOB=/scratch1/NCEPDEV/global/CI/3092/gfs/jobs/rocoto
++++ config.base[117]: BASE_JOB=/scratch1/NCEPDEV/global/CI/3092/gfs/jobs/rocoto
++++ config.base[120]: export SDATE=2021122012
++++ config.base[120]: SDATE=2021122012
++++ config.base[121]: export EDATE=2021122100
++++ config.base[121]: EDATE=2021122100
++++ config.base[122]: export EXP_WARM_START=.false.
++++ config.base[122]: EXP_WARM_START=.false.
++++ config.base[123]: export assim_freq=6
++++ config.base[123]: assim_freq=6
++++ config.base[124]: export PSLOT=C96C48_hybatmaerosnowDA_01216a52
++++ config.base[124]: PSLOT=C96C48_hybatmaerosnowDA_01216a52
++++ config.base[125]: export EXPDIR=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52
++++ config.base[125]: EXPDIR=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52
++++ config.base[126]: export ROTDIR=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52
++++ config.base[126]: ROTDIR=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52
++++ config.base[127]: export ROTDIR_DUMP=YES
++++ config.base[127]: ROTDIR_DUMP=YES
++++ config.base[128]: export DUMP_SUFFIX=
++++ config.base[128]: DUMP_SUFFIX=
++++ config.base[129]: [[ 2021122018 -ge 2019092100 ]]
++++ config.base[129]: [[ 2021122018 -le 2019110700 ]]
++++ config.base[132]: export ARCDIR=/scratch1/NCEPDEV/global/Terry.McGuinness/archive/C96C48_hybatmaerosnowDA_01216a52
++++ config.base[132]: ARCDIR=/scratch1/NCEPDEV/global/Terry.McGuinness/archive/C96C48_hybatmaerosnowDA_01216a52
++++ config.base[133]: export ATARDIR=/NCEPDEV/emc-global/1year/Terry.McGuinness/HERA/scratch/C96C48_hybatmaerosnowDA_01216a52
++++ config.base[133]: ATARDIR=/NCEPDEV/emc-global/1year/Terry.McGuinness/HERA/scratch/C96C48_hybatmaerosnowDA_01216a52
++++ config.base[136]: export envir=prod
++++ config.base[136]: envir=prod
++++ config.base[137]: export NET=gfs
++++ config.base[137]: NET=gfs
++++ config.base[138]: export RUN=enkfgdas
++++ config.base[138]: RUN=enkfgdas
++++ config.base[141]: source /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[78]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[79]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[81]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[82]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[83]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[84]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[85]: declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[86]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[87]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[88]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[89]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[91]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[92]: declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[93]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[94]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[95]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[96]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[97]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[98]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[99]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[101]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[102]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[103]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[105]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[144]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[144]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[145]: export LOGSCRIPT=
++++ config.base[145]: LOGSCRIPT=
++++ config.base[148]: export 'REDOUT=1>'
++++ config.base[148]: REDOUT='1>'
++++ config.base[149]: export 'REDERR=2>'
++++ config.base[149]: REDERR='2>'
++++ config.base[151]: export SENDECF=NO
++++ config.base[151]: SENDECF=NO
++++ config.base[152]: export SENDSDM=NO
++++ config.base[152]: SENDSDM=NO
++++ config.base[153]: export SENDDBN_NTC=NO
++++ config.base[153]: SENDDBN_NTC=NO
++++ config.base[154]: export SENDDBN=NO
++++ config.base[154]: SENDDBN=NO
++++ config.base[155]: export DBNROOT=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/prod-util-2.1.1-4vpcrpl/fakedbn
++++ config.base[155]: DBNROOT=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/prod-util-2.1.1-4vpcrpl/fakedbn
++++ config.base[158]: export APP=ATMA
++++ config.base[158]: APP=ATMA
++++ config.base[160]: shopt -s extglob
++++ config.base[162]: case "${RUN}" in
++++ config.base[164]: APP=ATM
++++ config.base[169]: shopt -u extglob
++++ config.base[172]: export DO_ATM=YES
++++ config.base[172]: DO_ATM=YES
++++ config.base[173]: export DO_COUPLED=NO
++++ config.base[173]: DO_COUPLED=NO
++++ config.base[174]: export DO_WAVE=NO
++++ config.base[174]: DO_WAVE=NO
++++ config.base[175]: export DO_OCN=NO
++++ config.base[175]: DO_OCN=NO
++++ config.base[176]: export DO_ICE=NO
++++ config.base[176]: DO_ICE=NO
++++ config.base[177]: export DO_AERO=NO
++++ config.base[177]: DO_AERO=NO
++++ config.base[178]: export DO_PREP_OBS_AERO=NO
++++ config.base[178]: DO_PREP_OBS_AERO=NO
++++ config.base[179]: export AERO_FCST_RUN=
++++ config.base[179]: AERO_FCST_RUN=
++++ config.base[180]: export AERO_ANL_RUN=
++++ config.base[180]: AERO_ANL_RUN=
++++ config.base[181]: export WAVE_RUN=
++++ config.base[181]: WAVE_RUN=
++++ config.base[182]: export DOBNDPNT_WAVE=NO
++++ config.base[182]: DOBNDPNT_WAVE=NO
++++ config.base[183]: export DOIBP_WAV=NO
++++ config.base[183]: DOIBP_WAV=NO
++++ config.base[184]: export FRAC_GRID=.true.
++++ config.base[184]: FRAC_GRID=.true.
++++ config.base[185]: export DO_NEST=NO
++++ config.base[185]: DO_NEST=NO
++++ config.base[186]: [[ NO == \Y\E\S ]]
++++ config.base[192]: export ntiles=6
++++ config.base[192]: ntiles=6
++++ config.base[193]: export FIXugwd=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/ugwd
++++ config.base[193]: FIXugwd=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/ugwd
++++ config.base[194]: export FIXorog=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/orog
++++ config.base[194]: FIXorog=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/orog
++++ config.base[198]: export OPS_RES=C768
++++ config.base[198]: OPS_RES=C768
++++ config.base[201]: export LEVS=128
++++ config.base[201]: LEVS=128
++++ config.base[202]: export CASE=C96
++++ config.base[202]: CASE=C96
++++ config.base[203]: export CASE_ENS=C48
++++ config.base[203]: CASE_ENS=C48
++++ config.base[204]: export OCNRES=500
++++ config.base[204]: OCNRES=500
++++ config.base[205]: export ICERES=500
++++ config.base[205]: ICERES=500
++++ config.base[208]: case "${CASE}" in
++++ config.base[213]: export waveGRD=uglo_100km
++++ config.base[213]: waveGRD=uglo_100km
++++ config.base[227]: case "${APP}" in
++++ config.base[268]: [[ enkfgdas =~ gdas ]]
++++ config.base[269]: export FHCYC=1
++++ config.base[269]: FHCYC=1
++++ config.base[270]: export FTSFS=10
++++ config.base[270]: FTSFS=10
++++ config.base[276]: export FHMIN=0
++++ config.base[276]: FHMIN=0
++++ config.base[277]: export FHMAX=9
++++ config.base[277]: FHMAX=9
++++ config.base[278]: export FHOUT=3
++++ config.base[278]: FHOUT=3
++++ config.base[279]: export FHOUT_OCN=3
++++ config.base[279]: FHOUT_OCN=3
++++ config.base[280]: export FHOUT_ICE=3
++++ config.base[280]: FHOUT_ICE=3
++++ config.base[283]: export EUPD_CYC=gdas
++++ config.base[283]: EUPD_CYC=gdas
++++ config.base[286]: export INTERVAL_GFS=24
++++ config.base[286]: INTERVAL_GFS=24
++++ config.base[287]: export SDATE_GFS=2021122018
++++ config.base[287]: SDATE_GFS=2021122018
++++ config.base[290]: export FHMIN_GFS=0
++++ config.base[290]: FHMIN_GFS=0
++++ config.base[291]: export FHMAX_GFS=120
++++ config.base[291]: FHMAX_GFS=120
++++ config.base[293]: breakpnts=
++++ config.base[294]: export FCST_SEGMENTS=0,120
++++ config.base[294]: FCST_SEGMENTS=0,120
++++ config.base[295]: export FHOUT_GFS=3
++++ config.base[295]: FHOUT_GFS=3
++++ config.base[296]: export FHMAX_HF_GFS=0
++++ config.base[296]: FHMAX_HF_GFS=0
++++ config.base[297]: export FHOUT_HF_GFS=1
++++ config.base[297]: FHOUT_HF_GFS=1
++++ config.base[298]: export FHOUT_OCN_GFS=6
++++ config.base[298]: FHOUT_OCN_GFS=6
++++ config.base[299]: export FHOUT_ICE_GFS=6
++++ config.base[299]: FHOUT_ICE_GFS=6
++++ config.base[300]: export FHMIN_WAV=0
++++ config.base[300]: FHMIN_WAV=0
++++ config.base[301]: export FHOUT_WAV=3
++++ config.base[301]: FHOUT_WAV=3
++++ config.base[302]: export FHMAX_HF_WAV=120
++++ config.base[302]: FHMAX_HF_WAV=120
++++ config.base[303]: export FHOUT_HF_WAV=1
++++ config.base[303]: FHOUT_HF_WAV=1
++++ config.base[304]: export FHMAX_WAV=9
++++ config.base[304]: FHMAX_WAV=9
++++ config.base[305]: export FHMAX_WAV_GFS=120
++++ config.base[305]: FHMAX_WAV_GFS=120
++++ config.base[308]: export ILPOST=1
++++ config.base[308]: ILPOST=1
++++ config.base[309]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[310]: export ILPOST=3
++++ config.base[310]: ILPOST=3
++++ config.base[314]: export FHMAX_GOES=180
++++ config.base[314]: FHMAX_GOES=180
++++ config.base[315]: export FHOUT_GOES=3
++++ config.base[315]: FHOUT_GOES=3
++++ config.base[316]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[317]: export FHMAX_GOES=120
++++ config.base[317]: FHMAX_GOES=120
++++ config.base[321]: export restart_interval_gfs=12
++++ config.base[321]: restart_interval_gfs=12
++++ config.base[326]: export QUILTING=.true.
++++ config.base[326]: QUILTING=.true.
++++ config.base[327]: export OUTPUT_GRID=gaussian_grid
++++ config.base[327]: OUTPUT_GRID=gaussian_grid
++++ config.base[328]: export WRITE_DOPOST=.true.
++++ config.base[328]: WRITE_DOPOST=.true.
++++ config.base[329]: export WRITE_NSFLIP=.true.
++++ config.base[329]: WRITE_NSFLIP=.true.
++++ config.base[332]: export DOIAU=YES
++++ config.base[332]: DOIAU=YES
++++ config.base[333]: export IAUFHRS=3,6,9
++++ config.base[333]: IAUFHRS=3,6,9
++++ config.base[334]: export IAU_FHROT=3
++++ config.base[334]: IAU_FHROT=3
++++ config.base[335]: export IAU_DELTHRS=6
++++ config.base[335]: IAU_DELTHRS=6
++++ config.base[336]: export IAU_OFFSET=6
++++ config.base[336]: IAU_OFFSET=6
++++ config.base[337]: export DOIAU_ENKF=YES
++++ config.base[337]: DOIAU_ENKF=YES
++++ config.base[338]: export IAUFHRS_ENKF=3,6,9
++++ config.base[338]: IAUFHRS_ENKF=3,6,9
++++ config.base[339]: export IAU_DELTHRS_ENKF=6
++++ config.base[339]: IAU_DELTHRS_ENKF=6
++++ config.base[342]: export lobsdiag_forenkf=.true.
++++ config.base[342]: lobsdiag_forenkf=.true.
++++ config.base[350]: export imp_physics=8
++++ config.base[350]: imp_physics=8
++++ config.base[354]: export DO_JEDIATMVAR=NO
++++ config.base[354]: DO_JEDIATMVAR=NO
++++ config.base[355]: export DO_JEDIATMENS=NO
++++ config.base[355]: DO_JEDIATMENS=NO
++++ config.base[356]: export DO_JEDIOCNVAR=NO
++++ config.base[356]: DO_JEDIOCNVAR=NO
++++ config.base[357]: export DO_JEDISNOWDA=YES
++++ config.base[357]: DO_JEDISNOWDA=YES
++++ config.base[358]: export DO_MERGENSST=NO
++++ config.base[358]: DO_MERGENSST=NO
++++ config.base[361]: export DOHYBVAR=YES
++++ config.base[361]: DOHYBVAR=YES
++++ config.base[362]: export NMEM_ENS=2
++++ config.base[362]: NMEM_ENS=2
++++ config.base[363]: export SMOOTH_ENKF=NO
++++ config.base[363]: SMOOTH_ENKF=NO
++++ config.base[364]: export l4densvar=.true.
++++ config.base[364]: l4densvar=.true.
++++ config.base[365]: export lwrite4danl=.true.
++++ config.base[365]: lwrite4danl=.true.
++++ config.base[366]: export DO_CALC_INCREMENT=NO
++++ config.base[366]: DO_CALC_INCREMENT=NO
++++ config.base[369]: export NMEM_ENS_GFS=30
++++ config.base[369]: NMEM_ENS_GFS=30
++++ config.base[370]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[370]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[371]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[371]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[374]: [[ YES = \Y\E\S ]]
++++ config.base[375]: export FHMIN_ENKF=3
++++ config.base[375]: FHMIN_ENKF=3
++++ config.base[376]: export FHMAX_ENKF=9
++++ config.base[376]: FHMAX_ENKF=9
++++ config.base[377]: export FHMAX_ENKF_GFS=12
++++ config.base[377]: FHMAX_ENKF_GFS=12
++++ config.base[378]: export FHOUT_ENKF_GFS=3
++++ config.base[378]: FHOUT_ENKF_GFS=3
++++ config.base[379]: [[ .true. = \.\t\r\u\e\. ]]
++++ config.base[380]: export FHOUT=1
++++ config.base[380]: FHOUT=1
++++ config.base[381]: export FHOUT_ENKF=1
++++ config.base[381]: FHOUT_ENKF=1
++++ config.base[388]: [[ YES == \N\O ]]
++++ config.base[396]: export ENKF_SPREAD=YES
++++ config.base[396]: ENKF_SPREAD=YES
++++ config.base[399]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[399]: [[ 2021122012 = \2\0\2\1\1\2\2\0\1\8 ]]
++++ config.base[399]: [[ YES = \N\O ]]
++++ config.base[399]: [[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[405]: [[ YES = \N\O ]]
++++ config.base[409]: [[ YES == \Y\E\S ]]
++++ config.base[410]: export restart_interval_enkfgdas=3
++++ config.base[410]: restart_interval_enkfgdas=3
++++ config.base[415]: export restart_interval_enkfgfs=3
++++ config.base[415]: restart_interval_enkfgfs=3
++++ config.base[417]: [[ YES == \Y\E\S ]]
++++ config.base[418]: export restart_interval_gdas=3
++++ config.base[418]: restart_interval_gdas=3
++++ config.base[423]: export GSI_SOILANAL=NO
++++ config.base[423]: GSI_SOILANAL=NO
++++ config.base[426]: export DONST=YES
++++ config.base[426]: DONST=YES
++++ config.base[427]: [[ YES = \Y\E\S ]]
++++ config.base[427]: export 'FNTSFA=        '
++++ config.base[427]: FNTSFA='        '
++++ config.base[430]: export nst_anl=.true.
++++ config.base[430]: nst_anl=.true.
++++ config.base[433]: export MAKE_NSSTBUFR=NO
++++ config.base[433]: MAKE_NSSTBUFR=NO
++++ config.base[436]: export MAKE_ACFTBUFR=NO
++++ config.base[436]: MAKE_ACFTBUFR=NO
++++ config.base[439]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[439]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[442]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[442]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[443]: export INCVARS_EFOLD=5
++++ config.base[443]: INCVARS_EFOLD=5
++++ config.base[448]: export netcdf_diag=.true.
++++ config.base[448]: netcdf_diag=.true.
++++ config.base[449]: export binary_diag=.false.
++++ config.base[449]: binary_diag=.false.
++++ config.base[452]: export DO_METP=YES
++++ config.base[452]: DO_METP=YES
++++ config.base[453]: export DO_FIT2OBS=YES
++++ config.base[453]: DO_FIT2OBS=YES
++++ config.base[454]: export DO_VRFY_OCEANDA=NO
++++ config.base[454]: DO_VRFY_OCEANDA=NO
++++ config.base[457]: export FHMAX_FITS=132
++++ config.base[457]: FHMAX_FITS=132
++++ config.base[458]: [[ 132 -gt 120 ]]
++++ config.base[458]: export FHMAX_FITS=120
++++ config.base[458]: FHMAX_FITS=120
++++ config.base[461]: export HPSSARCH=YES
++++ config.base[461]: HPSSARCH=YES
++++ config.base[462]: export LOCALARCH=NO
++++ config.base[462]: LOCALARCH=NO
++++ config.base[463]: [[ YES = \Y\E\S ]]
++++ config.base[463]: [[ NO = \Y\E\S ]]
++++ config.base[467]: export ARCH_CYC=00
++++ config.base[467]: ARCH_CYC=00
++++ config.base[468]: export ARCH_WARMICFREQ=4
++++ config.base[468]: ARCH_WARMICFREQ=4
++++ config.base[469]: export ARCH_FCSTICFREQ=1
++++ config.base[469]: ARCH_FCSTICFREQ=1
++++ config.base[472]: [[ NO = \Y\E\S ]]
++++ config.base[480]: export REPLAY_ICS=NO
++++ config.base[480]: REPLAY_ICS=NO
++++ config.base[481]: export OFFSET_START_HOUR=0
++++ config.base[481]: OFFSET_START_HOUR=0
++++ config.base[484]: export NUM_SND_COLLECTIVES=9
++++ config.base[484]: NUM_SND_COLLECTIVES=9
++++ config.base[486]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52/config.anal
++++ config.anal[6]: echo 'BEGIN: config.anal'
+BEGIN: config.anal
++++ config.anal[9]: . /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52/config.resources anal
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=anal
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[46]: max_tasks_per_node=40
+++++ config.resources[48]: mem_node_max=96GB
+++++ config.resources[144]: export max_tasks_per_node
+++++ config.resources[146]: case ${step} in
+++++ config.resources[668]: walltime_gdas=01:20:00
+++++ config.resources[669]: walltime_gfs=01:00:00
+++++ config.resources[670]: case ${CASE} in
+++++ config.resources[682]: ntasks_gdas=84
+++++ config.resources[683]: ntasks_gfs=84
+++++ config.resources[684]: threads_per_task=5
+++++ config.resources[691]: tasks_per_node=8
+++++ config.resources[692]: export threads_per_task_cycle=5
+++++ config.resources[692]: threads_per_task_cycle=5
+++++ config.resources[693]: export tasks_per_node_cycle=8
+++++ config.resources[693]: tasks_per_node_cycle=8
+++++ config.resources[694]: export is_exclusive=True
+++++ config.resources[694]: is_exclusive=True
+++++ config.resources[1417]: [[ -f /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52/config.resources.HERA ]]
+++++ config.resources[1418]: source /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52/config.resources.HERA
++++++ config.resources.HERA[5]: case ${step} in
++++++ config.resources.HERA[12]: [[ C96 == \C\3\8\4 ]]
+++++ config.resources[1422]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1423]: run_resource_var=threads_per_task_enkfgdas
+++++ config.resources[1424]: [[ -n '' ]]
+++++ config.resources[1426]: [[ -n 0 ]]
+++++ config.resources[1427]: export threads_per_task
+++++ config.resources[1422]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1423]: run_resource_var=ntasks_enkfgdas
+++++ config.resources[1424]: [[ -n '' ]]
+++++ config.resources[1426]: [[ -n '' ]]
+++++ config.resources[1422]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1423]: run_resource_var=tasks_per_node_enkfgdas
+++++ config.resources[1424]: [[ -n '' ]]
+++++ config.resources[1426]: [[ -n 0 ]]
+++++ config.resources[1427]: export tasks_per_node
+++++ config.resources[1422]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1423]: run_resource_var=NTASKS_enkfgdas
+++++ config.resources[1424]: [[ -n '' ]]
+++++ config.resources[1426]: [[ -n '' ]]
+++++ config.resources[1422]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1423]: run_resource_var=memory_enkfgdas
+++++ config.resources[1424]: [[ -n '' ]]
+++++ config.resources[1426]: [[ -n '' ]]
+++++ config.resources[1422]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1423]: run_resource_var=walltime_enkfgdas
+++++ config.resources[1424]: [[ -n '' ]]
+++++ config.resources[1426]: [[ -n '' ]]
+++++ config.resources[1431]: echo 'END: config.resources'
+END: config.resources
++++ config.anal[11]: [[ YES = \Y\E\S ]]
++++ config.anal[12]: . /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52/config.nsst
+++++ config.nsst[6]: echo 'BEGIN: config.nsst'
+BEGIN: config.nsst
+++++ config.nsst[11]: export NST_MODEL=2
+++++ config.nsst[11]: NST_MODEL=2
+++++ config.nsst[14]: [[ NO == \Y\E\S ]]
+++++ config.nsst[14]: [[ NO == \Y\E\S ]]
+++++ config.nsst[19]: export NST_SPINUP=0
+++++ config.nsst[19]: NST_SPINUP=0
+++++ config.nsst[20]: cdate=2021122018
+++++ config.nsst[21]: ((  cdate < 2017072000  ))
+++++ config.nsst[26]: export NST_RESV=0
+++++ config.nsst[26]: NST_RESV=0
+++++ config.nsst[29]: export ZSEA1=0
+++++ config.nsst[29]: ZSEA1=0
+++++ config.nsst[30]: export ZSEA2=0
+++++ config.nsst[30]: ZSEA2=0
+++++ config.nsst[32]: export NST_GSI=3
+++++ config.nsst[32]: NST_GSI=3
+++++ config.nsst[36]: export NSTINFO=0
+++++ config.nsst[36]: NSTINFO=0
+++++ config.nsst[37]: ((  NST_GSI > 0  ))
+++++ config.nsst[37]: export NSTINFO=4
+++++ config.nsst[37]: NSTINFO=4
+++++ config.nsst[39]: echo 'END: config.nsst'
+END: config.nsst
++++ config.anal[15]: [[ enkfgdas == \g\f\s ]]
++++ config.anal[23]: [[ 128 = \1\2\8 ]]
++++ config.anal[24]: export 'GRIDOPTS=nlayers(63)=1,nlayers(64)=1,'
++++ config.anal[24]: GRIDOPTS='nlayers(63)=1,nlayers(64)=1,'
++++ config.anal[25]: export SETUP=gpstop=55,nsig_ext=45,
++++ config.anal[25]: SETUP=gpstop=55,nsig_ext=45,
++++ config.anal[29]: export lobsdiag_forenkf=.false.
++++ config.anal[29]: lobsdiag_forenkf=.false.
++++ config.anal[33]: export GSNDBF=/dev/null
++++ config.anal[33]: GSNDBF=/dev/null
++++ config.anal[34]: export AMSREBF=/dev/null
++++ config.anal[34]: AMSREBF=/dev/null
++++ config.anal[35]: export SSMITBF=/dev/null
++++ config.anal[35]: SSMITBF=/dev/null
++++ config.anal[36]: export AMSR2BF=/dev/null
++++ config.anal[36]: AMSR2BF=/dev/null
++++ config.anal[41]: export CONVINFO=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/gsi/global_convinfo.txt
++++ config.anal[41]: CONVINFO=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/gsi/global_convinfo.txt
++++ config.anal[42]: export OZINFO=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/gsi/global_ozinfo.txt
++++ config.anal[42]: OZINFO=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/gsi/global_ozinfo.txt
++++ config.anal[43]: export SATINFO=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/gsi/global_satinfo.txt
++++ config.anal[43]: SATINFO=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/gsi/global_satinfo.txt
++++ config.anal[44]: export OBERROR=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/gsi/prepobs_errtable.global
++++ config.anal[44]: OBERROR=/scratch1/NCEPDEV/global/CI/3092/gfs/fix/gsi/prepobs_errtable.global
++++ config.anal[46]: [[ NO = \Y\E\S ]]
++++ config.anal[55]: [[ emc == \e\m\c ]]
++++ config.anal[57]: [[ 2021122018 -ge 2019021900 ]]
++++ config.anal[57]: [[ 2021122018 -lt 2019110706 ]]
++++ config.anal[63]: [[ 2021122018 -ge 2019110706 ]]
++++ config.anal[63]: [[ 2021122018 -lt 2020040718 ]]
++++ config.anal[69]: [[ 2021122018 -ge 2020040718 ]]
++++ config.anal[69]: [[ 2021122018 -lt 2020052612 ]]
++++ config.anal[75]: [[ 2021122018 -ge 2020052612 ]]
++++ config.anal[75]: [[ 2021122018 -lt 2020082412 ]]
++++ config.anal[81]: [[ 2021122018 -ge 2020082412 ]]
++++ config.anal[81]: [[ 2021122018 -lt 2020091612 ]]
++++ config.anal[86]: [[ 2021122018 -ge 2020091612 ]]
++++ config.anal[86]: [[ 2021122018 -lt 2021031712 ]]
++++ config.anal[91]: [[ 2021122018 -ge 2021031712 ]]
++++ config.anal[91]: [[ 2021122018 -lt 2021091612 ]]
++++ config.anal[105]: [[ 2021122018 -ge 2020011600 ]]
++++ config.anal[105]: [[ 2021122018 -lt 2020011806 ]]
++++ config.anal[111]: [[ 2021122018 -ge 2019021900 ]]
++++ config.anal[111]: [[ 2021122018 -lt 2019110706 ]]
++++ config.anal[116]: [[ 2021122018 -ge 2019110706 ]]
++++ config.anal[116]: [[ 2021122018 -lt 2020022012 ]]
++++ config.anal[121]: [[ 2021122018 -ge 2020022012 ]]
++++ config.anal[121]: [[ 2021122018 -lt 2021052118 ]]
++++ config.anal[126]: [[ 2021122018 -ge 2021052118 ]]
++++ config.anal[126]: [[ 2021122018 -lt 2021092206 ]]
++++ config.anal[131]: [[ 2021122018 -ge 2021092206 ]]
++++ config.anal[131]: [[ 2021122018 -lt 2021102612 ]]
++++ config.anal[148]: export AIRS_CADS=.false.
++++ config.anal[148]: AIRS_CADS=.false.
++++ config.anal[149]: export CRIS_CADS=.false.
++++ config.anal[149]: CRIS_CADS=.false.
++++ config.anal[150]: export IASI_CADS=.false.
++++ config.anal[150]: IASI_CADS=.false.
++++ config.anal[152]: echo 'END: config.anal'
+END: config.anal
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52/config.eobs
++++ config.eobs[6]: echo 'BEGIN: config.eobs'
+BEGIN: config.eobs
++++ config.eobs[9]: . /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52/config.resources eobs
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=eobs
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[46]: max_tasks_per_node=40
+++++ config.resources[48]: mem_node_max=96GB
+++++ config.resources[144]: export max_tasks_per_node
+++++ config.resources[146]: case ${step} in
+++++ config.resources[1110]: [[ eobs == \e\o\b\s ]]
+++++ config.resources[1111]: walltime=00:15:00
+++++ config.resources[1116]: case ${CASE} in
+++++ config.resources[1119]: ntasks=40
+++++ config.resources[1125]: threads_per_task=2
+++++ config.resources[1128]: tasks_per_node=20
+++++ config.resources[1129]: export is_exclusive=True
+++++ config.resources[1129]: is_exclusive=True
+++++ config.resources[1134]: [[ 0 != 0 ]]
+++++ config.resources[1417]: [[ -f /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52/config.resources.HERA ]]
+++++ config.resources[1418]: source /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_01216a52/config.resources.HERA
++++++ config.resources.HERA[5]: case ${step} in
+++++ config.resources[1422]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1423]: run_resource_var=threads_per_task_enkfgdas
+++++ config.resources[1424]: [[ -n '' ]]
+++++ config.resources[1426]: [[ -n 0 ]]
+++++ config.resources[1427]: export threads_per_task
+++++ config.resources[1422]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1423]: run_resource_var=ntasks_enkfgdas
+++++ config.resources[1424]: [[ -n '' ]]
+++++ config.resources[1426]: [[ -n 0 ]]
+++++ config.resources[1427]: export ntasks
+++++ config.resources[1422]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1423]: run_resource_var=tasks_per_node_enkfgdas
+++++ config.resources[1424]: [[ -n '' ]]
+++++ config.resources[1426]: [[ -n 0 ]]
+++++ config.resources[1427]: export tasks_per_node
+++++ config.resources[1422]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1423]: run_resource_var=NTASKS_enkfgdas
+++++ config.resources[1424]: [[ -n '' ]]
+++++ config.resources[1426]: [[ -n '' ]]
+++++ config.resources[1422]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1423]: run_resource_var=memory_enkfgdas
+++++ config.resources[1424]: [[ -n '' ]]
+++++ config.resources[1426]: [[ -n '' ]]
+++++ config.resources[1422]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1423]: run_resource_var=walltime_enkfgdas
+++++ config.resources[1424]: [[ -n '' ]]
+++++ config.resources[1426]: [[ -n 0 ]]
+++++ config.resources[1427]: export walltime
+++++ config.resources[1431]: echo 'END: config.resources'
+END: config.resources
++++ config.eobs[12]: export NMEM_EOMGGRP=8
++++ config.eobs[12]: NMEM_EOMGGRP=8
++++ config.eobs[13]: export RERUN_EOMGGRP=YES
++++ config.eobs[13]: RERUN_EOMGGRP=YES
++++ config.eobs[16]: export 'OBSINPUT_INVOBS=dmesh(1)=225.0,dmesh(2)=225.0,dmesh(3)=225.0,dmesh(4)=100.0'
++++ config.eobs[16]: OBSINPUT_INVOBS='dmesh(1)=225.0,dmesh(2)=225.0,dmesh(3)=225.0,dmesh(4)=100.0'
++++ config.eobs[17]: export OBSQC_INVOBS=tcp_width=60.0,tcp_ermin=2.0,tcp_ermax=12.0
++++ config.eobs[17]: OBSQC_INVOBS=tcp_width=60.0,tcp_ermin=2.0,tcp_ermax=12.0
++++ config.eobs[18]: ((  LEVS == 128  ))
++++ config.eobs[19]: export 'GRIDOPTS_INVOBS=nlayers(63)=1,nlayers(64)=1,'
++++ config.eobs[19]: GRIDOPTS_INVOBS='nlayers(63)=1,nlayers(64)=1,'
++++ config.eobs[20]: export SETUP_INVOBS=gpstop=55,nsig_ext=56,
++++ config.eobs[20]: SETUP_INVOBS=gpstop=55,nsig_ext=56,
++++ config.eobs[24]: export USE_RADSTAT=NO
++++ config.eobs[24]: USE_RADSTAT=NO
++++ config.eobs[25]: export GENDIAG=YES
++++ config.eobs[25]: GENDIAG=YES
++++ config.eobs[27]: export lobsdiag_forenkf=.true.
++++ config.eobs[27]: lobsdiag_forenkf=.true.
++++ config.eobs[30]: echo 'END: config.eobs'
+END: config.eobs
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /scratch1/NCEPDEV/global/CI/3092/gfs/env/HERA.env eobs
++++ HERA.env[3]: [[ 1 -ne 1 ]]
++++ HERA.env[10]: step=eobs
++++ HERA.env[12]: export 'launcher=srun -l --export=ALL --hint=nomultithread'
++++ HERA.env[12]: launcher='srun -l --export=ALL --hint=nomultithread'
++++ HERA.env[13]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ HERA.env[13]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ HERA.env[24]: export OMP_STACKSIZE=2048000
++++ HERA.env[24]: OMP_STACKSIZE=2048000
++++ HERA.env[25]: export NTHSTACK=1024000000
++++ HERA.env[25]: NTHSTACK=1024000000
++++ HERA.env[29]: [[ -n 2561282 ]]
++++ HERA.env[30]: ulimit -s unlimited
++++ HERA.env[31]: ulimit -a
+core file size          (blocks, -c) unlimited
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 379939
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) 94208000
+open files                      (-n) 131072
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 379939
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
++++ HERA.env[36]: [[ -n 40 ]]
++++ HERA.env[36]: [[ -n 40 ]]
++++ HERA.env[36]: [[ -n 20 ]]
++++ HERA.env[37]: max_threads_per_task=2
++++ HERA.env[38]: NTHREADSmax=2
++++ HERA.env[39]: NTHREADS1=2
++++ HERA.env[40]: [[ 2 -gt 2 ]]
++++ HERA.env[41]: [[ 2 -gt 2 ]]
++++ HERA.env[42]: APRUN_default='srun -l --export=ALL --hint=nomultithread -n 40'
++++ HERA.env[48]: [[ eobs = \p\r\e\p ]]
++++ HERA.env[48]: [[ eobs = \p\r\e\p\b\u\f\r ]]
++++ HERA.env[55]: [[ eobs = \p\r\e\p\_\e\m\i\s\s\i\o\n\s ]]
++++ HERA.env[59]: [[ eobs = \w\a\v\e\i\n\i\t ]]
++++ HERA.env[59]: [[ eobs = \w\a\v\e\p\r\e\p ]]
++++ HERA.env[59]: [[ eobs = \w\a\v\e\p\o\s\t\s\b\s ]]
++++ HERA.env[59]: [[ eobs = \w\a\v\e\p\o\s\t\b\n\d\p\n\t ]]
++++ HERA.env[59]: [[ eobs = \w\a\v\e\p\o\s\t\b\n\d\p\n\t\b\l\l ]]
++++ HERA.env[59]: [[ eobs = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ HERA.env[66]: [[ eobs = \a\t\m\a\n\l\v\a\r ]]
++++ HERA.env[71]: [[ eobs = \a\t\m\e\n\s\a\n\l\o\b\s ]]
++++ HERA.env[76]: [[ eobs = \a\t\m\e\n\s\a\n\l\s\o\l ]]
++++ HERA.env[81]: [[ eobs = \a\t\m\e\n\s\a\n\l\l\e\t\k\f ]]
++++ HERA.env[86]: [[ eobs = \a\t\m\e\n\s\a\n\l\f\v\3\i\n\c ]]
++++ HERA.env[91]: [[ eobs = \a\e\r\o\a\n\l\v\a\r ]]
++++ HERA.env[98]: [[ eobs = \a\e\r\o\a\n\l\g\e\n\b ]]
++++ HERA.env[103]: [[ eobs = \a\t\m\a\n\l\f\v\3\i\n\c ]]
++++ HERA.env[108]: [[ eobs = \p\r\e\p\o\b\s\a\e\r\o ]]
++++ HERA.env[113]: [[ eobs = \s\n\o\w\a\n\l ]]
++++ HERA.env[122]: [[ eobs = \e\s\n\o\w\r\e\c\e\n ]]
++++ HERA.env[129]: [[ eobs = \m\a\r\i\n\e\b\m\a\t ]]
++++ HERA.env[134]: [[ eobs = \m\a\r\i\n\e\b\m\a\t ]]
++++ HERA.env[139]: [[ eobs = \m\a\r\i\n\e\a\n\l\v\a\r ]]
++++ HERA.env[144]: [[ eobs = \m\a\r\i\n\e\a\n\l\c\h\k\p\t ]]
++++ HERA.env[149]: [[ eobs = \o\c\n\a\n\a\l\e\c\e\n ]]
++++ HERA.env[154]: [[ eobs = \m\a\r\i\n\e\a\n\l\l\e\t\k\f ]]
++++ HERA.env[159]: [[ eobs = \a\n\a\l ]]
++++ HERA.env[159]: [[ eobs = \a\n\a\l\c\a\l\c ]]
++++ HERA.env[184]: [[ eobs = \s\f\c\a\n\l ]]
++++ HERA.env[189]: [[ eobs = \e\o\b\s ]]
++++ HERA.env[191]: export MKL_NUM_THREADS=4
++++ HERA.env[191]: MKL_NUM_THREADS=4
++++ HERA.env[192]: export MKL_CBWR=AUTO
++++ HERA.env[192]: MKL_CBWR=AUTO
++++ HERA.env[194]: export NTHREADS_GSI=2
++++ HERA.env[194]: NTHREADS_GSI=2
++++ HERA.env[195]: export 'APRUN_GSI=srun -l --export=ALL --hint=nomultithread -n 40 --cpus-per-task=2'
++++ HERA.env[195]: APRUN_GSI='srun -l --export=ALL --hint=nomultithread -n 40 --cpus-per-task=2'
++++ HERA.env[197]: export CFP_MP=YES
++++ HERA.env[197]: CFP_MP=YES
++++ HERA.env[198]: export USE_CFP=YES
++++ HERA.env[198]: USE_CFP=YES
++++ HERA.env[199]: export 'APRUNCFP=srun -l --export=ALL --hint=nomultithread -n $ncmd --multi-prog --output=mpmd.%j.%t.out'
++++ HERA.env[199]: APRUNCFP='srun -l --export=ALL --hint=nomultithread -n $ncmd --multi-prog --output=mpmd.%j.%t.out'
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
++ JGDAS_ENKF_SELECT_OBS[10]: export MAKE_NSSTBUFR=NO
++ JGDAS_ENKF_SELECT_OBS[10]: MAKE_NSSTBUFR=NO
++ JGDAS_ENKF_SELECT_OBS[11]: export MAKE_ACFTBUFR=NO
++ JGDAS_ENKF_SELECT_OBS[11]: MAKE_ACFTBUFR=NO
+++ JGDAS_ENKF_SELECT_OBS[19]: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/prod-util-2.1.1-4vpcrpl/bin/ndate -6 2021122018
++ JGDAS_ENKF_SELECT_OBS[19]: GDATE=2021122012
++ JGDAS_ENKF_SELECT_OBS[21]: export gPDY=20211220
++ JGDAS_ENKF_SELECT_OBS[21]: gPDY=20211220
++ JGDAS_ENKF_SELECT_OBS[22]: export gcyc=12
++ JGDAS_ENKF_SELECT_OBS[22]: gcyc=12
++ JGDAS_ENKF_SELECT_OBS[23]: export GDUMP=gdas
++ JGDAS_ENKF_SELECT_OBS[23]: GDUMP=gdas
++ JGDAS_ENKF_SELECT_OBS[24]: export GDUMP_ENS=enkfgdas
++ JGDAS_ENKF_SELECT_OBS[24]: GDUMP_ENS=enkfgdas
++ JGDAS_ENKF_SELECT_OBS[26]: export OPREFIX=gdas.t18z.
++ JGDAS_ENKF_SELECT_OBS[26]: OPREFIX=gdas.t18z.
++ JGDAS_ENKF_SELECT_OBS[27]: export APREFIX=enkfgdas.t18z.
++ JGDAS_ENKF_SELECT_OBS[27]: APREFIX=enkfgdas.t18z.
++ JGDAS_ENKF_SELECT_OBS[28]: export GPREFIX=enkfgdas.t12z.
++ JGDAS_ENKF_SELECT_OBS[28]: GPREFIX=enkfgdas.t12z.
++ JGDAS_ENKF_SELECT_OBS[29]: APREFIX_DET=gdas.t18z.
++ JGDAS_ENKF_SELECT_OBS[30]: GPREFIX_DET=gdas.t12z.
++ JGDAS_ENKF_SELECT_OBS[32]: export GSUFFIX=.ensmean.nc
++ JGDAS_ENKF_SELECT_OBS[32]: GSUFFIX=.ensmean.nc
++ JGDAS_ENKF_SELECT_OBS[35]: RUN=gdas
++ JGDAS_ENKF_SELECT_OBS[35]: YMD=20211220
++ JGDAS_ENKF_SELECT_OBS[35]: HH=18
++ JGDAS_ENKF_SELECT_OBS[35]: declare_from_tmpl -rx COMIN_OBS:COM_OBS_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_OBS=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18/obs
++ JGDAS_ENKF_SELECT_OBS[37]: MEMDIR=ensstat
++ JGDAS_ENKF_SELECT_OBS[37]: YMD=20211220
++ JGDAS_ENKF_SELECT_OBS[37]: HH=18
++ JGDAS_ENKF_SELECT_OBS[37]: declare_from_tmpl -rx COMOUT_ATMOS_ANALYSIS:COM_ATMOS_ANALYSIS_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMOUT_ATMOS_ANALYSIS=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos
++ JGDAS_ENKF_SELECT_OBS[39]: declare -rx COMOUT_ATMOS_ANALYSIS_ENS=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos
++ JGDAS_ENKF_SELECT_OBS[41]: RUN=gdas
++ JGDAS_ENKF_SELECT_OBS[41]: YMD=20211220
++ JGDAS_ENKF_SELECT_OBS[41]: HH=18
++ JGDAS_ENKF_SELECT_OBS[41]: declare_from_tmpl -r COMOUT_ATMOS_ANALYSIS_DET:COM_ATMOS_ANALYSIS_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMOUT_ATMOS_ANALYSIS_DET=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18//analysis/atmos
++ JGDAS_ENKF_SELECT_OBS[44]: MEMDIR=ensstat
++ JGDAS_ENKF_SELECT_OBS[44]: RUN=enkfgdas
++ JGDAS_ENKF_SELECT_OBS[44]: YMD=20211220
++ JGDAS_ENKF_SELECT_OBS[44]: HH=12
++ JGDAS_ENKF_SELECT_OBS[44]: declare_from_tmpl -rx COMIN_ATMOS_ANALYSIS_PREV:COM_ATMOS_ANALYSIS_TMPL COMIN_ATMOS_HISTORY_PREV:COM_ATMOS_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ATMOS_ANALYSIS_PREV=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/12/ensstat/analysis/atmos
+declare_from_tmpl :: COMIN_ATMOS_HISTORY_PREV=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/12/ensstat/model/atmos/history
++ JGDAS_ENKF_SELECT_OBS[48]: RUN=gdas
++ JGDAS_ENKF_SELECT_OBS[48]: YMD=20211220
++ JGDAS_ENKF_SELECT_OBS[48]: HH=12
++ JGDAS_ENKF_SELECT_OBS[48]: declare_from_tmpl -r COMIN_ATMOS_ANALYSIS_DET_PREV:COM_ATMOS_ANALYSIS_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ATMOS_ANALYSIS_DET_PREV=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/12//analysis/atmos
++ JGDAS_ENKF_SELECT_OBS[51]: mkdir -p /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos
++ JGDAS_ENKF_SELECT_OBS[53]: export ATMGES_ENSMEAN=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/12/ensstat/model/atmos/history/enkfgdas.t12z.atmf006.ensmean.nc
++ JGDAS_ENKF_SELECT_OBS[53]: ATMGES_ENSMEAN=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/12/ensstat/model/atmos/history/enkfgdas.t12z.atmf006.ensmean.nc
++ JGDAS_ENKF_SELECT_OBS[54]: [[ ! -f /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/12/ensstat/model/atmos/history/enkfgdas.t12z.atmf006.ensmean.nc ]]
+++ JGDAS_ENKF_SELECT_OBS[61]: grep -i pfull
+++ JGDAS_ENKF_SELECT_OBS[61]: awk '-F = ' '{print $2}'
+++ JGDAS_ENKF_SELECT_OBS[61]: awk '-F ' '{print $1}'
+++ JGDAS_ENKF_SELECT_OBS[61]: head -1
+++ JGDAS_ENKF_SELECT_OBS[61]: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/bin/ncdump -h /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/12/ensstat/model/atmos/history/enkfgdas.t12z.atmf006.ensmean.nc
++ JGDAS_ENKF_SELECT_OBS[61]: LEVS=127
++ JGDAS_ENKF_SELECT_OBS[63]: status=0
++ JGDAS_ENKF_SELECT_OBS[64]: [[ 0 -ne 0 ]]
++ JGDAS_ENKF_SELECT_OBS[65]: export LEVS
++ JGDAS_ENKF_SELECT_OBS[68]: export PREPQC=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18/obs/gdas.t18z.prepbufr
++ JGDAS_ENKF_SELECT_OBS[68]: PREPQC=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18/obs/gdas.t18z.prepbufr
++ JGDAS_ENKF_SELECT_OBS[69]: [[ ! -f /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18/obs/gdas.t18z.prepbufr ]]
++ JGDAS_ENKF_SELECT_OBS[72]: export TCVITL=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18/obs/gdas.t18z.syndata.tcvitals.tm00
++ JGDAS_ENKF_SELECT_OBS[72]: TCVITL=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18/obs/gdas.t18z.syndata.tcvitals.tm00
++ JGDAS_ENKF_SELECT_OBS[73]: [[ YES = \Y\E\S ]]
++ JGDAS_ENKF_SELECT_OBS[74]: export NSSTBF=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18/obs/gdas.t18z.nsstbufr
++ JGDAS_ENKF_SELECT_OBS[74]: NSSTBF=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18/obs/gdas.t18z.nsstbufr
++ JGDAS_ENKF_SELECT_OBS[76]: export PREPQCPF=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18/obs/gdas.t18z.prepbufr.acft_profiles
++ JGDAS_ENKF_SELECT_OBS[76]: PREPQCPF=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18/obs/gdas.t18z.prepbufr.acft_profiles
++ JGDAS_ENKF_SELECT_OBS[79]: export SFCANL=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18//analysis/atmos/gdas.t18z.sfcanl.nc
++ JGDAS_ENKF_SELECT_OBS[79]: SFCANL=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18//analysis/atmos/gdas.t18z.sfcanl.nc
++ JGDAS_ENKF_SELECT_OBS[80]: export DTFANL=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18//analysis/atmos/gdas.t18z.dtfanl.nc
++ JGDAS_ENKF_SELECT_OBS[80]: DTFANL=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18//analysis/atmos/gdas.t18z.dtfanl.nc
++ JGDAS_ENKF_SELECT_OBS[81]: export ATMANL=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18//analysis/atmos/gdas.t18z.atmanl.nc
++ JGDAS_ENKF_SELECT_OBS[81]: ATMANL=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18//analysis/atmos/gdas.t18z.atmanl.nc
++ JGDAS_ENKF_SELECT_OBS[82]: export ATMINC=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18//analysis/atmos/gdas.t18z.atminc.nc
++ JGDAS_ENKF_SELECT_OBS[82]: ATMINC=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18//analysis/atmos/gdas.t18z.atminc.nc
++ JGDAS_ENKF_SELECT_OBS[85]: export GBIAS=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/12//analysis/atmos/gdas.t12z.abias
++ JGDAS_ENKF_SELECT_OBS[85]: GBIAS=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/12//analysis/atmos/gdas.t12z.abias
++ JGDAS_ENKF_SELECT_OBS[86]: export GBIASPC=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/12//analysis/atmos/gdas.t12z.abias_pc
++ JGDAS_ENKF_SELECT_OBS[86]: GBIASPC=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/12//analysis/atmos/gdas.t12z.abias_pc
++ JGDAS_ENKF_SELECT_OBS[87]: export GBIASAIR=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/12//analysis/atmos/gdas.t12z.abias_air
++ JGDAS_ENKF_SELECT_OBS[87]: GBIASAIR=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/12//analysis/atmos/gdas.t12z.abias_air
++ JGDAS_ENKF_SELECT_OBS[88]: export GRADSTAT=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/12//analysis/atmos/gdas.t12z.radstat
++ JGDAS_ENKF_SELECT_OBS[88]: GRADSTAT=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/12//analysis/atmos/gdas.t12z.radstat
++ JGDAS_ENKF_SELECT_OBS[91]: export ABIAS=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.abias.ensmean
++ JGDAS_ENKF_SELECT_OBS[91]: ABIAS=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.abias.ensmean
++ JGDAS_ENKF_SELECT_OBS[92]: export ABIASPC=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.abias_pc.ensmean
++ JGDAS_ENKF_SELECT_OBS[92]: ABIASPC=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.abias_pc.ensmean
++ JGDAS_ENKF_SELECT_OBS[93]: export ABIASAIR=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.abias_air.ensmean
++ JGDAS_ENKF_SELECT_OBS[93]: ABIASAIR=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.abias_air.ensmean
++ JGDAS_ENKF_SELECT_OBS[94]: export ABIASe=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.abias_int.ensmean
++ JGDAS_ENKF_SELECT_OBS[94]: ABIASe=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.abias_int.ensmean
++ JGDAS_ENKF_SELECT_OBS[97]: export GSISTAT=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.gsistat.ensmean
++ JGDAS_ENKF_SELECT_OBS[97]: GSISTAT=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.gsistat.ensmean
++ JGDAS_ENKF_SELECT_OBS[98]: export CNVSTAT=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.cnvstat.ensmean
++ JGDAS_ENKF_SELECT_OBS[98]: CNVSTAT=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.cnvstat.ensmean
++ JGDAS_ENKF_SELECT_OBS[99]: export OZNSTAT=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.oznstat.ensmean
++ JGDAS_ENKF_SELECT_OBS[99]: OZNSTAT=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.oznstat.ensmean
++ JGDAS_ENKF_SELECT_OBS[100]: export RADSTAT=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.radstat.ensmean
++ JGDAS_ENKF_SELECT_OBS[100]: RADSTAT=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.radstat.ensmean
++ JGDAS_ENKF_SELECT_OBS[103]: export RUN_SELECT=YES
++ JGDAS_ENKF_SELECT_OBS[103]: RUN_SELECT=YES
++ JGDAS_ENKF_SELECT_OBS[104]: export USE_SELECT=NO
++ JGDAS_ENKF_SELECT_OBS[104]: USE_SELECT=NO
++ JGDAS_ENKF_SELECT_OBS[105]: export SELECT_OBS=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.obsinput.ensmean
++ JGDAS_ENKF_SELECT_OBS[105]: SELECT_OBS=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.obsinput.ensmean
++ JGDAS_ENKF_SELECT_OBS[107]: export DIAG_SUFFIX=_ensmean
++ JGDAS_ENKF_SELECT_OBS[107]: DIAG_SUFFIX=_ensmean
++ JGDAS_ENKF_SELECT_OBS[110]: export SETUP_INVOBS=passive_bc=.false.,gpstop=55,nsig_ext=56,
++ JGDAS_ENKF_SELECT_OBS[110]: SETUP_INVOBS=passive_bc=.false.,gpstop=55,nsig_ext=56,
++ JGDAS_ENKF_SELECT_OBS[113]: for fstat in ${CNVSTAT} ${OZNSTAT} ${RADSTAT}
++ JGDAS_ENKF_SELECT_OBS[114]: [[ -f /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.cnvstat.ensmean ]]
++ JGDAS_ENKF_SELECT_OBS[113]: for fstat in ${CNVSTAT} ${OZNSTAT} ${RADSTAT}
++ JGDAS_ENKF_SELECT_OBS[114]: [[ -f /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.oznstat.ensmean ]]
++ JGDAS_ENKF_SELECT_OBS[113]: for fstat in ${CNVSTAT} ${OZNSTAT} ${RADSTAT}
++ JGDAS_ENKF_SELECT_OBS[114]: [[ -f /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.radstat.ensmean ]]
++ JGDAS_ENKF_SELECT_OBS[121]: /scratch1/NCEPDEV/global/CI/3092/gfs/scripts/exgdas_enkf_select_obs.sh
+Begin exgdas_enkf_select_obs.sh at Fri Nov 15 10:30:51 UTC 2024
+++ exgdas_enkf_select_obs.sh[23]: pwd
++ exgdas_enkf_select_obs.sh[23]: pwd=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.2021122018/eobs.205430
++ exgdas_enkf_select_obs.sh[26]: ANALYSISSH=/scratch1/NCEPDEV/global/CI/3092/gfs/scripts/exglobal_atmos_analysis.sh
++ exgdas_enkf_select_obs.sh[29]: export RUN_SELECT=YES
++ exgdas_enkf_select_obs.sh[29]: RUN_SELECT=YES
++ exgdas_enkf_select_obs.sh[30]: export USE_SELECT=NO
++ exgdas_enkf_select_obs.sh[30]: USE_SELECT=NO
++ exgdas_enkf_select_obs.sh[33]: SETUP_INVOBS=passive_bc=.false.,gpstop=55,nsig_ext=56,
++ exgdas_enkf_select_obs.sh[34]: GRIDOPTS_INVOBS='nlayers(63)=1,nlayers(64)=1,'
++ exgdas_enkf_select_obs.sh[35]: BKGVERR_INVOBS=
++ exgdas_enkf_select_obs.sh[36]: ANBKGERR_INVOBS=
++ exgdas_enkf_select_obs.sh[37]: JCOPTS_INVOBS=
++ exgdas_enkf_select_obs.sh[38]: STRONGOPTS_INVOBS=
++ exgdas_enkf_select_obs.sh[39]: OBSQC_INVOBS=tcp_width=60.0,tcp_ermin=2.0,tcp_ermax=12.0
++ exgdas_enkf_select_obs.sh[40]: OBSINPUT_INVOBS='dmesh(1)=225.0,dmesh(2)=225.0,dmesh(3)=225.0,dmesh(4)=100.0'
++ exgdas_enkf_select_obs.sh[41]: SUPERRAD_INVOBS=
++ exgdas_enkf_select_obs.sh[42]: SINGLEOB_INVOBS=
++ exgdas_enkf_select_obs.sh[43]: LAGDATA_INVOBS=
++ exgdas_enkf_select_obs.sh[44]: HYBRID_ENSEMBLE_INVOBS=
++ exgdas_enkf_select_obs.sh[45]: RAPIDREFRESH_CLDSURF_INVOBS=
++ exgdas_enkf_select_obs.sh[46]: CHEM_INVOBS=
++ exgdas_enkf_select_obs.sh[50]: mkdata=NO
++ exgdas_enkf_select_obs.sh[51]: '[' '!' -d /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.2021122018/eobs.205430 ']'
++ exgdas_enkf_select_obs.sh[55]: cd /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.2021122018/eobs.205430
++ exgdas_enkf_select_obs.sh[59]: rm -f 'obs*input*'
++ exgdas_enkf_select_obs.sh[60]: /bin/ln -sf /scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.20211220/18/ensstat/analysis/atmos/enkfgdas.t18z.obsinput.ensmean obsinput.tar
++ exgdas_enkf_select_obs.sh[63]: '[' YES = YES -a NO = NO ']'
++ exgdas_enkf_select_obs.sh[64]: lread_obs_save=.true.
++ exgdas_enkf_select_obs.sh[65]: lread_obs_skip=.false.
++ exgdas_enkf_select_obs.sh[73]: export DIAG_SUFFIX=_ensmean
++ exgdas_enkf_select_obs.sh[73]: DIAG_SUFFIX=_ensmean
++ exgdas_enkf_select_obs.sh[74]: export DIAG_COMPRESS=NO
++ exgdas_enkf_select_obs.sh[74]: DIAG_COMPRESS=NO
++ exgdas_enkf_select_obs.sh[75]: export DIAG_TARBALL=YES
++ exgdas_enkf_select_obs.sh[75]: DIAG_TARBALL=YES
++ exgdas_enkf_select_obs.sh[76]: export DOHYBVAR=NO
++ exgdas_enkf_select_obs.sh[76]: DOHYBVAR=NO
++ exgdas_enkf_select_obs.sh[77]: export DO_CALC_INCREMENT=NO
++ exgdas_enkf_select_obs.sh[77]: DO_CALC_INCREMENT=NO
++ exgdas_enkf_select_obs.sh[78]: export DO_CALC_ANALYSIS=NO
++ exgdas_enkf_select_obs.sh[78]: DO_CALC_ANALYSIS=NO
++ exgdas_enkf_select_obs.sh[79]: export USE_CORRELATED_OBERRS=NO
++ exgdas_enkf_select_obs.sh[79]: USE_CORRELATED_OBERRS=NO
++ exgdas_enkf_select_obs.sh[80]: export write_fv3_increment=.false.
++ exgdas_enkf_select_obs.sh[80]: write_fv3_increment=.false.
++ exgdas_enkf_select_obs.sh[83]: export SETUP=miter=0,niter=1,lread_obs_save=.true.,lread_obs_skip=.false.,lwrite_predterms=.true.,lwrite_peakwt=.true.,reduce_diag=.true.,passive_bc=.false.,gpstop=55,nsig_ext=56,
++ exgdas_enkf_select_obs.sh[83]: SETUP=miter=0,niter=1,lread_obs_save=.true.,lread_obs_skip=.false.,lwrite_predterms=.true.,lwrite_peakwt=.true.,reduce_diag=.true.,passive_bc=.false.,gpstop=55,nsig_ext=56,
++ exgdas_enkf_select_obs.sh[84]: export 'GRIDOPTS=nlayers(63)=1,nlayers(64)=1,'
++ exgdas_enkf_select_obs.sh[84]: GRIDOPTS='nlayers(63)=1,nlayers(64)=1,'
++ exgdas_enkf_select_obs.sh[85]: export BKGVERR=bkgv_flowdep=.false.,
++ exgdas_enkf_select_obs.sh[85]: BKGVERR=bkgv_flowdep=.false.,
++ exgdas_enkf_select_obs.sh[86]: export ANBKGERR=
++ exgdas_enkf_select_obs.sh[86]: ANBKGERR=
++ exgdas_enkf_select_obs.sh[87]: export JCOPTS=
++ exgdas_enkf_select_obs.sh[87]: JCOPTS=
++ exgdas_enkf_select_obs.sh[88]: export STRONGOPTS=tlnmc_option=0,nstrong=0,nvmodes_keep=0,baldiag_full=.false.,baldiag_inc=.false.,
++ exgdas_enkf_select_obs.sh[88]: STRONGOPTS=tlnmc_option=0,nstrong=0,nvmodes_keep=0,baldiag_full=.false.,baldiag_inc=.false.,
++ exgdas_enkf_select_obs.sh[89]: export OBSQC=tcp_width=60.0,tcp_ermin=2.0,tcp_ermax=12.0
++ exgdas_enkf_select_obs.sh[89]: OBSQC=tcp_width=60.0,tcp_ermin=2.0,tcp_ermax=12.0
++ exgdas_enkf_select_obs.sh[90]: export 'OBSINPUT=dmesh(1)=225.0,dmesh(2)=225.0,dmesh(3)=225.0,dmesh(4)=100.0'
++ exgdas_enkf_select_obs.sh[90]: OBSINPUT='dmesh(1)=225.0,dmesh(2)=225.0,dmesh(3)=225.0,dmesh(4)=100.0'
++ exgdas_enkf_select_obs.sh[91]: export SUPERRAD=
++ exgdas_enkf_select_obs.sh[91]: SUPERRAD=
++ exgdas_enkf_select_obs.sh[92]: export SINGLEOB=
++ exgdas_enkf_select_obs.sh[92]: SINGLEOB=
++ exgdas_enkf_select_obs.sh[93]: export LAGDATA=
++ exgdas_enkf_select_obs.sh[93]: LAGDATA=
++ exgdas_enkf_select_obs.sh[94]: export HYBRID_ENSEMBLE=
++ exgdas_enkf_select_obs.sh[94]: HYBRID_ENSEMBLE=
++ exgdas_enkf_select_obs.sh[95]: export RAPIDREFRESH_CLDSURF=
++ exgdas_enkf_select_obs.sh[95]: RAPIDREFRESH_CLDSURF=
++ exgdas_enkf_select_obs.sh[96]: export CHEM=
++ exgdas_enkf_select_obs.sh[96]: CHEM=
++ exgdas_enkf_select_obs.sh[101]: /scratch1/NCEPDEV/global/CI/3092/gfs/scripts/exglobal_atmos_analysis.sh
+Begin exglobal_atmos_analysis.sh at Fri Nov 15 10:30:52 UTC 2024
+++ exglobal_atmos_analysis.sh[25]: pwd
++ exglobal_atmos_analysis.sh[25]: pwd=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96C48_hybatmaerosnowDA_01216a52/enkfgdas.2021122018/eobs.205430
++ exglobal_atmos_analysis.sh[28]: CDATE=2021122018
++ exglobal_atmos_analysis.sh[29]: rCDUMP=gdas
++ exglobal_atmos_analysis.sh[30]: GDUMP=gdas
+++ exglobal_atmos_analysis.sh[33]: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/prod-util-2.1.1-4vpcrpl/bin/ndate -6 2021122018
++ exglobal_atmos_analysis.sh[33]: GDATE=2021122012
+++ exglobal_atmos_analysis.sh[34]: /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/prod-util-2.1.1-4vpcrpl/bin/ndate -3 2021122018
++ exglobal_atmos_analysis.sh[34]: BDATE=2021122015
+++ exglobal_atmos_analysis.sh[35]: cut -c1-8
+++ exglobal_atmos_analysis.sh[35]: echo 2021122018
++ exglobal_atmos_analysis.sh[35]: PDY=20211220
+++ exglobal_atmos_analysis.sh[36]: echo 2021122018
+++ exglobal_atmos_analysis.sh[36]: cut -c9-10
++ exglobal_atmos_analysis.sh[36]: cyc=18
+++ exglobal_atmos_analysis.sh[37]: echo 2021122015
+++ exglobal_atmos_analysis.sh[37]: cut -c1-8
++ exglobal_atmos_analysis.sh[37]: bPDY=20211220
+++ exglobal_atmos_analysis.sh[38]: echo 2021122015
+++ exglobal_atmos_analysis.sh[38]: cut -c9-10
++ exglobal_atmos_analysis.sh[38]: bcyc=15
++ exglobal_atmos_analysis.sh[41]: export 'CHGRP_CMD=chgrp rstprod'
++ exglobal_atmos_analysis.sh[41]: CHGRP_CMD='chgrp rstprod'
++ exglobal_atmos_analysis.sh[42]: export NCLEN=/scratch1/NCEPDEV/global/CI/3092/gfs/ush/getncdimlen
++ exglobal_atmos_analysis.sh[42]: NCLEN=/scratch1/NCEPDEV/global/CI/3092/gfs/ush/getncdimlen
++ exglobal_atmos_analysis.sh[43]: COMPRESS=gzip
++ exglobal_atmos_analysis.sh[44]: UNCOMPRESS=gunzip
++ exglobal_atmos_analysis.sh[45]: APRUNCFP='srun -l --export=ALL --hint=nomultithread -n $ncmd --multi-prog --output=mpmd.%j.%t.out'
++ exglobal_atmos_analysis.sh[46]: APRUN_GSI='srun -l --export=ALL --hint=nomultithread -n 40 --cpus-per-task=2'
++ exglobal_atmos_analysis.sh[47]: NTHREADS_GSI=2
++ exglobal_atmos_analysis.sh[50]: export imp_physics=8
++ exglobal_atmos_analysis.sh[50]: imp_physics=8
++ exglobal_atmos_analysis.sh[51]: lupp=.true.
++ exglobal_atmos_analysis.sh[52]: cnvw_option=.false.
++ exglobal_atmos_analysis.sh[55]: cao_check=.true.
++ exglobal_atmos_analysis.sh[56]: ta2tb=.true.
++ exglobal_atmos_analysis.sh[59]: lobsdiag_forenkf=.true.
++ exglobal_atmos_analysis.sh[60]: netcdf_diag=.true.
++ exglobal_atmos_analysis.sh[61]: binary_diag=.false.
++ exglobal_atmos_analysis.sh[64]: DOIAU=YES
++ exglobal_atmos_analysis.sh[65]: export IAUFHRS=3,6,9
++ exglobal_atmos_analysis.sh[65]: IAUFHRS=3,6,9
++ exglobal_atmos_analysis.sh[68]: GSIEXEC=/scratch1/NCEPDEV/global/CI/3092/gfs/exec/gsi.x
++ exglobal_atmos_analysis.sh[69]: export NTHREADS_CALCINC=1
++ exglobal_atmos_analysis.sh[69]: NTHREADS_CALCINC=1
++ exglobal_atmos_analysis.sh[70]: export APRUN_CALCINC=
++ exglobal_atmos_analysis.sh[70]: APRUN_CALCINC=
++ exglobal_atmos_analysis.sh[71]: export APRUN_CALCANL=
++ exglobal_atmos_analysis.sh[71]: APRUN_CALCANL=
++ exglobal_atmos_analysis.sh[72]: export APRUN_CHGRES=
++ exglobal_atmos_analysis.sh[72]: APRUN_CHGRES=
++ exglobal_atmos_analysis.sh[73]: export CALCINCEXEC=/scratch1/NCEPDEV/global/CI/3092/gfs/exec/calc_increment_ens.x
++ exglobal_atmos_analysis.sh[73]: CALCINCEXEC=/scratch1/NCEPDEV/global/CI/3092/gfs/exec/calc_increment_ens.x
++ exglobal_atmos_analysis.sh[74]: export CALCINCNCEXEC=/scratch1/NCEPDEV/global/CI/3092/gfs/exec/calc_increment_ens_ncio.x
++ exglobal_atmos_analysis.sh[74]: CALCINCNCEXEC=/scratch1/NCEPDEV/global/CI/3092/gfs/exec/calc_increment_ens_ncio.x
++ exglobal_atmos_analysis.sh[75]: export CALCANLEXEC=/scratch1/NCEPDEV/global/CI/3092/gfs/exec/calc_analysis.x
++ exglobal_atmos_analysis.sh[75]: CALCANLEXEC=/scratch1/NCEPDEV/global/CI/3092/gfs/exec/calc_analysis.x
++ exglobal_atmos_analysis.sh[76]: export CHGRESNCEXEC=/scratch1/NCEPDEV/global/CI/3092/gfs/exec/enkf_chgres_recenter_nc.x
++ exglobal_atmos_analysis.sh[76]: CHGRESNCEXEC=/scratch1/NCEPDEV/global/CI/3092/gfs/exec/enkf_chgres_recenter_nc.x
++ exglobal_atmos_analysis.sh[77]: export CHGRESINCEXEC=/scratch1/NCEPDEV/global/CI/3092/gfs/exec/interp_inc.x
++ exglobal_atmos_analysis.sh[77]: CHGRESINCEXEC=/scratch1/NCEPDEV/global/CI/3092/gfs/exec/interp_inc.x
++ exglobal_atmos_analysis.sh[78]: CHGRESEXEC=/scratch1/NCEPDEV/global/CI/3092/gfs/exec/enkf_chgres_recenter.x
++ exglobal_atmos_analysis.sh[79]: export NTHREADS_CHGRES=24
++ exglobal_atmos_analysis.sh[79]: NTHREADS_CHGRES=24
++ exglobal_atmos_analysis.sh[80]: CALCINCPY=/scratch1/NCEPDEV/global/CI/3092/gfs/ush/calcinc_gfs.py
++ exglobal_atmos_analysis.sh[83]: RUN=enkfgdas
++ exglobal_atmos_analysis.sh[84]: SENDECF=NO
++ exglobal_atmos_analysis.sh[85]: SENDDBN=NO
++ exglobal_atmos_analysis.sh[86]: RUN_GETGES=NO
++ exglobal_atmos_analysis.sh[87]: GETGESSH=getges.sh
++ exglobal_atmos_analysis.sh[88]: export gesenvir=prod
++ exglobal_atmos_analysis.sh[88]: gesenvir=prod
++ exglobal_atmos_analysis.sh[90]: export hofx_2m_sfcfile=.false.
++ exglobal_atmos_analysis.sh[90]: hofx_2m_sfcfile=.false.
++ exglobal_atmos_analysis.sh[93]: OPREFIX=gdas.t18z.
++ exglobal_atmos_analysis.sh[94]: OSUFFIX=
++ exglobal_atmos_analysis.sh[95]: PREPQC=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18/obs/gdas.t18z.prepbufr
++ exglobal_atmos_analysis.sh[96]: PREPQCPF=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18/obs/gdas.t18z.prepbufr.acft_profiles
++ exglobal_atmos_analysis.sh[97]: NSSTBF=/scratch1/NCEPDEV/global/CI/3092/RUNTESTS/COMROOT/C96C48_hybatmaerosnowDA_01216a52/gdas.20211220/18/obs/gdas.t18z.nsstbufr
+/scratch1/NCEPDEV/global/CI/3092/gfs/scripts/exglobal_atmos_analysis.sh: line 98: COM_OBS: unbound variable
+++ exglobal_atmos_analysis.sh[1]: postamble exglobal_atmos_analysis.sh 1731666652 1
+++ preamble.sh[70]: set +x
+End exglobal_atmos_analysis.sh at 10:30:54 with error code 1 (time elapsed: 00:00:02)
++ exgdas_enkf_select_obs.sh[1]: postamble exgdas_enkf_select_obs.sh 1731666651 1
++ preamble.sh[70]: set +x
+End exgdas_enkf_select_obs.sh at 10:30:54 with error code 1 (time elapsed: 00:00:03)
++ JGDAS_ENKF_SELECT_OBS[1]: postamble JGDAS_ENKF_SELECT_OBS 1731666632 1
++ preamble.sh[70]: set +x
+End JGDAS_ENKF_SELECT_OBS at 10:30:54 with error code 1 (time elapsed: 00:00:22)
++ eobs.sh[1]: postamble eobs.sh 1731666628 1
++ preamble.sh[70]: set +x
+End eobs.sh at 10:30:54 with error code 1 (time elapsed: 00:00:26)
+_______________________________________________________________
+Start Epilog on node h23c10 for job 2561282 :: Fri Nov 15 10:30:55 UTC 2024
+Job 2561282 finished for user Terry.McGuinness in partition hera with exit code 1:0
+_______________________________________________________________
+End Epilogue Fri Nov 15 10:30:55 UTC 2024
