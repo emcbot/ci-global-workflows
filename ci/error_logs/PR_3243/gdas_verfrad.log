@@ -1,0 +1,112 @@
+Begin verfrad.sh at Mon Feb 10 21:06:53 UTC 2025
++ verfrad.sh[7]: source /work2/noaa/global/CI/HERCULES/3243/global-workflow/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) contrib/0.1                      41) grib-util/1.3.0
+  2) intel-oneapi-compilers/2023.1.0  42) g2tmpl/1.10.2
+  3) stack-intel/2021.9.0             43) gsi-ncdiag/1.1.2
+  4) intel-oneapi-mpi/2021.9.0        44) crtm-fix/2.4.0.1_emc
+  5) stack-intel-oneapi-mpi/2021.9.0  45) git-lfs/3.1.2
+  6) intel-oneapi-mkl/2023.1.0        46) crtm/2.4.0.1
+  7) zlib/1.2.13                      47) openblas/0.3.24
+  8) pigz/2.7                         48) py-setuptools/63.4.3
+  9) zstd/1.5.2                       49) py-numpy/1.23.4
+ 10) tar/1.34                         50) bufr/11.7.0
+ 11) gettext/0.21.1                   51) gmake/4.2.1
+ 12) libxcrypt/4.4.35                 52) wgrib2/2.0.8
+ 13) sqlite/3.43.2                    53) py-f90nml/1.4.3
+ 14) util-linux-uuid/2.38.1           54) py-cftime/1.0.3.4
+ 15) python/3.11.6                    55) py-netcdf4/1.5.8
+ 16) libjpeg/2.1.0                    56) libyaml/0.2.5
+ 17) jasper/2.0.32                    57) py-pyyaml/6.0
+ 18) libpng/1.6.37                    58) py-markupsafe/2.1.3
+ 19) openjpeg/2.3.1                   59) py-jinja2/3.1.2
+ 20) eccodes/2.32.0                   60) py-bottleneck/1.3.7
+ 21) fftw/3.3.10                      61) py-numexpr/2.8.4
+ 22) nghttp2/1.57.0                   62) py-et-xmlfile/1.0.1
+ 23) curl/8.4.0                       63) py-openpyxl/3.1.2
+ 24) proj/9.2.1                       64) py-pytz/2023.3
+ 25) udunits/2.2.28                   65) py-pyxlsb/1.0.10
+ 26) cdo/2.2.0                        66) py-xlrd/2.0.1
+ 27) hdf5/1.14.0                      67) py-xlsxwriter/3.1.7
+ 28) snappy/1.1.10                    68) py-xlwt/1.3.0
+ 29) c-blosc/1.21.5                   69) py-pandas/1.5.3
+ 30) netcdf-c/4.9.2                   70) py-six/1.16.0
+ 31) netcdf-fortran/4.6.1             71) py-python-dateutil/2.8.2
+ 32) antlr/2.7.7                      72) g2c/1.6.4
+ 33) gsl/2.7.1                        73) netcdf-cxx4/4.3.1
+ 34) nco/5.0.6                        74) met/9.1.3
+ 35) bacio/2.4.1                      75) metplus/3.1.1
+ 36) w3emc/2.10.0                     76) py-packaging/23.1
+ 37) prod_util/2.1.1                  77) py-xarray/2023.7.0
+ 38) g2/3.4.5                         78) prepobs/1.1.0
+ 39) sp/2.5.0                         79) fit2obs/1.1.4
+ 40) ip/4.3.0                         80) module_base.hercules
+
+ 
+
++ verfrad.sh[8]: status=0
++ verfrad.sh[9]: ((  status != 0  ))
++ verfrad.sh[11]: export job=verfrad
++ verfrad.sh[11]: job=verfrad
++ verfrad.sh[12]: export jobid=verfrad.99310
++ verfrad.sh[12]: jobid=verfrad.99310
++ verfrad.sh[16]: echo
+
++ verfrad.sh[17]: echo '=============== START TO RUN RADMON DATA EXTRACTION ==============='
+=============== START TO RUN RADMON DATA EXTRACTION ===============
++ verfrad.sh[19]: /work2/noaa/global/CI/HERCULES/3243/global-workflow/jobs/JGDAS_ATMOS_VERFRAD
+Begin JGDAS_ATMOS_VERFRAD at Mon Feb 10 21:06:58 UTC 2025
++ JGDAS_ATMOS_VERFRAD[7]: source /work2/noaa/global/CI/HERCULES/3243/global-workflow/ush/jjob_header.sh -e verfrad -c 'base verfrad'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=verfrad
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z verfrad ]]
+++ jjob_header.sh[68]: export DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_9f250971/gdas.2021032500/verfrad.99310
+++ jjob_header.sh[68]: DATA=/work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_9f250971/gdas.2021032500/verfrad.99310
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_9f250971/gdas.2021032500/verfrad.99310
+++ jjob_header.sh[72]: mkdir -p /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_9f250971/gdas.2021032500/verfrad.99310
+++ jjob_header.sh[73]: cd /work/noaa/stmp/mterry/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_9f250971/gdas.2021032500/verfrad.99310
+++ jjob_header.sh[79]: export cycle=t00z
+++ jjob_header.sh[79]: cycle=t00z
+++ jjob_header.sh[80]: setpdy.sh
+sed: can't read /work2/noaa/global/CI/HERCULES/3243/RUNTESTS/COMROOT/date/t00z: No such file or directory
+ completed cleanly
+ completed cleanly
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 72: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 72: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 72: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 72: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 72: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 72: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 72: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 74: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 77: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 77: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 77: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 77: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 77: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 77: PDY: Stale file handle
+/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/prod-util-2.1.1-ddlo2cq/bin/setpdy.sh: line 77: PDY: Stale file handle
+chmod: cannot access 'PDY': Stale file handle
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
+/work2/noaa/global/CI/HERCULES/3243/global-workflow/ush/jjob_header.sh: line 81: ./PDY: Stale file handle
++++ jjob_header.sh[1]: postamble JGDAS_ATMOS_VERFRAD 1739221618 1
++++ preamble.sh[70]: set +x
+End JGDAS_ATMOS_VERFRAD at 21:07:12 with error code 1 (time elapsed: 00:00:14)
++ verfrad.sh[1]: postamble verfrad.sh 1739221613 1
++ preamble.sh[70]: set +x
+End verfrad.sh at 21:07:13 with error code 1 (time elapsed: 00:00:20)
