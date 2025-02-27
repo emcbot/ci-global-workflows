@@ -1,0 +1,999 @@
++ OPTIND=1
++ _opts='-f '
++ getopts :j:dv option
++ case "${option}" in
++ BUILD_JOBS=24
++ getopts :j:dv option
++ shift 2
++ BUILD_JOBS=24
++ WORKFLOW_BUILD=ON
++ ./gdas.cd/build.sh -f -f
+Building GDASApp on gaeac6
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Lmod is automatically replacing "intel/2023.2.0" with "intel-classic/2023.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-mpich/8.1.28 => cray-mpich/8.1.29
+
+
+Currently Loaded Modules:
+  1) craype-x86-genoa
+  2) perftools-base/23.12.0
+  3) xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d
+  4) cray-pmi/6.1.13
+  5) CmrsEnv/default
+  6) TimeZoneEDT/default
+  7) DefApps/default
+  8) cray-dsmml/0.2.2
+  9) cray-libsci/24.07.0
+ 10) PrgEnv-intel/8.5.0
+ 11) intel-classic/2023.2.0
+ 12) craype/2.7.30
+ 13) stack-intel/2023.2.0
+ 14) libfabric/1.20.1
+ 15) craype-network-ofi
+ 16) cray-mpich/8.1.29
+ 17) stack-cray-mpich/8.1.29
+ 18) cmake/3.23.1
+ 19) gettext/0.20.2
+ 20) pcre2/10.42
+ 21) nghttp2/1.57.0
+ 22) curl/8.4.0
+ 23) zlib/1.2.13
+ 24) git/2.42.0
+ 25) pkg-config/0.29.2
+ 26) hdf5/1.14.0
+ 27) parallel-netcdf/1.12.2
+ 28) snappy/1.1.10
+ 29) zstd/1.5.2
+ 30) c-blosc/1.21.5
+ 31) netcdf-c/4.9.2
+ 32) nccmp/1.9.0.1
+ 33) netcdf-fortran/4.6.1
+ 34) antlr/2.7.7
+ 35) gsl/2.7.1
+ 36) nco/5.0.6
+ 37) parallelio/2.5.10
+ 38) wget/1.21.3
+ 39) libxcrypt/4.4.35
+ 40) sqlite/3.43.2
+ 41) util-linux-uuid/2.38.1
+ 42) python/3.10.13
+ 43) boost/1.83.0
+ 44) py-setuptools/63.4.3
+ 45) py-numpy/1.22.3
+ 46) bufr/12.0.1
+ 47) git-lfs/2.11.0
+ 48) ecbuild/3.7.2
+ 49) openjpeg/2.3.1
+ 50) eccodes/2.32.0
+ 51) eigen/3.4.0
+ 52) openblas/0.3.24
+ 53) eckit/1.24.5
+ 54) fftw/3.3.10
+ 55) fckit/0.11.0
+ 56) fiat/1.2.0
+ 57) ectrans/1.2.0
+ 58) fms/2023.04
+ 59) esmf/8.6.0
+ 60) qhull/2020.2
+ 61) atlas/0.35.1
+ 62) sp/2.5.0
+ 63) gsl-lite/0.37.0
+ 64) libjpeg/2.1.0
+ 65) krb5/1.20.1
+ 66) libtirpc/1.3.3
+ 67) hdf/4.2.15
+ 68) jedi-cmake/1.4.0
+ 69) libpng/1.6.37
+ 70) libxaw/1.10.13
+ 71) udunits/2.2.28
+ 72) ncview/2.1.9
+ 73) netcdf-cxx4/4.3.1
+ 74) json/3.10.5
+ 75) crtm-fix/2.4.0.1_emc
+ 76) crtm/2.4.0.1
+ 77) rocoto/1.3.6
+ 78) bacio/2.4.1
+ 79) w3emc/2.10.0
+ 80) prod_util/2.1.1
+ 81) py-markupsafe/2.1.3
+ 82) py-jinja2/3.0.3
+ 83) py-cftime/1.0.3.4
+ 84) py-netcdf4/1.5.8
+ 85) py-pybind11/2.11.0
+ 86) py-pycodestyle/2.11.0
+ 87) libyaml/0.2.5
+ 88) py-pyyaml/6.0
+ 89) py-scipy/1.11.3
+ 90) py-packaging/23.1
+ 91) py-bottleneck/1.3.7
+ 92) py-numexpr/2.8.4
+ 93) py-et-xmlfile/1.0.1
+ 94) py-openpyxl/3.1.2
+ 95) py-six/1.16.0
+ 96) py-python-dateutil/2.8.2
+ 97) py-pytz/2023.3
+ 98) py-pyxlsb/1.0.10
+ 99) py-xlrd/2.0.1
+100) py-xlsxwriter/3.1.7
+101) py-xlwt/1.3.0
+102) py-pandas/1.5.3
+103) py-xarray/2023.7.0
+104) py-f90nml/1.4.3
+105) py-pip/23.1.2
+106) GDAS/gaeac6.intel
+
+ 
+
+Configuring ...
++ cmake -DMPIEXEC_EXECUTABLE=/usr/bin/srun -DMPIEXEC_NUMPROC_FLAG=-n -DBUILD_GSIBEC=ON -DCLONE_JCSDADATA=NO -DMACHINE=gaeac6 -DWORKFLOW_TESTS=ON /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle
+-- The C compiler identification is Intel 2021.10.0.20230609
+-- The CXX compiler identification is Intel 2021.10.0.20230609
+-- The Fortran compiler identification is Intel 2021.10.0.20230609
+-- Cray Programming Environment 2.7.30 C
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/cray/pe/craype/2.7.30/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Cray Programming Environment 2.7.30 CXX
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /opt/cray/pe/craype/2.7.30/bin/CC - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Cray Programming Environment 2.7.30 Fortran
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /opt/cray/pe/craype/2.7.30/bin/ftn - skipped
+-- ecbuild   3.7.2	/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/ecbuild-3.7.2-b2k4j6z/share/ecbuild/cmake
+-- cmake     3.23.1	/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/cmake-3.23.1-ixiyqlk/bin/cmake
+-- ---------------------------------------------------------
+-- Found Git: /usr/bin/git (found version "2.35.3") 
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of void*
+-- Check size of void* - done
+-- Check size of off_t
+-- Check size of off_t - done
+-- ---------------------------------------------------------
+-- ---------------------------------------------------------
+-- [GDAS-bundle] (1.0.0)
+-- Feature TESTS enabled
+-- Found Python3: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/python-3.10.13-i6ygptq/bin/python3.10 (found version "3.10.13") found components: Interpreter 
+-- Feature TESTS enabled
+-- ---------------------------------------------------------
+-- Adding bundle project jedicmake
+-- ---------------------------------------------------------
+-- Skipping bundle project eckit
+-- ---------------------------------------------------------
+-- Skipping bundle project fckit
+-- ---------------------------------------------------------
+-- Skipping bundle project atlas
+-- ---------------------------------------------------------
+-- Adding bundle project crtm
+-- ---------------------------------------------------------
+-- [crtm] (2.4.1)
+-- Feature TESTS enabled
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF::NetCDF_Fortran [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so]
+-- ---------------------------------------------------------
+-- [CRTM_Tests] (1.0.1)
+-- Feature TESTS enabled
+-- use LOCAL_PATH_JEDI_TESTFILES: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/fix
+Using existing local fix directory instead of downloading.
+-- Hostname: c6n1844
+-- Host FQDN: c6n1844.hostmgmt2653.cm.c6.ncrc.gov
+-- Git Branch (set CDASH_OVERRIDE_GIT_BRANCH to force): GIT_BRANCH_UNSPECIFIED
+-- System ID: SUSE_15.5
+-- Compilers: Intel_2021.10.0.20230609
+-- Build: GIT_BRANCH_UNSPECIFIED;SUSE_15.5;Intel_2021.10.0.20230609;RelWithDebInfo
+-- Site: c6n1844.hostmgmt2653.cm.c6.ncrc.gov
+-- ---------------------------------------------------------
+-- Adding bundle project gsibec
+-- Found ecbuild: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/ecbuild-3.7.2-b2k4j6z/share/ecbuild/cmake (found suitable version "3.7.2", minimum required is "3.3.2") 
+-- ---------------------------------------------------------
+-- [gsibec] (1.2.1)
+-- Feature TESTS enabled
+-- Found MKL: /opt/intel/oneapi/mkl/2023.2.0/lib/intel64/libmkl_intel_lp64.so;/opt/intel/oneapi/mkl/2023.2.0/lib/intel64/libmkl_sequential.so;/opt/intel/oneapi/mkl/2023.2.0/lib/intel64/libmkl_core.so  
+-- Found MPI_Fortran: /opt/cray/pe/craype/2.7.30/bin/ftn (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found MPI_C: /opt/cray/pe/craype/2.7.30/bin/cc (found version "3.1") 
+-- Found MPI_CXX: /opt/cray/pe/craype/2.7.30/bin/CC (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so 
+-- Found sp: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/sp-2.5.0-i4p7d75/lib64/libsp_4.a (found version "2.5.0")
+-- ---------------------------------------------------------
+-- Adding bundle project gsw
+-- ---------------------------------------------------------
+-- [gsw] (3.0.8)
+-- Feature TESTS enabled
+-- ---------------------------------------------------------
+-- Adding bundle project bufr-query
+-- ---------------------------------------------------------
+-- [bufr_query] (2.8.0)
+-- Feature TESTS enabled
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/include (found version "4.9.2") found components: CXX 
+-- FindNetCDF defines targets:
+--   - NetCDF::NetCDF_CXX [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/lib/libnetcdf_c++4.so]
+-- Found bufr: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/bufr-12.0.1-aq4gepn/lib64/libbufr_4.so (found version "12.0.1")
+-- Found Python3: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/python-3.10.13-i6ygptq/bin/python3.10 (found version "3.10.13") found components: Interpreter Development Development.Module Development.Embed 
+-- Performing Test HAS_INTEL_IPO
+-- Performing Test HAS_INTEL_IPO - Success
+-- Downloading: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/bufr-query/test/bufr_query-0.0.1.tgz
+-- Could not download test files, not building tests
+-- ---------------------------------------------------------
+-- Adding bundle project oops
+-- ---------------------------------------------------------
+-- [oops] (1.10.0)
+-- Feature TESTS enabled
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: C CXX Fortran 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include (found version "4.9.2") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so 
+-- Found Boost: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/boost-1.83.0-76l5x2z/lib/cmake/Boost-1.83.0/BoostConfig.cmake (found suitable version "1.83.0", minimum required is "1.64.0")  
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found addr2line at /usr/bin/addr2line.
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_addr2line
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_addr2line - Failed
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_addr2line_nognus
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_addr2line_nognus - Failed
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_addr2line_gnus
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_addr2line_gnus - Failed
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_default
+-- Performing Test OOPS_STACKTRACE_AVAILABLE_default - Success
+-- Using this provider for stacktraces: default.
+CMake Warning at oops/src/CMakeLists.txt:820 (message):
+  Atlas version is 0.35.1.  Some interpolation features are not supported.
+  Use 0.38.0 or greater to enable these features and the following tests:
+  test_generic_atlas_global_interpolator;test_generic_atlas_global_interpolator_parallel
+
+
+-- ---------------------------------------------------------
+-- Adding bundle project vader
+-- ---------------------------------------------------------
+-- [vader] (1.7.0)
+-- Feature TESTS enabled
+-- VADER variables
+--   - ENABLE_VADER_DOC: OFF
+-- Found MPI: TRUE (found version "3.1") found components: C Fortran 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: CXX Fortran 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include (found version "4.9.2") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so 
+-- GSW FOUND; Including Marine Recipes gsw (3.0.8)
+-- ---------------------------------------------------------
+-- Adding bundle project saber
+-- ---------------------------------------------------------
+-- [saber] (1.10.0)
+-- Feature TESTS enabled
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include (found version "4.9.2") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found Boost: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/boost-1.83.0-76l5x2z/lib/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+-- Found sp: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/sp-2.5.0-i4p7d75/lib64/libsp_4.a (found version "2.5.0")
+-- SABER block GSI is enabled
+-- SABER block FastLAM spectral layer is enabled
+-- SABER block SPECTRALB is enabled
+-- SABER instrumentation is not enabled
+-- Offline code coverage is not enabled
+-- Setup QUENCH data links
+-- SABER-QUENCH tests activated:
+--   - TIER 1 base
+--   - TIER 1 FastLAM-specific
+--   - TIER 1 FastLAM-specific - FFTW
+--   - TIER 1 GSI-GEOS-specific
+--   - TIER 1 GSI-GFS-specific
+--   - TIER 1 SPECTRALB-specific
+--   - TIER 1 VADER-specific
+-- Setup SABER directories and links
+CMake Warning at saber/test/CMakeLists.txt:151 (message):
+  Atlas version is 0.35.1.  Some interpolation features are not supported.
+  Use 0.38.0 or greater to enable these features and the following test:
+  dirac_interpolation_2
+
+
+CMake Warning at saber/test/CMakeLists.txt:151 (message):
+  Atlas version is 0.35.1.  Some interpolation features are not supported.
+  Use 0.38.0 or greater to enable these features and the following test:
+  dirac_interpolation_3
+
+
+-- Tests parallel configuration: MPI: 1 / OMP: 1
+-- Tests parallel configuration: MPI: 2 / OMP: 1
+-- Tests parallel configuration: MPI: 4 / OMP: 1
+-- SABER documentation is not enabled
+-- ---------------------------------------------------------
+-- Adding bundle project ioda
+-- ---------------------------------------------------------
+-- [ioda] (2.9.0)
+-- Feature TESTS enabled
+-- Found OpenMP_C: -qopenmp (found version "5.0") 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: C CXX Fortran 
+-- Found HDF5: hdf5-shared (found version "1.14.0") found components: C HL 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found udunits: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/udunits-2.2.28-huyn2lv/lib/libudunits2.so (Required is at least version "2.2.0") 
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so 
+-- Found Boost: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/boost-1.83.0-76l5x2z/lib/cmake/Boost-1.83.0/BoostConfig.cmake (found suitable version "1.83.0", minimum required is "1.64.0")  
+-- Found bufr: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/bufr-12.0.1-aq4gepn/lib64/libbufr_4.so (found version "12.0.1")
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/include (found version "4.9.2") found components: CXX 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_CXX_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/bin/ncxx4-config]
+--   - NetCDF::NetCDF_CXX [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/lib/libnetcdf_c++4.so 
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_abiclr.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_ahiclr.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_aircraft.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_aircraft_write.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_airs.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_altimeter.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_amsr.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_amsub.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_ascatsm.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_aod.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_aod_write.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_aod_write_testdatasets.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_atms.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_atms_write.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_atovs.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_atovs_write.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_cris.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_crisfsr.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_geocloud.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_gmihigh.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_gmihigh_write.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_gmilow.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_gnssro.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_gnssro_profile_100.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_gnssro_profile_333.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_groundgps.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_hirasfsr.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_hloswind.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_iasi.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_iasi_write.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_mtgirs.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_mwri.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_mwsfy3.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_oceancolour.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_oceansound.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_oceansound_truncate_profiles.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_radar_doppler_wind.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_radar_reflectivity.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_satsst.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sattcwv.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_satwind.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_scatwind.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_scatwindchosen_write.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_seaice.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_seviriasr.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_seviriclr.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde_history.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde_mixed.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde_time_displacement.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde_truncate_profiles.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde_write.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_sonde_write_mixed.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_ssmis.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_stationsnow.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_surface.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_surfacecloud.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//iodatest_odb_surfacesst.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//odb_default_name_map.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//odb_aircraft_name_map.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//odb_amsr_name_map.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//odb_gnssro_name_map.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//odb_gnssro_profile_name_map.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//odb_oceansound_name_map.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//odb_radiance_name_map.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//odb_sonde_name_map.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//odb_surface_name_map.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//odb_surfacesst_name_map.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ioda/share/test/testinput//validation//ObsSpace.yaml
+-- Use test data from ioda-data repository
+-- ---------------------------------------------------------
+-- Adding bundle project ufo
+-- ---------------------------------------------------------
+-- [ufo] (1.10.0)
+-- Feature TESTS enabled
+-- Found MPI: TRUE (found version "3.1") found components: C CXX Fortran 
+-- Found Boost: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/boost-1.83.0-76l5x2z/lib/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/include (found version "4.9.2") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: C CXX Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- CRTM FOUND; Including CRTM Observation Operator (2.4.1)
+-- RTTOV NOT FOUND; Excluding RTTOV Radiance Observation Operator
+-- GSW FOUND; Including Marine Observation Operators (3.0.8)
+-- ROPP NOT FOUND: Excluding GNSSRO Bending angle ROPP Operators
+-- GEOS-AERO NOT FOUND: Excluding AOD operator from GEOS
+-- OASIM NOT FOUND: Excluding Ocean Atmosphere Spectral Irradiance Model
+-- Skipping download of test data from https://bin.ssec.wisc.edu/pub/s4/CRTM/file/crtm_coefficients_2.4.1_skylab_4.0.tar.gz since it already exists
+-- Use test data from ufo-data repository
+-- Running ufo tests for tiers up to and including tier 1
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/auxillary
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/auxillary/IASI_EmisEigenVec.dat
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/bmatrix
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/bmatrix/gnssro
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/bmatrix/gnssro/gnssro_bmatrix.txt
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov/atovs_bmatrix_70_test.dat
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov/amsr_bmatrix_70_test.dat
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov/iasi_bmatrix_70_test.dat
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov/atms_bmatrix_70_test.dat
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov/ssmis_bmatrix_70_test.dat
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/bmatrix/rttov/gmihigh_bmatrix_70_test.dat
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/namemap
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/namemap/bayesian_name_map.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/namemap/test_name_map.yaml
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/rmatrix
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/rmatrix/gnssro
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/rmatrix/gnssro/gnssro_ba_rmatrix_latitude.nc4
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/rmatrix/gnssro/gnssro_ba_rmatrix_avtemp.nl
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/rmatrix/gnssro/gnssro_ba_rmatrix.nl
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/rmatrix/gnssro/gnssro_ba_rmatrix_latitude.nl
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov/gmihigh_gpm_rmatrix_test.nc4
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov/ssmis_dmspf17_rmatrix_test.nc4
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov/amsr_gcomw1_rmatrix_test.nc4
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov/atovs_metopb_rmatrix_test.nc4
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov/atms_noaa_20_rmatrix_test.nc4
+-- Installing: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/ufo/resources/rmatrix/rttov/iasi_metopb_rmatrix_test.nc4
+WARNWE ARE USING fv3-interface.cmake
+-- ---------------------------------------------------------
+-- Adding bundle project fv3
+-- Setting build type to 'RelWithDebInfo'.
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0")  
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/include (found version "4.9.2") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF::NetCDF_C [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/lib/libnetcdf.so]
+--   - NetCDF::NetCDF_Fortran [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so]
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF::NetCDF_C [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/lib/libnetcdf.so]
+--   - NetCDF::NetCDF_Fortran [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so]
+-- Found FMS: "/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/fms-2023.04-onsceze" (Version: "2023.4.0")
+-- FMS targets:
+--   - FMS::fms_r8 [Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/fms-2023.04-onsceze/lib/libfms_r8.a]
+-- ---------------------------------------------------------
+-- Adding bundle project femps
+CMake Warning (dev) at femps/CMakeLists.txt:7 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  Environment variable ecbuild_ROOT is set to:
+
+    /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/ecbuild-3.7.2-b2k4j6z
+
+  For compatibility, CMake is ignoring the variable.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found ecbuild: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/ecbuild-3.7.2-b2k4j6z/share/ecbuild/cmake (found suitable version "3.7.2", minimum required is "3.6") 
+-- ---------------------------------------------------------
+-- [femps] (1.3.0)
+-- Feature TESTS enabled
+-- Feature TESTS enabled
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so 
+-- ---------------------------------------------------------
+-- Adding bundle project fv3-jedi-lm
+CMake Warning (dev) at fv3-jedi-lm/CMakeLists.txt:18 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  Environment variable ecbuild_ROOT is set to:
+
+    /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/ecbuild-3.7.2-b2k4j6z
+
+  For compatibility, CMake is ignoring the variable.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- ---------------------------------------------------------
+-- [fv3jedilm] (1.5.0)
+-- Feature TESTS enabled
+-- Performing Test C_COMPILER_SUPPORTS_OMP
+-- Performing Test C_COMPILER_SUPPORTS_OMP - Success
+-- Performing Test CXX_COMPILER_SUPPORTS_OMP
+-- Performing Test CXX_COMPILER_SUPPORTS_OMP - Success
+-- Performing Test Fortran_COMPILER_SUPPORTS_OMP
+-- Performing Test Fortran_COMPILER_SUPPORTS_OMP - Success
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- fv3jedilm FOUND MPI
+-- Found package MPI required for feature MPI
+-- Feature MPI enabled
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so 
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found FMS: "/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/fms-2023.04-onsceze" (Version: "2023.4.0")
+-- FMS targets:
+--   - FMS::fms_r4 [Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/fms-2023.04-onsceze/lib/libfms_r4.a]
+--   - FMS::fms_r8 [Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/fms-2023.04-onsceze/lib/libfms_r8.a]
+-- ---------------------------------------------------------
+-- Adding bundle project fv3-jedi
+CMake Warning (dev) at fv3-jedi/CMakeLists.txt:20 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  Environment variable ecbuild_ROOT is set to:
+
+    /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/ecbuild-3.7.2-b2k4j6z
+
+  For compatibility, CMake is ignoring the variable.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- ---------------------------------------------------------
+-- [fv3jedi] (1.9.0)
+-- Feature TESTS enabled
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/include (found version "4.9.2") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Looking for Fortran sgemm
+-- Looking for Fortran sgemm - found
+-- Found BLAS: implicitly linked  
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Looking for Fortran cheev
+-- Looking for Fortran cheev - found
+-- Found LAPACK: implicitly linked  
+-- FFTW targets:
+--     FFTW::fftw3 (double precision)  [/opt/intel/oneapi/mkl/2023.2.0/lib/intel64/libmkl_intel_lp64.so;/opt/intel/oneapi/mkl/2023.2.0/lib/intel64/libmkl_sequential.so;/opt/intel/oneapi/mkl/2023.2.0/lib/intel64/libmkl_core.so]
+-- Found FFTW: /opt/intel/oneapi/mkl/2023.2.0/include/fftw  found components: double 
+-- Found sp: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/sp-2.5.0-i4p7d75/lib64/libsp_4.a (found version "2.5.0")
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- FV3-SABER block GSI is enabled
+-- Found sp: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/sp-2.5.0-i4p7d75/lib64/libsp_4.a (found version "2.5.0")
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: C CXX Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: CXX Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found FMS: "/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/fms-2023.04-onsceze" (Version: "2023.4.0")
+-- FMS targets:
+--   - FMS::fms_r4 [Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/fms-2023.04-onsceze/lib/libfms_r4.a]
+--   - FMS::fms_r8 [Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/fms-2023.04-onsceze/lib/libfms_r8.a]
+-- Use crtm test data provided by ufo in /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/test-data-release/crtm/2.4.1_skylab_4.0/
+-- Use test data from fv3-jedi-data repository
+-- Running fv3jedi tests for tiers up to and including tier 1
+-- ---------------------------------------------------------
+-- Adding bundle project soca
+-- Found ecbuild: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/ecbuild-3.7.2-b2k4j6z/share/ecbuild/cmake (found suitable version "3.7.2", minimum required is "3.3.2") 
+-- ---------------------------------------------------------
+-- [soca] (1.8.0)
+-- Feature TESTS enabled
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include (found version "4.9.2") found components: Fortran C 
+-- FindNetCDF defines targets:
+--   - NetCDF::NetCDF_Fortran [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so]
+--   - NetCDF::NetCDF_C [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/lib/libnetcdf.so]
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: CXX Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- FFTW targets:
+--     FFTW::fftw3 (double precision)  [/opt/intel/oneapi/mkl/2023.2.0/lib/intel64/libmkl_intel_lp64.so;/opt/intel/oneapi/mkl/2023.2.0/lib/intel64/libmkl_sequential.so;/opt/intel/oneapi/mkl/2023.2.0/lib/intel64/libmkl_core.so]
+-- Found sp: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/sp-2.5.0-i4p7d75/lib64/libsp_4.a (found version "2.5.0")
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: C CXX Fortran 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/include (found version "4.9.2")  
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/lib/libnetcdf.so 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include;/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/include (found version "4.9.2") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so 
+-- Found FMS: "/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/fms-2023.04-onsceze" (Version: "2023.4.0")
+-- FMS targets:
+--   - FMS::fms_r4 [Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/fms-2023.04-onsceze/lib/libfms_r4.a]
+-- Found OpenMP_C: -qopenmp (found version "5.0") 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: C Fortran 
+Building MOM6 standalone executable
+-- ---------------------------------------------------------
+-- Adding bundle project gdas-utils
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/include (found version "4.9.2") found components: CXX 
+-- FindNetCDF defines targets:
+--   - NetCDF::NetCDF_CXX [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/lib/libnetcdf_c++4.so]
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: CXX Fortran 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+Error: staging directory for RTOFS test files not found
+-- ---------------------------------------------------------
+-- Adding bundle project da-utils
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/include (found version "4.9.2") found components: CXX Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF::NetCDF_CXX [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-cxx4-4.3.1-2nfkojj/lib/libnetcdf_c++4.so]
+--   - NetCDF::NetCDF_Fortran [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so]
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX Fortran 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: CXX 
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Building tools that link to OOPS/JEDI
+-- Found ESMF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/esmf-8.6.0-edn2jda/lib/libesmf.a (found suitable version "8.6.0", minimum required is "8.0.0") 
+-- ---------------------------------------------------------
+-- Adding bundle project iodaconv
+-- Found ecbuild: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/ecbuild-3.7.2-b2k4j6z/share/ecbuild/cmake (found suitable version "3.7.2", minimum required is "3") 
+-- ---------------------------------------------------------
+-- [iodaconv] (0.0.1)
+-- Feature TESTS enabled
+-- Found: eccodes
+-- Found MPI: TRUE (found version "3.1")  
+-- Found OpenMP_C: -qopenmp (found version "5.0") 
+-- Found OpenMP_CXX: -qopenmp (found version "5.0") 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: C CXX Fortran 
+-- Found bufr: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/bufr-12.0.1-aq4gepn/lib64/libbufr_4.so (found version "12.0.1")
+-- Found: bufr
+-- Found: NetCDF::NetCDF_Fortran
+-- Enabled Component: gnssro
+-- Found: nceplib bufr
+-- Found: eckit
+-- Found: oops
+-- Found: ioda
+-- Found: bufr
+-- Enabled Component: bufr
+-- Found: eckit
+-- Found: bufr
+-- Found: pybind11
+-- Found: gsl-lite
+-- Enabled Component: bufr python
+-- Enabled Component: gsi bias converter
+-- Enabled Component: obserror converter
+-- Found: bufr
+-- Found: NetCDF::NetCDF_Fortran
+-- Enabled Component: pbfortran
+-- ---------------------------------------------------------
+-- Adding bundle project land-imsproc
+-- Found ecbuild: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/ecbuild-3.7.2-b2k4j6z/share/ecbuild/cmake (found suitable version "3.7.2", minimum required is "3.3.2") 
+-- ---------------------------------------------------------
+-- [imsproc] (2022.10)
+-- Feature TESTS enabled
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: C Fortran 
+-- Found MPI: TRUE (found version "3.1") found components: C Fortran 
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF::NetCDF_Fortran [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so]
+-- ---------------------------------------------------------
+-- Adding bundle project land-jediincr
+-- ---------------------------------------------------------
+-- [jediincr] (2022.10)
+-- Feature TESTS enabled
+-- FindNetCDF defines targets:
+--   - NetCDF::NetCDF_Fortran [/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-fortran-4.6.1-o5cmyfx/lib/libnetcdff.so]
+-- ---------------------------------------------------------
+-- Adding bundle project gdas
+-- ---------------------------------------------------------
+-- [GDASApp] (1.0.0)
+-- Feature TESTS enabled
+-- Found Python3: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/python-3.10.13-i6ygptq/bin/python3.10 (found version "3.10.13") found components: Interpreter 
+Traceback (most recent call last):
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 38, in <module>
+    main()
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 32, in main
+    idate_value = read_idate_from_yaml(args.yaml_file)
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 8, in read_idate_from_yaml
+    with open(file_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/../../../ci/cases/pr/C96C48_hybatmDA.yaml'
+CMake Error at gdas/test/gw-ci/CMakeLists.txt:226 (string):
+  string sub-command REPLACE requires at least four arguments.
+Call Stack (most recent call first):
+  gdas/test/gw-ci/CMakeLists.txt:285 (add_cycling_tests)
+
+
+Traceback (most recent call last):
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 38, in <module>
+    main()
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 32, in main
+    idate_value = read_idate_from_yaml(args.yaml_file)
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 8, in read_idate_from_yaml
+    with open(file_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/../../../ci/cases/pr/C96C48_ufs_hybatmDA.yaml'
+CMake Error at gdas/test/gw-ci/CMakeLists.txt:226 (string):
+  string sub-command REPLACE requires at least four arguments.
+Call Stack (most recent call first):
+  gdas/test/gw-ci/CMakeLists.txt:320 (add_cycling_tests)
+
+
+Traceback (most recent call last):
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 38, in <module>
+    main()
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 32, in main
+    idate_value = read_idate_from_yaml(args.yaml_file)
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 8, in read_idate_from_yaml
+    with open(file_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/../../../ci/cases/pr/C96C48_hybatmaerosnowDA.yaml'
+CMake Error at gdas/test/gw-ci/CMakeLists.txt:226 (string):
+  string sub-command REPLACE requires at least four arguments.
+Call Stack (most recent call first):
+  gdas/test/gw-ci/CMakeLists.txt:355 (add_cycling_tests)
+
+
+Traceback (most recent call last):
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 38, in <module>
+    main()
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 32, in main
+    idate_value = read_idate_from_yaml(args.yaml_file)
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 8, in read_idate_from_yaml
+    with open(file_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/../../../ci/cases/pr/C48mx500_3DVarAOWCDA.yaml'
+CMake Error at gdas/test/gw-ci/CMakeLists.txt:226 (string):
+  string sub-command REPLACE requires at least four arguments.
+Call Stack (most recent call first):
+  gdas/test/gw-ci/CMakeLists.txt:380 (add_cycling_tests)
+
+
+Traceback (most recent call last):
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 38, in <module>
+    main()
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 32, in main
+    idate_value = read_idate_from_yaml(args.yaml_file)
+  File "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/gdas/test/gw-ci/get_cycles.py", line 8, in read_idate_from_yaml
+    with open(file_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/bundle/../../../ci/cases/pr/C48mx500_hybAOWCDA.yaml'
+CMake Error at gdas/test/gw-ci/CMakeLists.txt:226 (string):
+  string sub-command REPLACE requires at least four arguments.
+Call Stack (most recent call first):
+  gdas/test/gw-ci/CMakeLists.txt:404 (add_cycling_tests)
+
+
+failed to create symbolic link '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/gdas/test/marine/testinput' because existing path cannot be removed: Is a directory
+failed to create symbolic link '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/gdas/test/marine/testinput' because existing path cannot be removed: Is a directory
+failed to create symbolic link '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/gdas/test/marine/testinput' because existing path cannot be removed: Is a directory
+failed to create symbolic link '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/gdas/test/marine/testinput' because existing path cannot be removed: Is a directory
+failed to create symbolic link '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/gdas/test/marine/testinput' because existing path cannot be removed: Is a directory
+failed to create symbolic link '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/gdas/test/marine/testinput' because existing path cannot be removed: Is a directory
+failed to create symbolic link '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/gdas/test/marine/testinput' because existing path cannot be removed: Is a directory
+failed to create symbolic link '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/gdas/test/marine/testinput' because existing path cannot be removed: Is a directory
+failed to create symbolic link '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/gdas/test/marine/testinput' because existing path cannot be removed: Is a directory
+failed to create symbolic link '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/gdas/test/marine/testinput' because existing path cannot be removed: Is a directory
+failed to create symbolic link '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/gdas/test/marine/testinput' because existing path cannot be removed: Is a directory
+failed to create symbolic link '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/gdas/test/marine/testinput' because existing path cannot be removed: Is a directory
+failed to create symbolic link '/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/gdas/test/marine/testinput' because existing path cannot be removed: Is a directory
+-- Found Python: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/python-3.10.13-i6ygptq/bin/python3.10 (found version "3.10.13") found components: Interpreter 
+CMake Warning at gdas/test/marine/CMakeLists.txt:95 (message):
+  BUFR test file directory not found -- bufr to ioda tests not generated.
+
+
+-- ---------------------------------------------------------
+-- Bundle GDAS-bundle
+-- ---------------------------------------------------------
+-- ---------------------------------------------------------
+-- Build summary
+-- ---------------------------------------------------------
+-- system : [c6n1844] [Linux-5.14.21-150500.55.65_13.0.73-cray_shasta_c] [linux.64]
+-- processor        : [x86_64]
+-- endiness         : Little Endian -- IEEE []
+-- build type       : [RelWithDebInfo]
+-- timestamp        : [20250227164252]
+-- install prefix   : [/usr/local]
+--   bin dir        : [/usr/local/bin]
+--   lib dir        : [/usr/local/lib64]
+--   include dir    : [/usr/local/include]
+--   data dir       : [/usr/local/share/GDAS-bundle]
+--   cmake dir      : [/usr/local/lib64/cmake/GDAS-bundle]
+-- ---------------------------------------------------------
+-- C -- Intel 2021.10.0.20230609
+--     compiler   : /opt/cray/pe/craype/2.7.30/bin/cc
+--     flags      : -gcc-name=/usr/bin/gcc-12 -O2 -g -DNDEBUG  
+--     link flags : 
+-- CXX -- Intel 2021.10.0.20230609
+--     compiler   : /opt/cray/pe/craype/2.7.30/bin/CC
+--     flags      : -gxx-name=/usr/bin/g++-12 -gcc-name=/usr/bin/gcc-12 -static-libstdc++ -O2 -g -DNDEBUG  
+--     link flags : 
+-- Fortran -- Intel 2021.10.0.20230609
+--     compiler   : /opt/cray/pe/craype/2.7.30/bin/ftn
+--     flags      : -gcc-name=/usr/bin/gcc-12 -O2 -g -DNDEBUG -heap-arrays 32  
+--     link flags : 
+-- linker : /usr/bin/ld
+-- ar     : /usr/bin/ar
+-- ranlib : /usr/bin/ranlib
+-- link flags
+--     executable [    -Wl,--disable-new-dtags ]
+--     shared lib [ -Wl,--disable-new-dtags ]
+--     static lib [ -Wl,--disable-new-dtags ]
+-- install rpath  : $ORIGIN/../lib64 /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/fv3
+-- common definitions: 
+-- ---------------------------------------------------------
+-- Feature summary
+-- ---------------------------------------------------------
+-- The following features have been enabled:
+
+ * TESTS, GDAS-bundle: Enable the unit tests, GDAS-bundle: Enable the unit tests, crtm: Enable the unit tests, CRTM_Tests: Enable the unit tests, gsibec: Enable the unit tests, gsw: Enable the unit tests, bufr_query: Enable the unit tests, oops: Enable the unit tests, vader: Enable the unit tests, saber: Enable the unit tests, ioda: Enable the unit tests, ufo: Enable the unit tests, femps: Enable the unit tests, femps: Enable the unit tests, fv3jedilm: Enable the unit tests, fv3jedi: Enable the unit tests, soca: Enable the unit tests, iodaconv: Enable the unit tests, imsproc: Enable the unit tests, jediincr: Enable the unit tests, GDASApp: Enable the unit tests
+ * Python, Build Python bindings using pybind11
+ * MPI, fv3jedilm: Support for MPI distributed parallelism
+
+-- The following OPTIONAL packages have been found:
+
+ * bufr_query
+ * pybind11
+ * PkgConfig
+ * Git
+ * Perl
+
+-- The following REQUIRED packages have been found:
+
+ * femps (required version >= 1.3.0)
+ * FMS (required version >= 2023.04)
+ * fv3jedilm (required version >= 1.5.0)
+ * gsw
+ * vader (required version >= 1.7.0)
+ * BLAS
+ * Threads
+ * FFTW
+ * gsibec
+ * sp
+ * saber (required version >= 1.10.0)
+ * crtm
+ * ufo (required version >= 1.10.0)
+ * fms (required version >= 2023.3.0)
+ * ESMF (required version >= 8.0.0)
+ * jedicmake
+ * MKL
+ * boost_headers (required version == 1.83.0)
+ * Boost
+ * eckit
+ * fckit
+ * Eigen3
+ * atlas
+ * nlohmann_json
+ * oops
+ * eccodes
+ * gsl-lite
+ * HDF5
+ * udunits (required version >= 2.2.0)
+ * ioda
+ * bufr (required version >= 12.0.1)
+ * OpenMP
+ * MPI, fv3jedilm: Support for MPI distributed parallelism
+ * NetCDF
+ * ecbuild (required version >= 3.5)
+ * Python3
+ * fv3jedi
+ * soca
+ * Python, Build Python bindings using pybind11
+
+-- The following OPTIONAL packages have not been found:
+
+ * nlohmann_json_schema_validator
+ * odc (required version >= 1.4.6)
+ * rttov (required version >= 12.1.0)
+ * geos-aero
+ * oasim
+ * ropp-ufo
+ * cartopy
+
+-- Configuring incomplete, errors occurred!
+See also "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/CMakeFiles/CMakeOutput.log".
+See also "/gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/sorc/gdas.cd/build/CMakeFiles/CMakeError.log".
