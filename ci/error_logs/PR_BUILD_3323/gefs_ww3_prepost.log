@@ -1,0 +1,81 @@
+++++ readlink -f -n ./build_ww3prepost.sh
++++ dirname /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/build_ww3prepost.sh
+++ cd /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/..
+++ pwd -P
++ _HOMEgfs=/work2/noaa/global/CI/HERCULES/3323/global-workflow
++ cd /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc
++ PDLIB=ON
++ getopts :j:a:dvw option
++ case "${option}" in
++ PDLIB=OFF
++ getopts :j:a:dvw option
++ case "${option}" in
++ BUILD_JOBS=4
++ getopts :j:a:dvw option
++ set +x
++ cd /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3
+++ pwd -P
++ WW3_DIR=/work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3
++ export WW3_DIR
++ [[ OFF == \O\N ]]
++ ww3switch=model/bin/switch_meshcap
++ path_build=/work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF
++ path_install=/work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/install/pdlib_OFF
++ export SWITCHFILE=/work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/model/bin/switch_meshcap
++ SWITCHFILE=/work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/model/bin/switch_meshcap
++ [[ -d /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF ]]
++ mkdir -p /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF
++ cd /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF
++ echo 'Forcing a SHRD build'
+Forcing a SHRD build
++ buildswitch=/work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF/switch
++ cat /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/model/bin/switch_meshcap
++ sed -e s/DIST/SHRD/g -e 's/OMPG / /g' -e 's/OMPH / /g' -e 's/MPIT / /g' -e 's/MPI / /g' -e 's/PIO / /g' -e 's/B4B / /g' -e 's/PDLIB / /g' -e 's/SCOTCH / /g' -e 's/METIS / /g' -e s/NOGRB/NCEP2/g /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF/tempswitch
++ rm /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF/tempswitch
++ echo 'Switch file is /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF/switch with switches:'
+Switch file is /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF/switch with switches:
++ cat /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF/switch
+NCO NCEP2 SHRD     PR3 UQ FLX0 SEED ST4 STAB0 NL1 BT1 DB1 MLIM FLD2 TR0 BS0 RWND WNX1 WNT1 CRX1 CRT1 O0 O1 O2 O3 O4 O5 O6 O7 O14 O15 IC0 IS0 REF0
++ MAKE_OPT=-DCMAKE_INSTALL_PREFIX=/work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/install/pdlib_OFF
++ [[ Release = \D\e\b\u\g ]]
++ cmake /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3 -DSWITCH=/work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF/switch -DCMAKE_INSTALL_PREFIX=/work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/install/pdlib_OFF
+-- The C compiler identification is Intel 2021.9.0.20230302
+-- The Fortran compiler identification is Intel 2021.9.0.20230302
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiicc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiifort - skipped
+-- Build with switch: /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF/switch
+-- Setting build type to 'Release' as none was specified.
+-- Found MPI_C: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiicc (found version "3.1") 
+-- Found MPI_Fortran: /apps/spack-managed/oneapi-2023.1.0/intel-oneapi-mpi-2021.9.0-a66eaipzsnyrdgaqzxmqmqz64qzvhkse/mpi/2021.9.0/bin/mpiifort (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/include;/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-c-4.9.2-tslbcfy/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe] Lib: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/netcdf-fortran-4.6.1-ndsugbe/lib/libnetcdff.so 
+-- Found ZLIB: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/zlib-1.2.13-xsm2i7j/lib/libz.so (found version "1.2.13") 
+-- Found PNG: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/libpng-1.6.37-bnpuvlu/lib64/libpng.so (found version "1.6.37") 
+-- Found g2: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/fms-2024.01/install/intel/2021.9.0/g2-3.5.1-rve3nlh/lib64/libg2_4.a (found version "3.5.1")
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/bacio-2.4.1-kocc5wj/lib/libbacio_4.a (found version "2.4.1")
+-- Found bacio: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/bacio-2.4.1-kocc5wj/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.6.0/envs/unified-env/install/intel/2021.9.0/w3emc-2.10.0-zc33leo/lib64/libw3emc_4.a (found version "2.10.0")
+-- Copying switch.io to /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF/regtests/unittests
+-- Copying ww3_grid.inp to /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF/regtests/unittests/ww3_grid.inp
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /work2/noaa/global/CI/HERCULES/3323/global-workflow/sorc/ufs_model.fd/WW3/build/pdlib_OFF
++ rc=0
++ (( rc != 0 ))
++ make -j 4
+slurmstepd: error: *** JOB 4655131 ON hercules-01-18 CANCELLED AT 2025-02-28T10:38:57 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 4655131 STEPD TERMINATED ON hercules-01-18 AT 2025-02-28T10:40:57 DUE TO JOB NOT ENDING WITH SIGNALS ***
+slurmstepd: error: Container 1030789 in cgroup plugin has 2 processes, giving up after 127 sec
