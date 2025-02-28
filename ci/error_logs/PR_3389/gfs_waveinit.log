@@ -1,0 +1,88 @@
+Begin waveinit.sh at Fri 28 Feb 2025 06:10:13 PM UTC
++ waveinit.sh[6]: echo
+
++ waveinit.sh[7]: echo '=============== START TO SOURCE FV3GFS WORKFLOW MODULES ==============='
+=============== START TO SOURCE FV3GFS WORKFLOW MODULES ===============
++ waveinit.sh[9]: . /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/ush/load_ufswm_modules.sh
+++ load_ufswm_modules.sh[4]: [[ NO == \N\O ]]
+++ load_ufswm_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_ufswm_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Lmod is automatically replacing "intel/2023.2.0" with "intel-classic/2023.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-mpich/8.1.28 => cray-mpich/8.1.29
+
+
+Currently Loaded Modules:
+  1) craype-x86-genoa                               31) hdf5/1.14.0
+  2) perftools-base/23.12.0                         32) snappy/1.1.10
+  3) xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d  33) zstd/1.5.2
+  4) cray-pmi/6.1.13                                34) c-blosc/1.21.5
+  5) CmrsEnv/default                                35) netcdf-c/4.9.2
+  6) TimeZoneEDT/default                            36) netcdf-fortran/4.6.1
+  7) DefApps/default                                37) parallel-netcdf/1.12.2
+  8) cray-dsmml/0.2.2                               38) parallelio/2.5.10
+  9) PrgEnv-intel/8.5.0                             39) esmf/8.6.0
+ 10) intel-classic/2023.2.0                         40) fms/2024.01.02
+ 11) craype/2.7.30                                  41) bacio/2.4.1
+ 12) stack-intel/2023.2.0                           42) crtm-fix/2.4.0.1_emc
+ 13) libfabric/1.20.1                               43) git-lfs/2.11.0
+ 14) craype-network-ofi                             44) crtm/2.4.0.1
+ 15) cray-mpich/8.1.29                              45) g2/3.5.1
+ 16) stack-cray-mpich/8.1.29                        46) g2tmpl/1.13.0
+ 17) gettext/0.20.2                                 47) ip/4.3.0
+ 18) libxcrypt/4.4.35                               48) sp/2.5.0
+ 19) sqlite/3.43.2                                  49) w3emc/2.10.0
+ 20) util-linux-uuid/2.38.1                         50) gftl/1.10.0
+ 21) python/3.10.13                                 51) gftl-shared/1.6.1
+ 22) stack-python/3.10.13                           52) fargparse/1.5.0
+ 23) nghttp2/1.57.0                                 53) mapl/2.40.3-esmf-8.6.0
+ 24) curl/8.4.0                                     54) scotch/7.0.4
+ 25) cmake/3.23.1                                   55) ufs_common
+ 26) libjpeg/2.1.0                                  56) nccmp/1.9.0.1
+ 27) jasper/2.0.32                                  57) ufs_gaeac6.intel
+ 28) zlib/1.2.13                                    58) prod_util/2.1.1
+ 29) libpng/1.6.37                                  59) wgrib2/3.1.1
+ 30) pkg-config/0.29.2
+
+ 
+
++ waveinit.sh[10]: status=0
++ waveinit.sh[11]: [[ 0 -ne 0 ]]
++ waveinit.sh[13]: export job=waveinit
++ waveinit.sh[13]: job=waveinit
++ waveinit.sh[14]: export jobid=waveinit.761532
++ waveinit.sh[14]: jobid=waveinit.761532
++ waveinit.sh[17]: echo
+
++ waveinit.sh[18]: echo '=============== START TO RUN WAVE INIT ==============='
+=============== START TO RUN WAVE INIT ===============
++ waveinit.sh[20]: /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/jobs/JGLOBAL_WAVE_INIT
+Begin JGLOBAL_WAVE_INIT at Fri 28 Feb 2025 06:10:16 PM UTC
++ JGLOBAL_WAVE_INIT[4]: source /gpfs/f6/drsa-precip3/proj-shared/global/CI/3389/global-workflow/ush/jjob_header.sh -e waveinit -c 'base wave waveinit'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=waveinit
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z waveinit ]]
+++ jjob_header.sh[68]: export DATA=/gpfs/f6/bil-fire8/scratch/role.glopara/RUNDIRS/C48_S2SW_7bcda9d6/gfs.2021032312/waveinit.761532
+++ jjob_header.sh[68]: DATA=/gpfs/f6/bil-fire8/scratch/role.glopara/RUNDIRS/C48_S2SW_7bcda9d6/gfs.2021032312/waveinit.761532
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /gpfs/f6/bil-fire8/scratch/role.glopara/RUNDIRS/C48_S2SW_7bcda9d6/gfs.2021032312/waveinit.761532
+++ jjob_header.sh[72]: mkdir -p /gpfs/f6/bil-fire8/scratch/role.glopara/RUNDIRS/C48_S2SW_7bcda9d6/gfs.2021032312/waveinit.761532
+mkdir: cannot create directory â/gpfs/f6/bil-fire8/scratch/role.gloparaâ: Permission denied
++ jjob_header.sh[1]: postamble JGLOBAL_WAVE_INIT 1740766216 1
++ preamble.sh[70]: set +x
+End JGLOBAL_WAVE_INIT at 18:10:16 with error code 1 (time elapsed: 00:00:00)
++ waveinit.sh[1]: postamble waveinit.sh 1740766213 1
++ preamble.sh[70]: set +x
+End waveinit.sh at 18:10:16 with error code 1 (time elapsed: 00:00:03)
