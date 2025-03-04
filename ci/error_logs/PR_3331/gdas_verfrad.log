@@ -1,0 +1,1662 @@
+Begin verfrad.sh at Tue Mar  4 10:53:13 UTC 2025
++ verfrad.sh[7]: source /scratch1/NCEPDEV/global/CI/3331/global-workflow/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) contrib                          43) ip/4.3.0
+  2) intel/2022.1.2                   44) grib-util/1.3.0
+  3) stack-intel/2021.5.0             45) g2tmpl/1.10.2
+  4) impi/2022.1.2                    46) gsi-ncdiag/1.1.2
+  5) stack-intel-oneapi-mpi/2021.5.1  47) crtm-fix/2.4.0.1_emc
+  6) gettext/0.19.8.1                 48) git-lfs/2.10.0
+  7) libxcrypt/4.4.35                 49) crtm/2.4.0.1
+  8) zlib/1.2.13                      50) openblas/0.3.24
+  9) sqlite/3.43.2                    51) py-setuptools/63.4.3
+ 10) util-linux-uuid/2.38.1           52) py-numpy/1.23.4
+ 11) python/3.11.6                    53) bufr/11.7.0
+ 12) hpss/hpss                        54) gmake/3.82
+ 13) gempak/7.17.0                    55) wgrib2/2.0.8
+ 14) ncl/6.6.2                        56) py-f90nml/1.4.3
+ 15) libjpeg/2.1.0                    57) py-cftime/1.0.3.4
+ 16) jasper/2.0.32                    58) py-netcdf4/1.5.8
+ 17) libpng/1.6.37                    59) libyaml/0.2.5
+ 18) openjpeg/2.3.1                   60) py-pyyaml/6.0
+ 19) eccodes/2.32.0                   61) py-markupsafe/2.1.3
+ 20) fftw/3.3.10                      62) py-jinja2/3.1.2
+ 21) nghttp2/1.57.0                   63) py-bottleneck/1.3.7
+ 22) curl/8.4.0                       64) py-numexpr/2.8.4
+ 23) proj/8.1.0                       65) py-et-xmlfile/1.0.1
+ 24) udunits/2.2.28                   66) py-openpyxl/3.1.2
+ 25) cdo/2.2.0                        67) py-pytz/2023.3
+ 26) R/3.6.1                          68) py-pyxlsb/1.0.10
+ 27) perl/5.38.0                      69) py-xlrd/2.0.1
+ 28) pkg-config/0.27.1                70) py-xlsxwriter/3.1.7
+ 29) hdf5/1.14.0                      71) py-xlwt/1.3.0
+ 30) snappy/1.1.10                    72) py-pandas/1.5.3
+ 31) zstd/1.5.2                       73) py-six/1.16.0
+ 32) c-blosc/1.21.5                   74) py-python-dateutil/2.8.2
+ 33) netcdf-c/4.9.2                   75) g2c/1.6.4
+ 34) netcdf-fortran/4.6.1             76) netcdf-cxx4/4.3.1
+ 35) antlr/2.7.7                      77) met/9.1.3
+ 36) gsl/2.7.1                        78) metplus/3.1.1
+ 37) nco/5.0.6                        79) py-packaging/23.1
+ 38) bacio/2.4.1                      80) py-xarray/2023.7.0
+ 39) w3emc/2.10.0                     81) prepobs/1.1.0
+ 40) prod_util/2.1.1                  82) fit2obs/1.1.4
+ 41) g2/3.4.5                         83) imagemagick/7.1.1-11
+ 42) sp/2.5.0                         84) module_base.hera
+
+ 
+
++ verfrad.sh[8]: status=0
++ verfrad.sh[9]: ((  status != 0  ))
++ verfrad.sh[11]: export job=verfrad
++ verfrad.sh[11]: job=verfrad
++ verfrad.sh[12]: export jobid=verfrad.1622821
++ verfrad.sh[12]: jobid=verfrad.1622821
++ verfrad.sh[16]: echo
+
++ verfrad.sh[17]: echo '=============== START TO RUN RADMON DATA EXTRACTION ==============='
+=============== START TO RUN RADMON DATA EXTRACTION ===============
++ verfrad.sh[19]: /scratch1/NCEPDEV/global/CI/3331/global-workflow/jobs/JGDAS_ATMOS_VERFRAD
+Begin JGDAS_ATMOS_VERFRAD at Tue Mar  4 10:53:21 UTC 2025
++ JGDAS_ATMOS_VERFRAD[7]: source /scratch1/NCEPDEV/global/CI/3331/global-workflow/ush/jjob_header.sh -e verfrad -c 'base verfrad'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=verfrad
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z verfrad ]]
+++ jjob_header.sh[68]: export DATA=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96_atm3DVar_f5b893c3/gdas.2021122100/verfrad.1622821
+++ jjob_header.sh[68]: DATA=/scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96_atm3DVar_f5b893c3/gdas.2021122100/verfrad.1622821
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96_atm3DVar_f5b893c3/gdas.2021122100/verfrad.1622821
+++ jjob_header.sh[72]: mkdir -p /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96_atm3DVar_f5b893c3/gdas.2021122100/verfrad.1622821
+++ jjob_header.sh[73]: cd /scratch1/NCEPDEV/stmp2/Terry.McGuinness/RUNDIRS/C96_atm3DVar_f5b893c3/gdas.2021122100/verfrad.1622821
+++ jjob_header.sh[79]: export cycle=t00z
+++ jjob_header.sh[79]: cycle=t00z
+++ jjob_header.sh[80]: setpdy.sh
+sed: can't read /scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/date/t00z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20211214
++++ PDY[1]: PDYm7=20211214
++++ PDY[2]: export PDYm6=20211215
++++ PDY[2]: PDYm6=20211215
++++ PDY[3]: export PDYm5=20211216
++++ PDY[3]: PDYm5=20211216
++++ PDY[4]: export PDYm4=20211217
++++ PDY[4]: PDYm4=20211217
++++ PDY[5]: export PDYm3=20211218
++++ PDY[5]: PDYm3=20211218
++++ PDY[6]: export PDYm2=20211219
++++ PDY[6]: PDYm2=20211219
++++ PDY[7]: export PDYm1=20211220
++++ PDY[7]: PDYm1=20211220
++++ PDY[8]: export PDY=20211221
++++ PDY[8]: PDY=20211221
++++ PDY[9]: export PDYp1=20211222
++++ PDY[9]: PDYp1=20211222
++++ PDY[10]: export PDYp2=20211223
++++ PDY[10]: PDYp2=20211223
++++ PDY[11]: export PDYp3=20211224
++++ PDY[11]: PDYp3=20211224
++++ PDY[12]: export PDYp4=20211225
++++ PDY[12]: PDYp4=20211225
++++ PDY[13]: export PDYp5=20211226
++++ PDY[13]: PDYp5=20211226
++++ PDY[14]: export PDYp6=20211227
++++ PDY[14]: PDYp6=20211227
++++ PDY[15]: export PDYp7=20211228
++++ PDY[15]: PDYp7=20211228
+++ jjob_header.sh[87]: export pid=1623306
+++ jjob_header.sh[87]: pid=1623306
+++ jjob_header.sh[88]: export pgmout=OUTPUT.1623306
+++ jjob_header.sh[88]: pgmout=OUTPUT.1623306
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/EXPDIR/C96_atm3DVar_f5b893c3
+++ jjob_header.sh[95]: EXPDIR=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/EXPDIR/C96_atm3DVar_f5b893c3
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /scratch1/NCEPDEV/global/CI/3331/RUNTESTS/EXPDIR/C96_atm3DVar_f5b893c3/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=HERA
++++ config.base[9]: machine=HERA
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=nems
++++ config.base[15]: ACCOUNT=nems
++++ config.base[16]: export QUEUE=batch
++++ config.base[16]: QUEUE=batch
++++ config.base[17]: export QUEUE_SERVICE=@QUEUE_SERVICE@
++++ config.base[17]: QUEUE_SERVICE=@QUEUE_SERVICE@
++++ config.base[18]: export QUEUE_DTN=@QUEUE_DTN@
++++ config.base[18]: QUEUE_DTN=@QUEUE_DTN@
++++ config.base[19]: export PARTITION_BATCH=hera
++++ config.base[19]: PARTITION_BATCH=hera
++++ config.base[20]: export PARTITION_SERVICE=service
++++ config.base[20]: PARTITION_SERVICE=service
++++ config.base[21]: export PARTITION_DTN=@PARTITION_DTN@
++++ config.base[21]: PARTITION_DTN=@PARTITION_DTN@
++++ config.base[22]: export RESERVATION=@RESERVATION@
++++ config.base[22]: RESERVATION=@RESERVATION@
++++ config.base[23]: export CLUSTERS=@CLUSTERS@
++++ config.base[23]: CLUSTERS=@CLUSTERS@
++++ config.base[24]: export CLUSTERS_SERVICE=@CLUSTERS_SERVICE@
++++ config.base[24]: CLUSTERS_SERVICE=@CLUSTERS_SERVICE@
++++ config.base[25]: export CLUSTERS_DTN=@CLUSTERS_DTN@
++++ config.base[25]: CLUSTERS_DTN=@CLUSTERS_DTN@
++++ config.base[28]: export HPSS_PROJECT=emc-global
++++ config.base[28]: HPSS_PROJECT=emc-global
++++ config.base[31]: export HOMEgfs=/scratch1/NCEPDEV/global/CI/3331/global-workflow
++++ config.base[31]: HOMEgfs=/scratch1/NCEPDEV/global/CI/3331/global-workflow
++++ config.base[32]: export EXECgfs=/scratch1/NCEPDEV/global/CI/3331/global-workflow/exec
++++ config.base[32]: EXECgfs=/scratch1/NCEPDEV/global/CI/3331/global-workflow/exec
++++ config.base[33]: export FIXgfs=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix
++++ config.base[33]: FIXgfs=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix
++++ config.base[34]: export PARMgfs=/scratch1/NCEPDEV/global/CI/3331/global-workflow/parm
++++ config.base[34]: PARMgfs=/scratch1/NCEPDEV/global/CI/3331/global-workflow/parm
++++ config.base[35]: export SCRgfs=/scratch1/NCEPDEV/global/CI/3331/global-workflow/scripts
++++ config.base[35]: SCRgfs=/scratch1/NCEPDEV/global/CI/3331/global-workflow/scripts
++++ config.base[36]: export USHgfs=/scratch1/NCEPDEV/global/CI/3331/global-workflow/ush
++++ config.base[36]: USHgfs=/scratch1/NCEPDEV/global/CI/3331/global-workflow/ush
++++ config.base[38]: export FIXam=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/am
++++ config.base[38]: FIXam=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/am
++++ config.base[39]: export FIXaer=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/aer
++++ config.base[39]: FIXaer=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/aer
++++ config.base[40]: export FIXcpl=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/cpl
++++ config.base[40]: FIXcpl=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/cpl
++++ config.base[41]: export FIXlut=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/lut
++++ config.base[41]: FIXlut=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/lut
++++ config.base[42]: export FIXcice=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/cice
++++ config.base[42]: FIXcice=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/cice
++++ config.base[43]: export FIXmom=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/mom6
++++ config.base[43]: FIXmom=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/mom6
++++ config.base[44]: export FIXreg2grb2=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/reg2grb2
++++ config.base[44]: FIXreg2grb2=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/reg2grb2
++++ config.base[45]: export FIXgdas=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/gdas
++++ config.base[45]: FIXgdas=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/gdas
++++ config.base[50]: export PACKAGEROOT=/scratch1/NCEPDEV/global/glopara/nwpara
++++ config.base[50]: PACKAGEROOT=/scratch1/NCEPDEV/global/glopara/nwpara
++++ config.base[51]: export COMROOT=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT
++++ config.base[51]: COMROOT=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT
++++ config.base[52]: export COMINsyn=/scratch1/NCEPDEV/global/glopara/com/gfs/prod/syndat
++++ config.base[52]: COMINsyn=/scratch1/NCEPDEV/global/glopara/com/gfs/prod/syndat
++++ config.base[53]: export DMPDIR=/scratch1/NCEPDEV/global/glopara/dump
++++ config.base[53]: DMPDIR=/scratch1/NCEPDEV/global/glopara/dump
++++ config.base[57]: export COMINecmwf=/scratch1/NCEPDEV/global/glopara/data/external_gempak/ecmwf
++++ config.base[57]: COMINecmwf=/scratch1/NCEPDEV/global/glopara/data/external_gempak/ecmwf
++++ config.base[58]: export COMINnam=/scratch1/NCEPDEV/global/glopara/data/external_gempak/nam
++++ config.base[58]: COMINnam=/scratch1/NCEPDEV/global/glopara/data/external_gempak/nam
++++ config.base[59]: export COMINukmet=/scratch1/NCEPDEV/global/glopara/data/external_gempak/ukmet
++++ config.base[59]: COMINukmet=/scratch1/NCEPDEV/global/glopara/data/external_gempak/ukmet
++++ config.base[62]: export HOMEDIR=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[62]: HOMEDIR=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[63]: export STMP=/scratch1/NCEPDEV/stmp2/Terry.McGuinness
++++ config.base[63]: STMP=/scratch1/NCEPDEV/stmp2/Terry.McGuinness
++++ config.base[64]: export PTMP=/scratch1/NCEPDEV/stmp4/Terry.McGuinness
++++ config.base[64]: PTMP=/scratch1/NCEPDEV/stmp4/Terry.McGuinness
++++ config.base[65]: export NOSCRUB=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[65]: NOSCRUB=/scratch1/NCEPDEV/global/Terry.McGuinness
++++ config.base[68]: export BASE_GIT=/scratch1/NCEPDEV/global/glopara/git
++++ config.base[68]: BASE_GIT=/scratch1/NCEPDEV/global/glopara/git
++++ config.base[71]: export BASE_DATA=/scratch1/NCEPDEV/global/glopara/data
++++ config.base[71]: BASE_DATA=/scratch1/NCEPDEV/global/glopara/data
++++ config.base[74]: export DO_GOES=NO
++++ config.base[74]: DO_GOES=NO
++++ config.base[75]: export DO_BUFRSND=NO
++++ config.base[75]: DO_BUFRSND=NO
++++ config.base[76]: export DO_GEMPAK=NO
++++ config.base[76]: DO_GEMPAK=NO
++++ config.base[77]: export DO_AWIPS=NO
++++ config.base[77]: DO_AWIPS=NO
++++ config.base[78]: export DO_NPOESS=NO
++++ config.base[78]: DO_NPOESS=NO
++++ config.base[79]: export DO_TRACKER=YES
++++ config.base[79]: DO_TRACKER=YES
++++ config.base[80]: export DO_GENESIS=YES
++++ config.base[80]: DO_GENESIS=YES
++++ config.base[81]: export DO_GENESIS_FSU=NO
++++ config.base[81]: DO_GENESIS_FSU=NO
++++ config.base[82]: export DO_VERFOZN=YES
++++ config.base[82]: DO_VERFOZN=YES
++++ config.base[83]: export DO_VERFRAD=YES
++++ config.base[83]: DO_VERFRAD=YES
++++ config.base[84]: export DO_VMINMON=YES
++++ config.base[84]: DO_VMINMON=YES
++++ config.base[85]: export DO_MOS=NO
++++ config.base[85]: DO_MOS=NO
++++ config.base[91]: export REALTIME=YES
++++ config.base[91]: REALTIME=YES
++++ config.base[94]: export MODE=cycled
++++ config.base[94]: MODE=cycled
++++ config.base[95]: export DO_TEST_MODE=NO
++++ config.base[95]: DO_TEST_MODE=NO
++++ config.base[104]: export FIXgsi=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/gsi
++++ config.base[104]: FIXgsi=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/gsi
++++ config.base[105]: export HOMEpost=/scratch1/NCEPDEV/global/CI/3331/global-workflow
++++ config.base[105]: HOMEpost=/scratch1/NCEPDEV/global/CI/3331/global-workflow
++++ config.base[106]: export HOMEobsproc=/scratch1/NCEPDEV/global/glopara/git/obsproc/v1.2.0
++++ config.base[106]: HOMEobsproc=/scratch1/NCEPDEV/global/glopara/git/obsproc/v1.2.0
++++ config.base[109]: export 'NCP=/bin/cp -p'
++++ config.base[109]: NCP='/bin/cp -p'
++++ config.base[110]: export NMV=/bin/mv
++++ config.base[110]: NMV=/bin/mv
++++ config.base[111]: export 'NLN=/bin/ln -sf'
++++ config.base[111]: NLN='/bin/ln -sf'
++++ config.base[112]: export VERBOSE=YES
++++ config.base[112]: VERBOSE=YES
++++ config.base[113]: export KEEPDATA=NO
++++ config.base[113]: KEEPDATA=NO
++++ config.base[114]: export DEBUG_POSTSCRIPT=NO
++++ config.base[114]: DEBUG_POSTSCRIPT=NO
++++ config.base[115]: export CHGRP_RSTPROD=YES
++++ config.base[115]: CHGRP_RSTPROD=YES
++++ config.base[116]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[116]: CHGRP_CMD='chgrp rstprod'
++++ config.base[117]: export NCDUMP=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/bin/ncdump
++++ config.base[117]: NCDUMP=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/netcdf-c-4.9.2-ejp7j3k/bin/ncdump
++++ config.base[118]: export NCLEN=/scratch1/NCEPDEV/global/CI/3331/global-workflow/ush/getncdimlen
++++ config.base[118]: NCLEN=/scratch1/NCEPDEV/global/CI/3331/global-workflow/ush/getncdimlen
++++ config.base[121]: export BASE_ENV=/scratch1/NCEPDEV/global/CI/3331/global-workflow/env
++++ config.base[121]: BASE_ENV=/scratch1/NCEPDEV/global/CI/3331/global-workflow/env
++++ config.base[122]: export BASE_JOB=/scratch1/NCEPDEV/global/CI/3331/global-workflow/jobs/rocoto
++++ config.base[122]: BASE_JOB=/scratch1/NCEPDEV/global/CI/3331/global-workflow/jobs/rocoto
++++ config.base[125]: export SDATE=2021122018
++++ config.base[125]: SDATE=2021122018
++++ config.base[126]: export EDATE=2021122106
++++ config.base[126]: EDATE=2021122106
++++ config.base[127]: export EXP_WARM_START=.false.
++++ config.base[127]: EXP_WARM_START=.false.
++++ config.base[128]: export assim_freq=6
++++ config.base[128]: assim_freq=6
++++ config.base[129]: export PSLOT=C96_atm3DVar_f5b893c3
++++ config.base[129]: PSLOT=C96_atm3DVar_f5b893c3
++++ config.base[130]: export EXPDIR=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/EXPDIR/C96_atm3DVar_f5b893c3
++++ config.base[130]: EXPDIR=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/EXPDIR/C96_atm3DVar_f5b893c3
++++ config.base[131]: export ROTDIR=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3
++++ config.base[131]: ROTDIR=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3
++++ config.base[132]: export ROTDIR_DUMP=YES
++++ config.base[132]: ROTDIR_DUMP=YES
++++ config.base[133]: export DUMP_SUFFIX=
++++ config.base[133]: DUMP_SUFFIX=
++++ config.base[134]: [[ 2021122100 -ge 2019092100 ]]
++++ config.base[134]: [[ 2021122100 -le 2019110700 ]]
++++ config.base[137]: export ARCDIR=/scratch1/NCEPDEV/global/Terry.McGuinness/archive/C96_atm3DVar_f5b893c3
++++ config.base[137]: ARCDIR=/scratch1/NCEPDEV/global/Terry.McGuinness/archive/C96_atm3DVar_f5b893c3
++++ config.base[138]: export ATARDIR=/NCEPDEV/emc-global/1year/Terry.McGuinness/HERA/scratch/C96_atm3DVar_f5b893c3
++++ config.base[138]: ATARDIR=/NCEPDEV/emc-global/1year/Terry.McGuinness/HERA/scratch/C96_atm3DVar_f5b893c3
++++ config.base[139]: export FETCHDIR=@FETCHDIR@
++++ config.base[139]: FETCHDIR=@FETCHDIR@
++++ config.base[142]: export envir=prod
++++ config.base[142]: envir=prod
++++ config.base[143]: export NET=gfs
++++ config.base[143]: NET=gfs
++++ config.base[144]: export RUN=gdas
++++ config.base[144]: RUN=gdas
++++ config.base[147]: source /scratch1/NCEPDEV/global/CI/3331/RUNTESTS/EXPDIR/C96_atm3DVar_f5b893c3/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ config.com[78]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[79]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[80]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[82]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[83]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[84]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[85]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[86]: declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[87]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[88]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[89]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[90]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[92]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[93]: declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[94]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[95]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[96]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[97]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[98]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[99]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[100]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[102]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[103]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[104]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[106]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[150]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[150]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[151]: export LOGSCRIPT=
++++ config.base[151]: LOGSCRIPT=
++++ config.base[154]: export 'REDOUT=1>'
++++ config.base[154]: REDOUT='1>'
++++ config.base[155]: export 'REDERR=2>'
++++ config.base[155]: REDERR='2>'
++++ config.base[157]: export SENDECF=NO
++++ config.base[157]: SENDECF=NO
++++ config.base[158]: export SENDSDM=NO
++++ config.base[158]: SENDSDM=NO
++++ config.base[159]: export SENDDBN_NTC=NO
++++ config.base[159]: SENDDBN_NTC=NO
++++ config.base[160]: export SENDDBN=NO
++++ config.base[160]: SENDDBN=NO
++++ config.base[161]: export DBNROOT=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/prod-util-2.1.1-4vpcrpl/fakedbn
++++ config.base[161]: DBNROOT=/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/prod-util-2.1.1-4vpcrpl/fakedbn
++++ config.base[164]: export APP=ATM
++++ config.base[164]: APP=ATM
++++ config.base[166]: shopt -s extglob
++++ config.base[169]: case "${RUN}" in
++++ config.base[176]: shopt -u extglob
++++ config.base[179]: export DO_ATM=YES
++++ config.base[179]: DO_ATM=YES
++++ config.base[180]: export DO_COUPLED=NO
++++ config.base[180]: DO_COUPLED=NO
++++ config.base[181]: export DO_WAVE=NO
++++ config.base[181]: DO_WAVE=NO
++++ config.base[182]: export DO_OCN=NO
++++ config.base[182]: DO_OCN=NO
++++ config.base[183]: export DO_ICE=NO
++++ config.base[183]: DO_ICE=NO
++++ config.base[184]: DO_AERO=NO
++++ config.base[185]: export DO_PREP_OBS_AERO=NO
++++ config.base[185]: DO_PREP_OBS_AERO=NO
++++ config.base[186]: aero_fcst_runs=gdas
++++ config.base[187]: aero_anl_runs='gdas gfs'
++++ config.base[188]: export DO_AERO_FCST=NO
++++ config.base[188]: DO_AERO_FCST=NO
++++ config.base[189]: export DO_AERO_ANL=NO
++++ config.base[189]: DO_AERO_ANL=NO
++++ config.base[190]: export DOBNDPNT_WAVE=NO
++++ config.base[190]: DOBNDPNT_WAVE=NO
++++ config.base[191]: export DOIBP_WAV=NO
++++ config.base[191]: DOIBP_WAV=NO
++++ config.base[192]: export FRAC_GRID=.true.
++++ config.base[192]: FRAC_GRID=.true.
++++ config.base[193]: export DO_NEST=NO
++++ config.base[193]: DO_NEST=NO
++++ config.base[194]: [[ NO == \Y\E\S ]]
++++ config.base[200]: export ntiles=6
++++ config.base[200]: ntiles=6
++++ config.base[201]: export FIXugwd=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/ugwd
++++ config.base[201]: FIXugwd=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/ugwd
++++ config.base[202]: export FIXorog=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/orog
++++ config.base[202]: FIXorog=/scratch1/NCEPDEV/global/CI/3331/global-workflow/fix/orog
++++ config.base[206]: export OPS_RES=C768
++++ config.base[206]: OPS_RES=C768
++++ config.base[209]: export LEVS=128
++++ config.base[209]: LEVS=128
++++ config.base[210]: export CASE=C96
++++ config.base[210]: CASE=C96
++++ config.base[211]: export CASE_ENS=@CASEENS@
++++ config.base[211]: CASE_ENS=@CASEENS@
++++ config.base[212]: export OCNRES=500
++++ config.base[212]: OCNRES=500
++++ config.base[213]: export ICERES=500
++++ config.base[213]: ICERES=500
++++ config.base[216]: case "${CASE}" in
++++ config.base[221]: export waveGRD=uglo_100km
++++ config.base[221]: waveGRD=uglo_100km
++++ config.base[235]: case "${APP}" in
++++ config.base[270]: [[ NO == \Y\E\S ]]
++++ config.base[280]: [[ gdas =~ gdas ]]
++++ config.base[281]: export FHCYC=1
++++ config.base[281]: FHCYC=1
++++ config.base[282]: export FTSFS=10
++++ config.base[282]: FTSFS=10
++++ config.base[288]: export FHMIN=0
++++ config.base[288]: FHMIN=0
++++ config.base[289]: export FHMAX=9
++++ config.base[289]: FHMAX=9
++++ config.base[290]: export FHOUT=3
++++ config.base[290]: FHOUT=3
++++ config.base[291]: export FHOUT_OCN=3
++++ config.base[291]: FHOUT_OCN=3
++++ config.base[292]: export FHOUT_ICE=3
++++ config.base[292]: FHOUT_ICE=3
++++ config.base[293]: export FHOUT_AERO=3
++++ config.base[293]: FHOUT_AERO=3
++++ config.base[296]: export EUPD_CYC=gdas
++++ config.base[296]: EUPD_CYC=gdas
++++ config.base[299]: export INTERVAL_GFS=24
++++ config.base[299]: INTERVAL_GFS=24
++++ config.base[300]: export SDATE_GFS=2021122100
++++ config.base[300]: SDATE_GFS=2021122100
++++ config.base[303]: export FHMIN_GFS=0
++++ config.base[303]: FHMIN_GFS=0
++++ config.base[304]: export FHMAX_GFS=120
++++ config.base[304]: FHMAX_GFS=120
++++ config.base[306]: breakpnts=
++++ config.base[307]: export FCST_SEGMENTS=0,120
++++ config.base[307]: FCST_SEGMENTS=0,120
++++ config.base[308]: export FHOUT_GFS=3
++++ config.base[308]: FHOUT_GFS=3
++++ config.base[309]: export FHMAX_HF_GFS=0
++++ config.base[309]: FHMAX_HF_GFS=0
++++ config.base[310]: export FHOUT_HF_GFS=1
++++ config.base[310]: FHOUT_HF_GFS=1
++++ config.base[311]: export FHOUT_OCN_GFS=6
++++ config.base[311]: FHOUT_OCN_GFS=6
++++ config.base[312]: export FHOUT_ICE_GFS=6
++++ config.base[312]: FHOUT_ICE_GFS=6
++++ config.base[313]: export FHMIN_WAV=0
++++ config.base[313]: FHMIN_WAV=0
++++ config.base[314]: export FHOUT_WAV=3
++++ config.base[314]: FHOUT_WAV=3
++++ config.base[315]: export FHMAX_HF_WAV=120
++++ config.base[315]: FHMAX_HF_WAV=120
++++ config.base[316]: export FHOUT_HF_WAV=1
++++ config.base[316]: FHOUT_HF_WAV=1
++++ config.base[317]: export FHMAX_WAV=9
++++ config.base[317]: FHMAX_WAV=9
++++ config.base[318]: export FHMAX_WAV_GFS=120
++++ config.base[318]: FHMAX_WAV_GFS=120
++++ config.base[319]: export FHMAX_HF_GFS=0
++++ config.base[319]: FHMAX_HF_GFS=0
++++ config.base[320]: export FHMAX_WAV=9
++++ config.base[320]: FHMAX_WAV=9
++++ config.base[321]: export FHMAX_WAV_GFS=120
++++ config.base[321]: FHMAX_WAV_GFS=120
++++ config.base[322]: export FHMAX_HF_WAV=120
++++ config.base[322]: FHMAX_HF_WAV=120
++++ config.base[325]: export ILPOST=1
++++ config.base[325]: ILPOST=1
++++ config.base[326]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[327]: export ILPOST=3
++++ config.base[327]: ILPOST=3
++++ config.base[331]: export FHMAX_GOES=180
++++ config.base[331]: FHMAX_GOES=180
++++ config.base[332]: export FHOUT_GOES=3
++++ config.base[332]: FHOUT_GOES=3
++++ config.base[333]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[334]: export FHMAX_GOES=120
++++ config.base[334]: FHMAX_GOES=120
++++ config.base[338]: export restart_interval_gfs=12
++++ config.base[338]: restart_interval_gfs=12
++++ config.base[343]: export QUILTING=.true.
++++ config.base[343]: QUILTING=.true.
++++ config.base[344]: export OUTPUT_GRID=gaussian_grid
++++ config.base[344]: OUTPUT_GRID=gaussian_grid
++++ config.base[345]: export WRITE_DOPOST=.true.
++++ config.base[345]: WRITE_DOPOST=.true.
++++ config.base[346]: export WRITE_NSFLIP=.true.
++++ config.base[346]: WRITE_NSFLIP=.true.
++++ config.base[349]: export DOIAU=YES
++++ config.base[349]: DOIAU=YES
++++ config.base[350]: export IAUFHRS=3,6,9
++++ config.base[350]: IAUFHRS=3,6,9
++++ config.base[351]: export IAU_FHROT=3
++++ config.base[351]: IAU_FHROT=3
++++ config.base[352]: export IAU_DELTHRS=6
++++ config.base[352]: IAU_DELTHRS=6
++++ config.base[353]: export IAU_OFFSET=6
++++ config.base[353]: IAU_OFFSET=6
++++ config.base[354]: export DOIAU_ENKF=YES
++++ config.base[354]: DOIAU_ENKF=YES
++++ config.base[355]: export IAUFHRS_ENKF=3,6,9
++++ config.base[355]: IAUFHRS_ENKF=3,6,9
++++ config.base[356]: export IAU_DELTHRS_ENKF=6
++++ config.base[356]: IAU_DELTHRS_ENKF=6
++++ config.base[359]: export lobsdiag_forenkf=.true.
++++ config.base[359]: lobsdiag_forenkf=.true.
++++ config.base[367]: export imp_physics=8
++++ config.base[367]: imp_physics=8
++++ config.base[371]: export DO_JEDIATMVAR=NO
++++ config.base[371]: DO_JEDIATMVAR=NO
++++ config.base[372]: export DO_JEDIATMENS=NO
++++ config.base[372]: DO_JEDIATMENS=NO
++++ config.base[373]: export DO_JEDIOCNVAR=NO
++++ config.base[373]: DO_JEDIOCNVAR=NO
++++ config.base[374]: export DO_JEDISNOWDA=NO
++++ config.base[374]: DO_JEDISNOWDA=NO
++++ config.base[375]: export DO_MERGENSST=NO
++++ config.base[375]: DO_MERGENSST=NO
++++ config.base[376]: export DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[376]: DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[379]: export DOHYBVAR=NO
++++ config.base[379]: DOHYBVAR=NO
++++ config.base[380]: export DOHYBVAR_OCN=NO
++++ config.base[380]: DOHYBVAR_OCN=NO
++++ config.base[381]: export NMEM_ENS=0
++++ config.base[381]: NMEM_ENS=0
++++ config.base[382]: export SMOOTH_ENKF=NO
++++ config.base[382]: SMOOTH_ENKF=NO
++++ config.base[383]: export l4densvar=.true.
++++ config.base[383]: l4densvar=.true.
++++ config.base[384]: export lwrite4danl=.true.
++++ config.base[384]: lwrite4danl=.true.
++++ config.base[385]: export DO_CALC_INCREMENT=NO
++++ config.base[385]: DO_CALC_INCREMENT=NO
++++ config.base[388]: export NMEM_ENS_GFS=30
++++ config.base[388]: NMEM_ENS_GFS=30
++++ config.base[389]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[389]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[390]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[390]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[393]: [[ NO = \Y\E\S ]]
++++ config.base[407]: [[ NO == \N\O ]]
++++ config.base[407]: [[ YES == \Y\E\S ]]
++++ config.base[408]: export IAUFHRS=6,
++++ config.base[408]: IAUFHRS=6,
++++ config.base[409]: export IAU_FHROT=3
++++ config.base[409]: IAU_FHROT=3
++++ config.base[410]: export IAU_FILTER_INCREMENTS=.true.
++++ config.base[410]: IAU_FILTER_INCREMENTS=.true.
++++ config.base[411]: export IAUFHRS_ENKF=6,
++++ config.base[411]: IAUFHRS_ENKF=6,
++++ config.base[415]: export ENKF_SPREAD=YES
++++ config.base[415]: ENKF_SPREAD=YES
++++ config.base[418]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[418]: [[ 2021122018 = \2\0\2\1\1\2\2\1\0\0 ]]
++++ config.base[418]: [[ YES = \N\O ]]
++++ config.base[418]: [[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[424]: [[ YES = \N\O ]]
++++ config.base[428]: [[ YES == \Y\E\S ]]
++++ config.base[429]: export restart_interval_enkfgdas=3
++++ config.base[429]: restart_interval_enkfgdas=3
++++ config.base[434]: export restart_interval_enkfgfs=3
++++ config.base[434]: restart_interval_enkfgfs=3
++++ config.base[436]: [[ YES == \Y\E\S ]]
++++ config.base[437]: export restart_interval_gdas=3
++++ config.base[437]: restart_interval_gdas=3
++++ config.base[442]: export DO_GSISOILDA=NO
++++ config.base[442]: DO_GSISOILDA=NO
++++ config.base[445]: export DONST=YES
++++ config.base[445]: DONST=YES
++++ config.base[446]: [[ YES = \Y\E\S ]]
++++ config.base[446]: export 'FNTSFA=        '
++++ config.base[446]: FNTSFA='        '
++++ config.base[449]: export nst_anl=.true.
++++ config.base[449]: nst_anl=.true.
++++ config.base[452]: export MAKE_NSSTBUFR=NO
++++ config.base[452]: MAKE_NSSTBUFR=NO
++++ config.base[455]: export MAKE_ACFTBUFR=NO
++++ config.base[455]: MAKE_ACFTBUFR=NO
++++ config.base[458]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[458]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[461]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[461]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[462]: export INCVARS_EFOLD=5
++++ config.base[462]: INCVARS_EFOLD=5
++++ config.base[467]: export netcdf_diag=.true.
++++ config.base[467]: netcdf_diag=.true.
++++ config.base[468]: export binary_diag=.false.
++++ config.base[468]: binary_diag=.false.
++++ config.base[471]: export DO_CA=YES
++++ config.base[471]: DO_CA=YES
++++ config.base[474]: export DO_METP=NO
++++ config.base[474]: DO_METP=NO
++++ config.base[475]: export DO_FIT2OBS=YES
++++ config.base[475]: DO_FIT2OBS=YES
++++ config.base[478]: export FHMAX_FITS=132
++++ config.base[478]: FHMAX_FITS=132
++++ config.base[479]: [[ 132 -gt 120 ]]
++++ config.base[479]: export FHMAX_FITS=120
++++ config.base[479]: FHMAX_FITS=120
++++ config.base[482]: export DO_FETCH_HPSS=NO
++++ config.base[482]: DO_FETCH_HPSS=NO
++++ config.base[483]: export DO_FETCH_LOCAL=NO
++++ config.base[483]: DO_FETCH_LOCAL=NO
++++ config.base[486]: export HPSSARCH=YES
++++ config.base[486]: HPSSARCH=YES
++++ config.base[487]: export LOCALARCH=NO
++++ config.base[487]: LOCALARCH=NO
++++ config.base[488]: [[ YES = \Y\E\S ]]
++++ config.base[488]: [[ NO = \Y\E\S ]]
++++ config.base[491]: [[ YES = \Y\E\S ]]
++++ config.base[492]: export DO_ARCHTAR=YES
++++ config.base[492]: DO_ARCHTAR=YES
++++ config.base[496]: export ARCH_CYC=00
++++ config.base[496]: ARCH_CYC=00
++++ config.base[497]: export ARCH_WARMICFREQ=4
++++ config.base[497]: ARCH_WARMICFREQ=4
++++ config.base[498]: export ARCH_FCSTICFREQ=1
++++ config.base[498]: ARCH_FCSTICFREQ=1
++++ config.base[499]: export ARCH_EXPDIR=YES
++++ config.base[499]: ARCH_EXPDIR=YES
++++ config.base[500]: export ARCH_EXPDIR_FREQ=0
++++ config.base[500]: ARCH_EXPDIR_FREQ=0
++++ config.base[501]: export ARCH_HASHES=YES
++++ config.base[501]: ARCH_HASHES=YES
++++ config.base[502]: export ARCH_DIFFS=NO
++++ config.base[502]: ARCH_DIFFS=NO
++++ config.base[505]: [[ NO = \Y\E\S ]]
++++ config.base[513]: export REPLAY_ICS=NO
++++ config.base[513]: REPLAY_ICS=NO
++++ config.base[514]: export OFFSET_START_HOUR=0
++++ config.base[514]: OFFSET_START_HOUR=0
++++ config.base[517]: export NUM_SND_COLLECTIVES=9
++++ config.base[517]: NUM_SND_COLLECTIVES=9
++++ config.base[519]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /scratch1/NCEPDEV/global/CI/3331/RUNTESTS/EXPDIR/C96_atm3DVar_f5b893c3/config.verfrad
++++ config.verfrad[4]: echo 'BEGIN: config.verfrad'
+BEGIN: config.verfrad
++++ config.verfrad[7]: . /scratch1/NCEPDEV/global/CI/3331/RUNTESTS/EXPDIR/C96_atm3DVar_f5b893c3/config.resources verfrad
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=verfrad
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[46]: max_tasks_per_node=40
+++++ config.resources[48]: mem_node_max=96GB
+++++ config.resources[149]: export max_tasks_per_node
+++++ config.resources[151]: case ${step} in
+++++ config.resources[1016]: walltime=00:40:00
+++++ config.resources[1017]: ntasks=1
+++++ config.resources[1018]: threads_per_task=1
+++++ config.resources[1019]: tasks_per_node=1
+++++ config.resources[1020]: memory=5G
+++++ config.resources[1507]: [[ -f /scratch1/NCEPDEV/global/CI/3331/RUNTESTS/EXPDIR/C96_atm3DVar_f5b893c3/config.resources.HERA ]]
+++++ config.resources[1508]: source /scratch1/NCEPDEV/global/CI/3331/RUNTESTS/EXPDIR/C96_atm3DVar_f5b893c3/config.resources.HERA
++++++ config.resources.HERA[5]: case ${step} in
+++++ config.resources[1512]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1513]: run_resource_var=threads_per_task_gdas
+++++ config.resources[1514]: [[ -n '' ]]
+++++ config.resources[1516]: [[ -n 0 ]]
+++++ config.resources[1517]: export threads_per_task
+++++ config.resources[1512]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1513]: run_resource_var=ntasks_gdas
+++++ config.resources[1514]: [[ -n '' ]]
+++++ config.resources[1516]: [[ -n 0 ]]
+++++ config.resources[1517]: export ntasks
+++++ config.resources[1512]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1513]: run_resource_var=tasks_per_node_gdas
+++++ config.resources[1514]: [[ -n '' ]]
+++++ config.resources[1516]: [[ -n 0 ]]
+++++ config.resources[1517]: export tasks_per_node
+++++ config.resources[1512]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1513]: run_resource_var=NTASKS_gdas
+++++ config.resources[1514]: [[ -n '' ]]
+++++ config.resources[1516]: [[ -n '' ]]
+++++ config.resources[1512]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1513]: run_resource_var=memory_gdas
+++++ config.resources[1514]: [[ -n '' ]]
+++++ config.resources[1516]: [[ -n 0 ]]
+++++ config.resources[1517]: export memory
+++++ config.resources[1512]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1513]: run_resource_var=walltime_gdas
+++++ config.resources[1514]: [[ -n '' ]]
+++++ config.resources[1516]: [[ -n 0 ]]
+++++ config.resources[1517]: export walltime
+++++ config.resources[1521]: echo 'END: config.resources'
+END: config.resources
++++ config.verfrad[9]: export satype_file=/scratch1/NCEPDEV/global/CI/3331/global-workflow/parm/monitor/gdas_radmon_satype.txt
++++ config.verfrad[9]: satype_file=/scratch1/NCEPDEV/global/CI/3331/global-workflow/parm/monitor/gdas_radmon_satype.txt
++++ config.verfrad[12]: . /scratch1/NCEPDEV/global/CI/3331/global-workflow/parm/monitor/da_mon.parm
+++++ da_mon.parm[4]: export LITTLE_ENDIAN=0
+++++ da_mon.parm[4]: LITTLE_ENDIAN=0
+++++ da_mon.parm[5]: export COMPRESS=gzip
+++++ da_mon.parm[5]: COMPRESS=gzip
+++++ da_mon.parm[6]: export UNCOMPRESS=gunzip
+++++ da_mon.parm[6]: UNCOMPRESS=gunzip
+++++ da_mon.parm[7]: export Z=gz
+++++ da_mon.parm[7]: Z=gz
++++ config.verfrad[15]: export RAD_AREA=glb
++++ config.verfrad[15]: RAD_AREA=glb
++++ config.verfrad[16]: export MAKE_CTL=1
++++ config.verfrad[16]: MAKE_CTL=1
++++ config.verfrad[17]: export MAKE_DATA=1
++++ config.verfrad[17]: MAKE_DATA=1
++++ config.verfrad[18]: export USE_ANL=1
++++ config.verfrad[18]: USE_ANL=1
++++ config.verfrad[19]: export DO_DIAG_RPT=1
++++ config.verfrad[19]: DO_DIAG_RPT=1
++++ config.verfrad[20]: export DO_DATA_RPT=1
++++ config.verfrad[20]: DO_DATA_RPT=1
++++ config.verfrad[22]: export RADMON_SUFFIX=gdas
++++ config.verfrad[22]: RADMON_SUFFIX=gdas
++++ config.verfrad[23]: export CYCLE_INTERVAL=6
++++ config.verfrad[23]: CYCLE_INTERVAL=6
++++ config.verfrad[24]: export VERBOSE=YES
++++ config.verfrad[24]: VERBOSE=YES
++++ config.verfrad[26]: echo 'END: config.verfrad'
+END: config.verfrad
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /scratch1/NCEPDEV/global/CI/3331/global-workflow/env/HERA.env verfrad
++++ HERA.env[3]: [[ 1 -ne 1 ]]
++++ HERA.env[10]: step=verfrad
++++ HERA.env[12]: export 'launcher=srun -l --export=ALL --hint=nomultithread'
++++ HERA.env[12]: launcher='srun -l --export=ALL --hint=nomultithread'
++++ HERA.env[13]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ HERA.env[13]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ HERA.env[24]: export OMP_STACKSIZE=2048000
++++ HERA.env[24]: OMP_STACKSIZE=2048000
++++ HERA.env[25]: export NTHSTACK=1024000000
++++ HERA.env[25]: NTHSTACK=1024000000
++++ HERA.env[29]: [[ -n 7609156 ]]
++++ HERA.env[30]: ulimit -s unlimited
++++ HERA.env[31]: ulimit -a
+core file size          (blocks, -c) unlimited
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 379938
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) 5242880
+open files                      (-n) 131072
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 379938
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
++++ HERA.env[36]: [[ -n 1 ]]
++++ HERA.env[36]: [[ -n 40 ]]
++++ HERA.env[36]: [[ -n 1 ]]
++++ HERA.env[37]: max_threads_per_task=40
++++ HERA.env[38]: NTHREADSmax=1
++++ HERA.env[39]: NTHREADS1=1
++++ HERA.env[40]: [[ 1 -gt 40 ]]
++++ HERA.env[41]: [[ 1 -gt 40 ]]
++++ HERA.env[42]: APRUN_default='srun -l --export=ALL --hint=nomultithread -n 1'
++++ HERA.env[48]: [[ verfrad = \p\r\e\p ]]
++++ HERA.env[48]: [[ verfrad = \p\r\e\p\b\u\f\r ]]
++++ HERA.env[55]: [[ verfrad = \p\r\e\p\_\e\m\i\s\s\i\o\n\s ]]
++++ HERA.env[59]: [[ verfrad = \w\a\v\e\i\n\i\t ]]
++++ HERA.env[59]: [[ verfrad = \w\a\v\e\p\r\e\p ]]
++++ HERA.env[59]: [[ verfrad = \w\a\v\e\p\o\s\t\s\b\s ]]
++++ HERA.env[59]: [[ verfrad = \w\a\v\e\p\o\s\t\b\n\d\p\n\t ]]
++++ HERA.env[59]: [[ verfrad = \w\a\v\e\p\o\s\t\b\n\d\p\n\t\b\l\l ]]
++++ HERA.env[59]: [[ verfrad = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ HERA.env[66]: [[ verfrad = \a\t\m\a\n\l\v\a\r ]]
++++ HERA.env[71]: [[ verfrad = \a\t\m\e\n\s\a\n\l\o\b\s ]]
++++ HERA.env[76]: [[ verfrad = \a\t\m\e\n\s\a\n\l\s\o\l ]]
++++ HERA.env[81]: [[ verfrad = \a\t\m\e\n\s\a\n\l\l\e\t\k\f ]]
++++ HERA.env[86]: [[ verfrad = \a\t\m\e\n\s\a\n\l\f\v\3\i\n\c ]]
++++ HERA.env[91]: [[ verfrad = \a\e\r\o\a\n\l\v\a\r ]]
++++ HERA.env[98]: [[ verfrad = \a\e\r\o\a\n\l\g\e\n\b ]]
++++ HERA.env[103]: [[ verfrad = \a\t\m\a\n\l\f\v\3\i\n\c ]]
++++ HERA.env[108]: [[ verfrad = \p\r\e\p\o\b\s\a\e\r\o ]]
++++ HERA.env[113]: [[ verfrad = \s\n\o\w\a\n\l ]]
++++ HERA.env[122]: [[ verfrad = \e\s\n\o\w\a\n\l ]]
++++ HERA.env[131]: [[ verfrad = \m\a\r\i\n\e\b\m\a\t ]]
++++ HERA.env[136]: [[ verfrad = \m\a\r\i\n\e\a\n\l\v\a\r ]]
++++ HERA.env[141]: [[ verfrad = \m\a\r\i\n\e\a\n\l\c\h\k\p\t ]]
++++ HERA.env[146]: [[ verfrad = \o\c\n\a\n\a\l\e\c\e\n ]]
++++ HERA.env[151]: [[ verfrad = \m\a\r\i\n\e\a\n\l\l\e\t\k\f ]]
++++ HERA.env[156]: [[ verfrad = \a\n\a\l ]]
++++ HERA.env[156]: [[ verfrad = \a\n\a\l\c\a\l\c ]]
++++ HERA.env[181]: [[ verfrad = \s\f\c\a\n\l ]]
++++ HERA.env[194]: [[ verfrad = \e\o\b\s ]]
++++ HERA.env[206]: [[ verfrad = \e\u\p\d ]]
++++ HERA.env[215]: [[ verfrad = \f\c\s\t ]]
++++ HERA.env[215]: [[ verfrad = \e\f\c\s ]]
++++ HERA.env[223]: [[ verfrad = \u\p\p ]]
++++ HERA.env[228]: [[ verfrad = \a\t\m\o\s\_\p\r\o\d\u\c\t\s ]]
++++ HERA.env[232]: [[ verfrad = \o\c\e\a\n\i\c\e\_\p\r\o\d\u\c\t\s ]]
++++ HERA.env[237]: [[ verfrad = \e\c\e\n ]]
++++ HERA.env[250]: [[ verfrad = \e\s\f\c ]]
++++ HERA.env[266]: [[ verfrad = \e\p\o\s ]]
++++ HERA.env[271]: [[ verfrad = \p\o\s\t\s\n\d ]]
++++ HERA.env[282]: [[ verfrad = \a\w\i\p\s ]]
++++ HERA.env[287]: [[ verfrad = \g\e\m\p\a\k ]]
++++ HERA.env[296]: [[ verfrad = \f\i\t\2\o\b\s ]]
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
+++ JGDAS_ATMOS_VERFRAD[13]: date --utc +%Y%m%d%H -d '20211221 00 - 6 hours'
++ JGDAS_ATMOS_VERFRAD[13]: GDATE=2021122018
++ JGDAS_ATMOS_VERFRAD[14]: export gPDY=20211220
++ JGDAS_ATMOS_VERFRAD[14]: gPDY=20211220
++ JGDAS_ATMOS_VERFRAD[15]: export gcyc=18
++ JGDAS_ATMOS_VERFRAD[15]: gcyc=18
++ JGDAS_ATMOS_VERFRAD[21]: YMD=20211221
++ JGDAS_ATMOS_VERFRAD[21]: HH=00
++ JGDAS_ATMOS_VERFRAD[21]: declare_from_tmpl -rx COM_ATMOS_ANALYSIS
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_ANALYSIS=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211221/00//analysis/atmos
++ JGDAS_ATMOS_VERFRAD[22]: YMD=20211221
++ JGDAS_ATMOS_VERFRAD[22]: HH=00
++ JGDAS_ATMOS_VERFRAD[22]: declare_from_tmpl -rx COM_ATMOS_RADMON
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_RADMON=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211221/00//products/atmos/radmon
++ JGDAS_ATMOS_VERFRAD[23]: YMD=20211220
++ JGDAS_ATMOS_VERFRAD[23]: HH=18
++ JGDAS_ATMOS_VERFRAD[23]: declare_from_tmpl -rx COM_ATMOS_RADMON_PREV:COM_ATMOS_RADMON_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COM_ATMOS_RADMON_PREV=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211220/18//products/atmos/radmon
++ JGDAS_ATMOS_VERFRAD[25]: export biascr=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211221/00//analysis/atmos/gdas.t00z.abias
++ JGDAS_ATMOS_VERFRAD[25]: biascr=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211221/00//analysis/atmos/gdas.t00z.abias
++ JGDAS_ATMOS_VERFRAD[26]: export radstat=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211221/00//analysis/atmos/gdas.t00z.radstat
++ JGDAS_ATMOS_VERFRAD[26]: radstat=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211221/00//analysis/atmos/gdas.t00z.radstat
++ JGDAS_ATMOS_VERFRAD[27]: export TANKverf_rad=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211221/00//products/atmos/radmon
++ JGDAS_ATMOS_VERFRAD[27]: TANKverf_rad=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211221/00//products/atmos/radmon
++ JGDAS_ATMOS_VERFRAD[28]: export TANKverf_radM1=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211220/18//products/atmos/radmon
++ JGDAS_ATMOS_VERFRAD[28]: TANKverf_radM1=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211220/18//products/atmos/radmon
++ JGDAS_ATMOS_VERFRAD[30]: [[ ! -d /scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211221/00//products/atmos/radmon ]]
++ JGDAS_ATMOS_VERFRAD[31]: [[ ! -d /scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211220/18//products/atmos/radmon ]]
++ JGDAS_ATMOS_VERFRAD[35]: /scratch1/NCEPDEV/global/CI/3331/global-workflow/scripts/exgdas_atmos_verfrad.sh
+Begin exgdas_atmos_verfrad.sh at Tue Mar  4 10:53:36 UTC 2025
++ exgdas_atmos_verfrad.sh[22]: data_available=0
++ exgdas_atmos_verfrad.sh[24]: [[ -s /scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211221/00//analysis/atmos/gdas.t00z.radstat ]]
++ exgdas_atmos_verfrad.sh[24]: [[ -s /scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211221/00//analysis/atmos/gdas.t00z.abias ]]
++ exgdas_atmos_verfrad.sh[25]: data_available=1
++ exgdas_atmos_verfrad.sh[32]: /bin/cp -p /scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211221/00//analysis/atmos/gdas.t00z.abias ./biascr.2021122100
++ exgdas_atmos_verfrad.sh[33]: /bin/cp -p /scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211221/00//analysis/atmos/gdas.t00z.radstat ./radstat.2021122100
++ exgdas_atmos_verfrad.sh[35]: tar -xvf radstat.2021122100
+diag_amsua_n15_ges.2021122100.nc4.gz
+diag_amsua_n18_ges.2021122100.nc4.gz
+diag_ssmis_f17_ges.2021122100.nc4.gz
+diag_ssmis_f18_ges.2021122100.nc4.gz
+diag_amsua_n19_ges.2021122100.nc4.gz
+diag_mhs_n19_ges.2021122100.nc4.gz
+diag_seviri_m08_ges.2021122100.nc4.gz
+diag_seviri_m11_ges.2021122100.nc4.gz
+diag_cris-fsr_npp_ges.2021122100.nc4.gz
+diag_cris-fsr_n20_ges.2021122100.nc4.gz
+diag_atms_npp_ges.2021122100.nc4.gz
+diag_atms_n20_ges.2021122100.nc4.gz
+diag_amsua_metop-b_ges.2021122100.nc4.gz
+diag_mhs_metop-b_ges.2021122100.nc4.gz
+diag_iasi_metop-b_ges.2021122100.nc4.gz
+diag_avhrr_metop-b_ges.2021122100.nc4.gz
+diag_avhrr_n18_ges.2021122100.nc4.gz
+diag_avhrr_n19_ges.2021122100.nc4.gz
+diag_ahi_himawari8_ges.2021122100.nc4.gz
+diag_abi_g16_ges.2021122100.nc4.gz
+diag_abi_g17_ges.2021122100.nc4.gz
+diag_amsua_metop-c_ges.2021122100.nc4.gz
+diag_mhs_metop-c_ges.2021122100.nc4.gz
+diag_iasi_metop-c_ges.2021122100.nc4.gz
+diag_viirs-m_npp_ges.2021122100.nc4.gz
+diag_viirs-m_j1_ges.2021122100.nc4.gz
+diag_amsua_n15_anl.2021122100.nc4.gz
+diag_amsua_n18_anl.2021122100.nc4.gz
+diag_ssmis_f17_anl.2021122100.nc4.gz
+diag_ssmis_f18_anl.2021122100.nc4.gz
+diag_amsua_n19_anl.2021122100.nc4.gz
+diag_mhs_n19_anl.2021122100.nc4.gz
+diag_seviri_m08_anl.2021122100.nc4.gz
+diag_seviri_m11_anl.2021122100.nc4.gz
+diag_cris-fsr_npp_anl.2021122100.nc4.gz
+diag_cris-fsr_n20_anl.2021122100.nc4.gz
+diag_atms_npp_anl.2021122100.nc4.gz
+diag_atms_n20_anl.2021122100.nc4.gz
+diag_amsua_metop-b_anl.2021122100.nc4.gz
+diag_mhs_metop-b_anl.2021122100.nc4.gz
+diag_iasi_metop-b_anl.2021122100.nc4.gz
+diag_avhrr_metop-b_anl.2021122100.nc4.gz
+diag_avhrr_n18_anl.2021122100.nc4.gz
+diag_avhrr_n19_anl.2021122100.nc4.gz
+diag_ahi_himawari8_anl.2021122100.nc4.gz
+diag_abi_g16_anl.2021122100.nc4.gz
+diag_abi_g17_anl.2021122100.nc4.gz
+diag_amsua_metop-c_anl.2021122100.nc4.gz
+diag_mhs_metop-c_anl.2021122100.nc4.gz
+diag_iasi_metop-c_anl.2021122100.nc4.gz
+diag_viirs-m_npp_anl.2021122100.nc4.gz
+diag_viirs-m_j1_anl.2021122100.nc4.gz
++ exgdas_atmos_verfrad.sh[36]: rm radstat.2021122100
+++ exgdas_atmos_verfrad.sh[46]: awk -F_ '{ print $2 "_" $3 }'
+++ exgdas_atmos_verfrad.sh[46]: ls diag_abi_g16_ges.2021122100.nc4.gz diag_abi_g17_ges.2021122100.nc4.gz diag_ahi_himawari8_ges.2021122100.nc4.gz diag_amsua_metop-b_ges.2021122100.nc4.gz diag_amsua_metop-c_ges.2021122100.nc4.gz diag_amsua_n15_ges.2021122100.nc4.gz diag_amsua_n18_ges.2021122100.nc4.gz diag_amsua_n19_ges.2021122100.nc4.gz diag_atms_n20_ges.2021122100.nc4.gz diag_atms_npp_ges.2021122100.nc4.gz diag_avhrr_metop-b_ges.2021122100.nc4.gz diag_avhrr_n18_ges.2021122100.nc4.gz diag_avhrr_n19_ges.2021122100.nc4.gz diag_cris-fsr_n20_ges.2021122100.nc4.gz diag_cris-fsr_npp_ges.2021122100.nc4.gz diag_iasi_metop-b_ges.2021122100.nc4.gz diag_iasi_metop-c_ges.2021122100.nc4.gz diag_mhs_metop-b_ges.2021122100.nc4.gz diag_mhs_metop-c_ges.2021122100.nc4.gz diag_mhs_n19_ges.2021122100.nc4.gz diag_seviri_m08_ges.2021122100.nc4.gz diag_seviri_m11_ges.2021122100.nc4.gz diag_ssmis_f17_ges.2021122100.nc4.gz diag_ssmis_f18_ges.2021122100.nc4.gz diag_viirs-m_j1_ges.2021122100.nc4.gz diag_viirs-m_npp_ges.2021122100.nc4.gz
++ exgdas_atmos_verfrad.sh[46]: radstat_satype='abi_g16
+abi_g17
+ahi_himawari8
+amsua_metop-b
+amsua_metop-c
+amsua_n15
+amsua_n18
+amsua_n19
+atms_n20
+atms_npp
+avhrr_metop-b
+avhrr_n18
+avhrr_n19
+cris-fsr_n20
+cris-fsr_npp
+iasi_metop-b
+iasi_metop-c
+mhs_metop-b
+mhs_metop-c
+mhs_n19
+seviri_m08
+seviri_m11
+ssmis_f17
+ssmis_f18
+viirs-m_j1
+viirs-m_npp'
++ exgdas_atmos_verfrad.sh[47]: [[ YES = \Y\E\S ]]
++ exgdas_atmos_verfrad.sh[48]: echo 'abi_g16
+abi_g17
+ahi_himawari8
+amsua_metop-b
+amsua_metop-c
+amsua_n15
+amsua_n18
+amsua_n19
+atms_n20
+atms_npp
+avhrr_metop-b
+avhrr_n18
+avhrr_n19
+cris-fsr_n20
+cris-fsr_npp
+iasi_metop-b
+iasi_metop-c
+mhs_metop-b
+mhs_metop-c
+mhs_n19
+seviri_m08
+seviri_m11
+ssmis_f17
+ssmis_f18
+viirs-m_j1
+viirs-m_npp'
+abi_g16
+abi_g17
+ahi_himawari8
+amsua_metop-b
+amsua_metop-c
+amsua_n15
+amsua_n18
+amsua_n19
+atms_n20
+atms_npp
+avhrr_metop-b
+avhrr_n18
+avhrr_n19
+cris-fsr_n20
+cris-fsr_npp
+iasi_metop-b
+iasi_metop-c
+mhs_metop-b
+mhs_metop-c
+mhs_n19
+seviri_m08
+seviri_m11
+ssmis_f17
+ssmis_f18
+viirs-m_j1
+viirs-m_npp
++ exgdas_atmos_verfrad.sh[51]: echo satype_file = /scratch1/NCEPDEV/global/CI/3331/global-workflow/parm/monitor/gdas_radmon_satype.txt
+satype_file = /scratch1/NCEPDEV/global/CI/3331/global-workflow/parm/monitor/gdas_radmon_satype.txt
++ exgdas_atmos_verfrad.sh[58]: [[ 00 = \0\0 ]]
++ exgdas_atmos_verfrad.sh[59]: use_tankdir=/scratch1/NCEPDEV/global/CI/3331/RUNTESTS/COMROOT/C96_atm3DVar_f5b893c3/gdas.20211220/18//products/atmos/radmon
++ exgdas_atmos_verfrad.sh[64]: echo satype_file = /scratch1/NCEPDEV/global/CI/3331/global-workflow/parm/monitor/gdas_radmon_satype.txt
+satype_file = /scratch1/NCEPDEV/global/CI/3331/global-workflow/parm/monitor/gdas_radmon_satype.txt
+++ exgdas_atmos_verfrad.sh[65]: cat /scratch1/NCEPDEV/global/CI/3331/global-workflow/parm/monitor/gdas_radmon_satype.txt
++ exgdas_atmos_verfrad.sh[65]: export 'SATYPE=abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[65]: SATYPE='abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[73]: satype_changes=0
++ exgdas_atmos_verfrad.sh[74]: new_satype='abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep abi_g16
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep abi_g17
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=0
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[79]: [[ YES = \Y\E\S ]]
++ exgdas_atmos_verfrad.sh[80]: echo 'Found abi_g17 in radstat file but not in SATYPE list.  Adding it now.'
+Found abi_g17 in radstat file but not in SATYPE list.  Adding it now.
++ exgdas_atmos_verfrad.sh[82]: satype_changes=1
++ exgdas_atmos_verfrad.sh[83]: new_satype='abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2 abi_g17'
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep ahi_himawari8
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=0
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[79]: [[ YES = \Y\E\S ]]
++ exgdas_atmos_verfrad.sh[80]: echo 'Found ahi_himawari8 in radstat file but not in SATYPE list.  Adding it now.'
+Found ahi_himawari8 in radstat file but not in SATYPE list.  Adding it now.
++ exgdas_atmos_verfrad.sh[82]: satype_changes=1
++ exgdas_atmos_verfrad.sh[83]: new_satype='abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2 abi_g17 ahi_himawari8'
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
+++ exgdas_atmos_verfrad.sh[76]: grep amsua_metop-b
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep amsua_metop-c
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
+++ exgdas_atmos_verfrad.sh[76]: grep amsua_n15
+++ exgdas_atmos_verfrad.sh[76]: wc -l
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep amsua_n18
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
+++ exgdas_atmos_verfrad.sh[76]: grep amsua_n19
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep atms_n20
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep atms_npp
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep avhrr_metop-b
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep avhrr_n18
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep avhrr_n19
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep cris-fsr_n20
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep cris-fsr_npp
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep iasi_metop-b
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
+++ exgdas_atmos_verfrad.sh[76]: grep iasi_metop-c
+++ exgdas_atmos_verfrad.sh[76]: wc -l
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
+++ exgdas_atmos_verfrad.sh[76]: grep mhs_metop-b
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep mhs_metop-c
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: grep mhs_n19
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep seviri_m08
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=0
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[79]: [[ YES = \Y\E\S ]]
++ exgdas_atmos_verfrad.sh[80]: echo 'Found seviri_m08 in radstat file but not in SATYPE list.  Adding it now.'
+Found seviri_m08 in radstat file but not in SATYPE list.  Adding it now.
++ exgdas_atmos_verfrad.sh[82]: satype_changes=1
++ exgdas_atmos_verfrad.sh[83]: new_satype='abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2 abi_g17 ahi_himawari8 seviri_m08'
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep seviri_m11
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=0
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[79]: [[ YES = \Y\E\S ]]
++ exgdas_atmos_verfrad.sh[80]: echo 'Found seviri_m11 in radstat file but not in SATYPE list.  Adding it now.'
+Found seviri_m11 in radstat file but not in SATYPE list.  Adding it now.
++ exgdas_atmos_verfrad.sh[82]: satype_changes=1
++ exgdas_atmos_verfrad.sh[83]: new_satype='abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2 abi_g17 ahi_himawari8 seviri_m08 seviri_m11'
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: grep ssmis_f17
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
+++ exgdas_atmos_verfrad.sh[76]: wc -l
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
+++ exgdas_atmos_verfrad.sh[76]: grep ssmis_f18
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: grep viirs-m_j1
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[75]: for type in ${radstat_satype}
+++ exgdas_atmos_verfrad.sh[76]: wc -l
+++ exgdas_atmos_verfrad.sh[76]: echo 'abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
+++ exgdas_atmos_verfrad.sh[76]: grep viirs-m_npp
++ exgdas_atmos_verfrad.sh[76]: type_count=1
++ exgdas_atmos_verfrad.sh[78]: ((  type_count == 0  ))
++ exgdas_atmos_verfrad.sh[91]: netcdf=0
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
++ exgdas_atmos_verfrad.sh[95]: [[ -e diag_abi_g16_ges.2021122100.nc4.gz ]]
++ exgdas_atmos_verfrad.sh[96]: netcdf=1
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_abi_g16_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_abi_g16_ges.2021122100.nc4.gz abi_g16.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./abi_g16.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: wc -l
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_abi_g16_anl.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_abi_g16_anl.2021122100.nc4.gz abi_g16_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./abi_g16_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_ahi_himawari9_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 0 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[103]: echo 'WARNING: diag_ahi_himawari9_ges.2021122100*.gz not available, skipping'
+WARNING: diag_ahi_himawari9_ges.2021122100*.gz not available, skipping
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_ahi_himawari9_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 0 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[111]: echo 'WARNING: diag_ahi_himawari9_anl.2021122100*.gz not available, skipping'
+WARNING: diag_ahi_himawari9_anl.2021122100*.gz not available, skipping
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_amsua_metop-b_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_amsua_metop-b_ges.2021122100.nc4.gz amsua_metop-b.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./amsua_metop-b.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_amsua_metop-b_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_amsua_metop-b_anl.2021122100.nc4.gz amsua_metop-b_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./amsua_metop-b_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_amsua_metop-c_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_amsua_metop-c_ges.2021122100.nc4.gz amsua_metop-c.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./amsua_metop-c.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_amsua_metop-c_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_amsua_metop-c_anl.2021122100.nc4.gz amsua_metop-c_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./amsua_metop-c_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_amsua_n15_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_amsua_n15_ges.2021122100.nc4.gz amsua_n15.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./amsua_n15.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: wc -l
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_amsua_n15_anl.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_amsua_n15_anl.2021122100.nc4.gz amsua_n15_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./amsua_n15_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: wc -l
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_amsua_n18_ges.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_amsua_n18_ges.2021122100.nc4.gz amsua_n18.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./amsua_n18.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: wc -l
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_amsua_n18_anl.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_amsua_n18_anl.2021122100.nc4.gz amsua_n18_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./amsua_n18_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: wc -l
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_amsua_n19_ges.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_amsua_n19_ges.2021122100.nc4.gz amsua_n19.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./amsua_n19.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_amsua_n19_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_amsua_n19_anl.2021122100.nc4.gz amsua_n19_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./amsua_n19_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_atms_npp_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_atms_npp_ges.2021122100.nc4.gz atms_npp.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./atms_npp.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_atms_npp_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_atms_npp_anl.2021122100.nc4.gz atms_npp_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./atms_npp_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: wc -l
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_atms_n20_ges.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_atms_n20_ges.2021122100.nc4.gz atms_n20.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./atms_n20.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: wc -l
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_atms_n20_anl.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_atms_n20_anl.2021122100.nc4.gz atms_n20_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./atms_n20_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: wc -l
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_avhrr_metop-b_ges.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_avhrr_metop-b_ges.2021122100.nc4.gz avhrr_metop-b.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./avhrr_metop-b.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: wc -l
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_avhrr_metop-b_anl.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_avhrr_metop-b_anl.2021122100.nc4.gz avhrr_metop-b_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./avhrr_metop-b_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_avhrr_metop-c_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 0 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[103]: echo 'WARNING: diag_avhrr_metop-c_ges.2021122100*.gz not available, skipping'
+WARNING: diag_avhrr_metop-c_ges.2021122100*.gz not available, skipping
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_avhrr_metop-c_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 0 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[111]: echo 'WARNING: diag_avhrr_metop-c_anl.2021122100*.gz not available, skipping'
+WARNING: diag_avhrr_metop-c_anl.2021122100*.gz not available, skipping
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: wc -l
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_avhrr_n18_ges.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_avhrr_n18_ges.2021122100.nc4.gz avhrr_n18.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./avhrr_n18.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_avhrr_n18_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_avhrr_n18_anl.2021122100.nc4.gz avhrr_n18_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./avhrr_n18_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_avhrr_n19_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_avhrr_n19_ges.2021122100.nc4.gz avhrr_n19.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./avhrr_n19.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: wc -l
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_avhrr_n19_anl.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_avhrr_n19_anl.2021122100.nc4.gz avhrr_n19_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./avhrr_n19_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_cris-fsr_npp_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_cris-fsr_npp_ges.2021122100.nc4.gz cris-fsr_npp.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./cris-fsr_npp.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_cris-fsr_npp_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_cris-fsr_npp_anl.2021122100.nc4.gz cris-fsr_npp_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./cris-fsr_npp_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: wc -l
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_cris-fsr_n20_ges.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_cris-fsr_n20_ges.2021122100.nc4.gz cris-fsr_n20.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./cris-fsr_n20.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_cris-fsr_n20_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_cris-fsr_n20_anl.2021122100.nc4.gz cris-fsr_n20_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./cris-fsr_n20_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_hirs4_n19_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 0 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[103]: echo 'WARNING: diag_hirs4_n19_ges.2021122100*.gz not available, skipping'
+WARNING: diag_hirs4_n19_ges.2021122100*.gz not available, skipping
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_hirs4_n19_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 0 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[111]: echo 'WARNING: diag_hirs4_n19_anl.2021122100*.gz not available, skipping'
+WARNING: diag_hirs4_n19_anl.2021122100*.gz not available, skipping
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_iasi_metop-b_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_iasi_metop-b_ges.2021122100.nc4.gz iasi_metop-b.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./iasi_metop-b.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_iasi_metop-b_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_iasi_metop-b_anl.2021122100.nc4.gz iasi_metop-b_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./iasi_metop-b_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: wc -l
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_iasi_metop-c_ges.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_iasi_metop-c_ges.2021122100.nc4.gz iasi_metop-c.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./iasi_metop-c.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: wc -l
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_iasi_metop-c_anl.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_iasi_metop-c_anl.2021122100.nc4.gz iasi_metop-c_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./iasi_metop-c_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_mhs_metop-b_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_mhs_metop-b_ges.2021122100.nc4.gz mhs_metop-b.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./mhs_metop-b.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_mhs_metop-b_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_mhs_metop-b_anl.2021122100.nc4.gz mhs_metop-b_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./mhs_metop-b_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_mhs_metop-c_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_mhs_metop-c_ges.2021122100.nc4.gz mhs_metop-c.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./mhs_metop-c.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_mhs_metop-c_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_mhs_metop-c_anl.2021122100.nc4.gz mhs_metop-c_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./mhs_metop-c_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_mhs_n19_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_mhs_n19_ges.2021122100.nc4.gz mhs_n19.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./mhs_n19.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: wc -l
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_mhs_n19_anl.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_mhs_n19_anl.2021122100.nc4.gz mhs_n19_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./mhs_n19_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_ssmis_f17_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_ssmis_f17_ges.2021122100.nc4.gz ssmis_f17.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./ssmis_f17.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_ssmis_f17_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_ssmis_f17_anl.2021122100.nc4.gz ssmis_f17_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./ssmis_f17_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: wc -l
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_ssmis_f18_ges.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_ssmis_f18_ges.2021122100.nc4.gz ssmis_f18.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./ssmis_f18.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_ssmis_f18_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_ssmis_f18_anl.2021122100.nc4.gz ssmis_f18_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./ssmis_f18_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: wc -l
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_atms_n21_ges.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[99]: [[ 0 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[103]: echo 'WARNING: diag_atms_n21_ges.2021122100*.gz not available, skipping'
+WARNING: diag_atms_n21_ges.2021122100*.gz not available, skipping
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: wc -l
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_atms_n21_anl.2021122100*.gz'
++ exgdas_atmos_verfrad.sh[107]: [[ 0 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[111]: echo 'WARNING: diag_atms_n21_anl.2021122100*.gz not available, skipping'
+WARNING: diag_atms_n21_anl.2021122100*.gz not available, skipping
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_cris-fsr_n21_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 0 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[103]: echo 'WARNING: diag_cris-fsr_n21_ges.2021122100*.gz not available, skipping'
+WARNING: diag_cris-fsr_n21_ges.2021122100*.gz not available, skipping
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_cris-fsr_n21_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 0 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[111]: echo 'WARNING: diag_cris-fsr_n21_anl.2021122100*.gz not available, skipping'
+WARNING: diag_cris-fsr_n21_anl.2021122100*.gz not available, skipping
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_viirs-m_npp_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_viirs-m_npp_ges.2021122100.nc4.gz viirs-m_npp.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./viirs-m_npp.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_viirs-m_npp_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_viirs-m_npp_anl.2021122100.nc4.gz viirs-m_npp_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./viirs-m_npp_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_viirs-m_j1_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[100]: mv diag_viirs-m_j1_ges.2021122100.nc4.gz viirs-m_j1.gz
++ exgdas_atmos_verfrad.sh[101]: gunzip ./viirs-m_j1.gz
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_viirs-m_j1_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 1 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[108]: mv diag_viirs-m_j1_anl.2021122100.nc4.gz viirs-m_j1_anl.gz
++ exgdas_atmos_verfrad.sh[109]: gunzip ./viirs-m_j1_anl.gz
++ exgdas_atmos_verfrad.sh[93]: for type in ${SATYPE}
++ exgdas_atmos_verfrad.sh[95]: ((  netcdf == 0  ))
+++ exgdas_atmos_verfrad.sh[99]: find . -maxdepth 1 -type f -name 'diag_viirs-m_j2_ges.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[99]: wc -l
++ exgdas_atmos_verfrad.sh[99]: [[ 0 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[103]: echo 'WARNING: diag_viirs-m_j2_ges.2021122100*.gz not available, skipping'
+WARNING: diag_viirs-m_j2_ges.2021122100*.gz not available, skipping
++ exgdas_atmos_verfrad.sh[106]: [[ 1 -eq 1 ]]
+++ exgdas_atmos_verfrad.sh[107]: find . -maxdepth 1 -type f -name 'diag_viirs-m_j2_anl.2021122100*.gz'
+++ exgdas_atmos_verfrad.sh[107]: wc -l
++ exgdas_atmos_verfrad.sh[107]: [[ 0 -gt 0 ]]
++ exgdas_atmos_verfrad.sh[111]: echo 'WARNING: diag_viirs-m_j2_anl.2021122100*.gz not available, skipping'
+WARNING: diag_viirs-m_j2_anl.2021122100*.gz not available, skipping
++ exgdas_atmos_verfrad.sh[116]: export RADMON_NETCDF=1
++ exgdas_atmos_verfrad.sh[116]: RADMON_NETCDF=1
++ exgdas_atmos_verfrad.sh[122]: /scratch1/NCEPDEV/global/CI/3331/global-workflow/ush/radmon_verf_angle.sh
+Begin radmon_verf_angle.sh at Tue Mar  4 10:57:20 UTC 2025
++ radmon_verf_angle.sh[68]: RAD_AREA=glb
++ radmon_verf_angle.sh[69]: REGIONAL_RR=0
++ radmon_verf_angle.sh[70]: rgnHH=
++ radmon_verf_angle.sh[71]: rgnTM=
++ radmon_verf_angle.sh[73]: echo ' REGIONAL_RR, rgnHH, rgnTM = 0, , '
+ REGIONAL_RR, rgnHH, rgnTM = 0, , 
++ radmon_verf_angle.sh[74]: netcdf_boolean=.false.
++ radmon_verf_angle.sh[75]: [[ 1 -eq 1 ]]
++ radmon_verf_angle.sh[76]: netcdf_boolean=.true.
++ radmon_verf_angle.sh[78]: echo ' RADMON_NETCDF, netcdf_boolean = 1, .true.'
+ RADMON_NETCDF, netcdf_boolean = 1, .true.
++ radmon_verf_angle.sh[80]: which prep_step
++ environment[0]: alias
++ environment[1]: /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot prep_step
++ environment[1]: eval declare -f
+++ environment[1]: declare -f
+/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/prod-util-2.1.1-4vpcrpl/bin/prep_step
++ radmon_verf_angle.sh[81]: which startmsg
++ environment[0]: alias
++ environment[1]: /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot startmsg
++ environment[1]: eval declare -f
+++ environment[1]: declare -f
+/scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/intel/2021.5.0/prod-util-2.1.1-4vpcrpl/bin/startmsg
++ radmon_verf_angle.sh[84]: touch OUTPUT.1623306
++ radmon_verf_angle.sh[87]: SATYPE='abi_g16 ahi_himawari9 amsua_metop-b amsua_metop-c amsua_n15 amsua_n18 amsua_n19 atms_npp atms_n20 avhrr_metop-b avhrr_metop-c avhrr_n18 avhrr_n19 cris-fsr_npp cris-fsr_n20 hirs4_n19 iasi_metop-b iasi_metop-c  mhs_metop-b mhs_metop-c mhs_n19 ssmis_f17 ssmis_f18 atms_n21 cris-fsr_n21 viirs-m_npp viirs-m_j1 viirs-m_j2'
++ radmon_verf_angle.sh[88]: VERBOSE=YES
++ radmon_verf_angle.sh[89]: LITTLE_ENDIAN=0
++ radmon_verf_angle.sh[90]: USE_ANL=1
++ radmon_verf_angle.sh[93]: [[ 1 -eq 1 ]]
++ radmon_verf_angle.sh[94]: gesanl='ges anl'
++ radmon_verf_angle.sh[99]: err=0
++ radmon_verf_angle.sh[100]: angle_exec=radmon_angle.x
++ radmon_verf_angle.sh[101]: shared_scaninfo=/scratch1/NCEPDEV/global/CI/3331/global-workflow/parm/monitor/gdas_radmon_scaninfo.txt
++ radmon_verf_angle.sh[102]: scaninfo=scaninfo.txt
++ radmon_verf_angle.sh[107]: /bin/cp -p /scratch1/NCEPDEV/global/CI/3331/global-workflow/exec/radmon_angle.x ./
++ radmon_verf_angle.sh[108]: /bin/cp -p /scratch1/NCEPDEV/global/CI/3331/global-workflow/parm/monitor/gdas_radmon_scaninfo.txt ./scaninfo.txt
++ radmon_verf_angle.sh[110]: [[ ! -s ./radmon_angle.x ]]
++ radmon_verf_angle.sh[110]: [[ ! -s ./scaninfo.txt ]]
++ radmon_verf_angle.sh[116]: export pgm=radmon_angle.x
++ radmon_verf_angle.sh[116]: pgm=radmon_angle.x
++ radmon_verf_angle.sh[118]: iyy=2021
++ radmon_verf_angle.sh[119]: imm=12
++ radmon_verf_angle.sh[120]: idd=21
++ radmon_verf_angle.sh[121]: ihh=00
++ radmon_verf_angle.sh[123]: ctr=0
++ radmon_verf_angle.sh[124]: fail=0
++ radmon_verf_angle.sh[125]: touch ./errfile
++ radmon_verf_angle.sh[127]: for type in ${SATYPE}
++ radmon_verf_angle.sh[129]: [[ ! -s abi_g16 ]]
++ radmon_verf_angle.sh[134]: for dtype in ${gesanl}
++ radmon_verf_angle.sh[136]: echo 'pgm    = radmon_angle.x'
+pgm    = radmon_angle.x
++ radmon_verf_angle.sh[137]: echo 'pgmout = OUTPUT.1623306'
+pgmout = OUTPUT.1623306
++ radmon_verf_angle.sh[138]: prep_step
++ radmon_verf_angle.sh[140]: ctr=1
++ radmon_verf_angle.sh[142]: [[ ges == \a\n\l ]]
++ radmon_verf_angle.sh[147]: data_file=abi_g16.2021122100.ieee_d
++ radmon_verf_angle.sh[148]: ctl_file=abi_g16.ctl
++ radmon_verf_angle.sh[149]: angl_ctl=angle.abi_g16.ctl
++ radmon_verf_angle.sh[152]: angl_file=
++ radmon_verf_angle.sh[153]: [[ 0 -eq 1 ]]
++ radmon_verf_angle.sh[158]: [[ -f input ]]
++ radmon_verf_angle.sh[160]: nchanl=-999
++ radmon_verf_angle.sh[161]: cat
++ radmon_verf_angle.sh[179]: startmsg
+postmsg 'radmon_angle.x started'
++ radmon_verf_angle.sh[180]: ./radmon_angle.x
++ radmon_verf_angle.sh[1]: postamble radmon_verf_angle.sh 1741085840 1
++ preamble.sh[70]: set +x
+End radmon_verf_angle.sh at 10:57:22 with error code 1 (time elapsed: 00:00:02)
++ exgdas_atmos_verfrad.sh[1]: postamble exgdas_atmos_verfrad.sh 1741085616 1
++ preamble.sh[70]: set +x
+End exgdas_atmos_verfrad.sh at 10:57:22 with error code 1 (time elapsed: 00:03:46)
++ JGDAS_ATMOS_VERFRAD[1]: postamble JGDAS_ATMOS_VERFRAD 1741085601 1
++ preamble.sh[70]: set +x
+End JGDAS_ATMOS_VERFRAD at 10:57:22 with error code 1 (time elapsed: 00:04:01)
++ verfrad.sh[1]: postamble verfrad.sh 1741085593 1
++ preamble.sh[70]: set +x
+End verfrad.sh at 10:57:22 with error code 1 (time elapsed: 00:04:09)
+_______________________________________________________________
+Start Epilog on node h2c53 for job 7609156 :: Tue Mar  4 10:57:23 UTC 2025
+Job 7609156 finished for user Terry.McGuinness in partition hera with exit code 1:0
+_______________________________________________________________
+End Epilogue Tue Mar  4 10:57:23 UTC 2025
