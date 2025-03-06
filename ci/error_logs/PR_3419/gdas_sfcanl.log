@@ -1,0 +1,3013 @@
+Begin sfcanl.sh at Thu 06 Mar 2025 06:18:58 PM UTC
++ sfcanl.sh[9]: . /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/modulefiles
+
+Lmod is automatically replacing "intel/2023.2.0" with "intel-classic/2023.2.0".
+
+
+Currently Loaded Modules:
+  1) craype-x86-rome
+  2) perftools-base/23.12.0
+  3) xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d
+  4) cray-pmi/6.1.13
+  5) CmrsEnv/default
+  6) TimeZoneEDT/default
+  7) DefApps/default
+  8) cray-dsmml/0.2.2
+  9) cray-libsci/24.07.0
+ 10) PrgEnv-intel/8.5.0
+ 11) intel-classic/2023.2.0
+ 12) craype/2.7.30
+ 13) stack-intel/2023.2.0
+ 14) libfabric/1.20.1
+ 15) craype-network-ofi
+ 16) cray-mpich/8.1.28
+ 17) stack-cray-mpich/8.1.28
+ 18) gettext/0.20.2
+ 19) libxcrypt/4.4.35
+ 20) zlib/1.2.13
+ 21) sqlite/3.43.2
+ 22) util-linux-uuid/2.38.1
+ 23) python/3.11.6
+ 24) libjpeg/2.1.0
+ 25) jasper/2.0.32
+ 26) libpng/1.6.37
+ 27) openjpeg/2.3.1
+ 28) eccodes/2.32.0
+ 29) fftw/3.3.10
+ 30) nghttp2/1.57.0
+ 31) curl/8.4.0
+ 32) proj/9.2.1
+ 33) udunits/2.2.28
+ 34) cdo/2.2.0
+ 35) pkg-config/0.29.2
+ 36) hdf5/1.14.0
+ 37) snappy/1.1.10
+ 38) zstd/1.5.2
+ 39) c-blosc/1.21.5
+ 40) netcdf-c/4.9.2
+ 41) netcdf-fortran/4.6.1
+ 42) perlbrew/5.38.2
+ 43) antlr/2.7.7
+ 44) gsl/2.7.1
+ 45) nco/5.0.6
+ 46) bacio/2.4.1
+ 47) w3emc/2.10.0
+ 48) prod_util/2.1.1
+ 49) g2/3.4.5
+ 50) sp/2.5.0
+ 51) ip/4.3.0
+ 52) grib-util/1.3.0
+ 53) g2tmpl/1.10.2
+ 54) gsi-ncdiag/1.1.2
+ 55) crtm-fix/2.4.0.1_emc
+ 56) git-lfs/2.11.0
+ 57) crtm/2.4.0.1
+ 58) openblas/0.3.24
+ 59) py-setuptools/63.4.3
+ 60) py-numpy/1.23.4
+ 61) bufr/11.7.0
+ 62) gmake/4.2.1
+ 63) wgrib2/2.0.8
+ 64) py-cftime/1.0.3.4
+ 65) py-netcdf4/1.5.8
+ 66) py-f90nml/1.4.3
+ 67) libyaml/0.2.5
+ 68) py-pyyaml/6.0
+ 69) py-markupsafe/2.1.3
+ 70) py-jinja2/3.1.2
+ 71) py-bottleneck/1.3.7
+ 72) py-numexpr/2.8.4
+ 73) py-et-xmlfile/1.0.1
+ 74) py-openpyxl/3.1.2
+ 75) py-pytz/2023.3
+ 76) py-pyxlsb/1.0.10
+ 77) py-xlrd/2.0.1
+ 78) py-xlsxwriter/3.1.7
+ 79) py-xlwt/1.3.0
+ 80) py-pandas/1.5.3
+ 81) py-six/1.16.0
+ 82) py-python-dateutil/2.8.2
+ 83) g2c/1.6.4
+ 84) netcdf-cxx4/4.3.1
+ 85) met/9.1.3
+ 86) metplus/3.1.1
+ 87) py-packaging/23.1
+ 88) py-xarray/2023.7.0
+ 89) prepobs/1.1.0
+ 90) fit2obs/1.1.4
+ 91) hsi/9.3
+ 92) module_base.gaeac5
+
+ 
+
++ sfcanl.sh[11]: status=0
++ sfcanl.sh[12]: [[ 0 -ne 0 ]]
++ sfcanl.sh[16]: export job=sfcanl
++ sfcanl.sh[16]: job=sfcanl
++ sfcanl.sh[17]: export jobid=sfcanl.540770
++ sfcanl.sh[17]: jobid=sfcanl.540770
++ sfcanl.sh[21]: /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/jobs/JGLOBAL_ATMOS_SFCANL
+Begin JGLOBAL_ATMOS_SFCANL at Thu 06 Mar 2025 06:19:05 PM UTC
++ JGLOBAL_ATMOS_SFCANL[4]: source /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush/jjob_header.sh -e sfcanl -c 'base sfcanl'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=sfcanl
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z sfcanl ]]
+++ jjob_header.sh[68]: export DATA=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770
+++ jjob_header.sh[68]: DATA=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770
+++ jjob_header.sh[72]: mkdir -p /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770
+++ jjob_header.sh[73]: cd /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770
+++ jjob_header.sh[79]: export cycle=t00z
+++ jjob_header.sh[79]: cycle=t00z
+++ jjob_header.sh[80]: setpdy.sh
+sed: can't read /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/date/t00z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20211214
++++ PDY[1]: PDYm7=20211214
++++ PDY[2]: export PDYm6=20211215
++++ PDY[2]: PDYm6=20211215
++++ PDY[3]: export PDYm5=20211216
++++ PDY[3]: PDYm5=20211216
++++ PDY[4]: export PDYm4=20211217
++++ PDY[4]: PDYm4=20211217
++++ PDY[5]: export PDYm3=20211218
++++ PDY[5]: PDYm3=20211218
++++ PDY[6]: export PDYm2=20211219
++++ PDY[6]: PDYm2=20211219
++++ PDY[7]: export PDYm1=20211220
++++ PDY[7]: PDYm1=20211220
++++ PDY[8]: export PDY=20211221
++++ PDY[8]: PDY=20211221
++++ PDY[9]: export PDYp1=20211222
++++ PDY[9]: PDYp1=20211222
++++ PDY[10]: export PDYp2=20211223
++++ PDY[10]: PDYp2=20211223
++++ PDY[11]: export PDYp3=20211224
++++ PDY[11]: PDYp3=20211224
++++ PDY[12]: export PDYp4=20211225
++++ PDY[12]: PDYp4=20211225
++++ PDY[13]: export PDYp5=20211226
++++ PDY[13]: PDYp5=20211226
++++ PDY[14]: export PDYp6=20211227
++++ PDY[14]: PDYp6=20211227
++++ PDY[15]: export PDYp7=20211228
++++ PDY[15]: PDYp7=20211228
+++ jjob_header.sh[87]: export pid=540838
+++ jjob_header.sh[87]: pid=540838
+++ jjob_header.sh[88]: export pgmout=OUTPUT.540838
+++ jjob_header.sh[88]: pgmout=OUTPUT.540838
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96_atm3DVar_5e0982c0
+++ jjob_header.sh[95]: EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96_atm3DVar_5e0982c0
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96_atm3DVar_5e0982c0/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=GAEAC5
++++ config.base[9]: machine=GAEAC5
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=epic
++++ config.base[15]: ACCOUNT=epic
++++ config.base[16]: export QUEUE=normal
++++ config.base[16]: QUEUE=normal
++++ config.base[17]: export QUEUE_SERVICE=normal
++++ config.base[17]: QUEUE_SERVICE=normal
++++ config.base[18]: export QUEUE_DTN=hpss
++++ config.base[18]: QUEUE_DTN=hpss
++++ config.base[19]: export PARTITION_BATCH=batch
++++ config.base[19]: PARTITION_BATCH=batch
++++ config.base[20]: export PARTITION_SERVICE=batch
++++ config.base[20]: PARTITION_SERVICE=batch
++++ config.base[21]: export PARTITION_DTN=dtn_f5_f6
++++ config.base[21]: PARTITION_DTN=dtn_f5_f6
++++ config.base[22]: export RESERVATION=
++++ config.base[22]: RESERVATION=
++++ config.base[23]: export CLUSTERS=c5
++++ config.base[23]: CLUSTERS=c5
++++ config.base[24]: export CLUSTERS_SERVICE=@CLUSTERS_SERVICE@
++++ config.base[24]: CLUSTERS_SERVICE=@CLUSTERS_SERVICE@
++++ config.base[25]: export CLUSTERS_DTN=es
++++ config.base[25]: CLUSTERS_DTN=es
++++ config.base[28]: export HPSS_PROJECT=emc-global
++++ config.base[28]: HPSS_PROJECT=emc-global
++++ config.base[31]: export HOMEgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow
++++ config.base[31]: HOMEgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow
++++ config.base[32]: export EXECgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec
++++ config.base[32]: EXECgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec
++++ config.base[33]: export FIXgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix
++++ config.base[33]: FIXgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix
++++ config.base[34]: export PARMgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/parm
++++ config.base[34]: PARMgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/parm
++++ config.base[35]: export SCRgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/scripts
++++ config.base[35]: SCRgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/scripts
++++ config.base[36]: export USHgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush
++++ config.base[36]: USHgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush
++++ config.base[38]: export FIXam=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am
++++ config.base[38]: FIXam=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am
++++ config.base[39]: export FIXaer=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/aer
++++ config.base[39]: FIXaer=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/aer
++++ config.base[40]: export FIXcpl=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/cpl
++++ config.base[40]: FIXcpl=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/cpl
++++ config.base[41]: export FIXlut=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/lut
++++ config.base[41]: FIXlut=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/lut
++++ config.base[42]: export FIXcice=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/cice
++++ config.base[42]: FIXcice=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/cice
++++ config.base[43]: export FIXmom=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/mom6
++++ config.base[43]: FIXmom=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/mom6
++++ config.base[44]: export FIXreg2grb2=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/reg2grb2
++++ config.base[44]: FIXreg2grb2=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/reg2grb2
++++ config.base[45]: export FIXgdas=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/gdas
++++ config.base[45]: FIXgdas=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/gdas
++++ config.base[50]: export PACKAGEROOT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/nwpara
++++ config.base[50]: PACKAGEROOT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/nwpara
++++ config.base[51]: export COMROOT=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT
++++ config.base[51]: COMROOT=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT
++++ config.base[52]: export COMINsyn=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/com/gfs/prod/syndat
++++ config.base[52]: COMINsyn=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/com/gfs/prod/syndat
++++ config.base[53]: export DMPDIR=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/dump
++++ config.base[53]: DMPDIR=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/dump
++++ config.base[57]: export COMINecmwf=@COMINecmwf@
++++ config.base[57]: COMINecmwf=@COMINecmwf@
++++ config.base[58]: export COMINnam=@COMINnam@
++++ config.base[58]: COMINnam=@COMINnam@
++++ config.base[59]: export COMINukmet=@COMINukmet@
++++ config.base[59]: COMINukmet=@COMINukmet@
++++ config.base[62]: export HOMEDIR=/gpfs/f5/epic/scratch/role.epic
++++ config.base[62]: HOMEDIR=/gpfs/f5/epic/scratch/role.epic
++++ config.base[63]: export STMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[63]: STMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[64]: export PTMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[64]: PTMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[65]: export NOSCRUB=/gpfs/f5/epic/scratch/role.epic
++++ config.base[65]: NOSCRUB=/gpfs/f5/epic/scratch/role.epic
++++ config.base[68]: export BASE_GIT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git
++++ config.base[68]: BASE_GIT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git
++++ config.base[71]: export BASE_DATA=/gpfs/f5/ufs-ard/world-shared/global/glopara/data
++++ config.base[71]: BASE_DATA=/gpfs/f5/ufs-ard/world-shared/global/glopara/data
++++ config.base[74]: export DO_GOES=NO
++++ config.base[74]: DO_GOES=NO
++++ config.base[75]: export DO_BUFRSND=NO
++++ config.base[75]: DO_BUFRSND=NO
++++ config.base[76]: export DO_GEMPAK=NO
++++ config.base[76]: DO_GEMPAK=NO
++++ config.base[77]: export DO_AWIPS=NO
++++ config.base[77]: DO_AWIPS=NO
++++ config.base[78]: export DO_NPOESS=NO
++++ config.base[78]: DO_NPOESS=NO
++++ config.base[79]: export DO_TRACKER=NO
++++ config.base[79]: DO_TRACKER=NO
++++ config.base[80]: export DO_GENESIS=NO
++++ config.base[80]: DO_GENESIS=NO
++++ config.base[81]: export DO_GENESIS_FSU=NO
++++ config.base[81]: DO_GENESIS_FSU=NO
++++ config.base[82]: export DO_VERFOZN=YES
++++ config.base[82]: DO_VERFOZN=YES
++++ config.base[83]: export DO_VERFRAD=YES
++++ config.base[83]: DO_VERFRAD=YES
++++ config.base[84]: export DO_VMINMON=YES
++++ config.base[84]: DO_VMINMON=YES
++++ config.base[85]: export DO_MOS=NO
++++ config.base[85]: DO_MOS=NO
++++ config.base[91]: export REALTIME=YES
++++ config.base[91]: REALTIME=YES
++++ config.base[94]: export MODE=cycled
++++ config.base[94]: MODE=cycled
++++ config.base[95]: export DO_TEST_MODE=NO
++++ config.base[95]: DO_TEST_MODE=NO
++++ config.base[104]: export FIXgsi=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/gsi
++++ config.base[104]: FIXgsi=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/gsi
++++ config.base[105]: export HOMEpost=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow
++++ config.base[105]: HOMEpost=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow
++++ config.base[106]: export HOMEobsproc=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git/obsproc/v1.2.0
++++ config.base[106]: HOMEobsproc=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git/obsproc/v1.2.0
++++ config.base[109]: export 'NCP=/bin/cp -p'
++++ config.base[109]: NCP='/bin/cp -p'
++++ config.base[110]: export NMV=/bin/mv
++++ config.base[110]: NMV=/bin/mv
++++ config.base[111]: export 'NLN=/bin/ln -sf'
++++ config.base[111]: NLN='/bin/ln -sf'
++++ config.base[112]: export VERBOSE=YES
++++ config.base[112]: VERBOSE=YES
++++ config.base[113]: export KEEPDATA=NO
++++ config.base[113]: KEEPDATA=NO
++++ config.base[114]: export DEBUG_POSTSCRIPT=NO
++++ config.base[114]: DEBUG_POSTSCRIPT=NO
++++ config.base[115]: export CHGRP_RSTPROD=NO
++++ config.base[115]: CHGRP_RSTPROD=NO
++++ config.base[116]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[116]: CHGRP_CMD='chgrp rstprod'
++++ config.base[117]: export NCDUMP=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-mh4uycw/bin/ncdump
++++ config.base[117]: NCDUMP=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-mh4uycw/bin/ncdump
++++ config.base[118]: export NCLEN=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush/getncdimlen
++++ config.base[118]: NCLEN=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush/getncdimlen
++++ config.base[121]: export BASE_ENV=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/env
++++ config.base[121]: BASE_ENV=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/env
++++ config.base[122]: export BASE_JOB=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/jobs/rocoto
++++ config.base[122]: BASE_JOB=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/jobs/rocoto
++++ config.base[125]: export SDATE=2021122018
++++ config.base[125]: SDATE=2021122018
++++ config.base[126]: export EDATE=2021122106
++++ config.base[126]: EDATE=2021122106
++++ config.base[127]: export EXP_WARM_START=.false.
++++ config.base[127]: EXP_WARM_START=.false.
++++ config.base[128]: export assim_freq=6
++++ config.base[128]: assim_freq=6
++++ config.base[129]: export PSLOT=C96_atm3DVar_5e0982c0
++++ config.base[129]: PSLOT=C96_atm3DVar_5e0982c0
++++ config.base[130]: export EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96_atm3DVar_5e0982c0
++++ config.base[130]: EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96_atm3DVar_5e0982c0
++++ config.base[131]: export ROTDIR=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0
++++ config.base[131]: ROTDIR=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0
++++ config.base[132]: export ROTDIR_DUMP=YES
++++ config.base[132]: ROTDIR_DUMP=YES
++++ config.base[133]: export DUMP_SUFFIX=
++++ config.base[133]: DUMP_SUFFIX=
++++ config.base[134]: [[ 2021122100 -ge 2019092100 ]]
++++ config.base[134]: [[ 2021122100 -le 2019110700 ]]
++++ config.base[137]: export ARCDIR=/gpfs/f5/epic/scratch/role.epic/archive/C96_atm3DVar_5e0982c0
++++ config.base[137]: ARCDIR=/gpfs/f5/epic/scratch/role.epic/archive/C96_atm3DVar_5e0982c0
++++ config.base[138]: export ATARDIR=/gpfs/f5/epic/scratch/role.epic/archive_rotdir/C96_atm3DVar_5e0982c0
++++ config.base[138]: ATARDIR=/gpfs/f5/epic/scratch/role.epic/archive_rotdir/C96_atm3DVar_5e0982c0
++++ config.base[139]: export FETCHDIR=@FETCHDIR@
++++ config.base[139]: FETCHDIR=@FETCHDIR@
++++ config.base[142]: export envir=prod
++++ config.base[142]: envir=prod
++++ config.base[143]: export NET=gfs
++++ config.base[143]: NET=gfs
++++ config.base[144]: export RUN=gdas
++++ config.base[144]: RUN=gdas
++++ config.base[147]: source /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96_atm3DVar_5e0982c0/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ config.com[78]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[79]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[80]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[82]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[83]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[84]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[85]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[86]: declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[87]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[88]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[89]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[90]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[92]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[93]: declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[94]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[95]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[96]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[97]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[98]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[99]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[100]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[102]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[103]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[104]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[106]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[150]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[150]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[151]: export LOGSCRIPT=
++++ config.base[151]: LOGSCRIPT=
++++ config.base[154]: export 'REDOUT=1>'
++++ config.base[154]: REDOUT='1>'
++++ config.base[155]: export 'REDERR=2>'
++++ config.base[155]: REDERR='2>'
++++ config.base[157]: export SENDECF=NO
++++ config.base[157]: SENDECF=NO
++++ config.base[158]: export SENDSDM=NO
++++ config.base[158]: SENDSDM=NO
++++ config.base[159]: export SENDDBN_NTC=NO
++++ config.base[159]: SENDDBN_NTC=NO
++++ config.base[160]: export SENDDBN=NO
++++ config.base[160]: SENDDBN=NO
++++ config.base[161]: export DBNROOT=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-iqvlvsb/fakedbn
++++ config.base[161]: DBNROOT=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-iqvlvsb/fakedbn
++++ config.base[164]: export APP=ATM
++++ config.base[164]: APP=ATM
++++ config.base[166]: shopt -s extglob
++++ config.base[169]: case "${RUN}" in
++++ config.base[176]: shopt -u extglob
++++ config.base[179]: export DO_ATM=YES
++++ config.base[179]: DO_ATM=YES
++++ config.base[180]: export DO_COUPLED=NO
++++ config.base[180]: DO_COUPLED=NO
++++ config.base[181]: export DO_WAVE=NO
++++ config.base[181]: DO_WAVE=NO
++++ config.base[182]: export DO_OCN=NO
++++ config.base[182]: DO_OCN=NO
++++ config.base[183]: export DO_ICE=NO
++++ config.base[183]: DO_ICE=NO
++++ config.base[184]: DO_AERO=NO
++++ config.base[185]: export DO_PREP_OBS_AERO=NO
++++ config.base[185]: DO_PREP_OBS_AERO=NO
++++ config.base[186]: aero_fcst_runs=gdas
++++ config.base[187]: aero_anl_runs='gdas gfs'
++++ config.base[188]: export DO_AERO_FCST=NO
++++ config.base[188]: DO_AERO_FCST=NO
++++ config.base[189]: export DO_AERO_ANL=NO
++++ config.base[189]: DO_AERO_ANL=NO
++++ config.base[190]: export DOBNDPNT_WAVE=NO
++++ config.base[190]: DOBNDPNT_WAVE=NO
++++ config.base[191]: export DOIBP_WAV=NO
++++ config.base[191]: DOIBP_WAV=NO
++++ config.base[192]: export FRAC_GRID=.true.
++++ config.base[192]: FRAC_GRID=.true.
++++ config.base[193]: export DO_NEST=NO
++++ config.base[193]: DO_NEST=NO
++++ config.base[194]: [[ NO == \Y\E\S ]]
++++ config.base[200]: export ntiles=6
++++ config.base[200]: ntiles=6
++++ config.base[201]: export FIXugwd=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/ugwd
++++ config.base[201]: FIXugwd=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/ugwd
++++ config.base[202]: export FIXorog=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog
++++ config.base[202]: FIXorog=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog
++++ config.base[206]: export OPS_RES=C768
++++ config.base[206]: OPS_RES=C768
++++ config.base[209]: export LEVS=128
++++ config.base[209]: LEVS=128
++++ config.base[210]: export CASE=C96
++++ config.base[210]: CASE=C96
++++ config.base[211]: export CASE_ENS=@CASEENS@
++++ config.base[211]: CASE_ENS=@CASEENS@
++++ config.base[212]: export OCNRES=500
++++ config.base[212]: OCNRES=500
++++ config.base[213]: export ICERES=500
++++ config.base[213]: ICERES=500
++++ config.base[216]: case "${CASE}" in
++++ config.base[221]: export waveGRD=uglo_100km
++++ config.base[221]: waveGRD=uglo_100km
++++ config.base[235]: case "${APP}" in
++++ config.base[270]: [[ NO == \Y\E\S ]]
++++ config.base[280]: [[ gdas =~ gdas ]]
++++ config.base[281]: export FHCYC=1
++++ config.base[281]: FHCYC=1
++++ config.base[282]: export FTSFS=10
++++ config.base[282]: FTSFS=10
++++ config.base[288]: export FHMIN=0
++++ config.base[288]: FHMIN=0
++++ config.base[289]: export FHMAX=9
++++ config.base[289]: FHMAX=9
++++ config.base[290]: export FHOUT=3
++++ config.base[290]: FHOUT=3
++++ config.base[291]: export FHOUT_OCN=3
++++ config.base[291]: FHOUT_OCN=3
++++ config.base[292]: export FHOUT_ICE=3
++++ config.base[292]: FHOUT_ICE=3
++++ config.base[293]: export FHOUT_AERO=3
++++ config.base[293]: FHOUT_AERO=3
++++ config.base[296]: export EUPD_CYC=gdas
++++ config.base[296]: EUPD_CYC=gdas
++++ config.base[299]: export INTERVAL_GFS=24
++++ config.base[299]: INTERVAL_GFS=24
++++ config.base[300]: export SDATE_GFS=2021122100
++++ config.base[300]: SDATE_GFS=2021122100
++++ config.base[303]: export FHMIN_GFS=0
++++ config.base[303]: FHMIN_GFS=0
++++ config.base[304]: export FHMAX_GFS=120
++++ config.base[304]: FHMAX_GFS=120
++++ config.base[306]: breakpnts=
++++ config.base[307]: export FCST_SEGMENTS=0,120
++++ config.base[307]: FCST_SEGMENTS=0,120
++++ config.base[308]: export FHOUT_GFS=3
++++ config.base[308]: FHOUT_GFS=3
++++ config.base[309]: export FHMAX_HF_GFS=0
++++ config.base[309]: FHMAX_HF_GFS=0
++++ config.base[310]: export FHOUT_HF_GFS=1
++++ config.base[310]: FHOUT_HF_GFS=1
++++ config.base[311]: export FHOUT_OCN_GFS=6
++++ config.base[311]: FHOUT_OCN_GFS=6
++++ config.base[312]: export FHOUT_ICE_GFS=6
++++ config.base[312]: FHOUT_ICE_GFS=6
++++ config.base[313]: export FHMIN_WAV=0
++++ config.base[313]: FHMIN_WAV=0
++++ config.base[314]: export FHOUT_WAV=3
++++ config.base[314]: FHOUT_WAV=3
++++ config.base[315]: export FHMAX_HF_WAV=120
++++ config.base[315]: FHMAX_HF_WAV=120
++++ config.base[316]: export FHOUT_HF_WAV=1
++++ config.base[316]: FHOUT_HF_WAV=1
++++ config.base[317]: export FHMAX_WAV=9
++++ config.base[317]: FHMAX_WAV=9
++++ config.base[318]: export FHMAX_WAV_GFS=120
++++ config.base[318]: FHMAX_WAV_GFS=120
++++ config.base[319]: export FHMAX_HF_GFS=0
++++ config.base[319]: FHMAX_HF_GFS=0
++++ config.base[320]: export FHMAX_WAV=9
++++ config.base[320]: FHMAX_WAV=9
++++ config.base[321]: export FHMAX_WAV_GFS=120
++++ config.base[321]: FHMAX_WAV_GFS=120
++++ config.base[322]: export FHMAX_HF_WAV=120
++++ config.base[322]: FHMAX_HF_WAV=120
++++ config.base[325]: export ILPOST=1
++++ config.base[325]: ILPOST=1
++++ config.base[326]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[327]: export ILPOST=3
++++ config.base[327]: ILPOST=3
++++ config.base[331]: export FHMAX_GOES=180
++++ config.base[331]: FHMAX_GOES=180
++++ config.base[332]: export FHOUT_GOES=3
++++ config.base[332]: FHOUT_GOES=3
++++ config.base[333]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[334]: export FHMAX_GOES=120
++++ config.base[334]: FHMAX_GOES=120
++++ config.base[338]: export restart_interval_gfs=12
++++ config.base[338]: restart_interval_gfs=12
++++ config.base[343]: export QUILTING=.true.
++++ config.base[343]: QUILTING=.true.
++++ config.base[344]: export OUTPUT_GRID=gaussian_grid
++++ config.base[344]: OUTPUT_GRID=gaussian_grid
++++ config.base[345]: export WRITE_DOPOST=.true.
++++ config.base[345]: WRITE_DOPOST=.true.
++++ config.base[346]: export WRITE_NSFLIP=.true.
++++ config.base[346]: WRITE_NSFLIP=.true.
++++ config.base[349]: export DOIAU=YES
++++ config.base[349]: DOIAU=YES
++++ config.base[350]: export IAUFHRS=3,6,9
++++ config.base[350]: IAUFHRS=3,6,9
++++ config.base[351]: export IAU_FHROT=3
++++ config.base[351]: IAU_FHROT=3
++++ config.base[352]: export IAU_DELTHRS=6
++++ config.base[352]: IAU_DELTHRS=6
++++ config.base[353]: export IAU_OFFSET=6
++++ config.base[353]: IAU_OFFSET=6
++++ config.base[354]: export DOIAU_ENKF=YES
++++ config.base[354]: DOIAU_ENKF=YES
++++ config.base[355]: export IAUFHRS_ENKF=3,6,9
++++ config.base[355]: IAUFHRS_ENKF=3,6,9
++++ config.base[356]: export IAU_DELTHRS_ENKF=6
++++ config.base[356]: IAU_DELTHRS_ENKF=6
++++ config.base[359]: export lobsdiag_forenkf=.true.
++++ config.base[359]: lobsdiag_forenkf=.true.
++++ config.base[367]: export imp_physics=8
++++ config.base[367]: imp_physics=8
++++ config.base[371]: export DO_JEDIATMVAR=NO
++++ config.base[371]: DO_JEDIATMVAR=NO
++++ config.base[372]: export DO_JEDIATMENS=NO
++++ config.base[372]: DO_JEDIATMENS=NO
++++ config.base[373]: export DO_JEDIOCNVAR=NO
++++ config.base[373]: DO_JEDIOCNVAR=NO
++++ config.base[374]: export DO_JEDISNOWDA=NO
++++ config.base[374]: DO_JEDISNOWDA=NO
++++ config.base[375]: export DO_MERGENSST=NO
++++ config.base[375]: DO_MERGENSST=NO
++++ config.base[376]: export DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[376]: DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[379]: export DOHYBVAR=NO
++++ config.base[379]: DOHYBVAR=NO
++++ config.base[380]: export DOHYBVAR_OCN=NO
++++ config.base[380]: DOHYBVAR_OCN=NO
++++ config.base[381]: export NMEM_ENS=0
++++ config.base[381]: NMEM_ENS=0
++++ config.base[382]: export SMOOTH_ENKF=NO
++++ config.base[382]: SMOOTH_ENKF=NO
++++ config.base[383]: export l4densvar=.true.
++++ config.base[383]: l4densvar=.true.
++++ config.base[384]: export lwrite4danl=.true.
++++ config.base[384]: lwrite4danl=.true.
++++ config.base[385]: export DO_CALC_INCREMENT=NO
++++ config.base[385]: DO_CALC_INCREMENT=NO
++++ config.base[388]: export NMEM_ENS_GFS=30
++++ config.base[388]: NMEM_ENS_GFS=30
++++ config.base[389]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[389]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[390]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[390]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[393]: [[ NO = \Y\E\S ]]
++++ config.base[407]: [[ NO == \N\O ]]
++++ config.base[407]: [[ YES == \Y\E\S ]]
++++ config.base[408]: export IAUFHRS=6,
++++ config.base[408]: IAUFHRS=6,
++++ config.base[409]: export IAU_FHROT=3
++++ config.base[409]: IAU_FHROT=3
++++ config.base[410]: export IAU_FILTER_INCREMENTS=.true.
++++ config.base[410]: IAU_FILTER_INCREMENTS=.true.
++++ config.base[411]: export IAUFHRS_ENKF=6,
++++ config.base[411]: IAUFHRS_ENKF=6,
++++ config.base[415]: export ENKF_SPREAD=YES
++++ config.base[415]: ENKF_SPREAD=YES
++++ config.base[418]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[418]: [[ 2021122018 = \2\0\2\1\1\2\2\1\0\0 ]]
++++ config.base[418]: [[ YES = \N\O ]]
++++ config.base[418]: [[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[424]: [[ YES = \N\O ]]
++++ config.base[428]: [[ YES == \Y\E\S ]]
++++ config.base[429]: export restart_interval_enkfgdas=3
++++ config.base[429]: restart_interval_enkfgdas=3
++++ config.base[434]: export restart_interval_enkfgfs=3
++++ config.base[434]: restart_interval_enkfgfs=3
++++ config.base[436]: [[ YES == \Y\E\S ]]
++++ config.base[437]: export restart_interval_gdas=3
++++ config.base[437]: restart_interval_gdas=3
++++ config.base[442]: export DO_GSISOILDA=NO
++++ config.base[442]: DO_GSISOILDA=NO
++++ config.base[445]: export DONST=YES
++++ config.base[445]: DONST=YES
++++ config.base[446]: [[ YES = \Y\E\S ]]
++++ config.base[446]: export 'FNTSFA=        '
++++ config.base[446]: FNTSFA='        '
++++ config.base[449]: export nst_anl=.true.
++++ config.base[449]: nst_anl=.true.
++++ config.base[452]: export MAKE_NSSTBUFR=NO
++++ config.base[452]: MAKE_NSSTBUFR=NO
++++ config.base[455]: export MAKE_ACFTBUFR=NO
++++ config.base[455]: MAKE_ACFTBUFR=NO
++++ config.base[458]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[458]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[461]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[461]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[462]: export INCVARS_EFOLD=5
++++ config.base[462]: INCVARS_EFOLD=5
++++ config.base[467]: export netcdf_diag=.true.
++++ config.base[467]: netcdf_diag=.true.
++++ config.base[468]: export binary_diag=.false.
++++ config.base[468]: binary_diag=.false.
++++ config.base[471]: export DO_CA=YES
++++ config.base[471]: DO_CA=YES
++++ config.base[474]: export DO_METP=NO
++++ config.base[474]: DO_METP=NO
++++ config.base[475]: export DO_FIT2OBS=YES
++++ config.base[475]: DO_FIT2OBS=YES
++++ config.base[478]: export FHMAX_FITS=132
++++ config.base[478]: FHMAX_FITS=132
++++ config.base[479]: [[ 132 -gt 120 ]]
++++ config.base[480]: export FHMAX_FITS=120
++++ config.base[480]: FHMAX_FITS=120
++++ config.base[484]: export DO_FETCH_HPSS=NO
++++ config.base[484]: DO_FETCH_HPSS=NO
++++ config.base[485]: export DO_FETCH_LOCAL=NO
++++ config.base[485]: DO_FETCH_LOCAL=NO
++++ config.base[488]: export HPSSARCH=YES
++++ config.base[488]: HPSSARCH=YES
++++ config.base[489]: export LOCALARCH=NO
++++ config.base[489]: LOCALARCH=NO
++++ config.base[490]: [[ YES = \Y\E\S ]]
++++ config.base[490]: [[ NO = \Y\E\S ]]
++++ config.base[493]: [[ YES = \Y\E\S ]]
++++ config.base[494]: export DO_ARCHTAR=YES
++++ config.base[494]: DO_ARCHTAR=YES
++++ config.base[498]: export ARCH_CYC=00
++++ config.base[498]: ARCH_CYC=00
++++ config.base[499]: export ARCH_WARMICFREQ=4
++++ config.base[499]: ARCH_WARMICFREQ=4
++++ config.base[500]: export ARCH_FCSTICFREQ=1
++++ config.base[500]: ARCH_FCSTICFREQ=1
++++ config.base[501]: export ARCH_EXPDIR=YES
++++ config.base[501]: ARCH_EXPDIR=YES
++++ config.base[502]: export ARCH_EXPDIR_FREQ=0
++++ config.base[502]: ARCH_EXPDIR_FREQ=0
++++ config.base[503]: export ARCH_HASHES=YES
++++ config.base[503]: ARCH_HASHES=YES
++++ config.base[504]: export ARCH_DIFFS=NO
++++ config.base[504]: ARCH_DIFFS=NO
++++ config.base[507]: [[ NO = \Y\E\S ]]
++++ config.base[515]: export REPLAY_ICS=NO
++++ config.base[515]: REPLAY_ICS=NO
++++ config.base[516]: export OFFSET_START_HOUR=0
++++ config.base[516]: OFFSET_START_HOUR=0
++++ config.base[519]: export NUM_SND_COLLECTIVES=9
++++ config.base[519]: NUM_SND_COLLECTIVES=9
++++ config.base[521]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96_atm3DVar_5e0982c0/config.sfcanl
++++ config.sfcanl[6]: echo 'BEGIN: config.sfcanl'
+BEGIN: config.sfcanl
++++ config.sfcanl[9]: . /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96_atm3DVar_5e0982c0/config.resources sfcanl
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=sfcanl
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[51]: max_tasks_per_node=128
+++++ config.resources[53]: mem_node_max=251GB
+++++ config.resources[149]: export max_tasks_per_node
+++++ config.resources[151]: case ${step} in
+++++ config.resources[766]: walltime=00:20:00
+++++ config.resources[767]: ntasks=6
+++++ config.resources[768]: threads_per_task=1
+++++ config.resources[769]: tasks_per_node=128
+++++ config.resources[770]: export is_exclusive=True
+++++ config.resources[770]: is_exclusive=True
+++++ config.resources[1523]: [[ -f /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96_atm3DVar_5e0982c0/config.resources.GAEAC5 ]]
+++++ config.resources[1524]: source /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96_atm3DVar_5e0982c0/config.resources.GAEAC5
++++++ config.resources.GAEAC5[5]: export FI_VERBS_PREFER_XRC=0
++++++ config.resources.GAEAC5[5]: FI_VERBS_PREFER_XRC=0
++++++ config.resources.GAEAC5[7]: unset memory
++++++ config.resources.GAEAC5[8]: unset memory_gdas
+++++ config.resources[1528]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1529]: run_resource_var=threads_per_task_gdas
+++++ config.resources[1530]: [[ -n '' ]]
+++++ config.resources[1532]: [[ -n 0 ]]
+++++ config.resources[1533]: export threads_per_task
+++++ config.resources[1528]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1529]: run_resource_var=ntasks_gdas
+++++ config.resources[1530]: [[ -n '' ]]
+++++ config.resources[1532]: [[ -n 0 ]]
+++++ config.resources[1533]: export ntasks
+++++ config.resources[1528]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1529]: run_resource_var=tasks_per_node_gdas
+++++ config.resources[1530]: [[ -n '' ]]
+++++ config.resources[1532]: [[ -n 0 ]]
+++++ config.resources[1533]: export tasks_per_node
+++++ config.resources[1528]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1529]: run_resource_var=NTASKS_gdas
+++++ config.resources[1530]: [[ -n '' ]]
+++++ config.resources[1532]: [[ -n '' ]]
+++++ config.resources[1528]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1529]: run_resource_var=memory_gdas
+++++ config.resources[1530]: [[ -n '' ]]
+++++ config.resources[1532]: [[ -n '' ]]
+++++ config.resources[1528]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1529]: run_resource_var=walltime_gdas
+++++ config.resources[1530]: [[ -n '' ]]
+++++ config.resources[1532]: [[ -n 0 ]]
+++++ config.resources[1533]: export walltime
+++++ config.resources[1537]: echo 'END: config.resources'
+END: config.resources
++++ config.sfcanl[12]: [[ NO == \Y\E\S ]]
++++ config.sfcanl[16]: [[ gdas == \g\f\s ]]
++++ config.sfcanl[21]: [[ NO == \Y\E\S ]]
++++ config.sfcanl[28]: echo 'END: config.sfcanl'
+END: config.sfcanl
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/env/GAEAC5.env sfcanl
++++ GAEAC5.env[3]: [[ 1 -ne 1 ]]
++++ GAEAC5.env[10]: step=sfcanl
++++ GAEAC5.env[12]: export 'launcher=srun -l --export=ALL'
++++ GAEAC5.env[12]: launcher='srun -l --export=ALL'
++++ GAEAC5.env[13]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ GAEAC5.env[13]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ GAEAC5.env[15]: export OMP_STACKSIZE=2048000
++++ GAEAC5.env[15]: OMP_STACKSIZE=2048000
++++ GAEAC5.env[16]: export NTHSTACK=1024000000
++++ GAEAC5.env[16]: NTHSTACK=1024000000
++++ GAEAC5.env[18]: ulimit -s unlimited
++++ GAEAC5.env[19]: ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 1025560
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 50000
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 1025560
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
++++ GAEAC5.env[23]: [[ -n 6 ]]
++++ GAEAC5.env[23]: [[ -n 128 ]]
++++ GAEAC5.env[23]: [[ -n 128 ]]
++++ GAEAC5.env[24]: max_threads_per_task=1
++++ GAEAC5.env[25]: NTHREADSmax=1
++++ GAEAC5.env[26]: NTHREADS1=1
++++ GAEAC5.env[27]: [[ 1 -gt 1 ]]
++++ GAEAC5.env[30]: [[ 1 -gt 1 ]]
++++ GAEAC5.env[35]: APRUN_default='srun -l --export=ALL -n 6'
++++ GAEAC5.env[41]: case ${step} in
++++ GAEAC5.env[187]: export NTHREADS_CYCLE=1
++++ GAEAC5.env[187]: NTHREADS_CYCLE=1
++++ GAEAC5.env[188]: [[ 1 -gt 128 ]]
++++ GAEAC5.env[191]: export 'APRUN_CYCLE=srun -l --export=ALL -n 6 --cpus-per-task=1'
++++ GAEAC5.env[191]: APRUN_CYCLE='srun -l --export=ALL -n 6 --cpus-per-task=1'
++++ GAEAC5.env[194]: ntdiv6=1
++++ GAEAC5.env[195]: ntasks_regrid=6
++++ GAEAC5.env[196]: [[ 6 -gt 36 ]]
++++ GAEAC5.env[199]: export 'APRUN_REGRID=srun -l --export=ALL -n 6 '
++++ GAEAC5.env[199]: APRUN_REGRID='srun -l --export=ALL -n 6 '
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
+++ JGLOBAL_ATMOS_SFCANL[12]: date --utc -d '20211221 00 - 6 hours' +%Y%m%d%H
++ JGLOBAL_ATMOS_SFCANL[12]: GDATE=2021122018
++ JGLOBAL_ATMOS_SFCANL[13]: export GDATE
++ JGLOBAL_ATMOS_SFCANL[15]: RUN=gdas
++ JGLOBAL_ATMOS_SFCANL[15]: YMD=20211220
++ JGLOBAL_ATMOS_SFCANL[15]: HH=18
++ JGLOBAL_ATMOS_SFCANL[15]: declare_from_tmpl -rx COMIN_OBS_PREV:COM_OBS_TMPL COMIN_ATMOS_RESTART_PREV:COM_ATMOS_RESTART_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_OBS_PREV=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18/obs
+declare_from_tmpl :: COMIN_ATMOS_RESTART_PREV=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18//model/atmos/restart
++ JGLOBAL_ATMOS_SFCANL[19]: YMD=20211221
++ JGLOBAL_ATMOS_SFCANL[19]: HH=00
++ JGLOBAL_ATMOS_SFCANL[19]: declare_from_tmpl -rx COMIN_OBS:COM_OBS_TMPL COMIN_ATMOS_ANALYSIS:COM_ATMOS_ANALYSIS_TMPL COMIN_SNOW_ANALYSIS:COM_SNOW_ANALYSIS_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_OBS=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00/obs
+declare_from_tmpl :: COMIN_ATMOS_ANALYSIS=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00//analysis/atmos
+declare_from_tmpl :: COMIN_SNOW_ANALYSIS=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00//analysis/snow
++ JGLOBAL_ATMOS_SFCANL[24]: YMD=20211221
++ JGLOBAL_ATMOS_SFCANL[24]: HH=00
++ JGLOBAL_ATMOS_SFCANL[24]: declare_from_tmpl -rx COMOUT_ATMOS_RESTART:COM_ATMOS_RESTART_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMOUT_ATMOS_RESTART=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00//model/atmos/restart
++ JGLOBAL_ATMOS_SFCANL[27]: RUN=enkfgdas
++ JGLOBAL_ATMOS_SFCANL[27]: MEMDIR=ensstat
++ JGLOBAL_ATMOS_SFCANL[27]: YMD=20211221
++ JGLOBAL_ATMOS_SFCANL[27]: HH=00
++ JGLOBAL_ATMOS_SFCANL[27]: declare_from_tmpl -rx COMIN_ATMOS_ENKF_ANALYSIS_STAT:COM_ATMOS_ANALYSIS_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ATMOS_ENKF_ANALYSIS_STAT=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/enkfgdas.20211221/00/ensstat/analysis/atmos
++ JGLOBAL_ATMOS_SFCANL[30]: mkdir -p /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00//model/atmos/restart
++ JGLOBAL_ATMOS_SFCANL[36]: /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/scripts/exglobal_atmos_sfcanl.sh
+Begin exglobal_atmos_sfcanl.sh at Thu 06 Mar 2025 06:19:15 PM UTC
++ exglobal_atmos_sfcanl.sh[25]: cd /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770
++ exglobal_atmos_sfcanl.sh[30]: CYCLESH=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush/global_cycle.sh
++ exglobal_atmos_sfcanl.sh[31]: REGRIDSH=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush/regrid_gsiSfcIncr_to_tile.sh
++ exglobal_atmos_sfcanl.sh[32]: export CYCLEXEC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/global_cycle
++ exglobal_atmos_sfcanl.sh[32]: CYCLEXEC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/global_cycle
++ exglobal_atmos_sfcanl.sh[33]: NTHREADS_CYCLE=1
++ exglobal_atmos_sfcanl.sh[34]: APRUN_CYCLE='srun -l --export=ALL -n 6 --cpus-per-task=1'
++ exglobal_atmos_sfcanl.sh[37]: export SNOW_NUDGE_COEFF=-2.
++ exglobal_atmos_sfcanl.sh[37]: SNOW_NUDGE_COEFF=-2.
++ exglobal_atmos_sfcanl.sh[38]: export CYCLVARS=
++ exglobal_atmos_sfcanl.sh[38]: CYCLVARS=
++ exglobal_atmos_sfcanl.sh[39]: export FHOUR=0
++ exglobal_atmos_sfcanl.sh[39]: FHOUR=0
++ exglobal_atmos_sfcanl.sh[40]: export DELTSFC=6
++ exglobal_atmos_sfcanl.sh[40]: DELTSFC=6
++ exglobal_atmos_sfcanl.sh[43]: RUN_GETGES=NO
++ exglobal_atmos_sfcanl.sh[44]: GETGESSH=getges.sh
++ exglobal_atmos_sfcanl.sh[45]: export gesenvir=prod
++ exglobal_atmos_sfcanl.sh[45]: gesenvir=prod
++ exglobal_atmos_sfcanl.sh[48]: GPREFIX=gdas.t18z.
++ exglobal_atmos_sfcanl.sh[49]: OPREFIX=gdas.t00z.
++ exglobal_atmos_sfcanl.sh[50]: APREFIX=gdas.t00z.
++ exglobal_atmos_sfcanl.sh[52]: ntiles=6
++ exglobal_atmos_sfcanl.sh[57]: res=96
++ exglobal_atmos_sfcanl.sh[58]: JCAP_CASE=190
++ exglobal_atmos_sfcanl.sh[59]: LATB_CASE=192
++ exglobal_atmos_sfcanl.sh[60]: LONB_CASE=384
++ exglobal_atmos_sfcanl.sh[63]: export 'FNTSFA=        '
++ exglobal_atmos_sfcanl.sh[63]: FNTSFA='        '
++ exglobal_atmos_sfcanl.sh[64]: export FNACNA=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00/obs/gdas.t00z.seaice.5min.blend.grb
++ exglobal_atmos_sfcanl.sh[64]: FNACNA=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00/obs/gdas.t00z.seaice.5min.blend.grb
++ exglobal_atmos_sfcanl.sh[65]: export FNSNOA=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00/obs/gdas.t00z.snogrb_t190.384.192
++ exglobal_atmos_sfcanl.sh[65]: FNSNOA=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00/obs/gdas.t00z.snogrb_t190.384.192
++ exglobal_atmos_sfcanl.sh[66]: [[ ! -f /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00/obs/gdas.t00z.snogrb_t190.384.192 ]]
++ exglobal_atmos_sfcanl.sh[67]: export FNSNOA=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00/obs/gdas.t00z.snogrb_t1534.3072.1536
++ exglobal_atmos_sfcanl.sh[67]: FNSNOA=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00/obs/gdas.t00z.snogrb_t1534.3072.1536
++ exglobal_atmos_sfcanl.sh[69]: FNSNOG=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18/obs/gdas.t18z.snogrb_t190.384.192
++ exglobal_atmos_sfcanl.sh[70]: [[ ! -f /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18/obs/gdas.t18z.snogrb_t190.384.192 ]]
++ exglobal_atmos_sfcanl.sh[71]: FNSNOG=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18/obs/gdas.t18z.snogrb_t1534.3072.1536
++ exglobal_atmos_sfcanl.sh[75]: [[ NO = \Y\E\S ]]
++ exglobal_atmos_sfcanl.sh[78]: snoprv=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18/obs/gdas.t18z.snogrb_t1534.3072.1536
+++ exglobal_atmos_sfcanl.sh[82]: grep -i snowc
+++ exglobal_atmos_sfcanl.sh[82]: awk -F= '{print $2}'
+++ exglobal_atmos_sfcanl.sh[82]: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/grib-util-1.3.0-5ldjqzm/bin/wgrib -4yr /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00/obs/gdas.t00z.snogrb_t1534.3072.1536
+++ exglobal_atmos_sfcanl.sh[82]: awk -F: '{print $3}'
+++ exglobal_atmos_sfcanl.sh[82]: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/grib-util-1.3.0-5ldjqzm/bin/wgrib -4yr /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18/obs/gdas.t18z.snogrb_t1534.3072.1536
+++ exglobal_atmos_sfcanl.sh[82]: awk -F: '{print $3}'
+++ exglobal_atmos_sfcanl.sh[82]: awk -F= '{print $2}'
+++ exglobal_atmos_sfcanl.sh[82]: grep -i snowc
++ exglobal_atmos_sfcanl.sh[82]: [[ 2021122000 -le 2021122000 ]]
++ exglobal_atmos_sfcanl.sh[83]: export 'FNSNOA= '
++ exglobal_atmos_sfcanl.sh[83]: FNSNOA=' '
++ exglobal_atmos_sfcanl.sh[84]: export CYCLVARS=FSNOL=99999.,FSNOS=99999.,
++ exglobal_atmos_sfcanl.sh[84]: CYCLVARS=FSNOL=99999.,FSNOS=99999.,
++ exglobal_atmos_sfcanl.sh[90]: [[ NO == \Y\E\S ]]
++ exglobal_atmos_sfcanl.sh[93]: sfcdata_dir=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18//model/atmos/restart
++ exglobal_atmos_sfcanl.sh[97]: export 'APRUNCY=srun -l --export=ALL -n 6 --cpus-per-task=1'
++ exglobal_atmos_sfcanl.sh[97]: APRUNCY='srun -l --export=ALL -n 6 --cpus-per-task=1'
++ exglobal_atmos_sfcanl.sh[98]: export OMP_NUM_THREADS_CY=1
++ exglobal_atmos_sfcanl.sh[98]: OMP_NUM_THREADS_CY=1
++ exglobal_atmos_sfcanl.sh[99]: export MAX_TASKS_CY=6
++ exglobal_atmos_sfcanl.sh[99]: MAX_TASKS_CY=6
++ exglobal_atmos_sfcanl.sh[102]: (( nn=1 ))
++ exglobal_atmos_sfcanl.sh[102]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[103]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/C96_grid.tile1.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fngrid.001
++ exglobal_atmos_sfcanl.sh[104]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile1.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnorog.001
++ exglobal_atmos_sfcanl.sh[102]: (( nn++  ))
++ exglobal_atmos_sfcanl.sh[102]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[103]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/C96_grid.tile2.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fngrid.002
++ exglobal_atmos_sfcanl.sh[104]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile2.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnorog.002
++ exglobal_atmos_sfcanl.sh[102]: (( nn++  ))
++ exglobal_atmos_sfcanl.sh[102]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[103]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/C96_grid.tile3.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fngrid.003
++ exglobal_atmos_sfcanl.sh[104]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile3.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnorog.003
++ exglobal_atmos_sfcanl.sh[102]: (( nn++  ))
++ exglobal_atmos_sfcanl.sh[102]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[103]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/C96_grid.tile4.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fngrid.004
++ exglobal_atmos_sfcanl.sh[104]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile4.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnorog.004
++ exglobal_atmos_sfcanl.sh[102]: (( nn++  ))
++ exglobal_atmos_sfcanl.sh[102]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[103]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/C96_grid.tile5.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fngrid.005
++ exglobal_atmos_sfcanl.sh[104]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile5.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnorog.005
++ exglobal_atmos_sfcanl.sh[102]: (( nn++  ))
++ exglobal_atmos_sfcanl.sh[102]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[103]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/C96_grid.tile6.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fngrid.006
++ exglobal_atmos_sfcanl.sh[104]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile6.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnorog.006
++ exglobal_atmos_sfcanl.sh[102]: (( nn++  ))
++ exglobal_atmos_sfcanl.sh[102]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[110]: [[ YES == \Y\E\S ]]
++ exglobal_atmos_sfcanl.sh[111]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00//analysis/atmos/gdas.t00z.dtfanl.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/dtfanl
++ exglobal_atmos_sfcanl.sh[112]: export NST_FILE=dtfanl
++ exglobal_atmos_sfcanl.sh[112]: NST_FILE=dtfanl
++ exglobal_atmos_sfcanl.sh[118]: gcycle_dates=("${PDY}${cyc}")
++ exglobal_atmos_sfcanl.sh[119]: soilinc_fhrs=("${assim_freq}")
++ exglobal_atmos_sfcanl.sh[120]: LFHR=6
++ exglobal_atmos_sfcanl.sh[121]: [[ YES == \Y\E\S ]]
++ exglobal_atmos_sfcanl.sh[122]: half_window=3
++ exglobal_atmos_sfcanl.sh[123]: soilinc_fhrs+=("${half_window}")
++ exglobal_atmos_sfcanl.sh[124]: LFHR=-1
+++ exglobal_atmos_sfcanl.sh[125]: date --utc -d '20211221 00 - 3 hours' +%Y%m%d%H
++ exglobal_atmos_sfcanl.sh[125]: BDATE=2021122021
++ exglobal_atmos_sfcanl.sh[126]: gcycle_dates+=("${BDATE}")
++ exglobal_atmos_sfcanl.sh[130]: [[ NO = \Y\E\S ]]
++ exglobal_atmos_sfcanl.sh[1]: for hr in "${!gcycle_dates[@]}"
++ exglobal_atmos_sfcanl.sh[146]: gcycle_date=2021122100
++ exglobal_atmos_sfcanl.sh[147]: FHR=6
++ exglobal_atmos_sfcanl.sh[148]: echo 'Updating surface restarts for 2021122100 ...'
+Updating surface restarts for 2021122100 ...
++ exglobal_atmos_sfcanl.sh[150]: datestr=20211221.000000
++ exglobal_atmos_sfcanl.sh[152]: [[ NO = \Y\E\S ]]
++ exglobal_atmos_sfcanl.sh[160]: (( nn=1 ))
++ exglobal_atmos_sfcanl.sh[160]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[161]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18//model/atmos/restart/20211221.000000.sfc_data.tile1.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgsi.001
++ exglobal_atmos_sfcanl.sh[162]: /bin/cp -p /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgsi.001 /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgso.001
++ exglobal_atmos_sfcanl.sh[160]: (( nn++  ))
++ exglobal_atmos_sfcanl.sh[160]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[161]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18//model/atmos/restart/20211221.000000.sfc_data.tile2.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgsi.002
++ exglobal_atmos_sfcanl.sh[162]: /bin/cp -p /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgsi.002 /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgso.002
++ exglobal_atmos_sfcanl.sh[160]: (( nn++  ))
++ exglobal_atmos_sfcanl.sh[160]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[161]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18//model/atmos/restart/20211221.000000.sfc_data.tile3.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgsi.003
++ exglobal_atmos_sfcanl.sh[162]: /bin/cp -p /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgsi.003 /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgso.003
++ exglobal_atmos_sfcanl.sh[160]: (( nn++  ))
++ exglobal_atmos_sfcanl.sh[160]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[161]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18//model/atmos/restart/20211221.000000.sfc_data.tile4.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgsi.004
++ exglobal_atmos_sfcanl.sh[162]: /bin/cp -p /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgsi.004 /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgso.004
++ exglobal_atmos_sfcanl.sh[160]: (( nn++  ))
++ exglobal_atmos_sfcanl.sh[160]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[161]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18//model/atmos/restart/20211221.000000.sfc_data.tile5.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgsi.005
++ exglobal_atmos_sfcanl.sh[162]: /bin/cp -p /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgsi.005 /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgso.005
++ exglobal_atmos_sfcanl.sh[160]: (( nn++  ))
++ exglobal_atmos_sfcanl.sh[160]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[161]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211220/18//model/atmos/restart/20211221.000000.sfc_data.tile6.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgsi.006
++ exglobal_atmos_sfcanl.sh[162]: /bin/cp -p /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgsi.006 /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770/fnbgso.006
++ exglobal_atmos_sfcanl.sh[160]: (( nn++  ))
++ exglobal_atmos_sfcanl.sh[160]: (( nn <= ntiles ))
++ exglobal_atmos_sfcanl.sh[165]: CDATE=2021122100
++ exglobal_atmos_sfcanl.sh[165]: /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush/global_cycle.sh
+Thu 06 Mar 2025 01:19:19 PM EST EXECUTING /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush/global_cycle.sh
++ global_cycle.sh[229]: CASE=C96
++ global_cycle.sh[230]: OCNRES=500
++ global_cycle.sh[233]: gfs_ver=v15.0.0
++ global_cycle.sh[234]: PACKAGEROOT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/nwpara
++ global_cycle.sh[235]: HOMEgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow
++ global_cycle.sh[236]: EXECgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec
++ global_cycle.sh[237]: FIXgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix
++ global_cycle.sh[238]: FIXorog=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog
++ global_cycle.sh[239]: DATA=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770
+++ global_cycle.sh[240]: pwd
++ global_cycle.sh[240]: COMIN=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770
+++ global_cycle.sh[241]: pwd
++ global_cycle.sh[241]: COMOUT=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770
++ global_cycle.sh[244]: XC=' '
++ global_cycle.sh[245]: PREINP=' '
++ global_cycle.sh[246]: SUFINP=' '
++ global_cycle.sh[247]: CYCLEXEC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/global_cycle
++ global_cycle.sh[249]: CDATE=2021122100
++ global_cycle.sh[250]: FHOUR=0
+++ global_cycle.sh[252]: cut -c2-
+++ global_cycle.sh[252]: echo C96
++ global_cycle.sh[252]: CRES=96
++ global_cycle.sh[253]: JCAP_CASE=190
++ global_cycle.sh[254]: LONB_CASE=384
++ global_cycle.sh[255]: LATB_CASE=192
++ global_cycle.sh[256]: DELTSFC=6
++ global_cycle.sh[258]: LSOIL=4
++ global_cycle.sh[259]: LSOIL_INCR=2
++ global_cycle.sh[260]: FSMCL2=60
++ global_cycle.sh[261]: FSLPL=99999.
++ global_cycle.sh[262]: FSOTL=99999.
++ global_cycle.sh[263]: FVETL=99999.
++ global_cycle.sh[264]: IALB=1
++ global_cycle.sh[265]: ISOT=1
++ global_cycle.sh[266]: IVEGSRC=1
++ global_cycle.sh[267]: CYCLVARS=FSNOL=99999.,FSNOS=99999.,
++ global_cycle.sh[268]: use_ufo=.true.
++ global_cycle.sh[269]: DONST=YES
++ global_cycle.sh[270]: DO_SFCCYCLE=.true.
++ global_cycle.sh[271]: GCYCLE_DO_SOILINCR=.false.
++ global_cycle.sh[272]: GCYCLE_DO_SNOWINCR=.false.
++ global_cycle.sh[273]: '[' .false. == .true. ']'
++ global_cycle.sh[273]: '[' .false. == .true. ']'
++ global_cycle.sh[276]: DO_LANDINCR=.false.
++ global_cycle.sh[278]: GCYCLE_INTERP_LANDINCR=.false.
++ global_cycle.sh[279]: zsea1=0
++ global_cycle.sh[280]: zsea2=0
++ global_cycle.sh[281]: MAX_TASKS_CY=6
++ global_cycle.sh[282]: FRAC_GRID=.true.
++ global_cycle.sh[284]: FNGLAC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_glacier.2x2.grb
++ global_cycle.sh[285]: FNMXIC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_maxice.2x2.grb
++ global_cycle.sh[286]: FNTSFC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/RTGSST.1982.2012.monthly.clim.grb
++ global_cycle.sh[287]: FNSALC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_salclm.t1534.3072.1536.nc
++ global_cycle.sh[288]: FNSNOC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_snoclim.1.875.grb
++ global_cycle.sh[289]: FNZORC=igbp
++ global_cycle.sh[290]: FNAISC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/IMS-NIC.blended.ice.monthly.clim.grb
++ global_cycle.sh[291]: FNSMCC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgldas.statsgo.t190.384.192.grb
++ global_cycle.sh[292]: FNALBC2=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.mx500.facsf.tileX.nc
++ global_cycle.sh[293]: FNTG3C=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.mx500.substrate_temperature.tileX.nc
++ global_cycle.sh[294]: FNVEGC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.mx500.vegetation_greenness.tileX.nc
++ global_cycle.sh[295]: FNALBC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.mx500.snowfree_albedo.tileX.nc
++ global_cycle.sh[296]: FNVETC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.mx500.vegetation_type.tileX.nc
++ global_cycle.sh[297]: FNSOTC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.mx500.soil_type.tileX.nc
++ global_cycle.sh[298]: FNABSC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.mx500.maximum_snow_albedo.tileX.nc
++ global_cycle.sh[299]: FNVMNC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.mx500.vegetation_greenness.tileX.nc
++ global_cycle.sh[300]: FNVMXC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.mx500.vegetation_greenness.tileX.nc
++ global_cycle.sh[301]: FNSLPC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.mx500.slope_type.tileX.nc
++ global_cycle.sh[302]: FNMSKH=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_slmask.t1534.3072.1536.grb
++ global_cycle.sh[303]: NST_FILE=dtfanl
++ global_cycle.sh[304]: FNTSFA='        '
++ global_cycle.sh[305]: FNACNA=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0/gdas.20211221/00/obs/gdas.t00z.seaice.5min.blend.grb
++ global_cycle.sh[306]: FNSNOA=' '
++ global_cycle.sh[307]: export 'INISCRIPT= '
++ global_cycle.sh[307]: INISCRIPT=' '
++ global_cycle.sh[308]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++ global_cycle.sh[308]: ERRSCRIPT='eval [[ $err = 0 ]]'
++ global_cycle.sh[309]: export 'LOGSCRIPT= '
++ global_cycle.sh[309]: LOGSCRIPT=' '
++ global_cycle.sh[310]: export 'ENDSCRIPT= '
++ global_cycle.sh[310]: ENDSCRIPT=' '
++ global_cycle.sh[312]: export PGMOUT=OUTPUT.540838
++ global_cycle.sh[312]: PGMOUT=OUTPUT.540838
++ global_cycle.sh[313]: export PGMERR=errfile
++ global_cycle.sh[313]: PGMERR=errfile
++ global_cycle.sh[314]: export 'REDOUT=1>'
++ global_cycle.sh[314]: REDOUT='1>'
++ global_cycle.sh[315]: export 'REDERR=2>'
++ global_cycle.sh[315]: REDERR='2>'
+++ global_cycle.sh[320]: pwd
++ global_cycle.sh[320]: pwd=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770
++ global_cycle.sh[321]: [[ -d /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770 ]]
++ global_cycle.sh[323]: mkdata=NO
++ global_cycle.sh[328]: cd /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770
++ global_cycle.sh[329]: [[ -d /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_5e0982c0/gdas.2021122100/sfcanl.540770 ]]
++ global_cycle.sh[331]: ln -fs /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/RTGSST.1982.2012.monthly.clim.grb sstclm
++ global_cycle.sh[332]: ln -fs /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_salclm.t1534.3072.1536.nc salclm
++ global_cycle.sh[335]: [[ ! -f /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgldas.statsgo.t190.384.192.grb ]]
++ global_cycle.sh[335]: FNSMCC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgldas.statsgo.t1534.3072.1536.grb
++ global_cycle.sh[339]: export PGM=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/global_cycle
++ global_cycle.sh[339]: PGM=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/global_cycle
++ global_cycle.sh[340]: export pgm=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/global_cycle
++ global_cycle.sh[340]: pgm=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/global_cycle
+++ global_cycle.sh[343]: cut -c1-4
+++ global_cycle.sh[343]: echo 2021122100
++ global_cycle.sh[343]: iy=2021
+++ global_cycle.sh[344]: cut -c5-6
+++ global_cycle.sh[344]: echo 2021122100
++ global_cycle.sh[344]: im=12
+++ global_cycle.sh[345]: echo 2021122100
+++ global_cycle.sh[345]: cut -c7-8
++ global_cycle.sh[345]: id=21
+++ global_cycle.sh[346]: echo 2021122100
+++ global_cycle.sh[346]: cut -c9-10
++ global_cycle.sh[346]: ih=00
++ global_cycle.sh[348]: export OMP_NUM_THREADS=1
++ global_cycle.sh[348]: OMP_NUM_THREADS=1
++ global_cycle.sh[350]: cat
++ global_cycle.sh[384]: cat
++ global_cycle.sh[396]: cat
++ global_cycle.sh[406]: srun -l --export=ALL -n 6 --cpus-per-task=1 /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/global_cycle '1>OUTPUT.540838' '2>errfile'
+1:  
+3:  
+2:  
+5:  
+1:  STARTING CYCLE PROGRAM ON RANK            1
+1:  RUNNING WITH            6 TASKS
+1:  AND WITH            1  THREADS.
+1:  
+1:  READ NAMCYC NAMELIST.
+2:  STARTING CYCLE PROGRAM ON RANK            2
+2:  RUNNING WITH            6 TASKS
+2:  AND WITH            1  THREADS.
+2:  
+2:  READ NAMCYC NAMELIST.
+3:  STARTING CYCLE PROGRAM ON RANK            3
+3:  RUNNING WITH            6 TASKS
+3:  AND WITH            1  THREADS.
+3:  
+3:  READ NAMCYC NAMELIST.
+5:  STARTING CYCLE PROGRAM ON RANK            5
+5:  RUNNING WITH            6 TASKS
+5:  AND WITH            1  THREADS.
+5:  
+5:  READ NAMCYC NAMELIST.
+4:  
+4:  STARTING CYCLE PROGRAM ON RANK            4
+4:  RUNNING WITH            6 TASKS
+4:  AND WITH            1  THREADS.
+4:  
+4:  READ NAMCYC NAMELIST.
+0: 
+0: 
+0: * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . 
+0:      PROGRAM GLOBAL_CYCLE HAS BEGUN. COMPILED 2018179.55     ORG: NP20
+0:      STARTING DATE-TIME  MAR 06,2025  13:19:21.875   65  THU   2460741
+0: 
+0: 
+0:  
+0:  STARTING CYCLE PROGRAM ON RANK            0
+0:  RUNNING WITH            6 TASKS
+0:  AND WITH            1  THREADS.
+0:  
+0:  READ NAMCYC NAMELIST.
+0:  
+0:  LUGB,IDIM,JDIM,ISOT,IVEGSRC,LSOIL,DELTSFC,IY,IM,ID,IH,FH:           51
+0:           96          96           1           1           4
+2:  
+4:  
+0:    6.00000000000000             2021          12          21           0
+0:   0.000000000000000E+000
+1:  
+3:  
+5:  
+2:  
+2:  IN ROUTINE SFCDRV,IDIM=          96 JDIM=          96 FH=
+2:   0.000000000000000E+000
+2:  - RUNNING WITH FRACTIONAL GRID.
+1:  
+1:  IN ROUTINE SFCDRV,IDIM=          96 JDIM=          96 FH=
+5:  
+5:  IN ROUTINE SFCDRV,IDIM=          96 JDIM=          96 FH=
+1:   0.000000000000000E+000
+4:  
+4:  IN ROUTINE SFCDRV,IDIM=          96 JDIM=          96 FH=
+4:   0.000000000000000E+000
+5:   0.000000000000000E+000
+0:  
+0:  IN ROUTINE SFCDRV,IDIM=          96 JDIM=          96 FH=
+0:   0.000000000000000E+000
+0:  - RUNNING WITH FRACTIONAL GRID.
+1:  - RUNNING WITH FRACTIONAL GRID.
+3:  
+3:  IN ROUTINE SFCDRV,IDIM=          96 JDIM=          96 FH=
+3:   0.000000000000000E+000
+3:  - RUNNING WITH FRACTIONAL GRID.
+4:  - RUNNING WITH FRACTIONAL GRID.
+5:  - RUNNING WITH FRACTIONAL GRID.
+0:  
+0:  READ FV3 GRID INFO FROM: ./fngrid.001
+2:  
+2:  READ FV3 GRID INFO FROM: ./fngrid.003
+4:  
+4:  READ FV3 GRID INFO FROM: ./fngrid.005
+1:  
+1:  READ FV3 GRID INFO FROM: ./fngrid.002
+3:  
+3:  READ FV3 GRID INFO FROM: ./fngrid.004
+5:  
+5:  READ FV3 GRID INFO FROM: ./fngrid.006
+1:  
+1:  READ FV3 OROG INFO FROM: ./fnorog.002
+5:  
+5:  READ FV3 OROG INFO FROM: ./fnorog.006
+0:  
+0:  READ FV3 OROG INFO FROM: ./fnorog.001
+0:  
+0:  WILL PROCESS NSST RECORDS.
+0:  
+0:  READ INPUT SFC DATA FROM: ./fnbgsi.001
+4:  
+4:  READ FV3 OROG INFO FROM: ./fnorog.005
+2:  
+2:  READ FV3 OROG INFO FROM: ./fnorog.003
+3:  
+3:  READ FV3 OROG INFO FROM: ./fnorog.004
+1:  
+1:  WILL PROCESS NSST RECORDS.
+5:  
+5:  WILL PROCESS NSST RECORDS.
+1:  
+1:  READ INPUT SFC DATA FROM: ./fnbgsi.002
+5:  
+5:  READ INPUT SFC DATA FROM: ./fnbgsi.006
+4:  
+4:  WILL PROCESS NSST RECORDS.
+4:  
+4:  READ INPUT SFC DATA FROM: ./fnbgsi.005
+3:  
+3:  WILL PROCESS NSST RECORDS.
+3:  
+3:  READ INPUT SFC DATA FROM: ./fnbgsi.004
+0:  - WILL PROCESS FOR NOAH-MP LSM.
+2:  
+2:  WILL PROCESS NSST RECORDS.
+2:  
+2:  READ INPUT SFC DATA FROM: ./fnbgsi.003
+5:  - WILL PROCESS FOR NOAH-MP LSM.
+1:  - WILL PROCESS FOR NOAH-MP LSM.
+0:  
+0:  WILL READ NSST RECORDS.
+4:  - WILL PROCESS FOR NOAH-MP LSM.
+5:  
+5:  WILL READ NSST RECORDS.
+1:  
+1:  WILL READ NSST RECORDS.
+3:  - WILL PROCESS FOR NOAH-MP LSM.
+5:  
+5:  USE UNFILTERED OROGRAPHY.
+5:  
+5:  SAVE FIRST GUESS MASK
+4:  
+4:  WILL READ NSST RECORDS.
+5:  
+5:  CALL SFCCYCLE TO UPDATE SURFACE FIELDS.
+3:  
+3:  WILL READ NSST RECORDS.
+2:  - WILL PROCESS FOR NOAH-MP LSM.
+0:  
+0:  USE UNFILTERED OROGRAPHY.
+0:  
+0:  SAVE FIRST GUESS MASK
+0:  
+0:  CALL SFCCYCLE TO UPDATE SURFACE FIELDS.
+0:   ftsfl,falbl,faisl,fsnol,fzorl=   99999.0000000000       0.000000000000000E+000
+0:   0.000000000000000E+000   99999.0000000000       0.000000000000000E+000
+0:   fsmcl=   99999.0000000000        60.0000000000000        60.0000000000000     
+0:    60.0000000000000     
+0:   fstcl=   99999.0000000000        99999.0000000000        99999.0000000000     
+0:    99999.0000000000     
+0:   ftsfs,falbs,faiss,fsnos,fzors=  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000   99999.0000000000        99999.0000000000     
+0:   fsmcs=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:   fstcs=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:   aislim=  0.150000000000000       sihnew=  0.200000000000000     
+0:   isot=           1  ivegsrc=           1
+0:   fnsotc =
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.soil_type.tileX.nc                                                        
+0:                                                                                 
+0:                                                                                 
+0:                                                                                 
+0:                                                                                 
+0:                            
+0:   imsk=        7200  jmsk=        3600  xdata=        7200  ydata=        3600
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_slmask.t
+0:  1534.3072.1536.grb opened. unit=          51
+1:  
+1:  USE UNFILTERED OROGRAPHY.
+3:  
+3:  USE UNFILTERED OROGRAPHY.
+1:  
+1:  SAVE FIRST GUESS MASK
+3:  
+3:  SAVE FIRST GUESS MASK
+1:  
+1:  CALL SFCCYCLE TO UPDATE SURFACE FIELDS.
+3:  
+3:  CALL SFCCYCLE TO UPDATE SURFACE FIELDS.
+2:  
+2:  WILL READ NSST RECORDS.
+4:  
+4:  USE UNFILTERED OROGRAPHY.
+4:  
+4:  SAVE FIRST GUESS MASK
+4:  
+4:  CALL SFCCYCLE TO UPDATE SURFACE FIELDS.
+2:  
+2:  USE UNFILTERED OROGRAPHY.
+2:  
+2:  SAVE FIRST GUESS MASK
+2:  
+2:  CALL SFCCYCLE TO UPDATE SURFACE FIELDS.
+0:   first grib record.
+0:   kpds( 1-10)=           7          78         255         128          81
+0:            1           0         212           1           1
+0:   kpds(11-20)=           0           0           4           0           1
+0:           51           1           1           1           0
+0:   kpds(21-  )=          20           1
+0:  idim,jdim=        3072        1536  gaus= T  blno=  0.000000000000000E+000 
+0:   blto=   89.9100000000000     
+0:   
+0:   lugb=          51  len=        9216  lsoil=           4
+0:  iy=        2021  im=          12  id=          21  ih=           0  fh=
+0:   0.000000000000000E+000  sig1t(1)=  0.000000000000000E+000  gausm= T  blnmsk=
+0:   0.000000000000000E+000  bltmsk=   89.9100000000000     
+0:   
+0:   in fixrdc for mon=          -1  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_glacier.
+0:  2x2.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_glacier.
+0:  2x2.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7          80         255         128         238
+0:            1           0           0           1           1
+0:   kpds(11-20)=           0           0           4           0           1
+0:           51           1           1           2           0
+0:   kpds(21-  )=          20           1
+0:   input grib file dates=           0           1           1           0
+0:  imax,jmax,ijmax=         180          91       16380
+0:   kgds( 1-12)=           0         180          91       90000           0
+0:          128      -90000       -2000        2000        2000           0
+0:            0
+0:   kgds(13-22)= -1431655766 -1431655766 -1431655766 -1431655766 -1431655766
+0:  -1431655766           0         255 -1431655766 -1431655766
+0:  lat/lon grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:          180          91       16380   2.00000000000000     
+0:   -2.00000000000000      T  0.000000000000000E+000   90.0000000000000     
+0:   in fixrdc for mon=          -1  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_maxice.2
+0:  x2.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_maxice.2
+0:  x2.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7          80         255         128          91
+0:            1           0           0           1           1
+0:   kpds(11-20)=           0           0           4           0           1
+0:           51           1           1           2           0
+0:   kpds(21-  )=          20           1
+0:   input grib file dates=           0           1           1           0
+0:  imax,jmax,ijmax=         180          91       16380
+0:   kgds( 1-12)=           0         180          91       90000           0
+0:          128      -90000       -2000        2000        2000           0
+0:            0
+0:   kgds(13-22)= -1431655766 -1431655766 -1431655766 -1431655766 -1431655766
+0:  -1431655766           0         255 -1431655766 -1431655766
+0:  lat/lon grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:          180          91       16380   2.00000000000000     
+0:   -2.00000000000000      T  0.000000000000000E+000   90.0000000000000     
+0:  qc of maximum ice extent
+0:  ==============
+0:  climatology
+0:  ==============
+0:   forecast jy,jm,jd,jh,rjday=        2021          12          21           0
+0:    355.000000000000     
+0:  forecast jy,jm,jd,jh=        2021          12          21           0
+0:  rjday,mon1,mon2,wei1m,wei2m=   355.000000000000               12           1
+0:   0.822580645161290       0.177419354838710     
+0:  rjday,sea1,sea2,wei1s,wei2s=   355.000000000000               10           1
+0:   0.277173913043478       0.722826086956522     
+0:  rjday,hyr1,hyr2,wei1y,wei2y=   355.000000000000                7           1
+0:   0.138586956521739       0.861413043478261     
+0:  bosu first time thru
+0:   in fixrdc_tile for mon=           1  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.facsf.tile1.nc
+0:   in fixrdc_tile for mon=           1  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.substrate_temperature.tile1.nc
+0:   in fixrdc_tile for mon=           1  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.vegetation_type.tile1.nc
+0:  climatological vegetation type read in.
+0:   in fixrdc_tile for mon=           1  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.soil_type.tile1.nc
+0:  climatological soil type read in.
+0:   in fixrdc_tile for mon=          99  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.vegetation_greenness.tile1.nc
+0:  climatological shdmin read in.
+0:   in fixrdc_tile for mon=          99  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.vegetation_greenness.tile1.nc
+0:  climatological shdmax read in.
+0:   in fixrdc_tile for mon=           1  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.slope_type.tile1.nc
+0:  climatological slope read in.
+0:   in fixrdc_tile for mon=           1  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.maximum_snow_albedo.tile1.nc
+0:  climatological snoalb read in.
+0:   in fixrdc_tile for mon=          12  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.snowfree_albedo.tile1.nc
+0:   in fixrdc_tile for mon=          12  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.snowfree_albedo.tile1.nc
+0:   in fixrdc_tile for mon=          12  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.snowfree_albedo.tile1.nc
+0:   in fixrdc_tile for mon=          12  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.snowfree_albedo.tile1.nc
+0:   in fixrdc for mon=          12  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/RTGSST.1982.201
+0:  2.monthly.clim.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/RTGSST.1982.201
+0:  2.monthly.clim.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7         120         173         128          11
+0:            1           0          96           1          15
+0:   kpds(11-20)=           0           0           1           0           0
+0:           10           0           1           1           0
+0:   kpds(21-  )=          20           2
+0:   input grib file dates=          96          12          15           0
+0:  imax,jmax,ijmax=        4320        2160     9331200
+0:   kgds( 1-12)=           0        4320        2160       89958          42
+0:          128      -89958         -42          83          83           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  lat/lon grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:         4320        2160     9331200  8.300000000000000E-002
+0:  -8.300000000000000E-002 T  4.200000000000000E-002   89.9580000000000     
+0:  i1,i2,j1,j2=        3684        3685        1492        1493
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=         195  slmask(i)=   1.00000000000000       outlon=
+0:    306.970417791912       outlat=  -34.3086842883976     
+0:  i1,i2,j1,j2=        3684        3685        1483        1484
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=         291  slmask(i)=   1.00000000000000       outlon=
+0:    306.970448926009       outlat=  -33.5644199850593     
+0:   unable to interpolate.  filled with nearest point value at          610  point
+0:  s
+0:   in fixrdc for mon=          12  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7          82         255         192         144
+0:          112          10          18           1           1
+0:   kpds(11-20)=           0           0           3           0           1
+0:            3          30           1           2           0
+0:   kpds(21-  )=          21           4
+0:   input grib file dates=          18          12           1           0
+0:  imax,jmax,ijmax=        3072        1536     4718592
+0:   kgds( 1-12)=           4        3072        1536       89910           0
+0:          128      -89910        -117         117         768           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  gaussian grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:         3072        1536     4718592  0.117000000000000     
+0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+0:  i1,i2,j1,j2=        2606        2607        1067        1068
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+0:    305.390520636752       outlat=  -35.0792491205017     
+0:  i1,i2,j1,j2=        2613        2614        1071        1072
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           2  slmask(i)=   1.00000000000000       outlon=
+0:    306.176859897517       outlat=  -35.4398854626259     
+0:   unable to interpolate.  filled with nearest point value at          724  point
+0:  s
+0:   in fixrdc for mon=          12  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7          82         255         192         144
+0:          112        2600          18           1           1
+0:   kpds(11-20)=           0           0           3           0           1
+0:            3          30           1           2           0
+0:   kpds(21-  )=          21           4
+0:   input grib file dates=          18          12           1           0
+0:  imax,jmax,ijmax=        3072        1536     4718592
+0:   kgds( 1-12)=           4        3072        1536       89910           0
+0:          128      -89910        -117         117         768           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  gaussian grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:         3072        1536     4718592  0.117000000000000     
+0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+0:  i1,i2,j1,j2=        2606        2607        1067        1068
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+0:    305.390520636752       outlat=  -35.0792491205017     
+0:  i1,i2,j1,j2=        2613        2614        1071        1072
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           2  slmask(i)=   1.00000000000000       outlon=
+0:    306.176859897517       outlat=  -35.4398854626259     
+0:   unable to interpolate.  filled with nearest point value at          724  point
+0:  s
+0:   in fixrdc for mon=          12  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7          82         255         192         144
+0:          112       10340          18           1           1
+0:   kpds(11-20)=           0           0           3           0           1
+0:            3          30           1           2           0
+0:   kpds(21-  )=          21           4
+0:   input grib file dates=          18          12           1           0
+0:  imax,jmax,ijmax=        3072        1536     4718592
+0:   kgds( 1-12)=           4        3072        1536       89910           0
+0:          128      -89910        -117         117         768           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  gaussian grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:         3072        1536     4718592  0.117000000000000     
+0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+0:  i1,i2,j1,j2=        2606        2607        1067        1068
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+0:    305.390520636752       outlat=  -35.0792491205017     
+0:  i1,i2,j1,j2=        2613        2614        1071        1072
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           2  slmask(i)=   1.00000000000000       outlon=
+0:    306.176859897517       outlat=  -35.4398854626259     
+0:   unable to interpolate.  filled with nearest point value at          724  point
+0:  s
+0:   in fixrdc for mon=          12  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7          82         255         192         144
+0:          112       25800          18           1           1
+0:   kpds(11-20)=           0           0           3           0           1
+0:            3          30           1           2           0
+0:   kpds(21-  )=          21           4
+0:   input grib file dates=          18          12           1           0
+0:  imax,jmax,ijmax=        3072        1536     4718592
+0:   kgds( 1-12)=           4        3072        1536       89910           0
+0:          128      -89910        -117         117         768           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  gaussian grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:         3072        1536     4718592  0.117000000000000     
+0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+0:  i1,i2,j1,j2=        2606        2607        1067        1068
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+0:    305.390520636752       outlat=  -35.0792491205017     
+0:  i1,i2,j1,j2=        2613        2614        1071        1072
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           2  slmask(i)=   1.00000000000000       outlon=
+0:    306.176859897517       outlat=  -35.4398854626259     
+0:   unable to interpolate.  filled with nearest point value at          724  point
+0:  s
+0:   in fixrdc for mon=          12  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/IMS-NIC.blended
+0:  .ice.monthly.clim.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/IMS-NIC.blended
+0:  .ice.monthly.clim.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7         120         255         192          91
+0:          102           0          20           1           1
+0:   kpds(11-20)=           0           0           1           0           0
+0:           10          31           1           2           0
+0:   kpds(21-  )=          21           2
+0:   input grib file dates=          20          12           1           0
+0:  imax,jmax,ijmax=        7200        3600    25920000
+0:   kgds( 1-12)=           0        7200        3600       89975          25
+0:          192      -89975      359975          50          50           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  lat/lon grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:         7200        3600    25920000  5.000000000000000E-002
+0:  -5.000000000000000E-002 T  2.500000000000000E-002   89.9750000000000     
+0:   in fixrdc for mon=          12  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_snoclim.
+0:  1.875.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_snoclim.
+0:  1.875.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7          80         255         128          65
+0:            1           0           0           1           1
+0:   kpds(11-20)=           0           0           3           0           1
+0:           51           1           1           2           0
+0:   kpds(21-  )=          20           1
+0:   input grib file dates=           0          12           1           0
+0:  imax,jmax,ijmax=         192          95       18240
+0:   kgds( 1-12)=           0         192          95       88125           0
+0:          128      -88125       -1875        1875        1875           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  lat/lon grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:          192          95       18240   1.87500000000000     
+0:   -1.87500000000000      T  0.000000000000000E+000   88.1250000000000     
+0:  i1,i2,j1,j2=         165         166          66          67
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=         100  slmask(i)=   1.00000000000000       outlon=
+0:    307.771090644862       outlat=  -35.3996153430557     
+0:  i1,i2,j1,j2=         165         166          66          67
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=         196  slmask(i)=   1.00000000000000       outlon=
+0:    307.771122039142       outlat=  -34.6526163922770     
+0:   unable to interpolate.  filled with nearest point value at          375  point
+0:  s
+0:  roughness length to be set from igbp veg type
+0:   in fixrdc_tile for mon=          12  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.vegetation_greenness.tile1.nc
+0:  climatological vegetation cover read in for mon=          12
+0:   in fixrdc_tile for mon=           1  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.snowfree_albedo.tile1.nc
+0:   in fixrdc_tile for mon=           1  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.snowfree_albedo.tile1.nc
+0:   in fixrdc_tile for mon=           1  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.snowfree_albedo.tile1.nc
+0:   in fixrdc_tile for mon=           1  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.snowfree_albedo.tile1.nc
+0:   in fixrdc for mon=           1  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/RTGSST.1982.201
+0:  2.monthly.clim.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/RTGSST.1982.201
+0:  2.monthly.clim.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7         120         173         128          11
+0:            1           0          96           1          15
+0:   kpds(11-20)=           0           0           1           0           0
+0:           10           0           1           1           0
+0:   kpds(21-  )=          20           2
+0:   input grib file dates=          96           1          15           0
+0:  imax,jmax,ijmax=        4320        2160     9331200
+0:   kgds( 1-12)=           0        4320        2160       89958          42
+0:          128      -89958         -42          83          83           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  lat/lon grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:         4320        2160     9331200  8.300000000000000E-002
+0:  -8.300000000000000E-002 T  4.200000000000000E-002   89.9580000000000     
+0:  i1,i2,j1,j2=        3684        3685        1492        1493
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=         195  slmask(i)=   1.00000000000000       outlon=
+0:    306.970417791912       outlat=  -34.3086842883976     
+0:  i1,i2,j1,j2=        3684        3685        1483        1484
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=         291  slmask(i)=   1.00000000000000       outlon=
+0:    306.970448926009       outlat=  -33.5644199850593     
+0:   unable to interpolate.  filled with nearest point value at          610  point
+0:  s
+0:   in fixrdc for mon=           1  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7          82         255         192         144
+0:          112          10          18           1           1
+0:   kpds(11-20)=           0           0           3           0           1
+0:            3          30           1           2           0
+0:   kpds(21-  )=          21           4
+0:   input grib file dates=          18           1           1           0
+0:  imax,jmax,ijmax=        3072        1536     4718592
+0:   kgds( 1-12)=           4        3072        1536       89910           0
+0:          128      -89910        -117         117         768           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  gaussian grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:         3072        1536     4718592  0.117000000000000     
+0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+0:  i1,i2,j1,j2=        2606        2607        1067        1068
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+0:    305.390520636752       outlat=  -35.0792491205017     
+0:  i1,i2,j1,j2=        2613        2614        1071        1072
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           2  slmask(i)=   1.00000000000000       outlon=
+0:    306.176859897517       outlat=  -35.4398854626259     
+0:   unable to interpolate.  filled with nearest point value at          724  point
+0:  s
+0:   in fixrdc for mon=           1  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7          82         255         192         144
+0:          112        2600          18           1           1
+0:   kpds(11-20)=           0           0           3           0           1
+0:            3          30           1           2           0
+0:   kpds(21-  )=          21           4
+0:   input grib file dates=          18           1           1           0
+0:  imax,jmax,ijmax=        3072        1536     4718592
+0:   kgds( 1-12)=           4        3072        1536       89910           0
+0:          128      -89910        -117         117         768           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  gaussian grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:         3072        1536     4718592  0.117000000000000     
+0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+0:  i1,i2,j1,j2=        2606        2607        1067        1068
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+0:    305.390520636752       outlat=  -35.0792491205017     
+0:  i1,i2,j1,j2=        2613        2614        1071        1072
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           2  slmask(i)=   1.00000000000000       outlon=
+0:    306.176859897517       outlat=  -35.4398854626259     
+0:   unable to interpolate.  filled with nearest point value at          724  point
+0:  s
+0:   in fixrdc for mon=           1  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7          82         255         192         144
+0:          112       10340          18           1           1
+0:   kpds(11-20)=           0           0           3           0           1
+0:            3          30           1           2           0
+0:   kpds(21-  )=          21           4
+0:   input grib file dates=          18           1           1           0
+0:  imax,jmax,ijmax=        3072        1536     4718592
+0:   kgds( 1-12)=           4        3072        1536       89910           0
+0:          128      -89910        -117         117         768           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  gaussian grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:         3072        1536     4718592  0.117000000000000     
+0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+0:  i1,i2,j1,j2=        2606        2607        1067        1068
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+0:    305.390520636752       outlat=  -35.0792491205017     
+0:  i1,i2,j1,j2=        2613        2614        1071        1072
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           2  slmask(i)=   1.00000000000000       outlon=
+0:    306.176859897517       outlat=  -35.4398854626259     
+0:   unable to interpolate.  filled with nearest point value at          724  point
+0:  s
+0:   in fixrdc for mon=           1  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_soilmgld
+0:  as.statsgo.t1534.3072.1536.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7          82         255         192         144
+0:          112       25800          18           1           1
+0:   kpds(11-20)=           0           0           3           0           1
+0:            3          30           1           2           0
+0:   kpds(21-  )=          21           4
+0:   input grib file dates=          18           1           1           0
+0:  imax,jmax,ijmax=        3072        1536     4718592
+0:   kgds( 1-12)=           4        3072        1536       89910           0
+0:          128      -89910        -117         117         768           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  gaussian grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:         3072        1536     4718592  0.117000000000000     
+0:   -99.0000000000000      T  0.000000000000000E+000   99.0000000000000     
+0:  i1,i2,j1,j2=        2606        2607        1067        1068
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           1  slmask(i)=   1.00000000000000       outlon=
+0:    305.390520636752       outlat=  -35.0792491205017     
+0:  i1,i2,j1,j2=        2613        2614        1071        1072
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=           2  slmask(i)=   1.00000000000000       outlon=
+0:    306.176859897517       outlat=  -35.4398854626259     
+0:   unable to interpolate.  filled with nearest point value at          724  point
+0:  s
+0:   in fixrdc for mon=           1  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/IMS-NIC.blended
+0:  .ice.monthly.clim.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/IMS-NIC.blended
+0:  .ice.monthly.clim.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7         120         255         192          91
+0:          102           0          20           1           1
+0:   kpds(11-20)=           0           0           1           0           0
+0:           10          31           1           2           0
+0:   kpds(21-  )=          21           2
+0:   input grib file dates=          20           1           1           0
+0:  imax,jmax,ijmax=        7200        3600    25920000
+0:   kgds( 1-12)=           0        7200        3600       89975          25
+0:          192      -89975      359975          50          50           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  lat/lon grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:         7200        3600    25920000  5.000000000000000E-002
+0:  -5.000000000000000E-002 T  2.500000000000000E-002   89.9750000000000     
+0:   in fixrdc for mon=           1  fngrib=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_snoclim.
+0:  1.875.grb
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am/global_snoclim.
+0:  1.875.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7          80         255         128          65
+0:            1           0           0           1           1
+0:   kpds(11-20)=           0           0           3           0           1
+0:           51           1           1           2           0
+0:   kpds(21-  )=          20           1
+0:   input grib file dates=           0           1           1           0
+0:  imax,jmax,ijmax=         192          95       18240
+0:   kgds( 1-12)=           0         192          95       88125           0
+0:          128      -88125       -1875        1875        1875           0
+0:            0
+0:   kgds(13-22)=           0  1072693248           0  1072693248           0
+0:   1072693248           0         255           0  1072693248
+0:  lat/lon grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:          192          95       18240   1.87500000000000     
+0:   -1.87500000000000      T  0.000000000000000E+000   88.1250000000000     
+0:  i1,i2,j1,j2=         165         166          66          67
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=         100  slmask(i)=   1.00000000000000       outlon=
+0:    307.771090644862       outlat=  -35.3996153430557     
+0:  i1,i2,j1,j2=         165         166          66          67
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=         196  slmask(i)=   1.00000000000000       outlon=
+0:    307.771122039142       outlat=  -34.6526163922770     
+0:   unable to interpolate.  filled with nearest point value at          375  point
+0:  s
+0:  roughness length to be set from igbp veg type
+0:   in fixrdc_tile for mon=           1  filename=
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog/C96/sfc/C96.m
+0:  x500.vegetation_greenness.tile1.nc
+0:  climatological vegetation cover read in for mon=           1
+0:   mon1s=          12  mon2s=           1  sea1s=          10  sea2s=           1
+0:  monthly albedo weights are   0.822580645161290       for k           1
+0:   0.177419354838710       for k           2
+0:  qc of sea ice
+0:   sea ice over land mask at         3293  points (   35.7313368055556      
+0:  percent)
+0:   
+0:  qc of snow
+0:  snow set to zero over open sea at         5194  points (
+0:    56.3585069444444      percent)
+0:  performing qc of snow     mode=           1 (0=count only, 1=replace)
+0:  set snow temp to tsfsmx if greater
+0:  performing qc of tsfc     mode=           1 (0=count only, 1=replace)
+0:  performing qc of tsf2     mode=           1 (0=count only, 1=replace)
+0:  performing qc of albc     mode=           1 (0=count only, 1=replace)
+0:  performing qc of albc     mode=           1 (0=count only, 1=replace)
+0:  performing qc of albc     mode=           1 (0=count only, 1=replace)
+0:  performing qc of albc     mode=           1 (0=count only, 1=replace)
+0:  performing qc of zorc     mode=           1 (0=count only, 1=replace)
+0:  performing qc of tg3c     mode=           1 (0=count only, 1=replace)
+0:  open ocean min. check. lat=-35.8 lon= 307.0 fld=-0.9990E+03 to  0.2000E+03
+0:  open ocean min. check. lat=-36.1 lon= 307.8 fld=-0.9990E+03 to  0.2000E+03
+0:  open ocean min check.  modified to    200.0 at  5194 points  56.4percent
+0:  performing qc of stc-1            mode=           1 (0=count only, 1=replace)
+0:  open ocean min. check. lat=-35.8 lon= 307.0 fld= 0.0000E+00 to  0.1000E+01
+0:  open ocean min. check. lat=-36.1 lon= 307.8 fld= 0.0000E+00 to  0.1000E+01
+0:  open ocean min check.  modified to      1.0 at  5194 points  56.4percent
+0:  performing qc of stc-2            mode=           1 (0=count only, 1=replace)
+0:  open ocean min. check. lat=-35.8 lon= 307.0 fld= 0.0000E+00 to  0.1000E+01
+0:  open ocean min. check. lat=-36.1 lon= 307.8 fld= 0.0000E+00 to  0.1000E+01
+0:  open ocean min check.  modified to      1.0 at  5194 points  56.4percent
+0:  performing qc of stc-3            mode=           1 (0=count only, 1=replace)
+0:  open ocean min. check. lat=-35.8 lon= 307.0 fld= 0.0000E+00 to  0.1000E+01
+0:  open ocean min. check. lat=-36.1 lon= 307.8 fld= 0.0000E+00 to  0.1000E+01
+0:  open ocean min check.  modified to      1.0 at  5194 points  56.4percent
+0:  performing qc of stc-4            mode=           1 (0=count only, 1=replace)
+0:  open ocean min. check. lat=-35.8 lon= 307.0 fld= 0.0000E+00 to  0.1000E+01
+0:  open ocean min. check. lat=-36.1 lon= 307.8 fld= 0.0000E+00 to  0.1000E+01
+0:  open ocean min check.  modified to      1.0 at  5194 points  56.4percent
+0:  performing qc of stc-1            mode=           1 (0=count only, 1=replace)
+0:  performing qc of stc-2            mode=           1 (0=count only, 1=replace)
+0:  performing qc of stc-3            mode=           1 (0=count only, 1=replace)
+0:  performing qc of stc-4            mode=           1 (0=count only, 1=replace)
+0:  performing qc of vegc     mode=           1 (0=count only, 1=replace)
+0:  open ocean min. check. lat=-35.8 lon= 307.0 fld=-0.9990E+03 to  0.0000E+00
+0:  open ocean min. check. lat=-36.1 lon= 307.8 fld=-0.9990E+03 to  0.0000E+00
+0:  open ocean min check.  modified to      0.0 at  5194 points  56.4percent
+0:  performing qc of vetc     mode=           1 (0=count only, 1=replace)
+0:  open ocean max. check. lat=-35.8 lon= 307.0 fld= 0.1700E+02 to  0.0000E+00
+0:  open ocean max. check. lat=-36.1 lon= 307.8 fld= 0.1700E+02 to  0.0000E+00
+0:  open sea max check. modified to      0.0 at  5194 points  56.4percent
+0:  performing qc of sotc     mode=           1 (0=count only, 1=replace)
+0:  open ocean max. check. lat=-35.8 lon= 307.0 fld= 0.1400E+02 to  0.0000E+00
+0:  open ocean max. check. lat=-36.1 lon= 307.8 fld= 0.1400E+02 to  0.0000E+00
+0:  open sea max check. modified to      0.0 at  5194 points  56.4percent
+0:  performing qc of socc     mode=           1 (0=count only, 1=replace)
+0:  open ocean max. check. lat=-35.8 lon= 307.0 fld= 0.4000E+01 to  0.0000E+00
+0:  open ocean max. check. lat=-36.1 lon= 307.8 fld= 0.4000E+01 to  0.0000E+00
+0:  open sea max check. modified to      0.0 at  5194 points  56.4percent
+0:  performing qc of sihc     mode=           1 (0=count only, 1=replace)
+0:  performing qc of vmnc     mode=           1 (0=count only, 1=replace)
+0:  open ocean min. check. lat=-35.8 lon= 307.0 fld=-0.9990E+03 to  0.0000E+00
+0:  open ocean min. check. lat=-36.1 lon= 307.8 fld=-0.9990E+03 to  0.0000E+00
+0:  open ocean min check.  modified to      0.0 at  5194 points  56.4percent
+0:  performing qc of vmxc     mode=           1 (0=count only, 1=replace)
+0:  open ocean min. check. lat=-35.8 lon= 307.0 fld=-0.9990E+03 to  0.0000E+00
+0:  open ocean min. check. lat=-36.1 lon= 307.8 fld=-0.9990E+03 to  0.0000E+00
+0:  open ocean min check.  modified to      0.0 at  5194 points  56.4percent
+0:  performing qc of slpc     mode=           1 (0=count only, 1=replace)
+0:  open ocean min. check. lat=-35.8 lon= 307.0 fld=-0.9990E+03 to  0.0000E+00
+0:  open ocean min. check. lat=-36.1 lon= 307.8 fld=-0.9990E+03 to  0.0000E+00
+0:  open ocean min check.  modified to      0.0 at  5194 points  56.4percent
+0:  performing qc of absc     mode=           1 (0=count only, 1=replace)
+0:  open ocean min. check. lat=-35.8 lon= 307.0 fld=-0.9990E+03 to  0.0000E+00
+0:  open ocean min. check. lat=-36.1 lon= 307.8 fld=-0.9990E+03 to  0.0000E+00
+0:  open ocean min check.  modified to      0.0 at  5194 points  56.4percent
+0:  ==============
+0:     analysis
+0:  ==============
+0:  no tsf analysis available.  climatology used
+0:  no albedo analysis available.  climatology used
+0:  no vegfalbedo analysis available.  climatology used
+0:  no soil wetness analysis available.  climatology used
+0:  no snow/snocov analysis available.  climatology used
+0:   forecast jy,jm,jd,jh,rjday=        2021          12          21           0
+0:    355.000000000000     
+0:  forecast jy,jm,jd,jh=        2021          12          21           0
+0:   
+0:  ************************************************
+0:   file 
+0:  /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96_atm3DVar_5e0982c0
+0:  /gdas.20211221/00/obs/gdas.t00z.seaice.5min.blend.grb opened. unit=          51
+0:   first grib record.
+0:   kpds( 1-10)=           7         120         173         128          91
+0:          102           0          21          12          20
+0:   kpds(11-20)=           0           0           1           0           0
+0:           10           0           1           2           0
+0:   kpds(21-  )=          21           2
+0:   input grib file dates=          21          12          20           0
+0:   no matching dates found.  start searching nearest matching dates (going back).
+0:   decremented dates=        2021          12          20          -1
+0:   input grib file dates=          21          12          20           0
+0:   kgds( 1-12)=           0        4320        2160       89958          42
+0:          128      -89958      359958          83          83           0
+0:            0
+0:   kgds(13-22)=           0           0           0           0           0
+0:            0           0         255           0           0
+0:  lat/lon grid
+0:  imax,jmax,ijmax,dlon,dlat,ijordr,wlon,rnlat=
+0:         4320        2160     9331200  8.300000000000000E-002
+0:  -8.300000000000000E-002 T  4.200000000000000E-002   89.9580000000000     
+0:  i1,i2,j1,j2=        3684        3685        1492        1493
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=         195  slmask(i)=   1.00000000000000       outlon=
+0:    306.970417791912       outlat=  -34.3086842883976     
+0:  i1,i2,j1,j2=        3693        3694        1487        1488
+0:  rslmsk=  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+0:   0.000000000000000E+000
+0:  i=         292  slmask(i)=   1.00000000000000       outlon=
+0:    307.771153159860       outlat=  -33.9047903119983     
+0:   unable to interpolate.  filled with nearest point value at          598  point
+0:  s
+4:  
+4:  ADJUST TREF FROM GSI INCREMENT
+4: mon1,mon2,rjday,wei1,wei2=  12   1  355.000    0.823    0.177
+4:  mlat_sst, mlon_sst :         2160        4320
+4:   sstclm : sstclm
+2:  
+2:  ADJUST TREF FROM GSI INCREMENT
+2: mon1,mon2,rjday,wei1,wei2=  12   1  355.000    0.823    0.177
+2:  mlat_sst, mlon_sst :         2160        4320
+2:   sstclm : sstclm
+0:  ice concentration analysis provided.
+0:  no srfc roughness analysis available. climatology used
+0:  no deep soil temp analy available.  climatology used
+0:  no vegetation cover anly available. climatology used
+0:  no vegetation type anly available. climatology used
+0:  no soil type anly available. climatology used
+0:  no soil color anly available. climatology used
+0:  no shdmin anly available. climatology used
+0:  no shdmax anly available. climatology used
+0:  no slope type anly available. climatology used
+0:  no snoalb anly available. climatology used
+0:  qc of sea ice
+0:   sea ice over land mask at         3657  points (   39.6809895833333      
+0:  percent)
+0:  performing qc of siha     mode=           1 (0=count only, 1=replace)
+0:  bare land max. check. lat=-34.3 lon= 305.4 fld= 0.471000E+01 to  0.000000E+00
+0:  bare land max. check. lat=-33.6 lon= 305.4 fld= 0.471000E+01 to  0.000000E+00
+0:  bare land max check. modified to      0.0 at  3657 points  39.7percent
+0:   
+0:  qc of snow
+0:  snow set to zero over open sea at         5194  points (
+0:    56.3585069444444      percent)
+0:  performing qc of sncva    mode=           1 (0=count only, 1=replace)
+0:  snodpth
+0:   
+0:  qc of snow
+0:  snow set to zero over open sea at         5194  points (
+0:    56.3585069444444      percent)
+0:  set snow temp to tsfsmx if greater
+0:  performing qc of snowa    mode=           1 (0=count only, 1=replace)
+0:  performing qc of tsfa     mode=           1 (0=count only, 1=replace)
+0:  performing qc of alba     mode=           1 (0=count only, 1=replace)
+0:  performing qc of alba     mode=           1 (0=count only, 1=replace)
+0:  performing qc of alba     mode=           1 (0=count only, 1=replace)
+0:  performing qc of alba     mode=           1 (0=count only, 1=replace)
+0:  performing qc of zora     mode=           1 (0=count only, 1=replace)
+0:  performing qc of tg3a     mode=           1 (0=count only, 1=replace)
+0:  performing qc of smca-1           mode=           1 (0=count only, 1=replace)
+0:  performing qc of smca-2           mode=           1 (0=count only, 1=replace)
+0:  performing qc of smca-3           mode=           1 (0=count only, 1=replace)
+0:  performing qc of smca-4           mode=           1 (0=count only, 1=replace)
+0:  performing qc of stca-1           mode=           1 (0=count only, 1=replace)
+0:  performing qc of stca-2           mode=           1 (0=count only, 1=replace)
+0:  performing qc of stca-3           mode=           1 (0=count only, 1=replace)
+0:  performing qc of stca-4           mode=           1 (0=count only, 1=replace)
+0:  performing qc of vega     mode=           1 (0=count only, 1=replace)
+0:  performing qc of veta     mode=           1 (0=count only, 1=replace)
+0:  performing qc of sota     mode=           1 (0=count only, 1=replace)
+0:  performing qc of soca     mode=           1 (0=count only, 1=replace)
+1:  
+1:  ADJUST TREF FROM GSI INCREMENT
+1: mon1,mon2,rjday,wei1,wei2=  12   1  355.000    0.823    0.177
+0:  performing qc of vmna     mode=           1 (0=count only, 1=replace)
+0:  performing qc of vmxa     mode=           1 (0=count only, 1=replace)
+0:  performing qc of slpa     mode=           1 (0=count only, 1=replace)
+0:  performing qc of absa     mode=           1 (0=count only, 1=replace)
+0:  ==============
+0:    fcst guess
+0:  ==============
+1:  mlat_sst, mlon_sst :         2160        4320
+0:   
+0:  qcsli
+0:   inconsistency of slmask between forecast and analysis corrected at 
+0:          612  points    6.64062500000000      percent
+0:  performing qc of snof     mode=           1 (0=count only, 1=replace)
+0:  performing qc of tsff     mode=           1 (0=count only, 1=replace)
+0:  performing qc of albf     mode=           1 (0=count only, 1=replace)
+0:  performing qc of albf     mode=           1 (0=count only, 1=replace)
+0:  performing qc of albf     mode=           1 (0=count only, 1=replace)
+0:  performing qc of albf     mode=           1 (0=count only, 1=replace)
+0:  performing qc of zorf     mode=           1 (0=count only, 1=replace)
+0:  bare land min. check. lat=-35.1 lon= 305.4 fld= 0.785660E-02 to  0.100000E+01
+0:  bare land min. check. lat=-35.4 lon= 306.2 fld= 0.663056E-02 to  0.100000E+01
+0:  sno covrd land min. check. lat= 36.4 lon=  29.8 fld= 0.2141E-01 to  0.1000E+01
+0:  sno covrd land min. check. lat= 37.2 lon=  29.8 fld= 0.3153E-01 to  0.1000E+01
+0:  bare land min check.  modified to      1.0 at   699 points      7.6percent
+0:  snow covered land min check. modified to      1.0 at     2 points   0.0percent
+0:  performing qc of tg3f     mode=           1 (0=count only, 1=replace)
+0:  performing qc of sihf     mode=           1 (0=count only, 1=replace)
+0:  performing qc of smcfcw-1         mode=           1 (0=count only, 1=replace)
+0:  bare land max. check. lat=-35.1 lon= 305.4 fld= 0.100000E+01 to  0.550000E+00
+0:  bare land max. check. lat=-35.4 lon= 306.2 fld= 0.100000E+01 to  0.550000E+00
+0:  bare land max check. modified to      0.6 at   612 points   6.6percent
+0:  performing qc of smcfcw-2         mode=           1 (0=count only, 1=replace)
+0:  bare land max. check. lat=-35.1 lon= 305.4 fld= 0.100000E+01 to  0.550000E+00
+0:  bare land max. check. lat=-35.4 lon= 306.2 fld= 0.100000E+01 to  0.550000E+00
+0:  bare land max check. modified to      0.6 at   612 points   6.6percent
+0:  performing qc of smcfcw-3         mode=           1 (0=count only, 1=replace)
+0:  bare land max. check. lat=-35.1 lon= 305.4 fld= 0.100000E+01 to  0.550000E+00
+0:  bare land max. check. lat=-35.4 lon= 306.2 fld= 0.100000E+01 to  0.550000E+00
+0:  bare land max check. modified to      0.6 at   612 points   6.6percent
+0:  performing qc of smcfcw-4         mode=           1 (0=count only, 1=replace)
+0:  bare land max. check. lat=-35.1 lon= 305.4 fld= 0.100000E+01 to  0.550000E+00
+0:  bare land max. check. lat=-35.4 lon= 306.2 fld= 0.100000E+01 to  0.550000E+00
+0:  bare land max check. modified to      0.6 at   612 points   6.6percent
+0:  performing qc of stcf-1           mode=           1 (0=count only, 1=replace)
+0:  performing qc of stcf-2           mode=           1 (0=count only, 1=replace)
+0:  performing qc of stcf-3           mode=           1 (0=count only, 1=replace)
+0:  performing qc of stcf-4           mode=           1 (0=count only, 1=replace)
+0:  performing qc of vegf     mode=           1 (0=count only, 1=replace)
+0:  performing qc of vetf     mode=           1 (0=count only, 1=replace)
+0:  bare land min. check. lat=-35.1 lon= 305.4 fld= 0.000000E+00 to  0.100000E+01
+0:  bare land min. check. lat=-35.4 lon= 306.2 fld= 0.000000E+00 to  0.100000E+01
+0:  bare land min check.  modified to      1.0 at   612 points      6.6percent
+0:  performing qc of sotf     mode=           1 (0=count only, 1=replace)
+0:  bare land min. check. lat=-35.1 lon= 305.4 fld= 0.000000E+00 to  0.100000E+01
+0:  bare land min. check. lat=-35.4 lon= 306.2 fld= 0.000000E+00 to  0.100000E+01
+0:  bare land min check.  modified to      1.0 at   612 points      6.6percent
+0:  performing qc of socf     mode=           1 (0=count only, 1=replace)
+0:  bare land min. check. lat=-35.1 lon= 305.4 fld= 0.000000E+00 to  0.100000E+01
+0:  bare land min. check. lat=-35.4 lon= 306.2 fld= 0.000000E+00 to  0.100000E+01
+0:  sno covrd land min. check. lat= 42.6 lon= 359.8 fld= 0.0000E+00 to  0.1000E+01
+0:  sno covrd land min. check. lat= 42.5 lon=   0.8 fld= 0.0000E+00 to  0.1000E+01
+0:  bare land min check.  modified to      1.0 at  4013 points     43.5percent
+0:  snow covered land min check. modified to      1.0 at     9 points   0.1percent
+0:  performing qc of vmnf     mode=           1 (0=count only, 1=replace)
+0:  performing qc of vmxf     mode=           1 (0=count only, 1=replace)
+0:  performing qc of slpf     mode=           1 (0=count only, 1=replace)
+0:  bare land min. check. lat=-35.1 lon= 305.4 fld= 0.000000E+00 to  0.100000E+01
+0:  bare land min. check. lat=-35.4 lon= 306.2 fld= 0.000000E+00 to  0.100000E+01
+0:  bare land min check.  modified to      1.0 at   612 points      6.6percent
+0:  performing qc of absf     mode=           1 (0=count only, 1=replace)
+0:  bare land min. check. lat=-35.1 lon= 305.4 fld= 0.000000E+00 to  0.100000E-01
+0:  bare land min. check. lat=-35.4 lon= 306.2 fld= 0.000000E+00 to  0.100000E-01
+0:  bare land min check.  modified to      0.0 at   612 points      6.6percent
+0:  qc of snow and sea-ice analysis
+0:  ==============
+0:     merging
+0:  ==============
+0: rtsfl,ralbl,raisl,rsnol,rsmcl,rzorl,rvegl=  1.000  0.000  0.000  1.000  1.000  0.996  0.996  0.996  0.000  0.000
+0: rtsfs,ralbs,raiss,rsnos,rsmcs,rzors,rvegs,rsics=  1.000  0.000  0.000  1.000  0.000  0.000  0.000  0.000  1.000  1.000  0.000
+0: rsoc1, rsocs =  0.000  0.000
+0:  dbgx-- csmcl:   1.00000000000000       0.995842001845110     
+0:   0.995842001845110       0.995842001845110     
+0:  dbgx-- rsmcl:   1.00000000000000       0.995842001845110     
+0:   0.995842001845110       0.995842001845110     
+0:  dbgx-- csnol, csnos:   1.00000000000000        1.00000000000000     
+0:  dbgx-- rsnol, rsnos:   1.00000000000000        1.00000000000000     
+0:  newice
+0:  set snow temp to tsfsmx if greater
+0:  snow sfc.  tsf set to    305.000000000000       at            9  points 
+0:   9.765625000000000E-002 percent
+5:  
+5:  ADJUST TREF FROM GSI INCREMENT
+5: mon1,mon2,rjday,wei1,wei2=  12   1  355.000    0.823    0.177
+0:  performing qc of snowm    mode=           0 (0=count only, 1=replace)
+0:  performing qc of tsfm     mode=           0 (0=count only, 1=replace)
+0:  performing qc of albm     mode=           0 (0=count only, 1=replace)
+0:  performing qc of albm     mode=           0 (0=count only, 1=replace)
+5:  mlat_sst, mlon_sst :         2160        4320
+0:  performing qc of albm     mode=           0 (0=count only, 1=replace)
+0:  performing qc of albm     mode=           0 (0=count only, 1=replace)
+5:   sstclm : sstclm
+0:  performing qc of zorm     mode=           0 (0=count only, 1=replace)
+0:  performing qc of stcm-1           mode=           0 (0=count only, 1=replace)
+0:  performing qc of stcm-2           mode=           0 (0=count only, 1=replace)
+0:  performing qc of stcm-3           mode=           0 (0=count only, 1=replace)
+0:  performing qc of stcm-4           mode=           0 (0=count only, 1=replace)
+0:  performing qc of smcm-1           mode=           0 (0=count only, 1=replace)
+0:  performing qc of smcm-2           mode=           0 (0=count only, 1=replace)
+0:  performing qc of smcm-3           mode=           0 (0=count only, 1=replace)
+0:  performing qc of smcm-4           mode=           0 (0=count only, 1=replace)
+0:  performing qc of vegm     mode=           1 (0=count only, 1=replace)
+0:  performing qc of vetm     mode=           1 (0=count only, 1=replace)
+0:  performing qc of sotm     mode=           1 (0=count only, 1=replace)
+0:  performing qc of socm     mode=           1 (0=count only, 1=replace)
+0:  performing qc of sihm     mode=           1 (0=count only, 1=replace)
+0:  performing qc of vmnm     mode=           1 (0=count only, 1=replace)
+0:  performing qc of vmxm     mode=           1 (0=count only, 1=replace)
+0:  performing qc of slpm     mode=           1 (0=count only, 1=replace)
+0:  performing qc of absm     mode=           1 (0=count only, 1=replace)
+3:  
+3:  ADJUST TREF FROM GSI INCREMENT
+3: mon1,mon2,rjday,wei1,wei2=  12   1  355.000    0.823    0.177
+0:  ==============
+0:  final results
+0:  ==============
+0:  dbgx --fixratio: F T T T
+3:  mlat_sst, mlon_sst :         2160        4320
+0:  
+0:  ADJUST TREF FROM GSI INCREMENT
+0: mon1,mon2,rjday,wei1,wei2=  12   1  355.000    0.823    0.177
+3:   sstclm : sstclm
+0:  mlat_sst, mlon_sst :         2160        4320
+0:   sstclm : sstclm
+1:   sstclm : sstclm
+4:   sstclm : sstclm
+2:   sstclm : sstclm
+5:   sstclm : sstclm
+1:   sstclm : sstclm
+3:   sstclm : sstclm
+0:   sstclm : sstclm
+2: tf_clm_ta, min, max :   271.350  312.826
+4: tf_clm_ta, min, max :   271.350  312.826
+2: tf_clm_trend, min, max :    -0.053    0.031
+2:  
+2:  interpolate from lat/lon grids to any one grid with known lat/lon
+4: tf_clm_trend, min, max :    -0.053    0.031
+4:  
+4:  interpolate from lat/lon grids to any one grid with known lat/lon
+1: tf_clm_ta, min, max :   271.350  312.826
+5: tf_clm_ta, min, max :   271.350  312.826
+3: tf_clm_ta, min, max :   271.350  312.826
+1: tf_clm_trend, min, max :    -0.053    0.031
+1:  
+1:  interpolate from lat/lon grids to any one grid with known lat/lon
+5: tf_clm_trend, min, max :    -0.053    0.031
+5:  
+5:  interpolate from lat/lon grids to any one grid with known lat/lon
+0: tf_clm_ta, min, max :   271.350  312.826
+3: tf_clm_trend, min, max :    -0.053    0.031
+3:  
+3:  interpolate from lat/lon grids to any one grid with known lat/lon
+0: tf_clm_trend, min, max :    -0.053    0.031
+0:  
+0:  interpolate from lat/lon grids to any one grid with known lat/lon
+4:  
+4:  interpolate from lat/lon grids to any one grid with known lat/lon
+1:  
+1:  interpolate from lat/lon grids to any one grid with known lat/lon
+2:  
+2:  interpolate from lat/lon grids to any one grid with known lat/lon
+5:  
+5:  interpolate from lat/lon grids to any one grid with known lat/lon
+3:  
+3:  interpolate from lat/lon grids to any one grid with known lat/lon
+1: mon1,mon2,rjday,wei1,wei2=  12   1  355.000    0.823    0.177
+0:  
+0:  interpolate from lat/lon grids to any one grid with known lat/lon
+5: mon1,mon2,rjday,wei1,wei2=  12   1  355.000    0.823    0.177
+4: mon1,mon2,rjday,wei1,wei2=  12   1  355.000    0.823    0.177
+2: mon1,mon2,rjday,wei1,wei2=  12   1  355.000    0.823    0.177
+3: mon1,mon2,rjday,wei1,wei2=  12   1  355.000    0.823    0.177
+0: mon1,mon2,rjday,wei1,wei2=  12   1  355.000    0.823    0.177
+5: sal_clm_ta, min, max :     5.000   60.000
+5:  
+5:  interpolate from lat/lon grids to any one grid with known lat/lon
+2: sal_clm_ta, min, max :     5.000   60.000
+2:  
+2:  interpolate from lat/lon grids to any one grid with known lat/lon
+4: sal_clm_ta, min, max :     5.000   60.000
+4:  
+4:  interpolate from lat/lon grids to any one grid with known lat/lon
+0: sal_clm_ta, min, max :     5.000   60.000
+0:  
+0:  interpolate from lat/lon grids to any one grid with known lat/lon
+1: sal_clm_ta, min, max :     5.000   60.000
+1:  
+1:  interpolate from lat/lon grids to any one grid with known lat/lon
+3: sal_clm_ta, min, max :     5.000   60.000
+3:  
+3:  interpolate from lat/lon grids to any one grid with known lat/lon
+5:  
+5:  READ INPUT GSI DATA FROM: dtfanl
+1:  
+1:  READ INPUT GSI DATA FROM: dtfanl
+5:  
+5:  ADJUST NSST USING GSI INCREMENTS ON GAUSSIAN GRID
+4:  
+4:  READ INPUT GSI DATA FROM: dtfanl
+2:  
+2:  READ INPUT GSI DATA FROM: dtfanl
+4:  
+4:  ADJUST NSST USING GSI INCREMENTS ON GAUSSIAN GRID
+3:  
+3:  READ INPUT GSI DATA FROM: dtfanl
+5:  
+5:  MAXIMUM SEARCH IS            5  GAUSSIAN POINTS.
+5:  
+5: nset_thaw_s,tf(iii,jjj),tclm :    1  274.242  273.169
+5: nset_thaw_s,tf(iii,jjj),tclm :    2  273.803  273.209
+5: nset_thaw_s,tf(iii,jjj),tclm :    3  273.458  273.000
+5: nset_thaw_s,tf(iii,jjj),tclm :    4  273.081  272.740
+5: nset_thaw_s,tf(iii,jjj),tclm :    5  272.816  272.693
+5: nset_thaw_s,tf(iii,jjj),tclm :    6  272.728  272.722
+5: nset_thaw_s,tf(iii,jjj),tclm :    7  272.715  272.802
+5: nset_thaw_s,tf(iii,jjj),tclm :    8  273.774  272.829
+5: nset_thaw_s,tf(iii,jjj),tclm :    9  273.242  272.650
+5: nset_thaw_s,tf(iii,jjj),tclm :   10  273.458  272.329
+5: nset_thaw_s,tf(iii,jjj),tclm :   11  272.816  272.330
+5: nset_thaw_s,tf(iii,jjj),tclm :   12  272.730  272.505
+5: nset_thaw_s,tf(iii,jjj),tclm :   13  272.730  272.614
+5: nset_thaw_s,tf(iii,jjj),tclm :   14  272.730  272.792
+5: nset_thaw_s,tf(iii,jjj),tclm :   15  273.392  272.801
+5: nset_thaw_s,tf(iii,jjj),tclm :   16  273.049  272.439
+5: nset_thaw_s,tf(iii,jjj),tclm :   17  273.242  272.279
+5: nset_thaw_s,tf(iii,jjj),tclm :   18  272.730  272.167
+5: nset_thaw_s,tf(iii,jjj),tclm :   19  272.712  272.794
+5: nset_thaw_s,tf(iii,jjj),tclm :   20  271.899  272.547
+5: nset_thaw_s,tf(iii,jjj),tclm :   21  273.166  272.576
+5: nset_thaw_s,tf(iii,jjj),tclm :   22  273.049  272.050
+5: nset_thaw_i,tf_ice :    1  271.295
+5: nset_thaw_i,tf_ice :    2  271.295
+5: nset_thaw_i,tf_ice :    3  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :   23  272.684  272.319
+5: nset_thaw_s,tf(iii,jjj),tclm :   24  272.684  272.792
+5: nset_thaw_s,tf(iii,jjj),tclm :   25  272.684  272.965
+5: nset_thaw_s,tf(iii,jjj),tclm :   26  272.916  273.020
+5: nset_thaw_s,tf(iii,jjj),tclm :   27  271.643  272.449
+5: nset_thaw_s,tf(iii,jjj),tclm :   28  271.614  272.367
+5: nset_thaw_s,tf(iii,jjj),tclm :   29  272.684  272.708
+5: nset_thaw_s,tf(iii,jjj),tclm :   30  272.893  272.730
+5: nset_thaw_s,tf(iii,jjj),tclm :   31  272.893  272.871
+5: nset_thaw_s,tf(iii,jjj),tclm :   32  271.295  273.031
+5: nset_thaw_s,tf(iii,jjj),tclm :   33  271.758  272.395
+5: nset_thaw_s,tf(iii,jjj),tclm :   34  271.659  272.350
+5: nset_thaw_s,tf(iii,jjj),tclm :   35  271.230  272.544
+5: nset_thaw_s,tf(iii,jjj),tclm :   36  272.893  272.464
+5: nset_thaw_s,tf(iii,jjj),tclm :   37  272.893  272.405
+5: nset_thaw_s,tf(iii,jjj),tclm :   38  273.722  272.456
+5: nset_thaw_s,tf(iii,jjj),tclm :   39  271.825  272.391
+5: nset_thaw_s,tf(iii,jjj),tclm :   40  271.643  272.370
+5: nset_thaw_s,tf(iii,jjj),tclm :   41  271.807  272.243
+5: nset_thaw_s,tf(iii,jjj),tclm :   42  271.758  272.173
+5: nset_thaw_s,tf(iii,jjj),tclm :   43  271.659  272.101
+5: nset_thaw_s,tf(iii,jjj),tclm :   44  271.295  272.283
+5: nset_thaw_s,tf(iii,jjj),tclm :   45  271.216  272.152
+5: nset_thaw_s,tf(iii,jjj),tclm :   46  272.099  272.646
+5: nset_thaw_s,tf(iii,jjj),tclm :   47  272.030  272.433
+5: nset_thaw_s,tf(iii,jjj),tclm :   48  271.891  272.378
+5: nset_thaw_s,tf(iii,jjj),tclm :   49  271.726  272.286
+5: nset_thaw_i,tf_ice :    4  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :   50  273.697  272.836
+5: nset_thaw_s,tf(iii,jjj),tclm :   51  272.102  272.694
+5: nset_thaw_s,tf(iii,jjj),tclm :   52  272.071  272.474
+5: nset_thaw_s,tf(iii,jjj),tclm :   53  272.099  272.340
+5: nset_thaw_s,tf(iii,jjj),tclm :   54  272.030  272.229
+5: nset_thaw_s,tf(iii,jjj),tclm :   55  271.891  272.180
+5: nset_thaw_s,tf(iii,jjj),tclm :   56  273.164  272.933
+5: nset_thaw_s,tf(iii,jjj),tclm :   57  272.137  272.810
+5: nset_thaw_s,tf(iii,jjj),tclm :   58  272.053  272.629
+5: nset_thaw_s,tf(iii,jjj),tclm :   59  272.102  272.421
+5: nset_thaw_s,tf(iii,jjj),tclm :   60  271.210  272.076
+5: nset_thaw_s,tf(iii,jjj),tclm :   61  272.611  272.860
+5: nset_thaw_s,tf(iii,jjj),tclm :   62  272.187  272.773
+5: nset_thaw_s,tf(iii,jjj),tclm :   63  272.137  272.523
+5: nset_thaw_i,tf_ice :    5  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :   64  271.900  271.980
+5: nset_thaw_s,tf(iii,jjj),tclm :   65  271.210  272.279
+5: nset_thaw_s,tf(iii,jjj),tclm :   66  272.381  272.559
+5: nset_thaw_s,tf(iii,jjj),tclm :   67  272.381  272.834
+5: nset_thaw_s,tf(iii,jjj),tclm :   68  272.250  272.758
+5: nset_thaw_s,tf(iii,jjj),tclm :   69  272.187  272.423
+5: nset_thaw_i,tf_ice :    6  271.295
+5: nset_thaw_i,tf_ice :    7  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :   70  271.900  272.035
+5: nset_thaw_s,tf(iii,jjj),tclm :   71  271.900  272.211
+5: nset_thaw_s,tf(iii,jjj),tclm :   72  271.900  272.398
+5: nset_thaw_s,tf(iii,jjj),tclm :   73  271.295  272.335
+5: nset_thaw_s,tf(iii,jjj),tclm :   74  272.549  272.569
+5: nset_thaw_s,tf(iii,jjj),tclm :   75  272.487  273.067
+5: nset_thaw_s,tf(iii,jjj),tclm :   76  272.275  272.640
+5: nset_thaw_s,tf(iii,jjj),tclm :   77  272.250  272.347
+5: nset_thaw_i,tf_ice :    8  271.305
+5: nset_thaw_i,tf_ice :    9  271.295
+5: nset_thaw_i,tf_ice :   10  271.295
+5: nset_thaw_i,tf_ice :   11  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :   78  271.900  272.020
+5: nset_thaw_s,tf(iii,jjj),tclm :   79  271.900  272.378
+5: nset_thaw_s,tf(iii,jjj),tclm :   80  271.882  272.664
+5: nset_thaw_s,tf(iii,jjj),tclm :   81  272.367  272.760
+5: nset_thaw_s,tf(iii,jjj),tclm :   82  272.564  273.051
+5: nset_thaw_s,tf(iii,jjj),tclm :   83  272.487  272.635
+5: nset_thaw_i,tf_ice :   12  271.305
+5: nset_thaw_i,tf_ice :   13  271.295
+5: nset_thaw_i,tf_ice :   14  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :   84  271.882  272.099
+5: nset_thaw_s,tf(iii,jjj),tclm :   85  271.882  272.446
+5: nset_thaw_s,tf(iii,jjj),tclm :   86  271.295  271.776
+5: nset_thaw_s,tf(iii,jjj),tclm :   87  272.561  272.625
+5: nset_thaw_s,tf(iii,jjj),tclm :   88  272.647  273.116
+5: nset_thaw_s,tf(iii,jjj),tclm :   89  272.564  272.631
+5: nset_thaw_i,tf_ice :   15  271.305
+5: nset_thaw_i,tf_ice :   16  271.305
+5: nset_thaw_i,tf_ice :   17  271.295
+5: nset_thaw_i,tf_ice :   18  271.295
+5: nset_thaw_i,tf_ice :   19  271.295
+5: nset_thaw_i,tf_ice :   20  271.295
+5: nset_thaw_i,tf_ice :   21  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :   90  271.221  271.977
+5: nset_thaw_s,tf(iii,jjj),tclm :   91  271.221  272.173
+5: nset_thaw_s,tf(iii,jjj),tclm :   92  271.832  272.376
+5: nset_thaw_s,tf(iii,jjj),tclm :   93  272.519  273.121
+5: nset_thaw_s,tf(iii,jjj),tclm :   94  272.647  272.607
+5: nset_thaw_i,tf_ice :   22  271.295
+5: nset_thaw_i,tf_ice :   23  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :   95  271.209  271.570
+5: nset_thaw_s,tf(iii,jjj),tclm :   96  271.209  271.638
+5: nset_thaw_s,tf(iii,jjj),tclm :   97  271.209  271.679
+5: nset_thaw_s,tf(iii,jjj),tclm :   98  271.209  271.765
+5: nset_thaw_s,tf(iii,jjj),tclm :   99  271.209  271.967
+5: nset_thaw_s,tf(iii,jjj),tclm :  100  271.222  272.097
+5: nset_thaw_s,tf(iii,jjj),tclm :  101  271.222  272.191
+5: nset_thaw_s,tf(iii,jjj),tclm :  102  271.221  272.214
+5: nset_thaw_s,tf(iii,jjj),tclm :  103  271.218  272.417
+5: nset_thaw_s,tf(iii,jjj),tclm :  104  272.414  273.135
+5: nset_thaw_s,tf(iii,jjj),tclm :  105  272.519  272.575
+5: nset_thaw_i,tf_ice :   24  271.305
+5: nset_thaw_s,tf(iii,jjj),tclm :  106  269.456  271.540
+5: nset_thaw_s,tf(iii,jjj),tclm :  107  271.209  271.704
+5: nset_thaw_s,tf(iii,jjj),tclm :  108  271.224  272.210
+5: nset_thaw_s,tf(iii,jjj),tclm :  109  271.222  272.139
+5: nset_thaw_s,tf(iii,jjj),tclm :  110  272.560  272.714
+5: nset_thaw_s,tf(iii,jjj),tclm :  111  272.344  272.986
+5: nset_thaw_s,tf(iii,jjj),tclm :  112  272.414  272.549
+5: nset_thaw_i,tf_ice :   25  271.309
+5: nset_thaw_s,tf(iii,jjj),tclm :  113  269.456  271.596
+5: nset_thaw_s,tf(iii,jjj),tclm :  114  272.326  272.994
+5: nset_thaw_s,tf(iii,jjj),tclm :  115  272.344  272.465
+5: nset_thaw_i,tf_ice :   26  271.305
+5: nset_thaw_s,tf(iii,jjj),tclm :  116  269.456  271.724
+5: nset_thaw_s,tf(iii,jjj),tclm :  117  272.745  272.843
+5: nset_thaw_s,tf(iii,jjj),tclm :  118  272.392  273.033
+5: nset_thaw_s,tf(iii,jjj),tclm :  119  272.326  272.503
+5: nset_thaw_s,tf(iii,jjj),tclm :  120  271.295  272.285
+5: nset_thaw_s,tf(iii,jjj),tclm :  121  273.008  272.752
+5: nset_thaw_s,tf(iii,jjj),tclm :  122  272.425  272.874
+5: nset_thaw_s,tf(iii,jjj),tclm :  123  272.392  272.483
+5: nset_thaw_s,tf(iii,jjj),tclm :  124  272.970  272.766
+5: nset_thaw_s,tf(iii,jjj),tclm :  125  272.354  272.859
+5: nset_thaw_s,tf(iii,jjj),tclm :  126  272.425  272.514
+3:  
+3:  ADJUST NSST USING GSI INCREMENTS ON GAUSSIAN GRID
+5: nset_thaw_s,tf(iii,jjj),tclm :  127  271.205  271.780
+5: nset_thaw_s,tf(iii,jjj),tclm :  128  272.891  272.748
+5: nset_thaw_s,tf(iii,jjj),tclm :  129  272.379  272.724
+5: nset_thaw_s,tf(iii,jjj),tclm :  130  271.295  272.004
+5: nset_thaw_s,tf(iii,jjj),tclm :  131  271.295  272.442
+5: nset_thaw_s,tf(iii,jjj),tclm :  132  271.295  272.135
+5: nset_thaw_s,tf(iii,jjj),tclm :  133  272.850  272.713
+5: nset_thaw_s,tf(iii,jjj),tclm :  134  272.180  272.772
+5: nset_thaw_s,tf(iii,jjj),tclm :  135  271.295  272.556
+5: nset_thaw_s,tf(iii,jjj),tclm :  136  272.713  272.550
+5: nset_thaw_s,tf(iii,jjj),tclm :  137  272.884  272.709
+5: nset_thaw_s,tf(iii,jjj),tclm :  138  271.357  272.672
+5: nset_thaw_s,tf(iii,jjj),tclm :  139  272.437  272.811
+5: nset_thaw_s,tf(iii,jjj),tclm :  140  271.357  272.692
+5: nset_thaw_s,tf(iii,jjj),tclm :  141  272.513  272.627
+5: nset_thaw_s,tf(iii,jjj),tclm :  142  272.513  272.819
+5: nset_thaw_s,tf(iii,jjj),tclm :  143  271.774  272.683
+5: nset_thaw_i,tf_ice :   27  271.305
+5: nset_thaw_s,tf(iii,jjj),tclm :  144  272.513  272.641
+5: nset_thaw_s,tf(iii,jjj),tclm :  145  272.470  272.795
+5: nset_thaw_s,tf(iii,jjj),tclm :  146  271.728  272.686
+5: nset_thaw_i,tf_ice :   28  271.305
+5: nset_thaw_s,tf(iii,jjj),tclm :  147  272.470  272.638
+5: nset_thaw_s,tf(iii,jjj),tclm :  148  272.402  272.741
+5: nset_thaw_s,tf(iii,jjj),tclm :  149  271.737  272.660
+5: nset_thaw_s,tf(iii,jjj),tclm :  150  272.402  272.633
+5: nset_thaw_s,tf(iii,jjj),tclm :  151  272.388  272.758
+5: nset_thaw_i,tf_ice :   29  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :  152  272.367  272.768
+5: nset_thaw_s,tf(iii,jjj),tclm :  153  271.881  272.718
+5: nset_thaw_s,tf(iii,jjj),tclm :  154  272.195  272.413
+5: nset_thaw_s,tf(iii,jjj),tclm :  155  272.367  272.516
+5: nset_thaw_s,tf(iii,jjj),tclm :  156  272.329  272.699
+5: nset_thaw_s,tf(iii,jjj),tclm :  157  271.917  272.815
+5: nset_thaw_s,tf(iii,jjj),tclm :  158  272.042  272.587
+5: nset_thaw_s,tf(iii,jjj),tclm :  159  272.303  272.732
+5: nset_thaw_s,tf(iii,jjj),tclm :  160  272.044  272.694
+5: nset_thaw_s,tf(iii,jjj),tclm :  161  272.044  272.376
+5: nset_thaw_s,tf(iii,jjj),tclm :  162  272.195  272.561
+5: nset_thaw_s,tf(iii,jjj),tclm :  163  272.044  272.852
+5: nset_thaw_s,tf(iii,jjj),tclm :  164  272.044  272.385
+5: nset_thaw_s,tf(iii,jjj),tclm :  165  273.150  271.771
+5: nset_thaw_s,tf(iii,jjj),tclm :  166  272.184  272.496
+5: nset_thaw_s,tf(iii,jjj),tclm :  167  272.184  272.633
+5: nset_thaw_s,tf(iii,jjj),tclm :  168  272.092  272.819
+5: nset_thaw_s,tf(iii,jjj),tclm :  169  271.216  272.399
+5: nset_thaw_s,tf(iii,jjj),tclm :  170  272.275  272.705
+5: nset_thaw_s,tf(iii,jjj),tclm :  171  272.188  272.870
+5: nset_thaw_s,tf(iii,jjj),tclm :  172  272.275  272.562
+5: nset_thaw_s,tf(iii,jjj),tclm :  173  272.373  272.767
+5: nset_thaw_s,tf(iii,jjj),tclm :  174  272.335  273.003
+5: nset_thaw_s,tf(iii,jjj),tclm :  175  272.188  272.420
+5: nset_thaw_s,tf(iii,jjj),tclm :  176  272.481  272.721
+5: nset_thaw_s,tf(iii,jjj),tclm :  177  272.477  272.923
+5: nset_thaw_s,tf(iii,jjj),tclm :  178  269.712  272.652
+5: nset_thaw_s,tf(iii,jjj),tclm :  179  272.762  272.449
+5: nset_thaw_s,tf(iii,jjj),tclm :  180  272.649  272.622
+5: nset_thaw_s,tf(iii,jjj),tclm :  181  272.587  273.019
+5: nset_thaw_s,tf(iii,jjj),tclm :  182  272.762  272.532
+5: nset_thaw_s,tf(iii,jjj),tclm :  183  272.790  273.017
+5: nset_thaw_s,tf(iii,jjj),tclm :  184  272.383  272.310
+5: nset_thaw_s,tf(iii,jjj),tclm :  185  272.383  272.495
+5: nset_thaw_s,tf(iii,jjj),tclm :  186  272.768  272.628
+5: nset_thaw_s,tf(iii,jjj),tclm :  187  273.102  273.106
+5: nset_thaw_s,tf(iii,jjj),tclm :  188  272.383  272.478
+5: nset_thaw_s,tf(iii,jjj),tclm :  189  272.383  272.603
+5: nset_thaw_i,tf_ice :   30  271.295
+5: nset_thaw_i,tf_ice :   31  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :  190  271.961  272.428
+5: nset_thaw_s,tf(iii,jjj),tclm :  191  272.385  272.529
+5: nset_thaw_s,tf(iii,jjj),tclm :  192  272.385  272.595
+5: nset_thaw_s,tf(iii,jjj),tclm :  193  272.385  272.652
+5: nset_thaw_i,tf_ice :   32  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :  194  271.961  272.509
+5: nset_thaw_s,tf(iii,jjj),tclm :  195  271.961  272.585
+5: nset_thaw_s,tf(iii,jjj),tclm :  196  271.994  272.666
+5: nset_thaw_i,tf_ice :   33  271.295
+5: nset_thaw_i,tf_ice :   34  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :  197  271.961  272.530
+5: nset_thaw_s,tf(iii,jjj),tclm :  198  271.961  272.627
+5: nset_thaw_s,tf(iii,jjj),tclm :  199  271.305  272.299
+5: nset_thaw_s,tf(iii,jjj),tclm :  200  271.295  271.991
+5: nset_thaw_s,tf(iii,jjj),tclm :  201  271.305  271.918
+5: nset_thaw_i,tf_ice :   35  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :  202  271.952  272.577
+5: nset_thaw_s,tf(iii,jjj),tclm :  203  271.952  272.672
+5: nset_thaw_s,tf(iii,jjj),tclm :  204  272.818  272.464
+5: nset_thaw_s,tf(iii,jjj),tclm :  205  271.305  272.339
+5: nset_thaw_s,tf(iii,jjj),tclm :  206  271.295  271.919
+5: nset_thaw_s,tf(iii,jjj),tclm :  207  271.295  271.844
+5: nset_thaw_i,tf_ice :   36  271.305
+5: nset_thaw_i,tf_ice :   37  271.342
+5: nset_thaw_i,tf_ice :   38  271.342
+5: nset_thaw_i,tf_ice :   39  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :  208  271.812  272.533
+5: nset_thaw_s,tf(iii,jjj),tclm :  209  271.812  272.600
+5: nset_thaw_s,tf(iii,jjj),tclm :  210  271.954  272.703
+5: nset_thaw_s,tf(iii,jjj),tclm :  211  272.727  272.576
+5: nset_thaw_s,tf(iii,jjj),tclm :  212  271.295  271.911
+5: nset_thaw_s,tf(iii,jjj),tclm :  213  271.295  271.922
+5: nset_thaw_s,tf(iii,jjj),tclm :  214  271.295  272.132
+5: nset_thaw_i,tf_ice :   40  271.342
+5: nset_thaw_i,tf_ice :   41  271.342
+5: nset_thaw_i,tf_ice :   42  271.342
+5: nset_thaw_s,tf(iii,jjj),tclm :  215  272.965  272.789
+5: nset_thaw_s,tf(iii,jjj),tclm :  216  273.043  272.232
+5: nset_thaw_i,tf_ice :   43  271.295
+5: nset_thaw_i,tf_ice :   44  271.342
+5: nset_thaw_s,tf(iii,jjj),tclm :  217  271.765  272.517
+5: nset_thaw_s,tf(iii,jjj),tclm :  218  271.695  272.637
+5: nset_thaw_s,tf(iii,jjj),tclm :  219  273.145  272.856
+5: nset_thaw_s,tf(iii,jjj),tclm :  220  273.043  272.717
+5: nset_thaw_s,tf(iii,jjj),tclm :  221  273.043  272.602
+5: nset_thaw_s,tf(iii,jjj),tclm :  222  273.154  272.379
+5: nset_thaw_i,tf_ice :   45  271.295
+5: nset_thaw_i,tf_ice :   46  271.295
+5: nset_thaw_i,tf_ice :   47  271.295
+5: nset_thaw_i,tf_ice :   48  271.295
+5: nset_thaw_i,tf_ice :   49  271.295
+5: nset_thaw_i,tf_ice :   50  271.295
+5: nset_thaw_i,tf_ice :   51  271.295
+5: nset_thaw_i,tf_ice :   52  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :  223  271.765  272.559
+5: nset_thaw_s,tf(iii,jjj),tclm :  224  271.295  272.795
+5: nset_thaw_s,tf(iii,jjj),tclm :  225  273.081  272.994
+5: nset_thaw_s,tf(iii,jjj),tclm :  226  273.154  272.906
+5: nset_thaw_s,tf(iii,jjj),tclm :  227  273.154  272.535
+5: nset_thaw_i,tf_ice :   53  271.295
+5: nset_thaw_i,tf_ice :   54  271.295
+5: nset_thaw_i,tf_ice :   55  271.295
+5: nset_thaw_i,tf_ice :   56  271.295
+5: nset_thaw_i,tf_ice :   57  271.295
+5: nset_thaw_i,tf_ice :   58  271.295
+5: nset_thaw_i,tf_ice :   59  271.295
+5: nset_thaw_i,tf_ice :   60  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :  228  271.808  272.657
+5: nset_thaw_s,tf(iii,jjj),tclm :  229  273.247  273.038
+5: nset_thaw_s,tf(iii,jjj),tclm :  230  273.431  272.675
+5: nset_thaw_i,tf_ice :   61  271.295
+5: nset_thaw_i,tf_ice :   62  271.295
+5: nset_thaw_i,tf_ice :   63  271.295
+5: nset_thaw_i,tf_ice :   64  271.295
+5: nset_thaw_i,tf_ice :   65  271.295
+5: nset_thaw_i,tf_ice :   66  271.295
+5: nset_thaw_i,tf_ice :   67  271.295
+5: nset_thaw_i,tf_ice :   68  271.295
+5: nset_thaw_i,tf_ice :   69  271.295
+5: nset_thaw_i,tf_ice :   70  271.295
+5: nset_thaw_i,tf_ice :   71  271.295
+5: nset_thaw_i,tf_ice :   72  271.295
+5: nset_thaw_i,tf_ice :   73  271.312
+5: nset_thaw_s,tf(iii,jjj),tclm :  231  271.808  272.605
+5: nset_thaw_s,tf(iii,jjj),tclm :  232  273.564  273.117
+5: nset_thaw_s,tf(iii,jjj),tclm :  233  273.267  272.640
+5: nset_thaw_s,tf(iii,jjj),tclm :  234  273.267  272.370
+5: nset_thaw_i,tf_ice :   74  271.295
+5: nset_thaw_i,tf_ice :   75  271.295
+5: nset_thaw_i,tf_ice :   76  271.295
+5: nset_thaw_i,tf_ice :   77  271.295
+5: nset_thaw_i,tf_ice :   78  271.295
+5: nset_thaw_i,tf_ice :   79  271.295
+5: nset_thaw_i,tf_ice :   80  271.295
+5: nset_thaw_i,tf_ice :   81  271.295
+5: nset_thaw_i,tf_ice :   82  271.295
+5: nset_thaw_i,tf_ice :   83  271.295
+5: nset_thaw_i,tf_ice :   84  271.295
+5: nset_thaw_i,tf_ice :   85  271.295
+5: nset_thaw_i,tf_ice :   86  271.295
+5: nset_thaw_i,tf_ice :   87  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :  235  271.295  272.658
+5: nset_thaw_s,tf(iii,jjj),tclm :  236  271.295  272.813
+5: nset_thaw_s,tf(iii,jjj),tclm :  237  273.312  272.864
+5: nset_thaw_s,tf(iii,jjj),tclm :  238  273.155  272.734
+5: nset_thaw_i,tf_ice :   88  271.295
+5: nset_thaw_i,tf_ice :   89  271.342
+5: nset_thaw_i,tf_ice :   90  271.342
+5: nset_thaw_i,tf_ice :   91  271.342
+5: nset_thaw_i,tf_ice :   92  271.342
+5: nset_thaw_i,tf_ice :   93  271.295
+5: nset_thaw_i,tf_ice :   94  271.295
+5: nset_thaw_i,tf_ice :   95  271.295
+5: nset_thaw_i,tf_ice :   96  271.295
+5: nset_thaw_i,tf_ice :   97  271.295
+5: nset_thaw_i,tf_ice :   98  271.295
+5: nset_thaw_i,tf_ice :   99  271.295
+5: nset_thaw_i,tf_ice :  100  271.295
+5: nset_thaw_i,tf_ice :  101  271.295
+5: nset_thaw_i,tf_ice :  102  271.295
+5: nset_thaw_i,tf_ice :  103  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :  239  271.887  272.511
+5: nset_thaw_s,tf(iii,jjj),tclm :  240  271.295  272.742
+5: nset_thaw_s,tf(iii,jjj),tclm :  241  273.271  273.044
+5: nset_thaw_s,tf(iii,jjj),tclm :  242  272.917  272.627
+5: nset_thaw_s,tf(iii,jjj),tclm :  243  272.917  272.412
+5: nset_thaw_i,tf_ice :  104  271.342
+5: nset_thaw_i,tf_ice :  105  271.342
+5: nset_thaw_i,tf_ice :  106  271.295
+5: nset_thaw_i,tf_ice :  107  271.295
+5: nset_thaw_i,tf_ice :  108  271.295
+5: nset_thaw_i,tf_ice :  109  271.295
+5: nset_thaw_i,tf_ice :  110  271.295
+5: nset_thaw_i,tf_ice :  111  271.295
+5: nset_thaw_i,tf_ice :  112  271.295
+5: nset_thaw_i,tf_ice :  113  271.295
+5: nset_thaw_i,tf_ice :  114  271.295
+5: nset_thaw_i,tf_ice :  115  271.295
+5: nset_thaw_i,tf_ice :  116  271.295
+5: nset_thaw_i,tf_ice :  117  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :  244  272.181  272.329
+5: nset_thaw_s,tf(iii,jjj),tclm :  245  272.181  272.350
+5: nset_thaw_s,tf(iii,jjj),tclm :  246  271.887  272.445
+5: nset_thaw_s,tf(iii,jjj),tclm :  247  271.887  272.616
+5: nset_thaw_s,tf(iii,jjj),tclm :  248  273.037  272.923
+5: nset_thaw_s,tf(iii,jjj),tclm :  249  272.983  272.613
+5: nset_thaw_s,tf(iii,jjj),tclm :  250  272.664  272.439
+5: nset_thaw_s,tf(iii,jjj),tclm :  251  272.664  272.342
+5: nset_thaw_i,tf_ice :  118  271.295
+5: nset_thaw_i,tf_ice :  119  271.295
+5: nset_thaw_i,tf_ice :  120  271.295
+5: nset_thaw_i,tf_ice :  121  271.295
+5: nset_thaw_i,tf_ice :  122  271.295
+5: nset_thaw_i,tf_ice :  123  271.295
+5: nset_thaw_i,tf_ice :  124  271.295
+5: nset_thaw_i,tf_ice :  125  271.295
+5: nset_thaw_i,tf_ice :  126  271.295
+5: nset_thaw_i,tf_ice :  127  271.295
+5: nset_thaw_i,tf_ice :  128  271.295
+5: nset_thaw_i,tf_ice :  129  271.295
+5: nset_thaw_i,tf_ice :  130  271.295
+5: nset_thaw_i,tf_ice :  131  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :  252  272.137  272.306
+5: nset_thaw_s,tf(iii,jjj),tclm :  253  272.181  272.338
+5: nset_thaw_s,tf(iii,jjj),tclm :  254  272.181  272.461
+5: nset_thaw_s,tf(iii,jjj),tclm :  255  271.882  272.547
+5: nset_thaw_s,tf(iii,jjj),tclm :  256  273.068  272.710
+5: nset_thaw_s,tf(iii,jjj),tclm :  257  272.586  272.495
+5: nset_thaw_s,tf(iii,jjj),tclm :  258  272.389  272.344
+5: nset_thaw_s,tf(iii,jjj),tclm :  259  272.389  272.396
+5: nset_thaw_s,tf(iii,jjj),tclm :  260  272.603  272.853
+5: nset_thaw_s,tf(iii,jjj),tclm :  261  272.914  272.665
+5: nset_thaw_s,tf(iii,jjj),tclm :  262  272.914  272.457
+5: nset_thaw_s,tf(iii,jjj),tclm :  263  272.914  272.320
+5: nset_thaw_s,tf(iii,jjj),tclm :  264  272.897  272.144
+5: nset_thaw_i,tf_ice :  132  271.295
+5: nset_thaw_i,tf_ice :  133  271.295
+5: nset_thaw_i,tf_ice :  134  271.295
+5: nset_thaw_i,tf_ice :  135  271.295
+5: nset_thaw_i,tf_ice :  136  271.295
+5: nset_thaw_i,tf_ice :  137  271.295
+5: nset_thaw_s,tf(iii,jjj),tclm :  265  272.113  272.326
+5: nset_thaw_s,tf(iii,jjj),tclm :  266  272.113  272.342
+5: nset_thaw_s,tf(iii,jjj),tclm :  267  272.137  272.361
+5: nset_thaw_s,tf(iii,jjj),tclm :  268  272.137  272.391
+5: nset_thaw_s,tf(iii,jjj),tclm :  269  272.137  272.414
+5: nset_thaw_s,tf(iii,jjj),tclm :  270  272.181  272.507
+5: nset_thaw_s,tf(iii,jjj),tclm :  271  272.583  272.611
+5: nset_thaw_s,tf(iii,jjj),tclm :  272  272.603  272.639
+5: nset_thaw_s,tf(iii,jjj),tclm :  273  272.914  273.061
+5: nset_thaw_s,tf(iii,jjj),tclm :  274  272.914  272.753
+5: nset_thaw_s,tf(iii,jjj),tclm :  275  272.914  272.611
+5: nset_thaw_s,tf(iii,jjj),tclm :  276  272.897  272.466
+5: nset_thaw_s,tf(iii,jjj),tclm :  277  272.897  272.372
+5: nset_thaw_s,tf(iii,jjj),tclm :  278  273.223  272.231
+5: nset_thaw_s,tf(iii,jjj),tclm :  279  273.084  272.263
+5: nset_thaw_s,tf(iii,jjj),tclm :  280  273.046  272.259
+5: nset_thaw_s,tf(iii,jjj),tclm :  281  272.588  272.310
+5: nset_thaw_s,tf(iii,jjj),tclm :  282  272.503  272.353
+5: nset_thaw_s,tf(iii,jjj),tclm :  283  272.347  272.357
+5: nset_thaw_s,tf(iii,jjj),tclm :  284  272.207  272.381
+5: nset_thaw_s,tf(iii,jjj),tclm :  285  272.096  272.393
+5: nset_thaw_s,tf(iii,jjj),tclm :  286  272.091  272.365
+5: nset_thaw_s,tf(iii,jjj),tclm :  287  272.113  272.408
+5: nset_thaw_s,tf(iii,jjj),tclm :  288  272.113  272.459
+5: nset_thaw_s,tf(iii,jjj),tclm :  289  272.113  272.485
+5: nset_thaw_s,tf(iii,jjj),tclm :  290  272.137  272.541
+5: nset_thaw_s,tf(iii,jjj),tclm :  291  272.716  272.994
+5: nset_thaw_s,tf(iii,jjj),tclm :  292  272.914  273.449
+5: nset_thaw_s,tf(iii,jjj),tclm :  293  272.699  272.761
+5: nset_thaw_s,tf(iii,jjj),tclm :  294  273.459  272.672
+5: nset_thaw_s,tf(iii,jjj),tclm :  295  273.223  272.531
+5: nset_thaw_s,tf(iii,jjj),tclm :  296  273.068  272.441
+5: nset_thaw_s,tf(iii,jjj),tclm :  297  273.084  272.413
+5: nset_thaw_s,tf(iii,jjj),tclm :  298  273.046  272.424
+5: nset_thaw_s,tf(iii,jjj),tclm :  299  272.854  272.380
+5: nset_thaw_s,tf(iii,jjj),tclm :  300  272.688  272.394
+5: nset_thaw_s,tf(iii,jjj),tclm :  301  272.588  272.486
+5: nset_thaw_s,tf(iii,jjj),tclm :  302  272.503  272.498
+5: nset_thaw_s,tf(iii,jjj),tclm :  303  272.347  272.520
+5: nset_thaw_s,tf(iii,jjj),tclm :  304  272.207  272.487
+5: nset_thaw_s,tf(iii,jjj),tclm :  305  272.096  272.471
+5: nset_thaw_s,tf(iii,jjj),tclm :  306  272.091  272.474
+5: nset_thaw_s,tf(iii,jjj),tclm :  307  272.115  272.463
+5: nset_thaw_s,tf(iii,jjj),tclm :  308  272.148  272.506
+5: nset_thaw_s,tf(iii,jjj),tclm :  309  272.113  272.526
+5: statistics of grids number processed for tile : 
+5:  nintp =     6640
+5: nset_thaw,nset_thaw_s,nset_thaw_i,nset_thaw_c =     446     309     137       0
+5:  nsearched =      346
+5:  nfill,nfill_tice,nfill_clm =     32    32     0
+5:  nice =     1283
+5:  nland =      915
+0:  
+0:  READ INPUT GSI DATA FROM: dtfanl
+5:  
+5:  update OUTPUT SFC DATA TO: ./fnbgso.006
+4:  
+4:  MAXIMUM SEARCH IS            5  GAUSSIAN POINTS.
+4:  
+1:  
+1:  ADJUST NSST USING GSI INCREMENTS ON GAUSSIAN GRID
+4: statistics of grids number processed for tile : 
+4:  nintp =     6702
+4: nset_thaw,nset_thaw_s,nset_thaw_i,nset_thaw_c =       0       0       0       0
+4:  nsearched =       35
+4:  nfill,nfill_tice,nfill_clm =      0     0     0
+4:  nice =        0
+4:  nland =     2479
+4:  
+4:  update OUTPUT SFC DATA TO: ./fnbgso.005
+3:  
+3:  MAXIMUM SEARCH IS            5  GAUSSIAN POINTS.
+3:  
+3: statistics of grids number processed for tile : 
+3:  nintp =     8331
+3: nset_thaw,nset_thaw_s,nset_thaw_i,nset_thaw_c =       0       0       0       0
+3:  nsearched =       16
+3:  nfill,nfill_tice,nfill_clm =      0     0     0
+3:  nice =        0
+3:  nland =      869
+3:  
+3:  update OUTPUT SFC DATA TO: ./fnbgso.004
+1:  
+1:  MAXIMUM SEARCH IS            5  GAUSSIAN POINTS.
+1:  
+1: statistics of grids number processed for tile : 
+1:  nintp =     5960
+1: nset_thaw,nset_thaw_s,nset_thaw_i,nset_thaw_c =       0       0       0       0
+1:  nsearched =       94
+1:  nfill,nfill_tice,nfill_clm =      0     0     0
+1:  nice =        0
+1:  nland =     3162
+1:  
+1:  update OUTPUT SFC DATA TO: ./fnbgso.002
+2:  
+2:  ADJUST NSST USING GSI INCREMENTS ON GAUSSIAN GRID
+0:  
+0:  ADJUST NSST USING GSI INCREMENTS ON GAUSSIAN GRID
+2:  
+2:  MAXIMUM SEARCH IS            5  GAUSSIAN POINTS.
+2:  
+2: nset_thaw_s,tf(iii,jjj),tclm :    1  280.745  277.758
+2: nset_thaw_s,tf(iii,jjj),tclm :    2  278.774  276.787
+2: nset_thaw_s,tf(iii,jjj),tclm :    3  278.774  276.393
+2: nset_thaw_i,tf_ice :    1  272.545
+2: nset_thaw_s,tf(iii,jjj),tclm :    4  282.005  279.316
+2: nset_thaw_s,tf(iii,jjj),tclm :    5  278.608  276.586
+2: nset_thaw_s,tf(iii,jjj),tclm :    6  278.348  276.947
+2: nset_thaw_s,tf(iii,jjj),tclm :    7  280.745  276.311
+2: nset_thaw_s,tf(iii,jjj),tclm :    8  278.774  276.267
+2: nset_thaw_i,tf_ice :    2  272.629
+2: nset_thaw_s,tf(iii,jjj),tclm :    9  275.919  275.420
+2: nset_thaw_s,tf(iii,jjj),tclm :   10  274.960  274.510
+2: nset_thaw_s,tf(iii,jjj),tclm :   11  274.928  273.945
+2: nset_thaw_s,tf(iii,jjj),tclm :   12  273.593  273.267
+2: nset_thaw_s,tf(iii,jjj),tclm :   13  274.960  273.890
+2: nset_thaw_s,tf(iii,jjj),tclm :   14  273.657  273.280
+2: nset_thaw_s,tf(iii,jjj),tclm :   15  273.593  273.511
+2: nset_thaw_s,tf(iii,jjj),tclm :   16  271.955  273.300
+2: nset_thaw_s,tf(iii,jjj),tclm :   17  272.242  273.500
+2: nset_thaw_s,tf(iii,jjj),tclm :   18  273.657  273.713
+2: nset_thaw_s,tf(iii,jjj),tclm :   19  272.886  275.128
+2: nset_thaw_s,tf(iii,jjj),tclm :   20  272.373  277.171
+2: nset_thaw_s,tf(iii,jjj),tclm :   21  275.937  272.883
+2: nset_thaw_s,tf(iii,jjj),tclm :   22  276.675  274.145
+2: nset_thaw_s,tf(iii,jjj),tclm :   23  271.342  272.611
+2: nset_thaw_s,tf(iii,jjj),tclm :   24  271.342  272.044
+2: nset_thaw_s,tf(iii,jjj),tclm :   25  271.295  273.255
+2: nset_thaw_s,tf(iii,jjj),tclm :   26  271.342  272.781
+2: nset_thaw_s,tf(iii,jjj),tclm :   27  271.238  273.513
+2: nset_thaw_s,tf(iii,jjj),tclm :   28  277.455  274.637
+2: nset_thaw_s,tf(iii,jjj),tclm :   29  274.518  273.764
+2: nset_thaw_s,tf(iii,jjj),tclm :   30  272.599  273.122
+2: nset_thaw_s,tf(iii,jjj),tclm :   31  274.106  272.806
+2: nset_thaw_s,tf(iii,jjj),tclm :   32  274.199  272.819
+2: nset_thaw_s,tf(iii,jjj),tclm :   33  273.556  272.370
+2: nset_thaw_s,tf(iii,jjj),tclm :   34  274.199  272.978
+2: nset_thaw_s,tf(iii,jjj),tclm :   35  276.381  274.037
+2: nset_thaw_s,tf(iii,jjj),tclm :   36  246.879  272.819
+2: nset_thaw_s,tf(iii,jjj),tclm :   37  271.446  272.977
+2: nset_thaw_s,tf(iii,jjj),tclm :   38  271.446  273.284
+2: nset_thaw_s,tf(iii,jjj),tclm :   39  271.446  272.980
+2: nset_thaw_s,tf(iii,jjj),tclm :   40  273.779  273.263
+2: nset_thaw_s,tf(iii,jjj),tclm :   41  278.825  276.318
+2: nset_thaw_s,tf(iii,jjj),tclm :   42  276.694  272.724
+2: nset_thaw_s,tf(iii,jjj),tclm :   43  273.779  272.922
+2: nset_thaw_s,tf(iii,jjj),tclm :   44  273.867  273.066
+2: nset_thaw_s,tf(iii,jjj),tclm :   45  276.076  272.795
+2: nset_thaw_s,tf(iii,jjj),tclm :   46  273.480  273.077
+2: nset_thaw_s,tf(iii,jjj),tclm :   47  272.959  273.113
+2: nset_thaw_s,tf(iii,jjj),tclm :   48  272.959  273.644
+2: nset_thaw_s,tf(iii,jjj),tclm :   49  272.959  273.084
+2: nset_thaw_s,tf(iii,jjj),tclm :   50  273.508  273.734
+2: nset_thaw_s,tf(iii,jjj),tclm :   51  273.492  274.174
+2: nset_thaw_s,tf(iii,jjj),tclm :   52  273.762  273.865
+2: nset_thaw_s,tf(iii,jjj),tclm :   53  271.409  272.867
+2: nset_thaw_s,tf(iii,jjj),tclm :   54  271.352  273.132
+2: nset_thaw_s,tf(iii,jjj),tclm :   55  271.352  272.894
+2: nset_thaw_s,tf(iii,jjj),tclm :   56  271.466  273.847
+2: nset_thaw_s,tf(iii,jjj),tclm :   57  278.969  275.613
+2: nset_thaw_s,tf(iii,jjj),tclm :   58  271.352  273.037
+2: nset_thaw_s,tf(iii,jjj),tclm :   59  271.352  272.729
+2: nset_thaw_s,tf(iii,jjj),tclm :   60  273.111  274.076
+2: nset_thaw_s,tf(iii,jjj),tclm :   61  273.499  272.940
+2: nset_thaw_s,tf(iii,jjj),tclm :   62  273.499  272.715
+2: nset_thaw_s,tf(iii,jjj),tclm :   63  273.576  273.249
+2: nset_thaw_s,tf(iii,jjj),tclm :   64  273.576  272.322
+2: nset_thaw_s,tf(iii,jjj),tclm :   65  279.558  274.881
+2: nset_thaw_s,tf(iii,jjj),tclm :   66  273.877  273.295
+2: nset_thaw_s,tf(iii,jjj),tclm :   67  273.687  272.533
+2: nset_thaw_s,tf(iii,jjj),tclm :   68  274.424  273.619
+2: nset_thaw_s,tf(iii,jjj),tclm :   69  274.838  273.027
+2: nset_thaw_s,tf(iii,jjj),tclm :   70  275.659  273.664
+2: nset_thaw_s,tf(iii,jjj),tclm :   71  274.743  272.962
+2: nset_thaw_s,tf(iii,jjj),tclm :   72  275.392  272.990
+2: nset_thaw_s,tf(iii,jjj),tclm :   73  275.659  272.986
+2: nset_thaw_s,tf(iii,jjj),tclm :   74  271.389  272.833
+2: nset_thaw_s,tf(iii,jjj),tclm :   75  276.430  273.153
+2: nset_thaw_s,tf(iii,jjj),tclm :   76  275.486  272.765
+2: nset_thaw_s,tf(iii,jjj),tclm :   77  273.389  272.957
+2: nset_thaw_s,tf(iii,jjj),tclm :   78  251.047  272.658
+2: nset_thaw_s,tf(iii,jjj),tclm :   79  271.389  272.618
+2: nset_thaw_s,tf(iii,jjj),tclm :   80  271.389  272.621
+2: nset_thaw_s,tf(iii,jjj),tclm :   81  271.389  272.620
+2: nset_thaw_s,tf(iii,jjj),tclm :   82  271.399  272.572
+2: nset_thaw_s,tf(iii,jjj),tclm :   83  271.409  272.645
+2: nset_thaw_s,tf(iii,jjj),tclm :   84  271.409  272.527
+2: nset_thaw_s,tf(iii,jjj),tclm :   85  276.950  272.949
+2: nset_thaw_s,tf(iii,jjj),tclm :   86  271.394  272.511
+2: nset_thaw_s,tf(iii,jjj),tclm :   87  243.238  272.767
+2: nset_thaw_s,tf(iii,jjj),tclm :   88  243.238  272.611
+2: nset_thaw_s,tf(iii,jjj),tclm :   89  274.332  272.960
+2: nset_thaw_s,tf(iii,jjj),tclm :   90  274.325  272.957
+2: nset_thaw_s,tf(iii,jjj),tclm :   91  273.651  272.873
+2: nset_thaw_s,tf(iii,jjj),tclm :   92  273.223  273.081
+2: nset_thaw_s,tf(iii,jjj),tclm :   93  271.690  272.297
+2: nset_thaw_s,tf(iii,jjj),tclm :   94  271.681  272.414
+2: nset_thaw_s,tf(iii,jjj),tclm :   95  271.681  271.924
+2: nset_thaw_s,tf(iii,jjj),tclm :   96  273.983  274.974
+2: nset_thaw_i,tf_ice :    3  271.680
+2: nset_thaw_i,tf_ice :    4  271.625
+2: nset_thaw_s,tf(iii,jjj),tclm :   97  261.681  272.367
+2: nset_thaw_s,tf(iii,jjj),tclm :   98  261.681  272.102
+2: nset_thaw_s,tf(iii,jjj),tclm :   99  261.681  271.990
+2: nset_thaw_s,tf(iii,jjj),tclm :  100  260.977  271.890
+2: nset_thaw_s,tf(iii,jjj),tclm :  101  260.977  271.939
+2: nset_thaw_s,tf(iii,jjj),tclm :  102  261.681  272.570
+2: nset_thaw_s,tf(iii,jjj),tclm :  103  261.681  272.226
+2: nset_thaw_s,tf(iii,jjj),tclm :  104  260.661  271.925
+2: statistics of grids number processed for tile : 
+2:  nintp =     3313
+2: nset_thaw,nset_thaw_s,nset_thaw_i,nset_thaw_c =     108     104       4       0
+2:  nsearched =      115
+2:  nfill,nfill_tice,nfill_clm =      0     0     0
+2:  nice =     1187
+2:  nland =     4601
+2:  
+2:  update OUTPUT SFC DATA TO: ./fnbgso.003
+5:  
+5:  CYCLE PROGRAM COMPLETED NORMALLY ON RANK:            5
+0:  
+0:  MAXIMUM SEARCH IS            5  GAUSSIAN POINTS.
+0:  
+0: statistics of grids number processed for tile : 
+0:  nintp =     5509
+0: nset_thaw,nset_thaw_s,nset_thaw_i,nset_thaw_c =       0       0       0       0
+0:  nsearched =       50
+0:  nfill,nfill_tice,nfill_clm =      0     0     0
+0:  nice =        0
+0:  nland =     3657
+0:  
+0:  update OUTPUT SFC DATA TO: ./fnbgso.001
+3:  
+3:  CYCLE PROGRAM COMPLETED NORMALLY ON RANK:            3
+1:  
+1:  CYCLE PROGRAM COMPLETED NORMALLY ON RANK:            1
+4:  
+4:  CYCLE PROGRAM COMPLETED NORMALLY ON RANK:            4
+2:  
+2:  CYCLE PROGRAM COMPLETED NORMALLY ON RANK:            2
+0:  
+0:  CYCLE PROGRAM COMPLETED NORMALLY ON RANK:            0
+0: 
+0: 
+0:      ENDING DATE-TIME    MAR 06,2025  13:19:29.105   65  THU   2460741
+0:      PROGRAM GLOBAL_CYCLE HAS ENDED.
+0: * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . 
+srun: error: c5n1395: tasks 1-5: Killed
+srun: Terminating StepId=135398063.0
+0: slurmstepd: error: *** STEP 135398063.0 ON c5n1395 CANCELLED AT 2025-03-06T13:29:31 ***
+srun: error: c5n1395: task 0: Killed
+srun: Force Terminated StepId=135398063.0
++ global_cycle.sh[408]: export ERR=137
++ global_cycle.sh[408]: ERR=137
++ global_cycle.sh[409]: export err=137
++ global_cycle.sh[409]: err=137
++ global_cycle.sh[410]: eval '[[' '$err' = 0 ']]'
+++ global_cycle.sh[410]: [[ 137 = 0 ]]
++ global_cycle.sh[410]: exit 2
++ exglobal_atmos_sfcanl.sh[1]: postamble exglobal_atmos_sfcanl.sh 1741285155 2
++ preamble.sh[70]: set +x
+End exglobal_atmos_sfcanl.sh at 18:29:42 with error code 2 (time elapsed: 00:10:27)
++ JGLOBAL_ATMOS_SFCANL[1]: postamble JGLOBAL_ATMOS_SFCANL 1741285145 2
++ preamble.sh[70]: set +x
+End JGLOBAL_ATMOS_SFCANL at 18:29:42 with error code 2 (time elapsed: 00:10:37)
++ sfcanl.sh[1]: postamble sfcanl.sh 1741285138 2
++ preamble.sh[70]: set +x
+End sfcanl.sh at 18:29:42 with error code 2 (time elapsed: 00:10:44)
