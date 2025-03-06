@@ -1,0 +1,75 @@
+Begin waveinit.sh at Thu Mar  6 19:05:05 UTC 2025
++ waveinit.sh[6]: echo
+
++ waveinit.sh[7]: echo '=============== START TO SOURCE FV3GFS WORKFLOW MODULES ==============='
+=============== START TO SOURCE FV3GFS WORKFLOW MODULES ===============
++ waveinit.sh[9]: . /work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3423/global-workflow/ush/load_ufswm_modules.sh
+++ load_ufswm_modules.sh[4]: [[ NO == \N\O ]]
+++ load_ufswm_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_ufswm_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) contrib/0.1                      25) git-lfs/3.1.2
+  2) intel-oneapi-compilers/2023.1.0  26) crtm/2.4.0.1
+  3) stack-intel/2021.9.0             27) g2/3.5.1
+  4) intel-oneapi-mpi/2021.9.0        28) g2tmpl/1.13.0
+  5) stack-intel-oneapi-mpi/2021.9.0  29) ip/4.3.0
+  6) nghttp2/1.57.0                   30) sp/2.5.0
+  7) curl/8.4.0                       31) w3emc/2.10.0
+  8) cmake/3.23.1                     32) gftl/1.10.0
+  9) libjpeg/2.1.0                    33) gftl-shared/1.6.1
+ 10) jasper/2.0.32                    34) fargparse/1.5.0
+ 11) zlib/1.2.13                      35) pigz/2.7
+ 12) libpng/1.6.37                    36) tar/1.34
+ 13) hdf5/1.14.0                      37) gettext/0.21.1
+ 14) snappy/1.1.10                    38) libxcrypt/4.4.35
+ 15) zstd/1.5.2                       39) sqlite/3.43.2
+ 16) c-blosc/1.21.5                   40) util-linux-uuid/2.38.1
+ 17) netcdf-c/4.9.2                   41) python/3.10.13
+ 18) netcdf-fortran/4.6.1             42) mapl/2.40.3-esmf-8.6.0
+ 19) parallel-netcdf/1.12.2           43) scotch/7.0.4
+ 20) parallelio/2.5.10                44) ufs_common
+ 21) esmf/8.6.0                       45) nccmp/1.9.0.1
+ 22) fms/2024.01.02                   46) ufs_hercules.intel
+ 23) bacio/2.4.1                      47) prod_util/2.1.1
+ 24) crtm-fix/2.4.0.1_emc             48) wgrib2/3.1.1
+
+ 
+
++ waveinit.sh[10]: status=0
++ waveinit.sh[11]: [[ 0 -ne 0 ]]
++ waveinit.sh[15]: export job=waveinit
++ waveinit.sh[15]: job=waveinit
++ waveinit.sh[16]: export jobid=waveinit.156912
++ waveinit.sh[16]: jobid=waveinit.156912
++ waveinit.sh[19]: echo
+
++ waveinit.sh[20]: echo '=============== START TO RUN WAVE INIT ==============='
+=============== START TO RUN WAVE INIT ===============
++ waveinit.sh[22]: /work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3423/global-workflow/jobs/JGLOBAL_WAVE_INIT
+Begin JGLOBAL_WAVE_INIT at Thu Mar  6 19:05:06 UTC 2025
++ JGLOBAL_WAVE_INIT[4]: source /work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3423/global-workflow/ush/jjob_header.sh -e waveinit -c 'base wave waveinit'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=waveinit
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z waveinit ]]
+++ jjob_header.sh[68]: export DATA=/work/noaa/stmp/role-global/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_bc6da134/gdas.2021032418/waveinit.156912
+++ jjob_header.sh[68]: DATA=/work/noaa/stmp/role-global/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_bc6da134/gdas.2021032418/waveinit.156912
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /work/noaa/stmp/role-global/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_bc6da134/gdas.2021032418/waveinit.156912
+++ jjob_header.sh[72]: mkdir -p /work/noaa/stmp/role-global/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_bc6da134/gdas.2021032418/waveinit.156912
+mkdir: cannot create directory â/work/noaa/stmp/role-globalâ: Permission denied
++ jjob_header.sh[1]: postamble JGLOBAL_WAVE_INIT 1741287906 1
++ preamble.sh[70]: set +x
+End JGLOBAL_WAVE_INIT at 19:05:06 with error code 1 (time elapsed: 00:00:00)
++ waveinit.sh[1]: postamble waveinit.sh 1741287905 1
++ preamble.sh[70]: set +x
+End waveinit.sh at 19:05:06 with error code 1 (time elapsed: 00:00:01)
