@@ -1,0 +1,1219 @@
+Begin epos.sh at Thu 06 Mar 2025 05:30:06 PM UTC
++ epos.sh[7]: . /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/modulefiles
+
+Lmod is automatically replacing "intel/2023.2.0" with "intel-classic/2023.2.0".
+
+
+Currently Loaded Modules:
+  1) craype-x86-rome
+  2) perftools-base/23.12.0
+  3) xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d
+  4) cray-pmi/6.1.13
+  5) CmrsEnv/default
+  6) TimeZoneEDT/default
+  7) DefApps/default
+  8) cray-dsmml/0.2.2
+  9) cray-libsci/24.07.0
+ 10) PrgEnv-intel/8.5.0
+ 11) intel-classic/2023.2.0
+ 12) craype/2.7.30
+ 13) stack-intel/2023.2.0
+ 14) libfabric/1.20.1
+ 15) craype-network-ofi
+ 16) cray-mpich/8.1.28
+ 17) stack-cray-mpich/8.1.28
+ 18) gettext/0.20.2
+ 19) libxcrypt/4.4.35
+ 20) zlib/1.2.13
+ 21) sqlite/3.43.2
+ 22) util-linux-uuid/2.38.1
+ 23) python/3.11.6
+ 24) libjpeg/2.1.0
+ 25) jasper/2.0.32
+ 26) libpng/1.6.37
+ 27) openjpeg/2.3.1
+ 28) eccodes/2.32.0
+ 29) fftw/3.3.10
+ 30) nghttp2/1.57.0
+ 31) curl/8.4.0
+ 32) proj/9.2.1
+ 33) udunits/2.2.28
+ 34) cdo/2.2.0
+ 35) pkg-config/0.29.2
+ 36) hdf5/1.14.0
+ 37) snappy/1.1.10
+ 38) zstd/1.5.2
+ 39) c-blosc/1.21.5
+ 40) netcdf-c/4.9.2
+ 41) netcdf-fortran/4.6.1
+ 42) perlbrew/5.38.2
+ 43) antlr/2.7.7
+ 44) gsl/2.7.1
+ 45) nco/5.0.6
+ 46) bacio/2.4.1
+ 47) w3emc/2.10.0
+ 48) prod_util/2.1.1
+ 49) g2/3.4.5
+ 50) sp/2.5.0
+ 51) ip/4.3.0
+ 52) grib-util/1.3.0
+ 53) g2tmpl/1.10.2
+ 54) gsi-ncdiag/1.1.2
+ 55) crtm-fix/2.4.0.1_emc
+ 56) git-lfs/2.11.0
+ 57) crtm/2.4.0.1
+ 58) openblas/0.3.24
+ 59) py-setuptools/63.4.3
+ 60) py-numpy/1.23.4
+ 61) bufr/11.7.0
+ 62) gmake/4.2.1
+ 63) wgrib2/2.0.8
+ 64) py-cftime/1.0.3.4
+ 65) py-netcdf4/1.5.8
+ 66) py-f90nml/1.4.3
+ 67) libyaml/0.2.5
+ 68) py-pyyaml/6.0
+ 69) py-markupsafe/2.1.3
+ 70) py-jinja2/3.1.2
+ 71) py-bottleneck/1.3.7
+ 72) py-numexpr/2.8.4
+ 73) py-et-xmlfile/1.0.1
+ 74) py-openpyxl/3.1.2
+ 75) py-pytz/2023.3
+ 76) py-pyxlsb/1.0.10
+ 77) py-xlrd/2.0.1
+ 78) py-xlsxwriter/3.1.7
+ 79) py-xlwt/1.3.0
+ 80) py-pandas/1.5.3
+ 81) py-six/1.16.0
+ 82) py-python-dateutil/2.8.2
+ 83) g2c/1.6.4
+ 84) netcdf-cxx4/4.3.1
+ 85) met/9.1.3
+ 86) metplus/3.1.1
+ 87) py-packaging/23.1
+ 88) py-xarray/2023.7.0
+ 89) prepobs/1.1.0
+ 90) fit2obs/1.1.4
+ 91) hsi/9.3
+ 92) module_base.gaeac5
+
+ 
+
++ epos.sh[8]: status=0
++ epos.sh[9]: [[ 0 -ne 0 ]]
++ epos.sh[13]: export job=epos
++ epos.sh[13]: job=epos
++ epos.sh[14]: export jobid=epos.1864611
++ epos.sh[14]: jobid=epos.1864611
+++ epos.sh[18]: echo f006
+++ epos.sh[18]: sed -e 's/_/ /g; s/f/ /g; s/,/ /g'
++ epos.sh[18]: fhrlst=' 006'
++ epos.sh[20]: for fhr in ${fhrlst}
++ epos.sh[22]: export FHMIN_EPOS=006
++ epos.sh[22]: FHMIN_EPOS=006
++ epos.sh[23]: export FHMAX_EPOS=006
++ epos.sh[23]: FHMAX_EPOS=006
++ epos.sh[24]: export FHOUT_EPOS=006
++ epos.sh[24]: FHOUT_EPOS=006
++ epos.sh[25]: /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/jobs/JGDAS_ENKF_POST
+Begin JGDAS_ENKF_POST at Thu 06 Mar 2025 05:30:11 PM UTC
++ JGDAS_ENKF_POST[4]: source /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush/jjob_header.sh -e epos -c 'base epos'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=epos
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z epos ]]
+++ jjob_header.sh[68]: export DATA=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96C48_hybatmDA_5e0982c0/enkfgdas.2021122018/epos.1864611
+++ jjob_header.sh[68]: DATA=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96C48_hybatmDA_5e0982c0/enkfgdas.2021122018/epos.1864611
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96C48_hybatmDA_5e0982c0/enkfgdas.2021122018/epos.1864611
+++ jjob_header.sh[72]: mkdir -p /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96C48_hybatmDA_5e0982c0/enkfgdas.2021122018/epos.1864611
+++ jjob_header.sh[73]: cd /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96C48_hybatmDA_5e0982c0/enkfgdas.2021122018/epos.1864611
+++ jjob_header.sh[79]: export cycle=t18z
+++ jjob_header.sh[79]: cycle=t18z
+++ jjob_header.sh[80]: setpdy.sh
+sed: can't read /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/date/t18z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20211213
++++ PDY[1]: PDYm7=20211213
++++ PDY[2]: export PDYm6=20211214
++++ PDY[2]: PDYm6=20211214
++++ PDY[3]: export PDYm5=20211215
++++ PDY[3]: PDYm5=20211215
++++ PDY[4]: export PDYm4=20211216
++++ PDY[4]: PDYm4=20211216
++++ PDY[5]: export PDYm3=20211217
++++ PDY[5]: PDYm3=20211217
++++ PDY[6]: export PDYm2=20211218
++++ PDY[6]: PDYm2=20211218
++++ PDY[7]: export PDYm1=20211219
++++ PDY[7]: PDYm1=20211219
++++ PDY[8]: export PDY=20211220
++++ PDY[8]: PDY=20211220
++++ PDY[9]: export PDYp1=20211221
++++ PDY[9]: PDYp1=20211221
++++ PDY[10]: export PDYp2=20211222
++++ PDY[10]: PDYp2=20211222
++++ PDY[11]: export PDYp3=20211223
++++ PDY[11]: PDYp3=20211223
++++ PDY[12]: export PDYp4=20211224
++++ PDY[12]: PDYp4=20211224
++++ PDY[13]: export PDYp5=20211225
++++ PDY[13]: PDYp5=20211225
++++ PDY[14]: export PDYp6=20211226
++++ PDY[14]: PDYp6=20211226
++++ PDY[15]: export PDYp7=20211227
++++ PDY[15]: PDYp7=20211227
+++ jjob_header.sh[87]: export pid=1864696
+++ jjob_header.sh[87]: pid=1864696
+++ jjob_header.sh[88]: export pgmout=OUTPUT.1864696
+++ jjob_header.sh[88]: pgmout=OUTPUT.1864696
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96C48_hybatmDA_5e0982c0
+++ jjob_header.sh[95]: EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96C48_hybatmDA_5e0982c0
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96C48_hybatmDA_5e0982c0/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=GAEAC5
++++ config.base[9]: machine=GAEAC5
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=epic
++++ config.base[15]: ACCOUNT=epic
++++ config.base[16]: export QUEUE=normal
++++ config.base[16]: QUEUE=normal
++++ config.base[17]: export QUEUE_SERVICE=normal
++++ config.base[17]: QUEUE_SERVICE=normal
++++ config.base[18]: export QUEUE_DTN=hpss
++++ config.base[18]: QUEUE_DTN=hpss
++++ config.base[19]: export PARTITION_BATCH=batch
++++ config.base[19]: PARTITION_BATCH=batch
++++ config.base[20]: export PARTITION_SERVICE=batch
++++ config.base[20]: PARTITION_SERVICE=batch
++++ config.base[21]: export PARTITION_DTN=dtn_f5_f6
++++ config.base[21]: PARTITION_DTN=dtn_f5_f6
++++ config.base[22]: export RESERVATION=
++++ config.base[22]: RESERVATION=
++++ config.base[23]: export CLUSTERS=c5
++++ config.base[23]: CLUSTERS=c5
++++ config.base[24]: export CLUSTERS_SERVICE=@CLUSTERS_SERVICE@
++++ config.base[24]: CLUSTERS_SERVICE=@CLUSTERS_SERVICE@
++++ config.base[25]: export CLUSTERS_DTN=es
++++ config.base[25]: CLUSTERS_DTN=es
++++ config.base[28]: export HPSS_PROJECT=emc-global
++++ config.base[28]: HPSS_PROJECT=emc-global
++++ config.base[31]: export HOMEgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow
++++ config.base[31]: HOMEgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow
++++ config.base[32]: export EXECgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec
++++ config.base[32]: EXECgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec
++++ config.base[33]: export FIXgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix
++++ config.base[33]: FIXgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix
++++ config.base[34]: export PARMgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/parm
++++ config.base[34]: PARMgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/parm
++++ config.base[35]: export SCRgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/scripts
++++ config.base[35]: SCRgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/scripts
++++ config.base[36]: export USHgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush
++++ config.base[36]: USHgfs=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush
++++ config.base[38]: export FIXam=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am
++++ config.base[38]: FIXam=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/am
++++ config.base[39]: export FIXaer=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/aer
++++ config.base[39]: FIXaer=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/aer
++++ config.base[40]: export FIXcpl=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/cpl
++++ config.base[40]: FIXcpl=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/cpl
++++ config.base[41]: export FIXlut=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/lut
++++ config.base[41]: FIXlut=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/lut
++++ config.base[42]: export FIXcice=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/cice
++++ config.base[42]: FIXcice=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/cice
++++ config.base[43]: export FIXmom=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/mom6
++++ config.base[43]: FIXmom=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/mom6
++++ config.base[44]: export FIXreg2grb2=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/reg2grb2
++++ config.base[44]: FIXreg2grb2=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/reg2grb2
++++ config.base[45]: export FIXgdas=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/gdas
++++ config.base[45]: FIXgdas=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/gdas
++++ config.base[50]: export PACKAGEROOT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/nwpara
++++ config.base[50]: PACKAGEROOT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/nwpara
++++ config.base[51]: export COMROOT=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT
++++ config.base[51]: COMROOT=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT
++++ config.base[52]: export COMINsyn=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/com/gfs/prod/syndat
++++ config.base[52]: COMINsyn=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/com/gfs/prod/syndat
++++ config.base[53]: export DMPDIR=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/dump
++++ config.base[53]: DMPDIR=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/dump
++++ config.base[57]: export COMINecmwf=@COMINecmwf@
++++ config.base[57]: COMINecmwf=@COMINecmwf@
++++ config.base[58]: export COMINnam=@COMINnam@
++++ config.base[58]: COMINnam=@COMINnam@
++++ config.base[59]: export COMINukmet=@COMINukmet@
++++ config.base[59]: COMINukmet=@COMINukmet@
++++ config.base[62]: export HOMEDIR=/gpfs/f5/epic/scratch/role.epic
++++ config.base[62]: HOMEDIR=/gpfs/f5/epic/scratch/role.epic
++++ config.base[63]: export STMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[63]: STMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[64]: export PTMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[64]: PTMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[65]: export NOSCRUB=/gpfs/f5/epic/scratch/role.epic
++++ config.base[65]: NOSCRUB=/gpfs/f5/epic/scratch/role.epic
++++ config.base[68]: export BASE_GIT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git
++++ config.base[68]: BASE_GIT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git
++++ config.base[71]: export BASE_DATA=/gpfs/f5/ufs-ard/world-shared/global/glopara/data
++++ config.base[71]: BASE_DATA=/gpfs/f5/ufs-ard/world-shared/global/glopara/data
++++ config.base[74]: export DO_GOES=NO
++++ config.base[74]: DO_GOES=NO
++++ config.base[75]: export DO_BUFRSND=NO
++++ config.base[75]: DO_BUFRSND=NO
++++ config.base[76]: export DO_GEMPAK=NO
++++ config.base[76]: DO_GEMPAK=NO
++++ config.base[77]: export DO_AWIPS=NO
++++ config.base[77]: DO_AWIPS=NO
++++ config.base[78]: export DO_NPOESS=NO
++++ config.base[78]: DO_NPOESS=NO
++++ config.base[79]: export DO_TRACKER=NO
++++ config.base[79]: DO_TRACKER=NO
++++ config.base[80]: export DO_GENESIS=NO
++++ config.base[80]: DO_GENESIS=NO
++++ config.base[81]: export DO_GENESIS_FSU=NO
++++ config.base[81]: DO_GENESIS_FSU=NO
++++ config.base[82]: export DO_VERFOZN=YES
++++ config.base[82]: DO_VERFOZN=YES
++++ config.base[83]: export DO_VERFRAD=YES
++++ config.base[83]: DO_VERFRAD=YES
++++ config.base[84]: export DO_VMINMON=YES
++++ config.base[84]: DO_VMINMON=YES
++++ config.base[85]: export DO_MOS=NO
++++ config.base[85]: DO_MOS=NO
++++ config.base[91]: export REALTIME=YES
++++ config.base[91]: REALTIME=YES
++++ config.base[94]: export MODE=cycled
++++ config.base[94]: MODE=cycled
++++ config.base[95]: export DO_TEST_MODE=YES
++++ config.base[95]: DO_TEST_MODE=YES
++++ config.base[104]: export FIXgsi=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/gsi
++++ config.base[104]: FIXgsi=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/gsi
++++ config.base[105]: export HOMEpost=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow
++++ config.base[105]: HOMEpost=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow
++++ config.base[106]: export HOMEobsproc=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git/obsproc/v1.2.0
++++ config.base[106]: HOMEobsproc=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git/obsproc/v1.2.0
++++ config.base[109]: export 'NCP=/bin/cp -p'
++++ config.base[109]: NCP='/bin/cp -p'
++++ config.base[110]: export NMV=/bin/mv
++++ config.base[110]: NMV=/bin/mv
++++ config.base[111]: export 'NLN=/bin/ln -sf'
++++ config.base[111]: NLN='/bin/ln -sf'
++++ config.base[112]: export VERBOSE=YES
++++ config.base[112]: VERBOSE=YES
++++ config.base[113]: export KEEPDATA=NO
++++ config.base[113]: KEEPDATA=NO
++++ config.base[114]: export DEBUG_POSTSCRIPT=NO
++++ config.base[114]: DEBUG_POSTSCRIPT=NO
++++ config.base[115]: export CHGRP_RSTPROD=NO
++++ config.base[115]: CHGRP_RSTPROD=NO
++++ config.base[116]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[116]: CHGRP_CMD='chgrp rstprod'
++++ config.base[117]: export NCDUMP=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-mh4uycw/bin/ncdump
++++ config.base[117]: NCDUMP=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-mh4uycw/bin/ncdump
++++ config.base[118]: export NCLEN=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush/getncdimlen
++++ config.base[118]: NCLEN=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/ush/getncdimlen
++++ config.base[121]: export BASE_ENV=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/env
++++ config.base[121]: BASE_ENV=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/env
++++ config.base[122]: export BASE_JOB=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/jobs/rocoto
++++ config.base[122]: BASE_JOB=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/jobs/rocoto
++++ config.base[125]: export SDATE=2021122018
++++ config.base[125]: SDATE=2021122018
++++ config.base[126]: export EDATE=2021122106
++++ config.base[126]: EDATE=2021122106
++++ config.base[127]: export EXP_WARM_START=.false.
++++ config.base[127]: EXP_WARM_START=.false.
++++ config.base[128]: export assim_freq=6
++++ config.base[128]: assim_freq=6
++++ config.base[129]: export PSLOT=C96C48_hybatmDA_5e0982c0
++++ config.base[129]: PSLOT=C96C48_hybatmDA_5e0982c0
++++ config.base[130]: export EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96C48_hybatmDA_5e0982c0
++++ config.base[130]: EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96C48_hybatmDA_5e0982c0
++++ config.base[131]: export ROTDIR=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96C48_hybatmDA_5e0982c0
++++ config.base[131]: ROTDIR=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96C48_hybatmDA_5e0982c0
++++ config.base[132]: export ROTDIR_DUMP=YES
++++ config.base[132]: ROTDIR_DUMP=YES
++++ config.base[133]: export DUMP_SUFFIX=
++++ config.base[133]: DUMP_SUFFIX=
++++ config.base[134]: [[ 2021122018 -ge 2019092100 ]]
++++ config.base[134]: [[ 2021122018 -le 2019110700 ]]
++++ config.base[137]: export ARCDIR=/gpfs/f5/epic/scratch/role.epic/archive/C96C48_hybatmDA_5e0982c0
++++ config.base[137]: ARCDIR=/gpfs/f5/epic/scratch/role.epic/archive/C96C48_hybatmDA_5e0982c0
++++ config.base[138]: export ATARDIR=/gpfs/f5/epic/scratch/role.epic/archive_rotdir/C96C48_hybatmDA_5e0982c0
++++ config.base[138]: ATARDIR=/gpfs/f5/epic/scratch/role.epic/archive_rotdir/C96C48_hybatmDA_5e0982c0
++++ config.base[139]: export FETCHDIR=/NCEPDEV/emc-global/1year/David.Grumm/test_data
++++ config.base[139]: FETCHDIR=/NCEPDEV/emc-global/1year/David.Grumm/test_data
++++ config.base[142]: export envir=prod
++++ config.base[142]: envir=prod
++++ config.base[143]: export NET=gfs
++++ config.base[143]: NET=gfs
++++ config.base[144]: export RUN=enkfgdas
++++ config.base[144]: RUN=enkfgdas
++++ config.base[147]: source /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96C48_hybatmDA_5e0982c0/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ config.com[78]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[79]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[80]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[82]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[83]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[84]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[85]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[86]: declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[87]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[88]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[89]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[90]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[92]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[93]: declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[94]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[95]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[96]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[97]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[98]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[99]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[100]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[102]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[103]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[104]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[106]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[150]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[150]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[151]: export LOGSCRIPT=
++++ config.base[151]: LOGSCRIPT=
++++ config.base[154]: export 'REDOUT=1>'
++++ config.base[154]: REDOUT='1>'
++++ config.base[155]: export 'REDERR=2>'
++++ config.base[155]: REDERR='2>'
++++ config.base[157]: export SENDECF=NO
++++ config.base[157]: SENDECF=NO
++++ config.base[158]: export SENDSDM=NO
++++ config.base[158]: SENDSDM=NO
++++ config.base[159]: export SENDDBN_NTC=NO
++++ config.base[159]: SENDDBN_NTC=NO
++++ config.base[160]: export SENDDBN=NO
++++ config.base[160]: SENDDBN=NO
++++ config.base[161]: export DBNROOT=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-iqvlvsb/fakedbn
++++ config.base[161]: DBNROOT=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-iqvlvsb/fakedbn
++++ config.base[164]: export APP=ATM
++++ config.base[164]: APP=ATM
++++ config.base[166]: shopt -s extglob
++++ config.base[169]: case "${RUN}" in
++++ config.base[171]: APP=ATM
++++ config.base[176]: shopt -u extglob
++++ config.base[179]: export DO_ATM=YES
++++ config.base[179]: DO_ATM=YES
++++ config.base[180]: export DO_COUPLED=NO
++++ config.base[180]: DO_COUPLED=NO
++++ config.base[181]: export DO_WAVE=NO
++++ config.base[181]: DO_WAVE=NO
++++ config.base[182]: export DO_OCN=NO
++++ config.base[182]: DO_OCN=NO
++++ config.base[183]: export DO_ICE=NO
++++ config.base[183]: DO_ICE=NO
++++ config.base[184]: DO_AERO=NO
++++ config.base[185]: export DO_PREP_OBS_AERO=NO
++++ config.base[185]: DO_PREP_OBS_AERO=NO
++++ config.base[186]: aero_fcst_runs=gdas
++++ config.base[187]: aero_anl_runs='gdas gfs'
++++ config.base[188]: export DO_AERO_FCST=NO
++++ config.base[188]: DO_AERO_FCST=NO
++++ config.base[189]: export DO_AERO_ANL=NO
++++ config.base[189]: DO_AERO_ANL=NO
++++ config.base[190]: export DOBNDPNT_WAVE=NO
++++ config.base[190]: DOBNDPNT_WAVE=NO
++++ config.base[191]: export DOIBP_WAV=NO
++++ config.base[191]: DOIBP_WAV=NO
++++ config.base[192]: export FRAC_GRID=.true.
++++ config.base[192]: FRAC_GRID=.true.
++++ config.base[193]: export DO_NEST=NO
++++ config.base[193]: DO_NEST=NO
++++ config.base[194]: [[ NO == \Y\E\S ]]
++++ config.base[200]: export ntiles=6
++++ config.base[200]: ntiles=6
++++ config.base[201]: export FIXugwd=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/ugwd
++++ config.base[201]: FIXugwd=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/ugwd
++++ config.base[202]: export FIXorog=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog
++++ config.base[202]: FIXorog=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/orog
++++ config.base[206]: export OPS_RES=C768
++++ config.base[206]: OPS_RES=C768
++++ config.base[209]: export LEVS=128
++++ config.base[209]: LEVS=128
++++ config.base[210]: export CASE=C96
++++ config.base[210]: CASE=C96
++++ config.base[211]: export CASE_ENS=C48
++++ config.base[211]: CASE_ENS=C48
++++ config.base[212]: export OCNRES=500
++++ config.base[212]: OCNRES=500
++++ config.base[213]: export ICERES=500
++++ config.base[213]: ICERES=500
++++ config.base[216]: case "${CASE}" in
++++ config.base[221]: export waveGRD=uglo_100km
++++ config.base[221]: waveGRD=uglo_100km
++++ config.base[235]: case "${APP}" in
++++ config.base[270]: [[ NO == \Y\E\S ]]
++++ config.base[280]: [[ enkfgdas =~ gdas ]]
++++ config.base[281]: export FHCYC=1
++++ config.base[281]: FHCYC=1
++++ config.base[282]: export FTSFS=10
++++ config.base[282]: FTSFS=10
++++ config.base[288]: export FHMIN=0
++++ config.base[288]: FHMIN=0
++++ config.base[289]: export FHMAX=9
++++ config.base[289]: FHMAX=9
++++ config.base[290]: export FHOUT=3
++++ config.base[290]: FHOUT=3
++++ config.base[291]: export FHOUT_OCN=3
++++ config.base[291]: FHOUT_OCN=3
++++ config.base[292]: export FHOUT_ICE=3
++++ config.base[292]: FHOUT_ICE=3
++++ config.base[293]: export FHOUT_AERO=3
++++ config.base[293]: FHOUT_AERO=3
++++ config.base[296]: export EUPD_CYC=gdas
++++ config.base[296]: EUPD_CYC=gdas
++++ config.base[299]: export INTERVAL_GFS=24
++++ config.base[299]: INTERVAL_GFS=24
++++ config.base[300]: export SDATE_GFS=2021122100
++++ config.base[300]: SDATE_GFS=2021122100
++++ config.base[303]: export FHMIN_GFS=0
++++ config.base[303]: FHMIN_GFS=0
++++ config.base[304]: export FHMAX_GFS=120
++++ config.base[304]: FHMAX_GFS=120
++++ config.base[306]: breakpnts=
++++ config.base[307]: export FCST_SEGMENTS=0,120
++++ config.base[307]: FCST_SEGMENTS=0,120
++++ config.base[308]: export FHOUT_GFS=3
++++ config.base[308]: FHOUT_GFS=3
++++ config.base[309]: export FHMAX_HF_GFS=0
++++ config.base[309]: FHMAX_HF_GFS=0
++++ config.base[310]: export FHOUT_HF_GFS=1
++++ config.base[310]: FHOUT_HF_GFS=1
++++ config.base[311]: export FHOUT_OCN_GFS=6
++++ config.base[311]: FHOUT_OCN_GFS=6
++++ config.base[312]: export FHOUT_ICE_GFS=6
++++ config.base[312]: FHOUT_ICE_GFS=6
++++ config.base[313]: export FHMIN_WAV=0
++++ config.base[313]: FHMIN_WAV=0
++++ config.base[314]: export FHOUT_WAV=3
++++ config.base[314]: FHOUT_WAV=3
++++ config.base[315]: export FHMAX_HF_WAV=120
++++ config.base[315]: FHMAX_HF_WAV=120
++++ config.base[316]: export FHOUT_HF_WAV=1
++++ config.base[316]: FHOUT_HF_WAV=1
++++ config.base[317]: export FHMAX_WAV=9
++++ config.base[317]: FHMAX_WAV=9
++++ config.base[318]: export FHMAX_WAV_GFS=120
++++ config.base[318]: FHMAX_WAV_GFS=120
++++ config.base[319]: export FHMAX_HF_GFS=0
++++ config.base[319]: FHMAX_HF_GFS=0
++++ config.base[320]: export FHMAX_WAV=9
++++ config.base[320]: FHMAX_WAV=9
++++ config.base[321]: export FHMAX_WAV_GFS=120
++++ config.base[321]: FHMAX_WAV_GFS=120
++++ config.base[322]: export FHMAX_HF_WAV=120
++++ config.base[322]: FHMAX_HF_WAV=120
++++ config.base[325]: export ILPOST=1
++++ config.base[325]: ILPOST=1
++++ config.base[326]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[327]: export ILPOST=3
++++ config.base[327]: ILPOST=3
++++ config.base[331]: export FHMAX_GOES=180
++++ config.base[331]: FHMAX_GOES=180
++++ config.base[332]: export FHOUT_GOES=3
++++ config.base[332]: FHOUT_GOES=3
++++ config.base[333]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[334]: export FHMAX_GOES=120
++++ config.base[334]: FHMAX_GOES=120
++++ config.base[338]: export restart_interval_gfs=12
++++ config.base[338]: restart_interval_gfs=12
++++ config.base[343]: export QUILTING=.true.
++++ config.base[343]: QUILTING=.true.
++++ config.base[344]: export OUTPUT_GRID=gaussian_grid
++++ config.base[344]: OUTPUT_GRID=gaussian_grid
++++ config.base[345]: export WRITE_DOPOST=.true.
++++ config.base[345]: WRITE_DOPOST=.true.
++++ config.base[346]: export WRITE_NSFLIP=.true.
++++ config.base[346]: WRITE_NSFLIP=.true.
++++ config.base[349]: export DOIAU=YES
++++ config.base[349]: DOIAU=YES
++++ config.base[350]: export IAUFHRS=3,6,9
++++ config.base[350]: IAUFHRS=3,6,9
++++ config.base[351]: export IAU_FHROT=3
++++ config.base[351]: IAU_FHROT=3
++++ config.base[352]: export IAU_DELTHRS=6
++++ config.base[352]: IAU_DELTHRS=6
++++ config.base[353]: export IAU_OFFSET=6
++++ config.base[353]: IAU_OFFSET=6
++++ config.base[354]: export DOIAU_ENKF=YES
++++ config.base[354]: DOIAU_ENKF=YES
++++ config.base[355]: export IAUFHRS_ENKF=3,6,9
++++ config.base[355]: IAUFHRS_ENKF=3,6,9
++++ config.base[356]: export IAU_DELTHRS_ENKF=6
++++ config.base[356]: IAU_DELTHRS_ENKF=6
++++ config.base[359]: export lobsdiag_forenkf=.true.
++++ config.base[359]: lobsdiag_forenkf=.true.
++++ config.base[367]: export imp_physics=8
++++ config.base[367]: imp_physics=8
++++ config.base[371]: export DO_JEDIATMVAR=NO
++++ config.base[371]: DO_JEDIATMVAR=NO
++++ config.base[372]: export DO_JEDIATMENS=NO
++++ config.base[372]: DO_JEDIATMENS=NO
++++ config.base[373]: export DO_JEDIOCNVAR=NO
++++ config.base[373]: DO_JEDIOCNVAR=NO
++++ config.base[374]: export DO_JEDISNOWDA=NO
++++ config.base[374]: DO_JEDISNOWDA=NO
++++ config.base[375]: export DO_MERGENSST=NO
++++ config.base[375]: DO_MERGENSST=NO
++++ config.base[376]: export DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[376]: DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[379]: export DOHYBVAR=YES
++++ config.base[379]: DOHYBVAR=YES
++++ config.base[380]: export DOHYBVAR_OCN=NO
++++ config.base[380]: DOHYBVAR_OCN=NO
++++ config.base[381]: export NMEM_ENS=2
++++ config.base[381]: NMEM_ENS=2
++++ config.base[382]: export SMOOTH_ENKF=NO
++++ config.base[382]: SMOOTH_ENKF=NO
++++ config.base[383]: export l4densvar=.true.
++++ config.base[383]: l4densvar=.true.
++++ config.base[384]: export lwrite4danl=.true.
++++ config.base[384]: lwrite4danl=.true.
++++ config.base[385]: export DO_CALC_INCREMENT=NO
++++ config.base[385]: DO_CALC_INCREMENT=NO
++++ config.base[388]: export NMEM_ENS_GFS=30
++++ config.base[388]: NMEM_ENS_GFS=30
++++ config.base[389]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[389]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[390]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[390]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[393]: [[ YES = \Y\E\S ]]
++++ config.base[394]: export FHMIN_ENKF=3
++++ config.base[394]: FHMIN_ENKF=3
++++ config.base[395]: export FHMAX_ENKF=9
++++ config.base[395]: FHMAX_ENKF=9
++++ config.base[396]: export FHMAX_ENKF_GFS=12
++++ config.base[396]: FHMAX_ENKF_GFS=12
++++ config.base[397]: export FHOUT_ENKF_GFS=3
++++ config.base[397]: FHOUT_ENKF_GFS=3
++++ config.base[398]: [[ .true. = \.\t\r\u\e\. ]]
++++ config.base[399]: export FHOUT=1
++++ config.base[399]: FHOUT=1
++++ config.base[400]: export FHOUT_ENKF=1
++++ config.base[400]: FHOUT_ENKF=1
++++ config.base[407]: [[ YES == \N\O ]]
++++ config.base[415]: export ENKF_SPREAD=YES
++++ config.base[415]: ENKF_SPREAD=YES
++++ config.base[418]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[418]: [[ 2021122018 = \2\0\2\1\1\2\2\0\1\8 ]]
++++ config.base[418]: [[ .false. = \.\f\a\l\s\e\. ]]
++++ config.base[419]: export IAU_OFFSET=0
++++ config.base[419]: IAU_OFFSET=0
++++ config.base[420]: export IAU_FHROT=0
++++ config.base[420]: IAU_FHROT=0
++++ config.base[421]: export IAUFHRS=6,
++++ config.base[421]: IAUFHRS=6,
++++ config.base[424]: [[ YES = \N\O ]]
++++ config.base[428]: [[ YES == \Y\E\S ]]
++++ config.base[429]: export restart_interval_enkfgdas=3
++++ config.base[429]: restart_interval_enkfgdas=3
++++ config.base[434]: export restart_interval_enkfgfs=3
++++ config.base[434]: restart_interval_enkfgfs=3
++++ config.base[436]: [[ YES == \Y\E\S ]]
++++ config.base[437]: export restart_interval_gdas=3
++++ config.base[437]: restart_interval_gdas=3
++++ config.base[442]: export DO_GSISOILDA=NO
++++ config.base[442]: DO_GSISOILDA=NO
++++ config.base[445]: export DONST=YES
++++ config.base[445]: DONST=YES
++++ config.base[446]: [[ YES = \Y\E\S ]]
++++ config.base[446]: export 'FNTSFA=        '
++++ config.base[446]: FNTSFA='        '
++++ config.base[449]: export nst_anl=.true.
++++ config.base[449]: nst_anl=.true.
++++ config.base[452]: export MAKE_NSSTBUFR=NO
++++ config.base[452]: MAKE_NSSTBUFR=NO
++++ config.base[455]: export MAKE_ACFTBUFR=NO
++++ config.base[455]: MAKE_ACFTBUFR=NO
++++ config.base[458]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[458]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[461]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[461]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[462]: export INCVARS_EFOLD=5
++++ config.base[462]: INCVARS_EFOLD=5
++++ config.base[467]: export netcdf_diag=.true.
++++ config.base[467]: netcdf_diag=.true.
++++ config.base[468]: export binary_diag=.false.
++++ config.base[468]: binary_diag=.false.
++++ config.base[471]: export DO_CA=YES
++++ config.base[471]: DO_CA=YES
++++ config.base[474]: export DO_METP=NO
++++ config.base[474]: DO_METP=NO
++++ config.base[475]: export DO_FIT2OBS=YES
++++ config.base[475]: DO_FIT2OBS=YES
++++ config.base[478]: export FHMAX_FITS=132
++++ config.base[478]: FHMAX_FITS=132
++++ config.base[479]: [[ 132 -gt 120 ]]
++++ config.base[480]: export FHMAX_FITS=120
++++ config.base[480]: FHMAX_FITS=120
++++ config.base[484]: export DO_FETCH_HPSS=NO
++++ config.base[484]: DO_FETCH_HPSS=NO
++++ config.base[485]: export DO_FETCH_LOCAL=NO
++++ config.base[485]: DO_FETCH_LOCAL=NO
++++ config.base[488]: export HPSSARCH=YES
++++ config.base[488]: HPSSARCH=YES
++++ config.base[489]: export LOCALARCH=NO
++++ config.base[489]: LOCALARCH=NO
++++ config.base[490]: [[ YES = \Y\E\S ]]
++++ config.base[490]: [[ NO = \Y\E\S ]]
++++ config.base[493]: [[ YES = \Y\E\S ]]
++++ config.base[494]: export DO_ARCHTAR=YES
++++ config.base[494]: DO_ARCHTAR=YES
++++ config.base[498]: export ARCH_CYC=00
++++ config.base[498]: ARCH_CYC=00
++++ config.base[499]: export ARCH_WARMICFREQ=4
++++ config.base[499]: ARCH_WARMICFREQ=4
++++ config.base[500]: export ARCH_FCSTICFREQ=1
++++ config.base[500]: ARCH_FCSTICFREQ=1
++++ config.base[501]: export ARCH_EXPDIR=YES
++++ config.base[501]: ARCH_EXPDIR=YES
++++ config.base[502]: export ARCH_EXPDIR_FREQ=0
++++ config.base[502]: ARCH_EXPDIR_FREQ=0
++++ config.base[503]: export ARCH_HASHES=YES
++++ config.base[503]: ARCH_HASHES=YES
++++ config.base[504]: export ARCH_DIFFS=NO
++++ config.base[504]: ARCH_DIFFS=NO
++++ config.base[507]: [[ NO = \Y\E\S ]]
++++ config.base[515]: export REPLAY_ICS=NO
++++ config.base[515]: REPLAY_ICS=NO
++++ config.base[516]: export OFFSET_START_HOUR=0
++++ config.base[516]: OFFSET_START_HOUR=0
++++ config.base[519]: export NUM_SND_COLLECTIVES=9
++++ config.base[519]: NUM_SND_COLLECTIVES=9
++++ config.base[521]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96C48_hybatmDA_5e0982c0/config.epos
++++ config.epos[6]: echo 'BEGIN: config.epos'
+BEGIN: config.epos
++++ config.epos[9]: . /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96C48_hybatmDA_5e0982c0/config.resources epos
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=epos
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[51]: max_tasks_per_node=128
+++++ config.resources[53]: mem_node_max=251GB
+++++ config.resources[149]: export max_tasks_per_node
+++++ config.resources[151]: case ${step} in
+++++ config.resources[1296]: walltime=00:15:00
+++++ config.resources[1297]: [[ C96 == \C\7\6\8 ]]
+++++ config.resources[1297]: [[ C96 == \C\1\1\5\2 ]]
+++++ config.resources[1300]: ntasks=80
+++++ config.resources[1301]: threads_per_task=1
+++++ config.resources[1302]: tasks_per_node=128
+++++ config.resources[1303]: export is_exclusive=True
+++++ config.resources[1303]: is_exclusive=True
+++++ config.resources[1523]: [[ -f /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96C48_hybatmDA_5e0982c0/config.resources.GAEAC5 ]]
+++++ config.resources[1524]: source /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/EXPDIR/C96C48_hybatmDA_5e0982c0/config.resources.GAEAC5
++++++ config.resources.GAEAC5[5]: export FI_VERBS_PREFER_XRC=0
++++++ config.resources.GAEAC5[5]: FI_VERBS_PREFER_XRC=0
++++++ config.resources.GAEAC5[7]: unset memory
++++++ config.resources.GAEAC5[8]: unset memory_enkfgdas
+++++ config.resources[1528]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1529]: run_resource_var=threads_per_task_enkfgdas
+++++ config.resources[1530]: [[ -n '' ]]
+++++ config.resources[1532]: [[ -n 0 ]]
+++++ config.resources[1533]: export threads_per_task
+++++ config.resources[1528]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1529]: run_resource_var=ntasks_enkfgdas
+++++ config.resources[1530]: [[ -n '' ]]
+++++ config.resources[1532]: [[ -n 0 ]]
+++++ config.resources[1533]: export ntasks
+++++ config.resources[1528]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1529]: run_resource_var=tasks_per_node_enkfgdas
+++++ config.resources[1530]: [[ -n '' ]]
+++++ config.resources[1532]: [[ -n 0 ]]
+++++ config.resources[1533]: export tasks_per_node
+++++ config.resources[1528]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1529]: run_resource_var=NTASKS_enkfgdas
+++++ config.resources[1530]: [[ -n '' ]]
+++++ config.resources[1532]: [[ -n '' ]]
+++++ config.resources[1528]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1529]: run_resource_var=memory_enkfgdas
+++++ config.resources[1530]: [[ -n '' ]]
+++++ config.resources[1532]: [[ -n '' ]]
+++++ config.resources[1528]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1529]: run_resource_var=walltime_enkfgdas
+++++ config.resources[1530]: [[ -n '' ]]
+++++ config.resources[1532]: [[ -n 0 ]]
+++++ config.resources[1533]: export walltime
+++++ config.resources[1537]: echo 'END: config.resources'
+END: config.resources
++++ config.epos[12]: export NEPOSGRP=7
++++ config.epos[12]: NEPOSGRP=7
++++ config.epos[13]: '[' .true. = .false. ']'
++++ config.epos[17]: echo 'END: config.epos'
+END: config.epos
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/env/GAEAC5.env epos
++++ GAEAC5.env[3]: [[ 1 -ne 1 ]]
++++ GAEAC5.env[10]: step=epos
++++ GAEAC5.env[12]: export 'launcher=srun -l --export=ALL'
++++ GAEAC5.env[12]: launcher='srun -l --export=ALL'
++++ GAEAC5.env[13]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ GAEAC5.env[13]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ GAEAC5.env[15]: export OMP_STACKSIZE=2048000
++++ GAEAC5.env[15]: OMP_STACKSIZE=2048000
++++ GAEAC5.env[16]: export NTHSTACK=1024000000
++++ GAEAC5.env[16]: NTHSTACK=1024000000
++++ GAEAC5.env[18]: ulimit -s unlimited
++++ GAEAC5.env[19]: ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 1025560
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 50000
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 1025560
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
++++ GAEAC5.env[23]: [[ -n 80 ]]
++++ GAEAC5.env[23]: [[ -n 128 ]]
++++ GAEAC5.env[23]: [[ -n 128 ]]
++++ GAEAC5.env[24]: max_threads_per_task=1
++++ GAEAC5.env[25]: NTHREADSmax=1
++++ GAEAC5.env[26]: NTHREADS1=1
++++ GAEAC5.env[27]: [[ 1 -gt 1 ]]
++++ GAEAC5.env[30]: [[ 1 -gt 1 ]]
++++ GAEAC5.env[35]: APRUN_default='srun -l --export=ALL -n 80'
++++ GAEAC5.env[41]: case ${step} in
++++ GAEAC5.env[288]: export NTHREADS_EPOS=1
++++ GAEAC5.env[288]: NTHREADS_EPOS=1
++++ GAEAC5.env[289]: export 'APRUN_EPOS=srun -l --export=ALL -n 80 --cpus-per-task=1'
++++ GAEAC5.env[289]: APRUN_EPOS='srun -l --export=ALL -n 80 --cpus-per-task=1'
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
++ JGDAS_ENKF_POST[15]: export GFS_NCIO=YES
++ JGDAS_ENKF_POST[15]: GFS_NCIO=YES
++ JGDAS_ENKF_POST[17]: export PREFIX=enkfgdas.t18z.
++ JGDAS_ENKF_POST[17]: PREFIX=enkfgdas.t18z.
++ JGDAS_ENKF_POST[19]: export LEVS=127
++ JGDAS_ENKF_POST[19]: LEVS=127
++ JGDAS_ENKF_POST[25]: /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/scripts/exgdas_enkf_post.sh
+Begin exgdas_enkf_post.sh at Thu 06 Mar 2025 05:30:21 PM UTC
+++ exgdas_enkf_post.sh[23]: pwd
++ exgdas_enkf_post.sh[23]: pwd=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96C48_hybatmDA_5e0982c0/enkfgdas.2021122018/epos.1864611
++ exgdas_enkf_post.sh[25]: APRUN_EPOS='srun -l --export=ALL -n 80 --cpus-per-task=1'
++ exgdas_enkf_post.sh[26]: NTHREADS_EPOS=1
++ exgdas_enkf_post.sh[29]: SENDDBN=NO
++ exgdas_enkf_post.sh[32]: LEVS=127
++ exgdas_enkf_post.sh[33]: HYBENSMOOTH=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/fix/gsi/global_hybens_smoothinfo.l127.txt
++ exgdas_enkf_post.sh[36]: GETATMENSMEANEXEC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/getsigensmeanp_smooth.x
++ exgdas_enkf_post.sh[37]: GETSFCENSMEANEXEC=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/getsfcensmeanp.x
++ exgdas_enkf_post.sh[40]: PREFIX=enkfgdas.t18z.
++ exgdas_enkf_post.sh[41]: FHMIN=006
++ exgdas_enkf_post.sh[42]: FHMAX=006
++ exgdas_enkf_post.sh[43]: FHOUT=006
++ exgdas_enkf_post.sh[45]: [[ enkfgdas == \e\n\k\f\g\f\s ]]
++ exgdas_enkf_post.sh[48]: NMEM_ENS=2
++ exgdas_enkf_post.sh[50]: SMOOTH_ENKF=NO
++ exgdas_enkf_post.sh[51]: ENKF_SPREAD=YES
++ exgdas_enkf_post.sh[55]: ENKF_SUFFIX=s
++ exgdas_enkf_post.sh[56]: [[ NO == \N\O ]]
++ exgdas_enkf_post.sh[57]: ENKF_SUFFIX=
++ exgdas_enkf_post.sh[62]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/getsfcensmeanp.x /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96C48_hybatmDA_5e0982c0/enkfgdas.2021122018/epos.1864611
++ exgdas_enkf_post.sh[63]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/getsigensmeanp_smooth.x /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96C48_hybatmDA_5e0982c0/enkfgdas.2021122018/epos.1864611
++ exgdas_enkf_post.sh[65]: export OMP_NUM_THREADS=1
++ exgdas_enkf_post.sh[65]: OMP_NUM_THREADS=1
+++ exgdas_enkf_post.sh[69]: seq 1 2
++ exgdas_enkf_post.sh[69]: for imem in $(seq 1 $NMEM_ENS)
+++ exgdas_enkf_post.sh[70]: printf %03i 1
++ exgdas_enkf_post.sh[70]: memchar=mem001
++ exgdas_enkf_post.sh[71]: MEMDIR=mem001
++ exgdas_enkf_post.sh[71]: YMD=20211220
++ exgdas_enkf_post.sh[71]: HH=18
++ exgdas_enkf_post.sh[71]: declare_from_tmpl -x COMIN_ATMOS_HISTORY:COM_ATMOS_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ATMOS_HISTORY=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96C48_hybatmDA_5e0982c0/enkfgdas.20211220/18/mem001/model/atmos/history
+++ exgdas_enkf_post.sh[74]: seq 006 006 006
++ exgdas_enkf_post.sh[74]: for fhr in $(seq $FHMIN $FHOUT $FHMAX)
+++ exgdas_enkf_post.sh[75]: printf %03i 6
++ exgdas_enkf_post.sh[75]: fhrchar=006
++ exgdas_enkf_post.sh[76]: /bin/ln -sf /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96C48_hybatmDA_5e0982c0/enkfgdas.20211220/18/mem001/model/atmos/history/enkfgdas.t18z.sfcf006.nc sfcf006_mem001
++ exgdas_enkf_post.sh[77]: /bin/ln -sf /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96C48_hybatmDA_5e0982c0/enkfgdas.20211220/18/mem001/model/atmos/history/enkfgdas.t18z.atmf006.nc atmf006_mem001
++ exgdas_enkf_post.sh[69]: for imem in $(seq 1 $NMEM_ENS)
+++ exgdas_enkf_post.sh[70]: printf %03i 2
++ exgdas_enkf_post.sh[70]: memchar=mem002
++ exgdas_enkf_post.sh[71]: MEMDIR=mem002
++ exgdas_enkf_post.sh[71]: YMD=20211220
++ exgdas_enkf_post.sh[71]: HH=18
++ exgdas_enkf_post.sh[71]: declare_from_tmpl -x COMIN_ATMOS_HISTORY:COM_ATMOS_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ATMOS_HISTORY=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96C48_hybatmDA_5e0982c0/enkfgdas.20211220/18/mem002/model/atmos/history
+++ exgdas_enkf_post.sh[74]: seq 006 006 006
++ exgdas_enkf_post.sh[74]: for fhr in $(seq $FHMIN $FHOUT $FHMAX)
+++ exgdas_enkf_post.sh[75]: printf %03i 6
++ exgdas_enkf_post.sh[75]: fhrchar=006
++ exgdas_enkf_post.sh[76]: /bin/ln -sf /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96C48_hybatmDA_5e0982c0/enkfgdas.20211220/18/mem002/model/atmos/history/enkfgdas.t18z.sfcf006.nc sfcf006_mem002
++ exgdas_enkf_post.sh[77]: /bin/ln -sf /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96C48_hybatmDA_5e0982c0/enkfgdas.20211220/18/mem002/model/atmos/history/enkfgdas.t18z.atmf006.nc atmf006_mem002
++ exgdas_enkf_post.sh[82]: MEMDIR=ensstat
++ exgdas_enkf_post.sh[82]: YMD=20211220
++ exgdas_enkf_post.sh[82]: HH=18
++ exgdas_enkf_post.sh[82]: declare_from_tmpl -rx COMOUT_ATMOS_HISTORY_STAT:COM_ATMOS_HISTORY_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMOUT_ATMOS_HISTORY_STAT=/gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96C48_hybatmDA_5e0982c0/enkfgdas.20211220/18/ensstat/model/atmos/history
++ exgdas_enkf_post.sh[84]: [[ ! -d /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96C48_hybatmDA_5e0982c0/enkfgdas.20211220/18/ensstat/model/atmos/history ]]
+++ exgdas_enkf_post.sh[86]: seq 006 006 006
++ exgdas_enkf_post.sh[86]: for fhr in $(seq $FHMIN $FHOUT $FHMAX)
+++ exgdas_enkf_post.sh[87]: printf %03i 6
++ exgdas_enkf_post.sh[87]: fhrchar=006
++ exgdas_enkf_post.sh[88]: /bin/ln -sf /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96C48_hybatmDA_5e0982c0/enkfgdas.20211220/18/ensstat/model/atmos/history/enkfgdas.t18z.sfcf006.ensmean.nc sfcf006.ensmean
++ exgdas_enkf_post.sh[89]: /bin/ln -sf /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96C48_hybatmDA_5e0982c0/enkfgdas.20211220/18/ensstat/model/atmos/history/enkfgdas.t18z.atmf006.ensmean.nc atmf006.ensmean
++ exgdas_enkf_post.sh[90]: '[' NO = YES ']'
++ exgdas_enkf_post.sh[98]: [[ YES == \Y\E\S ]]
++ exgdas_enkf_post.sh[99]: /bin/ln -sf /gpfs/f5/epic/proj-shared/global/CI/3419/RUNTESTS/COMROOT/C96C48_hybatmDA_5e0982c0/enkfgdas.20211220/18/ensstat/model/atmos/history/enkfgdas.t18z.atmf006.ensspread.nc atmf006.ensspread
++ exgdas_enkf_post.sh[106]: [[ NO == \Y\E\S ]]
++ exgdas_enkf_post.sh[110]: rc=0
+++ exgdas_enkf_post.sh[111]: seq 006 006 006
++ exgdas_enkf_post.sh[111]: for fhr in $(seq $FHMIN $FHOUT $FHMAX)
+++ exgdas_enkf_post.sh[112]: printf %03i 6
++ exgdas_enkf_post.sh[112]: fhrchar=006
++ exgdas_enkf_post.sh[114]: export pgm=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/getsfcensmeanp.x
++ exgdas_enkf_post.sh[114]: pgm=/gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/getsfcensmeanp.x
++ exgdas_enkf_post.sh[115]: . prep_step
+++ prep_step[3]: '[' -n /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/getsfcensmeanp.x ']'
+++ prep_step[3]: '[' -n OUTPUT.1864696 ']'
+++ prep_step[4]: echo /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/getsfcensmeanp.x
+++ prep_step[7]: '[' -f errfile ']'
+++ prep_step[11]: export FORT01=0
+++ prep_step[11]: FORT01=0
++++ prep_step[12]: grep '^FORT[0-9]\{1,\}='
++++ prep_step[12]: env
++++ prep_step[12]: awk -F= '{print $1}'
+++ prep_step[12]: unset FORT01
+++ exgdas_enkf_post.sh[117]: basename /gpfs/f5/epic/proj-shared/global/CI/3419/global-workflow/exec/getsfcensmeanp.x
++ exgdas_enkf_post.sh[117]: srun -l --export=ALL -n 80 --cpus-per-task=1 /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96C48_hybatmDA_5e0982c0/enkfgdas.2021122018/epos.1864611/getsfcensmeanp.x ./ sfcf006.ensmean sfcf006 2
+ 0: 
+ 0: 
+ 0: * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . 
+ 0:      PROGRAM GETSFCENSMEAN HAS BEGUN. COMPILED 2011319.55     ORG: NP25
+ 0:      STARTING DATE-TIME  MAR 06,2025  12:30:24.942   65  THU   2460741
+ 0: 
+ 0: 
+ 0:   
+ 0:  Command line input
+ 0:   datapath      = ./
+ 0:   filenameout   = ./sfcf006.ensmean
+ 0:   fileprefix    = sfcf006
+ 0:   nanals,rnanals=            2  0.500000000000000     
+32:  No files to process for mpi task =           32
+ 9:  No files to process for mpi task =            9
+29:  No files to process for mpi task =           29
+35:  No files to process for mpi task =           35
+37:  No files to process for mpi task =           37
+43:  No files to process for mpi task =           43
+48:  No files to process for mpi task =           48
+10:  No files to process for mpi task =           10
+14:  No files to process for mpi task =           14
+22:  No files to process for mpi task =           22
+51:  No files to process for mpi task =           51
+55:  No files to process for mpi task =           55
+65:  No files to process for mpi task =           65
+70:  No files to process for mpi task =           70
+73:  No files to process for mpi task =           73
+78:  No files to process for mpi task =           78
+ 2:  No files to process for mpi task =            2
+ 3:  No files to process for mpi task =            3
+ 7:  No files to process for mpi task =            7
+16:  No files to process for mpi task =           16
+18:  No files to process for mpi task =           18
+23:  No files to process for mpi task =           23
+24:  No files to process for mpi task =           24
+26:  No files to process for mpi task =           26
+28:  No files to process for mpi task =           28
+30:  No files to process for mpi task =           30
+31:  No files to process for mpi task =           31
+34:  No files to process for mpi task =           34
+39:  No files to process for mpi task =           39
+40:  No files to process for mpi task =           40
+41:  No files to process for mpi task =           41
+46:  No files to process for mpi task =           46
+47:  No files to process for mpi task =           47
+49:  No files to process for mpi task =           49
+54:  No files to process for mpi task =           54
+57:  No files to process for mpi task =           57
+58:  No files to process for mpi task =           58
+59:  No files to process for mpi task =           59
+60:  No files to process for mpi task =           60
+61:  No files to process for mpi task =           61
+62:  No files to process for mpi task =           62
+64:  No files to process for mpi task =           64
+66:  No files to process for mpi task =           66
+67:  No files to process for mpi task =           67
+69:  No files to process for mpi task =           69
+79:  No files to process for mpi task =           79
+ 4:  No files to process for mpi task =            4
+ 5:  No files to process for mpi task =            5
+ 6:  No files to process for mpi task =            6
+ 8:  No files to process for mpi task =            8
+11:  No files to process for mpi task =           11
+12:  No files to process for mpi task =           12
+13:  No files to process for mpi task =           13
+15:  No files to process for mpi task =           15
+17:  No files to process for mpi task =           17
+19:  No files to process for mpi task =           19
+20:  No files to process for mpi task =           20
+21:  No files to process for mpi task =           21
+25:  No files to process for mpi task =           25
+27:  No files to process for mpi task =           27
+33:  No files to process for mpi task =           33
+36:  No files to process for mpi task =           36
+38:  No files to process for mpi task =           38
+42:  No files to process for mpi task =           42
+44:  No files to process for mpi task =           44
+45:  No files to process for mpi task =           45
+50:  No files to process for mpi task =           50
+52:  No files to process for mpi task =           52
+53:  No files to process for mpi task =           53
+56:  No files to process for mpi task =           56
+63:  No files to process for mpi task =           63
+68:  No files to process for mpi task =           68
+71:  No files to process for mpi task =           71
+72:  No files to process for mpi task =           72
+74:  No files to process for mpi task =           74
+75:  No files to process for mpi task =           75
+76:  No files to process for mpi task =           76
+77:  No files to process for mpi task =           77
+ 0:  computing mean with nemsio= F  sfcio= F  ncio= T
+ 0:  opened netcdf file ./sfcf006.ensmean
+ 0:  writing ens mean acond
+ 0:  writing ens mean albdo_ave
+ 0:  writing ens mean alnsf
+ 0:  writing ens mean alnwf
+ 0:  writing ens mean alvsf
+ 0:  writing ens mean alvwf
+ 0:  writing ens mean aod550
+ 0:  writing ens mean bc_aod550
+ 0:  writing ens mean c0
+ 0:  writing ens mean cd
+ 0:  writing ens mean cduvb_ave
+ 0:  writing ens mean cldfra
+ 0:  writing ens mean cnvprcp
+ 0:  writing ens mean cnwat
+ 0:  writing ens mean cpofp
+ 0:  writing ens mean cprat_ave
+ 0:  writing ens mean cpratb_ave
+ 0:  writing ens mean crain
+ 0:  writing ens mean csdlf
+ 0:  writing ens mean csdsf
+ 0:  writing ens mean csulf
+ 0:  writing ens mean csulftoa
+ 0:  writing ens mean csusf
+ 0:  writing ens mean csusftoa
+ 0:  writing ens mean cwork_aveclm
+ 0:  writing ens mean dconv
+ 0:  writing ens mean dlwrf
+ 0:  writing ens mean dlwrf_ave
+ 0:  writing ens mean dswrf
+ 0:  writing ens mean dswrf_ave
+ 0:  writing ens mean dswrf_avetoa
+ 0:  writing ens mean dtcool
+ 0:  writing ens mean du_aod550
+ 0:  writing ens mean duvb_ave
+ 0:  writing ens mean evbs_ave
+ 0:  writing ens mean evcw_ave
+ 0:  writing ens mean f10m
+ 0:  writing ens mean facsf
+ 0:  writing ens mean facwf
+ 0:  writing ens mean ffhh
+ 0:  writing ens mean ffmm
+ 0:  writing ens mean fldcp
+ 0:  writing ens mean fricv
+ 0:  writing ens mean gflux
+ 0:  writing ens mean gflux_ave
+ 0:  writing ens mean hgt_hyblev1
+ 0:  writing ens mean hpbl
+ 0:  writing ens mean icec
+ 0:  writing ens mean icetk
+ 0:  writing ens mean lhtfl
+ 0:  writing ens mean lhtfl_ave
+ 0:  writing ens mean nbdsf_ave
+ 0:  writing ens mean nddsf_ave
+ 0:  writing ens mean oc_aod550
+ 0:  writing ens mean pevpr
+ 0:  writing ens mean pevpr_ave
+ 0:  writing ens mean prate_ave
+ 0:  writing ens mean prateb_ave
+ 0:  writing ens mean pres_avehcb
+ 0:  writing ens mean pres_avehct
+ 0:  writing ens mean pres_avelcb
+ 0:  writing ens mean pres_avelct
+ 0:  writing ens mean pres_avemcb
+ 0:  writing ens mean pres_avemct
+ 0:  writing ens mean prescnvclb
+ 0:  writing ens mean prescnvclt
+ 0:  writing ens mean pressfc
+ 0:  writing ens mean pwat
+ 0:  writing ens mean qrain
+ 0:  writing ens mean sbsno_ave
+ 0:  writing ens mean sfcr
+ 0:  writing ens mean sfexc
+ 0:  writing ens mean shdmax
+ 0:  writing ens mean shdmin
+ 0:  writing ens mean shtfl
+ 0:  writing ens mean shtfl_ave
+ 0:  writing ens mean sltyp
+ 0:  writing ens mean snoalb
+ 0:  writing ens mean snod
+ 0:  writing ens mean snohf
+ 0:  writing ens mean snowc_ave
+ 0:  writing ens mean soill1
+ 0:  writing ens mean soill2
+ 0:  writing ens mean soill3
+ 0:  writing ens mean soill4
+ 0:  writing ens mean soilm
+ 0:  writing ens mean soilt1
+ 0:  writing ens mean soilt2
+ 0:  writing ens mean soilt3
+ 0:  writing ens mean soilt4
+ 0:  writing ens mean soilw1
+ 0:  writing ens mean soilw2
+ 0:  writing ens mean soilw3
+ 0:  writing ens mean soilw4
+ 0:  writing ens mean spfh2m
+ 0:  writing ens mean spfh_hyblev1
+ 0:  writing ens mean spfhmax_max2m
+ 0:  writing ens mean spfhmin_min2m
+ 0:  writing ens mean ss_aod550
+ 0:  writing ens mean ssrun_acc
+ 0:  writing ens mean su_aod550
+ 0:  writing ens mean sunsd_acc
+ 0:  writing ens mean tcdc_avebndcl
+ 0:  writing ens mean tcdc_aveclm
+ 0:  writing ens mean tcdc_avehcl
+ 0:  writing ens mean tcdc_avelcl
+ 0:  writing ens mean tcdc_avemcl
+ 0:  writing ens mean tcdccnvcl
+ 0:  writing ens mean tg3
+ 0:  writing ens mean tisfc
+ 0:  writing ens mean tmax_max2m
+ 0:  writing ens mean tmin_min2m
+ 0:  writing ens mean tmp2m
+ 0:  writing ens mean tmp_avehct
+ 0:  writing ens mean tmp_avelct
+ 0:  writing ens mean tmp_avemct
+ 0:  writing ens mean tmp_hyblev1
+ 0:  writing ens mean tmpsfc
+ 0:  writing ens mean tprcp
+ 0:  writing ens mean trans_ave
+ 0:  writing ens mean tref
+ 0:  writing ens mean u-gwd_ave
+ 0:  writing ens mean uflx_ave
+ 0:  writing ens mean ugrd10m
+ 0:  writing ens mean ugrd_hyblev1
+ 0:  writing ens mean ulwrf
+ 0:  writing ens mean ulwrf_ave
+ 0:  writing ens mean ulwrf_avetoa
+ 0:  writing ens mean uswrf
+ 0:  writing ens mean uswrf_ave
+ 0:  writing ens mean uswrf_avetoa
+ 0:  writing ens mean v-gwd_ave
+ 0:  writing ens mean vbdsf_ave
+ 0:  writing ens mean vddsf_ave
+ 0:  writing ens mean veg
+ 0:  writing ens mean vflx_ave
+ 0:  writing ens mean vgrd10m
+ 0:  writing ens mean vgrd_hyblev1
+ 0:  writing ens mean w0
+ 0:  writing ens mean watr_acc
+ 0:  writing ens mean wd
+ 0:  writing ens mean weasd
+ 0:  writing ens mean wilt
+ 0:  writing ens mean xs
+ 0:  writing ens mean xt
+ 0:  writing ens mean xtts
+ 0:  writing ens mean xu
+ 0:  writing ens mean xv
+ 0:  writing ens mean xz
+ 0:  writing ens mean xzts
+ 0:  writing ens mean zc
+ 0:  all done!
+ 0: 
+ 0: 
+ 0:      ENDING DATE-TIME    MAR 06,2025  12:30:25.288   65  THU   2460741
+ 0:      PROGRAM GETSFCENSMEAN HAS ENDED.
+ 0: * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . 
+srun: error: c5n1460: tasks 1-79: Killed
+srun: Terminating StepId=135397820.0
+ 0: slurmstepd: error: *** STEP 135397820.0 ON c5n1460 CANCELLED AT 2025-03-06T12:40:10 ***
+srun: error: c5n1460: task 0: Killed
+srun: Force Terminated StepId=135397820.0
++ exgdas_enkf_post.sh[1]: postamble exgdas_enkf_post.sh 1741282221 137
++ preamble.sh[70]: set +x
+End exgdas_enkf_post.sh at 17:40:28 with error code 137 (time elapsed: 00:10:07)
++ JGDAS_ENKF_POST[1]: postamble JGDAS_ENKF_POST 1741282211 137
++ preamble.sh[70]: set +x
+End JGDAS_ENKF_POST at 17:40:28 with error code 137 (time elapsed: 00:10:17)
++ epos.sh[1]: postamble epos.sh 1741282206 137
++ preamble.sh[70]: set +x
+End epos.sh at 17:40:28 with error code 137 (time elapsed: 00:10:22)
