@@ -1,0 +1,83 @@
++ OPTIND=1
++ getopts :j:dv option
++ case "${option}" in
++ BUILD_JOBS=8
++ getopts :j:dv option
++ shift 2
++ CMAKE_OPTS=-DGFS=ON
++ BUILD_TYPE=Release
++ BUILD_JOBS=8
++ BUILD_VERBOSE=
++ ./ufs_utils.fd/build_all.sh
+++ uname -s
++ [[ Linux == Darwin ]]
+++++ readlink -f -n ./ufs_utils.fd/build_all.sh
++++ dirname /gpfs/f5/epic/proj-shared/global/CI/3419__2/global-workflow/sorc/ufs_utils.fd/build_all.sh
+++ cd /gpfs/f5/epic/proj-shared/global/CI/3419__2/global-workflow/sorc/ufs_utils.fd
+++ pwd -P
++ readonly DIR_ROOT=/gpfs/f5/epic/proj-shared/global/CI/3419__2/global-workflow/sorc/ufs_utils.fd
++ DIR_ROOT=/gpfs/f5/epic/proj-shared/global/CI/3419__2/global-workflow/sorc/ufs_utils.fd
++ source /gpfs/f5/epic/proj-shared/global/CI/3419__2/global-workflow/sorc/ufs_utils.fd/sorc/machine-setup.sh
+++ __ms_function_name=setup__test_function__865671
+++ eval 'setup__test_function__865671() { /bin/true ; }'
++++ eval '__text="text" ; if [[ $__text =~ ^(t).* ]] ; then printf "%s" ${.sh.match[1]} ; fi'
++++ cat
+++ __ms_ksh_test=
++++ eval 'if ( set | grep setup__test_function__865671 | grep -v name > /dev/null 2>&1 ) ; then echo t ; fi '
++++ cat
+++ __ms_bash_test=t
+++ [[ ! -z '' ]]
+++ [[ ! -z t ]]
+++ __ms_shell=bash
+++ target=
++++ echo role.epic
++++ awk '{ print tolower($0)}'
+++ USERNAME=role.epic
+++ [[ -d /lfs5 ]]
+++ [[ -d /lfs/h1 ]]
+++ [[ -d /opt/spack-stack ]]
+++ [[ -d /scratch1 ]]
++++ hostname
+++ [[ c5n1914 == \g\a\e\a\5* ]]
++++ hostname
+++ [[ c5n1914 =~ c5n[0-9]+ ]]
+++ [[ -d /gpfs/f5 ]]
+++ eval module help
+++ module reset
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ target=gaeac5
+++ unset __ms_shell
+++ unset __ms_ksh_test
+++ unset __ms_bash_test
+++ unset setup__test_function__865671
+++ unset __ms_function_name
++ target=gaeac5
++ compiler=intelllvm
++ [[ gaeac5 == \l\i\n\u\x\.\* ]]
++ [[ gaeac5 == \m\a\c\o\s\x\.\* ]]
++ set +x
+IntelLLVM not available. Will use Intel Classic.
+
+Lmod is automatically replacing "intel/2023.2.0" with "intel-classic/2023.2.0".
+
+Lmod has detected the following error: The following module(s) are unknown:
+"hsi"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "hsi"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
