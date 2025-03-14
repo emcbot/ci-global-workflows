@@ -1,0 +1,1727 @@
+Begin fcst.sh at Fri 14 Mar 2025 08:35:18 PM UTC
++ fcst.sh[8]: source /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/ush/detect_machine.sh
+++ detect_machine.sh[12]: [[ -n '' ]]
+++ detect_machine.sh[17]: case $(hostname -f) in
++++ detect_machine.sh[17]: hostname -f
+++ detect_machine.sh[50]: MACHINE_ID=UNKNOWN
+++ detect_machine.sh[53]: [[ UNKNOWN == \U\N\K\N\O\W\N ]]
+++ detect_machine.sh[54]: case ${PW_CSP:-} in
+++ detect_machine.sh[56]: PW_CSP=UNKNOWN
+++ detect_machine.sh[61]: MACHINE_ID=UNKNOWN
+++ detect_machine.sh[64]: [[ UNKNOWN != \U\N\K\N\O\W\N ]]
+++ detect_machine.sh[69]: [[ -d /lfs/h3 ]]
+++ detect_machine.sh[72]: [[ -d /lfs/h1 ]]
+++ detect_machine.sh[75]: [[ -d /mnt/lfs5 ]]
+++ detect_machine.sh[78]: [[ -d /scratch1 ]]
+++ detect_machine.sh[81]: [[ -d /work ]]
+++ detect_machine.sh[89]: [[ -d /gpfs/f5 ]]
+++ detect_machine.sh[91]: MACHINE_ID=gaeac5
++ fcst.sh[9]: [[ gaeac5 == \w\c\o\s\s\2 ]]
++ fcst.sh[12]: . /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/ush/load_fv3gfs_modules.sh
+++ load_fv3gfs_modules.sh[4]: [[ NO == \N\O ]]
+++ load_fv3gfs_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_fv3gfs_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/modulefiles
+
+Lmod is automatically replacing "intel/2023.2.0" with "intel-classic/2023.2.0".
+
+
+Currently Loaded Modules:
+  1) craype-x86-rome
+  2) perftools-base/23.12.0
+  3) xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d
+  4) cray-pmi/6.1.13
+  5) CmrsEnv/default
+  6) TimeZoneEDT/default
+  7) DefApps/default
+  8) cray-dsmml/0.2.2
+  9) cray-libsci/24.07.0
+ 10) PrgEnv-intel/8.5.0
+ 11) intel-classic/2023.2.0
+ 12) craype/2.7.30
+ 13) stack-intel/2023.2.0
+ 14) libfabric/1.20.1
+ 15) craype-network-ofi
+ 16) cray-mpich/8.1.28
+ 17) stack-cray-mpich/8.1.28
+ 18) gettext/0.20.2
+ 19) libxcrypt/4.4.35
+ 20) zlib/1.2.13
+ 21) sqlite/3.43.2
+ 22) util-linux-uuid/2.38.1
+ 23) python/3.11.6
+ 24) libjpeg/2.1.0
+ 25) jasper/2.0.32
+ 26) libpng/1.6.37
+ 27) openjpeg/2.3.1
+ 28) eccodes/2.32.0
+ 29) fftw/3.3.10
+ 30) nghttp2/1.57.0
+ 31) curl/8.4.0
+ 32) proj/9.2.1
+ 33) udunits/2.2.28
+ 34) cdo/2.2.0
+ 35) pkg-config/0.29.2
+ 36) hdf5/1.14.0
+ 37) snappy/1.1.10
+ 38) zstd/1.5.2
+ 39) c-blosc/1.21.5
+ 40) netcdf-c/4.9.2
+ 41) netcdf-fortran/4.6.1
+ 42) perlbrew/5.38.2
+ 43) antlr/2.7.7
+ 44) gsl/2.7.1
+ 45) nco/5.0.6
+ 46) bacio/2.4.1
+ 47) w3emc/2.10.0
+ 48) prod_util/2.1.1
+ 49) g2/3.4.5
+ 50) sp/2.5.0
+ 51) ip/4.3.0
+ 52) grib-util/1.3.0
+ 53) g2tmpl/1.10.2
+ 54) gsi-ncdiag/1.1.2
+ 55) crtm-fix/2.4.0.1_emc
+ 56) git-lfs/2.11.0
+ 57) crtm/2.4.0.1
+ 58) openblas/0.3.24
+ 59) py-setuptools/63.4.3
+ 60) py-numpy/1.23.4
+ 61) bufr/11.7.0
+ 62) gmake/4.2.1
+ 63) wgrib2/2.0.8
+ 64) py-cftime/1.0.3.4
+ 65) py-netcdf4/1.5.8
+ 66) py-f90nml/1.4.3
+ 67) libyaml/0.2.5
+ 68) py-pyyaml/6.0
+ 69) py-markupsafe/2.1.3
+ 70) py-jinja2/3.1.2
+ 71) py-bottleneck/1.3.7
+ 72) py-numexpr/2.8.4
+ 73) py-et-xmlfile/1.0.1
+ 74) py-openpyxl/3.1.2
+ 75) py-pytz/2023.3
+ 76) py-pyxlsb/1.0.10
+ 77) py-xlrd/2.0.1
+ 78) py-xlsxwriter/3.1.7
+ 79) py-xlwt/1.3.0
+ 80) py-pandas/1.5.3
+ 81) py-six/1.16.0
+ 82) py-python-dateutil/2.8.2
+ 83) g2c/1.6.4
+ 84) netcdf-cxx4/4.3.1
+ 85) met/9.1.3
+ 86) metplus/3.1.1
+ 87) py-packaging/23.1
+ 88) py-xarray/2023.7.0
+ 89) prepobs/1.1.0
+ 90) fit2obs/1.1.4
+ 91) hsi/9.3
+ 92) module_base.gaeac5
+
+ 
+
++ fcst.sh[14]: status=0
++ fcst.sh[15]: [[ 0 -ne 0 ]]
++ fcst.sh[19]: export job=fcst
++ fcst.sh[19]: job=fcst
++ fcst.sh[20]: export jobid=fcst.1011837
++ fcst.sh[20]: jobid=fcst.1011837
++ fcst.sh[23]: /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/jobs/JGLOBAL_FORECAST
+Begin JGLOBAL_FORECAST at Fri 14 Mar 2025 08:35:30 PM UTC
++ JGLOBAL_FORECAST[5]: ((  10#0 > 0  ))
++ JGLOBAL_FORECAST[10]: export DATAjob=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018
++ JGLOBAL_FORECAST[10]: DATAjob=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018
++ JGLOBAL_FORECAST[11]: export DATA=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837
++ JGLOBAL_FORECAST[11]: DATA=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837
++ JGLOBAL_FORECAST[12]: source /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/ush/jjob_header.sh -e fcst -c 'base fcst'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=fcst
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z fcst ]]
+++ jjob_header.sh[68]: export DATA=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837
+++ jjob_header.sh[68]: DATA=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837
+++ jjob_header.sh[72]: mkdir -p /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837
+++ jjob_header.sh[73]: cd /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837
+++ jjob_header.sh[79]: export cycle=t18z
+++ jjob_header.sh[79]: cycle=t18z
+++ jjob_header.sh[80]: setpdy.sh
+sed: can't read /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/date/t18z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20211213
++++ PDY[1]: PDYm7=20211213
++++ PDY[2]: export PDYm6=20211214
++++ PDY[2]: PDYm6=20211214
++++ PDY[3]: export PDYm5=20211215
++++ PDY[3]: PDYm5=20211215
++++ PDY[4]: export PDYm4=20211216
++++ PDY[4]: PDYm4=20211216
++++ PDY[5]: export PDYm3=20211217
++++ PDY[5]: PDYm3=20211217
++++ PDY[6]: export PDYm2=20211218
++++ PDY[6]: PDYm2=20211218
++++ PDY[7]: export PDYm1=20211219
++++ PDY[7]: PDYm1=20211219
++++ PDY[8]: export PDY=20211220
++++ PDY[8]: PDY=20211220
++++ PDY[9]: export PDYp1=20211221
++++ PDY[9]: PDYp1=20211221
++++ PDY[10]: export PDYp2=20211222
++++ PDY[10]: PDYp2=20211222
++++ PDY[11]: export PDYp3=20211223
++++ PDY[11]: PDYp3=20211223
++++ PDY[12]: export PDYp4=20211224
++++ PDY[12]: PDYp4=20211224
++++ PDY[13]: export PDYp5=20211225
++++ PDY[13]: PDYp5=20211225
++++ PDY[14]: export PDYp6=20211226
++++ PDY[14]: PDYp6=20211226
++++ PDY[15]: export PDYp7=20211227
++++ PDY[15]: PDYp7=20211227
+++ jjob_header.sh[87]: export pid=1011945
+++ jjob_header.sh[87]: pid=1011945
+++ jjob_header.sh[88]: export pgmout=OUTPUT.1011945
+++ jjob_header.sh[88]: pgmout=OUTPUT.1011945
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/EXPDIR/C96_atm3DVar_9098d000
+++ jjob_header.sh[95]: EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/EXPDIR/C96_atm3DVar_9098d000
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/EXPDIR/C96_atm3DVar_9098d000/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=GAEAC5
++++ config.base[9]: machine=GAEAC5
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=epic
++++ config.base[15]: ACCOUNT=epic
++++ config.base[16]: export QUEUE=normal
++++ config.base[16]: QUEUE=normal
++++ config.base[17]: export QUEUE_SERVICE=normal
++++ config.base[17]: QUEUE_SERVICE=normal
++++ config.base[18]: export QUEUE_DTN=hpss
++++ config.base[18]: QUEUE_DTN=hpss
++++ config.base[19]: export PARTITION_BATCH=batch
++++ config.base[19]: PARTITION_BATCH=batch
++++ config.base[20]: export PARTITION_SERVICE=batch
++++ config.base[20]: PARTITION_SERVICE=batch
++++ config.base[21]: export PARTITION_DTN=dtn_f5_f6
++++ config.base[21]: PARTITION_DTN=dtn_f5_f6
++++ config.base[22]: export RESERVATION=
++++ config.base[22]: RESERVATION=
++++ config.base[23]: export CLUSTERS=c5
++++ config.base[23]: CLUSTERS=c5
++++ config.base[24]: export CLUSTERS_SERVICE=@CLUSTERS_SERVICE@
++++ config.base[24]: CLUSTERS_SERVICE=@CLUSTERS_SERVICE@
++++ config.base[25]: export CLUSTERS_DTN=es
++++ config.base[25]: CLUSTERS_DTN=es
++++ config.base[28]: export HPSS_PROJECT=emc-global
++++ config.base[28]: HPSS_PROJECT=emc-global
++++ config.base[31]: export HOMEgfs=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow
++++ config.base[31]: HOMEgfs=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow
++++ config.base[32]: export EXECgfs=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/exec
++++ config.base[32]: EXECgfs=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/exec
++++ config.base[33]: export FIXgfs=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix
++++ config.base[33]: FIXgfs=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix
++++ config.base[34]: export PARMgfs=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm
++++ config.base[34]: PARMgfs=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm
++++ config.base[35]: export SCRgfs=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/scripts
++++ config.base[35]: SCRgfs=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/scripts
++++ config.base[36]: export USHgfs=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/ush
++++ config.base[36]: USHgfs=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/ush
++++ config.base[38]: export FIXam=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am
++++ config.base[38]: FIXam=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am
++++ config.base[39]: export FIXaer=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer
++++ config.base[39]: FIXaer=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer
++++ config.base[40]: export FIXcpl=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/cpl
++++ config.base[40]: FIXcpl=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/cpl
++++ config.base[41]: export FIXlut=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/lut
++++ config.base[41]: FIXlut=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/lut
++++ config.base[42]: export FIXcice=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/cice
++++ config.base[42]: FIXcice=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/cice
++++ config.base[43]: export FIXmom=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/mom6
++++ config.base[43]: FIXmom=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/mom6
++++ config.base[44]: export FIXreg2grb2=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/reg2grb2
++++ config.base[44]: FIXreg2grb2=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/reg2grb2
++++ config.base[45]: export FIXgdas=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/gdas
++++ config.base[45]: FIXgdas=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/gdas
++++ config.base[50]: export PACKAGEROOT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/nwpara
++++ config.base[50]: PACKAGEROOT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/nwpara
++++ config.base[51]: export COMROOT=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT
++++ config.base[51]: COMROOT=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT
++++ config.base[52]: export COMINsyn=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/com/gfs/prod/syndat
++++ config.base[52]: COMINsyn=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/com/gfs/prod/syndat
++++ config.base[53]: export DMPDIR=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/dump
++++ config.base[53]: DMPDIR=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/dump
++++ config.base[57]: export COMINecmwf=@COMINecmwf@
++++ config.base[57]: COMINecmwf=@COMINecmwf@
++++ config.base[58]: export COMINnam=@COMINnam@
++++ config.base[58]: COMINnam=@COMINnam@
++++ config.base[59]: export COMINukmet=@COMINukmet@
++++ config.base[59]: COMINukmet=@COMINukmet@
++++ config.base[62]: export HOMEDIR=/gpfs/f5/epic/scratch/role.epic
++++ config.base[62]: HOMEDIR=/gpfs/f5/epic/scratch/role.epic
++++ config.base[63]: export STMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[63]: STMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[64]: export PTMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[64]: PTMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[65]: export NOSCRUB=/gpfs/f5/epic/scratch/role.epic
++++ config.base[65]: NOSCRUB=/gpfs/f5/epic/scratch/role.epic
++++ config.base[68]: export BASE_GIT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git
++++ config.base[68]: BASE_GIT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git
++++ config.base[71]: export BASE_DATA=/gpfs/f5/ufs-ard/world-shared/global/glopara/data
++++ config.base[71]: BASE_DATA=/gpfs/f5/ufs-ard/world-shared/global/glopara/data
++++ config.base[74]: export DO_GOES=NO
++++ config.base[74]: DO_GOES=NO
++++ config.base[75]: export DO_BUFRSND=NO
++++ config.base[75]: DO_BUFRSND=NO
++++ config.base[76]: export DO_GEMPAK=NO
++++ config.base[76]: DO_GEMPAK=NO
++++ config.base[77]: export DO_AWIPS=NO
++++ config.base[77]: DO_AWIPS=NO
++++ config.base[78]: export DO_NPOESS=NO
++++ config.base[78]: DO_NPOESS=NO
++++ config.base[79]: export DO_TRACKER=NO
++++ config.base[79]: DO_TRACKER=NO
++++ config.base[80]: export DO_GENESIS=NO
++++ config.base[80]: DO_GENESIS=NO
++++ config.base[81]: export DO_GENESIS_FSU=NO
++++ config.base[81]: DO_GENESIS_FSU=NO
++++ config.base[82]: export DO_VERFOZN=YES
++++ config.base[82]: DO_VERFOZN=YES
++++ config.base[83]: export DO_VERFRAD=YES
++++ config.base[83]: DO_VERFRAD=YES
++++ config.base[84]: export DO_VMINMON=YES
++++ config.base[84]: DO_VMINMON=YES
++++ config.base[85]: export DO_MOS=NO
++++ config.base[85]: DO_MOS=NO
++++ config.base[91]: export REALTIME=YES
++++ config.base[91]: REALTIME=YES
++++ config.base[94]: export MODE=cycled
++++ config.base[94]: MODE=cycled
++++ config.base[95]: export DO_TEST_MODE=NO
++++ config.base[95]: DO_TEST_MODE=NO
++++ config.base[104]: export FIXgsi=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/gsi
++++ config.base[104]: FIXgsi=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/gsi
++++ config.base[105]: export HOMEpost=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow
++++ config.base[105]: HOMEpost=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow
++++ config.base[106]: export HOMEobsproc=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git/obsproc/v1.2.0
++++ config.base[106]: HOMEobsproc=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git/obsproc/v1.2.0
++++ config.base[109]: export 'NCP=/bin/cp -p'
++++ config.base[109]: NCP='/bin/cp -p'
++++ config.base[110]: export NMV=/bin/mv
++++ config.base[110]: NMV=/bin/mv
++++ config.base[111]: export 'NLN=/bin/ln -sf'
++++ config.base[111]: NLN='/bin/ln -sf'
++++ config.base[112]: export VERBOSE=YES
++++ config.base[112]: VERBOSE=YES
++++ config.base[113]: export KEEPDATA=NO
++++ config.base[113]: KEEPDATA=NO
++++ config.base[114]: export DEBUG_POSTSCRIPT=NO
++++ config.base[114]: DEBUG_POSTSCRIPT=NO
++++ config.base[115]: export CHGRP_RSTPROD=NO
++++ config.base[115]: CHGRP_RSTPROD=NO
++++ config.base[116]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[116]: CHGRP_CMD='chgrp rstprod'
++++ config.base[117]: export NCDUMP=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-mh4uycw/bin/ncdump
++++ config.base[117]: NCDUMP=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-mh4uycw/bin/ncdump
++++ config.base[118]: export NCLEN=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/ush/getncdimlen
++++ config.base[118]: NCLEN=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/ush/getncdimlen
++++ config.base[121]: export BASE_ENV=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/env
++++ config.base[121]: BASE_ENV=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/env
++++ config.base[122]: export BASE_JOB=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/jobs/rocoto
++++ config.base[122]: BASE_JOB=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/jobs/rocoto
++++ config.base[125]: export SDATE=2021122018
++++ config.base[125]: SDATE=2021122018
++++ config.base[126]: export EDATE=2021122106
++++ config.base[126]: EDATE=2021122106
++++ config.base[127]: export EXP_WARM_START=.false.
++++ config.base[127]: EXP_WARM_START=.false.
++++ config.base[128]: export assim_freq=6
++++ config.base[128]: assim_freq=6
++++ config.base[129]: export PSLOT=C96_atm3DVar_9098d000
++++ config.base[129]: PSLOT=C96_atm3DVar_9098d000
++++ config.base[130]: export EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/EXPDIR/C96_atm3DVar_9098d000
++++ config.base[130]: EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/EXPDIR/C96_atm3DVar_9098d000
++++ config.base[131]: export ROTDIR=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000
++++ config.base[131]: ROTDIR=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000
++++ config.base[132]: export ROTDIR_DUMP=YES
++++ config.base[132]: ROTDIR_DUMP=YES
++++ config.base[133]: export DUMP_SUFFIX=
++++ config.base[133]: DUMP_SUFFIX=
++++ config.base[134]: [[ 2021122018 -ge 2019092100 ]]
++++ config.base[134]: [[ 2021122018 -le 2019110700 ]]
++++ config.base[137]: export ARCDIR=/gpfs/f5/epic/scratch/role.epic/archive/C96_atm3DVar_9098d000
++++ config.base[137]: ARCDIR=/gpfs/f5/epic/scratch/role.epic/archive/C96_atm3DVar_9098d000
++++ config.base[138]: export ATARDIR=/gpfs/f5/epic/scratch/role.epic/archive_rotdir/C96_atm3DVar_9098d000
++++ config.base[138]: ATARDIR=/gpfs/f5/epic/scratch/role.epic/archive_rotdir/C96_atm3DVar_9098d000
++++ config.base[139]: export FETCHDIR=@FETCHDIR@
++++ config.base[139]: FETCHDIR=@FETCHDIR@
++++ config.base[142]: export envir=prod
++++ config.base[142]: envir=prod
++++ config.base[143]: export NET=gfs
++++ config.base[143]: NET=gfs
++++ config.base[144]: export RUN=gdas
++++ config.base[144]: RUN=gdas
++++ config.base[147]: source /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/EXPDIR/C96_atm3DVar_9098d000/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ config.com[78]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[79]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[80]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[82]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[83]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[84]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[85]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[86]: declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[87]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[88]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[89]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[90]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[92]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[93]: declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[94]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[95]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[96]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[97]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[98]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[99]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[100]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[102]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[103]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[104]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[106]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[150]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[150]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[151]: export LOGSCRIPT=
++++ config.base[151]: LOGSCRIPT=
++++ config.base[154]: export 'REDOUT=1>'
++++ config.base[154]: REDOUT='1>'
++++ config.base[155]: export 'REDERR=2>'
++++ config.base[155]: REDERR='2>'
++++ config.base[157]: export SENDECF=NO
++++ config.base[157]: SENDECF=NO
++++ config.base[158]: export SENDSDM=NO
++++ config.base[158]: SENDSDM=NO
++++ config.base[159]: export SENDDBN_NTC=NO
++++ config.base[159]: SENDDBN_NTC=NO
++++ config.base[160]: export SENDDBN=NO
++++ config.base[160]: SENDDBN=NO
++++ config.base[161]: export DBNROOT=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-iqvlvsb/fakedbn
++++ config.base[161]: DBNROOT=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-iqvlvsb/fakedbn
++++ config.base[164]: export APP=ATM
++++ config.base[164]: APP=ATM
++++ config.base[166]: shopt -s extglob
++++ config.base[169]: case "${RUN}" in
++++ config.base[176]: shopt -u extglob
++++ config.base[179]: export DO_ATM=YES
++++ config.base[179]: DO_ATM=YES
++++ config.base[180]: export DO_COUPLED=NO
++++ config.base[180]: DO_COUPLED=NO
++++ config.base[181]: export DO_WAVE=NO
++++ config.base[181]: DO_WAVE=NO
++++ config.base[182]: export DO_OCN=NO
++++ config.base[182]: DO_OCN=NO
++++ config.base[183]: export DO_ICE=NO
++++ config.base[183]: DO_ICE=NO
++++ config.base[184]: DO_AERO=NO
++++ config.base[185]: export DO_PREP_OBS_AERO=NO
++++ config.base[185]: DO_PREP_OBS_AERO=NO
++++ config.base[186]: aero_fcst_runs=gdas
++++ config.base[187]: aero_anl_runs='gdas gfs'
++++ config.base[188]: export DO_AERO_FCST=NO
++++ config.base[188]: DO_AERO_FCST=NO
++++ config.base[189]: export DO_AERO_ANL=NO
++++ config.base[189]: DO_AERO_ANL=NO
++++ config.base[190]: export DOBNDPNT_WAVE=NO
++++ config.base[190]: DOBNDPNT_WAVE=NO
++++ config.base[191]: export DOIBP_WAV=NO
++++ config.base[191]: DOIBP_WAV=NO
++++ config.base[192]: export FRAC_GRID=.true.
++++ config.base[192]: FRAC_GRID=.true.
++++ config.base[193]: export DO_NEST=NO
++++ config.base[193]: DO_NEST=NO
++++ config.base[194]: [[ NO == \Y\E\S ]]
++++ config.base[200]: export ntiles=6
++++ config.base[200]: ntiles=6
++++ config.base[201]: export FIXugwd=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd
++++ config.base[201]: FIXugwd=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd
++++ config.base[202]: export FIXorog=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog
++++ config.base[202]: FIXorog=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog
++++ config.base[206]: export OPS_RES=C768
++++ config.base[206]: OPS_RES=C768
++++ config.base[209]: export LEVS=128
++++ config.base[209]: LEVS=128
++++ config.base[210]: export CASE=C96
++++ config.base[210]: CASE=C96
++++ config.base[211]: export CASE_ENS=@CASEENS@
++++ config.base[211]: CASE_ENS=@CASEENS@
++++ config.base[212]: export OCNRES=500
++++ config.base[212]: OCNRES=500
++++ config.base[213]: export ICERES=500
++++ config.base[213]: ICERES=500
++++ config.base[216]: case "${CASE}" in
++++ config.base[221]: export waveGRD=uglo_100km
++++ config.base[221]: waveGRD=uglo_100km
++++ config.base[235]: case "${APP}" in
++++ config.base[270]: [[ NO == \Y\E\S ]]
++++ config.base[280]: [[ gdas =~ gdas ]]
++++ config.base[281]: export FHCYC=1
++++ config.base[281]: FHCYC=1
++++ config.base[282]: export FTSFS=10
++++ config.base[282]: FTSFS=10
++++ config.base[288]: export FHMIN=0
++++ config.base[288]: FHMIN=0
++++ config.base[289]: export FHMAX=9
++++ config.base[289]: FHMAX=9
++++ config.base[290]: export FHOUT=3
++++ config.base[290]: FHOUT=3
++++ config.base[291]: export FHOUT_OCN=3
++++ config.base[291]: FHOUT_OCN=3
++++ config.base[292]: export FHOUT_ICE=3
++++ config.base[292]: FHOUT_ICE=3
++++ config.base[293]: export FHOUT_AERO=3
++++ config.base[293]: FHOUT_AERO=3
++++ config.base[296]: export EUPD_CYC=gdas
++++ config.base[296]: EUPD_CYC=gdas
++++ config.base[299]: export INTERVAL_GFS=24
++++ config.base[299]: INTERVAL_GFS=24
++++ config.base[300]: export SDATE_GFS=2021122100
++++ config.base[300]: SDATE_GFS=2021122100
++++ config.base[303]: export FHMIN_GFS=0
++++ config.base[303]: FHMIN_GFS=0
++++ config.base[304]: export FHMAX_GFS=120
++++ config.base[304]: FHMAX_GFS=120
++++ config.base[306]: breakpnts=
++++ config.base[307]: export FCST_SEGMENTS=0,120
++++ config.base[307]: FCST_SEGMENTS=0,120
++++ config.base[308]: export FHOUT_GFS=3
++++ config.base[308]: FHOUT_GFS=3
++++ config.base[309]: export FHMAX_HF_GFS=0
++++ config.base[309]: FHMAX_HF_GFS=0
++++ config.base[310]: export FHOUT_HF_GFS=1
++++ config.base[310]: FHOUT_HF_GFS=1
++++ config.base[311]: export FHOUT_OCN_GFS=6
++++ config.base[311]: FHOUT_OCN_GFS=6
++++ config.base[312]: export FHOUT_ICE_GFS=6
++++ config.base[312]: FHOUT_ICE_GFS=6
++++ config.base[313]: export FHMIN_WAV=0
++++ config.base[313]: FHMIN_WAV=0
++++ config.base[314]: export FHOUT_WAV=3
++++ config.base[314]: FHOUT_WAV=3
++++ config.base[315]: export FHMAX_HF_WAV=120
++++ config.base[315]: FHMAX_HF_WAV=120
++++ config.base[316]: export FHOUT_HF_WAV=1
++++ config.base[316]: FHOUT_HF_WAV=1
++++ config.base[317]: export FHMAX_WAV=9
++++ config.base[317]: FHMAX_WAV=9
++++ config.base[318]: export FHMAX_WAV_GFS=120
++++ config.base[318]: FHMAX_WAV_GFS=120
++++ config.base[319]: export FHMAX_HF_GFS=0
++++ config.base[319]: FHMAX_HF_GFS=0
++++ config.base[320]: export FHMAX_WAV=9
++++ config.base[320]: FHMAX_WAV=9
++++ config.base[321]: export FHMAX_WAV_GFS=120
++++ config.base[321]: FHMAX_WAV_GFS=120
++++ config.base[322]: export FHMAX_HF_WAV=120
++++ config.base[322]: FHMAX_HF_WAV=120
++++ config.base[325]: export ILPOST=1
++++ config.base[325]: ILPOST=1
++++ config.base[326]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[327]: export ILPOST=3
++++ config.base[327]: ILPOST=3
++++ config.base[331]: export FHMAX_GOES=180
++++ config.base[331]: FHMAX_GOES=180
++++ config.base[332]: export FHOUT_GOES=3
++++ config.base[332]: FHOUT_GOES=3
++++ config.base[333]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[334]: export FHMAX_GOES=120
++++ config.base[334]: FHMAX_GOES=120
++++ config.base[338]: export restart_interval_gfs=12
++++ config.base[338]: restart_interval_gfs=12
++++ config.base[343]: export QUILTING=.true.
++++ config.base[343]: QUILTING=.true.
++++ config.base[344]: export OUTPUT_GRID=gaussian_grid
++++ config.base[344]: OUTPUT_GRID=gaussian_grid
++++ config.base[345]: export WRITE_DOPOST=.true.
++++ config.base[345]: WRITE_DOPOST=.true.
++++ config.base[346]: export WRITE_NSFLIP=.true.
++++ config.base[346]: WRITE_NSFLIP=.true.
++++ config.base[349]: export DOIAU=YES
++++ config.base[349]: DOIAU=YES
++++ config.base[350]: export IAUFHRS=3,6,9
++++ config.base[350]: IAUFHRS=3,6,9
++++ config.base[351]: export IAU_FHROT=3
++++ config.base[351]: IAU_FHROT=3
++++ config.base[352]: export IAU_DELTHRS=6
++++ config.base[352]: IAU_DELTHRS=6
++++ config.base[353]: export IAU_OFFSET=6
++++ config.base[353]: IAU_OFFSET=6
++++ config.base[354]: export DOIAU_ENKF=YES
++++ config.base[354]: DOIAU_ENKF=YES
++++ config.base[355]: export IAUFHRS_ENKF=3,6,9
++++ config.base[355]: IAUFHRS_ENKF=3,6,9
++++ config.base[356]: export IAU_DELTHRS_ENKF=6
++++ config.base[356]: IAU_DELTHRS_ENKF=6
++++ config.base[359]: export lobsdiag_forenkf=.true.
++++ config.base[359]: lobsdiag_forenkf=.true.
++++ config.base[367]: export imp_physics=8
++++ config.base[367]: imp_physics=8
++++ config.base[371]: export DO_JEDIATMVAR=NO
++++ config.base[371]: DO_JEDIATMVAR=NO
++++ config.base[372]: export DO_JEDIATMENS=NO
++++ config.base[372]: DO_JEDIATMENS=NO
++++ config.base[373]: export DO_JEDIOCNVAR=NO
++++ config.base[373]: DO_JEDIOCNVAR=NO
++++ config.base[374]: export DO_JEDISNOWDA=NO
++++ config.base[374]: DO_JEDISNOWDA=NO
++++ config.base[375]: export DO_MERGENSST=NO
++++ config.base[375]: DO_MERGENSST=NO
++++ config.base[376]: export DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[376]: DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[379]: export DOHYBVAR=NO
++++ config.base[379]: DOHYBVAR=NO
++++ config.base[380]: export DOHYBVAR_OCN=NO
++++ config.base[380]: DOHYBVAR_OCN=NO
++++ config.base[381]: export NMEM_ENS=0
++++ config.base[381]: NMEM_ENS=0
++++ config.base[382]: export SMOOTH_ENKF=NO
++++ config.base[382]: SMOOTH_ENKF=NO
++++ config.base[383]: export l4densvar=.true.
++++ config.base[383]: l4densvar=.true.
++++ config.base[384]: export lwrite4danl=.true.
++++ config.base[384]: lwrite4danl=.true.
++++ config.base[385]: export DO_CALC_INCREMENT=NO
++++ config.base[385]: DO_CALC_INCREMENT=NO
++++ config.base[388]: export NMEM_ENS_GFS=30
++++ config.base[388]: NMEM_ENS_GFS=30
++++ config.base[389]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[389]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[390]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[390]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[393]: [[ NO = \Y\E\S ]]
++++ config.base[407]: [[ NO == \N\O ]]
++++ config.base[407]: [[ YES == \Y\E\S ]]
++++ config.base[408]: export IAUFHRS=6,
++++ config.base[408]: IAUFHRS=6,
++++ config.base[409]: export IAU_FHROT=3
++++ config.base[409]: IAU_FHROT=3
++++ config.base[410]: export IAU_FILTER_INCREMENTS=.true.
++++ config.base[410]: IAU_FILTER_INCREMENTS=.true.
++++ config.base[411]: export IAUFHRS_ENKF=6,
++++ config.base[411]: IAUFHRS_ENKF=6,
++++ config.base[415]: export ENKF_SPREAD=YES
++++ config.base[415]: ENKF_SPREAD=YES
++++ config.base[418]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[418]: [[ 2021122018 = \2\0\2\1\1\2\2\0\1\8 ]]
++++ config.base[418]: [[ .false. = \.\f\a\l\s\e\. ]]
++++ config.base[419]: export IAU_OFFSET=0
++++ config.base[419]: IAU_OFFSET=0
++++ config.base[420]: export IAU_FHROT=0
++++ config.base[420]: IAU_FHROT=0
++++ config.base[421]: export IAUFHRS=6,
++++ config.base[421]: IAUFHRS=6,
++++ config.base[424]: [[ YES = \N\O ]]
++++ config.base[428]: [[ YES == \Y\E\S ]]
++++ config.base[429]: export restart_interval_enkfgdas=3
++++ config.base[429]: restart_interval_enkfgdas=3
++++ config.base[434]: export restart_interval_enkfgfs=3
++++ config.base[434]: restart_interval_enkfgfs=3
++++ config.base[436]: [[ YES == \Y\E\S ]]
++++ config.base[437]: export restart_interval_gdas=3
++++ config.base[437]: restart_interval_gdas=3
++++ config.base[442]: export DO_GSISOILDA=NO
++++ config.base[442]: DO_GSISOILDA=NO
++++ config.base[445]: export DONST=YES
++++ config.base[445]: DONST=YES
++++ config.base[446]: [[ YES = \Y\E\S ]]
++++ config.base[446]: export 'FNTSFA=        '
++++ config.base[446]: FNTSFA='        '
++++ config.base[449]: export nst_anl=.true.
++++ config.base[449]: nst_anl=.true.
++++ config.base[452]: export MAKE_NSSTBUFR=NO
++++ config.base[452]: MAKE_NSSTBUFR=NO
++++ config.base[455]: export MAKE_ACFTBUFR=NO
++++ config.base[455]: MAKE_ACFTBUFR=NO
++++ config.base[458]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[458]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[461]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[461]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[462]: export INCVARS_EFOLD=5
++++ config.base[462]: INCVARS_EFOLD=5
++++ config.base[467]: export netcdf_diag=.true.
++++ config.base[467]: netcdf_diag=.true.
++++ config.base[468]: export binary_diag=.false.
++++ config.base[468]: binary_diag=.false.
++++ config.base[471]: export DO_CA=YES
++++ config.base[471]: DO_CA=YES
++++ config.base[474]: export DO_METP=NO
++++ config.base[474]: DO_METP=NO
++++ config.base[475]: export DO_FIT2OBS=YES
++++ config.base[475]: DO_FIT2OBS=YES
++++ config.base[478]: export FHMAX_FITS=132
++++ config.base[478]: FHMAX_FITS=132
++++ config.base[479]: [[ 132 -gt 120 ]]
++++ config.base[480]: export FHMAX_FITS=120
++++ config.base[480]: FHMAX_FITS=120
++++ config.base[485]: export DO_FETCH_HPSS=NO
++++ config.base[485]: DO_FETCH_HPSS=NO
++++ config.base[486]: export DO_FETCH_LOCAL=NO
++++ config.base[486]: DO_FETCH_LOCAL=NO
++++ config.base[489]: export DO_ARCHCOM=NO
++++ config.base[489]: DO_ARCHCOM=NO
++++ config.base[490]: export ARCHCOM_TO=local
++++ config.base[490]: ARCHCOM_TO=local
++++ config.base[493]: export CLIENT_GLOBUS_UUID=@CLIENT_GLOBUS_UUID@
++++ config.base[493]: CLIENT_GLOBUS_UUID=@CLIENT_GLOBUS_UUID@
++++ config.base[496]: [[ NO = \Y\E\S ]]
++++ config.base[504]: export REPLAY_ICS=NO
++++ config.base[504]: REPLAY_ICS=NO
++++ config.base[505]: export OFFSET_START_HOUR=0
++++ config.base[505]: OFFSET_START_HOUR=0
++++ config.base[508]: export NUM_SND_COLLECTIVES=9
++++ config.base[508]: NUM_SND_COLLECTIVES=9
++++ config.base[510]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/EXPDIR/C96_atm3DVar_9098d000/config.fcst
++++ config.fcst[6]: echo 'BEGIN: config.fcst'
+BEGIN: config.fcst
++++ config.fcst[8]: export USE_ESMF_THREADING=YES
++++ config.fcst[8]: USE_ESMF_THREADING=YES
++++ config.fcst[9]: export COPY_FINAL_RESTARTS=NO
++++ config.fcst[9]: COPY_FINAL_RESTARTS=NO
++++ config.fcst[12]: string='--fv3 C96'
++++ config.fcst[13]: [[ NO == \Y\E\S ]]
++++ config.fcst[16]: [[ NO == \Y\E\S ]]
++++ config.fcst[19]: [[ NO == \Y\E\S ]]
++++ config.fcst[22]: [[ NO == \Y\E\S ]]
++++ config.fcst[27]: source /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/EXPDIR/C96_atm3DVar_9098d000/config.ufs --fv3 C96
+++++ config.ufs[9]: echo 'BEGIN: config.ufs'
+BEGIN: config.ufs
+++++ config.ufs[11]: ((  2 <= 1  ))
+++++ config.ufs[26]: skip_mom6=true
+++++ config.ufs[27]: skip_cice6=true
+++++ config.ufs[28]: skip_ww3=true
+++++ config.ufs[29]: skip_gocart=true
+++++ config.ufs[30]: skip_mediator=true
+++++ config.ufs[33]: ((  2 > 0  ))
+++++ config.ufs[34]: key=--fv3
+++++ config.ufs[35]: case "${key}" in
+++++ config.ufs[37]: fv3_res=C96
+++++ config.ufs[38]: shift
+++++ config.ufs[63]: shift
+++++ config.ufs[33]: ((  0 > 0  ))
+++++ config.ufs[67]: [[ true == \f\a\l\s\e ]]
+++++ config.ufs[67]: [[ true == \f\a\l\s\e ]]
+++++ config.ufs[67]: [[ true == \f\a\l\s\e ]]
+++++ config.ufs[71]: [[ NO == \Y\E\S ]]
+++++ config.ufs[84]: export grid_type=-1
+++++ config.ufs[84]: grid_type=-1
+++++ config.ufs[88]: case "${fv3_res}" in
+++++ config.ufs[109]: [[ NO == \Y\E\S ]]
+++++ config.ufs[131]: export nthreads_fv3=1
+++++ config.ufs[131]: nthreads_fv3=1
+++++ config.ufs[132]: export nthreads_ufs=1
+++++ config.ufs[132]: nthreads_ufs=1
+++++ config.ufs[133]: export layout_x=2
+++++ config.ufs[133]: layout_x=2
+++++ config.ufs[134]: export layout_y=2
+++++ config.ufs[134]: layout_y=2
+++++ config.ufs[135]: export WRITE_GROUP=1
+++++ config.ufs[135]: WRITE_GROUP=1
+++++ config.ufs[136]: export WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[136]: WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[137]: export DELTIM=600
+++++ config.ufs[137]: DELTIM=600
+++++ config.ufs[138]: export xr_cnvcld=.false.
+++++ config.ufs[138]: xr_cnvcld=.false.
+++++ config.ufs[139]: export cdmbgwd=0.14,1.8,1.0,1.0
+++++ config.ufs[139]: cdmbgwd=0.14,1.8,1.0,1.0
+++++ config.ufs[140]: export cdmbgwd_gsl=20.0,2.5,1.0,1.0
+++++ config.ufs[140]: cdmbgwd_gsl=20.0,2.5,1.0,1.0
+++++ config.ufs[141]: export psl_gwd_dx_factor=6.0
+++++ config.ufs[141]: psl_gwd_dx_factor=6.0
+++++ config.ufs[142]: export knob_ugwp_tauamp=3.0e-3
+++++ config.ufs[142]: knob_ugwp_tauamp=3.0e-3
+++++ config.ufs[143]: export k_split=1
+++++ config.ufs[143]: k_split=1
+++++ config.ufs[144]: export n_split=4
+++++ config.ufs[144]: n_split=4
+++++ config.ufs[145]: export tau=8.0
+++++ config.ufs[145]: tau=8.0
+++++ config.ufs[146]: export rf_cutoff=100.0
+++++ config.ufs[146]: rf_cutoff=100.0
+++++ config.ufs[147]: export fv_sg_adj=1800
+++++ config.ufs[147]: fv_sg_adj=1800
+++++ config.ufs[333]: ((  WRTTASK_PER_GROUP_PER_THREAD = WRTTASK_PER_GROUP_PER_THREAD_PER_TILE * 6  ))
+++++ config.ufs[334]: export WRTTASK_PER_GROUP_PER_THREAD
+++++ config.ufs[336]: ((  ntasks_fv3 = layout_x * layout_y * 6  ))
+++++ config.ufs[337]: [[ NO == \Y\E\S ]]
+++++ config.ufs[340]: export ntasks_fv3
+++++ config.ufs[342]: ((  ntasks_quilt = WRITE_GROUP * WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.ufs[343]: export ntasks_quilt
+++++ config.ufs[347]: case ${fv3_res} in
+++++ config.ufs[349]: zstandard_level=0
+++++ config.ufs[350]: ideflate=0
+++++ config.ufs[351]: quantize_nsd=0
+++++ config.ufs[352]: OUTPUT_FILETYPE_ATM=netcdf
+++++ config.ufs[353]: OUTPUT_FILETYPE_SFC=netcdf
+++++ config.ufs[371]: export zstandard_level ideflate quantize_nsd
+++++ config.ufs[372]: export OUTPUT_FILETYPE_ATM OUTPUT_FILETYPE_SFC
+++++ config.ufs[375]: export cpl=.false.
+++++ config.ufs[375]: cpl=.false.
+++++ config.ufs[376]: export cplflx=.false.
+++++ config.ufs[376]: cplflx=.false.
+++++ config.ufs[377]: export cplice=.false.
+++++ config.ufs[377]: cplice=.false.
+++++ config.ufs[378]: export cplchm=.false.
+++++ config.ufs[378]: cplchm=.false.
+++++ config.ufs[379]: export cplwav=.false.
+++++ config.ufs[379]: cplwav=.false.
+++++ config.ufs[380]: export cplwav2atm=.false.
+++++ config.ufs[380]: cplwav2atm=.false.
+++++ config.ufs[381]: [[ NO == \Y\E\S ]]
+++++ config.ufs[384]: export CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[384]: CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[386]: model_list=atm
+++++ config.ufs[389]: [[ true == \f\a\l\s\e ]]
+++++ config.ufs[396]: [[ true == \f\a\l\s\e ]]
+++++ config.ufs[537]: [[ true == \f\a\l\s\e ]]
+++++ config.ufs[577]: [[ true == \f\a\l\s\e ]]
+++++ config.ufs[621]: [[ true == \f\a\l\s\e ]]
+++++ config.ufs[630]: case "${model_list}" in
+++++ config.ufs[632]: default_template=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/ufs/ufs.configure.atm.IN
+++++ config.ufs[661]: export ufs_configure_template=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/ufs/ufs.configure.atm.IN
+++++ config.ufs[661]: ufs_configure_template=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/ufs/ufs.configure.atm.IN
+++++ config.ufs[662]: unset model_list default_template
+++++ config.ufs[665]: export 'WW3_RSTFLDS= '
+++++ config.ufs[665]: WW3_RSTFLDS=' '
+++++ config.ufs[667]: [[ ! -r /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/ufs/ufs.configure.atm.IN ]]
+++++ config.ufs[672]: echo 'END: config.ufs'
+END: config.ufs
++++ config.fcst[30]: case ${RUN} in
++++ config.fcst[48]: export FHMAX_HF=0
++++ config.fcst[48]: FHMAX_HF=0
++++ config.fcst[49]: export FHOUT_HF=0
++++ config.fcst[49]: FHOUT_HF=0
++++ config.fcst[57]: source /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/EXPDIR/C96_atm3DVar_9098d000/config.resources fcst
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=fcst
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[51]: max_tasks_per_node=128
+++++ config.resources[53]: mem_node_max=251GB
+++++ config.resources[149]: export max_tasks_per_node
+++++ config.resources[151]: case ${step} in
+++++ config.resources[813]: export is_exclusive=True
+++++ config.resources[813]: is_exclusive=True
+++++ config.resources[817]: [[ YES == \Y\E\S ]]
+++++ config.resources[818]: export UFS_THREADS=1
+++++ config.resources[818]: UFS_THREADS=1
+++++ config.resources[834]: ((  ntiles > 6  ))
+++++ config.resources[842]: [[ YES == \Y\E\S ]]
+++++ config.resources[843]: ((  FV3THREADS = nthreads_fv3  ))
+++++ config.resources[844]: ((  FV3PETS = ntasks_fv3 * nthreads_fv3  ))
+++++ config.resources[849]: echo 'FV3 using (nthreads, PETS) = (1, 24)'
+FV3 using (nthreads, PETS) = (1, 24)
+++++ config.resources[852]: QUILTPETS=0
+++++ config.resources[852]: QUILTTHREADS=0
+++++ config.resources[853]: [[ .true. == \.\t\r\u\e\. ]]
+++++ config.resources[854]: [[ YES == \Y\E\S ]]
+++++ config.resources[855]: ((  QUILTTHREADS = nthreads_fv3  ))
+++++ config.resources[856]: ((  QUILTPETS = ntasks_quilt * nthreads_fv3  ))
+++++ config.resources[861]: ((  WRTTASK_PER_GROUP = WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.resources[862]: export WRTTASK_PER_GROUP
+++++ config.resources[864]: echo 'QUILT using (nthreads, PETS) = (1, 6)'
+QUILT using (nthreads, PETS) = (1, 6)
+++++ config.resources[867]: ATMTHREADS=1
+++++ config.resources[868]: ((  ATMPETS = FV3PETS + QUILTPETS  ))
+++++ config.resources[869]: export ATMPETS ATMTHREADS
+++++ config.resources[870]: echo 'FV3ATM using (nthreads, PETS) = (1, 30)'
+FV3ATM using (nthreads, PETS) = (1, 30)
+++++ config.resources[873]: NTASKS_TOT=30
+++++ config.resources[880]: MEDTHREADS=1
+++++ config.resources[881]: MEDPETS=24
+++++ config.resources[882]: ((  24 > 300  ))
+++++ config.resources[883]: export MEDPETS MEDTHREADS
+++++ config.resources[884]: echo 'MEDIATOR using (threads, PETS) = (1, 24)'
+MEDIATOR using (threads, PETS) = (1, 24)
+++++ config.resources[887]: CHMPETS=0
+++++ config.resources[887]: CHMTHREADS=0
+++++ config.resources[888]: [[ NO == \Y\E\S ]]
+++++ config.resources[895]: export CHMPETS CHMTHREADS
+++++ config.resources[898]: WAVPETS=0
+++++ config.resources[898]: WAVTHREADS=0
+++++ config.resources[899]: [[ NO == \Y\E\S ]]
+++++ config.resources[910]: export WAVPETS WAVTHREADS
+++++ config.resources[913]: OCNPETS=0
+++++ config.resources[913]: OCNTHREADS=0
+++++ config.resources[914]: [[ NO == \Y\E\S ]]
+++++ config.resources[925]: export OCNPETS OCNTHREADS
+++++ config.resources[928]: ICEPETS=0
+++++ config.resources[928]: ICETHREADS=0
+++++ config.resources[929]: [[ NO == \Y\E\S ]]
+++++ config.resources[940]: export ICEPETS ICETHREADS
+++++ config.resources[942]: echo 'Total PETS for gdas = 30'
+Total PETS for gdas = 30
+++++ config.resources[944]: declare -x ntasks=30
+++++ config.resources[945]: declare -x threads_per_task=1
+++++ config.resources[946]: tasks_per_node=128
+++++ config.resources[949]: [[ gdas == gdas ]]
+++++ config.resources[950]: case "${CASE}" in
+++++ config.resources[952]: declare -x walltime=00:20:00
+++++ config.resources[994]: unset NTASKS_TOT
+++++ config.resources[1561]: [[ -f /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/EXPDIR/C96_atm3DVar_9098d000/config.resources.GAEAC5 ]]
+++++ config.resources[1562]: source /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/EXPDIR/C96_atm3DVar_9098d000/config.resources.GAEAC5
++++++ config.resources.GAEAC5[5]: export FI_VERBS_PREFER_XRC=0
++++++ config.resources.GAEAC5[5]: FI_VERBS_PREFER_XRC=0
++++++ config.resources.GAEAC5[7]: unset memory
++++++ config.resources.GAEAC5[8]: unset memory_gdas
+++++ config.resources[1566]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1567]: run_resource_var=threads_per_task_gdas
+++++ config.resources[1568]: [[ -n '' ]]
+++++ config.resources[1570]: [[ -n 0 ]]
+++++ config.resources[1571]: export threads_per_task
+++++ config.resources[1566]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1567]: run_resource_var=ntasks_gdas
+++++ config.resources[1568]: [[ -n '' ]]
+++++ config.resources[1570]: [[ -n 0 ]]
+++++ config.resources[1571]: export ntasks
+++++ config.resources[1566]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1567]: run_resource_var=tasks_per_node_gdas
+++++ config.resources[1568]: [[ -n '' ]]
+++++ config.resources[1570]: [[ -n 0 ]]
+++++ config.resources[1571]: export tasks_per_node
+++++ config.resources[1566]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1567]: run_resource_var=NTASKS_gdas
+++++ config.resources[1568]: [[ -n '' ]]
+++++ config.resources[1570]: [[ -n '' ]]
+++++ config.resources[1566]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1567]: run_resource_var=memory_gdas
+++++ config.resources[1568]: [[ -n '' ]]
+++++ config.resources[1570]: [[ -n '' ]]
+++++ config.resources[1566]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1567]: run_resource_var=walltime_gdas
+++++ config.resources[1568]: [[ -n '' ]]
+++++ config.resources[1570]: [[ -n 0 ]]
+++++ config.resources[1571]: export walltime
+++++ config.resources[1575]: echo 'END: config.resources'
+END: config.resources
++++ config.fcst[58]: export domains_stack_size=16000000
++++ config.fcst[58]: domains_stack_size=16000000
++++ config.fcst[61]: [[ YES == \Y\E\S ]]
++++ config.fcst[62]: source /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/EXPDIR/C96_atm3DVar_9098d000/config.nsst
+++++ config.nsst[6]: echo 'BEGIN: config.nsst'
+BEGIN: config.nsst
+++++ config.nsst[11]: export NST_MODEL=2
+++++ config.nsst[11]: NST_MODEL=2
+++++ config.nsst[14]: [[ NO == \Y\E\S ]]
+++++ config.nsst[14]: [[ NO == \Y\E\S ]]
+++++ config.nsst[19]: export NST_SPINUP=0
+++++ config.nsst[19]: NST_SPINUP=0
+++++ config.nsst[20]: cdate=2021122018
+++++ config.nsst[21]: ((  cdate < 2017072000  ))
+++++ config.nsst[26]: export NST_RESV=0
+++++ config.nsst[26]: NST_RESV=0
+++++ config.nsst[29]: export ZSEA1=0
+++++ config.nsst[29]: ZSEA1=0
+++++ config.nsst[30]: export ZSEA2=0
+++++ config.nsst[30]: ZSEA2=0
+++++ config.nsst[32]: export NST_GSI=3
+++++ config.nsst[32]: NST_GSI=3
+++++ config.nsst[36]: export NSTINFO=0
+++++ config.nsst[36]: NSTINFO=0
+++++ config.nsst[37]: ((  NST_GSI > 0  ))
+++++ config.nsst[37]: export NSTINFO=4
+++++ config.nsst[37]: NSTINFO=4
+++++ config.nsst[39]: echo 'END: config.nsst'
+END: config.nsst
++++ config.fcst[65]: export esmf_profile=.false.
++++ config.fcst[65]: esmf_profile=.false.
++++ config.fcst[66]: export esmf_logkind=ESMF_LOGKIND_MULTI_ON_ERROR
++++ config.fcst[66]: esmf_logkind=ESMF_LOGKIND_MULTI_ON_ERROR
++++ config.fcst[71]: export FORECASTSH=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/scripts/exglobal_forecast.sh
++++ config.fcst[71]: FORECASTSH=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/scripts/exglobal_forecast.sh
++++ config.fcst[73]: export FCSTEXEC=gfs_model.x
++++ config.fcst[73]: FCSTEXEC=gfs_model.x
++++ config.fcst[77]: export TYPE=nh
++++ config.fcst[77]: TYPE=nh
++++ config.fcst[78]: export MONO=non-mono
++++ config.fcst[78]: MONO=non-mono
++++ config.fcst[81]: export h2o_phys=.true.
++++ config.fcst[81]: h2o_phys=.true.
++++ config.fcst[84]: export new_o3forc=YES
++++ config.fcst[84]: new_o3forc=YES
++++ config.fcst[86]: export gwd_opt=2
++++ config.fcst[86]: gwd_opt=2
++++ config.fcst[91]: ((  gwd_opt == 1  ))
++++ config.fcst[101]: ((  gwd_opt == 2  ))
++++ config.fcst[117]: export knob_ugwp_version=1
++++ config.fcst[117]: knob_ugwp_version=1
++++ config.fcst[118]: export do_ugwp=.false.
++++ config.fcst[118]: do_ugwp=.false.
++++ config.fcst[119]: export do_tofd=.false.
++++ config.fcst[119]: do_tofd=.false.
++++ config.fcst[120]: export do_ugwp_v0=.false.
++++ config.fcst[120]: do_ugwp_v0=.false.
++++ config.fcst[121]: export do_ugwp_v1=.true.
++++ config.fcst[121]: do_ugwp_v1=.true.
++++ config.fcst[122]: export do_ugwp_v0_orog_only=.false.
++++ config.fcst[122]: do_ugwp_v0_orog_only=.false.
++++ config.fcst[123]: export do_ugwp_v0_nst_only=.false.
++++ config.fcst[123]: do_ugwp_v0_nst_only=.false.
++++ config.fcst[124]: export do_gsl_drag_ls_bl=.true.
++++ config.fcst[124]: do_gsl_drag_ls_bl=.true.
++++ config.fcst[125]: export do_gsl_drag_ss=.false.
++++ config.fcst[125]: do_gsl_drag_ss=.false.
++++ config.fcst[126]: export do_gsl_drag_tofd=.true.
++++ config.fcst[126]: do_gsl_drag_tofd=.true.
++++ config.fcst[127]: export do_gwd_opt_psl=.true.
++++ config.fcst[127]: do_gwd_opt_psl=.true.
++++ config.fcst[128]: export do_ugwp_v1_orog_only=.false.
++++ config.fcst[128]: do_ugwp_v1_orog_only=.false.
+++++ config.fcst[129]: echo 128/2.35
+++++ config.fcst[129]: bc
++++ config.fcst[129]: launch_level=54
++++ config.fcst[130]: export launch_level
++++ config.fcst[134]: export d2_bg_k1=0.20
++++ config.fcst[134]: d2_bg_k1=0.20
++++ config.fcst[135]: export d2_bg_k2=0.04
++++ config.fcst[135]: d2_bg_k2=0.04
++++ config.fcst[136]: export dz_min=6
++++ config.fcst[136]: dz_min=6
++++ config.fcst[137]: export n_sponge=42
++++ config.fcst[137]: n_sponge=42
++++ config.fcst[140]: export hybedmf=.false.
++++ config.fcst[140]: hybedmf=.false.
++++ config.fcst[141]: [[ FV3_GFS_v17_p8_ugwpv1 == \F\V\3\_\g\l\o\b\a\l\_\n\e\s\t* ]]
++++ config.fcst[144]: export satmedmf=.true.
++++ config.fcst[144]: satmedmf=.true.
++++ config.fcst[146]: export isatmedmf=1
++++ config.fcst[146]: isatmedmf=1
++++ config.fcst[147]: tbf=
++++ config.fcst[148]: [[ .true. == \.\t\r\u\e\. ]]
++++ config.fcst[148]: tbf=_satmedmf
++++ config.fcst[151]: export progsigma=.true.
++++ config.fcst[151]: progsigma=.true.
++++ config.fcst[152]: tbp=
++++ config.fcst[153]: [[ .true. == \.\t\r\u\e\. ]]
++++ config.fcst[153]: tbp=_progsigma
++++ config.fcst[156]: [[ NO == \Y\E\S ]]
++++ config.fcst[159]: export IAER=1011
++++ config.fcst[159]: IAER=1011
++++ config.fcst[161]: export iovr_lw=3
++++ config.fcst[161]: iovr_lw=3
++++ config.fcst[162]: export iovr_sw=3
++++ config.fcst[162]: iovr_sw=3
++++ config.fcst[163]: export iovr=3
++++ config.fcst[163]: iovr=3
++++ config.fcst[164]: export icliq_sw=2
++++ config.fcst[164]: icliq_sw=2
++++ config.fcst[165]: export isubc_sw=2
++++ config.fcst[165]: isubc_sw=2
++++ config.fcst[166]: export isubc_lw=2
++++ config.fcst[166]: isubc_lw=2
++++ config.fcst[169]: export do_RRTMGP=.false.
++++ config.fcst[169]: do_RRTMGP=.false.
++++ config.fcst[170]: export doGP_cldoptics_LUT=.false.
++++ config.fcst[170]: doGP_cldoptics_LUT=.false.
++++ config.fcst[171]: export doGP_lwscat=.false.
++++ config.fcst[171]: doGP_lwscat=.false.
++++ config.fcst[175]: export iopt_sfc=3
++++ config.fcst[175]: iopt_sfc=3
++++ config.fcst[176]: export iopt_trs=2
++++ config.fcst[176]: iopt_trs=2
++++ config.fcst[179]: export dnats=0
++++ config.fcst[179]: dnats=0
++++ config.fcst[180]: export cal_pre=.true.
++++ config.fcst[180]: cal_pre=.true.
++++ config.fcst[181]: export do_sat_adj=.false.
++++ config.fcst[181]: do_sat_adj=.false.
++++ config.fcst[182]: export random_clds=.true.
++++ config.fcst[182]: random_clds=.true.
++++ config.fcst[184]: case ${imp_physics} in
++++ config.fcst[196]: export ncld=2
++++ config.fcst[196]: ncld=2
++++ config.fcst[197]: export FIELD_TABLE=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/ufs/fv3/field_table_thompson_noaero_tke_progsigma
++++ config.fcst[197]: FIELD_TABLE=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/ufs/fv3/field_table_thompson_noaero_tke_progsigma
++++ config.fcst[198]: export nwat=6
++++ config.fcst[198]: nwat=6
++++ config.fcst[200]: export cal_pre=.false.
++++ config.fcst[200]: cal_pre=.false.
++++ config.fcst[201]: export random_clds=.false.
++++ config.fcst[201]: random_clds=.false.
++++ config.fcst[202]: export effr_in=.true.
++++ config.fcst[202]: effr_in=.true.
++++ config.fcst[203]: export ltaerosol=.false.
++++ config.fcst[203]: ltaerosol=.false.
++++ config.fcst[204]: export lradar=.true.
++++ config.fcst[204]: lradar=.true.
++++ config.fcst[205]: export ttendlim=-999
++++ config.fcst[205]: ttendlim=-999
++++ config.fcst[206]: export dt_inner=300
++++ config.fcst[206]: dt_inner=300
++++ config.fcst[207]: export sedi_semi=.true.
++++ config.fcst[207]: sedi_semi=.true.
++++ config.fcst[208]: [[ .true. == .true. ]]
++++ config.fcst[208]: export dt_inner=600
++++ config.fcst[208]: dt_inner=600
++++ config.fcst[209]: [[ dt_inner -gt 300 ]]
++++ config.fcst[209]: export dt_inner=300
++++ config.fcst[209]: dt_inner=300
++++ config.fcst[210]: export decfl=10
++++ config.fcst[210]: decfl=10
++++ config.fcst[212]: export hord_mt_nh_nonmono=5
++++ config.fcst[212]: hord_mt_nh_nonmono=5
++++ config.fcst[213]: export hord_xx_nh_nonmono=5
++++ config.fcst[213]: hord_xx_nh_nonmono=5
++++ config.fcst[214]: export hord_dp_nh_nonmono=-5
++++ config.fcst[214]: hord_dp_nh_nonmono=-5
++++ config.fcst[215]: export vtdm4_nh_nonmono=0.02
++++ config.fcst[215]: vtdm4_nh_nonmono=0.02
++++ config.fcst[216]: export nord=2
++++ config.fcst[216]: nord=2
++++ config.fcst[217]: export dddmp=0.1
++++ config.fcst[217]: dddmp=0.1
++++ config.fcst[218]: export d4_bg=0.12
++++ config.fcst[218]: d4_bg=0.12
++++ config.fcst[220]: [[ FV3_GFS_v17_p8_ugwpv1 == \F\V\3\_\g\l\o\b\a\l\_\n\e\s\t* ]]
++++ config.fcst[258]: export DO_SPPT=NO
++++ config.fcst[258]: DO_SPPT=NO
++++ config.fcst[259]: export DO_SKEB=NO
++++ config.fcst[259]: DO_SKEB=NO
++++ config.fcst[260]: export DO_SHUM=NO
++++ config.fcst[260]: DO_SHUM=NO
++++ config.fcst[261]: export DO_LAND_PERT=NO
++++ config.fcst[261]: DO_LAND_PERT=NO
++++ config.fcst[262]: export DO_OCN_SPPT=NO
++++ config.fcst[262]: DO_OCN_SPPT=NO
++++ config.fcst[263]: export DO_OCN_PERT_EPBL=NO
++++ config.fcst[263]: DO_OCN_PERT_EPBL=NO
++++ config.fcst[266]: export cplmode=ufs.frac
++++ config.fcst[266]: cplmode=ufs.frac
++++ config.fcst[267]: [[ .true. == \.\f\a\l\s\e\. ]]
++++ config.fcst[270]: export psm_bc=1
++++ config.fcst[270]: psm_bc=1
++++ config.fcst[272]: export min_lakeice=0.15
++++ config.fcst[272]: min_lakeice=0.15
++++ config.fcst[273]: export min_seaice=0.15
++++ config.fcst[273]: min_seaice=0.15
++++ config.fcst[274]: export use_cice_alb=.false.
++++ config.fcst[274]: use_cice_alb=.false.
++++ config.fcst[276]: export FSICL=0
++++ config.fcst[276]: FSICL=0
++++ config.fcst[277]: export FSICS=0
++++ config.fcst[277]: FSICS=0
++++ config.fcst[280]: [[ gdas =~ gdas ]]
++++ config.fcst[283]: export DIAG_TABLE=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/ufs/fv3/diag_table_da
++++ config.fcst[283]: DIAG_TABLE=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/ufs/fv3/diag_table_da
++++ config.fcst[286]: export restart_interval=3
++++ config.fcst[286]: restart_interval=3
++++ config.fcst[289]: export adjust_dry_mass=.true.
++++ config.fcst[289]: adjust_dry_mass=.true.
++++ config.fcst[315]: echo 'END: config.fcst'
+END: config.fcst
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/env/GAEAC5.env fcst
++++ GAEAC5.env[3]: [[ 1 -ne 1 ]]
++++ GAEAC5.env[10]: step=fcst
++++ GAEAC5.env[12]: export 'launcher=srun -l --export=ALL'
++++ GAEAC5.env[12]: launcher='srun -l --export=ALL'
++++ GAEAC5.env[13]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ GAEAC5.env[13]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ GAEAC5.env[15]: export OMP_STACKSIZE=2048000
++++ GAEAC5.env[15]: OMP_STACKSIZE=2048000
++++ GAEAC5.env[16]: export NTHSTACK=1024000000
++++ GAEAC5.env[16]: NTHSTACK=1024000000
++++ GAEAC5.env[18]: ulimit -s unlimited
++++ GAEAC5.env[19]: ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 1025560
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 50000
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 1025560
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
++++ GAEAC5.env[23]: [[ -n 30 ]]
++++ GAEAC5.env[23]: [[ -n 128 ]]
++++ GAEAC5.env[23]: [[ -n 128 ]]
++++ GAEAC5.env[24]: max_threads_per_task=1
++++ GAEAC5.env[25]: NTHREADSmax=1
++++ GAEAC5.env[26]: NTHREADS1=1
++++ GAEAC5.env[27]: [[ 1 -gt 1 ]]
++++ GAEAC5.env[30]: [[ 1 -gt 1 ]]
++++ GAEAC5.env[35]: APRUN_default='srun -l --export=ALL -n 30'
++++ GAEAC5.env[41]: case ${step} in
++++ GAEAC5.env[230]: export OMP_STACKSIZE=512M
++++ GAEAC5.env[230]: OMP_STACKSIZE=512M
++++ GAEAC5.env[232]: ((  nnodes = (ntasks+tasks_per_node-1)/tasks_per_node  ))
++++ GAEAC5.env[233]: ((  ufs_ntasks = nnodes*tasks_per_node  ))
++++ GAEAC5.env[235]: export 'APRUN_UFS=srun -l --export=ALL -n 128'
++++ GAEAC5.env[235]: APRUN_UFS='srun -l --export=ALL -n 128'
++++ GAEAC5.env[236]: unset nnodes ufs_ntasks
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
++ JGLOBAL_FORECAST[16]: export DATArestart=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/restart
++ JGLOBAL_FORECAST[16]: DATArestart=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/restart
++ JGLOBAL_FORECAST[17]: [[ ! -d /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/restart ]]
++ JGLOBAL_FORECAST[18]: export DATAoutput=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/output
++ JGLOBAL_FORECAST[18]: DATAoutput=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/output
++ JGLOBAL_FORECAST[19]: [[ ! -d /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/output ]]
++ JGLOBAL_FORECAST[26]: rCDUMP=gdas
++ JGLOBAL_FORECAST[27]: export rCDUMP=gdas
++ JGLOBAL_FORECAST[27]: rCDUMP=gdas
+++ JGLOBAL_FORECAST[31]: date --utc -d '20211220 18 - 6 hours' +%Y%m%d%H
++ JGLOBAL_FORECAST[31]: GDATE=2021122012
++ JGLOBAL_FORECAST[32]: declare -rx GDATE
++ JGLOBAL_FORECAST[34]: declare -rx gPDY=20211220
++ JGLOBAL_FORECAST[35]: declare -rx gcyc=12
++ JGLOBAL_FORECAST[38]: YMD=20211220
++ JGLOBAL_FORECAST[38]: HH=18
++ JGLOBAL_FORECAST[38]: declare_from_tmpl -rx COMIN_ATMOS_INPUT:COM_ATMOS_INPUT_TMPL COMIN_ATMOS_ANALYSIS:COM_ATMOS_ANALYSIS_TMPL COMOUT_CONF:COM_CONF_TMPL COMOUT_ATMOS_RESTART:COM_ATMOS_RESTART_TMPL COMOUT_ATMOS_HISTORY:COM_ATMOS_HISTORY_TMPL COMOUT_ATMOS_MASTER:COM_ATMOS_MASTER_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ATMOS_INPUT=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/18//model/atmos/input
+declare_from_tmpl :: COMIN_ATMOS_ANALYSIS=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/18//analysis/atmos
+declare_from_tmpl :: COMOUT_CONF=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/18//conf
+declare_from_tmpl :: COMOUT_ATMOS_RESTART=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/18//model/atmos/restart
+declare_from_tmpl :: COMOUT_ATMOS_HISTORY=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/18//model/atmos/history
+declare_from_tmpl :: COMOUT_ATMOS_MASTER=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/18//model/atmos/master
++ JGLOBAL_FORECAST[46]: RUN=gdas
++ JGLOBAL_FORECAST[46]: YMD=20211220
++ JGLOBAL_FORECAST[46]: HH=12
++ JGLOBAL_FORECAST[46]: declare_from_tmpl -rx COMIN_ATMOS_RESTART_PREV:COM_ATMOS_RESTART_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_ATMOS_RESTART_PREV=/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/12//model/atmos/restart
++ JGLOBAL_FORECAST[49]: [[ NO == \Y\E\S ]]
++ JGLOBAL_FORECAST[58]: [[ NO == \Y\E\S ]]
++ JGLOBAL_FORECAST[70]: [[ NO == \Y\E\S ]]
++ JGLOBAL_FORECAST[80]: [[ NO == \Y\E\S ]]
++ JGLOBAL_FORECAST[89]: /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/scripts/exglobal_forecast.sh
+Begin exglobal_forecast.sh at Fri 14 Mar 2025 08:35:53 PM UTC
++ exglobal_forecast.sh[83]: source /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/ush/forecast_predet.sh
++ exglobal_forecast.sh[84]: source /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/ush/forecast_det.sh
++ exglobal_forecast.sh[85]: source /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/ush/forecast_postdet.sh
++ exglobal_forecast.sh[86]: source /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/ush/parsing_ufs_configure.sh
++ exglobal_forecast.sh[88]: source /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/ush/atparse.bash
++ exglobal_forecast.sh[91]: cpl=.false.
++ exglobal_forecast.sh[92]: cplflx=.false.
++ exglobal_forecast.sh[93]: cplwav=.false.
++ exglobal_forecast.sh[94]: cplchm=.false.
++ exglobal_forecast.sh[95]: cplice=.false.
++ exglobal_forecast.sh[97]: OCNTIM=1800
++ exglobal_forecast.sh[98]: DELTIM=600
++ exglobal_forecast.sh[99]: ICETIM=600
++ exglobal_forecast.sh[101]: CPL_SLOW=1800
++ exglobal_forecast.sh[102]: CPL_FAST=600
++ exglobal_forecast.sh[104]: echo 'MAIN: Loading common variables before determination of run type'
+MAIN: Loading common variables before determination of run type
++ exglobal_forecast.sh[105]: common_predet
++ forecast_predet.sh[92]: echo 'SUB common_predet: Defining variables for shared through model components'
+SUB common_predet: Defining variables for shared through model components
++ forecast_predet.sh[94]: RUN=gdas
++ forecast_predet.sh[95]: rCDUMP=gdas
++ forecast_predet.sh[97]: CDATE=2021122018
++ forecast_predet.sh[98]: ENSMEM=000
++ forecast_predet.sh[99]: MEMBER=0
++ forecast_predet.sh[102]: half_window=3
++ forecast_predet.sh[103]: current_cycle=2021122018
+++ forecast_predet.sh[104]: date --utc -d '20211220 18 - 6 hours' +%Y%m%d%H
++ forecast_predet.sh[104]: previous_cycle=2021122012
+++ forecast_predet.sh[105]: date --utc -d '20211220 18 + 6 hours' +%Y%m%d%H
++ forecast_predet.sh[105]: next_cycle=2021122100
+++ forecast_predet.sh[106]: date --utc -d '20211220 18 - 3 hours' +%Y%m%d%H
++ forecast_predet.sh[106]: current_cycle_begin=2021122015
+++ forecast_predet.sh[107]: date --utc -d '20211220 18 + 3 hours' +%Y%m%d%H
++ forecast_predet.sh[107]: current_cycle_end=2021122021
+++ forecast_predet.sh[108]: date --utc -d '20211221 00 - 3 hours' +%Y%m%d%H
++ forecast_predet.sh[108]: next_cycle_begin=2021122021
+++ forecast_predet.sh[109]: date --utc -d '20211220 18 + 9 hours' +%Y%m%d%H
++ forecast_predet.sh[109]: forecast_end_cycle=2021122103
++ forecast_predet.sh[112]: [[ YES == \Y\E\S ]]
++ forecast_predet.sh[113]: model_start_date_current_cycle=2021122015
++ forecast_predet.sh[114]: model_start_date_next_cycle=2021122021
++ forecast_predet.sh[124]: FHMIN=0
++ forecast_predet.sh[125]: FHMAX=9
++ forecast_predet.sh[126]: FHOUT=3
++ forecast_predet.sh[127]: FHMAX_HF=0
++ forecast_predet.sh[128]: FHOUT_HF=0
++ forecast_predet.sh[130]: [[ ! -d /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/18//conf ]]
++ forecast_predet.sh[132]: cd /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837
++ forecast_predet.sh[135]: [[ ! -d /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT ]]
++ forecast_predet.sh[135]: mkdir -p /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT
++ exglobal_forecast.sh[107]: echo 'MAIN: Loading variables before determination of run type'
+MAIN: Loading variables before determination of run type
++ exglobal_forecast.sh[108]: FV3_predet
++ forecast_predet.sh[141]: echo 'SUB FV3_predet: Defining variables for FV3'
+SUB FV3_predet: Defining variables for FV3
++ forecast_predet.sh[143]: [[ ! -d /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/18//model/atmos/history ]]
++ forecast_predet.sh[144]: [[ ! -d /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/18//model/atmos/master ]]
++ forecast_predet.sh[145]: [[ ! -d /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/18//model/atmos/restart ]]
++ forecast_predet.sh[146]: [[ ! -d /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/restart/FV3_RESTART ]]
++ forecast_predet.sh[147]: /bin/ln -sf /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/restart/FV3_RESTART /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/RESTART
++ forecast_predet.sh[149]: FHZER=6
++ forecast_predet.sh[150]: FHCYC=1
++ forecast_predet.sh[151]: restart_interval=3
++ forecast_predet.sh[154]: ((  restart_interval == 0  ))
++ forecast_predet.sh[159]: mapfile -t FV3_RESTART_FH
+++ forecast_predet.sh[159]: seq 3 3 9
++ forecast_predet.sh[161]: local nrestarts=3
++ forecast_predet.sh[162]: ((  FV3_RESTART_FH[nrestarts-1] != FHMAX  ))
++ forecast_predet.sh[169]: FV3_OUTPUT_FH=
++ forecast_predet.sh[170]: local fhr=0
++ forecast_predet.sh[171]: ((  FHOUT_HF > 0 && FHMAX_HF > 0  ))
+++ forecast_predet.sh[175]: seq -s ' ' 0 3 9
++ forecast_predet.sh[175]: FV3_OUTPUT_FH=' 0 3 6 9'
++ forecast_predet.sh[180]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[203]: FV3_OUTPUT_FH_NML=' 0 3 6 9'
++ forecast_predet.sh[207]: PREFIX_ATMINC=
++ forecast_predet.sh[210]: IAUFHRS=6,
++ forecast_predet.sh[211]: IAU_DELTHRS=6
++ forecast_predet.sh[216]: res=96
++ forecast_predet.sh[217]: resp=97
++ forecast_predet.sh[218]: npx=97
++ forecast_predet.sh[219]: npy=97
++ forecast_predet.sh[220]: npz=127
++ forecast_predet.sh[221]: io_layout=1,1
++ forecast_predet.sh[225]: JCAP_CASE=190
++ forecast_predet.sh[226]: LONB_CASE=384
++ forecast_predet.sh[227]: LATB_CASE=192
++ forecast_predet.sh[229]: JCAP=190
++ forecast_predet.sh[230]: LONB=384
++ forecast_predet.sh[231]: LATB=192
++ forecast_predet.sh[233]: LONB_IMO=384
++ forecast_predet.sh[234]: LATB_JMO=192
++ forecast_predet.sh[244]: NST_MODEL=2
++ forecast_predet.sh[245]: NST_SPINUP=0
++ forecast_predet.sh[246]: NST_RESV=0
++ forecast_predet.sh[247]: ZSEA1=0
++ forecast_predet.sh[248]: ZSEA2=0
++ forecast_predet.sh[249]: nstf_name=2,0,0,0,0
++ forecast_predet.sh[250]: nst_anl=.true.
++ forecast_predet.sh[256]: blocksize=32
++ forecast_predet.sh[259]: filtered_terrain=.true.
++ forecast_predet.sh[260]: gfs_dwinds=.true.
++ forecast_predet.sh[263]: no_dycore=.false.
++ forecast_predet.sh[264]: dycore_only=.false.
++ forecast_predet.sh[265]: chksum_debug=.false.
++ forecast_predet.sh[266]: print_freq=6
++ forecast_predet.sh[272]: na_init=1
++ forecast_predet.sh[274]: local suite_file=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/sorc/ufs_model.fd/FV3/ccpp/suites/suite_FV3_GFS_v17_p8_ugwpv1.xml
++ forecast_predet.sh[275]: [[ ! -f /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/sorc/ufs_model.fd/FV3/ccpp/suites/suite_FV3_GFS_v17_p8_ugwpv1.xml ]]
++ forecast_predet.sh[281]: local num_noahmpdrv
+++ forecast_predet.sh[282]: grep -c noahmpdrv /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/sorc/ufs_model.fd/FV3/ccpp/suites/suite_FV3_GFS_v17_p8_ugwpv1.xml
++ forecast_predet.sh[282]: num_noahmpdrv=1
++ forecast_predet.sh[283]: ((  num_noahmpdrv > 0  ))
++ forecast_predet.sh[284]: lsm=2
++ forecast_predet.sh[285]: lheatstrg=.false.
++ forecast_predet.sh[286]: landice=.false.
++ forecast_predet.sh[287]: iopt_dveg=4
++ forecast_predet.sh[288]: iopt_crs=2
++ forecast_predet.sh[289]: iopt_btr=1
++ forecast_predet.sh[290]: iopt_run=1
++ forecast_predet.sh[291]: iopt_sfc=3
++ forecast_predet.sh[292]: iopt_frz=1
++ forecast_predet.sh[293]: iopt_inf=1
++ forecast_predet.sh[294]: iopt_rad=3
++ forecast_predet.sh[295]: iopt_alb=1
++ forecast_predet.sh[296]: iopt_snf=4
++ forecast_predet.sh[297]: iopt_tbot=2
++ forecast_predet.sh[298]: iopt_stc=3
++ forecast_predet.sh[299]: IALB=2
++ forecast_predet.sh[300]: IEMS=2
++ forecast_predet.sh[321]: [[ nh == \n\h ]]
++ forecast_predet.sh[322]: hydrostatic=.false.
++ forecast_predet.sh[323]: phys_hydrostatic=.false.
++ forecast_predet.sh[324]: use_hydro_pressure=.false.
++ forecast_predet.sh[325]: make_nh=.true.
++ forecast_predet.sh[326]: pass_full_omega_to_physics_in_non_hydrostatic_mode=.true.
++ forecast_predet.sh[335]: consv_te=1.
++ forecast_predet.sh[336]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[341]: consv_te=1.
++ forecast_predet.sh[342]: k_split=1
++ forecast_predet.sh[346]: n_split=4
++ forecast_predet.sh[348]: [[ non- == \m\o\n\o ]]
++ forecast_predet.sh[365]: d_con=1.
++ forecast_predet.sh[366]: do_vort_damp=.true.
++ forecast_predet.sh[367]: [[ nh == \n\h ]]
++ forecast_predet.sh[368]: hord_mt=5
++ forecast_predet.sh[369]: hord_xx=5
++ forecast_predet.sh[370]: hord_dp=-5
++ forecast_predet.sh[378]: [[ non- != \m\o\n\o ]]
++ forecast_predet.sh[378]: [[ nh == \n\h ]]
++ forecast_predet.sh[379]: vtdm4=0.02
++ forecast_predet.sh[385]: nggps_ic=.true.
++ forecast_predet.sh[386]: ncep_ic=.false.
++ forecast_predet.sh[387]: external_ic=.true.
++ forecast_predet.sh[388]: mountain=.false.
++ forecast_predet.sh[389]: warm_start=.false.
++ forecast_predet.sh[390]: read_increment=.false.
++ forecast_predet.sh[391]: res_latlon_dynamics='""'
++ forecast_predet.sh[392]: increment_file_on_native_grid=.false.
++ forecast_predet.sh[395]: do_skeb=.false.
++ forecast_predet.sh[396]: do_shum=.false.
++ forecast_predet.sh[397]: do_sppt=.false.
++ forecast_predet.sh[398]: do_ca=.false.
++ forecast_predet.sh[399]: ISEED=0
++ forecast_predet.sh[400]: local imem=
++ forecast_predet.sh[401]: local base_seed=20211220180000
++ forecast_predet.sh[403]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[408]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[413]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[418]: [[ YES == \Y\E\S ]]
++ forecast_predet.sh[419]: do_ca=.true.
++ forecast_predet.sh[420]: ISEED_CA=1251578101
++ forecast_predet.sh[423]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[436]: FNGLAC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_glacier.2x2.grb
++ forecast_predet.sh[437]: FNMXIC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_maxice.2x2.grb
++ forecast_predet.sh[438]: FNTSFC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/RTGSST.1982.2012.monthly.clim.grb
++ forecast_predet.sh[439]: FNSNOC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_snoclim.1.875.grb
++ forecast_predet.sh[440]: FNZORC=igbp
++ forecast_predet.sh[441]: FNAISC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/IMS-NIC.blended.ice.monthly.clim.grb
++ forecast_predet.sh[442]: FNALBC2=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/sfc/C96.mx500.facsf.tileX.nc
++ forecast_predet.sh[443]: FNTG3C=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/sfc/C96.mx500.substrate_temperature.tileX.nc
++ forecast_predet.sh[444]: FNVEGC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/sfc/C96.mx500.vegetation_greenness.tileX.nc
++ forecast_predet.sh[445]: FNMSKH=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_slmask.t1534.3072.1536.grb
++ forecast_predet.sh[446]: FNVMNC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/sfc/C96.mx500.vegetation_greenness.tileX.nc
++ forecast_predet.sh[447]: FNVMXC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/sfc/C96.mx500.vegetation_greenness.tileX.nc
++ forecast_predet.sh[448]: FNSLPC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/sfc/C96.mx500.slope_type.tileX.nc
++ forecast_predet.sh[449]: FNALBC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/sfc/C96.mx500.snowfree_albedo.tileX.nc
++ forecast_predet.sh[450]: FNVETC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/sfc/C96.mx500.vegetation_type.tileX.nc
++ forecast_predet.sh[451]: FNSOTC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/sfc/C96.mx500.soil_type.tileX.nc
++ forecast_predet.sh[452]: FNSOCC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/sfc/C96.mx500.soil_color.tileX.nc
++ forecast_predet.sh[453]: FNABSC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/sfc/C96.mx500.maximum_snow_albedo.tileX.nc
++ forecast_predet.sh[454]: FNSMCC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_soilmgldas.statsgo.t190.384.192.grb
++ forecast_predet.sh[457]: [[ ! -f /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_soilmgldas.statsgo.t190.384.192.grb ]]
++ forecast_predet.sh[458]: FNSMCC=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_soilmgldas.statsgo.t1534.3072.1536.grb
++ forecast_predet.sh[462]: [[ .false. == \.\f\a\l\s\e\. ]]
++ forecast_predet.sh[463]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/C96_mosaic.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/grid_spec.nc
++ forecast_predet.sh[469]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd/ugwp_limb_tau.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/ugwp_limb_tau.nc
++ forecast_predet.sh[472]: local tt
++ forecast_predet.sh[473]: (( tt = 1 ))
++ forecast_predet.sh[473]: (( tt <= ntiles ))
++ forecast_predet.sh[474]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile1.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data.tile1.nc
++ forecast_predet.sh[475]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/C96_grid.tile1.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/C96_grid.tile1.nc
++ forecast_predet.sh[476]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile1.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data_ls.tile1.nc
++ forecast_predet.sh[477]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile1.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data_ss.tile1.nc
++ forecast_predet.sh[473]: (( tt++  ))
++ forecast_predet.sh[473]: (( tt <= ntiles ))
++ forecast_predet.sh[474]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile2.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data.tile2.nc
++ forecast_predet.sh[475]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/C96_grid.tile2.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/C96_grid.tile2.nc
++ forecast_predet.sh[476]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile2.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data_ls.tile2.nc
++ forecast_predet.sh[477]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile2.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data_ss.tile2.nc
++ forecast_predet.sh[473]: (( tt++  ))
++ forecast_predet.sh[473]: (( tt <= ntiles ))
++ forecast_predet.sh[474]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile3.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data.tile3.nc
++ forecast_predet.sh[475]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/C96_grid.tile3.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/C96_grid.tile3.nc
++ forecast_predet.sh[476]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile3.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data_ls.tile3.nc
++ forecast_predet.sh[477]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile3.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data_ss.tile3.nc
++ forecast_predet.sh[473]: (( tt++  ))
++ forecast_predet.sh[473]: (( tt <= ntiles ))
++ forecast_predet.sh[474]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile4.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data.tile4.nc
++ forecast_predet.sh[475]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/C96_grid.tile4.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/C96_grid.tile4.nc
++ forecast_predet.sh[476]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile4.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data_ls.tile4.nc
++ forecast_predet.sh[477]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile4.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data_ss.tile4.nc
++ forecast_predet.sh[473]: (( tt++  ))
++ forecast_predet.sh[473]: (( tt <= ntiles ))
++ forecast_predet.sh[474]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile5.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data.tile5.nc
++ forecast_predet.sh[475]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/C96_grid.tile5.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/C96_grid.tile5.nc
++ forecast_predet.sh[476]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile5.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data_ls.tile5.nc
++ forecast_predet.sh[477]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile5.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data_ss.tile5.nc
++ forecast_predet.sh[473]: (( tt++  ))
++ forecast_predet.sh[473]: (( tt <= ntiles ))
++ forecast_predet.sh[474]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile6.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data.tile6.nc
++ forecast_predet.sh[475]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/orog/C96/C96_grid.tile6.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/C96_grid.tile6.nc
++ forecast_predet.sh[476]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile6.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data_ls.tile6.nc
++ forecast_predet.sh[477]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile6.nc /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/INPUT/oro_data_ss.tile6.nc
++ forecast_predet.sh[473]: (( tt++  ))
++ forecast_predet.sh[473]: (( tt <= ntiles ))
++ forecast_predet.sh[479]: [[ NO == \Y\E\S ]]
++ forecast_predet.sh[488]: local noahmptablefile=/gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/ufs/noahmptable.tbl
++ forecast_predet.sh[489]: [[ ! -f /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/ufs/noahmptable.tbl ]]
++ forecast_predet.sh[493]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/ufs/noahmptable.tbl /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/noahmptable.tbl
++ forecast_predet.sh[497]: ((  imp_physics == 8  ))
++ forecast_predet.sh[498]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/CCN_ACTIVATE.BIN /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/CCN_ACTIVATE.BIN
++ forecast_predet.sh[499]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/freezeH2O.dat /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/freezeH2O.dat
++ forecast_predet.sh[500]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/qr_acr_qgV2.dat /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/qr_acr_qgV2.dat
++ forecast_predet.sh[501]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/qr_acr_qsV2.dat /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/qr_acr_qsV2.dat
++ forecast_predet.sh[504]: [[ YES == \Y\E\S ]]
++ forecast_predet.sh[505]: [[ McCormack == \M\c\C\o\r\m\a\c\k\-\e\m\p\i\r\i\c\a\l\-\s\h\-\o\z\h ]]
++ forecast_predet.sh[508]: O3FORC=ozprdlos_2015_new_sbuvO3_tclm15_nuchem.f77
++ forecast_predet.sh[513]: H2OFORC=global_h2o_pltc.f77
++ forecast_predet.sh[514]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/ozprdlos_2015_new_sbuvO3_tclm15_nuchem.f77 /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/global_o3prdlos.f77
++ forecast_predet.sh[515]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_h2o_pltc.f77 /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/global_h2oprdlos.f77
++ forecast_predet.sh[519]: ISOL=2
++ forecast_predet.sh[521]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_solarconstant_noaa_an.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/solarconstant_noaa_an.txt
++ forecast_predet.sh[522]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_sfc_emissivity_idx.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/sfc_emissivity_idx.txt
++ forecast_predet.sh[525]: IAER=1011
++ forecast_predet.sh[528]: ((  IAER == 1011  ))
++ forecast_predet.sh[529]: local month mm
++ forecast_predet.sh[530]: (( month = 1 ))
++ forecast_predet.sh[530]: (( month <=12 ))
+++ forecast_predet.sh[531]: printf %02d 1
++ forecast_predet.sh[531]: mm=01
++ forecast_predet.sh[532]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer/merra2.aerclim.2014-2023.m01.nc aeroclim.m01.nc
++ forecast_predet.sh[530]: (( month++  ))
++ forecast_predet.sh[530]: (( month <=12 ))
+++ forecast_predet.sh[531]: printf %02d 2
++ forecast_predet.sh[531]: mm=02
++ forecast_predet.sh[532]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer/merra2.aerclim.2014-2023.m02.nc aeroclim.m02.nc
++ forecast_predet.sh[530]: (( month++  ))
++ forecast_predet.sh[530]: (( month <=12 ))
+++ forecast_predet.sh[531]: printf %02d 3
++ forecast_predet.sh[531]: mm=03
++ forecast_predet.sh[532]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer/merra2.aerclim.2014-2023.m03.nc aeroclim.m03.nc
++ forecast_predet.sh[530]: (( month++  ))
++ forecast_predet.sh[530]: (( month <=12 ))
+++ forecast_predet.sh[531]: printf %02d 4
++ forecast_predet.sh[531]: mm=04
++ forecast_predet.sh[532]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer/merra2.aerclim.2014-2023.m04.nc aeroclim.m04.nc
++ forecast_predet.sh[530]: (( month++  ))
++ forecast_predet.sh[530]: (( month <=12 ))
+++ forecast_predet.sh[531]: printf %02d 5
++ forecast_predet.sh[531]: mm=05
++ forecast_predet.sh[532]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer/merra2.aerclim.2014-2023.m05.nc aeroclim.m05.nc
++ forecast_predet.sh[530]: (( month++  ))
++ forecast_predet.sh[530]: (( month <=12 ))
+++ forecast_predet.sh[531]: printf %02d 6
++ forecast_predet.sh[531]: mm=06
++ forecast_predet.sh[532]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer/merra2.aerclim.2014-2023.m06.nc aeroclim.m06.nc
++ forecast_predet.sh[530]: (( month++  ))
++ forecast_predet.sh[530]: (( month <=12 ))
+++ forecast_predet.sh[531]: printf %02d 7
++ forecast_predet.sh[531]: mm=07
++ forecast_predet.sh[532]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer/merra2.aerclim.2014-2023.m07.nc aeroclim.m07.nc
++ forecast_predet.sh[530]: (( month++  ))
++ forecast_predet.sh[530]: (( month <=12 ))
+++ forecast_predet.sh[531]: printf %02d 8
++ forecast_predet.sh[531]: mm=08
++ forecast_predet.sh[532]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer/merra2.aerclim.2014-2023.m08.nc aeroclim.m08.nc
++ forecast_predet.sh[530]: (( month++  ))
++ forecast_predet.sh[530]: (( month <=12 ))
+++ forecast_predet.sh[531]: printf %02d 9
++ forecast_predet.sh[531]: mm=09
++ forecast_predet.sh[532]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer/merra2.aerclim.2014-2023.m09.nc aeroclim.m09.nc
++ forecast_predet.sh[530]: (( month++  ))
++ forecast_predet.sh[530]: (( month <=12 ))
+++ forecast_predet.sh[531]: printf %02d 10
++ forecast_predet.sh[531]: mm=10
++ forecast_predet.sh[532]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer/merra2.aerclim.2014-2023.m10.nc aeroclim.m10.nc
++ forecast_predet.sh[530]: (( month++  ))
++ forecast_predet.sh[530]: (( month <=12 ))
+++ forecast_predet.sh[531]: printf %02d 11
++ forecast_predet.sh[531]: mm=11
++ forecast_predet.sh[532]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer/merra2.aerclim.2014-2023.m11.nc aeroclim.m11.nc
++ forecast_predet.sh[530]: (( month++  ))
++ forecast_predet.sh[530]: (( month <=12 ))
+++ forecast_predet.sh[531]: printf %02d 12
++ forecast_predet.sh[531]: mm=12
++ forecast_predet.sh[532]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/aer/merra2.aerclim.2014-2023.m12.nc aeroclim.m12.nc
++ forecast_predet.sh[530]: (( month++  ))
++ forecast_predet.sh[530]: (( month <=12 ))
++ forecast_predet.sh[536]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_climaeropac_global.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/aerosol.dat
++ forecast_predet.sh[537]: ((  IAER > 0  ))
++ forecast_predet.sh[538]: local file
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1850-1859.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1850-1859.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1850-1859.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1860-1869.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1860-1869.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1860-1869.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1870-1879.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1870-1879.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1870-1879.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1880-1889.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1880-1889.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1880-1889.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1890-1899.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1890-1899.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1890-1899.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1900-1909.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1900-1909.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1900-1909.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1910-1919.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1910-1919.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1910-1919.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1920-1929.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1920-1929.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1920-1929.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1930-1939.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1930-1939.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1930-1939.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1940-1949.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1940-1949.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1940-1949.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1950-1959.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1950-1959.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1950-1959.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1960-1969.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1960-1969.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1960-1969.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1970-1979.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1970-1979.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1970-1979.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1980-1989.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1980-1989.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1980-1989.txt
++ forecast_predet.sh[539]: for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[540]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/volcanic_aerosols_1990-1999.txt
++ forecast_predet.sh[540]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_volcanic_aerosols_1990-1999.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/volcanic_aerosols_1990-1999.txt
++ forecast_predet.sh[544]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/lut/optics_BC.v1_3.dat /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/optics_BC.dat
++ forecast_predet.sh[545]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/lut/optics_OC.v1_3.dat /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/optics_OC.dat
++ forecast_predet.sh[546]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/lut/optics_DU.v15_3.dat /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/optics_DU.dat
++ forecast_predet.sh[547]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/lut/optics_SS.v3_3.dat /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/optics_SS.dat
++ forecast_predet.sh[548]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/lut/optics_SU.v1_3.dat /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/optics_SU.dat
++ forecast_predet.sh[551]: ICO2=2
++ forecast_predet.sh[553]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/global_co2historicaldata_glob.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_glob.txt
++ forecast_predet.sh[554]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/co2monthlycyc.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2monthlycyc.txt
++ forecast_predet.sh[557]: local co2dir
++ forecast_predet.sh[558]: co2dir=fix_co2_proj
++ forecast_predet.sh[559]: [[ '' == \Y\E\S ]]
++ forecast_predet.sh[562]: ((  ICO2 > 0  ))
++ forecast_predet.sh[563]: local file
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2009.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2009.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2009.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2010.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2010.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2010.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2011.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2011.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2011.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2012.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2012.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2012.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2013.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2013.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2013.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2014.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2014.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2014.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2015.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2015.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2015.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2016.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2016.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2016.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2017.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2017.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2017.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2018.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2018.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2018.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2019.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2019.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2019.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2020.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2020.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2020.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2021.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2021.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2021.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2022.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2022.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2022.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2023.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2023.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2023.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2024.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2024.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2024.txt
++ forecast_predet.sh[564]: for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[565]: basename /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2025.txt
++ forecast_predet.sh[565]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2025.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/co2historicaldata_2025.txt
++ forecast_predet.sh[570]: [[ .true. == \.\t\r\u\e\. ]]
++ forecast_predet.sh[571]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/post/params_grib2_tbl_new /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/params_grib2_tbl_new
++ forecast_predet.sh[572]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/ufs/post_itag_gfs /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/itag
++ forecast_predet.sh[574]: case ${NET} in
++ forecast_predet.sh[576]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/post/gfs/postxconfig-NT-gfs-two.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/postxconfig-NT.txt
++ forecast_predet.sh[577]: /bin/cp -p /gpfs/f5/epic/proj-shared/global/CI/3447/global-workflow/parm/post/gfs/postxconfig-NT-gfs-f00-two.txt /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C96_atm3DVar_9098d000/gdas.2021122018/gdasfcst.2021122018/fcst.1011837/postxconfig-NT_FH00.txt
++ exglobal_forecast.sh[109]: [[ .false. == \.\t\r\u\e\. ]]
++ exglobal_forecast.sh[112]: [[ .false. == \.\t\r\u\e\. ]]
++ exglobal_forecast.sh[115]: [[ .false. == \.\t\r\u\e\. ]]
++ exglobal_forecast.sh[118]: [[ .false. == \.\t\r\u\e\. ]]
++ exglobal_forecast.sh[121]: [[ .false. == \.\t\r\u\e\. ]]
++ exglobal_forecast.sh[124]: echo 'MAIN: Variables before determination of run type loaded'
+MAIN: Variables before determination of run type loaded
++ exglobal_forecast.sh[126]: echo 'MAIN: Determining run type'
+MAIN: Determining run type
++ exglobal_forecast.sh[127]: UFS_det
++ forecast_det.sh[6]: echo 'SUB UFS_det: Run type determination for UFS'
+SUB UFS_det: Run type determination for UFS
++ forecast_det.sh[9]: [[ -f /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/12//model/atmos/restart/20211220.150000.coupler.res ]]
++ forecast_det.sh[14]: [[ .false. == \.\f\a\l\s\e\. ]]
++ forecast_det.sh[19]: [[ ! -f /gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/18//model/atmos/input/gfs_ctrl.nc ]]
++ forecast_det.sh[20]: echo 'FATAL ERROR: Cold start ICs are missing from '\''/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/18//model/atmos/input'\'''
+FATAL ERROR: Cold start ICs are missing from '/gpfs/f5/epic/proj-shared/global/CI/3447/RUNTESTS/COMROOT/C96_atm3DVar_9098d000/gdas.20211220/18//model/atmos/input'
++ forecast_det.sh[21]: exit 1
++ forecast_det.sh[1]: postamble exglobal_forecast.sh 1741984553 1
++ preamble.sh[70]: set +x
+End exglobal_forecast.sh at 20:36:24 with error code 1 (time elapsed: 00:00:31)
++ JGLOBAL_FORECAST[1]: postamble JGLOBAL_FORECAST 1741984530 1
++ preamble.sh[70]: set +x
+End JGLOBAL_FORECAST at 20:36:24 with error code 1 (time elapsed: 00:00:54)
++ fcst.sh[1]: postamble fcst.sh 1741984518 1
++ preamble.sh[70]: set +x
+End fcst.sh at 20:36:24 with error code 1 (time elapsed: 00:01:06)
