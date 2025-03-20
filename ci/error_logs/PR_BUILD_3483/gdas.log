@@ -1,0 +1,122 @@
++ OPTIND=1
++ _opts='-f '
++ getopts :j:dv option
++ case "${option}" in
++ BUILD_JOBS=40
++ getopts :j:dv option
++ shift 2
++ BUILD_JOBS=40
++ WORKFLOW_BUILD=ON
++ ./gdas.cd/build.sh -f -f
+Start ... Thu Mar 20 16:17:12 UTC 2025
+Building GDASApp on hera
+
+Currently Loaded Modules:
+  1) intel/2022.1.2                   49) sp/2.5.0
+  2) stack-intel/2021.5.0             50) gsl-lite/0.37.0
+  3) impi/2022.1.2                    51) libjpeg/2.1.0
+  4) stack-intel-oneapi-mpi/2021.5.1  52) krb5/1.20.1
+  5) cmake/3.23.1                     53) libtirpc/1.3.3
+  6) gettext/0.19.8.1                 54) hdf/4.2.15
+  7) pcre2/10.42                      55) jedi-cmake/1.4.0
+  8) nghttp2/1.57.0                   56) libpng/1.6.37
+  9) curl/8.4.0                       57) libxt/1.1.5
+ 10) zlib/1.2.13                      58) libxmu/1.1.4
+ 11) git/2.18.0                       59) libxpm/4.11.0
+ 12) pkg-config/0.27.1                60) libxaw/1.0.13
+ 13) hdf5/1.14.0                      61) udunits/2.2.28
+ 14) parallel-netcdf/1.12.2           62) ncview/2.1.9
+ 15) snappy/1.1.10                    63) netcdf-cxx4/4.3.1
+ 16) zstd/1.5.2                       64) json/3.10.5
+ 17) c-blosc/1.21.5                   65) rocoto/1.3.6
+ 18) netcdf-c/4.9.2                   66) bacio/2.4.1
+ 19) nccmp/1.9.0.1                    67) w3emc/2.10.0
+ 20) netcdf-fortran/4.6.1             68) prod_util/2.1.1
+ 21) antlr/2.7.7                      69) py-markupsafe/2.1.3
+ 22) gsl/2.7.1                        70) py-jinja2/3.0.3
+ 23) nco/5.0.6                        71) py-cftime/1.0.3.4
+ 24) parallelio/2.5.10                72) py-netcdf4/1.5.8
+ 25) wget/1.14                        73) py-pybind11/2.11.0
+ 26) libxcrypt/4.4.35                 74) py-pycodestyle/2.11.0
+ 27) sqlite/3.43.2                    75) libyaml/0.2.5
+ 28) util-linux-uuid/2.38.1           76) py-pyyaml/6.0
+ 29) python/3.10.13                   77) py-scipy/1.11.3
+ 30) boost/1.83.0                     78) py-packaging/23.1
+ 31) py-setuptools/63.4.3             79) py-bottleneck/1.3.7
+ 32) py-numpy/1.22.3                  80) py-numexpr/2.8.4
+ 33) bufr/12.0.1                      81) py-et-xmlfile/1.0.1
+ 34) git-lfs/2.10.0                   82) py-openpyxl/3.1.2
+ 35) ecbuild/3.7.2                    83) py-six/1.16.0
+ 36) openjpeg/2.3.1                   84) py-python-dateutil/2.8.2
+ 37) eccodes/2.32.0                   85) py-pytz/2023.3
+ 38) eigen/3.4.0                      86) py-pyxlsb/1.0.10
+ 39) openblas/0.3.24                  87) py-xlrd/2.0.1
+ 40) eckit/1.24.5                     88) py-xlsxwriter/3.1.7
+ 41) fftw/3.3.10                      89) py-xlwt/1.3.0
+ 42) fckit/0.11.0                     90) py-pandas/1.5.3
+ 43) fiat/1.2.0                       91) py-xarray/2023.7.0
+ 44) fms/2023.04                      92) py-f90nml/1.4.3
+ 45) esmf/8.6.0                       93) py-pip/23.1.2
+ 46) ectrans/1.2.0                    94) py-click/8.1.7
+ 47) qhull/2020.2                     95) GDAS/hera.intel
+ 48) atlas/0.35.1
+
+ 
+
+Configuring ... Thu Mar 20 16:17:21 UTC 2025
++ cmake -DMPIEXEC_EXECUTABLE=/apps/slurm/default/bin/srun -DMPIEXEC_NUMPROC_FLAG=-n -DBUILD_GSIBEC=ON -DCLONE_JCSDADATA=NO -DMACHINE=hera -DWORKFLOW_TESTS=ON /scratch1/NCEPDEV/global/glopara/CI/3483/global-workflow/sorc/gdas.cd/bundle
+-- The C compiler identification is Intel 2021.5.0.20211109
+-- The CXX compiler identification is Intel 2021.5.0.20211109
+-- The Fortran compiler identification is Intel 2021.5.0.20211109
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /apps/oneapi/mpi/2021.5.1/bin/mpiicc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /apps/oneapi/mpi/2021.5.1/bin/mpiicpc - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /apps/oneapi/mpi/2021.5.1/bin/mpiifort - skipped
+-- ecbuild   3.7.2	/contrib/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/ecbuild-3.7.2-7yxdhug/share/ecbuild/cmake
+-- cmake     3.23.1	/contrib/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/cmake-3.23.1-qjplcak/bin/cmake
+-- ---------------------------------------------------------
+-- Found Git: /usr/bin/git (found version "2.43.5") 
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of void*
+-- Check size of void* - done
+-- Check size of off_t
+-- Check size of off_t - done
+-- ---------------------------------------------------------
+-- ---------------------------------------------------------
+-- [GDAS-bundle] (1.0.0)
+-- Feature TESTS enabled
+-- Found Python3: /contrib/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/python-3.10.13-2p2rady/bin/python3.10 (found version "3.10.13") found components: Interpreter 
+-- Feature TESTS enabled
+-- ---------------------------------------------------------
+-- Adding bundle project jedicmake
+CMake Error at /contrib/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/ecbuild-3.7.2-7yxdhug/share/ecbuild/cmake/ecbuild_log.cmake:190 (message):
+  [1;35mCRITICAL - Source directory
+  '/scratch1/NCEPDEV/global/glopara/CI/3483/global-workflow/sorc/gdas.cd/bundle/jedicmake'
+  for subproject 'jedicmake' does not exist or does not contain a
+  CMakeLists.txt file.[m
+Call Stack (most recent call first):
+  /contrib/spack-stack/spack-stack-1.6.0/envs/unified-env-rocky8/install/intel/2021.5.0/ecbuild-3.7.2-7yxdhug/share/ecbuild/cmake/ecbuild_bundle.cmake:166 (ecbuild_critical)
+  CMakeLists.txt:61 (ecbuild_bundle)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/scratch1/NCEPDEV/global/glopara/CI/3483/global-workflow/sorc/gdas.cd/build/CMakeFiles/CMakeOutput.log".
+_______________________________________________________________
+Start Epilog on node h16c51 for job 8400877 :: Thu Mar 20 16:17:36 UTC 2025
+Job 8400877 finished for user role.glopara in partition hera with exit code 1:0
+_______________________________________________________________
+End Epilogue Thu Mar 20 16:17:36 UTC 2025
