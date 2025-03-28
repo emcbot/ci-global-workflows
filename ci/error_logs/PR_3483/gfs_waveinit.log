@@ -1,0 +1,984 @@
+Begin waveinit.sh at Fri 28 Mar 2025 02:53:27 PM UTC
++ waveinit.sh[6]: echo
+
++ waveinit.sh[7]: echo '=============== START TO SOURCE FV3GFS WORKFLOW MODULES ==============='
+=============== START TO SOURCE FV3GFS WORKFLOW MODULES ===============
++ waveinit.sh[9]: . /gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/ush/load_ufswm_modules.sh
+++ load_ufswm_modules.sh[4]: [[ NO == \N\O ]]
+++ load_ufswm_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_ufswm_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Lmod is automatically replacing "intel/2023.2.0" with "intel-classic/2023.2.0".
+
+
+Currently Loaded Modules:
+  1) craype-x86-rome                                31) zstd/1.5.2
+  2) perftools-base/23.12.0                         32) c-blosc/1.21.5
+  3) xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d  33) nghttp2/1.57.0
+  4) cray-pmi/6.1.13                                34) curl/8.4.0
+  5) CmrsEnv/default                                35) netcdf-c/4.9.2
+  6) TimeZoneEDT/default                            36) netcdf-fortran/4.6.1
+  7) DefApps/default                                37) parallel-netcdf/1.12.2
+  8) cray-dsmml/0.2.2                               38) parallelio/2.5.10
+  9) PrgEnv-intel/8.5.0                             39) esmf/8.6.0
+ 10) intel-classic/2023.2.0                         40) fms/2024.01.02
+ 11) craype/2.7.30                                  41) bacio/2.4.1
+ 12) stack-intel/2023.2.0                           42) crtm-fix/2.4.0.1_emc
+ 13) libfabric/1.20.1                               43) git-lfs/2.11.0
+ 14) craype-network-ofi                             44) crtm/2.4.0.1
+ 15) cray-mpich/8.1.28                              45) g2/3.5.1
+ 16) stack-cray-mpich/8.1.28                        46) g2tmpl/1.13.0
+ 17) gettext/0.20.2                                 47) ip/4.3.0
+ 18) libxcrypt/4.4.35                               48) sp/2.5.0
+ 19) sqlite/3.43.2                                  49) w3emc/2.10.0
+ 20) util-linux-uuid/2.38.1                         50) gftl/1.10.0
+ 21) python/3.10.13                                 51) gftl-shared/1.6.1
+ 22) stack-python/3.10.13                           52) fargparse/1.5.0
+ 23) cmake/3.23.1                                   53) mapl/2.40.3-esmf-8.6.0
+ 24) libjpeg/2.1.0                                  54) scotch/7.0.4
+ 25) jasper/2.0.32                                  55) ufs_common
+ 26) zlib/1.2.13                                    56) nccmp/1.9.0.1
+ 27) libpng/1.6.37                                  57) ufs_gaeac5.intel
+ 28) pkg-config/0.29.2                              58) prod_util/2.1.1
+ 29) hdf5/1.14.0                                    59) wgrib2/3.1.1-omp
+ 30) snappy/1.1.10
+
+ 
+
++ waveinit.sh[10]: status=0
++ waveinit.sh[11]: [[ 0 -ne 0 ]]
++ waveinit.sh[15]: export job=waveinit
++ waveinit.sh[15]: job=waveinit
++ waveinit.sh[16]: export jobid=waveinit.984278
++ waveinit.sh[16]: jobid=waveinit.984278
++ waveinit.sh[19]: echo
+
++ waveinit.sh[20]: echo '=============== START TO RUN WAVE INIT ==============='
+=============== START TO RUN WAVE INIT ===============
++ waveinit.sh[22]: /gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/jobs/JGLOBAL_WAVE_INIT
+Begin JGLOBAL_WAVE_INIT at Fri 28 Mar 2025 02:53:31 PM UTC
++ JGLOBAL_WAVE_INIT[4]: source /gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/ush/jjob_header.sh -e waveinit -c 'base wave waveinit'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=waveinit
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z waveinit ]]
+++ jjob_header.sh[68]: export DATA=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C48_S2SW_c08311e1/gfs.2021032312/waveinit.984278
+++ jjob_header.sh[68]: DATA=/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C48_S2SW_c08311e1/gfs.2021032312/waveinit.984278
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C48_S2SW_c08311e1/gfs.2021032312/waveinit.984278
+++ jjob_header.sh[72]: mkdir -p /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C48_S2SW_c08311e1/gfs.2021032312/waveinit.984278
+++ jjob_header.sh[73]: cd /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C48_S2SW_c08311e1/gfs.2021032312/waveinit.984278
+++ jjob_header.sh[79]: export cycle=t12z
+++ jjob_header.sh[79]: cycle=t12z
+++ jjob_header.sh[80]: setpdy.sh
+sed: can't read /gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/COMROOT/date/t12z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20210316
++++ PDY[1]: PDYm7=20210316
++++ PDY[2]: export PDYm6=20210317
++++ PDY[2]: PDYm6=20210317
++++ PDY[3]: export PDYm5=20210318
++++ PDY[3]: PDYm5=20210318
++++ PDY[4]: export PDYm4=20210319
++++ PDY[4]: PDYm4=20210319
++++ PDY[5]: export PDYm3=20210320
++++ PDY[5]: PDYm3=20210320
++++ PDY[6]: export PDYm2=20210321
++++ PDY[6]: PDYm2=20210321
++++ PDY[7]: export PDYm1=20210322
++++ PDY[7]: PDYm1=20210322
++++ PDY[8]: export PDY=20210323
++++ PDY[8]: PDY=20210323
++++ PDY[9]: export PDYp1=20210324
++++ PDY[9]: PDYp1=20210324
++++ PDY[10]: export PDYp2=20210325
++++ PDY[10]: PDYp2=20210325
++++ PDY[11]: export PDYp3=20210326
++++ PDY[11]: PDYp3=20210326
++++ PDY[12]: export PDYp4=20210327
++++ PDY[12]: PDYp4=20210327
++++ PDY[13]: export PDYp5=20210328
++++ PDY[13]: PDYp5=20210328
++++ PDY[14]: export PDYp6=20210329
++++ PDY[14]: PDYp6=20210329
++++ PDY[15]: export PDYp7=20210330
++++ PDY[15]: PDYp7=20210330
+++ jjob_header.sh[87]: export pid=984347
+++ jjob_header.sh[87]: pid=984347
+++ jjob_header.sh[88]: export pgmout=OUTPUT.984347
+++ jjob_header.sh[88]: pgmout=OUTPUT.984347
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/EXPDIR/C48_S2SW_c08311e1
+++ jjob_header.sh[95]: EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/EXPDIR/C48_S2SW_c08311e1
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/EXPDIR/C48_S2SW_c08311e1/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=GAEAC5
++++ config.base[9]: machine=GAEAC5
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=epic
++++ config.base[15]: ACCOUNT=epic
++++ config.base[16]: export QUEUE=normal
++++ config.base[16]: QUEUE=normal
++++ config.base[17]: export QUEUE_SERVICE=normal
++++ config.base[17]: QUEUE_SERVICE=normal
++++ config.base[18]: export QUEUE_DTN=hpss
++++ config.base[18]: QUEUE_DTN=hpss
++++ config.base[19]: export PARTITION_BATCH=batch
++++ config.base[19]: PARTITION_BATCH=batch
++++ config.base[20]: export PARTITION_SERVICE=batch
++++ config.base[20]: PARTITION_SERVICE=batch
++++ config.base[21]: export PARTITION_DTN=dtn_f5_f6
++++ config.base[21]: PARTITION_DTN=dtn_f5_f6
++++ config.base[22]: export RESERVATION=
++++ config.base[22]: RESERVATION=
++++ config.base[23]: export CLUSTERS=c5
++++ config.base[23]: CLUSTERS=c5
++++ config.base[24]: export CLUSTERS_SERVICE=@CLUSTERS_SERVICE@
++++ config.base[24]: CLUSTERS_SERVICE=@CLUSTERS_SERVICE@
++++ config.base[25]: export CLUSTERS_DTN=es
++++ config.base[25]: CLUSTERS_DTN=es
++++ config.base[28]: export HPSS_PROJECT=emc-global
++++ config.base[28]: HPSS_PROJECT=emc-global
++++ config.base[31]: export HOMEgfs=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow
++++ config.base[31]: HOMEgfs=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow
++++ config.base[32]: export EXECgfs=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/exec
++++ config.base[32]: EXECgfs=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/exec
++++ config.base[33]: export FIXgfs=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix
++++ config.base[33]: FIXgfs=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix
++++ config.base[34]: export PARMgfs=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/parm
++++ config.base[34]: PARMgfs=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/parm
++++ config.base[35]: export SCRgfs=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/scripts
++++ config.base[35]: SCRgfs=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/scripts
++++ config.base[36]: export USHgfs=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/ush
++++ config.base[36]: USHgfs=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/ush
++++ config.base[38]: export FIXam=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/am
++++ config.base[38]: FIXam=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/am
++++ config.base[39]: export FIXaer=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/aer
++++ config.base[39]: FIXaer=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/aer
++++ config.base[40]: export FIXcpl=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/cpl
++++ config.base[40]: FIXcpl=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/cpl
++++ config.base[41]: export FIXlut=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/lut
++++ config.base[41]: FIXlut=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/lut
++++ config.base[42]: export FIXcice=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/cice
++++ config.base[42]: FIXcice=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/cice
++++ config.base[43]: export FIXmom=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/mom6
++++ config.base[43]: FIXmom=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/mom6
++++ config.base[44]: export FIXreg2grb2=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/reg2grb2
++++ config.base[44]: FIXreg2grb2=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/reg2grb2
++++ config.base[45]: export FIXgdas=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/gdas
++++ config.base[45]: FIXgdas=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/gdas
++++ config.base[50]: export PACKAGEROOT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/nwpara
++++ config.base[50]: PACKAGEROOT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/nwpara
++++ config.base[51]: export COMROOT=/gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/COMROOT
++++ config.base[51]: COMROOT=/gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/COMROOT
++++ config.base[52]: export COMINsyn=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/com/gfs/prod/syndat
++++ config.base[52]: COMINsyn=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/com/gfs/prod/syndat
++++ config.base[53]: export DMPDIR=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/dump
++++ config.base[53]: DMPDIR=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/dump
++++ config.base[57]: export COMINecmwf=@COMINecmwf@
++++ config.base[57]: COMINecmwf=@COMINecmwf@
++++ config.base[58]: export COMINnam=@COMINnam@
++++ config.base[58]: COMINnam=@COMINnam@
++++ config.base[59]: export COMINukmet=@COMINukmet@
++++ config.base[59]: COMINukmet=@COMINukmet@
++++ config.base[62]: export HOMEDIR=/gpfs/f5/epic/scratch/role.epic
++++ config.base[62]: HOMEDIR=/gpfs/f5/epic/scratch/role.epic
++++ config.base[63]: export STMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[63]: STMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[64]: export PTMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[64]: PTMP=/gpfs/f5/epic/scratch/role.epic
++++ config.base[65]: export NOSCRUB=/gpfs/f5/epic/scratch/role.epic
++++ config.base[65]: NOSCRUB=/gpfs/f5/epic/scratch/role.epic
++++ config.base[68]: export BASE_GIT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git
++++ config.base[68]: BASE_GIT=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git
++++ config.base[71]: export BASE_DATA=/gpfs/f5/ufs-ard/world-shared/global/glopara/data
++++ config.base[71]: BASE_DATA=/gpfs/f5/ufs-ard/world-shared/global/glopara/data
++++ config.base[74]: export DO_GOES=NO
++++ config.base[74]: DO_GOES=NO
++++ config.base[75]: export DO_BUFRSND=NO
++++ config.base[75]: DO_BUFRSND=NO
++++ config.base[76]: export DO_GEMPAK=NO
++++ config.base[76]: DO_GEMPAK=NO
++++ config.base[77]: export DO_AWIPS=NO
++++ config.base[77]: DO_AWIPS=NO
++++ config.base[78]: export DO_NPOESS=NO
++++ config.base[78]: DO_NPOESS=NO
++++ config.base[79]: export DO_TRACKER=NO
++++ config.base[79]: DO_TRACKER=NO
++++ config.base[80]: export DO_GENESIS=NO
++++ config.base[80]: DO_GENESIS=NO
++++ config.base[81]: export DO_GENESIS_FSU=NO
++++ config.base[81]: DO_GENESIS_FSU=NO
++++ config.base[82]: export DO_VERFOZN=YES
++++ config.base[82]: DO_VERFOZN=YES
++++ config.base[83]: export DO_VERFRAD=YES
++++ config.base[83]: DO_VERFRAD=YES
++++ config.base[84]: export DO_VMINMON=YES
++++ config.base[84]: DO_VMINMON=YES
++++ config.base[85]: export DO_MOS=NO
++++ config.base[85]: DO_MOS=NO
++++ config.base[91]: export REALTIME=YES
++++ config.base[91]: REALTIME=YES
++++ config.base[94]: export MODE=forecast-only
++++ config.base[94]: MODE=forecast-only
++++ config.base[95]: export DO_TEST_MODE=YES
++++ config.base[95]: DO_TEST_MODE=YES
++++ config.base[104]: export FIXgsi=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/gsi
++++ config.base[104]: FIXgsi=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/gsi
++++ config.base[105]: export HOMEpost=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow
++++ config.base[105]: HOMEpost=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow
++++ config.base[106]: export HOMEobsproc=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git/obsproc/v
++++ config.base[106]: HOMEobsproc=/gpfs/f5/ufs-ard/world-shared/global/glopara/data/git/obsproc/v
++++ config.base[109]: export 'NCP=/bin/cp -p'
++++ config.base[109]: NCP='/bin/cp -p'
++++ config.base[110]: export NMV=/bin/mv
++++ config.base[110]: NMV=/bin/mv
++++ config.base[111]: export 'NLN=/bin/ln -sf'
++++ config.base[111]: NLN='/bin/ln -sf'
++++ config.base[112]: export VERBOSE=YES
++++ config.base[112]: VERBOSE=YES
++++ config.base[113]: export KEEPDATA=NO
++++ config.base[113]: KEEPDATA=NO
++++ config.base[114]: export DEBUG_POSTSCRIPT=NO
++++ config.base[114]: DEBUG_POSTSCRIPT=NO
++++ config.base[115]: export CHGRP_RSTPROD=NO
++++ config.base[115]: CHGRP_RSTPROD=NO
++++ config.base[116]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[116]: CHGRP_CMD='chgrp rstprod'
++++ config.base[117]: export NCDUMP=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-mh4uycw/bin/ncdump
++++ config.base[117]: NCDUMP=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-mh4uycw/bin/ncdump
++++ config.base[118]: export NCLEN=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/ush/getncdimlen
++++ config.base[118]: NCLEN=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/ush/getncdimlen
++++ config.base[121]: export BASE_ENV=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/env
++++ config.base[121]: BASE_ENV=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/env
++++ config.base[122]: export BASE_JOB=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/jobs/rocoto
++++ config.base[122]: BASE_JOB=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/jobs/rocoto
++++ config.base[125]: export SDATE=2021032312
++++ config.base[125]: SDATE=2021032312
++++ config.base[126]: export EDATE=2021032312
++++ config.base[126]: EDATE=2021032312
++++ config.base[127]: export EXP_WARM_START=.false.
++++ config.base[127]: EXP_WARM_START=.false.
++++ config.base[128]: export assim_freq=6
++++ config.base[128]: assim_freq=6
++++ config.base[129]: export PSLOT=C48_S2SW_c08311e1
++++ config.base[129]: PSLOT=C48_S2SW_c08311e1
++++ config.base[130]: export EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/EXPDIR/C48_S2SW_c08311e1
++++ config.base[130]: EXPDIR=/gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/EXPDIR/C48_S2SW_c08311e1
++++ config.base[131]: export ROTDIR=/gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/COMROOT/C48_S2SW_c08311e1
++++ config.base[131]: ROTDIR=/gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/COMROOT/C48_S2SW_c08311e1
++++ config.base[132]: export ROTDIR_DUMP=YES
++++ config.base[132]: ROTDIR_DUMP=YES
++++ config.base[133]: export DUMP_SUFFIX=
++++ config.base[133]: DUMP_SUFFIX=
++++ config.base[134]: [[ 2021032312 -ge 2019092100 ]]
++++ config.base[134]: [[ 2021032312 -le 2019110700 ]]
++++ config.base[137]: export ARCDIR=/gpfs/f5/epic/scratch/role.epic/archive/C48_S2SW_c08311e1
++++ config.base[137]: ARCDIR=/gpfs/f5/epic/scratch/role.epic/archive/C48_S2SW_c08311e1
++++ config.base[138]: export ATARDIR=/gpfs/f5/epic/scratch/role.epic/archive_rotdir/C48_S2SW_c08311e1
++++ config.base[138]: ATARDIR=/gpfs/f5/epic/scratch/role.epic/archive_rotdir/C48_S2SW_c08311e1
++++ config.base[139]: export FETCHDIR=/NCEPDEV/emc-global/1year/David.Grumm/test_data
++++ config.base[139]: FETCHDIR=/NCEPDEV/emc-global/1year/David.Grumm/test_data
++++ config.base[142]: export envir=prod
++++ config.base[142]: envir=prod
++++ config.base[143]: export NET=gfs
++++ config.base[143]: NET=gfs
++++ config.base[144]: export RUN=gfs
++++ config.base[144]: RUN=gfs
++++ config.base[147]: source /gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/EXPDIR/C48_S2SW_c08311e1/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ config.com[78]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[79]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[80]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[82]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[83]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[84]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[85]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[86]: declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[87]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[88]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[89]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[90]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[92]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[93]: declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[94]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[95]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[96]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[97]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[98]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[99]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[100]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[102]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[103]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[104]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[106]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[150]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[150]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[151]: export LOGSCRIPT=
++++ config.base[151]: LOGSCRIPT=
++++ config.base[154]: export 'REDOUT=1>'
++++ config.base[154]: REDOUT='1>'
++++ config.base[155]: export 'REDERR=2>'
++++ config.base[155]: REDERR='2>'
++++ config.base[157]: export SENDECF=NO
++++ config.base[157]: SENDECF=NO
++++ config.base[158]: export SENDSDM=NO
++++ config.base[158]: SENDSDM=NO
++++ config.base[159]: export SENDDBN_NTC=NO
++++ config.base[159]: SENDDBN_NTC=NO
++++ config.base[160]: export SENDDBN=NO
++++ config.base[160]: SENDDBN=NO
++++ config.base[161]: export DBNROOT=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-iqvlvsb/fakedbn
++++ config.base[161]: DBNROOT=/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-iqvlvsb/fakedbn
++++ config.base[164]: export APP=S2SW
++++ config.base[164]: APP=S2SW
++++ config.base[166]: shopt -s extglob
++++ config.base[169]: case "${RUN}" in
++++ config.base[176]: shopt -u extglob
++++ config.base[179]: export DO_ATM=YES
++++ config.base[179]: DO_ATM=YES
++++ config.base[180]: export DO_COUPLED=NO
++++ config.base[180]: DO_COUPLED=NO
++++ config.base[181]: export DO_WAVE=NO
++++ config.base[181]: DO_WAVE=NO
++++ config.base[182]: export DO_OCN=NO
++++ config.base[182]: DO_OCN=NO
++++ config.base[183]: export DO_ICE=NO
++++ config.base[183]: DO_ICE=NO
++++ config.base[184]: DO_AERO=NO
++++ config.base[185]: export DO_PREP_OBS_AERO=NO
++++ config.base[185]: DO_PREP_OBS_AERO=NO
++++ config.base[186]: aero_fcst_runs=gdas
++++ config.base[187]: aero_anl_runs='gdas gfs'
++++ config.base[188]: export DO_AERO_FCST=NO
++++ config.base[188]: DO_AERO_FCST=NO
++++ config.base[189]: export DO_AERO_ANL=NO
++++ config.base[189]: DO_AERO_ANL=NO
++++ config.base[190]: export DOBNDPNT_WAVE=NO
++++ config.base[190]: DOBNDPNT_WAVE=NO
++++ config.base[191]: export DOIBP_WAV=NO
++++ config.base[191]: DOIBP_WAV=NO
++++ config.base[192]: export FRAC_GRID=.true.
++++ config.base[192]: FRAC_GRID=.true.
++++ config.base[193]: export DO_NEST=NO
++++ config.base[193]: DO_NEST=NO
++++ config.base[194]: [[ NO == \Y\E\S ]]
++++ config.base[200]: export ntiles=6
++++ config.base[200]: ntiles=6
++++ config.base[201]: export FIXugwd=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/ugwd
++++ config.base[201]: FIXugwd=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/ugwd
++++ config.base[202]: export FIXorog=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/orog
++++ config.base[202]: FIXorog=/gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/orog
++++ config.base[206]: export OPS_RES=C768
++++ config.base[206]: OPS_RES=C768
++++ config.base[209]: export LEVS=128
++++ config.base[209]: LEVS=128
++++ config.base[210]: export CASE=C48
++++ config.base[210]: CASE=C48
++++ config.base[211]: export CASE_ENS=@CASEENS@
++++ config.base[211]: CASE_ENS=@CASEENS@
++++ config.base[212]: export OCNRES=500
++++ config.base[212]: OCNRES=500
++++ config.base[213]: export ICERES=500
++++ config.base[213]: ICERES=500
++++ config.base[216]: case "${CASE}" in
++++ config.base[218]: export waveGRD=uglo_100km
++++ config.base[218]: waveGRD=uglo_100km
++++ config.base[235]: case "${APP}" in
++++ config.base[251]: export DO_COUPLED=YES
++++ config.base[251]: DO_COUPLED=YES
++++ config.base[252]: export DO_OCN=YES
++++ config.base[252]: DO_OCN=YES
++++ config.base[253]: export DO_ICE=YES
++++ config.base[253]: DO_ICE=YES
++++ config.base[255]: [[ S2SW =~ A$ ]]
++++ config.base[259]: [[ S2SW =~ ^S2SW ]]
++++ config.base[260]: export DO_WAVE=YES
++++ config.base[260]: DO_WAVE=YES
++++ config.base[270]: [[ NO == \Y\E\S ]]
++++ config.base[280]: [[ gfs =~ gdas ]]
++++ config.base[283]: [[ gfs =~ gfs ]]
++++ config.base[284]: export FHCYC=24
++++ config.base[284]: FHCYC=24
++++ config.base[288]: export FHMIN=0
++++ config.base[288]: FHMIN=0
++++ config.base[289]: export FHMAX=9
++++ config.base[289]: FHMAX=9
++++ config.base[290]: export FHOUT=3
++++ config.base[290]: FHOUT=3
++++ config.base[291]: export FHOUT_OCN=3
++++ config.base[291]: FHOUT_OCN=3
++++ config.base[292]: export FHOUT_ICE=3
++++ config.base[292]: FHOUT_ICE=3
++++ config.base[293]: export FHOUT_AERO=3
++++ config.base[293]: FHOUT_AERO=3
++++ config.base[296]: export EUPD_CYC=gdas
++++ config.base[296]: EUPD_CYC=gdas
++++ config.base[299]: export INTERVAL_GFS=6
++++ config.base[299]: INTERVAL_GFS=6
++++ config.base[300]: export SDATE_GFS=2021032312
++++ config.base[300]: SDATE_GFS=2021032312
++++ config.base[303]: export FHMIN_GFS=0
++++ config.base[303]: FHMIN_GFS=0
++++ config.base[304]: export FHMAX_GFS=120
++++ config.base[304]: FHMAX_GFS=120
++++ config.base[306]: breakpnts=
++++ config.base[307]: export FCST_SEGMENTS=0,120
++++ config.base[307]: FCST_SEGMENTS=0,120
++++ config.base[308]: export FHOUT_GFS=3
++++ config.base[308]: FHOUT_GFS=3
++++ config.base[309]: export FHMAX_HF_GFS=0
++++ config.base[309]: FHMAX_HF_GFS=0
++++ config.base[310]: export FHOUT_HF_GFS=1
++++ config.base[310]: FHOUT_HF_GFS=1
++++ config.base[311]: export FHOUT_OCN_GFS=6
++++ config.base[311]: FHOUT_OCN_GFS=6
++++ config.base[312]: export FHOUT_ICE_GFS=6
++++ config.base[312]: FHOUT_ICE_GFS=6
++++ config.base[313]: export FHMIN_WAV=0
++++ config.base[313]: FHMIN_WAV=0
++++ config.base[314]: export FHOUT_WAV=3
++++ config.base[314]: FHOUT_WAV=3
++++ config.base[315]: export FHMAX_HF_WAV=120
++++ config.base[315]: FHMAX_HF_WAV=120
++++ config.base[316]: export FHOUT_HF_WAV=1
++++ config.base[316]: FHOUT_HF_WAV=1
++++ config.base[317]: export FHMAX_WAV=9
++++ config.base[317]: FHMAX_WAV=9
++++ config.base[318]: export FHMAX_WAV_GFS=120
++++ config.base[318]: FHMAX_WAV_GFS=120
++++ config.base[319]: export FHMAX_HF_GFS=0
++++ config.base[319]: FHMAX_HF_GFS=0
++++ config.base[320]: export FHMAX_WAV=9
++++ config.base[320]: FHMAX_WAV=9
++++ config.base[321]: export FHMAX_WAV_GFS=120
++++ config.base[321]: FHMAX_WAV_GFS=120
++++ config.base[322]: export FHMAX_HF_WAV=120
++++ config.base[322]: FHMAX_HF_WAV=120
++++ config.base[325]: export ILPOST=1
++++ config.base[325]: ILPOST=1
++++ config.base[326]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[327]: export ILPOST=3
++++ config.base[327]: ILPOST=3
++++ config.base[331]: export FHMAX_GOES=180
++++ config.base[331]: FHMAX_GOES=180
++++ config.base[332]: export FHOUT_GOES=3
++++ config.base[332]: FHOUT_GOES=3
++++ config.base[333]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[334]: export FHMAX_GOES=120
++++ config.base[334]: FHMAX_GOES=120
++++ config.base[338]: export restart_interval_gfs=12
++++ config.base[338]: restart_interval_gfs=12
++++ config.base[343]: export QUILTING=.true.
++++ config.base[343]: QUILTING=.true.
++++ config.base[344]: export OUTPUT_GRID=gaussian_grid
++++ config.base[344]: OUTPUT_GRID=gaussian_grid
++++ config.base[345]: export WRITE_DOPOST=.true.
++++ config.base[345]: WRITE_DOPOST=.true.
++++ config.base[346]: export WRITE_NSFLIP=.true.
++++ config.base[346]: WRITE_NSFLIP=.true.
++++ config.base[349]: export DOIAU=YES
++++ config.base[349]: DOIAU=YES
++++ config.base[350]: export IAUFHRS=3,6,9
++++ config.base[350]: IAUFHRS=3,6,9
++++ config.base[351]: export IAU_FHROT=3
++++ config.base[351]: IAU_FHROT=3
++++ config.base[352]: export IAU_DELTHRS=6
++++ config.base[352]: IAU_DELTHRS=6
++++ config.base[353]: export IAU_OFFSET=6
++++ config.base[353]: IAU_OFFSET=6
++++ config.base[354]: export DOIAU_ENKF=YES
++++ config.base[354]: DOIAU_ENKF=YES
++++ config.base[355]: export IAUFHRS_ENKF=3,6,9
++++ config.base[355]: IAUFHRS_ENKF=3,6,9
++++ config.base[356]: export IAU_DELTHRS_ENKF=6
++++ config.base[356]: IAU_DELTHRS_ENKF=6
++++ config.base[359]: export lobsdiag_forenkf=.true.
++++ config.base[359]: lobsdiag_forenkf=.true.
++++ config.base[367]: export imp_physics=8
++++ config.base[367]: imp_physics=8
++++ config.base[371]: export DO_JEDIATMVAR=NO
++++ config.base[371]: DO_JEDIATMVAR=NO
++++ config.base[372]: export DO_JEDIATMENS=NO
++++ config.base[372]: DO_JEDIATMENS=NO
++++ config.base[373]: export DO_JEDIOCNVAR=NO
++++ config.base[373]: DO_JEDIOCNVAR=NO
++++ config.base[374]: export DO_JEDISNOWDA=NO
++++ config.base[374]: DO_JEDISNOWDA=NO
++++ config.base[375]: export DO_MERGENSST=NO
++++ config.base[375]: DO_MERGENSST=NO
++++ config.base[376]: export DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[376]: DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[379]: export DOHYBVAR=@DOHYBVAR@
++++ config.base[379]: DOHYBVAR=@DOHYBVAR@
++++ config.base[380]: export DOHYBVAR_OCN=NO
++++ config.base[380]: DOHYBVAR_OCN=NO
++++ config.base[381]: export DOLETKF_OCN=NO
++++ config.base[381]: DOLETKF_OCN=NO
++++ config.base[382]: export NMEM_ENS=0
++++ config.base[382]: NMEM_ENS=0
++++ config.base[383]: export SMOOTH_ENKF=NO
++++ config.base[383]: SMOOTH_ENKF=NO
++++ config.base[384]: export l4densvar=.true.
++++ config.base[384]: l4densvar=.true.
++++ config.base[385]: export lwrite4danl=.true.
++++ config.base[385]: lwrite4danl=.true.
++++ config.base[386]: export DO_CALC_INCREMENT=NO
++++ config.base[386]: DO_CALC_INCREMENT=NO
++++ config.base[389]: export NMEM_ENS_GFS=30
++++ config.base[389]: NMEM_ENS_GFS=30
++++ config.base[390]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[390]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[391]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[391]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[394]: [[ @DOHYBVAR@ = \Y\E\S ]]
++++ config.base[408]: [[ @DOHYBVAR@ == \N\O ]]
++++ config.base[416]: export ENKF_SPREAD=YES
++++ config.base[416]: ENKF_SPREAD=YES
++++ config.base[419]: [[ forecast-only = \c\y\c\l\e\d ]]
++++ config.base[419]: [[ YES = \N\O ]]
++++ config.base[419]: [[ forecast-only = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[419]: [[ .false. = \.\f\a\l\s\e\. ]]
++++ config.base[420]: export IAU_OFFSET=0
++++ config.base[420]: IAU_OFFSET=0
++++ config.base[421]: export IAU_FHROT=0
++++ config.base[421]: IAU_FHROT=0
++++ config.base[422]: export IAUFHRS=6,
++++ config.base[422]: IAUFHRS=6,
++++ config.base[425]: [[ YES = \N\O ]]
++++ config.base[429]: [[ YES == \Y\E\S ]]
++++ config.base[430]: export restart_interval_enkfgdas=3
++++ config.base[430]: restart_interval_enkfgdas=3
++++ config.base[435]: export restart_interval_enkfgfs=3
++++ config.base[435]: restart_interval_enkfgfs=3
++++ config.base[437]: [[ YES == \Y\E\S ]]
++++ config.base[438]: export restart_interval_gdas=3
++++ config.base[438]: restart_interval_gdas=3
++++ config.base[443]: export DO_GSISOILDA=NO
++++ config.base[443]: DO_GSISOILDA=NO
++++ config.base[446]: export DONST=YES
++++ config.base[446]: DONST=YES
++++ config.base[447]: [[ YES = \Y\E\S ]]
++++ config.base[447]: export 'FNTSFA=        '
++++ config.base[447]: FNTSFA='        '
++++ config.base[450]: export nst_anl=.true.
++++ config.base[450]: nst_anl=.true.
++++ config.base[453]: export MAKE_NSSTBUFR=NO
++++ config.base[453]: MAKE_NSSTBUFR=NO
++++ config.base[456]: export MAKE_ACFTBUFR=NO
++++ config.base[456]: MAKE_ACFTBUFR=NO
++++ config.base[459]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[459]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[462]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[462]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[463]: export INCVARS_EFOLD=5
++++ config.base[463]: INCVARS_EFOLD=5
++++ config.base[468]: export netcdf_diag=.true.
++++ config.base[468]: netcdf_diag=.true.
++++ config.base[469]: export binary_diag=.false.
++++ config.base[469]: binary_diag=.false.
++++ config.base[472]: export DO_CA=YES
++++ config.base[472]: DO_CA=YES
++++ config.base[475]: export DO_METP=NO
++++ config.base[475]: DO_METP=NO
++++ config.base[476]: export DO_FIT2OBS=YES
++++ config.base[476]: DO_FIT2OBS=YES
++++ config.base[479]: export FHMAX_FITS=132
++++ config.base[479]: FHMAX_FITS=132
++++ config.base[480]: [[ 132 -gt 120 ]]
++++ config.base[481]: export FHMAX_FITS=120
++++ config.base[481]: FHMAX_FITS=120
++++ config.base[486]: export DO_FETCH_HPSS=NO
++++ config.base[486]: DO_FETCH_HPSS=NO
++++ config.base[487]: export DO_FETCH_LOCAL=NO
++++ config.base[487]: DO_FETCH_LOCAL=NO
++++ config.base[490]: export DO_ARCHCOM=NO
++++ config.base[490]: DO_ARCHCOM=NO
++++ config.base[491]: export ARCHCOM_TO=local
++++ config.base[491]: ARCHCOM_TO=local
++++ config.base[494]: export CLIENT_GLOBUS_UUID=@CLIENT_GLOBUS_UUID@
++++ config.base[494]: CLIENT_GLOBUS_UUID=@CLIENT_GLOBUS_UUID@
++++ config.base[497]: [[ NO = \Y\E\S ]]
++++ config.base[505]: export REPLAY_ICS=NO
++++ config.base[505]: REPLAY_ICS=NO
++++ config.base[506]: export OFFSET_START_HOUR=0
++++ config.base[506]: OFFSET_START_HOUR=0
++++ config.base[509]: export NUM_SND_COLLECTIVES=9
++++ config.base[509]: NUM_SND_COLLECTIVES=9
++++ config.base[511]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/EXPDIR/C48_S2SW_c08311e1/config.wave
++++ config.wave[6]: echo 'BEGIN: config.wave'
+BEGIN: config.wave
++++ config.wave[13]: export RUNwave=gfswave
++++ config.wave[13]: RUNwave=gfswave
++++ config.wave[16]: export RUNRSTwave=gdas
++++ config.wave[16]: RUNRSTwave=gdas
++++ config.wave[19]: export MESH_WAV=mesh.uglo_100km.nc
++++ config.wave[19]: MESH_WAV=mesh.uglo_100km.nc
++++ config.wave[22]: case "${waveGRD}" in
++++ config.wave[67]: export waveinterpGRD=glo_200
++++ config.wave[67]: waveinterpGRD=glo_200
++++ config.wave[68]: export wavepostGRD=
++++ config.wave[68]: wavepostGRD=
++++ config.wave[69]: export waveuoutpGRD=uglo_100km
++++ config.wave[69]: waveuoutpGRD=uglo_100km
++++ config.wave[78]: export WAVEWND_DID=
++++ config.wave[78]: WAVEWND_DID=
++++ config.wave[79]: export WAVEWND_FID=
++++ config.wave[79]: WAVEWND_FID=
++++ config.wave[82]: [[ gfs == \g\f\s ]]
++++ config.wave[83]: export FHMAX_WAV=120
++++ config.wave[83]: FHMAX_WAV=120
++++ config.wave[85]: export WAVHINDH=0
++++ config.wave[85]: WAVHINDH=0
++++ config.wave[86]: export FHMAX_WAV_IBP=180
++++ config.wave[86]: FHMAX_WAV_IBP=180
++++ config.wave[87]: ((  FHMAX_WAV < FHMAX_WAV_IBP  ))
++++ config.wave[87]: export FHMAX_WAV_IBP=120
++++ config.wave[87]: FHMAX_WAV_IBP=120
++++ config.wave[90]: export DTFLD_WAV=3600
++++ config.wave[90]: DTFLD_WAV=3600
++++ config.wave[91]: export DTPNT_WAV=3600
++++ config.wave[91]: DTPNT_WAV=3600
++++ config.wave[92]: export FHINCP_WAV=1
++++ config.wave[92]: FHINCP_WAV=1
++++ config.wave[95]: export 'OUTPARS_WAV=WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++ config.wave[95]: OUTPARS_WAV='WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++ config.wave[98]: [[ gfs == \g\d\a\s ]]
++++ config.wave[102]: ((  INTERVAL_GFS > 0  ))
++++ config.wave[103]: export WAVHCYC=6
++++ config.wave[103]: WAVHCYC=6
++++ config.wave[104]: export FHMAX_WAV_CUR=192
++++ config.wave[104]: FHMAX_WAV_CUR=192
++++ config.wave[112]: export RSTTYPE_WAV=T
++++ config.wave[112]: RSTTYPE_WAV=T
++++ config.wave[113]: [[ gfs != gfs ]]
++++ config.wave[118]: rst_dt_gfs=43200
++++ config.wave[119]: [[ 43200 -gt 0 ]]
++++ config.wave[120]: export DT_1_RST_WAV=0
++++ config.wave[120]: DT_1_RST_WAV=0
++++ config.wave[123]: export DT_2_RST_WAV=43200
++++ config.wave[123]: DT_2_RST_WAV=43200
++++ config.wave[129]: export RSTIOFF_WAV=0
++++ config.wave[129]: RSTIOFF_WAV=0
++++ config.wave[134]: export RUNMEM=-1
++++ config.wave[134]: RUNMEM=-1
++++ config.wave[137]: ((  RUNMEM == -1  ))
++++ config.wave[139]: export waveMEMB=
++++ config.wave[139]: waveMEMB=
++++ config.wave[146]: export WW3ATMINP=CPL
++++ config.wave[146]: WW3ATMINP=CPL
++++ config.wave[147]: [[ YES == \Y\E\S ]]
++++ config.wave[148]: export WW3ICEINP=CPL
++++ config.wave[148]: WW3ICEINP=CPL
++++ config.wave[149]: export WAVEICE_FID=
++++ config.wave[149]: WAVEICE_FID=
++++ config.wave[155]: [[ YES == \Y\E\S ]]
++++ config.wave[156]: export WW3CURINP=CPL
++++ config.wave[156]: WW3CURINP=CPL
++++ config.wave[157]: export WAVECUR_FID=
++++ config.wave[157]: WAVECUR_FID=
++++ config.wave[164]: export WW3ATMIENS=F
++++ config.wave[164]: WW3ATMIENS=F
++++ config.wave[165]: export WW3ICEIENS=F
++++ config.wave[165]: WW3ICEIENS=F
++++ config.wave[166]: export WW3CURIENS=F
++++ config.wave[166]: WW3CURIENS=F
++++ config.wave[168]: export GOFILETYPE=1
++++ config.wave[168]: GOFILETYPE=1
++++ config.wave[169]: export POFILETYPE=1
++++ config.wave[169]: POFILETYPE=1
++++ config.wave[173]: export FUNIPNT=T
++++ config.wave[173]: FUNIPNT=T
++++ config.wave[175]: export IOSRV=1
++++ config.wave[175]: IOSRV=1
++++ config.wave[177]: export FPNTPROC=T
++++ config.wave[177]: FPNTPROC=T
++++ config.wave[179]: export FGRDPROC=F
++++ config.wave[179]: FGRDPROC=F
++++ config.wave[181]: export FLAGMASKCOMP=F
++++ config.wave[181]: FLAGMASKCOMP=F
++++ config.wave[183]: export FLAGMASKOUT=F
++++ config.wave[183]: FLAGMASKOUT=F
++++ config.wave[185]: echo 'END: config.wave'
+END: config.wave
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/EXPDIR/C48_S2SW_c08311e1/config.waveinit
++++ config.waveinit[6]: echo 'BEGIN: config.waveinit'
+BEGIN: config.waveinit
++++ config.waveinit[9]: . /gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/EXPDIR/C48_S2SW_c08311e1/config.resources waveinit
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=waveinit
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[51]: max_tasks_per_node=128
+++++ config.resources[53]: mem_node_max=251GB
+++++ config.resources[149]: export max_tasks_per_node
+++++ config.resources[151]: case ${step} in
+++++ config.resources[177]: walltime=00:10:00
+++++ config.resources[178]: ntasks=12
+++++ config.resources[179]: threads_per_task=1
+++++ config.resources[180]: tasks_per_node=128
+++++ config.resources[181]: NTASKS=12
+++++ config.resources[182]: memory=2GB
+++++ config.resources[1557]: [[ -f /gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/EXPDIR/C48_S2SW_c08311e1/config.resources.GAEAC5 ]]
+++++ config.resources[1558]: source /gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/EXPDIR/C48_S2SW_c08311e1/config.resources.GAEAC5
++++++ config.resources.GAEAC5[5]: export FI_VERBS_PREFER_XRC=0
++++++ config.resources.GAEAC5[5]: FI_VERBS_PREFER_XRC=0
++++++ config.resources.GAEAC5[7]: unset memory
++++++ config.resources.GAEAC5[8]: unset memory_gfs
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=threads_per_task_gfs
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export threads_per_task
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=ntasks_gfs
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export ntasks
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=tasks_per_node_gfs
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export tasks_per_node
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=NTASKS_gfs
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export NTASKS
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=memory_gfs
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n '' ]]
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=walltime_gfs
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export walltime
+++++ config.resources[1571]: echo 'END: config.resources'
+END: config.resources
++++ config.waveinit[12]: export sigMODE=init
++++ config.waveinit[12]: sigMODE=init
++++ config.waveinit[14]: echo 'END: config.waveinit'
+END: config.waveinit
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/env/GAEAC5.env waveinit
++++ GAEAC5.env[3]: [[ 1 -ne 1 ]]
++++ GAEAC5.env[10]: step=waveinit
++++ GAEAC5.env[12]: export 'launcher=srun -l --export=ALL'
++++ GAEAC5.env[12]: launcher='srun -l --export=ALL'
++++ GAEAC5.env[13]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ GAEAC5.env[13]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ GAEAC5.env[15]: export OMP_STACKSIZE=2048000
++++ GAEAC5.env[15]: OMP_STACKSIZE=2048000
++++ GAEAC5.env[16]: export NTHSTACK=1024000000
++++ GAEAC5.env[16]: NTHSTACK=1024000000
++++ GAEAC5.env[18]: ulimit -s unlimited
++++ GAEAC5.env[19]: ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 1025560
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 50000
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 1025560
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
++++ GAEAC5.env[23]: [[ -n 12 ]]
++++ GAEAC5.env[23]: [[ -n 128 ]]
++++ GAEAC5.env[23]: [[ -n 128 ]]
++++ GAEAC5.env[24]: max_threads_per_task=1
++++ GAEAC5.env[25]: NTHREADSmax=1
++++ GAEAC5.env[26]: NTHREADS1=1
++++ GAEAC5.env[27]: [[ 1 -gt 1 ]]
++++ GAEAC5.env[30]: [[ 1 -gt 1 ]]
++++ GAEAC5.env[35]: APRUN_default='srun -l --export=ALL -n 12'
++++ GAEAC5.env[41]: case ${step} in
++++ GAEAC5.env[55]: export CFP_MP=YES
++++ GAEAC5.env[55]: CFP_MP=YES
++++ GAEAC5.env[56]: [[ waveinit = \w\a\v\e\p\r\e\p ]]
++++ GAEAC5.env[59]: export 'wavempexec=srun -l --export=ALL'
++++ GAEAC5.env[59]: wavempexec='srun -l --export=ALL'
++++ GAEAC5.env[60]: export 'wave_mpmd=--multi-prog --output=mpmd.%j.%t.out'
++++ GAEAC5.env[60]: wave_mpmd='--multi-prog --output=mpmd.%j.%t.out'
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
++ JGLOBAL_WAVE_INIT[8]: export errchk=err_chk
++ JGLOBAL_WAVE_INIT[8]: errchk=err_chk
++ JGLOBAL_WAVE_INIT[10]: export MP_PULSE=0
++ JGLOBAL_WAVE_INIT[10]: MP_PULSE=0
++ JGLOBAL_WAVE_INIT[13]: YMD=20210323
++ JGLOBAL_WAVE_INIT[13]: HH=12
++ JGLOBAL_WAVE_INIT[13]: declare_from_tmpl -rx COMOUT_WAVE_PREP:COM_WAVE_PREP_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMOUT_WAVE_PREP=/gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/COMROOT/C48_S2SW_c08311e1/gfs.20210323/12//model/wave/prep
++ JGLOBAL_WAVE_INIT[16]: [[ ! -d /gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/COMROOT/C48_S2SW_c08311e1/gfs.20210323/12//model/wave/prep ]]
++ JGLOBAL_WAVE_INIT[19]: export 'wavempexec=srun -l --export=ALL'
++ JGLOBAL_WAVE_INIT[19]: wavempexec='srun -l --export=ALL'
++ JGLOBAL_WAVE_INIT[20]: export 'wave_mpmd=--multi-prog --output=mpmd.%j.%t.out'
++ JGLOBAL_WAVE_INIT[20]: wave_mpmd='--multi-prog --output=mpmd.%j.%t.out'
++ JGLOBAL_WAVE_INIT[23]: /gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/scripts/exgfs_wave_init.sh
+Begin exgfs_wave_init.sh at Fri 28 Mar 2025 02:53:38 PM UTC
++ exgfs_wave_init.sh[33]: err=0
++ exgfs_wave_init.sh[35]: cd /gpfs/f5/epic/scratch/role.epic/RUNDIRS/C48_S2SW_c08311e1/gfs.2021032312/waveinit.984278
++ exgfs_wave_init.sh[37]: set +x
+ 
+                      ********************************
+                      *** MWW3 INIT CONFIG  SCRIPT ***
+                      ********************************
+                          Initial configuration script
+                       Model identifier : gfswave
+ 
+Starting at : Fri 28 Mar 2025 10:53:38 AM EDT
+ 
++ exgfs_wave_init.sh[51]: '[' -z 12 ']'
++ exgfs_wave_init.sh[57]: set +x
+ 
+ Script set to run with 12 tasks 
+ 
++ exgfs_wave_init.sh[67]: set +x
+Preparing input files :
+-----------------------
+ 
++ exgfs_wave_init.sh[75]: nmoddef=0
++ exgfs_wave_init.sh[77]: rm -f cmdfile
++ exgfs_wave_init.sh[78]: touch cmdfile
++ exgfs_wave_init.sh[79]: chmod 744 cmdfile
++ exgfs_wave_init.sh[82]: array=($WAVECUR_FID $WAVEICE_FID $WAVEWND_FID $waveuoutpGRD $waveGRD $wavepostGRD $waveinterpGRD)
+++ exgfs_wave_init.sh[83]: sort -u
+++ exgfs_wave_init.sh[83]: tr '\n' ' '
+++ exgfs_wave_init.sh[83]: printf '%s\n' uglo_100km uglo_100km glo_200
++ exgfs_wave_init.sh[83]: grdALL='glo_200 uglo_100km '
++ exgfs_wave_init.sh[85]: for grdID in ${grdALL}
++ exgfs_wave_init.sh[86]: [[ -f /gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/COMROOT/C48_S2SW_c08311e1/gfs.20210323/12//model/wave/prep/gfswave.mod_def.glo_200 ]]
++ exgfs_wave_init.sh[93]: set +x
+ Mod def file for glo_200 not found in /gpfs/f5/epic/proj-shared/global/CI/3483/RUNTESTS/COMROOT/C48_S2SW_c08311e1/gfs.20210323/12//model/wave/prep. Setting up to generate ...
+ 
++ exgfs_wave_init.sh[97]: '[' -f /gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/wave/ww3_grid.inp.glo_200 ']'
++ exgfs_wave_init.sh[102]: '[' -f ww3_grid.inp.glo_200 ']'
++ exgfs_wave_init.sh[110]: set +x
+ 
+*********************************************************** 
+*** FATAL ERROR : NO INP FILE FOR MODEL DEFINITION FILE *** 
+*********************************************************** 
+                                grdID = glo_200
+ 
++ exgfs_wave_init.sh[118]: err=2
++ exgfs_wave_init.sh[118]: export err
++ exgfs_wave_init.sh[118]: err_chk
+
+-------------------------------------------------------------
+-- FATAL ERROR: Job waveinit.984278 failed RETURN CODE 2
+-- ABNORMAL EXIT at Fri 28 Mar 2025 10:53:38 AM EDT on c5n0847
+-------------------------------------------------------------
+
+
+Currently Loaded Modules:
+  1) craype-x86-rome                                31) zstd/1.5.2
+  2) perftools-base/23.12.0                         32) c-blosc/1.21.5
+  3) xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d  33) nghttp2/1.57.0
+  4) cray-pmi/6.1.13                                34) curl/8.4.0
+  5) CmrsEnv/default                                35) netcdf-c/4.9.2
+  6) TimeZoneEDT/default                            36) netcdf-fortran/4.6.1
+  7) DefApps/default                                37) parallel-netcdf/1.12.2
+  8) cray-dsmml/0.2.2                               38) parallelio/2.5.10
+  9) PrgEnv-intel/8.5.0                             39) esmf/8.6.0
+ 10) intel-classic/2023.2.0                         40) fms/2024.01.02
+ 11) craype/2.7.30                                  41) bacio/2.4.1
+ 12) stack-intel/2023.2.0                           42) crtm-fix/2.4.0.1_emc
+ 13) libfabric/1.20.1                               43) git-lfs/2.11.0
+ 14) craype-network-ofi                             44) crtm/2.4.0.1
+ 15) cray-mpich/8.1.28                              45) g2/3.5.1
+ 16) stack-cray-mpich/8.1.28                        46) g2tmpl/1.13.0
+ 17) gettext/0.20.2                                 47) ip/4.3.0
+ 18) libxcrypt/4.4.35                               48) sp/2.5.0
+ 19) sqlite/3.43.2                                  49) w3emc/2.10.0
+ 20) util-linux-uuid/2.38.1                         50) gftl/1.10.0
+ 21) python/3.10.13                                 51) gftl-shared/1.6.1
+ 22) stack-python/3.10.13                           52) fargparse/1.5.0
+ 23) cmake/3.23.1                                   53) mapl/2.40.3-esmf-8.6.0
+ 24) libjpeg/2.1.0                                  54) scotch/7.0.4
+ 25) jasper/2.0.32                                  55) ufs_common
+ 26) zlib/1.2.13                                    56) nccmp/1.9.0.1
+ 27) libpng/1.6.37                                  57) ufs_gaeac5.intel
+ 28) pkg-config/0.29.2                              58) prod_util/2.1.1
+ 29) hdf5/1.14.0                                    59) wgrib2/3.1.1-omp
+ 30) snappy/1.1.10
+
+ 
+
+
+Job waveinit.984278 failed RETURN CODE 2
+/gpfs/f5/epic/scratch/role.epic/RUNDIRS/C48_S2SW_c08311e1/gfs.2021032312/waveinit.984278
+total 1
+-rw-r--r-- 1 role.epic wpo   0 Mar 28 10:53 ncepdate
+-rwxr--r-- 1 role.epic wpo 328 Mar 28 10:53 PDY
+-rwxr--r-- 1 role.epic wpo   0 Mar 28 10:53 cmdfile
+cat: OUTPUT.984347: No such file or directory
+slurmstepd: error: *** JOB 135430745 ON c5n0847 CANCELLED AT 2025-03-28T10:53:39 ***
++ exgfs_wave_init.sh[122]: '[' -f /gpfs/f5/epic/proj-shared/global/CI/3483/global-workflow/fix/wave/glo_200.msh ']'
