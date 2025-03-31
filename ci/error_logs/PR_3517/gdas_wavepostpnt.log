@@ -1,0 +1,1955 @@
+Begin wavepostpnt.sh at Mon 31 Mar 2025 11:09:11 PM UTC
++ wavepostpnt.sh[6]: echo
+
++ wavepostpnt.sh[7]: echo '=============== START TO SOURCE FV3GFS WORKFLOW MODULES ==============='
+=============== START TO SOURCE FV3GFS WORKFLOW MODULES ===============
++ wavepostpnt.sh[9]: source /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/ush/load_ufswm_modules.sh
+++ load_ufswm_modules.sh[4]: [[ NO == \N\O ]]
+++ load_ufswm_modules.sh[5]: echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_ufswm_modules.sh[6]: set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Lmod is automatically replacing "intel/2023.2.0" with "intel-classic/2023.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-mpich/8.1.28 => cray-mpich/8.1.29
+
+
+Currently Loaded Modules:
+  1) craype-x86-genoa                               31) hdf5/1.14.0
+  2) perftools-base/23.12.0                         32) snappy/1.1.10
+  3) xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d  33) zstd/1.5.2
+  4) cray-pmi/6.1.13                                34) c-blosc/1.21.5
+  5) CmrsEnv/default                                35) netcdf-c/4.9.2
+  6) TimeZoneEDT/default                            36) netcdf-fortran/4.6.1
+  7) DefApps/default                                37) parallel-netcdf/1.12.2
+  8) cray-dsmml/0.2.2                               38) parallelio/2.5.10
+  9) PrgEnv-intel/8.5.0                             39) esmf/8.6.0
+ 10) intel-classic/2023.2.0                         40) fms/2024.01.02
+ 11) craype/2.7.30                                  41) bacio/2.4.1
+ 12) stack-intel/2023.2.0                           42) crtm-fix/2.4.0.1_emc
+ 13) libfabric/1.20.1                               43) git-lfs/2.11.0
+ 14) craype-network-ofi                             44) crtm/2.4.0.1
+ 15) cray-mpich/8.1.29                              45) g2/3.5.1
+ 16) stack-cray-mpich/8.1.29                        46) g2tmpl/1.13.0
+ 17) gettext/0.20.2                                 47) ip/4.3.0
+ 18) libxcrypt/4.4.35                               48) sp/2.5.0
+ 19) sqlite/3.43.2                                  49) w3emc/2.10.0
+ 20) util-linux-uuid/2.38.1                         50) gftl/1.10.0
+ 21) python/3.10.13                                 51) gftl-shared/1.6.1
+ 22) stack-python/3.10.13                           52) fargparse/1.5.0
+ 23) nghttp2/1.57.0                                 53) mapl/2.40.3-esmf-8.6.0
+ 24) curl/8.4.0                                     54) scotch/7.0.4
+ 25) cmake/3.23.1                                   55) ufs_common
+ 26) libjpeg/2.1.0                                  56) nccmp/1.9.0.1
+ 27) jasper/2.0.32                                  57) ufs_gaeac6.intel
+ 28) zlib/1.2.13                                    58) prod_util/2.1.1
+ 29) libpng/1.6.37                                  59) wgrib2/3.1.1
+ 30) pkg-config/0.29.2
+
+ 
+
++ wavepostpnt.sh[10]: status=0
++ wavepostpnt.sh[11]: [[ 0 -ne 0 ]]
++ wavepostpnt.sh[13]: export job=wavepostpnt
++ wavepostpnt.sh[13]: job=wavepostpnt
++ wavepostpnt.sh[14]: export jobid=wavepostpnt.1330496
++ wavepostpnt.sh[14]: jobid=wavepostpnt.1330496
++ wavepostpnt.sh[17]: echo
+
++ wavepostpnt.sh[18]: echo '=============== START TO RUN WAVE_POST_PNT ==============='
+=============== START TO RUN WAVE_POST_PNT ===============
++ wavepostpnt.sh[20]: /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/jobs/JGLOBAL_WAVE_POST_PNT
+Begin JGLOBAL_WAVE_POST_PNT at Mon 31 Mar 2025 11:09:14 PM UTC
++ JGLOBAL_WAVE_POST_PNT[4]: source /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/ush/jjob_header.sh -e wavepostpnt -c 'base wave wavepostsbs wavepostpnt'
+++ jjob_header.sh[43]: OPTIND=1
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[47]: env_job=wavepostpnt
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[45]: case "${option}" in
+++ jjob_header.sh[46]: read -ra configs
+++ jjob_header.sh[44]: getopts c:e: option
+++ jjob_header.sh[58]: shift 4
+++ jjob_header.sh[60]: [[ -z wavepostpnt ]]
+++ jjob_header.sh[68]: export DATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
+++ jjob_header.sh[68]: DATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
+++ jjob_header.sh[69]: [[ YES == \Y\E\S ]]
+++ jjob_header.sh[70]: rm -rf /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
+++ jjob_header.sh[72]: mkdir -p /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
+++ jjob_header.sh[73]: cd /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
+++ jjob_header.sh[79]: export cycle=t00z
+++ jjob_header.sh[79]: cycle=t00z
+++ jjob_header.sh[80]: setpdy.sh
+sed: can't read /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/date/t00z: No such file or directory
+ completed cleanly
+ completed cleanly
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_header.sh[81]: source ./PDY
++++ PDY[1]: export PDYm7=20210318
++++ PDY[1]: PDYm7=20210318
++++ PDY[2]: export PDYm6=20210319
++++ PDY[2]: PDYm6=20210319
++++ PDY[3]: export PDYm5=20210320
++++ PDY[3]: PDYm5=20210320
++++ PDY[4]: export PDYm4=20210321
++++ PDY[4]: PDYm4=20210321
++++ PDY[5]: export PDYm3=20210322
++++ PDY[5]: PDYm3=20210322
++++ PDY[6]: export PDYm2=20210323
++++ PDY[6]: PDYm2=20210323
++++ PDY[7]: export PDYm1=20210324
++++ PDY[7]: PDYm1=20210324
++++ PDY[8]: export PDY=20210325
++++ PDY[8]: PDY=20210325
++++ PDY[9]: export PDYp1=20210326
++++ PDY[9]: PDYp1=20210326
++++ PDY[10]: export PDYp2=20210327
++++ PDY[10]: PDYp2=20210327
++++ PDY[11]: export PDYp3=20210328
++++ PDY[11]: PDYp3=20210328
++++ PDY[12]: export PDYp4=20210329
++++ PDY[12]: PDYp4=20210329
++++ PDY[13]: export PDYp5=20210330
++++ PDY[13]: PDYp5=20210330
++++ PDY[14]: export PDYp6=20210331
++++ PDY[14]: PDYp6=20210331
++++ PDY[15]: export PDYp7=20210401
++++ PDY[15]: PDYp7=20210401
+++ jjob_header.sh[87]: export pid=1330563
+++ jjob_header.sh[87]: pid=1330563
+++ jjob_header.sh[88]: export pgmout=OUTPUT.1330563
+++ jjob_header.sh[88]: pgmout=OUTPUT.1330563
+++ jjob_header.sh[89]: export pgmerr=errfile
+++ jjob_header.sh[89]: pgmerr=errfile
+++ jjob_header.sh[95]: export EXPDIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8
+++ jjob_header.sh[95]: EXPDIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8/config.base
++++ config.base[6]: echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]: export machine=GAEAC6
++++ config.base[9]: machine=GAEAC6
++++ config.base[12]: export RUN_ENVIR=emc
++++ config.base[12]: RUN_ENVIR=emc
++++ config.base[15]: export ACCOUNT=drsa-precip3
++++ config.base[15]: ACCOUNT=drsa-precip3
++++ config.base[16]: export QUEUE=normal
++++ config.base[16]: QUEUE=normal
++++ config.base[17]: export QUEUE_SERVICE=normal
++++ config.base[17]: QUEUE_SERVICE=normal
++++ config.base[18]: export QUEUE_DTN=hpss
++++ config.base[18]: QUEUE_DTN=hpss
++++ config.base[19]: export PARTITION_BATCH=batch
++++ config.base[19]: PARTITION_BATCH=batch
++++ config.base[20]: export PARTITION_SERVICE=batch
++++ config.base[20]: PARTITION_SERVICE=batch
++++ config.base[21]: export PARTITION_DTN=dtn_f5_f6
++++ config.base[21]: PARTITION_DTN=dtn_f5_f6
++++ config.base[22]: export RESERVATION=
++++ config.base[22]: RESERVATION=
++++ config.base[23]: export CLUSTERS=c6
++++ config.base[23]: CLUSTERS=c6
++++ config.base[24]: export CLUSTERS_SERVICE=c6
++++ config.base[24]: CLUSTERS_SERVICE=c6
++++ config.base[25]: export CLUSTERS_DTN=es
++++ config.base[25]: CLUSTERS_DTN=es
++++ config.base[28]: export HPSS_PROJECT=emc-global
++++ config.base[28]: HPSS_PROJECT=emc-global
++++ config.base[31]: export HOMEgfs=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow
++++ config.base[31]: HOMEgfs=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow
++++ config.base[32]: export EXECgfs=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/exec
++++ config.base[32]: EXECgfs=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/exec
++++ config.base[33]: export FIXgfs=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix
++++ config.base[33]: FIXgfs=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix
++++ config.base[34]: export PARMgfs=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/parm
++++ config.base[34]: PARMgfs=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/parm
++++ config.base[35]: export SCRgfs=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/scripts
++++ config.base[35]: SCRgfs=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/scripts
++++ config.base[36]: export USHgfs=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/ush
++++ config.base[36]: USHgfs=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/ush
++++ config.base[38]: export FIXam=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/am
++++ config.base[38]: FIXam=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/am
++++ config.base[39]: export FIXaer=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/aer
++++ config.base[39]: FIXaer=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/aer
++++ config.base[40]: export FIXcpl=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/cpl
++++ config.base[40]: FIXcpl=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/cpl
++++ config.base[41]: export FIXlut=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/lut
++++ config.base[41]: FIXlut=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/lut
++++ config.base[42]: export FIXcice=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/cice
++++ config.base[42]: FIXcice=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/cice
++++ config.base[43]: export FIXmom=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/mom6
++++ config.base[43]: FIXmom=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/mom6
++++ config.base[44]: export FIXreg2grb2=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/reg2grb2
++++ config.base[44]: FIXreg2grb2=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/reg2grb2
++++ config.base[45]: export FIXgdas=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/gdas
++++ config.base[45]: FIXgdas=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/gdas
++++ config.base[50]: export PACKAGEROOT=/gpfs/f6/drsa-precip3/world-shared/role.glopara/nwpara
++++ config.base[50]: PACKAGEROOT=/gpfs/f6/drsa-precip3/world-shared/role.glopara/nwpara
++++ config.base[51]: export COMROOT=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT
++++ config.base[51]: COMROOT=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT
++++ config.base[52]: export COMINsyn=/gpfs/f6/drsa-precip3/world-shared/role.glopara/com/syndat
++++ config.base[52]: COMINsyn=/gpfs/f6/drsa-precip3/world-shared/role.glopara/com/syndat
++++ config.base[53]: export DMPDIR=/gpfs/f6/drsa-precip3/world-shared/role.glopara/dump
++++ config.base[53]: DMPDIR=/gpfs/f6/drsa-precip3/world-shared/role.glopara/dump
++++ config.base[57]: export 'COMINecmwf={{ COMINecmwf }}'
++++ config.base[57]: COMINecmwf='{{ COMINecmwf }}'
++++ config.base[58]: export 'COMINnam={{ COMINnam }}'
++++ config.base[58]: COMINnam='{{ COMINnam }}'
++++ config.base[59]: export 'COMINukmet={{ COMINukmet }}'
++++ config.base[59]: COMINukmet='{{ COMINukmet }}'
++++ config.base[62]: export HOMEDIR=/gpfs/f6/drsa-precip3/scratch/role.glopara
++++ config.base[62]: HOMEDIR=/gpfs/f6/drsa-precip3/scratch/role.glopara
++++ config.base[63]: export STMP=/gpfs/f6/drsa-precip3/scratch/role.glopara
++++ config.base[63]: STMP=/gpfs/f6/drsa-precip3/scratch/role.glopara
++++ config.base[64]: export PTMP=/gpfs/f6/drsa-precip3/scratch/role.glopara
++++ config.base[64]: PTMP=/gpfs/f6/drsa-precip3/scratch/role.glopara
++++ config.base[65]: export NOSCRUB=/gpfs/f6/drsa-precip3/scratch/role.glopara
++++ config.base[65]: NOSCRUB=/gpfs/f6/drsa-precip3/scratch/role.glopara
++++ config.base[68]: export BASE_GIT=/gpfs/f6/drsa-precip3/world-shared/role.glopara/git
++++ config.base[68]: BASE_GIT=/gpfs/f6/drsa-precip3/world-shared/role.glopara/git
++++ config.base[71]: export BASE_DATA=/gpfs/f6/drsa-precip3/world-shared/role.glopara/data
++++ config.base[71]: BASE_DATA=/gpfs/f6/drsa-precip3/world-shared/role.glopara/data
++++ config.base[74]: export DO_GOES=NO
++++ config.base[74]: DO_GOES=NO
++++ config.base[75]: export DO_BUFRSND=NO
++++ config.base[75]: DO_BUFRSND=NO
++++ config.base[76]: export DO_GEMPAK=NO
++++ config.base[76]: DO_GEMPAK=NO
++++ config.base[77]: export DO_AWIPS=NO
++++ config.base[77]: DO_AWIPS=NO
++++ config.base[78]: export DO_NPOESS=NO
++++ config.base[78]: DO_NPOESS=NO
++++ config.base[79]: export DO_TRACKER=YES
++++ config.base[79]: DO_TRACKER=YES
++++ config.base[80]: export DO_GENESIS=YES
++++ config.base[80]: DO_GENESIS=YES
++++ config.base[81]: export DO_GENESIS_FSU=NO
++++ config.base[81]: DO_GENESIS_FSU=NO
++++ config.base[82]: export DO_VERFOZN=YES
++++ config.base[82]: DO_VERFOZN=YES
++++ config.base[83]: export DO_VERFRAD=YES
++++ config.base[83]: DO_VERFRAD=YES
++++ config.base[84]: export DO_VMINMON=YES
++++ config.base[84]: DO_VMINMON=YES
++++ config.base[85]: export DO_MOS=NO
++++ config.base[85]: DO_MOS=NO
++++ config.base[91]: export REALTIME=YES
++++ config.base[91]: REALTIME=YES
++++ config.base[94]: export MODE=cycled
++++ config.base[94]: MODE=cycled
++++ config.base[95]: export DO_TEST_MODE=NO
++++ config.base[95]: DO_TEST_MODE=NO
++++ config.base[104]: export FIXgsi=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/gsi
++++ config.base[104]: FIXgsi=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/gsi
++++ config.base[105]: export HOMEpost=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow
++++ config.base[105]: HOMEpost=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow
++++ config.base[106]: export HOMEobsproc=/gpfs/f6/drsa-precip3/world-shared/role.glopara/git/obsproc/v
++++ config.base[106]: HOMEobsproc=/gpfs/f6/drsa-precip3/world-shared/role.glopara/git/obsproc/v
++++ config.base[109]: export 'NCP=/bin/cp -p'
++++ config.base[109]: NCP='/bin/cp -p'
++++ config.base[110]: export NMV=/bin/mv
++++ config.base[110]: NMV=/bin/mv
++++ config.base[111]: export 'NLN=/bin/ln -sf'
++++ config.base[111]: NLN='/bin/ln -sf'
++++ config.base[112]: export VERBOSE=YES
++++ config.base[112]: VERBOSE=YES
++++ config.base[113]: export KEEPDATA=NO
++++ config.base[113]: KEEPDATA=NO
++++ config.base[114]: export DEBUG_POSTSCRIPT=NO
++++ config.base[114]: DEBUG_POSTSCRIPT=NO
++++ config.base[115]: export CHGRP_RSTPROD=NO
++++ config.base[115]: CHGRP_RSTPROD=NO
++++ config.base[116]: export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[116]: CHGRP_CMD='chgrp rstprod'
++++ config.base[117]: export NCDUMP=/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/bin/ncdump
++++ config.base[117]: NCDUMP=/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/netcdf-c-4.9.2-ltruqgg/bin/ncdump
++++ config.base[118]: export NCLEN=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/ush/getncdimlen
++++ config.base[118]: NCLEN=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/ush/getncdimlen
++++ config.base[121]: export BASE_ENV=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/env
++++ config.base[121]: BASE_ENV=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/env
++++ config.base[122]: export BASE_JOB=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/jobs/rocoto
++++ config.base[122]: BASE_JOB=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/jobs/rocoto
++++ config.base[125]: export SDATE=2021032418
++++ config.base[125]: SDATE=2021032418
++++ config.base[126]: export EDATE=2021032500
++++ config.base[126]: EDATE=2021032500
++++ config.base[127]: export EXP_WARM_START=.true.
++++ config.base[127]: EXP_WARM_START=.true.
++++ config.base[128]: export assim_freq=6
++++ config.base[128]: assim_freq=6
++++ config.base[129]: export PSLOT=C48mx500_3DVarAOWCDA_f3ad91c8
++++ config.base[129]: PSLOT=C48mx500_3DVarAOWCDA_f3ad91c8
++++ config.base[130]: export EXPDIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8
++++ config.base[130]: EXPDIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8
++++ config.base[131]: export ROTDIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8
++++ config.base[131]: ROTDIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8
++++ config.base[132]: export ROTDIR_DUMP=YES
++++ config.base[132]: ROTDIR_DUMP=YES
++++ config.base[133]: export DUMP_SUFFIX=
++++ config.base[133]: DUMP_SUFFIX=
++++ config.base[134]: [[ 2021032500 -ge 2019092100 ]]
++++ config.base[134]: [[ 2021032500 -le 2019110700 ]]
++++ config.base[137]: export ARCDIR=/gpfs/f6/drsa-precip3/scratch/role.glopara/archive/C48mx500_3DVarAOWCDA_f3ad91c8
++++ config.base[137]: ARCDIR=/gpfs/f6/drsa-precip3/scratch/role.glopara/archive/C48mx500_3DVarAOWCDA_f3ad91c8
++++ config.base[138]: export ATARDIR=/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C48mx500_3DVarAOWCDA_f3ad91c8
++++ config.base[138]: ATARDIR=/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C48mx500_3DVarAOWCDA_f3ad91c8
++++ config.base[139]: export 'FETCHDIR={{ FETCHDIR }}'
++++ config.base[139]: FETCHDIR='{{ FETCHDIR }}'
++++ config.base[142]: export envir=prod
++++ config.base[142]: envir=prod
++++ config.base[143]: export NET=gfs
++++ config.base[143]: NET=gfs
++++ config.base[144]: export RUN=gdas
++++ config.base[144]: RUN=gdas
++++ config.base[147]: source /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8/config.com
+++++ config.com[4]: echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37]: [[ emc == \n\c\o ]]
+++++ config.com[41]: COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]: COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]: declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]: declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]: COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]: declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]: declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]: declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]: declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]: declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]: declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]: declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]: declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[59]: declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[60]: declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[61]: declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[62]: declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[63]: declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[64]: declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[65]: declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[66]: declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[67]: declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[68]: declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[69]: declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[70]: declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[71]: declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[73]: declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[74]: declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[75]: declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[76]: declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[77]: declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ config.com[78]: declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[79]: declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[80]: declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[82]: declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[83]: declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[84]: declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[85]: declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[86]: declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[87]: declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[88]: declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[89]: declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[90]: declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[92]: declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[93]: declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[94]: declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[95]: declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[96]: declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[97]: declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[98]: declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[99]: declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[100]: declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[102]: declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[103]: declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[104]: declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[106]: declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[150]: export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[150]: ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[151]: export LOGSCRIPT=
++++ config.base[151]: LOGSCRIPT=
++++ config.base[154]: export 'REDOUT=1>'
++++ config.base[154]: REDOUT='1>'
++++ config.base[155]: export 'REDERR=2>'
++++ config.base[155]: REDERR='2>'
++++ config.base[157]: export SENDECF=NO
++++ config.base[157]: SENDECF=NO
++++ config.base[158]: export SENDSDM=NO
++++ config.base[158]: SENDSDM=NO
++++ config.base[159]: export SENDDBN_NTC=NO
++++ config.base[159]: SENDDBN_NTC=NO
++++ config.base[160]: export SENDDBN=NO
++++ config.base[160]: SENDDBN=NO
++++ config.base[161]: export DBNROOT=/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-ynnwpz3/fakedbn
++++ config.base[161]: DBNROOT=/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-ynnwpz3/fakedbn
++++ config.base[164]: export APP=S2SW
++++ config.base[164]: APP=S2SW
++++ config.base[166]: shopt -s extglob
++++ config.base[169]: case "${RUN}" in
++++ config.base[176]: shopt -u extglob
++++ config.base[179]: export DO_ATM=YES
++++ config.base[179]: DO_ATM=YES
++++ config.base[180]: export DO_COUPLED=NO
++++ config.base[180]: DO_COUPLED=NO
++++ config.base[181]: export DO_WAVE=NO
++++ config.base[181]: DO_WAVE=NO
++++ config.base[182]: export DO_OCN=NO
++++ config.base[182]: DO_OCN=NO
++++ config.base[183]: export DO_ICE=NO
++++ config.base[183]: DO_ICE=NO
++++ config.base[184]: DO_AERO=NO
++++ config.base[185]: export DO_PREP_OBS_AERO=NO
++++ config.base[185]: DO_PREP_OBS_AERO=NO
++++ config.base[186]: aero_fcst_runs=gdas
++++ config.base[187]: aero_anl_runs='gdas gfs'
++++ config.base[188]: export DO_AERO_FCST=NO
++++ config.base[188]: DO_AERO_FCST=NO
++++ config.base[189]: export DO_AERO_ANL=NO
++++ config.base[189]: DO_AERO_ANL=NO
++++ config.base[190]: export DOBNDPNT_WAVE=NO
++++ config.base[190]: DOBNDPNT_WAVE=NO
++++ config.base[191]: export DOIBP_WAV=NO
++++ config.base[191]: DOIBP_WAV=NO
++++ config.base[192]: export FRAC_GRID=.true.
++++ config.base[192]: FRAC_GRID=.true.
++++ config.base[193]: export DO_NEST=NO
++++ config.base[193]: DO_NEST=NO
++++ config.base[194]: [[ NO == \Y\E\S ]]
++++ config.base[200]: export ntiles=6
++++ config.base[200]: ntiles=6
++++ config.base[201]: export FIXugwd=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/ugwd
++++ config.base[201]: FIXugwd=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/ugwd
++++ config.base[202]: export FIXorog=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/orog
++++ config.base[202]: FIXorog=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/fix/orog
++++ config.base[206]: export OPS_RES=C768
++++ config.base[206]: OPS_RES=C768
++++ config.base[209]: export LEVS=128
++++ config.base[209]: LEVS=128
++++ config.base[210]: export CASE=C48
++++ config.base[210]: CASE=C48
++++ config.base[211]: export 'CASE_ENS={{ CASE_ENS }}'
++++ config.base[211]: CASE_ENS='{{ CASE_ENS }}'
++++ config.base[212]: export OCNRES=500
++++ config.base[212]: OCNRES=500
++++ config.base[213]: export ICERES=500
++++ config.base[213]: ICERES=500
++++ config.base[216]: case "${CASE}" in
++++ config.base[218]: export waveGRD=uglo_100km
++++ config.base[218]: waveGRD=uglo_100km
++++ config.base[235]: case "${APP}" in
++++ config.base[251]: export DO_COUPLED=YES
++++ config.base[251]: DO_COUPLED=YES
++++ config.base[252]: export DO_OCN=YES
++++ config.base[252]: DO_OCN=YES
++++ config.base[253]: export DO_ICE=YES
++++ config.base[253]: DO_ICE=YES
++++ config.base[255]: [[ S2SW =~ A$ ]]
++++ config.base[259]: [[ S2SW =~ ^S2SW ]]
++++ config.base[260]: export DO_WAVE=YES
++++ config.base[260]: DO_WAVE=YES
++++ config.base[270]: [[ NO == \Y\E\S ]]
++++ config.base[280]: [[ gdas =~ gdas ]]
++++ config.base[281]: export FHCYC=1
++++ config.base[281]: FHCYC=1
++++ config.base[282]: export FTSFS=10
++++ config.base[282]: FTSFS=10
++++ config.base[288]: export FHMIN=0
++++ config.base[288]: FHMIN=0
++++ config.base[289]: export FHMAX=9
++++ config.base[289]: FHMAX=9
++++ config.base[290]: export FHOUT=3
++++ config.base[290]: FHOUT=3
++++ config.base[291]: export FHOUT_OCN=3
++++ config.base[291]: FHOUT_OCN=3
++++ config.base[292]: export FHOUT_ICE=3
++++ config.base[292]: FHOUT_ICE=3
++++ config.base[293]: export FHOUT_AERO=3
++++ config.base[293]: FHOUT_AERO=3
++++ config.base[296]: export EUPD_CYC=gdas
++++ config.base[296]: EUPD_CYC=gdas
++++ config.base[299]: export INTERVAL_GFS=6
++++ config.base[299]: INTERVAL_GFS=6
++++ config.base[300]: export SDATE_GFS=2021032500
++++ config.base[300]: SDATE_GFS=2021032500
++++ config.base[303]: export FHMIN_GFS=0
++++ config.base[303]: FHMIN_GFS=0
++++ config.base[304]: export FHMAX_GFS=120
++++ config.base[304]: FHMAX_GFS=120
++++ config.base[306]: breakpnts=
++++ config.base[307]: export FCST_SEGMENTS=0,120
++++ config.base[307]: FCST_SEGMENTS=0,120
++++ config.base[308]: export FHOUT_GFS=3
++++ config.base[308]: FHOUT_GFS=3
++++ config.base[309]: export FHMAX_HF_GFS=0
++++ config.base[309]: FHMAX_HF_GFS=0
++++ config.base[310]: export FHOUT_HF_GFS=1
++++ config.base[310]: FHOUT_HF_GFS=1
++++ config.base[311]: export FHOUT_OCN_GFS=6
++++ config.base[311]: FHOUT_OCN_GFS=6
++++ config.base[312]: export FHOUT_ICE_GFS=6
++++ config.base[312]: FHOUT_ICE_GFS=6
++++ config.base[313]: export FHMIN_WAV=0
++++ config.base[313]: FHMIN_WAV=0
++++ config.base[314]: export FHOUT_WAV=3
++++ config.base[314]: FHOUT_WAV=3
++++ config.base[315]: export FHMAX_HF_WAV=120
++++ config.base[315]: FHMAX_HF_WAV=120
++++ config.base[316]: export FHOUT_HF_WAV=1
++++ config.base[316]: FHOUT_HF_WAV=1
++++ config.base[317]: export FHMAX_WAV=9
++++ config.base[317]: FHMAX_WAV=9
++++ config.base[318]: export FHMAX_WAV_GFS=120
++++ config.base[318]: FHMAX_WAV_GFS=120
++++ config.base[319]: export FHMAX_HF_GFS=0
++++ config.base[319]: FHMAX_HF_GFS=0
++++ config.base[320]: export FHMAX_WAV=9
++++ config.base[320]: FHMAX_WAV=9
++++ config.base[321]: export FHMAX_WAV_GFS=120
++++ config.base[321]: FHMAX_WAV_GFS=120
++++ config.base[322]: export FHMAX_HF_WAV=120
++++ config.base[322]: FHMAX_HF_WAV=120
++++ config.base[325]: export ILPOST=1
++++ config.base[325]: ILPOST=1
++++ config.base[326]: ((  FHMAX_HF_GFS < 120  ))
++++ config.base[327]: export ILPOST=3
++++ config.base[327]: ILPOST=3
++++ config.base[331]: export FHMAX_GOES=180
++++ config.base[331]: FHMAX_GOES=180
++++ config.base[332]: export FHOUT_GOES=3
++++ config.base[332]: FHOUT_GOES=3
++++ config.base[333]: ((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[334]: export FHMAX_GOES=120
++++ config.base[334]: FHMAX_GOES=120
++++ config.base[338]: export restart_interval_gfs=12
++++ config.base[338]: restart_interval_gfs=12
++++ config.base[343]: export QUILTING=.true.
++++ config.base[343]: QUILTING=.true.
++++ config.base[344]: export OUTPUT_GRID=gaussian_grid
++++ config.base[344]: OUTPUT_GRID=gaussian_grid
++++ config.base[345]: export WRITE_DOPOST=.true.
++++ config.base[345]: WRITE_DOPOST=.true.
++++ config.base[346]: export WRITE_NSFLIP=.true.
++++ config.base[346]: WRITE_NSFLIP=.true.
++++ config.base[349]: export DOIAU=YES
++++ config.base[349]: DOIAU=YES
++++ config.base[350]: export IAUFHRS=3,6,9
++++ config.base[350]: IAUFHRS=3,6,9
++++ config.base[351]: export IAU_FHROT=3
++++ config.base[351]: IAU_FHROT=3
++++ config.base[352]: export IAU_DELTHRS=6
++++ config.base[352]: IAU_DELTHRS=6
++++ config.base[353]: export IAU_OFFSET=6
++++ config.base[353]: IAU_OFFSET=6
++++ config.base[354]: export DOIAU_ENKF=YES
++++ config.base[354]: DOIAU_ENKF=YES
++++ config.base[355]: export IAUFHRS_ENKF=3,6,9
++++ config.base[355]: IAUFHRS_ENKF=3,6,9
++++ config.base[356]: export IAU_DELTHRS_ENKF=6
++++ config.base[356]: IAU_DELTHRS_ENKF=6
++++ config.base[359]: export lobsdiag_forenkf=.true.
++++ config.base[359]: lobsdiag_forenkf=.true.
++++ config.base[367]: export imp_physics=8
++++ config.base[367]: imp_physics=8
++++ config.base[371]: export DO_JEDIATMVAR=NO
++++ config.base[371]: DO_JEDIATMVAR=NO
++++ config.base[372]: export DO_JEDIATMENS=NO
++++ config.base[372]: DO_JEDIATMENS=NO
++++ config.base[373]: export DO_JEDIOCNVAR=YES
++++ config.base[373]: DO_JEDIOCNVAR=YES
++++ config.base[374]: export DO_JEDISNOWDA=NO
++++ config.base[374]: DO_JEDISNOWDA=NO
++++ config.base[375]: export DO_MERGENSST=NO
++++ config.base[375]: DO_MERGENSST=NO
++++ config.base[376]: export DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[376]: DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[379]: export DOHYBVAR=NO
++++ config.base[379]: DOHYBVAR=NO
++++ config.base[380]: export DOHYBVAR_OCN=NO
++++ config.base[380]: DOHYBVAR_OCN=NO
++++ config.base[381]: export DOLETKF_OCN=NO
++++ config.base[381]: DOLETKF_OCN=NO
++++ config.base[382]: export NMEM_ENS=0
++++ config.base[382]: NMEM_ENS=0
++++ config.base[383]: export SMOOTH_ENKF=NO
++++ config.base[383]: SMOOTH_ENKF=NO
++++ config.base[384]: export l4densvar=.true.
++++ config.base[384]: l4densvar=.true.
++++ config.base[385]: export lwrite4danl=.true.
++++ config.base[385]: lwrite4danl=.true.
++++ config.base[386]: export DO_CALC_INCREMENT=NO
++++ config.base[386]: DO_CALC_INCREMENT=NO
++++ config.base[389]: export NMEM_ENS_GFS=30
++++ config.base[389]: NMEM_ENS_GFS=30
++++ config.base[390]: export NMEM_ENS_GFS_OFFSET=20
++++ config.base[390]: NMEM_ENS_GFS_OFFSET=20
++++ config.base[391]: export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[391]: DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[394]: [[ NO = \Y\E\S ]]
++++ config.base[408]: [[ NO == \N\O ]]
++++ config.base[408]: [[ YES == \Y\E\S ]]
++++ config.base[409]: export IAUFHRS=6,
++++ config.base[409]: IAUFHRS=6,
++++ config.base[410]: export IAU_FHROT=3
++++ config.base[410]: IAU_FHROT=3
++++ config.base[411]: export IAU_FILTER_INCREMENTS=.true.
++++ config.base[411]: IAU_FILTER_INCREMENTS=.true.
++++ config.base[412]: export IAUFHRS_ENKF=6,
++++ config.base[412]: IAUFHRS_ENKF=6,
++++ config.base[416]: export ENKF_SPREAD=YES
++++ config.base[416]: ENKF_SPREAD=YES
++++ config.base[419]: [[ cycled = \c\y\c\l\e\d ]]
++++ config.base[419]: [[ 2021032418 = \2\0\2\1\0\3\2\5\0\0 ]]
++++ config.base[419]: [[ YES = \N\O ]]
++++ config.base[419]: [[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[425]: [[ YES = \N\O ]]
++++ config.base[429]: [[ YES == \Y\E\S ]]
++++ config.base[430]: export restart_interval_enkfgdas=3
++++ config.base[430]: restart_interval_enkfgdas=3
++++ config.base[435]: export restart_interval_enkfgfs=3
++++ config.base[435]: restart_interval_enkfgfs=3
++++ config.base[437]: [[ YES == \Y\E\S ]]
++++ config.base[438]: export restart_interval_gdas=3
++++ config.base[438]: restart_interval_gdas=3
++++ config.base[443]: export DO_GSISOILDA=NO
++++ config.base[443]: DO_GSISOILDA=NO
++++ config.base[446]: export DONST=YES
++++ config.base[446]: DONST=YES
++++ config.base[447]: [[ YES = \Y\E\S ]]
++++ config.base[447]: export 'FNTSFA=        '
++++ config.base[447]: FNTSFA='        '
++++ config.base[450]: export nst_anl=.true.
++++ config.base[450]: nst_anl=.true.
++++ config.base[453]: export MAKE_NSSTBUFR=NO
++++ config.base[453]: MAKE_NSSTBUFR=NO
++++ config.base[456]: export MAKE_ACFTBUFR=NO
++++ config.base[456]: MAKE_ACFTBUFR=NO
++++ config.base[459]: export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[459]: INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[462]: export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[462]: INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[463]: export INCVARS_EFOLD=5
++++ config.base[463]: INCVARS_EFOLD=5
++++ config.base[468]: export netcdf_diag=.true.
++++ config.base[468]: netcdf_diag=.true.
++++ config.base[469]: export binary_diag=.false.
++++ config.base[469]: binary_diag=.false.
++++ config.base[472]: export DO_CA=YES
++++ config.base[472]: DO_CA=YES
++++ config.base[475]: export DO_METP=NO
++++ config.base[475]: DO_METP=NO
++++ config.base[476]: export DO_FIT2OBS=YES
++++ config.base[476]: DO_FIT2OBS=YES
++++ config.base[479]: export FHMAX_FITS=132
++++ config.base[479]: FHMAX_FITS=132
++++ config.base[480]: [[ 132 -gt 120 ]]
++++ config.base[481]: export FHMAX_FITS=120
++++ config.base[481]: FHMAX_FITS=120
++++ config.base[486]: export DO_FETCH_HPSS=NO
++++ config.base[486]: DO_FETCH_HPSS=NO
++++ config.base[487]: export DO_FETCH_LOCAL=NO
++++ config.base[487]: DO_FETCH_LOCAL=NO
++++ config.base[490]: export DO_ARCHCOM=YES
++++ config.base[490]: DO_ARCHCOM=YES
++++ config.base[491]: export ARCHCOM_TO=hpss
++++ config.base[491]: ARCHCOM_TO=hpss
++++ config.base[494]: export 'CLIENT_GLOBUS_UUID={{ CLIENT_GLOBUS_UUID }}'
++++ config.base[494]: CLIENT_GLOBUS_UUID='{{ CLIENT_GLOBUS_UUID }}'
++++ config.base[497]: [[ NO = \Y\E\S ]]
++++ config.base[505]: export REPLAY_ICS=NO
++++ config.base[505]: REPLAY_ICS=NO
++++ config.base[506]: export OFFSET_START_HOUR=0
++++ config.base[506]: OFFSET_START_HOUR=0
++++ config.base[509]: export NUM_SND_COLLECTIVES=9
++++ config.base[509]: NUM_SND_COLLECTIVES=9
++++ config.base[511]: echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8/config.wave
++++ config.wave[6]: echo 'BEGIN: config.wave'
+BEGIN: config.wave
++++ config.wave[13]: export RUNwave=gdaswave
++++ config.wave[13]: RUNwave=gdaswave
++++ config.wave[16]: export RUNRSTwave=gdas
++++ config.wave[16]: RUNRSTwave=gdas
++++ config.wave[19]: export MESH_WAV=mesh.uglo_100km.nc
++++ config.wave[19]: MESH_WAV=mesh.uglo_100km.nc
++++ config.wave[22]: case "${waveGRD}" in
++++ config.wave[67]: export waveinterpGRD=glo_200
++++ config.wave[67]: waveinterpGRD=glo_200
++++ config.wave[68]: export wavepostGRD=
++++ config.wave[68]: wavepostGRD=
++++ config.wave[69]: export waveuoutpGRD=uglo_100km
++++ config.wave[69]: waveuoutpGRD=uglo_100km
++++ config.wave[78]: export WAVEWND_DID=
++++ config.wave[78]: WAVEWND_DID=
++++ config.wave[79]: export WAVEWND_FID=
++++ config.wave[79]: WAVEWND_FID=
++++ config.wave[82]: [[ gdas == \g\f\s ]]
++++ config.wave[85]: export WAVHINDH=0
++++ config.wave[85]: WAVHINDH=0
++++ config.wave[86]: export FHMAX_WAV_IBP=180
++++ config.wave[86]: FHMAX_WAV_IBP=180
++++ config.wave[87]: ((  FHMAX_WAV < FHMAX_WAV_IBP  ))
++++ config.wave[87]: export FHMAX_WAV_IBP=9
++++ config.wave[87]: FHMAX_WAV_IBP=9
++++ config.wave[90]: export DTFLD_WAV=3600
++++ config.wave[90]: DTFLD_WAV=3600
++++ config.wave[91]: export DTPNT_WAV=3600
++++ config.wave[91]: DTPNT_WAV=3600
++++ config.wave[92]: export FHINCP_WAV=1
++++ config.wave[92]: FHINCP_WAV=1
++++ config.wave[95]: export 'OUTPARS_WAV=WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++ config.wave[95]: OUTPARS_WAV='WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++ config.wave[98]: [[ gdas == \g\d\a\s ]]
++++ config.wave[99]: export WAVNCYC=4
++++ config.wave[99]: WAVNCYC=4
++++ config.wave[100]: export WAVHCYC=6
++++ config.wave[100]: WAVHCYC=6
++++ config.wave[101]: export FHMAX_WAV_CUR=48
++++ config.wave[101]: FHMAX_WAV_CUR=48
++++ config.wave[112]: export RSTTYPE_WAV=T
++++ config.wave[112]: RSTTYPE_WAV=T
++++ config.wave[113]: [[ gdas != gfs ]]
++++ config.wave[114]: export DT_1_RST_WAV=10800
++++ config.wave[114]: DT_1_RST_WAV=10800
++++ config.wave[115]: export DT_2_RST_WAV=43200
++++ config.wave[115]: DT_2_RST_WAV=43200
++++ config.wave[116]: export RSTIOFF_WAV=0
++++ config.wave[116]: RSTIOFF_WAV=0
++++ config.wave[134]: export RUNMEM=-1
++++ config.wave[134]: RUNMEM=-1
++++ config.wave[137]: ((  RUNMEM == -1  ))
++++ config.wave[139]: export waveMEMB=
++++ config.wave[139]: waveMEMB=
++++ config.wave[146]: export WW3ATMINP=CPL
++++ config.wave[146]: WW3ATMINP=CPL
++++ config.wave[147]: [[ YES == \Y\E\S ]]
++++ config.wave[148]: export WW3ICEINP=CPL
++++ config.wave[148]: WW3ICEINP=CPL
++++ config.wave[149]: export WAVEICE_FID=
++++ config.wave[149]: WAVEICE_FID=
++++ config.wave[155]: [[ YES == \Y\E\S ]]
++++ config.wave[156]: export WW3CURINP=CPL
++++ config.wave[156]: WW3CURINP=CPL
++++ config.wave[157]: export WAVECUR_FID=
++++ config.wave[157]: WAVECUR_FID=
++++ config.wave[164]: export WW3ATMIENS=F
++++ config.wave[164]: WW3ATMIENS=F
++++ config.wave[165]: export WW3ICEIENS=F
++++ config.wave[165]: WW3ICEIENS=F
++++ config.wave[166]: export WW3CURIENS=F
++++ config.wave[166]: WW3CURIENS=F
++++ config.wave[168]: export GOFILETYPE=1
++++ config.wave[168]: GOFILETYPE=1
++++ config.wave[169]: export POFILETYPE=1
++++ config.wave[169]: POFILETYPE=1
++++ config.wave[173]: export FUNIPNT=T
++++ config.wave[173]: FUNIPNT=T
++++ config.wave[175]: export IOSRV=1
++++ config.wave[175]: IOSRV=1
++++ config.wave[177]: export FPNTPROC=T
++++ config.wave[177]: FPNTPROC=T
++++ config.wave[179]: export FGRDPROC=F
++++ config.wave[179]: FGRDPROC=F
++++ config.wave[181]: export FLAGMASKCOMP=F
++++ config.wave[181]: FLAGMASKCOMP=F
++++ config.wave[183]: export FLAGMASKOUT=F
++++ config.wave[183]: FLAGMASKOUT=F
++++ config.wave[185]: echo 'END: config.wave'
+END: config.wave
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8/config.wavepostsbs
++++ config.wavepostsbs[6]: echo 'BEGIN: config.wavepostsbs'
+BEGIN: config.wavepostsbs
++++ config.wavepostsbs[9]: source /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8/config.resources wavepostsbs
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=wavepostsbs
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[56]: max_tasks_per_node=192
+++++ config.resources[58]: mem_node_max=384GB
+++++ config.resources[149]: export max_tasks_per_node
+++++ config.resources[151]: case ${step} in
+++++ config.resources[201]: ntasks=8
+++++ config.resources[202]: threads_per_task=1
+++++ config.resources[203]: tasks_per_node=192
+++++ config.resources[204]: NTASKS=8
+++++ config.resources[205]: memory=20GB
+++++ config.resources[206]: walltime=00:15:00
+++++ config.resources[1557]: [[ -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8/config.resources.GAEAC6 ]]
+++++ config.resources[1558]: source /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8/config.resources.GAEAC6
++++++ config.resources.GAEAC6[5]: unset memory
++++++ config.resources.GAEAC6[6]: unset memory_gdas
++++++ config.resources.GAEAC6[7]: export FI_CXI_RX_MATCH_MODE=hybrid
++++++ config.resources.GAEAC6[7]: FI_CXI_RX_MATCH_MODE=hybrid
++++++ config.resources.GAEAC6[9]: case ${step} in
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=threads_per_task_gdas
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export threads_per_task
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=ntasks_gdas
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export ntasks
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=tasks_per_node_gdas
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export tasks_per_node
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=NTASKS_gdas
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export NTASKS
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=memory_gdas
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n '' ]]
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=walltime_gdas
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export walltime
+++++ config.resources[1571]: echo 'END: config.resources'
+END: config.resources
++++ config.wavepostsbs[12]: export MAX_TASKS=25
++++ config.wavepostsbs[12]: MAX_TASKS=25
++++ config.wavepostsbs[15]: export WAV_SUBGRBSRC=
++++ config.wavepostsbs[15]: WAV_SUBGRBSRC=
++++ config.wavepostsbs[16]: export WAV_SUBGRB=
++++ config.wavepostsbs[16]: WAV_SUBGRB=
++++ config.wavepostsbs[19]: export DOFLD_WAV=YES
++++ config.wavepostsbs[19]: DOFLD_WAV=YES
++++ config.wavepostsbs[20]: export DOPNT_WAV=YES
++++ config.wavepostsbs[20]: DOPNT_WAV=YES
++++ config.wavepostsbs[21]: export DOGRB_WAV=YES
++++ config.wavepostsbs[21]: DOGRB_WAV=YES
++++ config.wavepostsbs[22]: [[ -n glo_200 ]]
++++ config.wavepostsbs[23]: export DOGRI_WAV=YES
++++ config.wavepostsbs[23]: DOGRI_WAV=YES
++++ config.wavepostsbs[27]: export DOSPC_WAV=YES
++++ config.wavepostsbs[27]: DOSPC_WAV=YES
++++ config.wavepostsbs[28]: export DOBLL_WAV=YES
++++ config.wavepostsbs[28]: DOBLL_WAV=YES
++++ config.wavepostsbs[30]: echo 'END: config.wavepostsbs'
+END: config.wavepostsbs
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[96]: for config in "${configs[@]:-''}"
+++ jjob_header.sh[97]: source /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8/config.wavepostpnt
++++ config.wavepostpnt[6]: echo 'BEGIN: config.wavepostpnt'
+BEGIN: config.wavepostpnt
++++ config.wavepostpnt[9]: source /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8/config.resources wavepostpnt
+++++ config.resources[10]: ((  1 != 1  ))
+++++ config.resources[34]: step=wavepostpnt
+++++ config.resources[36]: echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]: case ${machine} in
+++++ config.resources[56]: max_tasks_per_node=192
+++++ config.resources[58]: mem_node_max=384GB
+++++ config.resources[149]: export max_tasks_per_node
+++++ config.resources[151]: case ${step} in
+++++ config.resources[238]: walltime=04:00:00
+++++ config.resources[239]: ntasks=200
+++++ config.resources[240]: threads_per_task=1
+++++ config.resources[241]: tasks_per_node=192
+++++ config.resources[242]: export is_exclusive=True
+++++ config.resources[242]: is_exclusive=True
+++++ config.resources[243]: [[ 192 -gt 40 ]]
+++++ config.resources[244]: tasks_per_node=40
+++++ config.resources[245]: export is_exclusive=False
+++++ config.resources[245]: is_exclusive=False
+++++ config.resources[247]: NTASKS=200
+++++ config.resources[1557]: [[ -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8/config.resources.GAEAC6 ]]
+++++ config.resources[1558]: source /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_f3ad91c8/config.resources.GAEAC6
++++++ config.resources.GAEAC6[5]: unset memory
++++++ config.resources.GAEAC6[6]: unset memory_gdas
++++++ config.resources.GAEAC6[7]: export FI_CXI_RX_MATCH_MODE=hybrid
++++++ config.resources.GAEAC6[7]: FI_CXI_RX_MATCH_MODE=hybrid
++++++ config.resources.GAEAC6[9]: case ${step} in
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=threads_per_task_gdas
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export threads_per_task
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=ntasks_gdas
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export ntasks
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=tasks_per_node_gdas
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export tasks_per_node
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=NTASKS_gdas
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export NTASKS
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=memory_gdas
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n '' ]]
+++++ config.resources[1562]: for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1563]: run_resource_var=walltime_gdas
+++++ config.resources[1564]: [[ -n '' ]]
+++++ config.resources[1566]: [[ -n 0 ]]
+++++ config.resources[1567]: export walltime
+++++ config.resources[1571]: echo 'END: config.resources'
+END: config.resources
++++ config.wavepostpnt[11]: echo 'END: config.wavepostpnt'
+END: config.wavepostpnt
+++ jjob_header.sh[98]: status=0
+++ jjob_header.sh[99]: ((  status != 0  ))
+++ jjob_header.sh[109]: source /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/env/GAEAC6.env wavepostpnt
++++ GAEAC6.env[3]: [[ 1 -ne 1 ]]
++++ GAEAC6.env[10]: step=wavepostpnt
++++ GAEAC6.env[12]: export 'launcher=srun -l --export=ALL'
++++ GAEAC6.env[12]: launcher='srun -l --export=ALL'
++++ GAEAC6.env[13]: export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ GAEAC6.env[13]: mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ GAEAC6.env[15]: export OMP_STACKSIZE=2048000
++++ GAEAC6.env[15]: OMP_STACKSIZE=2048000
++++ GAEAC6.env[16]: export NTHSTACK=1024000000
++++ GAEAC6.env[16]: NTHSTACK=1024000000
++++ GAEAC6.env[18]: ulimit -s unlimited
++++ GAEAC6.env[19]: ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 1543295
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 50000
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 1543295
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
++++ GAEAC6.env[23]: [[ -n 200 ]]
++++ GAEAC6.env[23]: [[ -n 192 ]]
++++ GAEAC6.env[23]: [[ -n 40 ]]
++++ GAEAC6.env[24]: max_threads_per_task=4
++++ GAEAC6.env[25]: NTHREADSmax=1
++++ GAEAC6.env[26]: NTHREADS1=1
++++ GAEAC6.env[27]: [[ 1 -gt 4 ]]
++++ GAEAC6.env[30]: [[ 1 -gt 4 ]]
++++ GAEAC6.env[35]: APRUN_default='srun -l --export=ALL -n 200'
++++ GAEAC6.env[41]: case ${step} in
++++ GAEAC6.env[55]: export USE_CFP=YES
++++ GAEAC6.env[55]: USE_CFP=YES
++++ GAEAC6.env[56]: [[ wavepostpnt = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ GAEAC6.env[57]: export USE_CFP=NO
++++ GAEAC6.env[57]: USE_CFP=NO
++++ GAEAC6.env[59]: [[ wavepostpnt == \w\a\v\e\p\r\e\p ]]
++++ GAEAC6.env[62]: export 'wavempexec=srun -l --export=ALL'
++++ GAEAC6.env[62]: wavempexec='srun -l --export=ALL'
++++ GAEAC6.env[63]: export 'wave_mpmd=--multi-prog --output=mpmd.%j.%t.out'
++++ GAEAC6.env[63]: wave_mpmd='--multi-prog --output=mpmd.%j.%t.out'
+++ jjob_header.sh[110]: status=0
+++ jjob_header.sh[111]: ((  status != 0  ))
++ JGLOBAL_WAVE_POST_PNT[7]: export errchk=err_chk
++ JGLOBAL_WAVE_POST_PNT[7]: errchk=err_chk
++ JGLOBAL_WAVE_POST_PNT[9]: export MP_PULSE=0
++ JGLOBAL_WAVE_POST_PNT[9]: MP_PULSE=0
++ JGLOBAL_WAVE_POST_PNT[12]: YMD=20210325
++ JGLOBAL_WAVE_POST_PNT[12]: HH=00
++ JGLOBAL_WAVE_POST_PNT[12]: declare_from_tmpl -rx COMIN_WAVE_PREP:COM_WAVE_PREP_TMPL COMIN_WAVE_HISTORY:COM_WAVE_HISTORY_TMPL COMOUT_WAVE_STATION:COM_WAVE_STATION_TMPL
++ bash_utils.sh[35]: [[ NO == \N\O ]]
++ bash_utils.sh[35]: set +x
+declare_from_tmpl :: COMIN_WAVE_PREP=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/prep
+declare_from_tmpl :: COMIN_WAVE_HISTORY=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history
+declare_from_tmpl :: COMOUT_WAVE_STATION=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//products/wave/station
++ JGLOBAL_WAVE_POST_PNT[17]: [[ ! -d /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//products/wave/station ]]
++ JGLOBAL_WAVE_POST_PNT[19]: export CFP_VERBOSE=1
++ JGLOBAL_WAVE_POST_PNT[19]: CFP_VERBOSE=1
++ JGLOBAL_WAVE_POST_PNT[21]: export FHMAX_WAV_PNT=9
++ JGLOBAL_WAVE_POST_PNT[21]: FHMAX_WAV_PNT=9
++ JGLOBAL_WAVE_POST_PNT[22]: export DOSPC_WAV=YES
++ JGLOBAL_WAVE_POST_PNT[22]: DOSPC_WAV=YES
++ JGLOBAL_WAVE_POST_PNT[23]: export DOBLL_WAV=YES
++ JGLOBAL_WAVE_POST_PNT[23]: DOBLL_WAV=YES
++ JGLOBAL_WAVE_POST_PNT[24]: export DOBNDPNT_WAV=NO
++ JGLOBAL_WAVE_POST_PNT[24]: DOBNDPNT_WAV=NO
++ JGLOBAL_WAVE_POST_PNT[28]: /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/scripts/exgfs_wave_post_pnt.sh
+Begin exgfs_wave_post_pnt.sh at Mon 31 Mar 2025 11:09:19 PM UTC
++ exgfs_wave_post_pnt.sh[43]: cd /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
++ exgfs_wave_post_pnt.sh[45]: export WAV_MOD_TAG=gdas.wave.t00z
++ exgfs_wave_post_pnt.sh[45]: WAV_MOD_TAG=gdas.wave.t00z
+++ exgfs_wave_post_pnt.sh[47]: hostname
++ exgfs_wave_post_pnt.sh[47]: echo 'HAS BEGUN on c6n0857'
+HAS BEGUN on c6n0857
++ exgfs_wave_post_pnt.sh[48]: echo 'Starting WAVE PNT POSTPROCESSOR SCRIPT for gdas.wave.t00z'
+Starting WAVE PNT POSTPROCESSOR SCRIPT for gdas.wave.t00z
++ exgfs_wave_post_pnt.sh[50]: set +x
+ 
+                     *************************************
+                     *** WAVE PNT POSTPROCESSOR SCRIPT ***
+                     *************************************
+ 
+Starting at : Mon 31 Mar 2025 07:09:19 PM EDT
+-------------
+ 
++ exgfs_wave_post_pnt.sh[63]: '[' -z 200 ']'
++ exgfs_wave_post_pnt.sh[72]: waveuoutpGRD=uglo_100km
++ exgfs_wave_post_pnt.sh[77]: export STA_DIR=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/station_ascii_files
++ exgfs_wave_post_pnt.sh[77]: STA_DIR=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/station_ascii_files
++ exgfs_wave_post_pnt.sh[78]: '[' -d /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/station_ascii_files ']'
++ exgfs_wave_post_pnt.sh[82]: mkdir -p /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/station_ascii_files
++ exgfs_wave_post_pnt.sh[83]: mkdir -p /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/station_ascii_files/spec
++ exgfs_wave_post_pnt.sh[84]: mkdir -p /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/station_ascii_files/bull
++ exgfs_wave_post_pnt.sh[85]: mkdir -p /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/station_ascii_files/cbull
++ exgfs_wave_post_pnt.sh[86]: mkdir -p /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/station_ascii_files/specfhr
++ exgfs_wave_post_pnt.sh[87]: mkdir -p /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/station_ascii_files/bullfhr
++ exgfs_wave_post_pnt.sh[88]: mkdir -p /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/station_ascii_files/cbullfhr
++ exgfs_wave_post_pnt.sh[90]: set +x
+ 
+Grid information  :
+-------------------
+   Output points : uglo_100km
+ 
++ exgfs_wave_post_pnt.sh[101]: exit_code=0
++ exgfs_wave_post_pnt.sh[103]: set +x
+ 
+Preparing input files :
+-----------------------
++ exgfs_wave_post_pnt.sh[113]: rm -f cmdfile
++ exgfs_wave_post_pnt.sh[114]: touch cmdfile
++ exgfs_wave_post_pnt.sh[115]: chmod 744 cmdfile
++ exgfs_wave_post_pnt.sh[117]: set_trace
++ preamble.sh[52]: [[ YES == \Y\E\S ]]
++ preamble.sh[53]: set -x
++ exgfs_wave_post_pnt.sh[120]: iloop=0
++ exgfs_wave_post_pnt.sh[121]: for grdID in ${waveuoutpGRD}
++ exgfs_wave_post_pnt.sh[122]: [[ -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/prep/gdas.wave.t00z.mod_def.uglo_100km.bin ]]
++ exgfs_wave_post_pnt.sh[123]: set +x
+ Mod def file for uglo_100km found in /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/prep. copying ....
++ exgfs_wave_post_pnt.sh[127]: cp -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/prep/gdas.wave.t00z.mod_def.uglo_100km.bin mod_def.uglo_100km
++ exgfs_wave_post_pnt.sh[128]: iloop=1
++ exgfs_wave_post_pnt.sh[132]: for grdID in $waveuoutpGRD
++ exgfs_wave_post_pnt.sh[134]: '[' '!' -f mod_def.uglo_100km ']'
++ exgfs_wave_post_pnt.sh[146]: set +x
+File mod_def.uglo_100km found. Syncing to all nodes ...
++ exgfs_wave_post_pnt.sh[154]: rm -f buoy.loc
++ exgfs_wave_post_pnt.sh[156]: '[' -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/parm/wave/wave_gfs.buoys ']'
++ exgfs_wave_post_pnt.sh[158]: cp -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/parm/wave/wave_gfs.buoys buoy.loc.temp
++ exgfs_wave_post_pnt.sh[159]: '[' NO = YES ']'
++ exgfs_wave_post_pnt.sh[168]: sed -n '/^\$.*/!p' buoy.loc.temp
++ exgfs_wave_post_pnt.sh[168]: grep -v IBP
++ exgfs_wave_post_pnt.sh[172]: '[' -s buoy.loc ']'
++ exgfs_wave_post_pnt.sh[174]: set +x
+   buoy.loc and buoy.ibp copied and processed (/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/parm/wave/wave_gfs.buoys).
++ exgfs_wave_post_pnt.sh[193]: '[' -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/parm/wave/ww3_outp_spec.inp.tmpl ']'
++ exgfs_wave_post_pnt.sh[195]: cp -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/parm/wave/ww3_outp_spec.inp.tmpl ww3_outp_spec.inp.tmpl
++ exgfs_wave_post_pnt.sh[198]: '[' -f ww3_outp_spec.inp.tmpl ']'
++ exgfs_wave_post_pnt.sh[200]: set +x
+   ww3_outp_spec.inp.tmpl copied. Syncing to all grids ...
++ exgfs_wave_post_pnt.sh[216]: '[' -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/parm/wave/ww3_outp_bull.inp.tmpl ']'
++ exgfs_wave_post_pnt.sh[218]: cp -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/parm/wave/ww3_outp_bull.inp.tmpl ww3_outp_bull.inp.tmpl
++ exgfs_wave_post_pnt.sh[221]: '[' -f ww3_outp_bull.inp.tmpl ']'
++ exgfs_wave_post_pnt.sh[223]: set +x
+   ww3_outp_bull.inp.tmpl copied. Syncing to all nodes ...
++ exgfs_wave_post_pnt.sh[240]: '[' YES = YES ']'
+++ exgfs_wave_post_pnt.sh[242]: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-ynnwpz3/bin/ndate -0 2021032500
++ exgfs_wave_post_pnt.sh[242]: ymdh=2021032500
++ exgfs_wave_post_pnt.sh[243]: tstart='20210325 000000'
++ exgfs_wave_post_pnt.sh[244]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[245]: sed -e 's/TIME/20210325 000000/g' -e s/DT/3600./g -e s/POINT/1/g -e s/ITYPE/0/g -e s/FORMAT/F/g ww3_outp_spec.inp.tmpl
++ exgfs_wave_post_pnt.sh[252]: /bin/ln -sf mod_def.uglo_100km mod_def.ww3
++ exgfs_wave_post_pnt.sh[253]: [[ -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f000.bin ]]
++ exgfs_wave_post_pnt.sh[254]: /bin/ln -sf /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f000.bin ./out_pnt.uglo_100km
++ exgfs_wave_post_pnt.sh[266]: rm -f buoy_tmp.loc buoy_log.ww3 ww3_oup.inp
++ exgfs_wave_post_pnt.sh[267]: /bin/ln -sf ./out_pnt.uglo_100km ./out_pnt.ww3
++ exgfs_wave_post_pnt.sh[268]: /bin/ln -sf ./mod_def.uglo_100km ./mod_def.ww3
++ exgfs_wave_post_pnt.sh[270]: export pgm=gfs_ww3_outp.x
++ exgfs_wave_post_pnt.sh[270]: pgm=gfs_ww3_outp.x
++ exgfs_wave_post_pnt.sh[271]: source prep_step
+++ prep_step[3]: '[' -n gfs_ww3_outp.x ']'
+++ prep_step[3]: '[' -n OUTPUT.1330563 ']'
+++ prep_step[4]: echo gfs_ww3_outp.x
+++ prep_step[7]: '[' -f errfile ']'
+++ prep_step[11]: export FORT01=0
+++ prep_step[11]: FORT01=0
++++ prep_step[12]: grep '^FORT[0-9]\{1,\}='
++++ prep_step[12]: env
++++ prep_step[12]: awk -F= '{print $1}'
+++ prep_step[12]: unset FORT01
++ exgfs_wave_post_pnt.sh[273]: /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/global-workflow/exec/gfs_ww3_outp.x
++ exgfs_wave_post_pnt.sh[274]: export err=0
++ exgfs_wave_post_pnt.sh[274]: err=0
++ exgfs_wave_post_pnt.sh[274]: err_chk
+gfs_ww3_outp.x completed cleanly
++ exgfs_wave_post_pnt.sh[275]: '[' 0 '!=' 0 ']'
++ exgfs_wave_post_pnt.sh[293]: awk '{print $3}' buoy.loc
++ exgfs_wave_post_pnt.sh[293]: sed 's/'\''//g'
++ exgfs_wave_post_pnt.sh[294]: grep -F -f ibp_tags buoy_log.ww3
++ exgfs_wave_post_pnt.sh[295]: rm -f buoy_log.dat
++ exgfs_wave_post_pnt.sh[296]: mv buoy_log.tmp buoy_log.dat
++ exgfs_wave_post_pnt.sh[298]: grep -F -f ibp_tags buoy_lst.loc
++ exgfs_wave_post_pnt.sh[300]: awk '{ print $1 }' buoy_tmp1.loc
+++ exgfs_wave_post_pnt.sh[301]: wc buoy_tmp1.loc
+++ exgfs_wave_post_pnt.sh[301]: awk '{ print $1 }'
++ exgfs_wave_post_pnt.sh[301]: Nb=403
++ exgfs_wave_post_pnt.sh[302]: rm -f buoy_tmp1.loc
++ exgfs_wave_post_pnt.sh[304]: '[' -s buoy_log.dat ']'
++ exgfs_wave_post_pnt.sh[306]: set +x
+Buoy log file created. Syncing to all nodes ...
++ exgfs_wave_post_pnt.sh[326]: set +x
+ 
+   Input files read and processed at : Mon 31 Mar 2025 07:09:20 PM EDT
+ 
+   Data summary : 
+   ---------------------------------------------
+      Sufficient data for spectral files        : YES (403 points)
+      Sufficient data for bulletins             : YES (403 points)
+      Boundary points                           : NO
+ 
++ exgfs_wave_post_pnt.sh[343]: set +x
+   Making command file for wave post points 
++ exgfs_wave_post_pnt.sh[347]: rm -f cmdfile
++ exgfs_wave_post_pnt.sh[348]: touch cmdfile
++ exgfs_wave_post_pnt.sh[349]: chmod 744 cmdfile
++ exgfs_wave_post_pnt.sh[352]: fhr=0
++ exgfs_wave_post_pnt.sh[354]: escaped_USHgfs='\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush'
++ exgfs_wave_post_pnt.sh[355]: '[' 0 -le 9 ']'
+++ exgfs_wave_post_pnt.sh[357]: date
++ exgfs_wave_post_pnt.sh[357]: echo '   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:21 PM EDT'
+   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:21 PM EDT
+++ exgfs_wave_post_pnt.sh[358]: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-ynnwpz3/bin/ndate 0 2021032500
++ exgfs_wave_post_pnt.sh[358]: ymdh=2021032500
++ exgfs_wave_post_pnt.sh[359]: YMD=20210325
++ exgfs_wave_post_pnt.sh[360]: HMS=000000
++ exgfs_wave_post_pnt.sh[361]: YMDHMS=20210325000000
+++ exgfs_wave_post_pnt.sh[362]: printf %03i 0
++ exgfs_wave_post_pnt.sh[362]: FH3=000
++ exgfs_wave_post_pnt.sh[364]: rm -f tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[365]: touch tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[366]: mkdir output_20210325000000
++ exgfs_wave_post_pnt.sh[367]: cd output_20210325000000
++ exgfs_wave_post_pnt.sh[370]: export SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325000000
++ exgfs_wave_post_pnt.sh[370]: SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325000000
++ exgfs_wave_post_pnt.sh[371]: escaped_SPECDATA='\/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325000000'
++ exgfs_wave_post_pnt.sh[372]: export BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325000000
++ exgfs_wave_post_pnt.sh[372]: BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325000000
++ exgfs_wave_post_pnt.sh[373]: cp /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/mod_def.uglo_100km mod_def.uglo_100km
++ exgfs_wave_post_pnt.sh[375]: pfile=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f000.bin
++ exgfs_wave_post_pnt.sh[376]: '[' -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f000.bin ']'
++ exgfs_wave_post_pnt.sh[378]: /bin/ln -sf /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f000.bin ./out_pnt.uglo_100km
++ exgfs_wave_post_pnt.sh[387]: cd /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
++ exgfs_wave_post_pnt.sh[389]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[391]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[391]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[393]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032500 spec \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325000000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325000000\/spec_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[396]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[398]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[398]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[400]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032500 bull \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325000000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325000000\/bull_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[403]: split -n l/1/10 tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[404]: split -n l/2/10 tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[405]: split -n l/3/10 tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[406]: split -n l/4/10 tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[407]: split -n l/5/10 tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[408]: split -n l/6/10 tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[409]: split -n l/7/10 tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[410]: split -n l/8/10 tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[411]: split -n l/9/10 tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[412]: split -n l/10/10 tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[414]: rm tmpcmdfile.000
++ exgfs_wave_post_pnt.sh[415]: chmod 744 cmdfile.000.01 cmdfile.000.02 cmdfile.000.03 cmdfile.000.04
++ exgfs_wave_post_pnt.sh[416]: chmod 744 cmdfile.000.05 cmdfile.000.06 cmdfile.000.07 cmdfile.000.08
++ exgfs_wave_post_pnt.sh[417]: chmod 744 cmdfile.000.09 cmdfile.000.10
++ exgfs_wave_post_pnt.sh[418]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.000.01
++ exgfs_wave_post_pnt.sh[419]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.000.02
++ exgfs_wave_post_pnt.sh[420]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.000.03
++ exgfs_wave_post_pnt.sh[421]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.000.04
++ exgfs_wave_post_pnt.sh[422]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.000.05
++ exgfs_wave_post_pnt.sh[423]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.000.06
++ exgfs_wave_post_pnt.sh[424]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.000.07
++ exgfs_wave_post_pnt.sh[425]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.000.08
++ exgfs_wave_post_pnt.sh[426]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.000.09
++ exgfs_wave_post_pnt.sh[427]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.000.10
++ exgfs_wave_post_pnt.sh[430]: FHINCP=1
++ exgfs_wave_post_pnt.sh[431]: fhrp=1
++ exgfs_wave_post_pnt.sh[432]: fhr=1
++ exgfs_wave_post_pnt.sh[355]: '[' 1 -le 9 ']'
+++ exgfs_wave_post_pnt.sh[357]: date
++ exgfs_wave_post_pnt.sh[357]: echo '   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:21 PM EDT'
+   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:21 PM EDT
+++ exgfs_wave_post_pnt.sh[358]: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-ynnwpz3/bin/ndate 1 2021032500
++ exgfs_wave_post_pnt.sh[358]: ymdh=2021032501
++ exgfs_wave_post_pnt.sh[359]: YMD=20210325
++ exgfs_wave_post_pnt.sh[360]: HMS=010000
++ exgfs_wave_post_pnt.sh[361]: YMDHMS=20210325010000
+++ exgfs_wave_post_pnt.sh[362]: printf %03i 1
++ exgfs_wave_post_pnt.sh[362]: FH3=001
++ exgfs_wave_post_pnt.sh[364]: rm -f tmpcmdfile.001
++ exgfs_wave_post_pnt.sh[365]: touch tmpcmdfile.001
++ exgfs_wave_post_pnt.sh[366]: mkdir output_20210325010000
++ exgfs_wave_post_pnt.sh[367]: cd output_20210325010000
++ exgfs_wave_post_pnt.sh[370]: export SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325010000
++ exgfs_wave_post_pnt.sh[370]: SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325010000
++ exgfs_wave_post_pnt.sh[371]: escaped_SPECDATA='\/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325010000'
++ exgfs_wave_post_pnt.sh[372]: export BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325010000
++ exgfs_wave_post_pnt.sh[372]: BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325010000
++ exgfs_wave_post_pnt.sh[373]: cp /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/mod_def.uglo_100km mod_def.uglo_100km
++ exgfs_wave_post_pnt.sh[375]: pfile=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f001.bin
++ exgfs_wave_post_pnt.sh[376]: '[' -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f001.bin ']'
++ exgfs_wave_post_pnt.sh[378]: /bin/ln -sf /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f001.bin ./out_pnt.uglo_100km
++ exgfs_wave_post_pnt.sh[387]: cd /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
++ exgfs_wave_post_pnt.sh[389]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[391]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[391]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[393]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032501 spec \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325010000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325010000\/spec_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[396]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[398]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[398]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[400]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032501 bull \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325010000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325010000\/bull_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[403]: split -n l/1/10 tmpcmdfile.001
++ exgfs_wave_post_pnt.sh[404]: split -n l/2/10 tmpcmdfile.001
++ exgfs_wave_post_pnt.sh[405]: split -n l/3/10 tmpcmdfile.001
++ exgfs_wave_post_pnt.sh[406]: split -n l/4/10 tmpcmdfile.001
++ exgfs_wave_post_pnt.sh[407]: split -n l/5/10 tmpcmdfile.001
++ exgfs_wave_post_pnt.sh[408]: split -n l/6/10 tmpcmdfile.001
++ exgfs_wave_post_pnt.sh[409]: split -n l/7/10 tmpcmdfile.001
++ exgfs_wave_post_pnt.sh[410]: split -n l/8/10 tmpcmdfile.001
++ exgfs_wave_post_pnt.sh[411]: split -n l/9/10 tmpcmdfile.001
++ exgfs_wave_post_pnt.sh[412]: split -n l/10/10 tmpcmdfile.001
++ exgfs_wave_post_pnt.sh[414]: rm tmpcmdfile.001
++ exgfs_wave_post_pnt.sh[415]: chmod 744 cmdfile.001.01 cmdfile.001.02 cmdfile.001.03 cmdfile.001.04
++ exgfs_wave_post_pnt.sh[416]: chmod 744 cmdfile.001.05 cmdfile.001.06 cmdfile.001.07 cmdfile.001.08
++ exgfs_wave_post_pnt.sh[417]: chmod 744 cmdfile.001.09 cmdfile.001.10
++ exgfs_wave_post_pnt.sh[418]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.001.01
++ exgfs_wave_post_pnt.sh[419]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.001.02
++ exgfs_wave_post_pnt.sh[420]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.001.03
++ exgfs_wave_post_pnt.sh[421]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.001.04
++ exgfs_wave_post_pnt.sh[422]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.001.05
++ exgfs_wave_post_pnt.sh[423]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.001.06
++ exgfs_wave_post_pnt.sh[424]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.001.07
++ exgfs_wave_post_pnt.sh[425]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.001.08
++ exgfs_wave_post_pnt.sh[426]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.001.09
++ exgfs_wave_post_pnt.sh[427]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.001.10
++ exgfs_wave_post_pnt.sh[430]: FHINCP=1
++ exgfs_wave_post_pnt.sh[431]: fhrp=2
++ exgfs_wave_post_pnt.sh[432]: fhr=2
++ exgfs_wave_post_pnt.sh[355]: '[' 2 -le 9 ']'
+++ exgfs_wave_post_pnt.sh[357]: date
++ exgfs_wave_post_pnt.sh[357]: echo '   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:21 PM EDT'
+   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:21 PM EDT
+++ exgfs_wave_post_pnt.sh[358]: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-ynnwpz3/bin/ndate 2 2021032500
++ exgfs_wave_post_pnt.sh[358]: ymdh=2021032502
++ exgfs_wave_post_pnt.sh[359]: YMD=20210325
++ exgfs_wave_post_pnt.sh[360]: HMS=020000
++ exgfs_wave_post_pnt.sh[361]: YMDHMS=20210325020000
+++ exgfs_wave_post_pnt.sh[362]: printf %03i 2
++ exgfs_wave_post_pnt.sh[362]: FH3=002
++ exgfs_wave_post_pnt.sh[364]: rm -f tmpcmdfile.002
++ exgfs_wave_post_pnt.sh[365]: touch tmpcmdfile.002
++ exgfs_wave_post_pnt.sh[366]: mkdir output_20210325020000
++ exgfs_wave_post_pnt.sh[367]: cd output_20210325020000
++ exgfs_wave_post_pnt.sh[370]: export SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325020000
++ exgfs_wave_post_pnt.sh[370]: SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325020000
++ exgfs_wave_post_pnt.sh[371]: escaped_SPECDATA='\/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325020000'
++ exgfs_wave_post_pnt.sh[372]: export BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325020000
++ exgfs_wave_post_pnt.sh[372]: BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325020000
++ exgfs_wave_post_pnt.sh[373]: cp /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/mod_def.uglo_100km mod_def.uglo_100km
++ exgfs_wave_post_pnt.sh[375]: pfile=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f002.bin
++ exgfs_wave_post_pnt.sh[376]: '[' -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f002.bin ']'
++ exgfs_wave_post_pnt.sh[378]: /bin/ln -sf /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f002.bin ./out_pnt.uglo_100km
++ exgfs_wave_post_pnt.sh[387]: cd /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
++ exgfs_wave_post_pnt.sh[389]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[391]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[391]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[393]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032502 spec \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325020000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325020000\/spec_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[396]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[398]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[398]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[400]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032502 bull \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325020000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325020000\/bull_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[403]: split -n l/1/10 tmpcmdfile.002
++ exgfs_wave_post_pnt.sh[404]: split -n l/2/10 tmpcmdfile.002
++ exgfs_wave_post_pnt.sh[405]: split -n l/3/10 tmpcmdfile.002
++ exgfs_wave_post_pnt.sh[406]: split -n l/4/10 tmpcmdfile.002
++ exgfs_wave_post_pnt.sh[407]: split -n l/5/10 tmpcmdfile.002
++ exgfs_wave_post_pnt.sh[408]: split -n l/6/10 tmpcmdfile.002
++ exgfs_wave_post_pnt.sh[409]: split -n l/7/10 tmpcmdfile.002
++ exgfs_wave_post_pnt.sh[410]: split -n l/8/10 tmpcmdfile.002
++ exgfs_wave_post_pnt.sh[411]: split -n l/9/10 tmpcmdfile.002
++ exgfs_wave_post_pnt.sh[412]: split -n l/10/10 tmpcmdfile.002
++ exgfs_wave_post_pnt.sh[414]: rm tmpcmdfile.002
++ exgfs_wave_post_pnt.sh[415]: chmod 744 cmdfile.002.01 cmdfile.002.02 cmdfile.002.03 cmdfile.002.04
++ exgfs_wave_post_pnt.sh[416]: chmod 744 cmdfile.002.05 cmdfile.002.06 cmdfile.002.07 cmdfile.002.08
++ exgfs_wave_post_pnt.sh[417]: chmod 744 cmdfile.002.09 cmdfile.002.10
++ exgfs_wave_post_pnt.sh[418]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.002.01
++ exgfs_wave_post_pnt.sh[419]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.002.02
++ exgfs_wave_post_pnt.sh[420]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.002.03
++ exgfs_wave_post_pnt.sh[421]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.002.04
++ exgfs_wave_post_pnt.sh[422]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.002.05
++ exgfs_wave_post_pnt.sh[423]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.002.06
++ exgfs_wave_post_pnt.sh[424]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.002.07
++ exgfs_wave_post_pnt.sh[425]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.002.08
++ exgfs_wave_post_pnt.sh[426]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.002.09
++ exgfs_wave_post_pnt.sh[427]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.002.10
++ exgfs_wave_post_pnt.sh[430]: FHINCP=1
++ exgfs_wave_post_pnt.sh[431]: fhrp=3
++ exgfs_wave_post_pnt.sh[432]: fhr=3
++ exgfs_wave_post_pnt.sh[355]: '[' 3 -le 9 ']'
+++ exgfs_wave_post_pnt.sh[357]: date
++ exgfs_wave_post_pnt.sh[357]: echo '   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:22 PM EDT'
+   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:22 PM EDT
+++ exgfs_wave_post_pnt.sh[358]: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-ynnwpz3/bin/ndate 3 2021032500
++ exgfs_wave_post_pnt.sh[358]: ymdh=2021032503
++ exgfs_wave_post_pnt.sh[359]: YMD=20210325
++ exgfs_wave_post_pnt.sh[360]: HMS=030000
++ exgfs_wave_post_pnt.sh[361]: YMDHMS=20210325030000
+++ exgfs_wave_post_pnt.sh[362]: printf %03i 3
++ exgfs_wave_post_pnt.sh[362]: FH3=003
++ exgfs_wave_post_pnt.sh[364]: rm -f tmpcmdfile.003
++ exgfs_wave_post_pnt.sh[365]: touch tmpcmdfile.003
++ exgfs_wave_post_pnt.sh[366]: mkdir output_20210325030000
++ exgfs_wave_post_pnt.sh[367]: cd output_20210325030000
++ exgfs_wave_post_pnt.sh[370]: export SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325030000
++ exgfs_wave_post_pnt.sh[370]: SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325030000
++ exgfs_wave_post_pnt.sh[371]: escaped_SPECDATA='\/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325030000'
++ exgfs_wave_post_pnt.sh[372]: export BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325030000
++ exgfs_wave_post_pnt.sh[372]: BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325030000
++ exgfs_wave_post_pnt.sh[373]: cp /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/mod_def.uglo_100km mod_def.uglo_100km
++ exgfs_wave_post_pnt.sh[375]: pfile=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f003.bin
++ exgfs_wave_post_pnt.sh[376]: '[' -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f003.bin ']'
++ exgfs_wave_post_pnt.sh[378]: /bin/ln -sf /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f003.bin ./out_pnt.uglo_100km
++ exgfs_wave_post_pnt.sh[387]: cd /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
++ exgfs_wave_post_pnt.sh[389]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[391]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[391]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[393]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032503 spec \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325030000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325030000\/spec_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[396]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[398]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[398]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[400]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032503 bull \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325030000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325030000\/bull_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[403]: split -n l/1/10 tmpcmdfile.003
++ exgfs_wave_post_pnt.sh[404]: split -n l/2/10 tmpcmdfile.003
++ exgfs_wave_post_pnt.sh[405]: split -n l/3/10 tmpcmdfile.003
++ exgfs_wave_post_pnt.sh[406]: split -n l/4/10 tmpcmdfile.003
++ exgfs_wave_post_pnt.sh[407]: split -n l/5/10 tmpcmdfile.003
++ exgfs_wave_post_pnt.sh[408]: split -n l/6/10 tmpcmdfile.003
++ exgfs_wave_post_pnt.sh[409]: split -n l/7/10 tmpcmdfile.003
++ exgfs_wave_post_pnt.sh[410]: split -n l/8/10 tmpcmdfile.003
++ exgfs_wave_post_pnt.sh[411]: split -n l/9/10 tmpcmdfile.003
++ exgfs_wave_post_pnt.sh[412]: split -n l/10/10 tmpcmdfile.003
++ exgfs_wave_post_pnt.sh[414]: rm tmpcmdfile.003
++ exgfs_wave_post_pnt.sh[415]: chmod 744 cmdfile.003.01 cmdfile.003.02 cmdfile.003.03 cmdfile.003.04
++ exgfs_wave_post_pnt.sh[416]: chmod 744 cmdfile.003.05 cmdfile.003.06 cmdfile.003.07 cmdfile.003.08
++ exgfs_wave_post_pnt.sh[417]: chmod 744 cmdfile.003.09 cmdfile.003.10
++ exgfs_wave_post_pnt.sh[418]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.003.01
++ exgfs_wave_post_pnt.sh[419]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.003.02
++ exgfs_wave_post_pnt.sh[420]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.003.03
++ exgfs_wave_post_pnt.sh[421]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.003.04
++ exgfs_wave_post_pnt.sh[422]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.003.05
++ exgfs_wave_post_pnt.sh[423]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.003.06
++ exgfs_wave_post_pnt.sh[424]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.003.07
++ exgfs_wave_post_pnt.sh[425]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.003.08
++ exgfs_wave_post_pnt.sh[426]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.003.09
++ exgfs_wave_post_pnt.sh[427]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.003.10
++ exgfs_wave_post_pnt.sh[430]: FHINCP=1
++ exgfs_wave_post_pnt.sh[431]: fhrp=4
++ exgfs_wave_post_pnt.sh[432]: fhr=4
++ exgfs_wave_post_pnt.sh[355]: '[' 4 -le 9 ']'
+++ exgfs_wave_post_pnt.sh[357]: date
++ exgfs_wave_post_pnt.sh[357]: echo '   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:22 PM EDT'
+   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:22 PM EDT
+++ exgfs_wave_post_pnt.sh[358]: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-ynnwpz3/bin/ndate 4 2021032500
++ exgfs_wave_post_pnt.sh[358]: ymdh=2021032504
++ exgfs_wave_post_pnt.sh[359]: YMD=20210325
++ exgfs_wave_post_pnt.sh[360]: HMS=040000
++ exgfs_wave_post_pnt.sh[361]: YMDHMS=20210325040000
+++ exgfs_wave_post_pnt.sh[362]: printf %03i 4
++ exgfs_wave_post_pnt.sh[362]: FH3=004
++ exgfs_wave_post_pnt.sh[364]: rm -f tmpcmdfile.004
++ exgfs_wave_post_pnt.sh[365]: touch tmpcmdfile.004
++ exgfs_wave_post_pnt.sh[366]: mkdir output_20210325040000
++ exgfs_wave_post_pnt.sh[367]: cd output_20210325040000
++ exgfs_wave_post_pnt.sh[370]: export SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325040000
++ exgfs_wave_post_pnt.sh[370]: SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325040000
++ exgfs_wave_post_pnt.sh[371]: escaped_SPECDATA='\/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325040000'
++ exgfs_wave_post_pnt.sh[372]: export BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325040000
++ exgfs_wave_post_pnt.sh[372]: BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325040000
++ exgfs_wave_post_pnt.sh[373]: cp /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/mod_def.uglo_100km mod_def.uglo_100km
++ exgfs_wave_post_pnt.sh[375]: pfile=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f004.bin
++ exgfs_wave_post_pnt.sh[376]: '[' -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f004.bin ']'
++ exgfs_wave_post_pnt.sh[378]: /bin/ln -sf /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f004.bin ./out_pnt.uglo_100km
++ exgfs_wave_post_pnt.sh[387]: cd /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
++ exgfs_wave_post_pnt.sh[389]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[391]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[391]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[393]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032504 spec \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325040000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325040000\/spec_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[396]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[398]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[398]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[400]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032504 bull \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325040000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325040000\/bull_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[403]: split -n l/1/10 tmpcmdfile.004
++ exgfs_wave_post_pnt.sh[404]: split -n l/2/10 tmpcmdfile.004
++ exgfs_wave_post_pnt.sh[405]: split -n l/3/10 tmpcmdfile.004
++ exgfs_wave_post_pnt.sh[406]: split -n l/4/10 tmpcmdfile.004
++ exgfs_wave_post_pnt.sh[407]: split -n l/5/10 tmpcmdfile.004
++ exgfs_wave_post_pnt.sh[408]: split -n l/6/10 tmpcmdfile.004
++ exgfs_wave_post_pnt.sh[409]: split -n l/7/10 tmpcmdfile.004
++ exgfs_wave_post_pnt.sh[410]: split -n l/8/10 tmpcmdfile.004
++ exgfs_wave_post_pnt.sh[411]: split -n l/9/10 tmpcmdfile.004
++ exgfs_wave_post_pnt.sh[412]: split -n l/10/10 tmpcmdfile.004
++ exgfs_wave_post_pnt.sh[414]: rm tmpcmdfile.004
++ exgfs_wave_post_pnt.sh[415]: chmod 744 cmdfile.004.01 cmdfile.004.02 cmdfile.004.03 cmdfile.004.04
++ exgfs_wave_post_pnt.sh[416]: chmod 744 cmdfile.004.05 cmdfile.004.06 cmdfile.004.07 cmdfile.004.08
++ exgfs_wave_post_pnt.sh[417]: chmod 744 cmdfile.004.09 cmdfile.004.10
++ exgfs_wave_post_pnt.sh[418]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.004.01
++ exgfs_wave_post_pnt.sh[419]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.004.02
++ exgfs_wave_post_pnt.sh[420]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.004.03
++ exgfs_wave_post_pnt.sh[421]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.004.04
++ exgfs_wave_post_pnt.sh[422]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.004.05
++ exgfs_wave_post_pnt.sh[423]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.004.06
++ exgfs_wave_post_pnt.sh[424]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.004.07
++ exgfs_wave_post_pnt.sh[425]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.004.08
++ exgfs_wave_post_pnt.sh[426]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.004.09
++ exgfs_wave_post_pnt.sh[427]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.004.10
++ exgfs_wave_post_pnt.sh[430]: FHINCP=1
++ exgfs_wave_post_pnt.sh[431]: fhrp=5
++ exgfs_wave_post_pnt.sh[432]: fhr=5
++ exgfs_wave_post_pnt.sh[355]: '[' 5 -le 9 ']'
+++ exgfs_wave_post_pnt.sh[357]: date
++ exgfs_wave_post_pnt.sh[357]: echo '   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:23 PM EDT'
+   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:23 PM EDT
+++ exgfs_wave_post_pnt.sh[358]: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-ynnwpz3/bin/ndate 5 2021032500
++ exgfs_wave_post_pnt.sh[358]: ymdh=2021032505
++ exgfs_wave_post_pnt.sh[359]: YMD=20210325
++ exgfs_wave_post_pnt.sh[360]: HMS=050000
++ exgfs_wave_post_pnt.sh[361]: YMDHMS=20210325050000
+++ exgfs_wave_post_pnt.sh[362]: printf %03i 5
++ exgfs_wave_post_pnt.sh[362]: FH3=005
++ exgfs_wave_post_pnt.sh[364]: rm -f tmpcmdfile.005
++ exgfs_wave_post_pnt.sh[365]: touch tmpcmdfile.005
++ exgfs_wave_post_pnt.sh[366]: mkdir output_20210325050000
++ exgfs_wave_post_pnt.sh[367]: cd output_20210325050000
++ exgfs_wave_post_pnt.sh[370]: export SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325050000
++ exgfs_wave_post_pnt.sh[370]: SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325050000
++ exgfs_wave_post_pnt.sh[371]: escaped_SPECDATA='\/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325050000'
++ exgfs_wave_post_pnt.sh[372]: export BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325050000
++ exgfs_wave_post_pnt.sh[372]: BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325050000
++ exgfs_wave_post_pnt.sh[373]: cp /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/mod_def.uglo_100km mod_def.uglo_100km
++ exgfs_wave_post_pnt.sh[375]: pfile=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f005.bin
++ exgfs_wave_post_pnt.sh[376]: '[' -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f005.bin ']'
++ exgfs_wave_post_pnt.sh[378]: /bin/ln -sf /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f005.bin ./out_pnt.uglo_100km
++ exgfs_wave_post_pnt.sh[387]: cd /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
++ exgfs_wave_post_pnt.sh[389]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[391]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[391]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[393]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032505 spec \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325050000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325050000\/spec_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[396]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[398]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[398]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[400]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032505 bull \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325050000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325050000\/bull_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[403]: split -n l/1/10 tmpcmdfile.005
++ exgfs_wave_post_pnt.sh[404]: split -n l/2/10 tmpcmdfile.005
++ exgfs_wave_post_pnt.sh[405]: split -n l/3/10 tmpcmdfile.005
++ exgfs_wave_post_pnt.sh[406]: split -n l/4/10 tmpcmdfile.005
++ exgfs_wave_post_pnt.sh[407]: split -n l/5/10 tmpcmdfile.005
++ exgfs_wave_post_pnt.sh[408]: split -n l/6/10 tmpcmdfile.005
++ exgfs_wave_post_pnt.sh[409]: split -n l/7/10 tmpcmdfile.005
++ exgfs_wave_post_pnt.sh[410]: split -n l/8/10 tmpcmdfile.005
++ exgfs_wave_post_pnt.sh[411]: split -n l/9/10 tmpcmdfile.005
++ exgfs_wave_post_pnt.sh[412]: split -n l/10/10 tmpcmdfile.005
++ exgfs_wave_post_pnt.sh[414]: rm tmpcmdfile.005
++ exgfs_wave_post_pnt.sh[415]: chmod 744 cmdfile.005.01 cmdfile.005.02 cmdfile.005.03 cmdfile.005.04
++ exgfs_wave_post_pnt.sh[416]: chmod 744 cmdfile.005.05 cmdfile.005.06 cmdfile.005.07 cmdfile.005.08
++ exgfs_wave_post_pnt.sh[417]: chmod 744 cmdfile.005.09 cmdfile.005.10
++ exgfs_wave_post_pnt.sh[418]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.005.01
++ exgfs_wave_post_pnt.sh[419]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.005.02
++ exgfs_wave_post_pnt.sh[420]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.005.03
++ exgfs_wave_post_pnt.sh[421]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.005.04
++ exgfs_wave_post_pnt.sh[422]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.005.05
++ exgfs_wave_post_pnt.sh[423]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.005.06
++ exgfs_wave_post_pnt.sh[424]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.005.07
++ exgfs_wave_post_pnt.sh[425]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.005.08
++ exgfs_wave_post_pnt.sh[426]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.005.09
++ exgfs_wave_post_pnt.sh[427]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.005.10
++ exgfs_wave_post_pnt.sh[430]: FHINCP=1
++ exgfs_wave_post_pnt.sh[431]: fhrp=6
++ exgfs_wave_post_pnt.sh[432]: fhr=6
++ exgfs_wave_post_pnt.sh[355]: '[' 6 -le 9 ']'
+++ exgfs_wave_post_pnt.sh[357]: date
++ exgfs_wave_post_pnt.sh[357]: echo '   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:23 PM EDT'
+   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:23 PM EDT
+++ exgfs_wave_post_pnt.sh[358]: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-ynnwpz3/bin/ndate 6 2021032500
++ exgfs_wave_post_pnt.sh[358]: ymdh=2021032506
++ exgfs_wave_post_pnt.sh[359]: YMD=20210325
++ exgfs_wave_post_pnt.sh[360]: HMS=060000
++ exgfs_wave_post_pnt.sh[361]: YMDHMS=20210325060000
+++ exgfs_wave_post_pnt.sh[362]: printf %03i 6
++ exgfs_wave_post_pnt.sh[362]: FH3=006
++ exgfs_wave_post_pnt.sh[364]: rm -f tmpcmdfile.006
++ exgfs_wave_post_pnt.sh[365]: touch tmpcmdfile.006
++ exgfs_wave_post_pnt.sh[366]: mkdir output_20210325060000
++ exgfs_wave_post_pnt.sh[367]: cd output_20210325060000
++ exgfs_wave_post_pnt.sh[370]: export SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325060000
++ exgfs_wave_post_pnt.sh[370]: SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325060000
++ exgfs_wave_post_pnt.sh[371]: escaped_SPECDATA='\/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325060000'
++ exgfs_wave_post_pnt.sh[372]: export BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325060000
++ exgfs_wave_post_pnt.sh[372]: BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325060000
++ exgfs_wave_post_pnt.sh[373]: cp /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/mod_def.uglo_100km mod_def.uglo_100km
++ exgfs_wave_post_pnt.sh[375]: pfile=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f006.bin
++ exgfs_wave_post_pnt.sh[376]: '[' -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f006.bin ']'
++ exgfs_wave_post_pnt.sh[378]: /bin/ln -sf /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f006.bin ./out_pnt.uglo_100km
++ exgfs_wave_post_pnt.sh[387]: cd /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
++ exgfs_wave_post_pnt.sh[389]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[391]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[391]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[393]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032506 spec \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325060000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325060000\/spec_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[396]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[398]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[398]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[400]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032506 bull \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325060000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325060000\/bull_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[403]: split -n l/1/10 tmpcmdfile.006
++ exgfs_wave_post_pnt.sh[404]: split -n l/2/10 tmpcmdfile.006
++ exgfs_wave_post_pnt.sh[405]: split -n l/3/10 tmpcmdfile.006
++ exgfs_wave_post_pnt.sh[406]: split -n l/4/10 tmpcmdfile.006
++ exgfs_wave_post_pnt.sh[407]: split -n l/5/10 tmpcmdfile.006
++ exgfs_wave_post_pnt.sh[408]: split -n l/6/10 tmpcmdfile.006
++ exgfs_wave_post_pnt.sh[409]: split -n l/7/10 tmpcmdfile.006
++ exgfs_wave_post_pnt.sh[410]: split -n l/8/10 tmpcmdfile.006
++ exgfs_wave_post_pnt.sh[411]: split -n l/9/10 tmpcmdfile.006
++ exgfs_wave_post_pnt.sh[412]: split -n l/10/10 tmpcmdfile.006
++ exgfs_wave_post_pnt.sh[414]: rm tmpcmdfile.006
++ exgfs_wave_post_pnt.sh[415]: chmod 744 cmdfile.006.01 cmdfile.006.02 cmdfile.006.03 cmdfile.006.04
++ exgfs_wave_post_pnt.sh[416]: chmod 744 cmdfile.006.05 cmdfile.006.06 cmdfile.006.07 cmdfile.006.08
++ exgfs_wave_post_pnt.sh[417]: chmod 744 cmdfile.006.09 cmdfile.006.10
++ exgfs_wave_post_pnt.sh[418]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.006.01
++ exgfs_wave_post_pnt.sh[419]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.006.02
++ exgfs_wave_post_pnt.sh[420]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.006.03
++ exgfs_wave_post_pnt.sh[421]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.006.04
++ exgfs_wave_post_pnt.sh[422]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.006.05
++ exgfs_wave_post_pnt.sh[423]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.006.06
++ exgfs_wave_post_pnt.sh[424]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.006.07
++ exgfs_wave_post_pnt.sh[425]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.006.08
++ exgfs_wave_post_pnt.sh[426]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.006.09
++ exgfs_wave_post_pnt.sh[427]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.006.10
++ exgfs_wave_post_pnt.sh[430]: FHINCP=1
++ exgfs_wave_post_pnt.sh[431]: fhrp=7
++ exgfs_wave_post_pnt.sh[432]: fhr=7
++ exgfs_wave_post_pnt.sh[355]: '[' 7 -le 9 ']'
+++ exgfs_wave_post_pnt.sh[357]: date
++ exgfs_wave_post_pnt.sh[357]: echo '   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:23 PM EDT'
+   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:23 PM EDT
+++ exgfs_wave_post_pnt.sh[358]: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-ynnwpz3/bin/ndate 7 2021032500
++ exgfs_wave_post_pnt.sh[358]: ymdh=2021032507
++ exgfs_wave_post_pnt.sh[359]: YMD=20210325
++ exgfs_wave_post_pnt.sh[360]: HMS=070000
++ exgfs_wave_post_pnt.sh[361]: YMDHMS=20210325070000
+++ exgfs_wave_post_pnt.sh[362]: printf %03i 7
++ exgfs_wave_post_pnt.sh[362]: FH3=007
++ exgfs_wave_post_pnt.sh[364]: rm -f tmpcmdfile.007
++ exgfs_wave_post_pnt.sh[365]: touch tmpcmdfile.007
++ exgfs_wave_post_pnt.sh[366]: mkdir output_20210325070000
++ exgfs_wave_post_pnt.sh[367]: cd output_20210325070000
++ exgfs_wave_post_pnt.sh[370]: export SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325070000
++ exgfs_wave_post_pnt.sh[370]: SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325070000
++ exgfs_wave_post_pnt.sh[371]: escaped_SPECDATA='\/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325070000'
++ exgfs_wave_post_pnt.sh[372]: export BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325070000
++ exgfs_wave_post_pnt.sh[372]: BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325070000
++ exgfs_wave_post_pnt.sh[373]: cp /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/mod_def.uglo_100km mod_def.uglo_100km
++ exgfs_wave_post_pnt.sh[375]: pfile=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f007.bin
++ exgfs_wave_post_pnt.sh[376]: '[' -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f007.bin ']'
++ exgfs_wave_post_pnt.sh[378]: /bin/ln -sf /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f007.bin ./out_pnt.uglo_100km
++ exgfs_wave_post_pnt.sh[387]: cd /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
++ exgfs_wave_post_pnt.sh[389]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[391]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[391]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[393]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032507 spec \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325070000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325070000\/spec_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[396]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[398]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[398]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[400]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032507 bull \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325070000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325070000\/bull_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[403]: split -n l/1/10 tmpcmdfile.007
++ exgfs_wave_post_pnt.sh[404]: split -n l/2/10 tmpcmdfile.007
++ exgfs_wave_post_pnt.sh[405]: split -n l/3/10 tmpcmdfile.007
++ exgfs_wave_post_pnt.sh[406]: split -n l/4/10 tmpcmdfile.007
++ exgfs_wave_post_pnt.sh[407]: split -n l/5/10 tmpcmdfile.007
++ exgfs_wave_post_pnt.sh[408]: split -n l/6/10 tmpcmdfile.007
++ exgfs_wave_post_pnt.sh[409]: split -n l/7/10 tmpcmdfile.007
++ exgfs_wave_post_pnt.sh[410]: split -n l/8/10 tmpcmdfile.007
++ exgfs_wave_post_pnt.sh[411]: split -n l/9/10 tmpcmdfile.007
++ exgfs_wave_post_pnt.sh[412]: split -n l/10/10 tmpcmdfile.007
++ exgfs_wave_post_pnt.sh[414]: rm tmpcmdfile.007
++ exgfs_wave_post_pnt.sh[415]: chmod 744 cmdfile.007.01 cmdfile.007.02 cmdfile.007.03 cmdfile.007.04
++ exgfs_wave_post_pnt.sh[416]: chmod 744 cmdfile.007.05 cmdfile.007.06 cmdfile.007.07 cmdfile.007.08
++ exgfs_wave_post_pnt.sh[417]: chmod 744 cmdfile.007.09 cmdfile.007.10
++ exgfs_wave_post_pnt.sh[418]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.007.01
++ exgfs_wave_post_pnt.sh[419]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.007.02
++ exgfs_wave_post_pnt.sh[420]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.007.03
++ exgfs_wave_post_pnt.sh[421]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.007.04
++ exgfs_wave_post_pnt.sh[422]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.007.05
++ exgfs_wave_post_pnt.sh[423]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.007.06
++ exgfs_wave_post_pnt.sh[424]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.007.07
++ exgfs_wave_post_pnt.sh[425]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.007.08
++ exgfs_wave_post_pnt.sh[426]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.007.09
++ exgfs_wave_post_pnt.sh[427]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.007.10
++ exgfs_wave_post_pnt.sh[430]: FHINCP=1
++ exgfs_wave_post_pnt.sh[431]: fhrp=8
++ exgfs_wave_post_pnt.sh[432]: fhr=8
++ exgfs_wave_post_pnt.sh[355]: '[' 8 -le 9 ']'
+++ exgfs_wave_post_pnt.sh[357]: date
++ exgfs_wave_post_pnt.sh[357]: echo '   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:24 PM EDT'
+   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:24 PM EDT
+++ exgfs_wave_post_pnt.sh[358]: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-ynnwpz3/bin/ndate 8 2021032500
++ exgfs_wave_post_pnt.sh[358]: ymdh=2021032508
++ exgfs_wave_post_pnt.sh[359]: YMD=20210325
++ exgfs_wave_post_pnt.sh[360]: HMS=080000
++ exgfs_wave_post_pnt.sh[361]: YMDHMS=20210325080000
+++ exgfs_wave_post_pnt.sh[362]: printf %03i 8
++ exgfs_wave_post_pnt.sh[362]: FH3=008
++ exgfs_wave_post_pnt.sh[364]: rm -f tmpcmdfile.008
++ exgfs_wave_post_pnt.sh[365]: touch tmpcmdfile.008
++ exgfs_wave_post_pnt.sh[366]: mkdir output_20210325080000
++ exgfs_wave_post_pnt.sh[367]: cd output_20210325080000
++ exgfs_wave_post_pnt.sh[370]: export SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325080000
++ exgfs_wave_post_pnt.sh[370]: SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325080000
++ exgfs_wave_post_pnt.sh[371]: escaped_SPECDATA='\/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325080000'
++ exgfs_wave_post_pnt.sh[372]: export BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325080000
++ exgfs_wave_post_pnt.sh[372]: BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325080000
++ exgfs_wave_post_pnt.sh[373]: cp /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/mod_def.uglo_100km mod_def.uglo_100km
++ exgfs_wave_post_pnt.sh[375]: pfile=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f008.bin
++ exgfs_wave_post_pnt.sh[376]: '[' -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f008.bin ']'
++ exgfs_wave_post_pnt.sh[378]: /bin/ln -sf /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f008.bin ./out_pnt.uglo_100km
++ exgfs_wave_post_pnt.sh[387]: cd /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
++ exgfs_wave_post_pnt.sh[389]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[391]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[391]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[393]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032508 spec \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325080000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325080000\/spec_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[396]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[398]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[398]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[400]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032508 bull \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325080000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325080000\/bull_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[403]: split -n l/1/10 tmpcmdfile.008
++ exgfs_wave_post_pnt.sh[404]: split -n l/2/10 tmpcmdfile.008
++ exgfs_wave_post_pnt.sh[405]: split -n l/3/10 tmpcmdfile.008
++ exgfs_wave_post_pnt.sh[406]: split -n l/4/10 tmpcmdfile.008
++ exgfs_wave_post_pnt.sh[407]: split -n l/5/10 tmpcmdfile.008
++ exgfs_wave_post_pnt.sh[408]: split -n l/6/10 tmpcmdfile.008
++ exgfs_wave_post_pnt.sh[409]: split -n l/7/10 tmpcmdfile.008
++ exgfs_wave_post_pnt.sh[410]: split -n l/8/10 tmpcmdfile.008
++ exgfs_wave_post_pnt.sh[411]: split -n l/9/10 tmpcmdfile.008
++ exgfs_wave_post_pnt.sh[412]: split -n l/10/10 tmpcmdfile.008
++ exgfs_wave_post_pnt.sh[414]: rm tmpcmdfile.008
++ exgfs_wave_post_pnt.sh[415]: chmod 744 cmdfile.008.01 cmdfile.008.02 cmdfile.008.03 cmdfile.008.04
++ exgfs_wave_post_pnt.sh[416]: chmod 744 cmdfile.008.05 cmdfile.008.06 cmdfile.008.07 cmdfile.008.08
++ exgfs_wave_post_pnt.sh[417]: chmod 744 cmdfile.008.09 cmdfile.008.10
++ exgfs_wave_post_pnt.sh[418]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.008.01
++ exgfs_wave_post_pnt.sh[419]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.008.02
++ exgfs_wave_post_pnt.sh[420]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.008.03
++ exgfs_wave_post_pnt.sh[421]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.008.04
++ exgfs_wave_post_pnt.sh[422]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.008.05
++ exgfs_wave_post_pnt.sh[423]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.008.06
++ exgfs_wave_post_pnt.sh[424]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.008.07
++ exgfs_wave_post_pnt.sh[425]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.008.08
++ exgfs_wave_post_pnt.sh[426]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.008.09
++ exgfs_wave_post_pnt.sh[427]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.008.10
++ exgfs_wave_post_pnt.sh[430]: FHINCP=1
++ exgfs_wave_post_pnt.sh[431]: fhrp=9
++ exgfs_wave_post_pnt.sh[432]: fhr=9
++ exgfs_wave_post_pnt.sh[355]: '[' 9 -le 9 ']'
+++ exgfs_wave_post_pnt.sh[357]: date
++ exgfs_wave_post_pnt.sh[357]: echo '   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:24 PM EDT'
+   Creating the wave point scripts at : Mon 31 Mar 2025 07:09:24 PM EDT
+++ exgfs_wave_post_pnt.sh[358]: /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/prod-util-2.1.1-ynnwpz3/bin/ndate 9 2021032500
++ exgfs_wave_post_pnt.sh[358]: ymdh=2021032509
++ exgfs_wave_post_pnt.sh[359]: YMD=20210325
++ exgfs_wave_post_pnt.sh[360]: HMS=090000
++ exgfs_wave_post_pnt.sh[361]: YMDHMS=20210325090000
+++ exgfs_wave_post_pnt.sh[362]: printf %03i 9
++ exgfs_wave_post_pnt.sh[362]: FH3=009
++ exgfs_wave_post_pnt.sh[364]: rm -f tmpcmdfile.009
++ exgfs_wave_post_pnt.sh[365]: touch tmpcmdfile.009
++ exgfs_wave_post_pnt.sh[366]: mkdir output_20210325090000
++ exgfs_wave_post_pnt.sh[367]: cd output_20210325090000
++ exgfs_wave_post_pnt.sh[370]: export SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325090000
++ exgfs_wave_post_pnt.sh[370]: SPECDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325090000
++ exgfs_wave_post_pnt.sh[371]: escaped_SPECDATA='\/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325090000'
++ exgfs_wave_post_pnt.sh[372]: export BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325090000
++ exgfs_wave_post_pnt.sh[372]: BULLDATA=/gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/output_20210325090000
++ exgfs_wave_post_pnt.sh[373]: cp /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/mod_def.uglo_100km mod_def.uglo_100km
++ exgfs_wave_post_pnt.sh[375]: pfile=/gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f009.bin
++ exgfs_wave_post_pnt.sh[376]: '[' -f /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f009.bin ']'
++ exgfs_wave_post_pnt.sh[378]: /bin/ln -sf /gpfs/f6/drsa-precip3/world-shared/global/CI/3517/RUNTESTS/COMROOT/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.20210325/00//model/wave/history/gdas.wave.t00z.points.f009.bin ./out_pnt.uglo_100km
++ exgfs_wave_post_pnt.sh[387]: cd /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496
++ exgfs_wave_post_pnt.sh[389]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[391]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[391]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[393]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032509 spec \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325090000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325090000\/spec_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[396]: '[' YES = YES ']'
++ exgfs_wave_post_pnt.sh[398]: export dtspec=3600.
++ exgfs_wave_post_pnt.sh[398]: dtspec=3600.
++ exgfs_wave_post_pnt.sh[400]: sed 's/^\(.*\)$/\/gpfs\/f6\/drsa-precip3\/world-shared\/global\/CI\/3517\/global-workflow\/ush\/wave_outp_spec.sh \1 2021032509 bull \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325090000 > \/gpfs\/f6\/drsa-precip3\/scratch\/role.glopara\/RUNDIRS\/C48mx500_3DVarAOWCDA_f3ad91c8\/gdas.2021032500\/wavepostpnt.1330496\/output_20210325090000\/bull_\1.out 2>\&1/' buoy_lst.txt
++ exgfs_wave_post_pnt.sh[403]: split -n l/1/10 tmpcmdfile.009
++ exgfs_wave_post_pnt.sh[404]: split -n l/2/10 tmpcmdfile.009
++ exgfs_wave_post_pnt.sh[405]: split -n l/3/10 tmpcmdfile.009
++ exgfs_wave_post_pnt.sh[406]: split -n l/4/10 tmpcmdfile.009
++ exgfs_wave_post_pnt.sh[407]: split -n l/5/10 tmpcmdfile.009
++ exgfs_wave_post_pnt.sh[408]: split -n l/6/10 tmpcmdfile.009
++ exgfs_wave_post_pnt.sh[409]: split -n l/7/10 tmpcmdfile.009
++ exgfs_wave_post_pnt.sh[410]: split -n l/8/10 tmpcmdfile.009
++ exgfs_wave_post_pnt.sh[411]: split -n l/9/10 tmpcmdfile.009
++ exgfs_wave_post_pnt.sh[412]: split -n l/10/10 tmpcmdfile.009
++ exgfs_wave_post_pnt.sh[414]: rm tmpcmdfile.009
++ exgfs_wave_post_pnt.sh[415]: chmod 744 cmdfile.009.01 cmdfile.009.02 cmdfile.009.03 cmdfile.009.04
++ exgfs_wave_post_pnt.sh[416]: chmod 744 cmdfile.009.05 cmdfile.009.06 cmdfile.009.07 cmdfile.009.08
++ exgfs_wave_post_pnt.sh[417]: chmod 744 cmdfile.009.09 cmdfile.009.10
++ exgfs_wave_post_pnt.sh[418]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.009.01
++ exgfs_wave_post_pnt.sh[419]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.009.02
++ exgfs_wave_post_pnt.sh[420]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.009.03
++ exgfs_wave_post_pnt.sh[421]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.009.04
++ exgfs_wave_post_pnt.sh[422]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.009.05
++ exgfs_wave_post_pnt.sh[423]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.009.06
++ exgfs_wave_post_pnt.sh[424]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.009.07
++ exgfs_wave_post_pnt.sh[425]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.009.08
++ exgfs_wave_post_pnt.sh[426]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.009.09
++ exgfs_wave_post_pnt.sh[427]: echo /gpfs/f6/drsa-precip3/scratch/role.glopara/RUNDIRS/C48mx500_3DVarAOWCDA_f3ad91c8/gdas.2021032500/wavepostpnt.1330496/cmdfile.009.10
++ exgfs_wave_post_pnt.sh[430]: FHINCP=1
++ exgfs_wave_post_pnt.sh[431]: fhrp=10
++ exgfs_wave_post_pnt.sh[432]: fhr=10
++ exgfs_wave_post_pnt.sh[355]: '[' 10 -le 9 ']'
++ exgfs_wave_post_pnt.sh[437]: '[' NO = YES ']'
+++ exgfs_wave_post_pnt.sh[464]: wc -l cmdfile
+++ exgfs_wave_post_pnt.sh[464]: awk '{print $1}'
++ exgfs_wave_post_pnt.sh[464]: wavenproc=100
+++ exgfs_wave_post_pnt.sh[465]: echo 100
++ exgfs_wave_post_pnt.sh[465]: wavenproc=100
++ exgfs_wave_post_pnt.sh[467]: set +x
+ 
+   Executing the wave point scripts at : Mon 31 Mar 2025 07:09:25 PM EDT
+   ------------------------------------
+ 
++ exgfs_wave_post_pnt.sh[474]: '[' 100 -gt 1 ']'
++ exgfs_wave_post_pnt.sh[476]: '[' NO = YES ']'
++ exgfs_wave_post_pnt.sh[479]: srun -l --export=ALL 100 --multi-prog --output=mpmd.%j.%t.out cmdfile
+  0: slurmstepd: error: execve(): 100: No such file or directory
+ 10: slurmstepd: error: execve(): 100: No such file or directory
+ 16: slurmstepd: error: execve(): 100: No such file or directory
+ 18: slurmstepd: error: execve(): 100: No such file or directory
+ 22: slurmstepd: error: execve(): 100: No such file or directory
+ 24: slurmstepd: error: execve(): 100: No such file or directory
+ 26: slurmstepd: error: execve(): 100: No such file or directory
+ 28: slurmstepd: error: execve(): 100: No such file or directory
+ 30: slurmstepd: error: execve(): 100: No such file or directory
+ 32: slurmstepd: error: execve(): 100: No such file or directory
+ 33: slurmstepd: error: execve(): 100: No such file or directory
+ 34: slurmstepd: error: execve(): 100: No such file or directory
+ 35: slurmstepd: error: execve(): 100: No such file or directory
+ 36: slurmstepd: error: execve(): 100: No such file or directory
+ 37: slurmstepd: error: execve(): 100: No such file or directory
+ 38: slurmstepd: error: execve(): 100: No such file or directory
+ 39: slurmstepd: error: execve(): 100: No such file or directory
+  1: slurmstepd: error: execve(): 100: No such file or directory
+  2: slurmstepd: error: execve(): 100: No such file or directory
+  3: slurmstepd: error: execve(): 100: No such file or directory
+  4: slurmstepd: error: execve(): 100: No such file or directory
+  5: slurmstepd: error: execve(): 100: No such file or directory
+  6: slurmstepd: error: execve(): 100: No such file or directory
+  7: slurmstepd: error: execve(): 100: No such file or directory
+  8: slurmstepd: error: execve(): 100: No such file or directory
+  9: slurmstepd: error: execve(): 100: No such file or directory
+ 11: slurmstepd: error: execve(): 100: No such file or directory
+ 12: slurmstepd: error: execve(): 100: No such file or directory
+ 13: slurmstepd: error: execve(): 100: No such file or directory
+ 14: slurmstepd: error: execve(): 100: No such file or directory
+ 15: slurmstepd: error: execve(): 100: No such file or directory
+ 17: slurmstepd: error: execve(): 100: No such file or directory
+ 19: slurmstepd: error: execve(): 100: No such file or directory
+ 20: slurmstepd: error: execve(): 100: No such file or directory
+ 21: slurmstepd: error: execve(): 100: No such file or directory
+ 23: slurmstepd: error: execve(): 100: No such file or directory
+ 25: slurmstepd: error: execve(): 100: No such file or directory
+ 27: slurmstepd: error: execve(): 100: No such file or directory
+ 29: slurmstepd: error: execve(): 100: No such file or directory
+ 31: slurmstepd: error: execve(): 100: No such file or directory
+ 53: slurmstepd: error: execve(): 100: No such file or directory
+ 59: slurmstepd: error: execve(): 100: No such file or directory
+ 64: slurmstepd: error: execve(): 100: No such file or directory
+ 70: slurmstepd: error: execve(): 100: No such file or directory
+ 71: slurmstepd: error: execve(): 100: No such file or directory
+ 72: slurmstepd: error: execve(): 100: No such file or directory
+ 74: slurmstepd: error: execve(): 100: No such file or directory
+ 76: slurmstepd: error: execve(): 100: No such file or directory
+ 78: slurmstepd: error: execve(): 100: No such file or directory
+ 40: slurmstepd: error: execve(): 100: No such file or directory
+ 41: slurmstepd: error: execve(): 100: No such file or directory
+ 42: slurmstepd: error: execve(): 100: No such file or directory
+ 43: slurmstepd: error: execve(): 100: No such file or directory
+ 44: slurmstepd: error: execve(): 100: No such file or directory
+ 45: slurmstepd: error: execve(): 100: No such file or directory
+ 46: slurmstepd: error: execve(): 100: No such file or directory
+ 47: slurmstepd: error: execve(): 100: No such file or directory
+ 48: slurmstepd: error: execve(): 100: No such file or directory
+ 49: slurmstepd: error: execve(): 100: No such file or directory
+ 50: slurmstepd: error: execve(): 100: No such file or directory
+ 51: slurmstepd: error: execve(): 100: No such file or directory
+ 52: slurmstepd: error: execve(): 100: No such file or directory
+ 54: slurmstepd: error: execve(): 100: No such file or directory
+ 55: slurmstepd: error: execve(): 100: No such file or directory
+ 56: slurmstepd: error: execve(): 100: No such file or directory
+ 57: slurmstepd: error: execve(): 100: No such file or directory
+ 58: slurmstepd: error: execve(): 100: No such file or directory
+ 60: slurmstepd: error: execve(): 100: No such file or directory
+ 61: slurmstepd: error: execve(): 100: No such file or directory
+ 62: slurmstepd: error: execve(): 100: No such file or directory
+ 63: slurmstepd: error: execve(): 100: No such file or directory
+ 65: slurmstepd: error: execve(): 100: No such file or directory
+ 66: slurmstepd: error: execve(): 100: No such file or directory
+ 67: slurmstepd: error: execve(): 100: No such file or directory
+ 68: slurmstepd: error: execve(): 100: No such file or directory
+ 69: slurmstepd: error: execve(): 100: No such file or directory
+ 73: slurmstepd: error: execve(): 100: No such file or directory
+ 75: slurmstepd: error: execve(): 100: No such file or directory
+ 77: slurmstepd: error: execve(): 100: No such file or directory
+ 79: slurmstepd: error: execve(): 100: No such file or directory
+121: slurmstepd: error: execve(): 100: No such file or directory
+129: slurmstepd: error: execve(): 100: No such file or directory
+131: slurmstepd: error: execve(): 100: No such file or directory
+133: slurmstepd: error: execve(): 100: No such file or directory
+137: slurmstepd: error: execve(): 100: No such file or directory
+139: slurmstepd: error: execve(): 100: No such file or directory
+141: slurmstepd: error: execve(): 100: No such file or directory
+143: slurmstepd: error: execve(): 100: No such file or directory
+145: slurmstepd: error: execve(): 100: No such file or directory
+147: slurmstepd: error: execve(): 100: No such file or directory
+149: slurmstepd: error: execve(): 100: No such file or directory
+150: slurmstepd: error: execve(): 100: No such file or directory
+151: slurmstepd: error: execve(): 100: No such file or directory
+152: slurmstepd: error: execve(): 100: No such file or directory
+154: slurmstepd: error: execve(): 100: No such file or directory
+156: slurmstepd: error: execve(): 100: No such file or directory
+158: slurmstepd: error: execve(): 100: No such file or directory
+120: slurmstepd: error: execve(): 100: No such file or directory
+122: slurmstepd: error: execve(): 100: No such file or directory
+123: slurmstepd: error: execve(): 100: No such file or directory
+124: slurmstepd: error: execve(): 100: No such file or directory
+125: slurmstepd: error: execve(): 100: No such file or directory
+126: slurmstepd: error: execve(): 100: No such file or directory
+127: slurmstepd: error: execve(): 100: No such file or directory
+128: slurmstepd: error: execve(): 100: No such file or directory
+130: slurmstepd: error: execve(): 100: No such file or directory
+132: slurmstepd: error: execve(): 100: No such file or directory
+134: slurmstepd: error: execve(): 100: No such file or directory
+135: slurmstepd: error: execve(): 100: No such file or directory
+136: slurmstepd: error: execve(): 100: No such file or directory
+138: slurmstepd: error: execve(): 100: No such file or directory
+140: slurmstepd: error: execve(): 100: No such file or directory
+142: slurmstepd: error: execve(): 100: No such file or directory
+144: slurmstepd: error: execve(): 100: No such file or directory
+146: slurmstepd: error: execve(): 100: No such file or directory
+148: slurmstepd: error: execve(): 100: No such file or directory
+153: slurmstepd: error: execve(): 100: No such file or directory
+155: slurmstepd: error: execve(): 100: No such file or directory
+157: slurmstepd: error: execve(): 100: No such file or directory
+159: slurmstepd: error: execve(): 100: No such file or directory
+ 83: slurmstepd: error: execve(): 100: No such file or directory
+ 85: slurmstepd: error: execve(): 100: No such file or directory
+ 93: slurmstepd: error: execve(): 100: No such file or directory
+ 98: slurmstepd: error: execve(): 100: No such file or directory
+103: slurmstepd: error: execve(): 100: No such file or directory
+107: slurmstepd: error: execve(): 100: No such file or directory
+110: slurmstepd: error: execve(): 100: No such file or directory
+111: slurmstepd: error: execve(): 100: No such file or directory
+113: slurmstepd: error: execve(): 100: No such file or directory
+115: slurmstepd: error: execve(): 100: No such file or directory
+119: slurmstepd: error: execve(): 100: No such file or directory
+ 80: slurmstepd: error: execve(): 100: No such file or directory
+ 81: slurmstepd: error: execve(): 100: No such file or directory
+ 82: slurmstepd: error: execve(): 100: No such file or directory
+ 84: slurmstepd: error: execve(): 100: No such file or directory
+ 86: slurmstepd: error: execve(): 100: No such file or directory
+ 87: slurmstepd: error: execve(): 100: No such file or directory
+ 88: slurmstepd: error: execve(): 100: No such file or directory
+ 89: slurmstepd: error: execve(): 100: No such file or directory
+ 90: slurmstepd: error: execve(): 100: No such file or directory
+ 91: slurmstepd: error: execve(): 100: No such file or directory
+ 92: slurmstepd: error: execve(): 100: No such file or directory
+ 94: slurmstepd: error: execve(): 100: No such file or directory
+ 95: slurmstepd: error: execve(): 100: No such file or directory
+ 96: slurmstepd: error: execve(): 100: No such file or directory
+ 97: slurmstepd: error: execve(): 100: No such file or directory
+ 99: slurmstepd: error: execve(): 100: No such file or directory
+100: slurmstepd: error: execve(): 100: No such file or directory
+101: slurmstepd: error: execve(): 100: No such file or directory
+102: slurmstepd: error: execve(): 100: No such file or directory
+104: slurmstepd: error: execve(): 100: No such file or directory
+105: slurmstepd: error: execve(): 100: No such file or directory
+106: slurmstepd: error: execve(): 100: No such file or directory
+108: slurmstepd: error: execve(): 100: No such file or directory
+109: slurmstepd: error: execve(): 100: No such file or directory
+112: slurmstepd: error: execve(): 100: No such file or directory
+114: slurmstepd: error: execve(): 100: No such file or directory
+116: slurmstepd: error: execve(): 100: No such file or directory
+117: slurmstepd: error: execve(): 100: No such file or directory
+118: slurmstepd: error: execve(): 100: No such file or directory
+165: slurmstepd: error: execve(): 100: No such file or directory
+178: slurmstepd: error: execve(): 100: No such file or directory
+184: slurmstepd: error: execve(): 100: No such file or directory
+188: slurmstepd: error: execve(): 100: No such file or directory
+190: slurmstepd: error: execve(): 100: No such file or directory
+194: slurmstepd: error: execve(): 100: No such file or directory
+195: slurmstepd: error: execve(): 100: No such file or directory
+197: slurmstepd: error: execve(): 100: No such file or directory
+199: slurmstepd: error: execve(): 100: No such file or directory
+160: slurmstepd: error: execve(): 100: No such file or directory
+161: slurmstepd: error: execve(): 100: No such file or directory
+162: slurmstepd: error: execve(): 100: No such file or directory
+163: slurmstepd: error: execve(): 100: No such file or directory
+164: slurmstepd: error: execve(): 100: No such file or directory
+166: slurmstepd: error: execve(): 100: No such file or directory
+167: slurmstepd: error: execve(): 100: No such file or directory
+168: slurmstepd: error: execve(): 100: No such file or directory
+169: slurmstepd: error: execve(): 100: No such file or directory
+170: slurmstepd: error: execve(): 100: No such file or directory
+171: slurmstepd: error: execve(): 100: No such file or directory
+172: slurmstepd: error: execve(): 100: No such file or directory
+173: slurmstepd: error: execve(): 100: No such file or directory
+174: slurmstepd: error: execve(): 100: No such file or directory
+175: slurmstepd: error: execve(): 100: No such file or directory
+176: slurmstepd: error: execve(): 100: No such file or directory
+177: slurmstepd: error: execve(): 100: No such file or directory
+179: slurmstepd: error: execve(): 100: No such file or directory
+180: slurmstepd: error: execve(): 100: No such file or directory
+181: slurmstepd: error: execve(): 100: No such file or directory
+182: slurmstepd: error: execve(): 100: No such file or directory
+183: slurmstepd: error: execve(): 100: No such file or directory
+185: slurmstepd: error: execve(): 100: No such file or directory
+186: slurmstepd: error: execve(): 100: No such file or directory
+187: slurmstepd: error: execve(): 100: No such file or directory
+189: slurmstepd: error: execve(): 100: No such file or directory
+191: slurmstepd: error: execve(): 100: No such file or directory
+192: slurmstepd: error: execve(): 100: No such file or directory
+193: slurmstepd: error: execve(): 100: No such file or directory
+196: slurmstepd: error: execve(): 100: No such file or directory
+198: slurmstepd: error: execve(): 100: No such file or directory
+srun: error: c6n0857: tasks 0-39: Exited with exit code 2
+srun: Terminating StepId=208218273.0
+srun: error: c6n0859: tasks 40-79: Exited with exit code 2
+srun: error: c6n0862: tasks 120-159: Exited with exit code 2
+srun: error: c6n0860: tasks 80-119: Exited with exit code 2
+srun: error: c6n0863: tasks 160-199: Exited with exit code 2
++ exgfs_wave_post_pnt.sh[1]: postamble exgfs_wave_post_pnt.sh 1743462559 2
++ preamble.sh[70]: set +x
+End exgfs_wave_post_pnt.sh at 23:09:26 with error code 2 (time elapsed: 00:00:07)
++ JGLOBAL_WAVE_POST_PNT[1]: postamble JGLOBAL_WAVE_POST_PNT 1743462554 2
++ preamble.sh[70]: set +x
+End JGLOBAL_WAVE_POST_PNT at 23:09:26 with error code 2 (time elapsed: 00:00:12)
++ wavepostpnt.sh[1]: postamble wavepostpnt.sh 1743462551 2
++ preamble.sh[70]: set +x
+End wavepostpnt.sh at 23:09:26 with error code 2 (time elapsed: 00:00:15)
