@@ -1,0 +1,4360 @@
+Started by upstream project "global-workflow/EMC-Global-Pipeline/PR-3517" build number 6
+originally caused by:
+ Branch indexing
+Connecting to https://api.github.com using emcbot/****** (TOKEN to EMC GItHub bot account)
+Connecting to https://api.github.com to check permissions of obtain list of aerorahul for NOAA-EMC/global-workflow
+Obtained ci/Jenkinsfile from 8d714478444c48681e50560b8f53eb3cd71f94b0
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/flow_EMC-Global-Pipeline_PR-3517__2
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (1. Get Machine)
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/flow_EMC-Global-Pipeline_PR-3517__3
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+machine being set to value passed to this spawned job
+[Pipeline] echo
+passed machine: hera
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (2. Get Common Workspace)
+[Pipeline] node
+Running on Hera-EMC in /scratch1/NCEPDEV/global/Terry.McGuinness/GFS_CI_ROOT_JENKINS/Jenkins/workspace/flow_EMC-Global-Pipeline_PR-3517
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Getting Common Workspace for Hera
+[Pipeline] ws
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517
+[Pipeline] {
+[Pipeline] properties
+[Pipeline] sh
++ which gh
++ alias
++ eval declare -f
+++ declare -f
++ /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot gh
+[Pipeline] sh
++ rm -Rf /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
++ mkdir -p /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+[Pipeline] sh
++ rm -Rf /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS
++ mkdir -p /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --add-label CI-Hera-Building --remove-label CI-Hera-Ready
+https://github.com/NOAA-EMC/global-workflow/pull/3517
+[Pipeline] }
+[Pipeline] // ws
+[Pipeline] echo
+Building and running on Hera in directory /scratch1/NCEPDEV/global/glopara/CI/3517
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (3. Build System)
+[Pipeline] node
+Running on Hera-EMC in /scratch1/NCEPDEV/global/Terry.McGuinness/GFS_CI_ROOT_JENKINS/Jenkins/workspace/flow_EMC-Global-Pipeline_PR-3517
+[Pipeline] {
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] ws
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+[Pipeline] {
+[Pipeline] echo
+Checking out the code on Hera using scm in /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+[Pipeline] checkout
+The recommended git tool is: git
+using credential emc-bot
+Cloning the remote Git repository
+Cloning with configured refspecs honoured and without tags
+Cloning repository https://github.com/NOAA-EMC/global-workflow.git
+ > git init /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow # timeout=10
+Fetching upstream changes from https://github.com/NOAA-EMC/global-workflow.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.5'
+using GIT_ASKPASS to set credentials TOKEN to EMC GItHub bot account
+ > git fetch --no-tags --force --progress -- https://github.com/NOAA-EMC/global-workflow.git +refs/pull/3517/head:refs/remotes/origin/PR-3517 # timeout=10
+ > git config remote.origin.url https://github.com/NOAA-EMC/global-workflow.git # timeout=10
+ > git config --add remote.origin.fetch +refs/pull/3517/head:refs/remotes/origin/PR-3517 # timeout=10
+Fetching without tags
+Checking out Revision 8d714478444c48681e50560b8f53eb3cd71f94b0 (PR-3517)
+ > git config remote.origin.url https://github.com/NOAA-EMC/global-workflow.git # timeout=10
+Fetching upstream changes from https://github.com/NOAA-EMC/global-workflow.git
+using GIT_ASKPASS to set credentials TOKEN to EMC GItHub bot account
+ > git fetch --no-tags --force --progress -- https://github.com/NOAA-EMC/global-workflow.git +refs/pull/3517/head:refs/remotes/origin/PR-3517 # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8d714478444c48681e50560b8f53eb3cd71f94b0 # timeout=10
+Commit message: "apply reviewer comment"
+ > git rev-list --no-walk 3c35bed574b46bf6a8be0e60e1a259fd26abcdab # timeout=10
+Using shallow submodule update with depth 1
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.sorc/ufs_model.fd.url # timeout=10
+ > git config -f .gitmodules --get submodule.sorc/ufs_model.fd.path # timeout=10
+ > git config --get submodule.sorc/wxflow.url # timeout=10
+ > git config -f .gitmodules --get submodule.sorc/wxflow.path # timeout=10
+ > git config --get submodule.sorc/gfs_utils.fd.url # timeout=10
+ > git config -f .gitmodules --get submodule.sorc/gfs_utils.fd.path # timeout=10
+ > git config --get submodule.sorc/ufs_utils.fd.url # timeout=10
+ > git config -f .gitmodules --get submodule.sorc/ufs_utils.fd.path # timeout=10
+ > git config --get submodule.sorc/verif-global.fd.url # timeout=10
+ > git config -f .gitmodules --get submodule.sorc/verif-global.fd.path # timeout=10
+ > git config --get submodule.sorc/gsi_enkf.fd.url # timeout=10
+ > git config -f .gitmodules --get submodule.sorc/gsi_enkf.fd.path # timeout=10
+ > git config --get submodule.sorc/gdas.cd.url # timeout=10
+ > git config -f .gitmodules --get submodule.sorc/gdas.cd.path # timeout=10
+ > git config --get submodule.sorc/gsi_utils.fd.url # timeout=10
+ > git config -f .gitmodules --get submodule.sorc/gsi_utils.fd.path # timeout=10
+ > git config --get submodule.sorc/gsi_monitor.fd.url # timeout=10
+ > git config -f .gitmodules --get submodule.sorc/gsi_monitor.fd.path # timeout=10
+ > git submodule update --init --recursive --depth=1 sorc/ufs_model.fd # timeout=30
+ > git submodule update --init --recursive --depth=1 sorc/wxflow # timeout=30
+ > git submodule update --init --recursive --depth=1 sorc/gfs_utils.fd # timeout=30
+ > git submodule update --init --recursive --depth=1 sorc/ufs_utils.fd # timeout=30
+ > git submodule update --init --recursive --depth=1 sorc/verif-global.fd # timeout=30
+ > git submodule update --init --recursive --depth=1 sorc/gsi_enkf.fd # timeout=30
+ > git submodule update --init --recursive --depth=1 sorc/gdas.cd # timeout=30
+ > git submodule update --init --recursive --depth=1 sorc/gsi_utils.fd # timeout=30
+[Pipeline] dir
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc
+[Pipeline] {
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh build_compute
+++++ readlink -f -n /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/build_compute.sh
++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/build_compute.sh
+++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/..
+++ pwd -P
++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
++ mkdir -p /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/logs
++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc
++ rm -f build.xml build.db build_lock.db
++ echo 'Sourcing global-workflow modules ...'
+Sourcing global-workflow modules ...
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ echo 'Generating build.xml for building global-workflow programs on compute nodes ...'
+Generating build.xml for building global-workflow programs on compute nodes ...
++ set +e
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/build_compute.py --account fv3-cpu --yaml /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/build_opts.yaml --systems all
++ rc=0
++ [[ 0 -ne 0 ]]
++ echo 'Launching builds in parallel on compute nodes ...'
+Launching builds in parallel on compute nodes ...
++ runcmd='rocotorun -w build.xml -d build.db -v10'
++ finished=false
++ rocotorun -w build.xml -d build.db -v10
+04/02/25 21:22:45 UTC :: build.xml :: Submitting gfs_model using sbatch < /tmp/sbatch.in20250402-1113568-j1eglt with input
+{{
+#! /bin/sh
+#SBATCH --job-name=gfs_model
+#SBATCH --account=fv3-cpu
+#SBATCH --qos=batch
+#SBATCH --partition=hera
+#SBATCH -t 00:30:00
+#SBATCH --nodes=1-1
+#SBATCH --tasks-per-node=12
+#SBATCH --cpus-per-task=1
+#SBATCH -o /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/logs/gfs_model.log
+#SBATCH --export=NONE
+#SBATCH --comment=ea6b42621c7eb6e37ac8363deae44b17
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/; ./build_ufs.sh -e gfs_model.x -j 12
+}}
+04/02/25 21:22:45 UTC :: build.xml :: Submitting gfs_ww3prepost using sbatch < /tmp/sbatch.in20250402-1113568-dkgq46 with input
+{{
+#! /bin/sh
+#SBATCH --job-name=gfs_ww3prepost
+#SBATCH --account=fv3-cpu
+#SBATCH --qos=batch
+#SBATCH --partition=hera
+#SBATCH -t 00:15:00
+#SBATCH --nodes=1-1
+#SBATCH --tasks-per-node=4
+#SBATCH --cpus-per-task=1
+#SBATCH -o /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/logs/gfs_ww3prepost.log
+#SBATCH --export=NONE
+#SBATCH --comment=2337751e7b45c2f409ca90f24f569417
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/; ./build_ww3prepost.sh -j 4
+}}
+04/02/25 21:22:45 UTC :: build.xml :: Submitting gefs_model using sbatch < /tmp/sbatch.in20250402-1113568-3jsbvm with input
+{{
+#! /bin/sh
+#SBATCH --job-name=gefs_model
+#SBATCH --account=fv3-cpu
+#SBATCH --qos=batch
+#SBATCH --partition=hera
+#SBATCH -t 00:30:00
+#SBATCH --nodes=1-1
+#SBATCH --tasks-per-node=12
+#SBATCH --cpus-per-task=1
+#SBATCH -o /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/logs/gefs_model.log
+#SBATCH --export=NONE
+#SBATCH --comment=5781917258978fa1b2f5121a595f78a4
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/; ./build_ufs.sh -w -e gefs_model.x -j 12
+}}
+04/02/25 21:22:45 UTC :: build.xml :: Submitting gefs_ww3_prepost using sbatch < /tmp/sbatch.in20250402-1113568-3d1od7 with input
+{{
+#! /bin/sh
+#SBATCH --job-name=gefs_ww3_prepost
+#SBATCH --account=fv3-cpu
+#SBATCH --qos=batch
+#SBATCH --partition=hera
+#SBATCH -t 00:15:00
+#SBATCH --nodes=1-1
+#SBATCH --tasks-per-node=4
+#SBATCH --cpus-per-task=1
+#SBATCH -o /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/logs/gefs_ww3_prepost.log
+#SBATCH --export=NONE
+#SBATCH --comment=fedef30151d8919b54c468756fcc911b
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/; ./build_ww3prepost.sh -w -j 4
+}}
+04/02/25 21:22:45 UTC :: build.xml :: Submitting sfs_model using sbatch < /tmp/sbatch.in20250402-1113568-wqocpv with input
+{{
+#! /bin/sh
+#SBATCH --job-name=sfs_model
+#SBATCH --account=fv3-cpu
+#SBATCH --qos=batch
+#SBATCH --partition=hera
+#SBATCH -t 00:30:00
+#SBATCH --nodes=1-1
+#SBATCH --tasks-per-node=12
+#SBATCH --cpus-per-task=1
+#SBATCH -o /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/logs/sfs_model.log
+#SBATCH --export=NONE
+#SBATCH --comment=102060f0b86aafae9926453cfcd44797
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/; ./build_ufs.sh -y -e sfs_model.x -j 12
+}}
+04/02/25 21:22:45 UTC :: build.xml :: Submitting upp using sbatch < /tmp/sbatch.in20250402-1113568-8c2708 with input
+{{
+#! /bin/sh
+#SBATCH --job-name=upp
+#SBATCH --account=fv3-cpu
+#SBATCH --qos=batch
+#SBATCH --partition=hera
+#SBATCH -t 00:15:00
+#SBATCH --nodes=1-1
+#SBATCH --tasks-per-node=8
+#SBATCH --cpus-per-task=1
+#SBATCH -o /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/logs/upp.log
+#SBATCH --export=NONE
+#SBATCH --comment=375d25ef756baa630c33c9fe6a6a70db
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/; ./build_upp.sh -j 8
+}}
+04/02/25 21:22:45 UTC :: build.xml :: Submitting gsi_enkf using sbatch < /tmp/sbatch.in20250402-1113568-tlsmcl with input
+{{
+#! /bin/sh
+#SBATCH --job-name=gsi_enkf
+#SBATCH --account=fv3-cpu
+#SBATCH --qos=batch
+#SBATCH --partition=hera
+#SBATCH -t 00:15:00
+#SBATCH --nodes=1-1
+#SBATCH --tasks-per-node=8
+#SBATCH --cpus-per-task=1
+#SBATCH -o /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/logs/gsi_enkf.log
+#SBATCH --export=NONE
+#SBATCH --comment=85e35e1ce28d1dee50fb3575597114ce
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/; ./build_gsi_enkf.sh -j 8
+}}
+04/02/25 21:22:45 UTC :: build.xml :: Submitting gsi_monitor using sbatch < /tmp/sbatch.in20250402-1113568-rrqtb2 with input
+{{
+#! /bin/sh
+#SBATCH --job-name=gsi_monitor
+#SBATCH --account=fv3-cpu
+#SBATCH --qos=batch
+#SBATCH --partition=hera
+#SBATCH -t 00:15:00
+#SBATCH --nodes=1-1
+#SBATCH --tasks-per-node=4
+#SBATCH --cpus-per-task=1
+#SBATCH -o /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/logs/gsi_monitor.log
+#SBATCH --export=NONE
+#SBATCH --comment=4af50161a282e4c983c1736138553d39
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/; ./build_gsi_monitor.sh -j 4
+}}
+04/02/25 21:22:45 UTC :: build.xml :: Submitting gsi_utils using sbatch < /tmp/sbatch.in20250402-1113568-2z3fw8 with input
+{{
+#! /bin/sh
+#SBATCH --job-name=gsi_utils
+#SBATCH --account=fv3-cpu
+#SBATCH --qos=batch
+#SBATCH --partition=hera
+#SBATCH -t 00:15:00
+#SBATCH --nodes=1-1
+#SBATCH --tasks-per-node=6
+#SBATCH --cpus-per-task=1
+#SBATCH -o /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/logs/gsi_utils.log
+#SBATCH --export=NONE
+#SBATCH --comment=9e565e16de4fa61b2a298866d1bee251
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/; ./build_gsi_utils.sh -j 6
+}}
+04/02/25 21:22:45 UTC :: build.xml :: Submitting ufs_utils using sbatch < /tmp/sbatch.in20250402-1113568-eowone with input
+{{
+#! /bin/sh
+#SBATCH --job-name=ufs_utils
+#SBATCH --account=fv3-cpu
+#SBATCH --qos=batch
+#SBATCH --partition=hera
+#SBATCH -t 00:15:00
+#SBATCH --nodes=1-1
+#SBATCH --tasks-per-node=8
+#SBATCH --cpus-per-task=1
+#SBATCH -o /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/logs/ufs_utils.log
+#SBATCH --export=NONE
+#SBATCH --comment=63f6a3cce2410bbaee1d3cda44aad998
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/; ./build_ufs_utils.sh -j 8
+}}
+04/02/25 21:22:45 UTC :: build.xml :: Submitting gfs_utils using sbatch < /tmp/sbatch.in20250402-1113568-533d4o with input
+{{
+#! /bin/sh
+#SBATCH --job-name=gfs_utils
+#SBATCH --account=fv3-cpu
+#SBATCH --qos=batch
+#SBATCH --partition=hera
+#SBATCH -t 00:15:00
+#SBATCH --nodes=1-1
+#SBATCH --tasks-per-node=6
+#SBATCH --cpus-per-task=1
+#SBATCH -o /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/logs/gfs_utils.log
+#SBATCH --export=NONE
+#SBATCH --comment=5bad8b75a6dbabf165a8fe49efc029d6
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/; ./build_gfs_utils.sh -j 6
+}}
+04/02/25 21:22:45 UTC :: build.xml :: Submitting gdas using sbatch < /tmp/sbatch.in20250402-1113568-2mnbcu with input
+{{
+#! /bin/sh
+#SBATCH --job-name=gdas
+#SBATCH --account=fv3-cpu
+#SBATCH --qos=batch
+#SBATCH --partition=hera
+#SBATCH -t 01:30:00
+#SBATCH --nodes=1-1
+#SBATCH --tasks-per-node=40
+#SBATCH --cpus-per-task=1
+#SBATCH -o /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/logs/gdas.log
+#SBATCH --export=NONE
+#SBATCH --comment=edaeb1d6f77cca4d14b469c425e728e6
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/sorc/; ./build_gdas.sh -j 40
+}}
++ echo 'Running builds on compute nodes'
+Running builds on compute nodes
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
+ > git submodule update --init --recursive --depth=1 sorc/gsi_monitor.fd # timeout=30
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=RUNNING
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ RUNNING == \D\O\N\E ]]
++ [[ RUNNING == \R\U\N\N\I\N\G ]]
++ finished=false
++ [[ false == \f\a\l\s\e ]]
++ sleep 1m
++ rocotorun -w build.xml -d build.db -v10
+++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py -w build.xml -d build.db
++ state=DONE
++ [[ '' == \t\r\u\e ]]
++ echo -n .
+.+ [[ DONE == \D\O\N\E ]]
++ finished=true
++ [[ true == \f\a\l\s\e ]]
++ echo 'All builds completed successfully!'
+All builds completed successfully!
++ exit 0
+[Pipeline] sh
++ ./link_workflow.sh
+Begin link_workflow.sh at Wed Apr  2 21:50:12 UTC 2025
+End link_workflow.sh at 21:50:17 with error code 0 (time elapsed: 00:00:05)
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --add-label CI-Hera-Running --remove-label CI-Hera-Building
+https://github.com/NOAA-EMC/global-workflow/pull/3517
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/get_host_case_list.py hera
+[Pipeline] echo
+Cases to run: [C48_ATM, C48mx500_3DVarAOWCDA, C48mx500_hybAOWCDA, C96C48_hybatmDA, C96C48_hybatmaerosnowDA, C48_S2SWA_gefs, C96C48_ufs_hybatmDA, C48_S2SW, C96_atm3DVar, C96mx100_S2S]
+[Pipeline] }
+[Pipeline] // ws
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // catchError
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (4. Run Tests)
+[Pipeline] node
+Running on Hera-EMC in /scratch1/NCEPDEV/global/Terry.McGuinness/GFS_CI_ROOT_JENKINS/Jenkins/workspace/flow_EMC-Global-Pipeline_PR-3517
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] ws
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+[Pipeline] {
+[Pipeline] parallel
+[Pipeline] { (Branch: C48_ATM)
+[Pipeline] { (Branch: C48mx500_3DVarAOWCDA)
+[Pipeline] { (Branch: C48mx500_hybAOWCDA)
+[Pipeline] { (Branch: C96C48_hybatmDA)
+[Pipeline] { (Branch: C96C48_hybatmaerosnowDA)
+[Pipeline] { (Branch: C48_S2SWA_gefs)
+[Pipeline] { (Branch: C96C48_ufs_hybatmDA)
+[Pipeline] { (Branch: C48_S2SW)
+[Pipeline] { (Branch: C96_atm3DVar)
+[Pipeline] { (Branch: C96mx100_S2S)
+[Pipeline] stage
+[Pipeline] { (Create C48_ATM)
+[Pipeline] stage
+[Pipeline] { (Create C48mx500_3DVarAOWCDA)
+[Pipeline] stage
+[Pipeline] { (Create C48mx500_hybAOWCDA)
+[Pipeline] stage
+[Pipeline] { (Create C96C48_hybatmDA)
+[Pipeline] stage
+[Pipeline] { (Create C96C48_hybatmaerosnowDA)
+[Pipeline] stage
+[Pipeline] { (Create C48_S2SWA_gefs)
+[Pipeline] stage
+[Pipeline] { (Create C96C48_ufs_hybatmDA)
+[Pipeline] stage
+[Pipeline] { (Create C48_S2SW)
+[Pipeline] stage
+[Pipeline] { (Create C96_atm3DVar)
+[Pipeline] stage
+[Pipeline] { (Create C96mx100_S2S)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[Pipeline] sh
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] sh
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] sh
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh create_experiment /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/cases/pr/C48_ATM.yaml
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh create_experiment /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/cases/pr/C48mx500_3DVarAOWCDA.yaml
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh create_experiment /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/cases/pr/C48mx500_hybAOWCDA.yaml
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh create_experiment /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/cases/pr/C96C48_hybatmDA.yaml
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh create_experiment /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/cases/pr/C96C48_hybatmaerosnowDA.yaml
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh create_experiment /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/cases/pr/C48_S2SWA_gefs.yaml
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh create_experiment /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/cases/pr/C96C48_ufs_hybatmDA.yaml
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh create_experiment /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/cases/pr/C48_S2SW.yaml
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh create_experiment /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/cases/pr/C96mx100_S2S.yaml
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh create_experiment /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/cases/pr/C96_atm3DVar.yaml
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Running C48_S2SWA_gefs)
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[Pipeline] }
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh get_pslot /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS C48_S2SWA_gefs
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Running C96mx100_S2S)
+[Pipeline] sh
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
++ rm -f /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C48_S2SWA_gefs_8d714478_error.logs
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh get_pslot /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS C96mx100_S2S
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
+[Pipeline] }
+[Pipeline] // script
++ rm -f /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C96mx100_S2S_8d714478_error.logs
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Running C48_S2SW)
+[Pipeline] sh
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] }
+[Pipeline] script
+[Pipeline] {
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
+[Pipeline] sh
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] // script
+[Pipeline] }
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh get_pslot /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS C48_S2SW
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Running C48_ATM)
+[Pipeline] sh
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] script
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] {
++ rm -f /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C48_S2SW_8d714478_error.logs
+[Pipeline] sh
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh get_pslot /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS C48_ATM
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] }
+[Pipeline] // script
++ rm -f /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C48_ATM_8d714478_error.logs
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Running C96_atm3DVar)
+[Pipeline] sh
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh /scratch1/NCEPDEV/global/glopara/CI/3517 C48_S2SWA_gefs_8d714478 global-workflow
+Source modules.
+[Pipeline] sh
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh /scratch1/NCEPDEV/global/glopara/CI/3517 C96mx100_S2S_8d714478 global-workflow
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Source modules.
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh get_pslot /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS C96_atm3DVar
+[Pipeline] sh
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++ rm -f /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C96_atm3DVar_8d714478_error.logs
+[Pipeline] sh
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh /scratch1/NCEPDEV/global/glopara/CI/3517 C48_S2SW_8d714478 global-workflow
+Source modules.
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C48_S2SWA_gefs_8d714478
+Launch experiment with Rocoto.
+[Pipeline] // stage
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] stage
+[Pipeline] { (Running C48mx500_3DVarAOWCDA)
+[Pipeline] catchError
+[Pipeline] {
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh /scratch1/NCEPDEV/global/glopara/CI/3517 C48_ATM_8d714478 global-workflow
+Source modules.
+[Pipeline] }
+[Pipeline] script
+[Pipeline] {
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] sh
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C96mx100_S2S_8d714478
+Launch experiment with Rocoto.
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Running C48mx500_hybAOWCDA)
+[Pipeline] }
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh get_pslot /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS C48mx500_3DVarAOWCDA
+[Pipeline] }
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] // script
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] }
+[Pipeline] }
+[Pipeline] script
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh /scratch1/NCEPDEV/global/glopara/CI/3517 C96_atm3DVar_8d714478 global-workflow
+Source modules.
+[Pipeline] {
+[Pipeline] sh
+[Pipeline] sh
++ rm -f /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C48mx500_3DVarAOWCDA_8d714478_error.logs
+[Pipeline] // stage
+[Pipeline] // stage
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh get_pslot /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS C48mx500_hybAOWCDA
+[Pipeline] // script
+[Pipeline] stage
+[Pipeline] { (Running C96C48_hybatmDA)
+[Pipeline] stage
+[Pipeline] { (Running C96C48_hybatmaerosnowDA)
+[Pipeline] }
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C48_S2SW_8d714478
+Launch experiment with Rocoto.
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] sh
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+[Pipeline] script
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C48_ATM_8d714478
+Launch experiment with Rocoto.
+[Pipeline] sh
+[Pipeline] sh
++ rm -f /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C48mx500_hybAOWCDA_8d714478_error.logs
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh get_pslot /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS C96C48_hybatmDA
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Running C96C48_ufs_hybatmDA)
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh get_pslot /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS C96C48_hybatmaerosnowDA
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh get_pslot /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS C96C48_ufs_hybatmDA
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C96_atm3DVar_8d714478
+Launch experiment with Rocoto.
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] sh
++ rm -f /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C96C48_hybatmDA_8d714478_error.logs
+[Pipeline] sh
++ rm -f /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C96C48_hybatmaerosnowDA_8d714478_error.logs
+[Pipeline] sh
++ rm -f /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C96C48_ufs_hybatmDA_8d714478_error.logs
+[Pipeline] sh
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh /scratch1/NCEPDEV/global/glopara/CI/3517 C48mx500_3DVarAOWCDA_8d714478 global-workflow
+Source modules.
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] sh
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh /scratch1/NCEPDEV/global/glopara/CI/3517 C48mx500_hybAOWCDA_8d714478 global-workflow
+Source modules.
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_8d714478
+Launch experiment with Rocoto.
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh /scratch1/NCEPDEV/global/glopara/CI/3517 C96C48_hybatmDA_8d714478 global-workflow
+Source modules.
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh /scratch1/NCEPDEV/global/glopara/CI/3517 C96C48_hybatmaerosnowDA_8d714478 global-workflow
+Source modules.
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh /scratch1/NCEPDEV/global/glopara/CI/3517 C96C48_ufs_hybatmDA_8d714478 global-workflow
+Source modules.
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C48mx500_hybAOWCDA_8d714478
+Launch experiment with Rocoto.
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+Run rocotorun.
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_8d714478
+Launch experiment with Rocoto.
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C96C48_hybatmDA_8d714478
+Launch experiment with Rocoto.
+cd /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_8d714478
+Launch experiment with Rocoto.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Gather Rocoto statistics
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96_atm3DVar_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Gather Rocoto statistics
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96_atm3DVar_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Gather Rocoto statistics
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96_atm3DVar_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 0
+	State: RUNNING
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Gather Rocoto statistics
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96_atm3DVar_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 0
+	State: RUNNING
+(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96_atm3DVar_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+(C96_atm3DVar_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Gather Rocoto statistics
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96_atm3DVar_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C96_atm3DVar_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Gather Rocoto statistics
+(C96_atm3DVar_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Gather Rocoto statistics
+(C96_atm3DVar_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C96_atm3DVar_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Gather Rocoto statistics
+(C96_atm3DVar_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+Gather Rocoto statistics
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Gather Rocoto statistics
+(C96_atm3DVar_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Gather Rocoto statistics
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+Run rocotorun.
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+Run rocotorun.
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+Gather Rocoto statistics
+/apps/rocoto/1.3.7/bin/rocotorun: fork: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: Resource temporarily unavailable
+Cannot contact Hera-EMC: java.lang.InterruptedException
+Cannot contact Hera-EMC: java.lang.InterruptedException
+Cannot contact Hera-EMC: java.lang.InterruptedException
+Cannot contact Hera-EMC: java.lang.InterruptedException
+Cannot contact Hera-EMC: java.lang.InterruptedException
+Cannot contact Hera-EMC: java.lang.InterruptedException
+Cannot contact Hera-EMC: java.lang.InterruptedException
+Cannot contact Hera-EMC: java.lang.InterruptedException
+Cannot contact Hera-EMC: java.lang.InterruptedException
+Cannot contact Hera-EMC: java.lang.InterruptedException
+GGather Rocoto statistics
+/apps/rocoto/1.3.7/bin/rocotostat: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/apps/rocoto/1.3.7/sbin/rocotobqserver:98:in `initialize': can't create Thread: Resource temporarily unavailable (ThreGather Rocoto statistics
+(C96C48_hybatmaerosnowDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Run rocotorun.
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource tempoather Rocoto statistics
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 2
+	Numberarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailaadError)
+	from /apps/rocoto/1.3.7/sbin/rocotobqserver:98:in `new'
+	from /apps/rocoto/1.3.7/sbi/bin/rocotostat: fork: retry: Resource temporarily unavailable
+04/02/25 23:21:52 UTC :: C48n/rocotobqserver:98:in `<main>'
+Gather Rocoto statistics
+(C48mx500_3DVarAOWCDA_8d714478 on Heble
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/r Cycles done: 1
+	State: RUNNING
+Run rocotorun.
+/apps/rocoto/1.3.7/bin/rocotorun: forkrocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocotra)
+	Total Cycles: 2
+	Number Cycles done: 1
+	State: RUNNING
+Run rocotorun.
+/apps/rocoto/1_ATM_8d714478.xml :: can't create Thread: Resource temporarily unavailable
+/apps/rocoto/.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocoto/1.3.7/bin/rocotorun: fork: Resource temporarily unavailable
+Gather Rocoto statistics
+Traceba: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resck (most recent call last):
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotosorun: fork: Resource temporarily unavailable
+Gather Rocoto statistics
+Traceback (most recent call last):
+  File "/scratch1/N1.3.7/bin/rocotostat: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotat.py", line 208, in <module>
+    rocoto_status = rocoto_statcount(rocotostat)
+               ource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temp     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workftostat.py", line 208, in <module>
+    rocoto_status = rocoto_statcount(rocotostat)
+           otostat: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotostat:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/gllow/ci/scripts/utils/rocotostat.py", line 134, in rocoto_statcount
+    rocotostat_outpuorarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarilyt = attempt_multiple_times(lambda: rocotostat(output=str), 4, 120, ProcessError)
+             obal-workflow/ci/scripts/utils/rocotostat.py", line 134, in rocoto_statcount
+    rocotostat_output = attempt_multfork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotostat: fork: retiple_times(lambda: rocotostat(output=str), 4, 120, ProcessError)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sc unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: Resource temporarily unavailable
+Gratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 56, ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratchry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotostat: fork: Resource temp1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 56,in attempt_multiple_times
+    raise last_exception
+          ^^^^^^^^^^^^^^
+UnboundLocalError: cannather Rocoto statistics
+Traceback (most recent call last):
+  File "/scratch1/NCEPDEV/globaot access local variable 'last_exception' where it is not associated with a value
+(C96C48_hybatmaerosnowDA_8d71447 in attempt_multiple_times
+    raise last_exception
+          ^^^^^^^^^^^^^^
+UnboundLocalEorarily unavailable
+Traceback (most recent call last):
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/glorror: cannot access local variable 'last_exception' where it is not associated with a value
+8 on Hera)
+	Total Cycles: 
+	Number Cycles done: 
+	State: 
+Experiment C96C48_hybatmaerosnowDA_8d7l/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 208, in <module>
+    rocoto_status = r14478 Terminated with  tasks failed and  dead at Wed Apr  2 23:27:39 UTC 2025
+Experiment C96C48_(C48mx500_3DVarAOWCDA_8d714478 on Hera)
+	Total Cycles: 
+	Number Cycles done: 
+	State: 
+Expebal-workflow/ci/scripts/utils/rocotostat.py", line 208, in <module>
+    rocoto_status = rriment C48mx500_3DVarAOWCDA_8d714478 Terminated with  tasks failed and  dead at Wed Apr  hybatmaerosnowDA_8d714478 Terminated: **
+ocoto_statcount(rocotostat)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 134, in rocoto_statcount
+    rocotostat_output = attempt_multiple_times(lambda: rocotostat(output=str), 4, 120, ProcessError)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 56, in attempt_multiple_times
+    raise last_exception
+          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'last_exception' where it is not associated with a value
+(C48mx500_hybAOWCDA_8d714478 on Hera)
+	Total Cycles: 
+	Number Cycles done: 
+	State: 
+Experiment C48mx500_hybAOWCDA_8d714478 Terminated with  tasks failed and  dead at Wed Apr  2 23:26:50 UTC 2025
+Experiment C48mx500_hybAOWCDA_8d714478 Terminated: **
+2 23:27:37 UTC 2025
+Experiment C48mx500_3DVarAOWCDA_8d714478 Terminated: **
+ocoto_statcount(rocotostat)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 134, in rocoto_statcount
+    rocotostat_output = attempt_multiple_times(lambda: rocotostat(output=str), 4, 120, ProcessError)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 56, in attempt_multiple_times
+    raise last_exception
+          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'last_exception' where it is not associated with a value
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+(C48_ATM_8d714478 on Hera)
+	Total Cycles: 
+	Number Cycles done: 
+	State: 
+Experiment C48_ATM_8d714478 Terminated with  tasks failed and  dead at Wed Apr  2 23:26:25 UTC 2025
+Experiment C48_ATM_8d714478 Terminated: **
+Gather Rocoto statistics
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: Resource temporarily unavailable
+Gather Rocoto statistics
+Traceback (most recent call last):
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 208, in <module>
+    rocoto_status = rocoto_statcount(rocotostat)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 134, in rocoto_statcount
+    rocotostat_output = attempt_multiple_times(lambda: rocotostat(output=str), 4, 120, ProcessError)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 56, in attempt_multiple_times
+    raise last_exception
+          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'last_exception' where it is not associated with a value
+(C48_S2SW_8d714478 on Hera)
+	Total Cycles: 
+	Number Cycles done: 
+	State: 
+Experiment C48_S2SW_8d714478 Terminated with  tasks failed and  dead at Wed Apr  2 23:27:29 UTC 2025
+Experiment C48_S2SW_8d714478 Terminated: **
+Gather Rocoto statistics
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 3
+	Number Cycles done: 1
+	State: RUNNING
+Run rocotorun.
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: Resource temporarily unavailable
+Gather Rocoto statistics
+Traceback (most recent call last):
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 208, in <module>
+    rocoto_status = rocoto_statcount(rocotostat)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 134, in rocoto_statcount
+    rocotostat_output = attempt_multiple_times(lambda: rocotostat(output=str), 4, 120, ProcessError)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 56, in attempt_multiple_times
+    raise last_exception
+          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'last_exception' where it is not associated with a value
+(C96C48_hybatmDA_8d714478 on Hera)
+	Total Cycles: 
+	Number Cycles done: 
+	State: 
+Experiment C96C48_hybatmDA_8d714478 Terminated with  tasks failed and  dead at Wed Apr  2 23:27:34 UTC 2025
+Experiment C96C48_hybatmDA_8d714478 Terminated: **
+Gather Rocoto statistics
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: Resource temporarily unavailable
+Gather Rocoto statistics
+Traceback (most recent call last):
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 208, in <module>
+    rocoto_status = rocoto_statcount(rocotostat)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 134, in rocoto_statcount
+    rocotostat_output = attempt_multiple_times(lambda: rocotostat(output=str), 4, 120, ProcessError)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 56, in attempt_multiple_times
+    raise last_exception
+          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'last_exception' where it is not associated with a value
+(C48_S2SWA_gefs_8d714478 on Hera)
+	Total Cycles: 
+	Number Cycles done: 
+	State: 
+Experiment C48_S2SWA_gefs_8d714478 Terminated with  tasks failed and  dead at Wed Apr  2 23:27:32 UTC 2025
+Experiment C48_S2SWA_gefs_8d714478 Terminated: **
+Gather Rocoto statistics
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 1
+	Number Cycles done: 0
+	State: RUNNING
+Run rocotorun.
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotorun: fork: Resource temporarily unavailable
+Gather Rocoto statistics
+Traceback (most recent call last):
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 208, in <module>
+    rocoto_status = rocoto_statcount(rocotostat)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 134, in rocoto_statcount
+    rocotostat_output = attempt_multiple_times(lambda: rocotostat(output=str), 4, 120, ProcessError)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 56, in attempt_multiple_times
+    raise last_exception
+          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'last_exception' where it is not associated with a value
+(C96mx100_S2S_8d714478 on Hera)
+	Total Cycles: 
+	Number Cycles done: 
+	State: 
+Experiment C96mx100_S2S_8d714478 Terminated with  tasks failed and  dead at Wed Apr  2 23:26:51 UTC 2025
+Experiment C96mx100_S2S_8d714478 Terminated: **
+/apps/rocoto/1.3.7/sbin/rocotobqserver:98:in `initialize': can't create Thread: Resource temporarily unavailable (ThreadError)
+	from /apps/rocoto/1.3.7/sbin/rocotobqserver:98:in `new'
+	from /apps/rocoto/1.3.7/sbin/rocotobqserver:98:in `<main>'
+Gather Rocoto statistics
+/apps/rocoto/1.3.7/sbin/rocotodbserver:61:in `initialize': can't create Thread: Resource temporarily unavailable (ThreadError)
+	from /apps/rocoto/1.3.7/sbin/rocotodbserver:61:in `new'
+	from /apps/rocoto/1.3.7/sbin/rocotodbserver:61:in `<main>'
+04/02/25 23:13:20 UTC :: C96C48_ufs_hybatmDA_8d714478.xml :: druby://10.184.10.62:34635 - #<Errno::ECONNREFUSED: Connection refused - connect(2) for "10.184.10.62" port 34635>
+Traceback (most recent call last):
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 208, in <module>
+    rocoto_status = rocoto_statcount(rocotostat)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 134, in rocoto_statcount
+    rocotostat_output = attempt_multiple_times(lambda: rocotostat(output=str), 4, 120, ProcessError)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 56, in attempt_multiple_times
+    raise last_exception
+          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'last_exception' where it is not associated with a value
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+(C96C48_ufs_hybatmDA_8d714478 on Hera)
+	Total Cycles: 
+	Number Cycles done: 
+	State: 
+Experiment C96C48_ufs_hybatmDA_8d714478 Terminated with  tasks failed and  dead at Wed Apr  2 23:21:53 UTC 2025
+Experiment C96C48_ufs_hybatmDA_8d714478 Terminated: **
+/apps/rocoto/1.3.7/bin/rocotostat: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotostat: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotostat: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotostat: fork: retry: Resource temporarily unavailable
+/apps/rocoto/1.3.7/bin/rocotostat: fork: Resource temporarily unavailable
+Traceback (most recent call last):
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 208, in <module>
+    rocoto_status = rocoto_statcount(rocotostat)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 134, in rocoto_statcount
+    rocotostat_output = attempt_multiple_times(lambda: rocotostat(output=str), 4, 120, ProcessError)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/rocotostat.py", line 56, in attempt_multiple_times
+    raise last_exception
+          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'last_exception' where it is not associated with a value
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: retry: Resource temporarily unavailable
+/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/run-check_ci.sh: fork: Resource temporarily unavailable
+[Pipeline] sh
+[Pipeline] sh
+[Pipeline] sh
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/g+ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=herlopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/a
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/glglobal/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-wobal/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++orkflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++  '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
+[Pipeline] sh
+[Pipeline] sh
+[Pipeline] sh
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
+++++ dirname /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/gw_setup.sh
++++ cd /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/workflow/..
++++ pwd
+++ HOMEgfs=/scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
++++ [[ -n '' ]]
++++ case $(hostname -f) in
+++++ hostname -f
++++ MACHINE_ID=hera
++++ [[ hera == \U\N\K\N\O\W\N ]]
++++ MACHINE_ID=hera
++++ [[ hera != \U\N\K\N\O\W\N ]]
++++ return
+++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/module-setup.sh
++++ set -u
++++ source /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ush/detect_machine.sh
+++++ [[ -n hera ]]
+++++ return
++++ [[ hera = jet* ]]
++++ [[ hera = hera* ]]
++++ eval module help
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
++++ export LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ LMOD_SYSTEM_DEFAULT_MODULES=contrib
++++ set +u
++++ module reset
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_sh_dbg=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch1/NCEPDEV/global/glopara/GFS_CI_CD/global-workflow_forked_TMcG/modulefiles
+Shell debugging restarted
++++ unset __lmod_sh_dbg
++++ return 0
++++ set -u
+++++ type -t set_strict
+++++ echo ''
++++ ftype=
++++ [[ '' == \f\u\n\c\t\i\o\n ]]
++++ set +u
+++ module use /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/modulefiles
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
+++ module load module_gwsetup.hera
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh cancel_batch_jobs C48_S2SWA_gefs_8d714478
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh cancel_batch_jobs C96C48_hybatmaerosnowDA_8d714478
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh cancel_batch_jobs C48_S2SW_8d714478
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh cancel_batch_jobs C48mx500_3DVarAOWCDA_8d714478
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh cancel_batch_jobs C96C48_hybatmDA_8d714478
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh cancel_batch_jobs C96_atm3DVar_8d714478
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh cancel_batch_jobs C96mx100_S2S_8d714478
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh cancel_batch_jobs C48mx500_hybAOWCDA_8d714478
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh cancel_batch_jobs C48_ATM_8d714478
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ /scratch1/NCEPDEV/global/glopara/CI/3517/global-workflow/ci/scripts/utils/ci_utils_wrapper.sh cancel_batch_jobs C96C48_ufs_hybatmDA_8d714478
+[Pipeline] ws
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517
+[Pipeline] {
+[Pipeline] fileExists
+[Pipeline] ws
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517__2
+[Pipeline] {
+[Pipeline] ws
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517__3
+[Pipeline] {
+[Pipeline] ws
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517__4
+[Pipeline] {
+[Pipeline] ws
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517__5
+[Pipeline] {
+[Pipeline] echo
+No error logs found for failed cases in /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C48_S2SW_8d714478_error.logs
+[Pipeline] sh
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --remove-label CI-Hera-Running --add-label CI-Hera-Failed
+[Pipeline] ws
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517__6
+[Pipeline] {
+[Pipeline] ws
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517__7
+[Pipeline] {
+[Pipeline] ws
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517__8
+[Pipeline] {
+[Pipeline] fileExists
+[Pipeline] ws
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517__9
+[Pipeline] {
+[Pipeline] ws
+Running in /scratch1/NCEPDEV/global/glopara/CI/3517__10
+[Pipeline] {
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] echo
+No error logs found for failed cases in /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C48_S2SWA_gefs_8d714478_error.logs
+[Pipeline] sh
+[Pipeline] echo
+https://github.com/NOAA-EMC/global-workflow/pull/3517
+No error logs found for failed cases in /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C96mx100_S2S_8d714478_error.logs
+[Pipeline] sh
+[Pipeline] echo
+No error logs found for failed cases in /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C48_ATM_8d714478_error.logs
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --remove-label CI-Hera-Running --add-label CI-Hera-Failed
+[Pipeline] echo
+No error logs found for failed cases in /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C48mx500_hybAOWCDA_8d714478_error.logs
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --remove-label CI-Hera-Running --add-label CI-Hera-Failed
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --remove-label CI-Hera-Running --add-label CI-Hera-Failed
+[Pipeline] echo
+No error logs found for failed cases in /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C96C48_ufs_hybatmDA_8d714478_error.logs
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --remove-label CI-Hera-Running --add-label CI-Hera-Failed
+[Pipeline] echo
+No error logs found for failed cases in /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C48mx500_3DVarAOWCDA_8d714478_error.logs
+[Pipeline] sh
+https://github.com/NOAA-EMC/global-workflow/pull/3517
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --remove-label CI-Hera-Running --add-label CI-Hera-Failed
+[Pipeline] echo
+No error logs found for failed cases in /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C96C48_hybatmaerosnowDA_8d714478_error.logs
+https://github.com/NOAA-EMC/global-workflow/pull/3517
+[Pipeline] sh
+https://github.com/NOAA-EMC/global-workflow/pull/3517
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --remove-label CI-Hera-Running --add-label CI-Hera-Failed
+https://github.com/NOAA-EMC/global-workflow/pull/3517
+[Pipeline] echo
+No error logs found for failed cases in /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C96_atm3DVar_8d714478_error.logs
+[Pipeline] sh
+[Pipeline] echo
+No error logs found for failed cases in /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/C96C48_hybatmDA_8d714478_error.logs
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --remove-label CI-Hera-Running --add-label CI-Hera-Failed
+[Pipeline] sh
+https://github.com/NOAA-EMC/global-workflow/pull/3517
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --remove-label CI-Hera-Running --add-label CI-Hera-Failed
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --remove-label CI-Hera-Running --add-label CI-Hera-Failed
+https://github.com/NOAA-EMC/global-workflow/pull/3517
+https://github.com/NOAA-EMC/global-workflow/pull/3517
+[Pipeline] sh
+https://github.com/NOAA-EMC/global-workflow/pull/3517
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr comment 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --body 'Experiment C48_S2SW **FAILED** on Hera in Build# 7 in
+`/scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C48_S2SW_8d714478`'
+https://github.com/NOAA-EMC/global-workflow/pull/3517
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr comment 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --body 'Experiment C48_S2SWA_gefs **FAILED** on Hera in Build# 7 in
+`/scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C48_S2SWA_gefs_8d714478`'
+[Pipeline] sh
+[Pipeline] sh
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr comment 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --body 'Experiment C96mx100_S2S **FAILED** on Hera in Build# 7 in
+`/scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C96mx100_S2S_8d714478`'
+[Pipeline] sh
+https://github.com/NOAA-EMC/global-workflow/pull/3517#issuecomment-2773971329
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr comment 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --body 'Experiment C48_ATM **FAILED** on Hera in Build# 7 in
+`/scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C48_ATM_8d714478`'
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr comment 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --body 'Experiment C48mx500_hybAOWCDA **FAILED** on Hera in Build# 7 in
+`/scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C48mx500_hybAOWCDA_8d714478`'
+https://github.com/NOAA-EMC/global-workflow/pull/3517#issuecomment-2773971335
+[Pipeline] sh
+https://github.com/NOAA-EMC/global-workflow/pull/3517#issuecomment-2773971333
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr comment 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --body 'Experiment C96C48_ufs_hybatmDA **FAILED** on Hera in Build# 7 in
+`/scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_8d714478`'
+https://github.com/NOAA-EMC/global-workflow/pull/3517#issuecomment-2773971345
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr comment 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --body 'Experiment C96C48_hybatmaerosnowDA **FAILED** on Hera in Build# 7 in
+`/scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C96C48_hybatmaerosnowDA_8d714478`'
+https://github.com/NOAA-EMC/global-workflow/pull/3517#issuecomment-2773971326
+[Pipeline] sh
+https://github.com/NOAA-EMC/global-workflow/pull/3517#issuecomment-2773971352
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr comment 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --body 'Experiment C48mx500_3DVarAOWCDA **FAILED** on Hera in Build# 7 in
+`/scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C48mx500_3DVarAOWCDA_8d714478`'
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr comment 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --body 'Experiment C96_atm3DVar **FAILED** on Hera in Build# 7 in
+`/scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C96_atm3DVar_8d714478`'
+https://github.com/NOAA-EMC/global-workflow/pull/3517#issuecomment-2773971366
+https://github.com/NOAA-EMC/global-workflow/pull/3517#issuecomment-2773971368
+[Pipeline] error
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr comment 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --body 'Experiment C96C48_hybatmDA **FAILED** on Hera in Build# 7 in
+`/scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/EXPDIR/C96C48_hybatmDA_8d714478`'
+[Pipeline] }
+https://github.com/NOAA-EMC/global-workflow/pull/3517#issuecomment-2773971372
+[Pipeline] error
+[Pipeline] }
+[Pipeline] error
+[Pipeline] }
+[Pipeline] error
+[Pipeline] }
+https://github.com/NOAA-EMC/global-workflow/pull/3517#issuecomment-2773971379
+[Pipeline] error
+[Pipeline] }
+[Pipeline] error
+[Pipeline] }
+[Pipeline] // ws
+[Pipeline] }
+[Pipeline] error
+[Pipeline] }
+[Pipeline] error
+[Pipeline] }
+[Pipeline] error
+[Pipeline] }
+[Pipeline] // ws
+[Pipeline] // ws
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // ws
+[Pipeline] }
+[Pipeline] error
+[Pipeline] }
+[Pipeline] // ws
+[Pipeline] // ws
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] // ws
+[Pipeline] // ws
+[Pipeline] }
+ERROR: Failed to run experiments C48_S2SWA_gefs on Hera
+Setting overall build result to FAILURE
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // ws
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] // script
+[Pipeline] }
+ERROR: Failed to run experiments C96mx100_S2S on Hera
+[Pipeline] }
+ERROR: Failed to run experiments C48_ATM on Hera
+[Pipeline] // script
+[Pipeline] // ws
+[Pipeline] }
+ERROR: Failed to run experiments C48mx500_hybAOWCDA on Hera
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] // script
+[Pipeline] }
+ERROR: Failed to run experiments C48_S2SW on Hera
+[Pipeline] }
+ERROR: Failed to run experiments C96C48_ufs_hybatmDA on Hera
+[Pipeline] // catchError
+[Pipeline] // script
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] }
+ERROR: Failed to run experiments C48mx500_3DVarAOWCDA on Hera
+[Pipeline] }
+ERROR: Failed to run experiments C96C48_hybatmaerosnowDA on Hera
+[Pipeline] // script
+[Pipeline] }
+ERROR: Failed to run experiments C96_atm3DVar on Hera
+[Pipeline] // catchError
+[Pipeline] // catchError
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // catchError
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] }
+ERROR: Failed to run experiments C96C48_hybatmDA on Hera
+[Pipeline] // catchError
+[Pipeline] // catchError
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] // catchError
+[Pipeline] // catchError
+[Pipeline] }
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // catchError
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] // catchError
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // parallel
+[Pipeline] }
+[Pipeline] // ws
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (5. Finalize)
+[Pipeline] node
+Running on Hera-EMC in /scratch1/NCEPDEV/global/Terry.McGuinness/GFS_CI_ROOT_JENKINS/Jenkins/workspace/flow_EMC-Global-Pipeline_PR-3517
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr view 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --json labels --jq '.labels[].name'
++ labels='CI-Hera-Failed
+CI-Hercules-Passed
+CI-Wcoss2-Passed
+CI-Gaeac6-Failed'
++ for label in $labels
++ [[ CI-Hera-Failed == *\H\e\r\a* ]]
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --remove-label CI-Hera-Failed
+https://github.com/NOAA-EMC/global-workflow/pull/3517
++ for label in $labels
++ [[ CI-Hercules-Passed == *\H\e\r\a* ]]
++ for label in $labels
++ [[ CI-Wcoss2-Passed == *\H\e\r\a* ]]
++ for label in $labels
++ [[ CI-Gaeac6-Failed == *\H\e\r\a* ]]
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr edit 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --add-label CI-Hera-Failed
+https://github.com/NOAA-EMC/global-workflow/pull/3517
+[Pipeline] fileExists
+[Pipeline] sh
++ echo '**CI Failed** on Hera in Build# 7<br>Built and ran in directory `/scratch1/NCEPDEV/global/glopara/CI/3517`
+```
+'
++ cat - /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/ci-run_check.log
++ mv temp /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/ci-run_check.log
+[Pipeline] sh
++ /scratch1/NCEPDEV/global/glopara/utils/bin/gh pr comment 3517 --repo git@github.com:NOAA-EMC/global-workflow.git --body-file /scratch1/NCEPDEV/global/glopara/CI/3517/RUNTESTS/ci-run_check.log
+https://github.com/NOAA-EMC/global-workflow/pull/3517#issuecomment-2773971602
+[Pipeline] echo
+Failed to build and run global-workflow in /scratch1/NCEPDEV/global/glopara/CI/3517 on Hera
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: FAILURE
+
