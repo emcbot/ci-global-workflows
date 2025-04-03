@@ -1,0 +1,230 @@
+Begin prepoceanobs.sh at Thu Apr  3 20:18:10 UTC 2025
++ prepoceanobs.sh[8]. /work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/global-workflow/ush/load_ufsda_modules.sh
+++ load_ufsda_modules.sh[4][[ hxB == *x* ]]
+++ load_ufsda_modules.sh[5]set_x=YES
+++ load_ufsda_modules.sh[10][[ NO == \N\O ]]
+++ load_ufsda_modules.sh[11]echo 'Loading modules quietly...'
+Loading modules quietly...
+++ load_ufsda_modules.sh[12]set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+-------------------------------------------------------------------------------
+The following dependent module(s) are not currently loaded: py-numpy/1.22.3 (required by: bufr/12.0.1), python/3.10.13 (required by: boost/1.84.0, bufr/12.0.1, fckit/0.11.0, atlas/0.36.0, py-pybind11/2.11.0)
+-------------------------------------------------------------------------------
+
+Currently Loaded Modules:
+  1) intel-oneapi-compilers/2023.1.0  34) openblas/0.3.24
+  2) stack-intel/2021.9.0             35) eckit/1.24.5
+  3) intel-oneapi-mpi/2021.9.0        36) fftw/3.3.10
+  4) stack-intel-oneapi-mpi/2021.9.0  37) fckit/0.11.0
+  5) zlib-ng/2.1.5                    38) fiat/1.2.0
+  6) cmake/3.23.1                     39) ectrans/1.2.0
+  7) nghttp2/1.57.0                   40) fms/2023.04
+  8) curl/8.4.0                       41) esmf/8.6.1
+  9) zlib/1.2.13                      42) qhull/2020.2
+ 10) git/2.31.1                       43) atlas/0.36.0
+ 11) hdf5/1.14.3                      44) sp/2.5.0
+ 12) parallel-netcdf/1.12.3           45) gsl-lite/0.37.0
+ 13) snappy/1.1.10                    46) libjpeg/2.1.0
+ 14) zstd/1.5.2                       47) krb5/1.20.1
+ 15) c-blosc/1.21.5                   48) libtirpc/1.3.3
+ 16) netcdf-c/4.9.2                   49) hdf/4.2.15
+ 17) nccmp/1.9.0.1                    50) jedi-cmake/1.4.0
+ 18) netcdf-fortran/4.6.1             51) libpng/1.6.37
+ 19) antlr/2.7.7                      52) libxt/1.3.0
+ 20) gsl/2.7.1                        53) libxmu/1.1.4
+ 21) nco/5.1.6                        54) libxpm/3.5.17
+ 22) parallelio/2.6.2                 55) libxaw/1.0.15
+ 23) wget/1.21.1                      56) udunits/2.2.28
+ 24) pigz/2.8                         57) ncview/2.1.9
+ 25) tar/1.34                         58) netcdf-cxx4/4.3.1
+ 26) gettext/0.21.1                   59) py-pybind11/2.11.0
+ 27) boost/1.84.0                     60) contrib/0.1
+ 28) bufr/12.0.1                      61) noaatools/3.1
+ 29) git-lfs/3.1.2                    62) rocoto/1.3.7
+ 30) ecbuild/3.7.2                    63) hpc/1.2.0
+ 31) openjpeg/2.3.1                   64) miniconda3/4.6.14
+ 32) eccodes/2.33.0                   65) gdasapp/1.0.0
+ 33) eigen/3.4.0                      66) GDAS/hercules.intel
+
+ 
+
+++ load_ufsda_modules.sh[74]pip list
+Package            Version
+------------------ ---------
+attrs              21.4.0
+autopep8           1.6.0
+boto3              1.21.23
+botocore           1.24.23
+Bottleneck         1.3.2
+certifi            2022.6.15
+cftime             1.5.1.1
+click              8.1.7
+Cython             0.29.28
+f90nml             1.4.3
+h5py               2.10.0
+importlib-metadata 4.8.2
+iniconfig          1.1.1
+Jinja2             3.1.2
+jmespath           1.0.0
+Markdown           3.4.1
+MarkupSafe         2.1.2
+mkl-fft            1.3.1
+mkl-random         1.2.2
+mkl-service        2.4.0
+mpi4py             3.1.5
+netCDF4            1.4.2
+numexpr            2.8.1
+numpy              1.21.6
+packaging          21.3
+pandas             1.3.5
+pip                21.2.2
+pluggy             1.0.0
+py                 1.11.0
+py-ncepbufr        12.0.1
+pybind11           2.11.0
+pycodestyle        2.8.0
+pygrib             2.1.4
+pygw               0.0.1
+pyparsing          3.0.4
+pyproj             1.9.6
+pytest             6.2.5
+python-dateutil    2.8.2
+pytz               2021.3
+PyYAML             6.0
+r2d2               1.0.0
+s3transfer         0.5.2
+scipy              1.7.3
+setuptools         58.0.4
+six                1.16.0
+solo               1.0.0
+toml               0.10.2
+typing-extensions  3.10.0.2
+urllib3            1.26.9
+wheel              0.37.1
+wxflow             0.1.0
+xarray             0.20.1
+zipp               3.7.0
++ Unknown[1]uname -p
+++ load_ufsda_modules.sh[77]wxflowPATH=/work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/global-workflow/ush/python
+++ load_ufsda_modules.sh[78]PYTHONPATH=/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.7.0/envs/ue-intel/install/intel/2021.9.0/py-pybind11-2.11.0-bxoo6yn/lib/python3.10/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.7.0/envs/ue-intel/install/intel/2021.9.0/bufr-12.0.1-h7wq5ai/lib64/python3.10/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.7.0/envs/ue-intel/install/intel/2021.9.0/bufr-12.0.1-h7wq5ai/lib/python3.10/site-packages:/work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/global-workflow/ush:/work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/global-workflow/ush/python
+++ load_ufsda_modules.sh[79]export PYTHONPATH
+++ load_ufsda_modules.sh[82]ulimit -S -s 16384
+++ load_ufsda_modules.sh[83]unset ulimit_s
++ prepoceanobs.sh[9]status=0
++ prepoceanobs.sh[10][[ 0 -ne 0 ]]
++ prepoceanobs.sh[14]export job=prepoceanobs
++ prepoceanobs.sh[14]job=prepoceanobs
++ prepoceanobs.sh[15]export jobid=prepoceanobs.3098992
++ prepoceanobs.sh[15]jobid=prepoceanobs.3098992
+++ prepoceanobs.sh[20]detect_py_ver
+++ bash_utils.sh[113]regex='[0-9]+\.[0-9]+'
++++ bash_utils.sh[115]python --version
+++ bash_utils.sh[115][[ Python 3.7.12 =~ [0-9]+\.[0-9]+ ]]
+++ bash_utils.sh[116]echo 3.7
++ prepoceanobs.sh[20]pyiodaPATH=/work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/global-workflow/sorc/gdas.cd/build/lib/python3.7/
++ prepoceanobs.sh[21]PYTHONPATH=/work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/global-workflow/sorc/gdas.cd/build/lib/python3.7/:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.7.0/envs/ue-intel/install/intel/2021.9.0/py-pybind11-2.11.0-bxoo6yn/lib/python3.10/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.7.0/envs/ue-intel/install/intel/2021.9.0/bufr-12.0.1-h7wq5ai/lib64/python3.10/site-packages:/work/noaa/epic/role-epic/spack-stack/hercules/spack-stack-1.7.0/envs/ue-intel/install/intel/2021.9.0/bufr-12.0.1-h7wq5ai/lib/python3.10/site-packages:/work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/global-workflow/ush:/work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/global-workflow/ush/python
++ prepoceanobs.sh[22]export PYTHONPATH
++ prepoceanobs.sh[26]/work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/global-workflow/jobs/JGLOBAL_PREP_OCEAN_OBS
++ bash[8]'[' -z '' ']'
++ bash[9]case "$-" in
++ bash[12]__lmod_vx=x
++ bash[16]'[' -n x ']'
++ bash[16]set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for this output (/apps/other/lmod/lmod/init/bash)
+Shell debugging restarted
++ bash[224]unset __lmod_vx
++ JGLOBAL_PREP_OCEAN_OBS[2]source /work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/global-workflow/ush/jjob_header.sh -e prepoceanobs -c 'base prepoceanobs'
+++ jjob_header.sh[43]_calling_script=/work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/global-workflow/jobs/JGLOBAL_PREP_OCEAN_OBS
+++ jjob_header.sh[44]source /work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/global-workflow/ush/preamble.sh
++++ preamble.sh[20]set +x
+Begin /work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/global-workflow/jobs/JGLOBAL_PREP_OCEAN_OBS at Thu Apr  3 20:19:14 UTC 2025
+++ jjob_header.sh[46]OPTIND=1
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[50]env_job=prepoceanobs
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[49]read -ra configs
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[61]shift 4
+++ jjob_header.sh[63][[ -z prepoceanobs ]]
+++ jjob_header.sh[71]export DATA=/work2/noaa/stmp/role-global/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_0e2a6254/gfs.2021032500/prepoceanobs.3098992
+++ jjob_header.sh[71]DATA=/work2/noaa/stmp/role-global/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_0e2a6254/gfs.2021032500/prepoceanobs.3098992
+++ jjob_header.sh[72][[ YES == \Y\E\S ]]
+++ jjob_header.sh[73]rm -rf /work2/noaa/stmp/role-global/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_0e2a6254/gfs.2021032500/prepoceanobs.3098992
+++ jjob_header.sh[75]mkdir -p /work2/noaa/stmp/role-global/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_0e2a6254/gfs.2021032500/prepoceanobs.3098992
+++ jjob_header.sh[76]cd /work2/noaa/stmp/role-global/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_0e2a6254/gfs.2021032500/prepoceanobs.3098992
+++ jjob_header.sh[85]export cycle=t00z
+++ jjob_header.sh[85]cycle=t00z
+++ jjob_header.sh[86]setpdy.sh
++ setpdy.sh[21][[ ! t00z =~ t??z ]]
++ setpdy.sh[26]case $# in
++ setpdy.sh[27]dates_before_PDY=7
++ setpdy.sh[28]dates_after_PDY=7
++ setpdy.sh[46]COMDATEROOT=/work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/RUNTESTS/COMROOT
++ setpdy.sh[49]'[' -z 20210325 ']'
++ setpdy.sh[53]sed 's/[0-9]\{8\}/20210325/' /work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/RUNTESTS/COMROOT/date/t00z
+sed: can't read /work2/noaa/global/role-global/GFS_CI_CD/HERCULES/CI/3515/RUNTESTS/COMROOT/date/t00z: No such file or directory
+++ setpdy.sh[58]finddate.sh 20210325 s-7
++++ finddate.sh[27]set +x
+/apps/contrib/NCEP/libs/hpc-stack/intel-2018.4/prod_util/1.2.2/bin/finddate.sh: line 263: pdstr: unbound variable
++ setpdy.sh[58]DATElne_minus=
++ setpdy.sh[59]export err=1
++ setpdy.sh[59]err=1
++ setpdy.sh[59]err_chk
++ err_chk[14]COREROOT=/gpfs/hps/ptmp/production.core/prepoceanobs.3098992
++ err_chk[16]'[' -z 1 ']'
++ err_chk[18]'[' 1 -ne 0 ']'
++ err_chk[21]'[' 1 -eq 139 ']'
++ err_chk[33]err_exit
++ environment[0]set +eux
+
+    -------------------------------------------------------------
+    -- FATAL ERROR: Job prepoceanobs.3098992 failed RETURN CODE 1
+    -- ABNORMAL EXIT at Thu Apr  3 15:19:15 CDT 2025 on hercules-07-40
+    -------------------------------------------------------------
+    
+
+Currently Loaded Modules:
+  1) intel-oneapi-compilers/2023.1.0  34) openblas/0.3.24
+  2) stack-intel/2021.9.0             35) eckit/1.24.5
+  3) intel-oneapi-mpi/2021.9.0        36) fftw/3.3.10
+  4) stack-intel-oneapi-mpi/2021.9.0  37) fckit/0.11.0
+  5) zlib-ng/2.1.5                    38) fiat/1.2.0
+  6) cmake/3.23.1                     39) ectrans/1.2.0
+  7) nghttp2/1.57.0                   40) fms/2023.04
+  8) curl/8.4.0                       41) esmf/8.6.1
+  9) zlib/1.2.13                      42) qhull/2020.2
+ 10) git/2.31.1                       43) atlas/0.36.0
+ 11) hdf5/1.14.3                      44) sp/2.5.0
+ 12) parallel-netcdf/1.12.3           45) gsl-lite/0.37.0
+ 13) snappy/1.1.10                    46) libjpeg/2.1.0
+ 14) zstd/1.5.2                       47) krb5/1.20.1
+ 15) c-blosc/1.21.5                   48) libtirpc/1.3.3
+ 16) netcdf-c/4.9.2                   49) hdf/4.2.15
+ 17) nccmp/1.9.0.1                    50) jedi-cmake/1.4.0
+ 18) netcdf-fortran/4.6.1             51) libpng/1.6.37
+ 19) antlr/2.7.7                      52) libxt/1.3.0
+ 20) gsl/2.7.1                        53) libxmu/1.1.4
+ 21) nco/5.1.6                        54) libxpm/3.5.17
+ 22) parallelio/2.6.2                 55) libxaw/1.0.15
+ 23) wget/1.21.1                      56) udunits/2.2.28
+ 24) pigz/2.8                         57) ncview/2.1.9
+ 25) tar/1.34                         58) netcdf-cxx4/4.3.1
+ 26) gettext/0.21.1                   59) py-pybind11/2.11.0
+ 27) boost/1.84.0                     60) contrib/0.1
+ 28) bufr/12.0.1                      61) noaatools/3.1
+ 29) git-lfs/3.1.2                    62) rocoto/1.3.7
+ 30) ecbuild/3.7.2                    63) hpc/1.2.0
+ 31) openjpeg/2.3.1                   64) miniconda3/4.6.14
+ 32) eccodes/2.33.0                   65) gdasapp/1.0.0
+ 33) eigen/3.4.0                      66) GDAS/hercules.intel
+
+ 
+
+
+Job prepoceanobs.3098992 failed RETURN CODE 1
+/work2/noaa/stmp/role-global/HERCULES/RUNDIRS/C48mx500_3DVarAOWCDA_0e2a6254/gfs.2021032500/prepoceanobs.3098992
+total 0
+-rw-r----- 1 role-global stmp 0 Apr  3 15:19 ncepdate
+slurmstepd: error: *** JOB 4952893 ON hercules-07-40 CANCELLED AT 2025-04-03T15:19:15 ***
