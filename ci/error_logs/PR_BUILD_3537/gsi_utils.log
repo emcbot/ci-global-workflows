@@ -1,0 +1,93 @@
++ OPTIND=1
++ getopts :j:dv option
++ case "${option}" in
++ BUILD_JOBS=6
++ getopts :j:dv option
++ shift 2
++ BUILD_TYPE=Release
++ BUILD_VERBOSE=NO
++ BUILD_JOBS=6
++ UTIL_OPTS='-DBUILD_UTIL_ENKF_GFS=ON -DBUILD_UTIL_NCIO=ON'
++ ./gsi_utils.fd/ush/build.sh
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Lmod is automatically replacing "intel/2023.2.0" with "intel-classic/2023.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-mpich/8.1.28 => cray-mpich/8.1.29
+
+
+Currently Loaded Modules:
+  1) craype-x86-genoa                               28) zstd/1.5.2
+  2) perftools-base/23.12.0                         29) c-blosc/1.21.5
+  3) xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d  30) pkg-config/0.29.2
+  4) cray-pmi/6.1.13                                31) hdf5/1.14.0
+  5) CmrsEnv/default                                32) netcdf-c/4.9.2
+  6) TimeZoneEDT/default                            33) netcdf-fortran/4.6.1
+  7) DefApps/default                                34) openblas/0.3.24
+  8) cray-dsmml/0.2.2                               35) py-setuptools/63.4.3
+  9) cray-libsci/25.03.0                            36) py-numpy/1.23.4
+ 10) PrgEnv-intel/8.5.0                             37) bufr/11.7.0
+ 11) intel-classic/2023.2.0                         38) bacio/2.4.1
+ 12) craype/2.7.30                                  39) w3emc/2.10.0
+ 13) stack-intel/2023.2.0                           40) sp/2.5.0
+ 14) libfabric/1.20.1                               41) ip/4.3.0
+ 15) craype-network-ofi                             42) sigio/2.3.2
+ 16) cray-mpich/8.1.29                              43) sfcio/1.4.1
+ 17) stack-cray-mpich/8.1.29                        44) nemsio/2.5.4
+ 18) gettext/0.20.2                                 45) wrf-io/1.2.0
+ 19) libxcrypt/4.4.35                               46) ncio/1.1.2
+ 20) zlib/1.2.13                                    47) crtm-fix/2.4.0.1_emc
+ 21) sqlite/3.43.2                                  48) git-lfs/2.11.0
+ 22) util-linux-uuid/2.38.1                         49) crtm/2.4.0.1
+ 23) python/3.11.6                                  50) gsi-ncdiag/1.1.2
+ 24) nghttp2/1.57.0                                 51) gsiutils_common
+ 25) curl/8.4.0                                     52) prod_util/2.1.1
+ 26) cmake/3.23.1                                   53) gsiutils_gaeac6.intel
+ 27) snappy/1.1.10
+
+ 
+
++ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/gpfs/f6/drsa-precip3/world-shared/global/CI/3537/global-workflow/sorc/gsi_utils.fd/install -DBUILD_UTIL_ENKF_GFS=ON -DBUILD_UTIL_NCIO=ON /gpfs/f6/drsa-precip3/world-shared/global/CI/3537/global-workflow/sorc/gsi_utils.fd
+-- The C compiler identification is unknown
+-- The Fortran compiler identification is unknown
+Error:  Unable to find cray-libsci/25.03.0 libraries compatible with intel-classic/2023.2.0 targeting 'x86-genoa'.
+
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /opt/cray/pe/craype/2.7.30/bin/cc
+-- Check for working C compiler: /opt/cray/pe/craype/2.7.30/bin/cc - broken
+CMake Error at /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/cmake-3.23.1-ixiyqlk/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake:69 (message):
+  The C compiler
+
+    "/opt/cray/pe/craype/2.7.30/bin/cc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: /gpfs/f6/drsa-precip3/world-shared/global/CI/3537/global-workflow/sorc/gsi_utils.fd/build/CMakeFiles/CMakeTmp
+    
+    Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_dddf3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_dddf3.dir/build.make CMakeFiles/cmTC_dddf3.dir/build
+    gmake[1]: Entering directory '/gpfs/f6/drsa-precip3/world-shared/global/CI/3537/global-workflow/sorc/gsi_utils.fd/build/CMakeFiles/CMakeTmp'
+    Building C object CMakeFiles/cmTC_dddf3.dir/testCCompiler.c.o
+    /opt/cray/pe/craype/2.7.30/bin/cc   -xHOST  -o CMakeFiles/cmTC_dddf3.dir/testCCompiler.c.o -c /gpfs/f6/drsa-precip3/world-shared/global/CI/3537/global-workflow/sorc/gsi_utils.fd/build/CMakeFiles/CMakeTmp/testCCompiler.c
+    Error:  Unable to find cray-libsci/25.03.0 libraries compatible with intel-classic/2023.2.0 targeting 'x86-genoa'.
+    
+    gmake[1]: *** [CMakeFiles/cmTC_dddf3.dir/build.make:78: CMakeFiles/cmTC_dddf3.dir/testCCompiler.c.o] Error 1
+    gmake[1]: Leaving directory '/gpfs/f6/drsa-precip3/world-shared/global/CI/3537/global-workflow/sorc/gsi_utils.fd/build/CMakeFiles/CMakeTmp'
+    gmake: *** [Makefile:127: cmTC_dddf3/fast] Error 2
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:3 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/gpfs/f6/drsa-precip3/world-shared/global/CI/3537/global-workflow/sorc/gsi_utils.fd/build/CMakeFiles/CMakeOutput.log".
+See also "/gpfs/f6/drsa-precip3/world-shared/global/CI/3537/global-workflow/sorc/gsi_utils.fd/build/CMakeFiles/CMakeError.log".
