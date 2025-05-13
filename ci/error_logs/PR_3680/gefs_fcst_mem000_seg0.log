@@ -1,0 +1,1723 @@
++ source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush/detect_machine.sh
+++ [[ -n '' ]]
+++ case $(hostname -f) in
++++ hostname -f
+++ MACHINE_ID=UNKNOWN
+++ [[ UNKNOWN == \U\N\K\N\O\W\N ]]
+++ case ${PW_CSP:-} in
+++ PW_CSP=UNKNOWN
+++ MACHINE_ID=UNKNOWN
+++ [[ UNKNOWN != \U\N\K\N\O\W\N ]]
+++ [[ -d /lfs/h3 ]]
+++ [[ -d /lfs/h1 ]]
+++ [[ -d /mnt/lfs5 ]]
+++ [[ -d /scratch1 ]]
+++ [[ -d /work ]]
++++ findmnt -n -o SOURCE /home
+++ mount=orion-nfs.hpc.msstate.edu:/home-orion
+++ [[ orion-nfs.hpc.msstate.edu:/home-orion =~ hercules ]]
+++ MACHINE_ID=orion
++ [[ orion == \w\c\o\s\s\2 ]]
++ source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush/load_fv3gfs_modules.sh
+++ [[ hxB == *x* ]]
+++ set_x=YES
+++ [[ NO == \N\O ]]
+++ echo 'Loading modules quietly...'
+Loading modules quietly...
+++ set +x
+
+Currently Loaded Modules:
+  1) intel-oneapi-compilers/2023.1.0  42) grib-util/1.3.0
+  2) stack-intel/2021.9.0             43) g2tmpl/1.13.0
+  3) intel-oneapi-mpi/2021.9.0        44) gsi-ncdiag/1.1.2
+  4) stack-intel-oneapi-mpi/2021.9.0  45) crtm-fix/2.4.0.1_emc
+  5) zlib/1.2.13                      46) git-lfs/3.1.2
+  6) pigz/2.7                         47) crtm/2.4.0.1
+  7) zstd/1.5.2                       48) openblas/0.3.24
+  8) tar/1.34                         49) py-setuptools/63.4.3
+  9) gettext/0.21.1                   50) py-numpy/1.23.4
+ 10) libxcrypt/4.4.35                 51) bufr/11.7.0
+ 11) sqlite/3.43.2                    52) gmake/4.2.1
+ 12) util-linux-uuid/2.38.1           53) wgrib2/2.0.8
+ 13) python/3.11.6                    54) py-f90nml/1.4.3
+ 14) libjpeg/2.1.0                    55) py-cftime/1.0.3.4
+ 15) jasper/2.0.32                    56) py-netcdf4/1.5.8
+ 16) libpng/1.6.37                    57) libyaml/0.2.5
+ 17) openjpeg/2.3.1                   58) py-pyyaml/6.0
+ 18) eccodes/2.32.0                   59) py-markupsafe/2.1.3
+ 19) fftw/3.3.10                      60) py-jinja2/3.1.2
+ 20) nghttp2/1.57.0                   61) py-bottleneck/1.3.7
+ 21) curl/8.4.0                       62) py-numexpr/2.8.4
+ 22) proj/9.2.1                       63) py-et-xmlfile/1.0.1
+ 23) udunits/2.2.28                   64) py-openpyxl/3.1.2
+ 24) cdo/2.2.0                        65) py-pytz/2023.3
+ 25) hdf5/1.14.0                      66) py-pyxlsb/1.0.10
+ 26) snappy/1.1.10                    67) py-xlrd/2.0.1
+ 27) c-blosc/1.21.5                   68) py-xlsxwriter/3.1.7
+ 28) netcdf-c/4.9.2                   69) py-xlwt/1.3.0
+ 29) netcdf-fortran/4.6.1             70) py-pandas/1.5.3
+ 30) parallel-netcdf/1.12.2           71) py-six/1.16.0
+ 31) parallelio/2.5.10                72) py-python-dateutil/2.8.2
+ 32) esmf/8.6.0                       73) g2c/1.8.0
+ 33) antlr/2.7.7                      74) netcdf-cxx4/4.3.1
+ 34) gsl/2.7.1                        75) met/9.1.3
+ 35) nco/5.0.6                        76) metplus/3.1.1
+ 36) bacio/2.4.1                      77) py-packaging/23.1
+ 37) w3emc/2.10.0                     78) py-xarray/2023.7.0
+ 38) prod_util/2.1.1                  79) prepobs/1.1.0
+ 39) g2/3.4.5                         80) fit2obs/1.1.7
+ 40) sp/2.5.0                         81) globus-cli/3.27
+ 41) ip/4.3.0                         82) module_base.orion
+
+ 
+
+++ wxflowPATH=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush/python
+++ PYTHONPATH=/apps/other/globus-cli-3.27:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-xarray-2023.7.0-i227vom/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-packaging-23.1-qsred2z/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-python-dateutil-2.8.2-qmkqi6c/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-six-1.16.0-xx5n5aq/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-pandas-1.5.3-mxu73jp/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-xlwt-1.3.0-b4cyvye/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-xlsxwriter-3.1.7-erwjpno/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-xlrd-2.0.1-p6lyi26/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-pyxlsb-1.0.10-3tmfhfx/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-pytz-2023.3-amqisx3/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-openpyxl-3.1.2-lid72bc/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-et-xmlfile-1.0.1-rv7edto/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-numexpr-2.8.4-aqtuzo7/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-bottleneck-1.3.7-psru7d6/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-jinja2-3.1.2-hwvgjvz/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-markupsafe-2.1.3-zmufgyd/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-pyyaml-6.0-5tnykit/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-netcdf4-1.5.8-eqrdu35/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-cftime-1.0.3.4-fy7lvex/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-f90nml-1.4.3-pn2wamh/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/bufr-11.7.0-clawunp/lib64/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/bufr-11.7.0-clawunp/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-numpy-1.23.4-bphf752/lib/python3.11/site-packages:/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/intel/2021.9.0/py-setuptools-63.4.3-2wqnlmp/lib/python3.11/site-packages:/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush:/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush/python
+++ export PYTHONPATH
+++ ulimit -S -s 16384
+++ unset ulimit_s
++ status=0
++ [[ 0 -ne 0 ]]
++ export job=fcst
++ job=fcst
++ export jobid=fcst.1292195
++ jobid=fcst.1292195
++ /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/jobs/JGLOBAL_FORECAST
+Begin /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/jobs/JGLOBAL_FORECAST at Tue May 13 11:34:40 PM UTC 2025
+++ jjob_header.sh[46]OPTIND=1
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[50]env_job=fcst
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[49]read -ra configs
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[61]shift 4
+++ jjob_header.sh[63][[ -z fcst ]]
+++ jjob_header.sh[71]export DATA=/work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195
+++ jjob_header.sh[71]DATA=/work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195
+++ jjob_header.sh[72][[ YES == \Y\E\S ]]
+++ jjob_header.sh[73]rm -rf /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195
+++ jjob_header.sh[75]mkdir -p /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195
+++ jjob_header.sh[76]cd /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195
+++ jjob_header.sh[85]export pid=1292652
+++ jjob_header.sh[85]pid=1292652
+++ jjob_header.sh[86]export pgmout=OUTPUT.1292652
+++ jjob_header.sh[86]pgmout=OUTPUT.1292652
+++ jjob_header.sh[87]export pgmerr=errfile
+++ jjob_header.sh[87]pgmerr=errfile
+++ jjob_header.sh[90]export pgm=
+++ jjob_header.sh[90]pgm=
+++ jjob_header.sh[96]export cycle=t12z
+++ jjob_header.sh[96]cycle=t12z
+++ jjob_header.sh[97]setpdy.sh
++ setpdy.sh[20]'[' /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195 == /home/role-global ']'
++ setpdy.sh[25][[ ! t12z =~ t??z ]]
++ setpdy.sh[30]case $# in
++ setpdy.sh[31]dates_before_PDY=7
++ setpdy.sh[32]dates_after_PDY=7
++ setpdy.sh[50]COMDATEROOT=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT
++ setpdy.sh[53]'[' -z 20210323 ']'
++ setpdy.sh[57]sed 's/[0-9]\{8\}/20210323/' /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/date/t12z
+sed: can't read /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/date/t12z: No such file or directory
+++ jjob_header.sh[97]true
+++ jjob_header.sh[98]source ./PDY
+/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush/jjob_header.sh: line 98: ./PDY: No such file or directory
+++ jjob_header.sh[98]true
+++ jjob_header.sh[104]export EXPDIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3
+++ jjob_header.sh[104]EXPDIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3
+++ jjob_header.sh[105]for config in "${configs[@]:-''}"
+++ jjob_header.sh[106]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3/config.base
++++ config.base[6]echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]export machine=ORION
++++ config.base[9]machine=ORION
++++ config.base[12]export RUN_ENVIR=emc
++++ config.base[12]RUN_ENVIR=emc
++++ config.base[15]export ACCOUNT=fv3-cpu
++++ config.base[15]ACCOUNT=fv3-cpu
++++ config.base[16]export QUEUE=batch
++++ config.base[16]QUEUE=batch
++++ config.base[17]export QUEUE_SERVICE=batch
++++ config.base[17]QUEUE_SERVICE=batch
++++ config.base[18]export QUEUE_DTN=batch
++++ config.base[18]QUEUE_DTN=batch
++++ config.base[19]export PARTITION_BATCH=orion
++++ config.base[19]PARTITION_BATCH=orion
++++ config.base[20]export PARTITION_SERVICE=service
++++ config.base[20]PARTITION_SERVICE=service
++++ config.base[21]export PARTITION_DTN=
++++ config.base[21]PARTITION_DTN=
++++ config.base[22]export RESERVATION=
++++ config.base[22]RESERVATION=
++++ config.base[23]export CLUSTERS=
++++ config.base[23]CLUSTERS=
++++ config.base[24]export CLUSTERS_SERVICE=
++++ config.base[24]CLUSTERS_SERVICE=
++++ config.base[25]export CLUSTERS_DTN=
++++ config.base[25]CLUSTERS_DTN=
++++ config.base[28]export HPSS_PROJECT=emc-global
++++ config.base[28]HPSS_PROJECT=emc-global
++++ config.base[31]export HOMEgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow
++++ config.base[31]HOMEgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow
++++ config.base[32]export EXECgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/exec
++++ config.base[32]EXECgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/exec
++++ config.base[33]export FIXgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix
++++ config.base[33]FIXgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix
++++ config.base[34]export PARMgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm
++++ config.base[34]PARMgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm
++++ config.base[35]export SCRgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/scripts
++++ config.base[35]SCRgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/scripts
++++ config.base[36]export USHgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush
++++ config.base[36]USHgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush
++++ config.base[37]export FIXorog=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog
++++ config.base[37]FIXorog=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog
++++ config.base[38]export FIXugwd=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/ugwd
++++ config.base[38]FIXugwd=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/ugwd
++++ config.base[43]export PACKAGEROOT=/work2/noaa/global/role-global/nwpara
++++ config.base[43]PACKAGEROOT=/work2/noaa/global/role-global/nwpara
++++ config.base[44]export COMROOT=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT
++++ config.base[44]COMROOT=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT
++++ config.base[45]export COMINsyn=/work2/noaa/global/role-global/com/gfs/prod/syndat
++++ config.base[45]COMINsyn=/work2/noaa/global/role-global/com/gfs/prod/syndat
++++ config.base[48]export HOMEDIR=/work2/noaa/global/role-global
++++ config.base[48]HOMEDIR=/work2/noaa/global/role-global
++++ config.base[49]export STMP=/work2/noaa/stmp/role-global/ORION
++++ config.base[49]STMP=/work2/noaa/stmp/role-global/ORION
++++ config.base[50]export PTMP=/work2/noaa/stmp/role-global/ORION
++++ config.base[50]PTMP=/work2/noaa/stmp/role-global/ORION
++++ config.base[51]export NOSCRUB=/work2/noaa/global/role-global
++++ config.base[51]NOSCRUB=/work2/noaa/global/role-global
++++ config.base[54]export BASE_GIT=/work2/noaa/global/role-global/git
++++ config.base[54]BASE_GIT=/work2/noaa/global/role-global/git
++++ config.base[57]export BASE_DATA=/work2/noaa/global/role-global/data
++++ config.base[57]BASE_DATA=/work2/noaa/global/role-global/data
++++ config.base[60]export DO_BUFRSND=NO
++++ config.base[60]DO_BUFRSND=NO
++++ config.base[61]export DO_GEMPAK=NO
++++ config.base[61]DO_GEMPAK=NO
++++ config.base[62]export DO_AWIPS=NO
++++ config.base[62]DO_AWIPS=NO
++++ config.base[65]export MODE=forecast-only
++++ config.base[65]MODE=forecast-only
++++ config.base[66]export DO_TEST_MODE=NO
++++ config.base[66]DO_TEST_MODE=NO
++++ config.base[75]export HOMEpost=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow
++++ config.base[75]HOMEpost=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow
++++ config.base[78]export 'NCP=/bin/cp -p'
++++ config.base[78]NCP='/bin/cp -p'
++++ config.base[79]export NMV=/bin/mv
++++ config.base[79]NMV=/bin/mv
++++ config.base[80]export 'NLN=/bin/ln -sf'
++++ config.base[80]NLN='/bin/ln -sf'
++++ config.base[81]export VERBOSE=YES
++++ config.base[81]VERBOSE=YES
++++ config.base[82]export KEEPDATA=NO
++++ config.base[82]KEEPDATA=NO
++++ config.base[83]export DEBUG_POSTSCRIPT=NO
++++ config.base[83]DEBUG_POSTSCRIPT=NO
++++ config.base[84]export CHGRP_RSTPROD=YES
++++ config.base[84]CHGRP_RSTPROD=YES
++++ config.base[85]export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[85]CHGRP_CMD='chgrp rstprod'
++++ config.base[86]export NCDUMP=/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env-rocky9/install/intel/2021.9.0/netcdf-c-4.9.2-oup2wyi/bin/ncdump
++++ config.base[86]NCDUMP=/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env-rocky9/install/intel/2021.9.0/netcdf-c-4.9.2-oup2wyi/bin/ncdump
++++ config.base[87]export NCLEN=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush/getncdimlen
++++ config.base[87]NCLEN=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush/getncdimlen
++++ config.base[90]export BASE_ENV=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/env
++++ config.base[90]BASE_ENV=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/env
++++ config.base[93]export SDATE=2021032312
++++ config.base[93]SDATE=2021032312
++++ config.base[94]export EDATE=2021032312
++++ config.base[94]EDATE=2021032312
++++ config.base[95]export EXP_WARM_START=.false.
++++ config.base[95]EXP_WARM_START=.false.
++++ config.base[96]export assim_freq=6
++++ config.base[96]assim_freq=6
++++ config.base[97]export PSLOT=C48_S2SWA_gefs_c72db5b3
++++ config.base[97]PSLOT=C48_S2SWA_gefs_c72db5b3
++++ config.base[98]export EXPDIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3
++++ config.base[98]EXPDIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3
++++ config.base[99]export ROTDIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3
++++ config.base[99]ROTDIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3
++++ config.base[101]export ARCDIR=/work2/noaa/global/role-global/archive/C48_S2SWA_gefs_c72db5b3
++++ config.base[101]ARCDIR=/work2/noaa/global/role-global/archive/C48_S2SWA_gefs_c72db5b3
++++ config.base[102]export ATARDIR=/NCEPDEV/emc-global/1year/role-global/ORION/scratch/C48_S2SWA_gefs_c72db5b3
++++ config.base[102]ATARDIR=/NCEPDEV/emc-global/1year/role-global/ORION/scratch/C48_S2SWA_gefs_c72db5b3
++++ config.base[103]export 'FETCHDIR={{ FETCHDIR }}'
++++ config.base[103]FETCHDIR='{{ FETCHDIR }}'
++++ config.base[106]export envir=prod
++++ config.base[106]envir=prod
++++ config.base[107]export NET=gefs
++++ config.base[107]NET=gefs
++++ config.base[108]export RUN=gefs
++++ config.base[108]RUN=gefs
++++ config.base[111]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3/config.com
+++++ config.com[4]echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[37][[ emc == \n\c\o ]]
+++++ config.com[41]COM_OBS_TMPL='${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[42]COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[44]declare -rx COM_OBS_TMPL COM_RTOFS_TMPL
+++++ config.com[45]declare -rx 'COM_OBSDMP_TMPL=${DMPDIR}/${DUMP}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[47]COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[49]declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[51]declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[52]declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[54]declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[55]declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[56]declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[57]declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[58]declare -rx 'COM_SNOW_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/snow/anlmon'
+++++ config.com[59]declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[60]declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[61]declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[62]declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[63]declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[64]declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[65]declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[66]declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[67]declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[68]declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[69]declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[70]declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[71]declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[72]declare -rx 'COM_ATMOS_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/anlmon'
+++++ config.com[73]declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[75]declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[76]declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[77]declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[78]declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[79]declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ config.com[80]declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[81]declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[82]declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[84]declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[85]declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[86]declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[87]declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[88]declare -rx 'COM_OCEAN_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/anlmon'
+++++ config.com[89]declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[90]declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[91]declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[92]declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[93]declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[95]declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[96]declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[97]declare -rx 'COM_ICE_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/anlmon'
+++++ config.com[98]declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[99]declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[100]declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[101]declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[102]declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[103]declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[104]declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[106]declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[107]declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[108]declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[109]declare -rx 'COM_CHEM_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/chem/anlmon'
+++++ config.com[111]declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[114]export 'ERRSCRIPT=eval [[ $err = 0 ]]'
++++ config.base[114]ERRSCRIPT='eval [[ $err = 0 ]]'
++++ config.base[115]export LOGSCRIPT=
++++ config.base[115]LOGSCRIPT=
++++ config.base[118]export 'REDOUT=1>'
++++ config.base[118]REDOUT='1>'
++++ config.base[119]export 'REDERR=2>'
++++ config.base[119]REDERR='2>'
++++ config.base[121]export SENDECF=NO
++++ config.base[121]SENDECF=NO
++++ config.base[122]export SENDSDM=NO
++++ config.base[122]SENDSDM=NO
++++ config.base[123]export SENDDBN_NTC=NO
++++ config.base[123]SENDDBN_NTC=NO
++++ config.base[124]export SENDDBN=NO
++++ config.base[124]SENDDBN=NO
++++ config.base[125]export DBNROOT=/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env-rocky9/install/intel/2021.9.0/prod-util-2.1.1-g53ohf4/fakedbn
++++ config.base[125]DBNROOT=/work/noaa/epic/role-epic/spack-stack/orion/spack-stack-1.6.0/envs/unified-env-rocky9/install/intel/2021.9.0/prod-util-2.1.1-g53ohf4/fakedbn
++++ config.base[128]export APP=S2SWA
++++ config.base[128]APP=S2SWA
++++ config.base[131]export DO_ATM=YES
++++ config.base[131]DO_ATM=YES
++++ config.base[132]export DO_COUPLED=NO
++++ config.base[132]DO_COUPLED=NO
++++ config.base[133]export DO_WAVE=NO
++++ config.base[133]DO_WAVE=NO
++++ config.base[134]export DO_OCN=NO
++++ config.base[134]DO_OCN=NO
++++ config.base[135]export DO_ICE=NO
++++ config.base[135]DO_ICE=NO
++++ config.base[136]export DO_EXTRACTVARS=NO
++++ config.base[136]DO_EXTRACTVARS=NO
++++ config.base[137]export DO_AERO_FCST=NO
++++ config.base[137]DO_AERO_FCST=NO
++++ config.base[138]export DOBNDPNT_WAVE=NO
++++ config.base[138]DOBNDPNT_WAVE=NO
++++ config.base[139]export DOIBP_WAV=NO
++++ config.base[139]DOIBP_WAV=NO
++++ config.base[140]export FRAC_GRID=.true.
++++ config.base[140]FRAC_GRID=.true.
++++ config.base[141]export DO_NEST=NO
++++ config.base[141]DO_NEST=NO
++++ config.base[142][[ NO == \Y\E\S ]]
++++ config.base[146]export ntiles=6
++++ config.base[146]ntiles=6
++++ config.base[150]export OPS_RES=C768
++++ config.base[150]OPS_RES=C768
++++ config.base[153]export LEVS=128
++++ config.base[153]LEVS=128
++++ config.base[154]export CASE=C48
++++ config.base[154]CASE=C48
++++ config.base[155]export CASE_ENS=C48
++++ config.base[155]CASE_ENS=C48
++++ config.base[156]export OCNRES=500
++++ config.base[156]OCNRES=500
++++ config.base[157]export ICERES=500
++++ config.base[157]ICERES=500
++++ config.base[159]case "${CASE}" in
++++ config.base[161]export waveGRD=glo_500
++++ config.base[161]waveGRD=glo_500
++++ config.base[178]case "${APP}" in
++++ config.base[194]export DO_COUPLED=YES
++++ config.base[194]DO_COUPLED=YES
++++ config.base[195]export DO_OCN=YES
++++ config.base[195]DO_OCN=YES
++++ config.base[196]export DO_ICE=YES
++++ config.base[196]DO_ICE=YES
++++ config.base[198][[ S2SWA =~ A$ ]]
++++ config.base[199]export DO_AERO_FCST=YES
++++ config.base[199]DO_AERO_FCST=YES
++++ config.base[202][[ S2SWA =~ ^S2SW ]]
++++ config.base[203]export DO_WAVE=YES
++++ config.base[203]DO_WAVE=YES
++++ config.base[213]export FHMIN=0
++++ config.base[213]FHMIN=0
++++ config.base[214]export FHMAX=9
++++ config.base[214]FHMAX=9
++++ config.base[215]export FHOUT=3
++++ config.base[215]FHOUT=3
++++ config.base[216]export FHOUT_OCN=3
++++ config.base[216]FHOUT_OCN=3
++++ config.base[217]export FHOUT_ICE=3
++++ config.base[217]FHOUT_ICE=3
++++ config.base[218]export FHOUT_AERO=3
++++ config.base[218]FHOUT_AERO=3
++++ config.base[221]export INTERVAL_GFS=24
++++ config.base[221]INTERVAL_GFS=24
++++ config.base[222]export SDATE_GFS=2021032312
++++ config.base[222]SDATE_GFS=2021032312
++++ config.base[225]export REPLAY_ICS=NO
++++ config.base[225]REPLAY_ICS=NO
++++ config.base[226][[ NO == \Y\E\S ]]
++++ config.base[232]export OFFSET_START_HOUR=0
++++ config.base[232]OFFSET_START_HOUR=0
++++ config.base[233]export USE_OCN_ENS_PERTURB_FILES=NO
++++ config.base[233]USE_OCN_ENS_PERTURB_FILES=NO
++++ config.base[234]export USE_ATM_ENS_PERTURB_FILES=NO
++++ config.base[234]USE_ATM_ENS_PERTURB_FILES=NO
++++ config.base[238]export FHMIN_GFS=0
++++ config.base[238]FHMIN_GFS=0
++++ config.base[239]export FHMAX_GFS=120
++++ config.base[239]FHMAX_GFS=120
++++ config.base[241]breakpnts=48
++++ config.base[242]export FCST_SEGMENTS=0,48,120
++++ config.base[242]FCST_SEGMENTS=0,48,120
++++ config.base[244]export FHOUT_GFS=6
++++ config.base[244]FHOUT_GFS=6
++++ config.base[245]export FHMAX_HF_GFS=0
++++ config.base[245]FHMAX_HF_GFS=0
++++ config.base[246]export FHOUT_HF_GFS=1
++++ config.base[246]FHOUT_HF_GFS=1
++++ config.base[247]export FHOUT_OCN_GFS=24
++++ config.base[247]FHOUT_OCN_GFS=24
++++ config.base[248]export FHOUT_ICE_GFS=24
++++ config.base[248]FHOUT_ICE_GFS=24
++++ config.base[249]export FHMIN_WAV=0
++++ config.base[249]FHMIN_WAV=0
++++ config.base[250]export FHOUT_WAV=3
++++ config.base[250]FHOUT_WAV=3
++++ config.base[251]export FHMAX_HF_WAV=120
++++ config.base[251]FHMAX_HF_WAV=120
++++ config.base[252]export FHOUT_HF_WAV=1
++++ config.base[252]FHOUT_HF_WAV=1
++++ config.base[253]export FHMAX_WAV=120
++++ config.base[253]FHMAX_WAV=120
++++ config.base[254]export FHMAX_WAV_GFS=120
++++ config.base[254]FHMAX_WAV_GFS=120
++++ config.base[255]export FHMAX_HF_GFS=0
++++ config.base[255]FHMAX_HF_GFS=0
++++ config.base[256]export FHMAX_WAV_GFS=120
++++ config.base[256]FHMAX_WAV_GFS=120
++++ config.base[257]export FHMAX_HF_WAV=120
++++ config.base[257]FHMAX_HF_WAV=120
++++ config.base[258]export ILPOST=1
++++ config.base[258]ILPOST=1
++++ config.base[260]export FHMIN_ENKF=0
++++ config.base[260]FHMIN_ENKF=0
++++ config.base[261]export FHMAX_ENKF=120
++++ config.base[261]FHMAX_ENKF=120
++++ config.base[262]export FHOUT_ENKF=6
++++ config.base[262]FHOUT_ENKF=6
++++ config.base[263]export FHOUT_OCN=24
++++ config.base[263]FHOUT_OCN=24
++++ config.base[264]export FHOUT_ICE=24
++++ config.base[264]FHOUT_ICE=24
++++ config.base[267]export restart_interval_gfs=12
++++ config.base[267]restart_interval_gfs=12
++++ config.base[268]export restart_interval_enkfgfs=12
++++ config.base[268]restart_interval_enkfgfs=12
++++ config.base[273]export QUILTING=.true.
++++ config.base[273]QUILTING=.true.
++++ config.base[274]export OUTPUT_GRID=gaussian_grid
++++ config.base[274]OUTPUT_GRID=gaussian_grid
++++ config.base[275]export WRITE_DOPOST=.true.
++++ config.base[275]WRITE_DOPOST=.true.
++++ config.base[276]export WRITE_NSFLIP=.true.
++++ config.base[276]WRITE_NSFLIP=.true.
++++ config.base[279]export imp_physics=8
++++ config.base[279]imp_physics=8
++++ config.base[283]export DO_JEDIATMVAR=NO
++++ config.base[283]DO_JEDIATMVAR=NO
++++ config.base[284]export DO_JEDIATMENS=NO
++++ config.base[284]DO_JEDIATMENS=NO
++++ config.base[285]export DO_JEDIOCNVAR=NO
++++ config.base[285]DO_JEDIOCNVAR=NO
++++ config.base[286]export DO_JEDISNOWDA=NO
++++ config.base[286]DO_JEDISNOWDA=NO
++++ config.base[287]export DO_MERGENSST=NO
++++ config.base[287]DO_MERGENSST=NO
++++ config.base[288]export DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[288]DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[291]export NMEM_ENS=2
++++ config.base[291]NMEM_ENS=2
++++ config.base[295]export ENSMEM=000
++++ config.base[295]ENSMEM=000
++++ config.base[296]export MEMDIR=mem000
++++ config.base[296]MEMDIR=mem000
++++ config.base[299]((  ENSMEM == 0  ))
++++ config.base[300]export DO_CA=YES
++++ config.base[300]DO_CA=YES
++++ config.base[305]export DOIAU=NO
++++ config.base[305]DOIAU=NO
++++ config.base[308][[ .false. = \.\t\r\u\e\. ]]
++++ config.base[317]export DONST=YES
++++ config.base[317]DONST=YES
++++ config.base[318][[ YES = \Y\E\S ]]
++++ config.base[318]export 'FNTSFA=        '
++++ config.base[318]FNTSFA='        '
++++ config.base[321]export nst_anl=.true.
++++ config.base[321]nst_anl=.true.
++++ config.base[324]export MAKE_NSSTBUFR=NO
++++ config.base[324]MAKE_NSSTBUFR=NO
++++ config.base[327]export MAKE_ACFTBUFR=NO
++++ config.base[327]MAKE_ACFTBUFR=NO
++++ config.base[330]export DO_METP=NO
++++ config.base[330]DO_METP=NO
++++ config.base[331]export DO_FIT2OBS=NO
++++ config.base[331]DO_FIT2OBS=NO
++++ config.base[334]export DO_ARCHCOM=NO
++++ config.base[334]DO_ARCHCOM=NO
++++ config.base[335]export ARCHCOM_TO=globus_hpss
++++ config.base[335]ARCHCOM_TO=globus_hpss
++++ config.base[338]export CLIENT_GLOBUS_UUID=869912fe-f6de-46c0-af10-b22efd84a022
++++ config.base[338]CLIENT_GLOBUS_UUID=869912fe-f6de-46c0-af10-b22efd84a022
++++ config.base[341]export NUM_SND_COLLECTIVES=9
++++ config.base[341]NUM_SND_COLLECTIVES=9
++++ config.base[343]echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[106]true
+++ jjob_header.sh[107]export err=0
+++ jjob_header.sh[107]err=0
+++ jjob_header.sh[108]set +x
+ completed cleanly
+++ jjob_header.sh[105]for config in "${configs[@]:-''}"
+++ jjob_header.sh[106]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3/config.fcst
++++ config.fcst[6]echo 'BEGIN: config.fcst'
+BEGIN: config.fcst
++++ config.fcst[8]export USE_ESMF_THREADING=YES
++++ config.fcst[8]USE_ESMF_THREADING=YES
++++ config.fcst[9]export COPY_FINAL_RESTARTS=NO
++++ config.fcst[9]COPY_FINAL_RESTARTS=NO
++++ config.fcst[12]string='--fv3 C48'
++++ config.fcst[13][[ YES == \Y\E\S ]]
++++ config.fcst[14]string='--fv3 C48 --mom6 500'
++++ config.fcst[16][[ YES == \Y\E\S ]]
++++ config.fcst[17]string='--fv3 C48 --mom6 500 --cice6 500'
++++ config.fcst[19][[ YES == \Y\E\S ]]
++++ config.fcst[20]string='--fv3 C48 --mom6 500 --cice6 500 --ww3 glo_500'
++++ config.fcst[22][[ YES == \Y\E\S ]]
++++ config.fcst[23]string='--fv3 C48 --mom6 500 --cice6 500 --ww3 glo_500 --gocart'
++++ config.fcst[27]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3/config.ufs --fv3 C48 --mom6 500 --cice6 500 --ww3 glo_500 --gocart
+++++ config.ufs[9]echo 'BEGIN: config.ufs'
+BEGIN: config.ufs
+++++ config.ufs[11]((  9 <= 1  ))
+++++ config.ufs[26]skip_mom6=true
+++++ config.ufs[27]skip_cice6=true
+++++ config.ufs[28]skip_ww3=true
+++++ config.ufs[29]skip_gocart=true
+++++ config.ufs[30]skip_mediator=true
+++++ config.ufs[33]((  9 > 0  ))
+++++ config.ufs[34]key=--fv3
+++++ config.ufs[35]case "${key}" in
+++++ config.ufs[37]fv3_res=C48
+++++ config.ufs[38]shift
+++++ config.ufs[63]shift
+++++ config.ufs[33]((  7 > 0  ))
+++++ config.ufs[34]key=--mom6
+++++ config.ufs[35]case "${key}" in
+++++ config.ufs[41]mom6_res=500
+++++ config.ufs[42]skip_mom6=false
+++++ config.ufs[43]shift
+++++ config.ufs[63]shift
+++++ config.ufs[33]((  5 > 0  ))
+++++ config.ufs[34]key=--cice6
+++++ config.ufs[35]case "${key}" in
+++++ config.ufs[46]cice6_res=500
+++++ config.ufs[47]skip_cice6=false
+++++ config.ufs[48]shift
+++++ config.ufs[63]shift
+++++ config.ufs[33]((  3 > 0  ))
+++++ config.ufs[34]key=--ww3
+++++ config.ufs[35]case "${key}" in
+++++ config.ufs[51]ww3_res=glo_500
+++++ config.ufs[52]skip_ww3=false
+++++ config.ufs[53]shift
+++++ config.ufs[63]shift
+++++ config.ufs[33]((  1 > 0  ))
+++++ config.ufs[34]key=--gocart
+++++ config.ufs[35]case "${key}" in
+++++ config.ufs[56]skip_gocart=false
+++++ config.ufs[63]shift
+++++ config.ufs[33]((  0 > 0  ))
+++++ config.ufs[67][[ false == \f\a\l\s\e ]]
+++++ config.ufs[68]skip_mediator=false
+++++ config.ufs[72]case "${fv3_res}" in
+++++ config.ufs[77]export DELTIM=900
+++++ config.ufs[77]DELTIM=900
+++++ config.ufs[78]export layout_x=2
+++++ config.ufs[78]layout_x=2
+++++ config.ufs[79]export layout_y=1
+++++ config.ufs[79]layout_y=1
+++++ config.ufs[80]export nthreads_fv3=1
+++++ config.ufs[80]nthreads_fv3=1
+++++ config.ufs[81]export nthreads_ufs=1
+++++ config.ufs[81]nthreads_ufs=1
+++++ config.ufs[82]export xr_cnvcld=.true.
+++++ config.ufs[82]xr_cnvcld=.true.
+++++ config.ufs[83]export cdmbgwd=0.071,2.1,1.0,1.0
+++++ config.ufs[83]cdmbgwd=0.071,2.1,1.0,1.0
+++++ config.ufs[84]export cdmbgwd_gsl=40.0,1.77,1.0,1.0
+++++ config.ufs[84]cdmbgwd_gsl=40.0,1.77,1.0,1.0
+++++ config.ufs[85]export psl_gwd_dx_factor=6.0
+++++ config.ufs[85]psl_gwd_dx_factor=6.0
+++++ config.ufs[86]export k_split=1
+++++ config.ufs[86]k_split=1
+++++ config.ufs[87]export n_split=4
+++++ config.ufs[87]n_split=4
+++++ config.ufs[88]export tau=10.0
+++++ config.ufs[88]tau=10.0
+++++ config.ufs[89]export rf_cutoff=100.0
+++++ config.ufs[89]rf_cutoff=100.0
+++++ config.ufs[90]export fv_sg_adj=3600
+++++ config.ufs[90]fv_sg_adj=3600
+++++ config.ufs[91]export knob_ugwp_tauamp=6.0e-3
+++++ config.ufs[91]knob_ugwp_tauamp=6.0e-3
+++++ config.ufs[92]export WRITE_GROUP=1
+++++ config.ufs[92]WRITE_GROUP=1
+++++ config.ufs[93]export WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[93]WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[211]((  WRTTASK_PER_GROUP_PER_THREAD = WRTTASK_PER_GROUP_PER_THREAD_PER_TILE * 6  ))
+++++ config.ufs[212]export WRTTASK_PER_GROUP_PER_THREAD
+++++ config.ufs[214]((  ntasks_fv3 = layout_x * layout_y * 6  ))
+++++ config.ufs[215]export ntasks_fv3
+++++ config.ufs[217]((  ntasks_quilt = WRITE_GROUP * WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.ufs[218]export ntasks_quilt
+++++ config.ufs[222]case ${fv3_res} in
+++++ config.ufs[224]zstandard_level=0
+++++ config.ufs[225]ideflate=0
+++++ config.ufs[226]quantize_nsd=0
+++++ config.ufs[227]OUTPUT_FILETYPE_ATM=netcdf
+++++ config.ufs[228]OUTPUT_FILETYPE_SFC=netcdf
+++++ config.ufs[246]export zstandard_level ideflate quantize_nsd
+++++ config.ufs[247]export OUTPUT_FILETYPE_ATM OUTPUT_FILETYPE_SFC
+++++ config.ufs[250]export cpl=.false.
+++++ config.ufs[250]cpl=.false.
+++++ config.ufs[251]export cplflx=.false.
+++++ config.ufs[251]cplflx=.false.
+++++ config.ufs[252]export cplice=.false.
+++++ config.ufs[252]cplice=.false.
+++++ config.ufs[253]export cplchm=.false.
+++++ config.ufs[253]cplchm=.false.
+++++ config.ufs[254]export cplwav=.false.
+++++ config.ufs[254]cplwav=.false.
+++++ config.ufs[255]export cplwav2atm=.false.
+++++ config.ufs[255]cplwav2atm=.false.
+++++ config.ufs[256]export CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[256]CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[257]model_list=atm
+++++ config.ufs[260][[ false == \f\a\l\s\e ]]
+++++ config.ufs[261]export cpl=.true.
+++++ config.ufs[261]cpl=.true.
+++++ config.ufs[262]export nthreads_mediator=1
+++++ config.ufs[262]nthreads_mediator=1
+++++ config.ufs[263]export CCPP_SUITE=FV3_GFS_v17_coupled_p8_ugwpv1
+++++ config.ufs[263]CCPP_SUITE=FV3_GFS_v17_coupled_p8_ugwpv1
+++++ config.ufs[267][[ false == \f\a\l\s\e ]]
+++++ config.ufs[268]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3/config.ocn
++++++ config.ocn[3]echo 'BEGIN: config.ocn'
+BEGIN: config.ocn
++++++ config.ocn[5]export MESH_OCN=mesh.mx500.nc
++++++ config.ocn[5]MESH_OCN=mesh.mx500.nc
++++++ config.ocn[7]export DO_OCN_SPPT=NO
++++++ config.ocn[7]DO_OCN_SPPT=NO
++++++ config.ocn[8]export DO_OCN_PERT_EPBL=NO
++++++ config.ocn[8]DO_OCN_PERT_EPBL=NO
++++++ config.ocn[11]export MOM6_USE_LI2016=True
++++++ config.ocn[11]MOM6_USE_LI2016=True
++++++ config.ocn[12]export MOM6_THERMO_SPAN=False
++++++ config.ocn[12]MOM6_THERMO_SPAN=False
++++++ config.ocn[14][[ NO == \Y\E\S ]]
++++++ config.ocn[17]export ODA_INCUPD=False
++++++ config.ocn[17]ODA_INCUPD=False
++++++ config.ocn[21][[ NO == \Y\E\S ]]
++++++ config.ocn[24]export ODA_INCUPD_NHOURS=3.0
++++++ config.ocn[24]ODA_INCUPD_NHOURS=3.0
++++++ config.ocn[27]MOM6_INTERP_ICS=NO
++++++ config.ocn[28][[ NO == \Y\E\S ]]
++++++ config.ocn[34]echo 'END: config.ocn'
+END: config.ocn
+++++ config.ufs[269]export cplflx=.true.
+++++ config.ufs[269]cplflx=.true.
+++++ config.ufs[270]model_list=atm.ocean
+++++ config.ufs[271]nthreads_mom6=1
+++++ config.ufs[272]case "${mom6_res}" in
+++++ config.ufs[274]ntasks_mom6=8
+++++ config.ufs[275]OCNTIM=3600
+++++ config.ufs[276]NX_GLB=72
+++++ config.ufs[277]NY_GLB=35
+++++ config.ufs[278]DT_DYNAM_MOM6=3600
+++++ config.ufs[279]DT_THERM_MOM6=3600
+++++ config.ufs[280]FRUNOFF=
+++++ config.ufs[281]CHLCLIM=seawifs_1998-2006_smoothed_2X.nc
+++++ config.ufs[282]MOM6_RESTART_SETTING=r
+++++ config.ufs[283]MOM6_RIVER_RUNOFF=False
+++++ config.ufs[284]case ${RUN} in
+++++ config.ufs[286]MOM6_DIAG_MISVAL=-1e34
+++++ config.ufs[294]eps_imesh=4.0e-1
+++++ config.ufs[295]MOM6_DIAG_COORD_DEF_Z_FILE=oceanda_zgrid_25L.nc
+++++ config.ufs[296]MOM6_ALLOW_LANDMASK_CHANGES=False
+++++ config.ufs[297]TOPOEDITS=
+++++ config.ufs[392]export nthreads_mom6 ntasks_mom6
+++++ config.ufs[393]export OCNTIM
+++++ config.ufs[394]export NX_GLB NY_GLB
+++++ config.ufs[395]export DT_DYNAM_MOM6 DT_THERM_MOM6
+++++ config.ufs[396]export FRUNOFF
+++++ config.ufs[397]export CHLCLIM
+++++ config.ufs[398]export TOPOEDITS
+++++ config.ufs[399]export MOM6_RIVER_RUNOFF
+++++ config.ufs[400]export MOM6_RESTART_SETTING
+++++ config.ufs[401]export eps_imesh
+++++ config.ufs[402]export MOM6_DIAG_COORD_DEF_Z_FILE
+++++ config.ufs[403]export MOM6_DIAG_MISVAL
+++++ config.ufs[404]export MOM6_ALLOW_LANDMASK_CHANGES
+++++ config.ufs[408][[ false == \f\a\l\s\e ]]
+++++ config.ufs[409]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3/config.ice
++++++ config.ice[3]echo 'BEGIN: config.ice'
+BEGIN: config.ice
++++++ config.ice[6]export min_seaice=1.0e-6
++++++ config.ice[6]min_seaice=1.0e-6
++++++ config.ice[7]export use_cice_alb=.true.
++++++ config.ice[7]use_cice_alb=.true.
++++++ config.ice[9]export MESH_ICE=mesh.mx500.nc
++++++ config.ice[9]MESH_ICE=mesh.mx500.nc
++++++ config.ice[11]export CICE_GRID=grid_cice_NEMS_mx500.nc
++++++ config.ice[11]CICE_GRID=grid_cice_NEMS_mx500.nc
++++++ config.ice[12]export CICE_MASK=kmtu_cice_NEMS_mx500.nc
++++++ config.ice[12]CICE_MASK=kmtu_cice_NEMS_mx500.nc
++++++ config.ice[14]echo 'END: config.ice'
+END: config.ice
+++++ config.ufs[410]export cplice=.true.
+++++ config.ufs[410]cplice=.true.
+++++ config.ufs[411]model_list=atm.ocean.ice
+++++ config.ufs[413][[ false == \t\r\u\e ]]
+++++ config.ufs[418]nthreads_cice6=1
+++++ config.ufs[419]case "${cice6_res}" in
+++++ config.ufs[421]ntasks_cice6=4
+++++ config.ufs[422]cice6_processor_shape=slenderX1
+++++ config.ufs[443]export nthreads_cice6 ntasks_cice6
+++++ config.ufs[444]export cice6_processor_shape
+++++ config.ufs[448][[ false == \f\a\l\s\e ]]
+++++ config.ufs[449]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3/config.wave
++++++ config.wave[6]echo 'BEGIN: config.wave'
+BEGIN: config.wave
++++++ config.wave[13]export RUNRSTwave=gdas
++++++ config.wave[13]RUNRSTwave=gdas
++++++ config.wave[16]export MESH_WAV=mesh.glo_500.nc
++++++ config.wave[16]MESH_WAV=mesh.glo_500.nc
++++++ config.wave[19]case "${waveGRD}" in
++++++ config.wave[52]export waveinterpGRD=
++++++ config.wave[52]waveinterpGRD=
++++++ config.wave[53]export wavepostGRD=glo_500
++++++ config.wave[53]wavepostGRD=glo_500
++++++ config.wave[54]export waveuoutpGRD=glo_500
++++++ config.wave[54]waveuoutpGRD=glo_500
++++++ config.wave[63]export WAVEWND_DID=
++++++ config.wave[63]WAVEWND_DID=
++++++ config.wave[64]export WAVEWND_FID=
++++++ config.wave[64]WAVEWND_FID=
++++++ config.wave[67]export WAVHINDH=0
++++++ config.wave[67]WAVHINDH=0
++++++ config.wave[68]export FHMAX_WAV_IBP=180
++++++ config.wave[68]FHMAX_WAV_IBP=180
++++++ config.wave[69]((  FHMAX_WAV < FHMAX_WAV_IBP  ))
++++++ config.wave[69]export FHMAX_WAV_IBP=120
++++++ config.wave[69]FHMAX_WAV_IBP=120
++++++ config.wave[72]export DTFLD_WAV=3600
++++++ config.wave[72]DTFLD_WAV=3600
++++++ config.wave[73]export DTPNT_WAV=3600
++++++ config.wave[73]DTPNT_WAV=3600
++++++ config.wave[74]export FHINCP_WAV=1
++++++ config.wave[74]FHINCP_WAV=1
++++++ config.wave[77]export 'OUTPARS_WAV=WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++++ config.wave[77]OUTPARS_WAV='WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR CHA'
++++++ config.wave[80]export WAVHCYC=6
++++++ config.wave[80]WAVHCYC=6
++++++ config.wave[81]export FHMAX_WAV_CUR=192
++++++ config.wave[81]FHMAX_WAV_CUR=192
++++++ config.wave[85]export RSTTYPE_WAV=T
++++++ config.wave[85]RSTTYPE_WAV=T
++++++ config.wave[86]rst_dt_gfs=43200
++++++ config.wave[87][[ 43200 -gt 0 ]]
++++++ config.wave[88]export DT_1_RST_WAV=0
++++++ config.wave[88]DT_1_RST_WAV=0
++++++ config.wave[91]export DT_2_RST_WAV=43200
++++++ config.wave[91]DT_2_RST_WAV=43200
++++++ config.wave[97]export RSTIOFF_WAV=0
++++++ config.wave[97]RSTIOFF_WAV=0
++++++ config.wave[101]export RUNMEM=-1
++++++ config.wave[101]RUNMEM=-1
++++++ config.wave[104]((  RUNMEM == -1  ))
++++++ config.wave[106]export waveMEMB=
++++++ config.wave[106]waveMEMB=
++++++ config.wave[113]export WW3ATMINP=CPL
++++++ config.wave[113]WW3ATMINP=CPL
++++++ config.wave[114][[ YES == \Y\E\S ]]
++++++ config.wave[115]export WW3ICEINP=CPL
++++++ config.wave[115]WW3ICEINP=CPL
++++++ config.wave[116]export WAVEICE_FID=
++++++ config.wave[116]WAVEICE_FID=
++++++ config.wave[122][[ YES == \Y\E\S ]]
++++++ config.wave[123]export WW3CURINP=CPL
++++++ config.wave[123]WW3CURINP=CPL
++++++ config.wave[124]export WAVECUR_FID=
++++++ config.wave[124]WAVECUR_FID=
++++++ config.wave[131]export WW3ATMIENS=F
++++++ config.wave[131]WW3ATMIENS=F
++++++ config.wave[132]export WW3ICEIENS=F
++++++ config.wave[132]WW3ICEIENS=F
++++++ config.wave[133]export WW3CURIENS=F
++++++ config.wave[133]WW3CURIENS=F
++++++ config.wave[135]export GOFILETYPE=1
++++++ config.wave[135]GOFILETYPE=1
++++++ config.wave[136]export POFILETYPE=1
++++++ config.wave[136]POFILETYPE=1
++++++ config.wave[140]export FUNIPNT=T
++++++ config.wave[140]FUNIPNT=T
++++++ config.wave[142]export IOSRV=1
++++++ config.wave[142]IOSRV=1
++++++ config.wave[144]export FPNTPROC=T
++++++ config.wave[144]FPNTPROC=T
++++++ config.wave[146]export FGRDPROC=F
++++++ config.wave[146]FGRDPROC=F
++++++ config.wave[148]export FLAGMASKCOMP=F
++++++ config.wave[148]FLAGMASKCOMP=F
++++++ config.wave[150]export FLAGMASKOUT=F
++++++ config.wave[150]FLAGMASKOUT=F
++++++ config.wave[152]echo 'END: config.wave'
+END: config.wave
+++++ config.ufs[450]export cplwav=.true.
+++++ config.ufs[450]cplwav=.true.
+++++ config.ufs[451]export cplwav2atm=.true.
+++++ config.ufs[451]cplwav2atm=.true.
+++++ config.ufs[452]model_list=atm.ocean.ice.wave
+++++ config.ufs[453]nthreads_ww3=2
+++++ config.ufs[454]case "${ww3_res}" in
+++++ config.ufs[473]ntasks_ww3=12
+++++ config.ufs[474]nthreads_ww3=1
+++++ config.ufs[484]export ntasks_ww3 nthreads_ww3
+++++ config.ufs[488][[ false == \f\a\l\s\e ]]
+++++ config.ufs[489]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3/config.aero
++++++ config.aero[6]export AERO_INPUTS_DIR=/work2/noaa/global/role-global/data/GEFS_ExtData/20250310
++++++ config.aero[6]AERO_INPUTS_DIR=/work2/noaa/global/role-global/data/GEFS_ExtData/20250310
++++++ config.aero[8]export AERO_DIAG_TABLE=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/fv3/diag_table.aero
++++++ config.aero[8]AERO_DIAG_TABLE=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/fv3/diag_table.aero
++++++ config.aero[9]export AERO_FIELD_TABLE=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/fv3/field_table.aero
++++++ config.aero[9]AERO_FIELD_TABLE=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/fv3/field_table.aero
++++++ config.aero[11]export AERO_EMIS_FIRE=qfed
++++++ config.aero[11]AERO_EMIS_FIRE=qfed
++++++ config.aero[13]export AERO_CONFIG_DIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/gocart
++++++ config.aero[13]AERO_CONFIG_DIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/gocart
++++++ config.aero[18]export 'fscav_aero='\''*:0.3'\'','\''so2:0.0'\'','\''msa:0.0'\'','\''dms:0.0'\'','\''nh3:0.4'\'','\''nh4:0.6'\'','\''bc1:0.6'\'','\''bc2:0.6'\'','\''oc1:0.4'\'','\''oc2:0.4'\'','\''dust1:0.6'\'','\''dust2:0.6'\'', '\''dust3:0.6'\'','\''dust4:0.6'\'','\''dust5:0.6'\'','\''seas1:0.5'\'','\''seas2:0.5'\'','\''seas3:0.5'\'','\''seas4:0.5'\'','\''seas5:0.5'\'''
++++++ config.aero[18]fscav_aero=''\''*:0.3'\'','\''so2:0.0'\'','\''msa:0.0'\'','\''dms:0.0'\'','\''nh3:0.4'\'','\''nh4:0.6'\'','\''bc1:0.6'\'','\''bc2:0.6'\'','\''oc1:0.4'\'','\''oc2:0.4'\'','\''dust1:0.6'\'','\''dust2:0.6'\'', '\''dust3:0.6'\'','\''dust4:0.6'\'','\''dust5:0.6'\'','\''seas1:0.5'\'','\''seas2:0.5'\'','\''seas3:0.5'\'','\''seas4:0.5'\'','\''seas5:0.5'\'''
++++++ config.aero[21]export dnats_aero=2
++++++ config.aero[21]dnats_aero=2
+++++ config.ufs[490]export cplchm=.true.
+++++ config.ufs[490]cplchm=.true.
+++++ config.ufs[491]model_list=atm.ocean.ice.wave.aero
+++++ config.ufs[497]case "${model_list}" in
+++++ config.ufs[518]default_template=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/ufs.configure.s2swa.IN
+++++ config.ufs[519]WW3_RSTFLDS=ice
+++++ config.ufs[528]export ufs_configure_template=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/ufs.configure.s2swa.IN
+++++ config.ufs[528]ufs_configure_template=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/ufs.configure.s2swa.IN
+++++ config.ufs[529]unset model_list default_template
+++++ config.ufs[532]export WW3_RSTFLDS=ice
+++++ config.ufs[532]WW3_RSTFLDS=ice
+++++ config.ufs[534][[ ! -r /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/ufs.configure.s2swa.IN ]]
+++++ config.ufs[539]echo 'END: config.ufs'
+END: config.ufs
++++ config.fcst[30]IFS=', '
++++ config.fcst[30]read -ra segments
++++ config.fcst[32]export FHMIN=0
++++ config.fcst[32]FHMIN=0
++++ config.fcst[33]export FHMAX=48
++++ config.fcst[33]FHMAX=48
++++ config.fcst[35]export FHMIN_WAV=0
++++ config.fcst[35]FHMIN_WAV=0
++++ config.fcst[36]export FHMAX_HF=0
++++ config.fcst[36]FHMAX_HF=0
++++ config.fcst[37]export FHMAX_WAV=48
++++ config.fcst[37]FHMAX_WAV=48
++++ config.fcst[39]export FHOUT=6
++++ config.fcst[39]FHOUT=6
++++ config.fcst[40]export FHOUT_HF=1
++++ config.fcst[40]FHOUT_HF=1
++++ config.fcst[41]export FHOUT_OCN=24
++++ config.fcst[41]FHOUT_OCN=24
++++ config.fcst[42]export FHOUT_ICE=24
++++ config.fcst[42]FHOUT_ICE=24
++++ config.fcst[43]export FHZERO=6
++++ config.fcst[43]FHZERO=6
++++ config.fcst[46]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3/config.resources fcst
+++++ config.resources[7]((  1 != 1  ))
+++++ config.resources[14]step=fcst
+++++ config.resources[16]echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[18]case ${machine} in
+++++ config.resources[21]max_tasks_per_node=40
+++++ config.resources[42]export max_tasks_per_node
+++++ config.resources[44]case ${step} in
+++++ config.resources[72]export is_exclusive=True
+++++ config.resources[72]is_exclusive=True
+++++ config.resources[76][[ YES == \Y\E\S ]]
+++++ config.resources[77]export UFS_THREADS=1
+++++ config.resources[77]UFS_THREADS=1
+++++ config.resources[94][[ YES == \Y\E\S ]]
+++++ config.resources[95]((  FV3THREADS = nthreads_fv3  ))
+++++ config.resources[96]((  FV3PETS = ntasks_fv3 * nthreads_fv3  ))
+++++ config.resources[101]echo 'FV3 using (nthreads, PETS) = (1, 12)'
+FV3 using (nthreads, PETS) = (1, 12)
+++++ config.resources[104]QUILTPETS=0
+++++ config.resources[104]QUILTTHREADS=0
+++++ config.resources[105][[ .true. == \.\t\r\u\e\. ]]
+++++ config.resources[106][[ YES == \Y\E\S ]]
+++++ config.resources[107]((  QUILTTHREADS = nthreads_fv3  ))
+++++ config.resources[108]((  QUILTPETS = ntasks_quilt * nthreads_fv3  ))
+++++ config.resources[113]((  WRTTASK_PER_GROUP = WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.resources[114]export WRTTASK_PER_GROUP
+++++ config.resources[116]echo 'QUILT using (nthreads, PETS) = (1, 6)'
+QUILT using (nthreads, PETS) = (1, 6)
+++++ config.resources[119]ATMTHREADS=1
+++++ config.resources[120]((  ATMPETS = FV3PETS + QUILTPETS  ))
+++++ config.resources[121]export ATMPETS ATMTHREADS
+++++ config.resources[122]echo 'FV3ATM using (nthreads, PETS) = (1, 18)'
+FV3ATM using (nthreads, PETS) = (1, 18)
+++++ config.resources[125]NTASKS_TOT=18
+++++ config.resources[132]MEDTHREADS=1
+++++ config.resources[133]MEDPETS=12
+++++ config.resources[134]((  12 > 300  ))
+++++ config.resources[135]export MEDPETS MEDTHREADS
+++++ config.resources[136]echo 'MEDIATOR using (threads, PETS) = (1, 12)'
+MEDIATOR using (threads, PETS) = (1, 12)
+++++ config.resources[139]CHMPETS=0
+++++ config.resources[139]CHMTHREADS=0
+++++ config.resources[140][[ YES == \Y\E\S ]]
+++++ config.resources[142]((  CHMTHREADS = ATMTHREADS  ))
+++++ config.resources[143]((  CHMPETS = FV3PETS  ))
+++++ config.resources[145]echo 'GOCART using (threads, PETS) = (1, 12)'
+GOCART using (threads, PETS) = (1, 12)
+++++ config.resources[147]export CHMPETS CHMTHREADS
+++++ config.resources[150]WAVPETS=0
+++++ config.resources[150]WAVTHREADS=0
+++++ config.resources[151][[ YES == \Y\E\S ]]
+++++ config.resources[152][[ YES == \Y\E\S ]]
+++++ config.resources[153]((  WAVTHREADS = nthreads_ww3  ))
+++++ config.resources[154]((  WAVPETS = ntasks_ww3 * nthreads_ww3  ))
+++++ config.resources[159]echo 'WW3 using (threads, PETS) = (1, 12)'
+WW3 using (threads, PETS) = (1, 12)
+++++ config.resources[160]((  NTASKS_TOT = NTASKS_TOT + WAVPETS  ))
+++++ config.resources[162]export WAVPETS WAVTHREADS
+++++ config.resources[165]OCNPETS=0
+++++ config.resources[165]OCNTHREADS=0
+++++ config.resources[166][[ YES == \Y\E\S ]]
+++++ config.resources[167][[ YES == \Y\E\S ]]
+++++ config.resources[168]((  OCNTHREADS = nthreads_mom6  ))
+++++ config.resources[169]((  OCNPETS = ntasks_mom6 * nthreads_mom6  ))
+++++ config.resources[174]echo 'MOM6 using (threads, PETS) = (1, 8)'
+MOM6 using (threads, PETS) = (1, 8)
+++++ config.resources[175]((  NTASKS_TOT = NTASKS_TOT + OCNPETS  ))
+++++ config.resources[177]export OCNPETS OCNTHREADS
+++++ config.resources[180]ICEPETS=0
+++++ config.resources[180]ICETHREADS=0
+++++ config.resources[181][[ YES == \Y\E\S ]]
+++++ config.resources[182][[ YES == \Y\E\S ]]
+++++ config.resources[183]((  ICETHREADS = nthreads_cice6  ))
+++++ config.resources[184]((  ICEPETS = ntasks_cice6 * nthreads_cice6  ))
+++++ config.resources[189]echo 'CICE6 using (threads, PETS) = (1, 4)'
+CICE6 using (threads, PETS) = (1, 4)
+++++ config.resources[190]((  NTASKS_TOT = NTASKS_TOT + ICEPETS  ))
+++++ config.resources[192]export ICEPETS ICETHREADS
+++++ config.resources[194]echo 'Total PETS = 42'
+Total PETS = 42
+++++ config.resources[196]declare -x ntasks=42
+++++ config.resources[197]declare -x threads_per_task=1
+++++ config.resources[198]tasks_per_node=40
+++++ config.resources[200]case "${CASE}" in
+++++ config.resources[202]declare -x walltime=04:00:00
+++++ config.resources[213]unset NTASKS_TOT
+++++ config.resources[355][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3/config.resources.ORION ]]
+++++ config.resources[360]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[361]run_resource_var=threads_per_task_gefs
+++++ config.resources[362][[ -n '' ]]
+++++ config.resources[364][[ -n 0 ]]
+++++ config.resources[365]export threads_per_task
+++++ config.resources[360]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[361]run_resource_var=ntasks_gefs
+++++ config.resources[362][[ -n '' ]]
+++++ config.resources[364][[ -n 0 ]]
+++++ config.resources[365]export ntasks
+++++ config.resources[360]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[361]run_resource_var=tasks_per_node_gefs
+++++ config.resources[362][[ -n '' ]]
+++++ config.resources[364][[ -n 0 ]]
+++++ config.resources[365]export tasks_per_node
+++++ config.resources[360]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[361]run_resource_var=NTASKS_gefs
+++++ config.resources[362][[ -n '' ]]
+++++ config.resources[364][[ -n '' ]]
+++++ config.resources[360]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[361]run_resource_var=memory_gefs
+++++ config.resources[362][[ -n '' ]]
+++++ config.resources[364][[ -n '' ]]
+++++ config.resources[360]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[361]run_resource_var=walltime_gefs
+++++ config.resources[362][[ -n '' ]]
+++++ config.resources[364][[ -n 0 ]]
+++++ config.resources[365]export walltime
+++++ config.resources[369]echo 'END: config.resources'
+END: config.resources
++++ config.fcst[47]export domains_stack_size=16000000
++++ config.fcst[47]domains_stack_size=16000000
++++ config.fcst[50][[ YES == \Y\E\S ]]
++++ config.fcst[51]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/EXPDIR/C48_S2SWA_gefs_c72db5b3/config.nsst
+++++ config.nsst[6]echo 'BEGIN: config.nsst'
+BEGIN: config.nsst
+++++ config.nsst[11]export NST_MODEL=2
+++++ config.nsst[11]NST_MODEL=2
+++++ config.nsst[14]export NST_SPINUP=0
+++++ config.nsst[14]NST_SPINUP=0
+++++ config.nsst[17]export NST_RESV=0
+++++ config.nsst[17]NST_RESV=0
+++++ config.nsst[20]export ZSEA1=0
+++++ config.nsst[20]ZSEA1=0
+++++ config.nsst[21]export ZSEA2=0
+++++ config.nsst[21]ZSEA2=0
+++++ config.nsst[23]export NST_GSI=3
+++++ config.nsst[23]NST_GSI=3
+++++ config.nsst[27]export NSTINFO=0
+++++ config.nsst[27]NSTINFO=0
+++++ config.nsst[28]((  NST_GSI > 0  ))
+++++ config.nsst[28]export NSTINFO=4
+++++ config.nsst[28]NSTINFO=4
+++++ config.nsst[30]echo 'END: config.nsst'
+END: config.nsst
++++ config.fcst[54]export esmf_profile=.false.
++++ config.fcst[54]esmf_profile=.false.
++++ config.fcst[55]export esmf_logkind=ESMF_LOGKIND_MULTI_ON_ERROR
++++ config.fcst[55]esmf_logkind=ESMF_LOGKIND_MULTI_ON_ERROR
++++ config.fcst[60]export FORECASTSH=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/scripts/exglobal_forecast.sh
++++ config.fcst[60]FORECASTSH=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/scripts/exglobal_forecast.sh
++++ config.fcst[62]export FCSTEXEC=gefs_model.x
++++ config.fcst[62]FCSTEXEC=gefs_model.x
++++ config.fcst[66]export TYPE=nh
++++ config.fcst[66]TYPE=nh
++++ config.fcst[67]export MONO=non-mono
++++ config.fcst[67]MONO=non-mono
++++ config.fcst[70]export h2o_phys=.true.
++++ config.fcst[70]h2o_phys=.true.
++++ config.fcst[73]export new_o3forc=YES
++++ config.fcst[73]new_o3forc=YES
++++ config.fcst[75]export gwd_opt=2
++++ config.fcst[75]gwd_opt=2
++++ config.fcst[80]((  gwd_opt == 1  ))
++++ config.fcst[90]((  gwd_opt == 2  ))
++++ config.fcst[106]export knob_ugwp_version=1
++++ config.fcst[106]knob_ugwp_version=1
++++ config.fcst[107]export do_ugwp=.false.
++++ config.fcst[107]do_ugwp=.false.
++++ config.fcst[108]export do_tofd=.false.
++++ config.fcst[108]do_tofd=.false.
++++ config.fcst[109]export do_ugwp_v0=.false.
++++ config.fcst[109]do_ugwp_v0=.false.
++++ config.fcst[110]export do_ugwp_v1=.true.
++++ config.fcst[110]do_ugwp_v1=.true.
++++ config.fcst[111]export do_ugwp_v0_orog_only=.false.
++++ config.fcst[111]do_ugwp_v0_orog_only=.false.
++++ config.fcst[112]export do_ugwp_v0_nst_only=.false.
++++ config.fcst[112]do_ugwp_v0_nst_only=.false.
++++ config.fcst[113]export do_gsl_drag_ls_bl=.true.
++++ config.fcst[113]do_gsl_drag_ls_bl=.true.
++++ config.fcst[114]export do_gsl_drag_ss=.false.
++++ config.fcst[114]do_gsl_drag_ss=.false.
++++ config.fcst[115]export do_gsl_drag_tofd=.true.
++++ config.fcst[115]do_gsl_drag_tofd=.true.
++++ config.fcst[116]export do_gwd_opt_psl=.true.
++++ config.fcst[116]do_gwd_opt_psl=.true.
++++ config.fcst[117]export do_ugwp_v1_orog_only=.false.
++++ config.fcst[117]do_ugwp_v1_orog_only=.false.
+++++ config.fcst[118]echo 128/2.35
+++++ config.fcst[118]bc
++++ config.fcst[118]launch_level=54
++++ config.fcst[119]export launch_level
++++ config.fcst[123]export d2_bg_k1=0.20
++++ config.fcst[123]d2_bg_k1=0.20
++++ config.fcst[124]export d2_bg_k2=0.04
++++ config.fcst[124]d2_bg_k2=0.04
++++ config.fcst[125]export dz_min=6
++++ config.fcst[125]dz_min=6
++++ config.fcst[126]export n_sponge=42
++++ config.fcst[126]n_sponge=42
++++ config.fcst[129]export hybedmf=.false.
++++ config.fcst[129]hybedmf=.false.
++++ config.fcst[130]export satmedmf=.true.
++++ config.fcst[130]satmedmf=.true.
++++ config.fcst[131]export isatmedmf=1
++++ config.fcst[131]isatmedmf=1
++++ config.fcst[132]tbf=
++++ config.fcst[133][[ .true. == \.\t\r\u\e\. ]]
++++ config.fcst[133]tbf=_satmedmf
++++ config.fcst[136]export progsigma=.true.
++++ config.fcst[136]progsigma=.true.
++++ config.fcst[137]tbp=
++++ config.fcst[138][[ .true. == \.\t\r\u\e\. ]]
++++ config.fcst[138]tbp=_progsigma
++++ config.fcst[141][[ YES == \Y\E\S ]]
++++ config.fcst[142]export IAER=2011
++++ config.fcst[142]IAER=2011
++++ config.fcst[146]export iovr_lw=3
++++ config.fcst[146]iovr_lw=3
++++ config.fcst[147]export iovr_sw=3
++++ config.fcst[147]iovr_sw=3
++++ config.fcst[148]export iovr=3
++++ config.fcst[148]iovr=3
++++ config.fcst[149]export icliq_sw=2
++++ config.fcst[149]icliq_sw=2
++++ config.fcst[150]export isubc_sw=2
++++ config.fcst[150]isubc_sw=2
++++ config.fcst[151]export isubc_lw=2
++++ config.fcst[151]isubc_lw=2
++++ config.fcst[154]export do_RRTMGP=.false.
++++ config.fcst[154]do_RRTMGP=.false.
++++ config.fcst[155]export doGP_cldoptics_LUT=.false.
++++ config.fcst[155]doGP_cldoptics_LUT=.false.
++++ config.fcst[156]export doGP_lwscat=.false.
++++ config.fcst[156]doGP_lwscat=.false.
++++ config.fcst[160]export iopt_sfc=3
++++ config.fcst[160]iopt_sfc=3
++++ config.fcst[161]export iopt_trs=2
++++ config.fcst[161]iopt_trs=2
++++ config.fcst[164]export dnats=0
++++ config.fcst[164]dnats=0
++++ config.fcst[165]export cal_pre=.true.
++++ config.fcst[165]cal_pre=.true.
++++ config.fcst[166]export do_sat_adj=.false.
++++ config.fcst[166]do_sat_adj=.false.
++++ config.fcst[167]export random_clds=.true.
++++ config.fcst[167]random_clds=.true.
++++ config.fcst[169]case ${imp_physics} in
++++ config.fcst[181]export ncld=2
++++ config.fcst[181]ncld=2
++++ config.fcst[182]export FIELD_TABLE=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/fv3/field_table_thompson_noaero_tke_progsigma
++++ config.fcst[182]FIELD_TABLE=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/fv3/field_table_thompson_noaero_tke_progsigma
++++ config.fcst[183]export nwat=6
++++ config.fcst[183]nwat=6
++++ config.fcst[185]export cal_pre=.false.
++++ config.fcst[185]cal_pre=.false.
++++ config.fcst[186]export random_clds=.false.
++++ config.fcst[186]random_clds=.false.
++++ config.fcst[187]export effr_in=.true.
++++ config.fcst[187]effr_in=.true.
++++ config.fcst[188]export ltaerosol=.false.
++++ config.fcst[188]ltaerosol=.false.
++++ config.fcst[189]export lradar=.true.
++++ config.fcst[189]lradar=.true.
++++ config.fcst[190]export ttendlim=-999
++++ config.fcst[190]ttendlim=-999
++++ config.fcst[191]export dt_inner=450
++++ config.fcst[191]dt_inner=450
++++ config.fcst[192]export sedi_semi=.true.
++++ config.fcst[192]sedi_semi=.true.
++++ config.fcst[193][[ .true. == .true. ]]
++++ config.fcst[193]export dt_inner=900
++++ config.fcst[193]dt_inner=900
++++ config.fcst[194][[ dt_inner -gt 300 ]]
++++ config.fcst[194]export dt_inner=300
++++ config.fcst[194]dt_inner=300
++++ config.fcst[195]export decfl=10
++++ config.fcst[195]decfl=10
++++ config.fcst[197]export hord_mt_nh_nonmono=5
++++ config.fcst[197]hord_mt_nh_nonmono=5
++++ config.fcst[198]export hord_xx_nh_nonmono=5
++++ config.fcst[198]hord_xx_nh_nonmono=5
++++ config.fcst[199]export hord_dp_nh_nonmono=-5
++++ config.fcst[199]hord_dp_nh_nonmono=-5
++++ config.fcst[200]export vtdm4_nh_nonmono=0.02
++++ config.fcst[200]vtdm4_nh_nonmono=0.02
++++ config.fcst[201]export nord=2
++++ config.fcst[201]nord=2
++++ config.fcst[202][[ nh == \n\h* ]]
++++ config.fcst[203]export dddmp=0.1
++++ config.fcst[203]dddmp=0.1
++++ config.fcst[207]export d4_bg=0.12
++++ config.fcst[207]d4_bg=0.12
++++ config.fcst[237]export DO_SPPT=NO
++++ config.fcst[237]DO_SPPT=NO
++++ config.fcst[238]export DO_SKEB=NO
++++ config.fcst[238]DO_SKEB=NO
++++ config.fcst[239]export DO_SHUM=NO
++++ config.fcst[239]DO_SHUM=NO
++++ config.fcst[240]export DO_LAND_PERT=NO
++++ config.fcst[240]DO_LAND_PERT=NO
++++ config.fcst[241]export DO_OCN_SPPT=NO
++++ config.fcst[241]DO_OCN_SPPT=NO
++++ config.fcst[242]export DO_OCN_PERT_EPBL=NO
++++ config.fcst[242]DO_OCN_PERT_EPBL=NO
++++ config.fcst[245]export cplmode=ufs.frac
++++ config.fcst[245]cplmode=ufs.frac
++++ config.fcst[246][[ .true. == \.\f\a\l\s\e\. ]]
++++ config.fcst[249]export psm_bc=1
++++ config.fcst[249]psm_bc=1
++++ config.fcst[251]export min_lakeice=0.15
++++ config.fcst[251]min_lakeice=0.15
++++ config.fcst[252]export min_seaice=1.0e-6
++++ config.fcst[252]min_seaice=1.0e-6
++++ config.fcst[253]export use_cice_alb=.true.
++++ config.fcst[253]use_cice_alb=.true.
++++ config.fcst[255]export FSICL=0
++++ config.fcst[255]FSICL=0
++++ config.fcst[256]export FSICS=0
++++ config.fcst[256]FSICS=0
++++ config.fcst[260][[ NO == \Y\E\S ]]
++++ config.fcst[263]export DIAG_TABLE=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/fv3/diag_table
++++ config.fcst[263]DIAG_TABLE=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/parm/ufs/fv3/diag_table
++++ config.fcst[267]export restart_interval=12
++++ config.fcst[267]restart_interval=12
++++ config.fcst[270]export adjust_dry_mass=.false.
++++ config.fcst[270]adjust_dry_mass=.false.
++++ config.fcst[273][[ C48 = C768 ]]
++++ config.fcst[276]export io_layout=1,1
++++ config.fcst[276]io_layout=1,1
++++ config.fcst[279]export reforecast=NO
++++ config.fcst[279]reforecast=NO
++++ config.fcst[284]echo 'END: config.fcst'
+END: config.fcst
+++ jjob_header.sh[106]true
+++ jjob_header.sh[107]export err=0
+++ jjob_header.sh[107]err=0
+++ jjob_header.sh[108]set +x
+ completed cleanly
+++ jjob_header.sh[117]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/env/ORION.env fcst
++++ ORION.env[3][[ 1 -ne 1 ]]
++++ ORION.env[10]step=fcst
++++ ORION.env[12]export 'launcher=srun -l --export=ALL --hint=nomultithread'
++++ ORION.env[12]launcher='srun -l --export=ALL --hint=nomultithread'
++++ ORION.env[13]export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ ORION.env[13]mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ ORION.env[16]export MPI_BUFS_PER_PROC=2048
++++ ORION.env[16]MPI_BUFS_PER_PROC=2048
++++ ORION.env[17]export MPI_BUFS_PER_HOST=2048
++++ ORION.env[17]MPI_BUFS_PER_HOST=2048
++++ ORION.env[18]export MPI_GROUP_MAX=256
++++ ORION.env[18]MPI_GROUP_MAX=256
++++ ORION.env[19]export MPI_MEMMAP_OFF=1
++++ ORION.env[19]MPI_MEMMAP_OFF=1
++++ ORION.env[20]export MP_STDOUTMODE=ORDERED
++++ ORION.env[20]MP_STDOUTMODE=ORDERED
++++ ORION.env[21]export KMP_AFFINITY=scatter
++++ ORION.env[21]KMP_AFFINITY=scatter
++++ ORION.env[22]export OMP_STACKSIZE=2048000
++++ ORION.env[22]OMP_STACKSIZE=2048000
++++ ORION.env[23]export NTHSTACK=1024000000
++++ ORION.env[23]NTHSTACK=1024000000
++++ ORION.env[26]ulimit -s unlimited
++++ ORION.env[27]ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 754653
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 192512000
+open files                          (-n) 131072
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) unlimited
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 754653
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
++++ ORION.env[31][[ -n 42 ]]
++++ ORION.env[31][[ -n 40 ]]
++++ ORION.env[31][[ -n 40 ]]
++++ ORION.env[32]max_threads_per_task=1
++++ ORION.env[33]NTHREADSmax=1
++++ ORION.env[34]NTHREADS1=1
++++ ORION.env[35][[ 1 -gt 1 ]]
++++ ORION.env[38][[ 1 -gt 1 ]]
++++ ORION.env[41]APRUN_default='srun -l --export=ALL --hint=nomultithread -n 42'
++++ ORION.env[47][[ fcst = \p\r\e\p ]]
++++ ORION.env[47][[ fcst = \p\r\e\p\b\u\f\r ]]
++++ ORION.env[54][[ fcst = \p\r\e\p\_\e\m\i\s\s\i\o\n\s ]]
++++ ORION.env[58][[ fcst = \w\a\v\e\i\n\i\t ]]
++++ ORION.env[58][[ fcst = \w\a\v\e\p\r\e\p ]]
++++ ORION.env[58][[ fcst = \w\a\v\e\p\o\s\t\s\b\s ]]
++++ ORION.env[59][[ fcst = \w\a\v\e\p\o\s\t\b\n\d\p\n\t ]]
++++ ORION.env[59][[ fcst = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ ORION.env[59][[ fcst == \w\a\v\e\p\o\s\t\b\n\d\p\n\t\b\l\l ]]
++++ ORION.env[66][[ fcst = \a\t\m\a\n\l\v\a\r ]]
++++ ORION.env[71][[ fcst = \a\t\m\e\n\s\a\n\l\o\b\s ]]
++++ ORION.env[76][[ fcst = \a\t\m\e\n\s\a\n\l\s\o\l ]]
++++ ORION.env[80][[ fcst = \a\t\m\e\n\s\a\n\l\l\e\t\k\f ]]
++++ ORION.env[85][[ fcst = \a\t\m\e\n\s\a\n\l\f\v\3\i\n\c ]]
++++ ORION.env[90][[ fcst = \a\e\r\o\a\n\l\v\a\r ]]
++++ ORION.env[97][[ fcst = \a\e\r\o\a\n\l\g\e\n\b ]]
++++ ORION.env[102][[ fcst = \p\r\e\p\o\b\s\a\e\r\o ]]
++++ ORION.env[107][[ fcst = \s\n\o\w\a\n\l ]]
++++ ORION.env[116][[ fcst = \e\s\n\o\w\a\n\l ]]
++++ ORION.env[125][[ fcst = \a\t\m\a\n\l\f\v\3\i\n\c ]]
++++ ORION.env[130][[ fcst = \m\a\r\i\n\e\b\m\a\t ]]
++++ ORION.env[137][[ fcst = \m\a\r\i\n\e\a\n\l\v\a\r ]]
++++ ORION.env[143][[ fcst = \m\a\r\i\n\e\a\n\l\c\h\k\p\t ]]
++++ ORION.env[151][[ fcst = \o\c\n\a\n\a\l\e\c\e\n ]]
++++ ORION.env[156][[ fcst = \m\a\r\i\n\e\a\n\l\l\e\t\k\f ]]
++++ ORION.env[161][[ fcst = \a\n\l\s\t\a\t ]]
++++ ORION.env[166][[ fcst = \e\c\e\n\_\f\v\3\j\e\d\i ]]
++++ ORION.env[172][[ fcst = \a\n\a\l\c\a\l\c\_\f\v\3\j\e\d\i ]]
++++ ORION.env[177][[ fcst = \a\n\a\l ]]
++++ ORION.env[177][[ fcst = \a\n\a\l\c\a\l\c ]]
++++ ORION.env[206][[ fcst = \s\f\c\a\n\l ]]
++++ ORION.env[217][[ fcst = \e\o\b\s ]]
++++ ORION.env[232][[ fcst = \e\u\p\d ]]
++++ ORION.env[241][[ fcst = \f\c\s\t ]]
++++ ORION.env[243]export FI_MLX_INJECT_LIMIT=0
++++ ORION.env[243]FI_MLX_INJECT_LIMIT=0
++++ ORION.env[245]((  nnodes = (ntasks+tasks_per_node-1)/tasks_per_node  ))
++++ ORION.env[246]((  ufs_ntasks = nnodes*tasks_per_node  ))
++++ ORION.env[248]export 'APRUN_UFS=srun -l --export=ALL --hint=nomultithread -n 80'
++++ ORION.env[248]APRUN_UFS='srun -l --export=ALL --hint=nomultithread -n 80'
++++ ORION.env[249]unset nnodes ufs_ntasks
+++ jjob_header.sh[117]true
+++ jjob_header.sh[118]export err=0
+++ jjob_header.sh[118]err=0
+++ jjob_header.sh[119]set +x
+ completed cleanly
++ JGLOBAL_FORECAST[14]export DATArestart=/work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/restart
++ JGLOBAL_FORECAST[14]DATArestart=/work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/restart
++ JGLOBAL_FORECAST[15][[ ! -d /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/restart ]]
++ JGLOBAL_FORECAST[16]export DATAoutput=/work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/output
++ JGLOBAL_FORECAST[16]DATAoutput=/work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/output
++ JGLOBAL_FORECAST[17][[ ! -d /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/output ]]
++ JGLOBAL_FORECAST[24]rCDUMP=gefs
++ JGLOBAL_FORECAST[25]export rCDUMP=gefs
++ JGLOBAL_FORECAST[25]rCDUMP=gefs
+++ JGLOBAL_FORECAST[29]date --utc -d '20210323 12 - 6 hours' +%Y%m%d%H
++ JGLOBAL_FORECAST[29]GDATE=2021032306
++ JGLOBAL_FORECAST[30]declare -rx GDATE
++ JGLOBAL_FORECAST[32]declare -rx gPDY=20210323
++ JGLOBAL_FORECAST[33]declare -rx gcyc=06
++ JGLOBAL_FORECAST[36]YMD=20210323
++ JGLOBAL_FORECAST[36]HH=12
++ JGLOBAL_FORECAST[36]declare_from_tmpl -rx COMIN_ATMOS_INPUT:COM_ATMOS_INPUT_TMPL COMIN_ATMOS_ANALYSIS:COM_ATMOS_ANALYSIS_TMPL COMOUT_CONF:COM_CONF_TMPL COMOUT_ATMOS_RESTART:COM_ATMOS_RESTART_TMPL COMOUT_ATMOS_HISTORY:COM_ATMOS_HISTORY_TMPL COMOUT_ATMOS_MASTER:COM_ATMOS_MASTER_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMIN_ATMOS_INPUT=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/atmos/input
+declare_from_tmpl :: COMIN_ATMOS_ANALYSIS=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/analysis/atmos
+declare_from_tmpl :: COMOUT_CONF=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/conf
+declare_from_tmpl :: COMOUT_ATMOS_RESTART=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/atmos/restart
+declare_from_tmpl :: COMOUT_ATMOS_HISTORY=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/atmos/history
+declare_from_tmpl :: COMOUT_ATMOS_MASTER=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/atmos/master
++ JGLOBAL_FORECAST[44]RUN=gefs
++ JGLOBAL_FORECAST[44]YMD=20210323
++ JGLOBAL_FORECAST[44]HH=06
++ JGLOBAL_FORECAST[44]declare_from_tmpl -rx COMIN_ATMOS_RESTART_PREV:COM_ATMOS_RESTART_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMIN_ATMOS_RESTART_PREV=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/06/mem000/model/atmos/restart
++ JGLOBAL_FORECAST[47][[ YES == \Y\E\S ]]
++ JGLOBAL_FORECAST[48]YMD=20210323
++ JGLOBAL_FORECAST[48]HH=12
++ JGLOBAL_FORECAST[48]declare_from_tmpl -rx COMIN_WAVE_PREP:COM_WAVE_PREP_TMPL COMOUT_WAVE_RESTART:COM_WAVE_RESTART_TMPL COMOUT_WAVE_HISTORY:COM_WAVE_HISTORY_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMIN_WAVE_PREP=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/wave/prep
+declare_from_tmpl :: COMOUT_WAVE_RESTART=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/wave/restart
+declare_from_tmpl :: COMOUT_WAVE_HISTORY=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/wave/history
++ JGLOBAL_FORECAST[52]RUN=gefs
++ JGLOBAL_FORECAST[52]YMD=20210323
++ JGLOBAL_FORECAST[52]HH=06
++ JGLOBAL_FORECAST[52]declare_from_tmpl -rx COMIN_WAVE_RESTART_PREV:COM_WAVE_RESTART_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMIN_WAVE_RESTART_PREV=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/06/mem000/model/wave/restart
++ JGLOBAL_FORECAST[56][[ YES == \Y\E\S ]]
++ JGLOBAL_FORECAST[57]YMD=20210323
++ JGLOBAL_FORECAST[57]HH=12
++ JGLOBAL_FORECAST[57]declare_from_tmpl -rx COMIN_OCEAN_ANALYSIS:COM_OCEAN_ANALYSIS_TMPL COMIN_OCEAN_INPUT:COM_OCEAN_INPUT_TMPL COMOUT_MED_RESTART:COM_MED_RESTART_TMPL COMOUT_OCEAN_RESTART:COM_OCEAN_RESTART_TMPL COMOUT_OCEAN_HISTORY:COM_OCEAN_HISTORY_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMIN_OCEAN_ANALYSIS=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/analysis/ocean
+declare_from_tmpl :: COMIN_OCEAN_INPUT=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/ocean/input
+declare_from_tmpl :: COMOUT_MED_RESTART=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/med/restart
+declare_from_tmpl :: COMOUT_OCEAN_RESTART=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/ocean/restart
+declare_from_tmpl :: COMOUT_OCEAN_HISTORY=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/ocean/history
++ JGLOBAL_FORECAST[63]RUN=gefs
++ JGLOBAL_FORECAST[63]YMD=20210323
++ JGLOBAL_FORECAST[63]HH=06
++ JGLOBAL_FORECAST[63]declare_from_tmpl -rx COMIN_OCEAN_RESTART_PREV:COM_OCEAN_RESTART_TMPL COMIN_MED_RESTART_PREV:COM_MED_RESTART_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMIN_OCEAN_RESTART_PREV=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/06/mem000/model/ocean/restart
+declare_from_tmpl :: COMIN_MED_RESTART_PREV=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/06/mem000/model/med/restart
++ JGLOBAL_FORECAST[68][[ YES == \Y\E\S ]]
++ JGLOBAL_FORECAST[69]YMD=20210323
++ JGLOBAL_FORECAST[69]HH=12
++ JGLOBAL_FORECAST[69]declare_from_tmpl -rx COMIN_ICE_INPUT:COM_ICE_INPUT_TMPL COMIN_ICE_ANALYSIS:COM_ICE_ANALYSIS_TMPL COMOUT_ICE_RESTART:COM_ICE_RESTART_TMPL COMOUT_ICE_HISTORY:COM_ICE_HISTORY_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMIN_ICE_INPUT=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/ice/input
+declare_from_tmpl :: COMIN_ICE_ANALYSIS=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/analysis/ice
+declare_from_tmpl :: COMOUT_ICE_RESTART=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/ice/restart
+declare_from_tmpl :: COMOUT_ICE_HISTORY=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/ice/history
++ JGLOBAL_FORECAST[74]RUN=gefs
++ JGLOBAL_FORECAST[74]YMD=20210323
++ JGLOBAL_FORECAST[74]HH=06
++ JGLOBAL_FORECAST[74]declare_from_tmpl -rx COMIN_ICE_RESTART_PREV:COM_ICE_RESTART_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMIN_ICE_RESTART_PREV=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/06/mem000/model/ice/restart
++ JGLOBAL_FORECAST[78][[ YES == \Y\E\S ]]
++ JGLOBAL_FORECAST[79]YMD=20210323
++ JGLOBAL_FORECAST[79]HH=12
++ JGLOBAL_FORECAST[79]declare_from_tmpl -rx COMOUT_CHEM_HISTORY:COM_CHEM_HISTORY_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMOUT_CHEM_HISTORY=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/chem/history
++ JGLOBAL_FORECAST[87]/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/scripts/exglobal_forecast.sh
++ bash[8]'[' -z '' ']'
++ bash[9]case "$-" in
++ bash[12]__lmod_vx=x
++ bash[16]'[' -n x ']'
++ bash[16]set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for this output (/apps/other/lmod/lmod/init/bash)
+Shell debugging restarted
++ bash[224]unset __lmod_vx
++ exglobal_forecast.sh[81]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush/forecast_predet.sh
++ exglobal_forecast.sh[82]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush/forecast_det.sh
++ exglobal_forecast.sh[83]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush/forecast_postdet.sh
++ exglobal_forecast.sh[84]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush/parsing_ufs_configure.sh
++ exglobal_forecast.sh[86]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/ush/atparse.bash
++ exglobal_forecast.sh[89]cpl=.true.
++ exglobal_forecast.sh[90]cplflx=.true.
++ exglobal_forecast.sh[91]cplwav=.true.
++ exglobal_forecast.sh[92]cplchm=.true.
++ exglobal_forecast.sh[93]cplice=.true.
++ exglobal_forecast.sh[95]OCNTIM=3600
++ exglobal_forecast.sh[96]DELTIM=900
++ exglobal_forecast.sh[97]ICETIM=900
++ exglobal_forecast.sh[99]CPL_SLOW=3600
++ exglobal_forecast.sh[100]CPL_FAST=900
++ exglobal_forecast.sh[102]echo 'MAIN: Loading common variables before determination of run type'
+MAIN: Loading common variables before determination of run type
++ exglobal_forecast.sh[103]common_predet
++ forecast_predet.sh[92]echo 'SUB common_predet: Defining variables for shared through model components'
+SUB common_predet: Defining variables for shared through model components
++ forecast_predet.sh[94]RUN=gefs
++ forecast_predet.sh[95]rCDUMP=gefs
++ forecast_predet.sh[97]CDATE=2021032312
++ forecast_predet.sh[98]SDATE=2021032312
++ forecast_predet.sh[99]ENSMEM=000
++ forecast_predet.sh[100]MEMBER=0
++ forecast_predet.sh[103]half_window=3
++ forecast_predet.sh[104]current_cycle=2021032312
+++ forecast_predet.sh[105]date --utc -d '20210323 12 - 6 hours' +%Y%m%d%H
++ forecast_predet.sh[105]previous_cycle=2021032306
+++ forecast_predet.sh[106]date --utc -d '20210323 12 + 6 hours' +%Y%m%d%H
++ forecast_predet.sh[106]next_cycle=2021032318
+++ forecast_predet.sh[107]date --utc -d '20210323 12 - 3 hours' +%Y%m%d%H
++ forecast_predet.sh[107]current_cycle_begin=2021032309
+++ forecast_predet.sh[108]date --utc -d '20210323 12 + 3 hours' +%Y%m%d%H
++ forecast_predet.sh[108]current_cycle_end=2021032315
+++ forecast_predet.sh[109]date --utc -d '20210323 18 - 3 hours' +%Y%m%d%H
++ forecast_predet.sh[109]next_cycle_begin=2021032315
+++ forecast_predet.sh[110]date --utc -d '20210323 12 + 48 hours' +%Y%m%d%H
++ forecast_predet.sh[110]forecast_end_cycle=2021032512
++ forecast_predet.sh[113][[ NO == \Y\E\S ]]
++ forecast_predet.sh[117][[ NO == \Y\E\S ]]
++ forecast_predet.sh[120]model_start_date_current_cycle=2021032312
++ forecast_predet.sh[122]model_start_date_next_cycle=2021032318
++ forecast_predet.sh[125]FHMIN=0
++ forecast_predet.sh[126]FHMAX=48
++ forecast_predet.sh[127]FHOUT=6
++ forecast_predet.sh[128]FHMAX_HF=0
++ forecast_predet.sh[129]FHOUT_HF=1
++ forecast_predet.sh[131][[ ! -d /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/conf ]]
++ forecast_predet.sh[133]cd /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195
++ forecast_predet.sh[133]true
++ forecast_predet.sh[134]err=0
++ forecast_predet.sh[135][[ 0 -ne 0 ]]
++ forecast_predet.sh[141][[ ! -d /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/INPUT ]]
++ forecast_predet.sh[141]mkdir -p /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/INPUT
++ exglobal_forecast.sh[105]echo 'MAIN: Loading variables before determination of run type'
+MAIN: Loading variables before determination of run type
++ exglobal_forecast.sh[106]FV3_predet
++ forecast_predet.sh[147]echo 'SUB FV3_predet: Defining variables for FV3'
+SUB FV3_predet: Defining variables for FV3
++ forecast_predet.sh[149][[ ! -d /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/atmos/history ]]
++ forecast_predet.sh[150][[ ! -d /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/atmos/master ]]
++ forecast_predet.sh[151][[ ! -d /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/RUNTESTS/COMROOT/C48_S2SWA_gefs_c72db5b3/gefs.20210323/12/mem000/model/atmos/restart ]]
++ forecast_predet.sh[152][[ ! -d /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/restart/FV3_RESTART ]]
++ forecast_predet.sh[153]/bin/ln -sf /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/restart/FV3_RESTART /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/RESTART
++ forecast_predet.sh[155]FHZERO=6
++ forecast_predet.sh[156]FHCYC=24
++ forecast_predet.sh[157]restart_interval=12
++ forecast_predet.sh[160]((  restart_interval == 0  ))
++ forecast_predet.sh[165]mapfile -t FV3_RESTART_FH
+++ forecast_predet.sh[165]seq 12 12 48
++ forecast_predet.sh[167]local nrestarts=4
++ forecast_predet.sh[168]((  FV3_RESTART_FH[nrestarts-1] != FHMAX  ))
++ forecast_predet.sh[175]FV3_OUTPUT_FH=
++ forecast_predet.sh[176]local fhr=0
++ forecast_predet.sh[177]((  FHOUT_HF > 0 && FHMAX_HF > 0  ))
+++ forecast_predet.sh[181]seq -s ' ' 0 6 48
++ forecast_predet.sh[181]FV3_OUTPUT_FH=' 0 6 12 18 24 30 36 42 48'
++ forecast_predet.sh[186][[ NO == \Y\E\S ]]
++ forecast_predet.sh[209]FV3_OUTPUT_FH_NML=' 0 6 12 18 24 30 36 42 48'
++ forecast_predet.sh[213]PREFIX_ATMINC=
++ forecast_predet.sh[216]IAUFHRS=0
++ forecast_predet.sh[217]IAU_DELTHRS=0
++ forecast_predet.sh[222]res=48
++ forecast_predet.sh[223]resp=49
++ forecast_predet.sh[224]npx=49
++ forecast_predet.sh[225]npy=49
++ forecast_predet.sh[226]npz=127
++ forecast_predet.sh[227]io_layout=1,1
++ forecast_predet.sh[231]JCAP_CASE=94
++ forecast_predet.sh[232]LONB_CASE=192
++ forecast_predet.sh[233]LATB_CASE=96
++ forecast_predet.sh[235]JCAP=94
++ forecast_predet.sh[236]LONB=192
++ forecast_predet.sh[237]LATB=96
++ forecast_predet.sh[239]LONB_IMO=192
++ forecast_predet.sh[240]LATB_JMO=96
++ forecast_predet.sh[250]NST_MODEL=2
++ forecast_predet.sh[251]NST_SPINUP=0
++ forecast_predet.sh[252]NST_RESV=0
++ forecast_predet.sh[253]ZSEA1=0
++ forecast_predet.sh[254]ZSEA2=0
++ forecast_predet.sh[255]nstf_name=2,0,0,0,0
++ forecast_predet.sh[256]nst_anl=.true.
++ forecast_predet.sh[262]blocksize=32
++ forecast_predet.sh[265]filtered_terrain=.true.
++ forecast_predet.sh[266]gfs_dwinds=.true.
++ forecast_predet.sh[269]no_dycore=.false.
++ forecast_predet.sh[270]dycore_only=.false.
++ forecast_predet.sh[271]chksum_debug=.false.
++ forecast_predet.sh[272]print_freq=6
++ forecast_predet.sh[278]na_init=1
++ forecast_predet.sh[280]local suite_file=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/sorc/ufs_model.fd/FV3/ccpp/suites/suite_FV3_GFS_v17_coupled_p8_ugwpv1.xml
++ forecast_predet.sh[281][[ ! -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/sorc/ufs_model.fd/FV3/ccpp/suites/suite_FV3_GFS_v17_coupled_p8_ugwpv1.xml ]]
++ forecast_predet.sh[287]local num_noahmpdrv
+++ forecast_predet.sh[288]grep -c noahmpdrv /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/sorc/ufs_model.fd/FV3/ccpp/suites/suite_FV3_GFS_v17_coupled_p8_ugwpv1.xml
++ forecast_predet.sh[288]num_noahmpdrv=1
++ forecast_predet.sh[289]((  num_noahmpdrv > 0  ))
++ forecast_predet.sh[290]lsm=2
++ forecast_predet.sh[291]lheatstrg=.false.
++ forecast_predet.sh[292]landice=.false.
++ forecast_predet.sh[293]iopt_dveg=4
++ forecast_predet.sh[294]iopt_crs=2
++ forecast_predet.sh[295]iopt_btr=1
++ forecast_predet.sh[296]iopt_run=1
++ forecast_predet.sh[297]iopt_sfc=3
++ forecast_predet.sh[298]iopt_frz=1
++ forecast_predet.sh[299]iopt_inf=1
++ forecast_predet.sh[300]iopt_rad=3
++ forecast_predet.sh[301]iopt_alb=1
++ forecast_predet.sh[302]iopt_snf=4
++ forecast_predet.sh[303]iopt_tbot=2
++ forecast_predet.sh[304]iopt_stc=3
++ forecast_predet.sh[305]IALB=2
++ forecast_predet.sh[306]IEMS=2
++ forecast_predet.sh[327][[ nh == \n\h ]]
++ forecast_predet.sh[328]hydrostatic=.false.
++ forecast_predet.sh[329]phys_hydrostatic=.false.
++ forecast_predet.sh[330]use_hydro_pressure=.false.
++ forecast_predet.sh[331]make_nh=.true.
++ forecast_predet.sh[332]pass_full_omega_to_physics_in_non_hydrostatic_mode=.true.
++ forecast_predet.sh[341]consv_te=1.
++ forecast_predet.sh[342][[ NO == \Y\E\S ]]
++ forecast_predet.sh[347]consv_te=1.
++ forecast_predet.sh[348]k_split=1
++ forecast_predet.sh[352]n_split=4
++ forecast_predet.sh[354][[ non- == \m\o\n\o ]]
++ forecast_predet.sh[371]d_con=1.
++ forecast_predet.sh[372]do_vort_damp=.true.
++ forecast_predet.sh[373][[ nh == \n\h ]]
++ forecast_predet.sh[374]hord_mt=5
++ forecast_predet.sh[375]hord_xx=5
++ forecast_predet.sh[376]hord_dp=-5
++ forecast_predet.sh[384][[ non- != \m\o\n\o ]]
++ forecast_predet.sh[384][[ nh == \n\h ]]
++ forecast_predet.sh[385]vtdm4=0.02
++ forecast_predet.sh[391]nggps_ic=.true.
++ forecast_predet.sh[392]ncep_ic=.false.
++ forecast_predet.sh[393]external_ic=.true.
++ forecast_predet.sh[394]mountain=.false.
++ forecast_predet.sh[395]warm_start=.false.
++ forecast_predet.sh[396]read_increment=.false.
++ forecast_predet.sh[397]res_latlon_dynamics='""'
++ forecast_predet.sh[398]increment_file_on_native_grid=.false.
++ forecast_predet.sh[401]do_skeb=.false.
++ forecast_predet.sh[402]do_shum=.false.
++ forecast_predet.sh[403]do_sppt=.false.
++ forecast_predet.sh[404]do_ca=.false.
++ forecast_predet.sh[405]ISEED=0
++ forecast_predet.sh[406]local imem=
++ forecast_predet.sh[407]local base_seed=20210323120000
++ forecast_predet.sh[409][[ NO == \Y\E\S ]]
++ forecast_predet.sh[414][[ NO == \Y\E\S ]]
++ forecast_predet.sh[419][[ NO == \Y\E\S ]]
++ forecast_predet.sh[424][[ YES == \Y\E\S ]]
++ forecast_predet.sh[425]do_ca=.true.
++ forecast_predet.sh[426]ISEED_CA=354518101
++ forecast_predet.sh[429][[ NO == \Y\E\S ]]
++ forecast_predet.sh[442]FNGLAC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/am/global_glacier.2x2.grb
++ forecast_predet.sh[443]FNMXIC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/am/global_maxice.2x2.grb
++ forecast_predet.sh[444]FNTSFC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/am/RTGSST.1982.2012.monthly.clim.grb
++ forecast_predet.sh[445]FNSNOC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/am/global_snoclim.1.875.grb
++ forecast_predet.sh[446]FNZORC=igbp
++ forecast_predet.sh[447]FNAISC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/am/IMS-NIC.blended.ice.monthly.clim.grb
++ forecast_predet.sh[448]FNALBC2=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/sfc/C48.mx500.facsf.tileX.nc
++ forecast_predet.sh[449]FNTG3C=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/sfc/C48.mx500.substrate_temperature.tileX.nc
++ forecast_predet.sh[450]FNVEGC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/sfc/C48.mx500.vegetation_greenness.tileX.nc
++ forecast_predet.sh[451]FNMSKH=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/am/global_slmask.t1534.3072.1536.grb
++ forecast_predet.sh[452]FNVMNC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/sfc/C48.mx500.vegetation_greenness.tileX.nc
++ forecast_predet.sh[453]FNVMXC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/sfc/C48.mx500.vegetation_greenness.tileX.nc
++ forecast_predet.sh[454]FNSLPC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/sfc/C48.mx500.slope_type.tileX.nc
++ forecast_predet.sh[455]FNALBC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/sfc/C48.mx500.snowfree_albedo.tileX.nc
++ forecast_predet.sh[456]FNVETC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/sfc/C48.mx500.vegetation_type.tileX.nc
++ forecast_predet.sh[457]FNSOTC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/sfc/C48.mx500.soil_type.tileX.nc
++ forecast_predet.sh[458]FNSOCC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/sfc/C48.mx500.soil_color.tileX.nc
++ forecast_predet.sh[459]FNABSC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/sfc/C48.mx500.maximum_snow_albedo.tileX.nc
++ forecast_predet.sh[460]FNSMCC=/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/am/global_soilmgldas.statsgo.t94.192.96.grb
++ forecast_predet.sh[463][[ ! -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/am/global_soilmgldas.statsgo.t94.192.96.grb ]]
++ forecast_predet.sh[468][[ .true. == \.\f\a\l\s\e\. ]]
++ forecast_predet.sh[471]/bin/cp -p /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/C48_mosaic.nc /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/INPUT/C48_mosaic.nc
++ forecast_predet.sh[475]/bin/cp -p /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/ugwd/ugwp_limb_tau.nc /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/ugwp_limb_tau.nc
++ forecast_predet.sh[478]local tt
++ forecast_predet.sh[479](( tt = 1 ))
++ forecast_predet.sh[479](( tt <= ntiles ))
++ forecast_predet.sh[480]/bin/cp -p /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/C48.mx500_oro_data.tile1.nc /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/INPUT/oro_data.tile1.nc
++ forecast_predet.sh[481]/bin/cp -p /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/C48_grid.tile1.nc /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/INPUT/C48_grid.tile1.nc
++ forecast_predet.sh[482]/bin/cp -p /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/ugwd/C48/C48_oro_data_ls.tile1.nc /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/INPUT/oro_data_ls.tile1.nc
++ forecast_predet.sh[483]/bin/cp -p /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/ugwd/C48/C48_oro_data_ss.tile1.nc /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/INPUT/oro_data_ss.tile1.nc
++ forecast_predet.sh[479](( tt++  ))
++ forecast_predet.sh[479](( tt <= ntiles ))
++ forecast_predet.sh[480]/bin/cp -p /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/C48.mx500_oro_data.tile2.nc /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/INPUT/oro_data.tile2.nc
++ forecast_predet.sh[481]/bin/cp -p /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/C48_grid.tile2.nc /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/INPUT/C48_grid.tile2.nc
++ forecast_predet.sh[482]/bin/cp -p /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/ugwd/C48/C48_oro_data_ls.tile2.nc /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/INPUT/oro_data_ls.tile2.nc
++ forecast_predet.sh[483]/bin/cp -p /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/ugwd/C48/C48_oro_data_ss.tile2.nc /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/INPUT/oro_data_ss.tile2.nc
++ forecast_predet.sh[479](( tt++  ))
++ forecast_predet.sh[479](( tt <= ntiles ))
++ forecast_predet.sh[480]/bin/cp -p /work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/C48.mx500_oro_data.tile3.nc /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/INPUT/oro_data.tile3.nc
+/bin/cp: error copying '/work2/noaa/global/role-global/GFS_CI_CD/ORION/CI/3680/global-workflow/fix/orog/C48/C48.mx500_oro_data.tile3.nc' to '/work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195/INPUT/oro_data.tile3.nc': Disk quota exceeded
++ JGLOBAL_FORECAST[88]export err=1
++ JGLOBAL_FORECAST[88]err=1
++ JGLOBAL_FORECAST[88]err_chk
++ err_chk[13]'[' -z 1 ']'
++ err_chk[14]'[' 1 -eq 0 ']'
++ err_chk[18]'[' 1 -eq 139 ']'
++ err_chk[37]err_exit
++ environment[0]set +eux
+
+    -------------------------------------------------------------
+    -- FATAL ERROR: Job fcst.1292195 failed RETURN CODE 1
+    -- ABNORMAL EXIT at Tue May 13 06:35:27 PM CDT 2025 on orion-23-19
+    -------------------------------------------------------------
+    
+
+Currently Loaded Modules:
+  1) intel-oneapi-compilers/2023.1.0  42) grib-util/1.3.0
+  2) stack-intel/2021.9.0             43) g2tmpl/1.13.0
+  3) intel-oneapi-mpi/2021.9.0        44) gsi-ncdiag/1.1.2
+  4) stack-intel-oneapi-mpi/2021.9.0  45) crtm-fix/2.4.0.1_emc
+  5) zlib/1.2.13                      46) git-lfs/3.1.2
+  6) pigz/2.7                         47) crtm/2.4.0.1
+  7) zstd/1.5.2                       48) openblas/0.3.24
+  8) tar/1.34                         49) py-setuptools/63.4.3
+  9) gettext/0.21.1                   50) py-numpy/1.23.4
+ 10) libxcrypt/4.4.35                 51) bufr/11.7.0
+ 11) sqlite/3.43.2                    52) gmake/4.2.1
+ 12) util-linux-uuid/2.38.1           53) wgrib2/2.0.8
+ 13) python/3.11.6                    54) py-f90nml/1.4.3
+ 14) libjpeg/2.1.0                    55) py-cftime/1.0.3.4
+ 15) jasper/2.0.32                    56) py-netcdf4/1.5.8
+ 16) libpng/1.6.37                    57) libyaml/0.2.5
+ 17) openjpeg/2.3.1                   58) py-pyyaml/6.0
+ 18) eccodes/2.32.0                   59) py-markupsafe/2.1.3
+ 19) fftw/3.3.10                      60) py-jinja2/3.1.2
+ 20) nghttp2/1.57.0                   61) py-bottleneck/1.3.7
+ 21) curl/8.4.0                       62) py-numexpr/2.8.4
+ 22) proj/9.2.1                       63) py-et-xmlfile/1.0.1
+ 23) udunits/2.2.28                   64) py-openpyxl/3.1.2
+ 24) cdo/2.2.0                        65) py-pytz/2023.3
+ 25) hdf5/1.14.0                      66) py-pyxlsb/1.0.10
+ 26) snappy/1.1.10                    67) py-xlrd/2.0.1
+ 27) c-blosc/1.21.5                   68) py-xlsxwriter/3.1.7
+ 28) netcdf-c/4.9.2                   69) py-xlwt/1.3.0
+ 29) netcdf-fortran/4.6.1             70) py-pandas/1.5.3
+ 30) parallel-netcdf/1.12.2           71) py-six/1.16.0
+ 31) parallelio/2.5.10                72) py-python-dateutil/2.8.2
+ 32) esmf/8.6.0                       73) g2c/1.8.0
+ 33) antlr/2.7.7                      74) netcdf-cxx4/4.3.1
+ 34) gsl/2.7.1                        75) met/9.1.3
+ 35) nco/5.0.6                        76) metplus/3.1.1
+ 36) bacio/2.4.1                      77) py-packaging/23.1
+ 37) w3emc/2.10.0                     78) py-xarray/2023.7.0
+ 38) prod_util/2.1.1                  79) prepobs/1.1.0
+ 39) g2/3.4.5                         80) fit2obs/1.1.7
+ 40) sp/2.5.0                         81) globus-cli/3.27
+ 41) ip/4.3.0                         82) module_base.orion
+
+ 
+
+
+Job fcst.1292195 failed RETURN CODE 1
+/work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/fcst.1292195
+total 9
+-rw-r--r-- 1 role-global global 4868 Feb 14  2024 ugwp_limb_tau.nc
+-rw-r----- 1 role-global stmp      0 May 13 18:34 ncepdate
+lrwxrwxrwx 1 role-global stmp    122 May 13 18:35 RESTART -> /work2/noaa/stmp/role-global/ORION/RUNDIRS/C48_S2SWA_gefs_c72db5b3/gefs.2021032312/gefsfcst.2021032312/restart/FV3_RESTART
+drwxr-s--- 2 role-global stmp   4096 May 13 18:35 INPUT
+cat: OUTPUT.1292652: No such file or directory
+slurmstepd: error: *** JOB 20282432 ON orion-23-19 CANCELLED AT 2025-05-13T18:35:27 ***
