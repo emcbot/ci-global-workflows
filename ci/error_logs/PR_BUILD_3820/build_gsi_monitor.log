@@ -1,0 +1,84 @@
++ OPTIND=1
++ getopts :j:dv option
++ case "${option}" in
++ BUILD_JOBS=1
++ getopts :j:dv option
++ shift 2
++ BUILD_TYPE=Release
++ BUILD_VERBOSE=NO
++ BUILD_JOBS=1
++ ./gsi_monitor.fd/ush/build.sh
+MACHINE_ID = gaeac6
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Lmod is automatically replacing "intel/2025.0" with "intel-classic/2023.2.0".
+
+
+The following have been reloaded with a version change:
+  1) PrgEnv-intel/8.6.0 => PrgEnv-intel/8.5.0
+  2) cray-mpich/8.1.32 => cray-mpich/8.1.29
+  3) craype/2.7.34 => craype/2.7.30
+
+
+Currently Loaded Modules:
+  1) craype-x86-genoa                               18) nghttp2/1.57.0
+  2) perftools-base/25.03.0                         19) zlib/1.2.13
+  3) xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d  20) curl/8.4.0
+  4) cray-pmi/6.1.15                                21) cmake/3.23.1
+  5) CmrsEnv/default                                22) snappy/1.1.10
+  6) TimeZoneEDT/default                            23) zstd/1.5.2
+  7) DefApps/default                                24) c-blosc/1.21.5
+  8) cray-dsmml/0.3.1                               25) pkg-config/0.29.2
+  9) cray-libsci/25.03.0                            26) hdf5/1.14.0
+ 10) PrgEnv-intel/8.5.0                             27) netcdf-c/4.9.2
+ 11) intel-classic/2023.2.0                         28) netcdf-fortran/4.6.1
+ 12) craype/2.7.30                                  29) bacio/2.4.1
+ 13) stack-intel/2023.2.0                           30) w3emc/2.10.0
+ 14) libfabric/1.20.1                               31) gsi-ncdiag/1.1.2
+ 15) craype-network-ofi                             32) common
+ 16) cray-mpich/8.1.29                              33) gaeac6.intel
+ 17) stack-cray-mpich/8.1.29
+
+ 
+
++ cmake -DBUILD_UTIL_ALLMON=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/gpfs/f6/drsa-precip3/world-shared/global/CI/3820/global-workflow/sorc/gsi_monitor.fd/install /gpfs/f6/drsa-precip3/world-shared/global/CI/3820/global-workflow/sorc/gsi_monitor.fd
+-- The Fortran compiler identification is unknown
+Error:  Unable to find cray-libsci/25.03.0 libraries compatible with intel-classic/2023.2.0 targeting 'x86-genoa'.
+
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - failed
+-- Check for working Fortran compiler: /opt/cray/pe/craype/2.7.30/bin/ftn
+-- Check for working Fortran compiler: /opt/cray/pe/craype/2.7.30/bin/ftn - broken
+CMake Error at /autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/unified-env/install/intel/2023.2.0/cmake-3.23.1-ixiyqlk/share/cmake-3.23/Modules/CMakeTestFortranCompiler.cmake:61 (message):
+  The Fortran compiler
+
+    "/opt/cray/pe/craype/2.7.30/bin/ftn"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: /gpfs/f6/drsa-precip3/world-shared/global/CI/3820/global-workflow/sorc/gsi_monitor.fd/build/CMakeFiles/CMakeTmp
+    
+    Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_77352/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_77352.dir/build.make CMakeFiles/cmTC_77352.dir/build
+    gmake[1]: Entering directory '/gpfs/f6/drsa-precip3/world-shared/global/CI/3820/global-workflow/sorc/gsi_monitor.fd/build/CMakeFiles/CMakeTmp'
+    Building Fortran object CMakeFiles/cmTC_77352.dir/testFortranCompiler.f.o
+    /opt/cray/pe/craype/2.7.30/bin/ftn   -gcc-name=/usr/bin/gcc-12  -c /gpfs/f6/drsa-precip3/world-shared/global/CI/3820/global-workflow/sorc/gsi_monitor.fd/build/CMakeFiles/CMakeTmp/testFortranCompiler.f -o CMakeFiles/cmTC_77352.dir/testFortranCompiler.f.o
+    Error:  Unable to find cray-libsci/25.03.0 libraries compatible with intel-classic/2023.2.0 targeting 'x86-genoa'.
+    
+    gmake[1]: *** [CMakeFiles/cmTC_77352.dir/build.make:78: CMakeFiles/cmTC_77352.dir/testFortranCompiler.f.o] Error 1
+    gmake[1]: Leaving directory '/gpfs/f6/drsa-precip3/world-shared/global/CI/3820/global-workflow/sorc/gsi_monitor.fd/build/CMakeFiles/CMakeTmp'
+    gmake: *** [Makefile:127: cmTC_77352/fast] Error 2
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:3 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/gpfs/f6/drsa-precip3/world-shared/global/CI/3820/global-workflow/sorc/gsi_monitor.fd/build/CMakeFiles/CMakeOutput.log".
+See also "/gpfs/f6/drsa-precip3/world-shared/global/CI/3820/global-workflow/sorc/gsi_monitor.fd/build/CMakeFiles/CMakeError.log".
