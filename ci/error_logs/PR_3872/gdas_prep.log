@@ -1,0 +1,34 @@
+Loading modules quietly...
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+Lmod Warning: MODULEPATH is undefined.
+
+
+
+Lmod has detected the following error: The following module(s) are unknown:
+"contrib"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "contrib"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Lmod has detected the following error: Cannot load module
+"stack-intel/2021.5.0" without these module(s) loaded:
+   intel/2022.1.2
+
+While processing the following module(s):
+    Module fullname       Module Filename
+    ---------------       ---------------
+    stack-intel/2021.5.0  /scratch1/NCEPDEV/nems/role.epic/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-fms-2024.01/install/modulefiles/Core/stack-intel/2021.5.0.lua
+    module_base.hera      /scratch1/NCEPDEV/global/glopara/CI/3872/global-workflow/modulefiles/module_base.hera.lua
+
+FATAL ERROR: Failed to load module_base.hera
+_______________________________________________________________
+Start Epilog on node h33m13 for job 13487328 :: Tue Jul 15 22:38:40 UTC 2025
+Job 13487328 finished for user role.glopara in partition hera with exit code 1:0
+_______________________________________________________________
+End Epilogue Tue Jul 15 22:38:40 UTC 2025
