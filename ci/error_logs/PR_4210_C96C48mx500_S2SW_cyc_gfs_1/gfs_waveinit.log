@@ -1,0 +1,1152 @@
++ source /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/dev/ush/load_modules.sh ufswm
+++ [[ hxB == *x* ]]
+++ set_x=YES
+++ [[ NO == \N\O ]]
+++ echo 'Loading modules quietly...'
+Loading modules quietly...
+++ set +x
+-------------------------------------------------------------------------------
+The following dependent module(s) are not currently loaded: zstd/1.5.6 (required by: c-blosc/1.21.5, netcdf-c/4.9.2)
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+The following dependent module(s) are not currently loaded: zstd/1.5.6 (required by: c-blosc/1.21.5, netcdf-c/4.9.2)
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+The following dependent module(s) are not currently loaded: zstd/1.5.6 (required by: c-blosc/1.21.5, netcdf-c/4.9.2)
+-------------------------------------------------------------------------------
+
+Currently Loaded Modules:
+  1) intel-oneapi-compilers/2024.2.1  33) bacio/2.4.1
+  2) stack-oneapi/2024.2.1            34) crtm-fix/2.4.0.1_emc
+  3) intel-oneapi-runtime/2024.2.1    35) git-lfs/3.1.2
+  4) intel-oneapi-mpi/2021.13.1       36) crtm/2.4.0.1
+  5) stack-intel-oneapi-mpi/2021.13   37) g2/3.5.1
+  6) glibc/2.34                       38) g2tmpl/1.13.0
+  7) nghttp2/1.63.0                   39) ip/5.1.0
+  8) openssl/3.0.1                    40) sp/2.5.0
+  9) curl/8.10.1                      41) w3emc/2.10.0
+ 10) cmake/3.27.9                     42) gftl/1.14.0
+ 11) libjpeg/2.1.0                    43) gftl-shared/1.9.0
+ 12) jasper/2.0.32                    44) fargparse/1.8.0
+ 13) libpng/1.6.37                    45) yafyaml/1.4.0
+ 14) snappy/1.2.1                     46) pflogger/1.15.0
+ 15) c-blosc/1.21.5                   47) udunits/2.2.28
+ 16) netcdf-c/4.9.2                   48) mapl/2.53.4-esmf-8.8.0
+ 17) netcdf-fortran/4.6.1             49) scotch/7.0.4
+ 18) parallel-netcdf/1.12.3           50) ufs_common
+ 19) parallelio/2.6.2                 51) zlib/1.2.13
+ 20) gettext/0.21                     52) hdf5/1.14.3
+ 21) sqlite/3.46.0                    53) nccmp/1.9.0.1
+ 22) util-linux-uuid/2.40.2           54) bzip2/1.0.8
+ 23) python/3.11.7                    55) libiconv/1.16
+ 24) python-venv/1.0                  56) pigz/2.7
+ 25) py-mpi4py/4.0.1                  57) xz/5.2.7
+ 26) openblas/0.3.24                  58) zstd/1.5.2
+ 27) py-numpy/1.26.4                  59) tar/1.34
+ 28) py-pip/23.1.2                    60) ufs_orion.intel
+ 29) libyaml/0.2.5                    61) prod_util/2.1.1
+ 30) py-pyyaml/6.0.2                  62) g2c/2.1.0
+ 31) esmf/8.8.0                       63) wgrib2/3.6.0
+ 32) fms/2024.02
+
+ 
+
+Begin /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/jobs/JGLOBAL_WAVE_INIT at 23:17:29
+++ jjob_header.sh[46]OPTIND=1
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[50]env_job=waveinit
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[49]read -ra configs
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[61]shift 4
+++ jjob_header.sh[63][[ -z waveinit ]]
+++ jjob_header.sh[71]export DATA=/work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035
+++ jjob_header.sh[71]DATA=/work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035
+++ jjob_header.sh[72][[ YES == \Y\E\S ]]
+++ jjob_header.sh[73]rm -rf /work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035
+++ jjob_header.sh[75]mkdir -p /work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035
+++ jjob_header.sh[76]cd /work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035
+++ jjob_header.sh[85]export pid=253423
+++ jjob_header.sh[85]pid=253423
+++ jjob_header.sh[86]export pgmout=OUTPUT.253423
+++ jjob_header.sh[86]pgmout=OUTPUT.253423
+++ jjob_header.sh[87]export pgmerr=errfile
+++ jjob_header.sh[87]pgmerr=errfile
+++ jjob_header.sh[90]export pgm=
+++ jjob_header.sh[90]pgm=
+++ jjob_header.sh[96]export cycle=t18z
+++ jjob_header.sh[96]cycle=t18z
+++ jjob_header.sh[97]setpdy.sh
++ setpdy.sh[20]'[' /work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035 == /home/role-global ']'
++ setpdy.sh[25][[ ! t18z =~ t??z ]]
++ setpdy.sh[30]case $# in
++ setpdy.sh[31]dates_before_PDY=7
++ setpdy.sh[32]dates_after_PDY=7
++ setpdy.sh[50]COMDATEROOT=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/COMROOT
++ setpdy.sh[53]'[' -z 20211220 ']'
++ setpdy.sh[57]sed 's/[0-9]\{8\}/20211220/' /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/COMROOT/date/t18z
+sed: can't read /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/COMROOT/date/t18z: No such file or directory
+++ jjob_header.sh[97]true
+++ jjob_header.sh[98]source ./PDY
+/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/jjob_header.sh: line 98: ./PDY: No such file or directory
+++ jjob_header.sh[98]true
+++ jjob_header.sh[104]export EXPDIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509
+++ jjob_header.sh[104]EXPDIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509
+++ jjob_header.sh[105]for config in "${configs[@]:-''}"
+++ jjob_header.sh[106]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/config.base
++++ config.base[6]echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]export machine=ORION
++++ config.base[9]machine=ORION
++++ config.base[12]export RUN_ENVIR=emc
++++ config.base[12]RUN_ENVIR=emc
++++ config.base[15]export ACCOUNT=fv3-cpu
++++ config.base[15]ACCOUNT=fv3-cpu
++++ config.base[16]export QUEUE=batch
++++ config.base[16]QUEUE=batch
++++ config.base[17]export QUEUE_SERVICE=batch
++++ config.base[17]QUEUE_SERVICE=batch
++++ config.base[18]export QUEUE_DTN=batch
++++ config.base[18]QUEUE_DTN=batch
++++ config.base[19]export PARTITION_BATCH=orion
++++ config.base[19]PARTITION_BATCH=orion
++++ config.base[20]export PARTITION_SERVICE=service
++++ config.base[20]PARTITION_SERVICE=service
++++ config.base[21]export PARTITION_DTN=
++++ config.base[21]PARTITION_DTN=
++++ config.base[22]export RESERVATION=
++++ config.base[22]RESERVATION=
++++ config.base[23]export CLUSTERS=
++++ config.base[23]CLUSTERS=
++++ config.base[24]export CLUSTERS_SERVICE=
++++ config.base[24]CLUSTERS_SERVICE=
++++ config.base[25]export CLUSTERS_DTN=
++++ config.base[25]CLUSTERS_DTN=
++++ config.base[28]export HPSS_PROJECT=emc-global
++++ config.base[28]HPSS_PROJECT=emc-global
++++ config.base[31]export HOMEgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow
++++ config.base[31]HOMEgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow
++++ config.base[32]export EXECgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/exec
++++ config.base[32]EXECgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/exec
++++ config.base[33]export FIXgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix
++++ config.base[33]FIXgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix
++++ config.base[34]export PARMgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/parm
++++ config.base[34]PARMgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/parm
++++ config.base[35]export SCRgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/scripts
++++ config.base[35]SCRgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/scripts
++++ config.base[36]export USHgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush
++++ config.base[36]USHgfs=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush
++++ config.base[38]export FIXam=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/am
++++ config.base[38]FIXam=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/am
++++ config.base[39]export FIXaer=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/aer
++++ config.base[39]FIXaer=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/aer
++++ config.base[40]export FIXcpl=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/cpl
++++ config.base[40]FIXcpl=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/cpl
++++ config.base[41]export FIXlut=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/lut
++++ config.base[41]FIXlut=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/lut
++++ config.base[42]export FIXcice=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/cice
++++ config.base[42]FIXcice=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/cice
++++ config.base[43]export FIXmom=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/mom6
++++ config.base[43]FIXmom=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/mom6
++++ config.base[44]export FIXreg2grb2=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/reg2grb2
++++ config.base[44]FIXreg2grb2=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/reg2grb2
++++ config.base[45]export FIXgdas=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/gdas
++++ config.base[45]FIXgdas=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/gdas
++++ config.base[50]export PACKAGEROOT=/work2/noaa/global/role-global/nwpara
++++ config.base[50]PACKAGEROOT=/work2/noaa/global/role-global/nwpara
++++ config.base[51]export COMROOT=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/COMROOT
++++ config.base[51]COMROOT=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/COMROOT
++++ config.base[52]export COMINsyn=/work2/noaa/global/role-global/com/gfs/prod/syndat
++++ config.base[52]COMINsyn=/work2/noaa/global/role-global/com/gfs/prod/syndat
++++ config.base[53]export DMPDIR=/work/noaa/rstprod/dump
++++ config.base[53]DMPDIR=/work/noaa/rstprod/dump
++++ config.base[57]export COMINecmwf=/work2/noaa/global/role-global/data/external_gempak/ecmwf
++++ config.base[57]COMINecmwf=/work2/noaa/global/role-global/data/external_gempak/ecmwf
++++ config.base[58]export COMINnam=/work2/noaa/global/role-global/data/external_gempak/nam
++++ config.base[58]COMINnam=/work2/noaa/global/role-global/data/external_gempak/nam
++++ config.base[59]export COMINukmet=/work2/noaa/global/role-global/data/external_gempak/ukmet
++++ config.base[59]COMINukmet=/work2/noaa/global/role-global/data/external_gempak/ukmet
++++ config.base[62]export HOMEDIR=/work2/noaa/global/role-global
++++ config.base[62]HOMEDIR=/work2/noaa/global/role-global
++++ config.base[63]export STMP=/work2/noaa/global/role-global/stmp/ORION
++++ config.base[63]STMP=/work2/noaa/global/role-global/stmp/ORION
++++ config.base[64]export PTMP=/work2/noaa/stmp/role-global/ORION
++++ config.base[64]PTMP=/work2/noaa/stmp/role-global/ORION
++++ config.base[65]export NOSCRUB=/work2/noaa/global/role-global
++++ config.base[65]NOSCRUB=/work2/noaa/global/role-global
++++ config.base[68]export BASE_GIT=/work2/noaa/global/role-global/git
++++ config.base[68]BASE_GIT=/work2/noaa/global/role-global/git
++++ config.base[71]export BASE_DATA=/work2/noaa/global/role-global/data
++++ config.base[71]BASE_DATA=/work2/noaa/global/role-global/data
++++ config.base[74]export DO_PREP_SFC=NO
++++ config.base[74]DO_PREP_SFC=NO
++++ config.base[77]export DO_GOES=NO
++++ config.base[77]DO_GOES=NO
++++ config.base[78]export DO_BUFRSND=NO
++++ config.base[78]DO_BUFRSND=NO
++++ config.base[79]export DO_GEMPAK=NO
++++ config.base[79]DO_GEMPAK=NO
++++ config.base[80]export DO_AWIPS=NO
++++ config.base[80]DO_AWIPS=NO
++++ config.base[81]export DO_NPOESS=NO
++++ config.base[81]DO_NPOESS=NO
++++ config.base[82]export DO_TRACKER=YES
++++ config.base[82]DO_TRACKER=YES
++++ config.base[83]export DO_GENESIS=YES
++++ config.base[83]DO_GENESIS=YES
++++ config.base[84]export DO_GENESIS_FSU=NO
++++ config.base[84]DO_GENESIS_FSU=NO
++++ config.base[85]export DO_VERFOZN=YES
++++ config.base[85]DO_VERFOZN=YES
++++ config.base[86]export DO_VERFRAD=YES
++++ config.base[86]DO_VERFRAD=YES
++++ config.base[87]export DO_VMINMON=YES
++++ config.base[87]DO_VMINMON=YES
++++ config.base[88]export DO_ANLSTAT=YES
++++ config.base[88]DO_ANLSTAT=YES
++++ config.base[91]export MODE=cycled
++++ config.base[91]MODE=cycled
++++ config.base[92]export DO_TEST_MODE=NO
++++ config.base[92]DO_TEST_MODE=NO
++++ config.base[101]export FIXgsi=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/gsi
++++ config.base[101]FIXgsi=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/gsi
++++ config.base[102]export HOMEpost=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow
++++ config.base[102]HOMEpost=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow
++++ config.base[103]export HOMEobsproc=/work2/noaa/global/role-global/git/obsproc/v1.2.0
++++ config.base[103]HOMEobsproc=/work2/noaa/global/role-global/git/obsproc/v1.2.0
++++ config.base[106]export NMV=/bin/mv
++++ config.base[106]NMV=/bin/mv
++++ config.base[107]export 'NLN=/bin/ln -sf'
++++ config.base[107]NLN='/bin/ln -sf'
++++ config.base[108]export VERBOSE=YES
++++ config.base[108]VERBOSE=YES
++++ config.base[109]export KEEPDATA=NO
++++ config.base[109]KEEPDATA=NO
++++ config.base[110]export DEBUG_POSTSCRIPT=NO
++++ config.base[110]DEBUG_POSTSCRIPT=NO
++++ config.base[111]export CHGRP_RSTPROD=YES
++++ config.base[111]CHGRP_RSTPROD=YES
++++ config.base[112]export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[112]CHGRP_CMD='chgrp rstprod'
++++ config.base[113]export NCDUMP=/apps/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.1.0/install/oneapi/2024.2.1/netcdf-c-4.9.2-vzwtu7i/bin/ncdump
++++ config.base[113]NCDUMP=/apps/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.1.0/install/oneapi/2024.2.1/netcdf-c-4.9.2-vzwtu7i/bin/ncdump
++++ config.base[114]export NCLEN=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/getncdimlen
++++ config.base[114]NCLEN=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/getncdimlen
++++ config.base[117]export BASE_ENV=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/env
++++ config.base[117]BASE_ENV=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/env
++++ config.base[120]export SDATE=2021122012
++++ config.base[120]SDATE=2021122012
++++ config.base[121]export EDATE=2021122100
++++ config.base[121]EDATE=2021122100
++++ config.base[122]export EXP_WARM_START=.false.
++++ config.base[122]EXP_WARM_START=.false.
++++ config.base[123]export assim_freq=6
++++ config.base[123]assim_freq=6
++++ config.base[124]export PSLOT=C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509
++++ config.base[124]PSLOT=C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509
++++ config.base[125]export EXPDIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509
++++ config.base[125]EXPDIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509
++++ config.base[126]export ROTDIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509
++++ config.base[126]ROTDIR=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509
++++ config.base[127]export DUMP_SUFFIX=
++++ config.base[127]DUMP_SUFFIX=
++++ config.base[128][[ 2021122018 -ge 2019092100 ]]
++++ config.base[128][[ 2021122018 -le 2019110700 ]]
++++ config.base[131]export ARCDIR=/work2/noaa/global/role-global/archive/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509
++++ config.base[131]ARCDIR=/work2/noaa/global/role-global/archive/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509
++++ config.base[132]export ATARDIR=/NCEPDEV/emc-global/1year/role-global/ORION/scratch/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509
++++ config.base[132]ATARDIR=/NCEPDEV/emc-global/1year/role-global/ORION/scratch/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509
++++ config.base[133]export 'FETCHDIR={{ FETCHDIR }}'
++++ config.base[133]FETCHDIR='{{ FETCHDIR }}'
++++ config.base[136]export envir=prod
++++ config.base[136]envir=prod
++++ config.base[137]export NET=gfs
++++ config.base[137]NET=gfs
++++ config.base[138]export RUN=gfs
++++ config.base[138]RUN=gfs
++++ config.base[141]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/config.com
+++++ config.com[4]echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[38][[ emc == \n\c\o ]]
+++++ config.com[43]COM_OBSPROC_TMPL='${DMPDIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[44]COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[45]COM_TCVITAL_TMPL='${DMPDIR}/${RUN}.${YMD}/${HH}/atmos'
+++++ config.com[47]declare -rx 'COM_OBS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[48]declare -rx COM_OBSPROC_TMPL COM_RTOFS_TMPL
+++++ config.com[50]COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[52]declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[54]declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[55]declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[57]declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[58]declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[59]declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[60]declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[61]declare -rx 'COM_SNOW_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/snow/anlmon'
+++++ config.com[62]declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[63]declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[64]declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[65]declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[66]declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[67]declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[68]declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[69]declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[70]declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[71]declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[72]declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[73]declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[74]declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[75]declare -rx 'COM_ATMOS_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/anlmon'
+++++ config.com[76]declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[78]declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[79]declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[80]declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[81]declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[82]declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ config.com[83]declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[84]declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[85]declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[87]declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[88]declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[89]declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[90]declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[91]declare -rx 'COM_OCEAN_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/anlmon'
+++++ config.com[92]declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[93]declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[94]declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[95]declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[96]declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[98]declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[99]declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[100]declare -rx 'COM_ICE_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/anlmon'
+++++ config.com[101]declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[102]declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[103]declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[104]declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[105]declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[106]declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[107]declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[109]declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[110]declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[111]declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[112]declare -rx 'COM_CHEM_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/chem/anlmon'
+++++ config.com[114]declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[143]export LOGSCRIPT=
++++ config.base[143]LOGSCRIPT=
++++ config.base[145]export 'REDOUT=1>'
++++ config.base[145]REDOUT='1>'
++++ config.base[146]export 'REDERR=2>'
++++ config.base[146]REDERR='2>'
++++ config.base[148]export SENDECF=NO
++++ config.base[148]SENDECF=NO
++++ config.base[149]export SENDSDM=NO
++++ config.base[149]SENDSDM=NO
++++ config.base[150]export SENDDBN_NTC=NO
++++ config.base[150]SENDDBN_NTC=NO
++++ config.base[151]export SENDDBN=NO
++++ config.base[151]SENDDBN=NO
++++ config.base[152]export DBNROOT=/apps/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.1.0/install/oneapi/2024.2.1/prod-util-2.1.1-qyzrda5/fakedbn
++++ config.base[152]DBNROOT=/apps/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.1.0/install/oneapi/2024.2.1/prod-util-2.1.1-qyzrda5/fakedbn
++++ config.base[153]export SENDAWIP=NO
++++ config.base[153]SENDAWIP=NO
++++ config.base[156]export APP=S2SW
++++ config.base[156]APP=S2SW
++++ config.base[158]shopt -s extglob
++++ config.base[161]case "${RUN}" in
++++ config.base[168]shopt -u extglob
++++ config.base[171]export DO_ATM=YES
++++ config.base[171]DO_ATM=YES
++++ config.base[172]export DO_COUPLED=NO
++++ config.base[172]DO_COUPLED=NO
++++ config.base[173]export DO_WAVE=NO
++++ config.base[173]DO_WAVE=NO
++++ config.base[174]export DO_OCN=NO
++++ config.base[174]DO_OCN=NO
++++ config.base[175]export DO_ICE=NO
++++ config.base[175]DO_ICE=NO
++++ config.base[176]DO_AERO=NO
++++ config.base[177]export DO_PREP_OBS_AERO=NO
++++ config.base[177]DO_PREP_OBS_AERO=NO
++++ config.base[178]aero_fcst_runs=gdas
++++ config.base[179]aero_anl_runs='gdas gfs'
++++ config.base[180]export DO_AERO_FCST=NO
++++ config.base[180]DO_AERO_FCST=NO
++++ config.base[181]export DO_AERO_ANL=NO
++++ config.base[181]DO_AERO_ANL=NO
++++ config.base[182][[ gfs == \g\f\s ]]
++++ config.base[183]export DOBNDPNT_WAVE=YES
++++ config.base[183]DOBNDPNT_WAVE=YES
++++ config.base[187]export FRAC_GRID=.true.
++++ config.base[187]FRAC_GRID=.true.
++++ config.base[188]export DO_NEST=NO
++++ config.base[188]DO_NEST=NO
++++ config.base[189][[ NO == \Y\E\S ]]
++++ config.base[195]export ntiles=6
++++ config.base[195]ntiles=6
++++ config.base[196]export FIXugwd=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/ugwd
++++ config.base[196]FIXugwd=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/ugwd
++++ config.base[197]export FIXorog=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/orog
++++ config.base[197]FIXorog=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/orog
++++ config.base[201]export OPS_RES=C768
++++ config.base[201]OPS_RES=C768
++++ config.base[204]export LEVS=128
++++ config.base[204]LEVS=128
++++ config.base[205]export CASE=C96
++++ config.base[205]CASE=C96
++++ config.base[206]export CASE_ENS=C48
++++ config.base[206]CASE_ENS=C48
++++ config.base[207]export CASE_HIST=C48
++++ config.base[207]CASE_HIST=C48
++++ config.base[208]export OCNRES=500
++++ config.base[208]OCNRES=500
++++ config.base[209]export ICERES=500
++++ config.base[209]ICERES=500
++++ config.base[212]case "${CASE}" in
++++ config.base[217]export waveGRD=uglo_100km
++++ config.base[217]waveGRD=uglo_100km
++++ config.base[231]case "${APP}" in
++++ config.base[247]export DO_COUPLED=YES
++++ config.base[247]DO_COUPLED=YES
++++ config.base[248]export DO_OCN=YES
++++ config.base[248]DO_OCN=YES
++++ config.base[249]export DO_ICE=YES
++++ config.base[249]DO_ICE=YES
++++ config.base[251][[ S2SW =~ A$ ]]
++++ config.base[255][[ S2SW =~ ^S2SW ]]
++++ config.base[256]export DO_WAVE=YES
++++ config.base[256]DO_WAVE=YES
++++ config.base[266][[ NO == \Y\E\S ]]
++++ config.base[276][[ gfs =~ gdas ]]
++++ config.base[279][[ gfs =~ gfs ]]
++++ config.base[280]export FHCYC=24
++++ config.base[280]FHCYC=24
++++ config.base[284]export FHMIN=0
++++ config.base[284]FHMIN=0
++++ config.base[285]export FHMAX=9
++++ config.base[285]FHMAX=9
++++ config.base[286]export FHOUT=3
++++ config.base[286]FHOUT=3
++++ config.base[287]export FHOUT_OCN=3
++++ config.base[287]FHOUT_OCN=3
++++ config.base[288]export FHOUT_ICE=3
++++ config.base[288]FHOUT_ICE=3
++++ config.base[289]export FHOUT_AERO=3
++++ config.base[289]FHOUT_AERO=3
++++ config.base[292]export EUPD_CYC=both
++++ config.base[292]EUPD_CYC=both
++++ config.base[295]export INTERVAL_GFS=6
++++ config.base[295]INTERVAL_GFS=6
++++ config.base[296]export SDATE_GFS=2021122018
++++ config.base[296]SDATE_GFS=2021122018
++++ config.base[299]export FHMIN_GFS=0
++++ config.base[299]FHMIN_GFS=0
++++ config.base[300]export FHMAX_GFS=120
++++ config.base[300]FHMAX_GFS=120
++++ config.base[302]breakpnts=
++++ config.base[303]export FCST_SEGMENTS=0,120
++++ config.base[303]FCST_SEGMENTS=0,120
++++ config.base[304]export FHOUT_GFS=3
++++ config.base[304]FHOUT_GFS=3
++++ config.base[305]export FHMAX_HF_GFS=48
++++ config.base[305]FHMAX_HF_GFS=48
++++ config.base[306]export FHMAX_HF_GFS=48
++++ config.base[306]FHMAX_HF_GFS=48
++++ config.base[307]export FHOUT_HF_GFS=1
++++ config.base[307]FHOUT_HF_GFS=1
++++ config.base[310]export FHMIN_WAV=0
++++ config.base[310]FHMIN_WAV=0
++++ config.base[311]export FHOUT_WAV=1
++++ config.base[311]FHOUT_WAV=1
++++ config.base[312]export FHMAX_WAV=9
++++ config.base[312]FHMAX_WAV=9
++++ config.base[313]export FHMAX_WAV=9
++++ config.base[313]FHMAX_WAV=9
++++ config.base[314]export FHOUT_WAV_GFS=3
++++ config.base[314]FHOUT_WAV_GFS=3
++++ config.base[315]export FHMAX_WAV_GFS=120
++++ config.base[315]FHMAX_WAV_GFS=120
++++ config.base[316]export FHOUT_HF_WAV=1
++++ config.base[316]FHOUT_HF_WAV=1
++++ config.base[317]export FHMAX_HF_WAV=48
++++ config.base[317]FHMAX_HF_WAV=48
++++ config.base[318]export FHMAX_HF_WAV=48
++++ config.base[318]FHMAX_HF_WAV=48
++++ config.base[321]export FHOUT_OCN_GFS=6
++++ config.base[321]FHOUT_OCN_GFS=6
++++ config.base[322]export FHOUT_ICE_GFS=6
++++ config.base[322]FHOUT_ICE_GFS=6
++++ config.base[325]export ILPOST=1
++++ config.base[325]ILPOST=1
++++ config.base[326]((  FHMAX_HF_GFS < 120  ))
++++ config.base[327]export ILPOST=3
++++ config.base[327]ILPOST=3
++++ config.base[331]export FHMAX_GOES=180
++++ config.base[331]FHMAX_GOES=180
++++ config.base[332]export FHOUT_GOES=3
++++ config.base[332]FHOUT_GOES=3
++++ config.base[333]((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[334]export FHMAX_GOES=120
++++ config.base[334]FHMAX_GOES=120
++++ config.base[338]export restart_interval_gfs=12
++++ config.base[338]restart_interval_gfs=12
++++ config.base[343]export QUILTING=.true.
++++ config.base[343]QUILTING=.true.
++++ config.base[344]export OUTPUT_GRID=gaussian_grid
++++ config.base[344]OUTPUT_GRID=gaussian_grid
++++ config.base[345]export WRITE_DOPOST=.true.
++++ config.base[345]WRITE_DOPOST=.true.
++++ config.base[346]export WRITE_NSFLIP=.true.
++++ config.base[346]WRITE_NSFLIP=.true.
++++ config.base[349]export DOIAU=YES
++++ config.base[349]DOIAU=YES
++++ config.base[350]export IAUFHRS=3,6,9
++++ config.base[350]IAUFHRS=3,6,9
++++ config.base[351]export IAU_FHROT=3
++++ config.base[351]IAU_FHROT=3
++++ config.base[352]export IAU_DELTHRS=6
++++ config.base[352]IAU_DELTHRS=6
++++ config.base[353]export IAU_OFFSET=6
++++ config.base[353]IAU_OFFSET=6
++++ config.base[354]export DOIAU_ENKF=YES
++++ config.base[354]DOIAU_ENKF=YES
++++ config.base[355]export IAUFHRS_ENKF=3,6,9
++++ config.base[355]IAUFHRS_ENKF=3,6,9
++++ config.base[356]export IAU_DELTHRS_ENKF=6
++++ config.base[356]IAU_DELTHRS_ENKF=6
++++ config.base[359]export lobsdiag_forenkf=.true.
++++ config.base[359]lobsdiag_forenkf=.true.
++++ config.base[367]export imp_physics=8
++++ config.base[367]imp_physics=8
++++ config.base[371]export DO_JEDIATMVAR=NO
++++ config.base[371]DO_JEDIATMVAR=NO
++++ config.base[372]export DO_JEDIATMENS=NO
++++ config.base[372]DO_JEDIATMENS=NO
++++ config.base[373]export DO_JEDIOCNVAR=YES
++++ config.base[373]DO_JEDIOCNVAR=YES
++++ config.base[374]export DO_JEDISNOWDA=YES
++++ config.base[374]DO_JEDISNOWDA=YES
++++ config.base[375]export DO_MERGENSST=NO
++++ config.base[375]DO_MERGENSST=NO
++++ config.base[376]export DO_STARTMEM_FROM_JEDIICE=YES
++++ config.base[376]DO_STARTMEM_FROM_JEDIICE=YES
++++ config.base[379]export DOHYBVAR=YES
++++ config.base[379]DOHYBVAR=YES
++++ config.base[380]export DOHYBVAR_OCN=YES
++++ config.base[380]DOHYBVAR_OCN=YES
++++ config.base[381]export DOLETKF_OCN=NO
++++ config.base[381]DOLETKF_OCN=NO
++++ config.base[382]export NMEM_ENS=2
++++ config.base[382]NMEM_ENS=2
++++ config.base[383]export SMOOTH_ENKF=NO
++++ config.base[383]SMOOTH_ENKF=NO
++++ config.base[384]export l4densvar=.true.
++++ config.base[384]l4densvar=.true.
++++ config.base[385]export lwrite4danl=.true.
++++ config.base[385]lwrite4danl=.true.
++++ config.base[386]export DO_CALC_INCREMENT=NO
++++ config.base[386]DO_CALC_INCREMENT=NO
++++ config.base[389]export NMEM_ENS_GFS=2
++++ config.base[389]NMEM_ENS_GFS=2
++++ config.base[390]export NMEM_ENS_GFS_OFFSET=0
++++ config.base[390]NMEM_ENS_GFS_OFFSET=0
++++ config.base[391]export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[391]DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[394][[ YES = \Y\E\S ]]
++++ config.base[395]export FHMIN_ENKF=3
++++ config.base[395]FHMIN_ENKF=3
++++ config.base[396]export FHMAX_ENKF=9
++++ config.base[396]FHMAX_ENKF=9
++++ config.base[397]export FHMAX_ENKF_GFS=12
++++ config.base[397]FHMAX_ENKF_GFS=12
++++ config.base[398]export FHOUT_ENKF_GFS=3
++++ config.base[398]FHOUT_ENKF_GFS=3
++++ config.base[399][[ .true. = \.\t\r\u\e\. ]]
++++ config.base[400]export FHOUT=1
++++ config.base[400]FHOUT=1
++++ config.base[401]export FHOUT_ENKF=1
++++ config.base[401]FHOUT_ENKF=1
++++ config.base[408][[ YES == \N\O ]]
++++ config.base[416]export ENKF_SPREAD=YES
++++ config.base[416]ENKF_SPREAD=YES
++++ config.base[419]export DO_GSISOILDA=YES
++++ config.base[419]DO_GSISOILDA=YES
++++ config.base[420]export DO_LAND_IAU=.true.
++++ config.base[420]DO_LAND_IAU=.true.
++++ config.base[421]export LSOIL_INCR=2
++++ config.base[421]LSOIL_INCR=2
++++ config.base[424][[ cycled = \c\y\c\l\e\d ]]
++++ config.base[424][[ 2021122012 = \2\0\2\1\1\2\2\0\1\8 ]]
++++ config.base[424][[ YES = \N\O ]]
++++ config.base[424][[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ config.base[431][[ YES = \N\O ]]
++++ config.base[437][[ YES == \Y\E\S ]]
++++ config.base[438]export restart_interval_enkfgdas=3
++++ config.base[438]restart_interval_enkfgdas=3
++++ config.base[443]export restart_interval_enkfgfs=3
++++ config.base[443]restart_interval_enkfgfs=3
++++ config.base[445][[ YES == \Y\E\S ]]
++++ config.base[446]export restart_interval_gdas=3
++++ config.base[446]restart_interval_gdas=3
++++ config.base[452]export DONST=YES
++++ config.base[452]DONST=YES
++++ config.base[453][[ YES = \Y\E\S ]]
++++ config.base[453]export 'FNTSFA=        '
++++ config.base[453]FNTSFA='        '
++++ config.base[456]export nst_anl=.true.
++++ config.base[456]nst_anl=.true.
++++ config.base[459]export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[459]INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[462]export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[462]INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[463]export INCVARS_EFOLD=5
++++ config.base[463]INCVARS_EFOLD=5
++++ config.base[468]export netcdf_diag=.true.
++++ config.base[468]netcdf_diag=.true.
++++ config.base[469]export binary_diag=.false.
++++ config.base[469]binary_diag=.false.
++++ config.base[472]export DO_CA=YES
++++ config.base[472]DO_CA=YES
++++ config.base[475]export DO_METP=YES
++++ config.base[475]DO_METP=YES
++++ config.base[476]export DO_FIT2OBS=YES
++++ config.base[476]DO_FIT2OBS=YES
++++ config.base[479]export FHMAX_FITS=132
++++ config.base[479]FHMAX_FITS=132
++++ config.base[480][[ 132 -gt 120 ]]
++++ config.base[481]export FHMAX_FITS=120
++++ config.base[481]FHMAX_FITS=120
++++ config.base[486]export DO_FETCH_HPSS=NO
++++ config.base[486]DO_FETCH_HPSS=NO
++++ config.base[487]export DO_FETCH_LOCAL=NO
++++ config.base[487]DO_FETCH_LOCAL=NO
++++ config.base[490]export DO_ARCHCOM=NO
++++ config.base[490]DO_ARCHCOM=NO
++++ config.base[491]export ARCHCOM_TO=globus_hpss
++++ config.base[491]ARCHCOM_TO=globus_hpss
++++ config.base[494]export CLIENT_GLOBUS_UUID=869912fe-f6de-46c0-af10-b22efd84a022
++++ config.base[494]CLIENT_GLOBUS_UUID=869912fe-f6de-46c0-af10-b22efd84a022
++++ config.base[497][[ NO = \Y\E\S ]]
++++ config.base[506][[ ORION == \U\R\S\A ]]
++++ config.base[506][[ ORION == \G\A\E\A\C\6 ]]
++++ config.base[506][[ ORION == \O\R\I\O\N ]]
++++ config.base[507]export DO_METP=NO
++++ config.base[507]DO_METP=NO
++++ config.base[511]export OFFSET_START_HOUR=0
++++ config.base[511]OFFSET_START_HOUR=0
++++ config.base[514]export NUM_SND_COLLECTIVES=9
++++ config.base[514]NUM_SND_COLLECTIVES=9
++++ config.base[516]echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[106]true
+++ jjob_header.sh[107]export err=0
+++ jjob_header.sh[107]err=0
+++ jjob_header.sh[108][[ 0 -ne 0 ]]
+++ jjob_header.sh[105]for config in "${configs[@]:-''}"
+++ jjob_header.sh[106]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/config.wave
++++ config.wave[6]echo 'BEGIN: config.wave'
+BEGIN: config.wave
++++ config.wave[13]export RUNRSTwave=gdas
++++ config.wave[13]RUNRSTwave=gdas
++++ config.wave[16]export MESH_WAV=mesh.uglo_100km.nc
++++ config.wave[16]MESH_WAV=mesh.uglo_100km.nc
++++ config.wave[19]case "${waveGRD}" in
++++ config.wave[64]export 'waveinterpGRD=at_10m ep_10m wc_10m glo_30m aoc_9km gnh_10m gsh_15m'
++++ config.wave[64]waveinterpGRD='at_10m ep_10m wc_10m glo_30m aoc_9km gnh_10m gsh_15m'
++++ config.wave[65]export wavepostGRD=
++++ config.wave[65]wavepostGRD=
++++ config.wave[66]export waveuoutpGRD=uglo_100km
++++ config.wave[66]waveuoutpGRD=uglo_100km
++++ config.wave[75]export WAVEWND_DID=
++++ config.wave[75]WAVEWND_DID=
++++ config.wave[76]export WAVEWND_FID=
++++ config.wave[76]WAVEWND_FID=
++++ config.wave[79][[ gfs == \g\f\s ]]
++++ config.wave[80]export FHMAX_WAV=120
++++ config.wave[80]FHMAX_WAV=120
++++ config.wave[82]export WAVHINDH=0
++++ config.wave[82]WAVHINDH=0
++++ config.wave[83]export FHMAX_WAV_IBP=180
++++ config.wave[83]FHMAX_WAV_IBP=180
++++ config.wave[84]((  FHMAX_WAV < FHMAX_WAV_IBP  ))
++++ config.wave[84]export FHMAX_WAV_IBP=120
++++ config.wave[84]FHMAX_WAV_IBP=120
++++ config.wave[87]export DTFLD_WAV=3600
++++ config.wave[87]DTFLD_WAV=3600
++++ config.wave[88]export DTPNT_WAV=3600
++++ config.wave[88]DTPNT_WAV=3600
++++ config.wave[89]export FHINCP_WAV=1
++++ config.wave[89]FHINCP_WAV=1
++++ config.wave[92]export 'OUTPARS_WAV=WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR'
++++ config.wave[92]OUTPARS_WAV='WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR'
++++ config.wave[95][[ gfs == \g\d\a\s ]]
++++ config.wave[99]((  INTERVAL_GFS > 0  ))
++++ config.wave[100]export WAVHCYC=6
++++ config.wave[100]WAVHCYC=6
++++ config.wave[101]export FHMAX_WAV_CUR=192
++++ config.wave[101]FHMAX_WAV_CUR=192
++++ config.wave[109]export RSTTYPE_WAV=T
++++ config.wave[109]RSTTYPE_WAV=T
++++ config.wave[110][[ gfs != gfs ]]
++++ config.wave[115]rst_dt_gfs=43200
++++ config.wave[116][[ 43200 -gt 0 ]]
++++ config.wave[117]export DT_1_RST_WAV=0
++++ config.wave[117]DT_1_RST_WAV=0
++++ config.wave[120]export DT_2_RST_WAV=43200
++++ config.wave[120]DT_2_RST_WAV=43200
++++ config.wave[126]export RSTIOFF_WAV=0
++++ config.wave[126]RSTIOFF_WAV=0
++++ config.wave[131]export RUNMEM=-1
++++ config.wave[131]RUNMEM=-1
++++ config.wave[134]((  RUNMEM == -1  ))
++++ config.wave[136]export waveMEMB=
++++ config.wave[136]waveMEMB=
++++ config.wave[143]export WW3ATMINP=CPL
++++ config.wave[143]WW3ATMINP=CPL
++++ config.wave[144][[ YES == \Y\E\S ]]
++++ config.wave[145]export WW3ICEINP=CPL
++++ config.wave[145]WW3ICEINP=CPL
++++ config.wave[146]export WAVEICE_FID=
++++ config.wave[146]WAVEICE_FID=
++++ config.wave[152][[ YES == \Y\E\S ]]
++++ config.wave[153]export WW3CURINP=CPL
++++ config.wave[153]WW3CURINP=CPL
++++ config.wave[154]export WAVECUR_FID=
++++ config.wave[154]WAVECUR_FID=
++++ config.wave[161]export WW3ATMIENS=F
++++ config.wave[161]WW3ATMIENS=F
++++ config.wave[162]export WW3ICEIENS=F
++++ config.wave[162]WW3ICEIENS=F
++++ config.wave[163]export WW3CURIENS=F
++++ config.wave[163]WW3CURIENS=F
++++ config.wave[165]export GOFILETYPE=1
++++ config.wave[165]GOFILETYPE=1
++++ config.wave[166]export POFILETYPE=1
++++ config.wave[166]POFILETYPE=1
++++ config.wave[170]export FUNIPNT=T
++++ config.wave[170]FUNIPNT=T
++++ config.wave[172]export IOSRV=1
++++ config.wave[172]IOSRV=1
++++ config.wave[174]export FPNTPROC=T
++++ config.wave[174]FPNTPROC=T
++++ config.wave[176]export FGRDPROC=F
++++ config.wave[176]FGRDPROC=F
++++ config.wave[178]export FLAGMASKCOMP=F
++++ config.wave[178]FLAGMASKCOMP=F
++++ config.wave[180]export FLAGMASKOUT=F
++++ config.wave[180]FLAGMASKOUT=F
++++ config.wave[182]echo 'END: config.wave'
+END: config.wave
+++ jjob_header.sh[106]true
+++ jjob_header.sh[107]export err=0
+++ jjob_header.sh[107]err=0
+++ jjob_header.sh[108][[ 0 -ne 0 ]]
+++ jjob_header.sh[105]for config in "${configs[@]:-''}"
+++ jjob_header.sh[106]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/config.waveinit
++++ config.waveinit[6]echo 'BEGIN: config.waveinit'
+BEGIN: config.waveinit
++++ config.waveinit[9]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/config.resources waveinit
+++++ config.resources[10]((  1 != 1  ))
+++++ config.resources[34]step=waveinit
+++++ config.resources[36]echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]case ${machine} in
+++++ config.resources[61]max_tasks_per_node=40
+++++ config.resources[62]mem_node_max=180GB
+++++ config.resources[100]export max_tasks_per_node
+++++ config.resources[102]case ${step} in
+++++ config.resources[136]walltime=00:10:00
+++++ config.resources[137]ntasks=12
+++++ config.resources[138]threads_per_task=1
+++++ config.resources[139]tasks_per_node=40
+++++ config.resources[140]NTASKS=12
+++++ config.resources[141]memory=4GB
+++++ config.resources[1412][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/config.resources.ORION ]]
+++++ config.resources[1413]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/config.resources.ORION
++++++ config.resources.ORION[6]case ${step} in
+++++ config.resources[1417]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1418]run_resource_var=threads_per_task_gfs
+++++ config.resources[1419][[ -n '' ]]
+++++ config.resources[1421][[ -n 0 ]]
+++++ config.resources[1422]export threads_per_task
+++++ config.resources[1417]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1418]run_resource_var=ntasks_gfs
+++++ config.resources[1419][[ -n '' ]]
+++++ config.resources[1421][[ -n 0 ]]
+++++ config.resources[1422]export ntasks
+++++ config.resources[1417]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1418]run_resource_var=tasks_per_node_gfs
+++++ config.resources[1419][[ -n '' ]]
+++++ config.resources[1421][[ -n 0 ]]
+++++ config.resources[1422]export tasks_per_node
+++++ config.resources[1417]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1418]run_resource_var=NTASKS_gfs
+++++ config.resources[1419][[ -n '' ]]
+++++ config.resources[1421][[ -n 0 ]]
+++++ config.resources[1422]export NTASKS
+++++ config.resources[1417]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1418]run_resource_var=memory_gfs
+++++ config.resources[1419][[ -n '' ]]
+++++ config.resources[1421][[ -n 0 ]]
+++++ config.resources[1422]export memory
+++++ config.resources[1417]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1418]run_resource_var=walltime_gfs
+++++ config.resources[1419][[ -n '' ]]
+++++ config.resources[1421][[ -n 0 ]]
+++++ config.resources[1422]export walltime
+++++ config.resources[1426]echo 'END: config.resources'
+END: config.resources
++++ config.waveinit[12]export sigMODE=init
++++ config.waveinit[12]sigMODE=init
++++ config.waveinit[14]echo 'END: config.waveinit'
+END: config.waveinit
+++ jjob_header.sh[106]true
+++ jjob_header.sh[107]export err=0
+++ jjob_header.sh[107]err=0
+++ jjob_header.sh[108][[ 0 -ne 0 ]]
+++ jjob_header.sh[117]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/env/ORION.env waveinit
++++ ORION.env[3][[ 1 -ne 1 ]]
++++ ORION.env[10]step=waveinit
++++ ORION.env[12]export 'launcher=srun -l --export=ALL --hint=nomultithread'
++++ ORION.env[12]launcher='srun -l --export=ALL --hint=nomultithread'
++++ ORION.env[13]export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ ORION.env[13]mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ ORION.env[16]export MPI_BUFS_PER_PROC=2048
++++ ORION.env[16]MPI_BUFS_PER_PROC=2048
++++ ORION.env[17]export MPI_BUFS_PER_HOST=2048
++++ ORION.env[17]MPI_BUFS_PER_HOST=2048
++++ ORION.env[18]export MPI_GROUP_MAX=256
++++ ORION.env[18]MPI_GROUP_MAX=256
++++ ORION.env[19]export MPI_MEMMAP_OFF=1
++++ ORION.env[19]MPI_MEMMAP_OFF=1
++++ ORION.env[20]export MP_STDOUTMODE=ORDERED
++++ ORION.env[20]MP_STDOUTMODE=ORDERED
++++ ORION.env[21]export KMP_AFFINITY=scatter
++++ ORION.env[21]KMP_AFFINITY=scatter
++++ ORION.env[22]export OMP_STACKSIZE=2048000
++++ ORION.env[22]OMP_STACKSIZE=2048000
++++ ORION.env[23]export NTHSTACK=1024000000
++++ ORION.env[23]NTHSTACK=1024000000
++++ ORION.env[26]ulimit -s unlimited
++++ ORION.env[27]ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 754730
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 4194304
+open files                          (-n) 131072
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) unlimited
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 754730
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
++++ ORION.env[31][[ -n 12 ]]
++++ ORION.env[31][[ -n 40 ]]
++++ ORION.env[31][[ -n 40 ]]
++++ ORION.env[32]max_threads_per_task=1
++++ ORION.env[33]NTHREADSmax=1
++++ ORION.env[34]NTHREADS1=1
++++ ORION.env[35][[ 1 -gt 1 ]]
++++ ORION.env[38][[ 1 -gt 1 ]]
++++ ORION.env[41]APRUN_default='srun -l --export=ALL --hint=nomultithread -n 12'
++++ ORION.env[47][[ waveinit = \p\r\e\p ]]
++++ ORION.env[47][[ waveinit = \p\r\e\p\b\u\f\r ]]
++++ ORION.env[54][[ waveinit = \p\r\e\p\_\e\m\i\s\s\i\o\n\s ]]
++++ ORION.env[58][[ waveinit = \w\a\v\e\i\n\i\t ]]
++++ ORION.env[61]export USE_CFP=YES
++++ ORION.env[61]USE_CFP=YES
++++ ORION.env[62][[ waveinit = \w\a\v\e\p\r\e\p ]]
++++ ORION.env[63]export 'wavempexec=srun -l --export=ALL --hint=nomultithread'
++++ ORION.env[63]wavempexec='srun -l --export=ALL --hint=nomultithread'
++++ ORION.env[64]export 'wave_mpmd=--multi-prog --output=mpmd.%j.%t.out'
++++ ORION.env[64]wave_mpmd='--multi-prog --output=mpmd.%j.%t.out'
+++ jjob_header.sh[117]true
+++ jjob_header.sh[118]export err=0
+++ jjob_header.sh[118]err=0
+++ jjob_header.sh[119][[ 0 -ne 0 ]]
++ JGLOBAL_WAVE_INIT[5]export MP_PULSE=0
++ JGLOBAL_WAVE_INIT[5]MP_PULSE=0
++ JGLOBAL_WAVE_INIT[8]YMD=20211220
++ JGLOBAL_WAVE_INIT[8]HH=18
++ JGLOBAL_WAVE_INIT[8]declare_from_tmpl -rx COMOUT_WAVE_PREP:COM_WAVE_PREP_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMOUT_WAVE_PREP=/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.20211220/18//model/wave/prep
++ JGLOBAL_WAVE_INIT[11][[ ! -d /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.20211220/18//model/wave/prep ]]
++ JGLOBAL_WAVE_INIT[14]export 'wavempexec=srun -l --export=ALL --hint=nomultithread'
++ JGLOBAL_WAVE_INIT[14]wavempexec='srun -l --export=ALL --hint=nomultithread'
++ JGLOBAL_WAVE_INIT[15]export 'wave_mpmd=--multi-prog --output=mpmd.%j.%t.out'
++ JGLOBAL_WAVE_INIT[15]wave_mpmd='--multi-prog --output=mpmd.%j.%t.out'
++ JGLOBAL_WAVE_INIT[18]/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/scripts/exgfs_wave_init.sh
++ bash[8]'[' -z '' ']'
++ bash[9]case "$-" in
++ bash[12]__lmod_vx=x
++ bash[16]'[' -n x ']'
++ bash[16]set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for this output (/apps/other/lmod/lmod/init/bash)
+Shell debugging restarted
++ bash[224]unset __lmod_vx
++ exgfs_wave_init.sh[23]cat
+
+Preparing input files :
+-----------------------
++ exgfs_wave_init.sh[34]declare -A grdALL
++ exgfs_wave_init.sh[35]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[37]grdALL["${grd}"]=uglo_100km
++ exgfs_wave_init.sh[35]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[37]grdALL["${grd}"]=uglo_100km
++ exgfs_wave_init.sh[35]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[37]grdALL["${grd}"]=at_10m
++ exgfs_wave_init.sh[35]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[37]grdALL["${grd}"]=ep_10m
++ exgfs_wave_init.sh[35]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[37]grdALL["${grd}"]=wc_10m
++ exgfs_wave_init.sh[35]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[37]grdALL["${grd}"]=glo_30m
++ exgfs_wave_init.sh[35]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[37]grdALL["${grd}"]=aoc_9km
++ exgfs_wave_init.sh[35]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[37]grdALL["${grd}"]=gnh_10m
++ exgfs_wave_init.sh[35]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[37]grdALL["${grd}"]=gsh_15m
++ exgfs_wave_init.sh[40]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[41]echo 'INFO: Setting up to generate mod_def file for ep_10m'
+INFO: Setting up to generate mod_def file for ep_10m
++ exgfs_wave_init.sh[42][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.ep_10m ]]
++ exgfs_wave_init.sh[43]cpreq /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.ep_10m ww3_grid.inp.ep_10m
++ cpreq[3]cp /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.ep_10m ww3_grid.inp.ep_10m
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[44]echo 'INFO: ww3_grid.inp.ep_10m copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.ep_10m).'
+INFO: ww3_grid.inp.ep_10m copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.ep_10m).
++ exgfs_wave_init.sh[50][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ep_10m.msh ]]
++ exgfs_wave_init.sh[55]echo '/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh ep_10m'
++ exgfs_wave_init.sh[40]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[41]echo 'INFO: Setting up to generate mod_def file for aoc_9km'
+INFO: Setting up to generate mod_def file for aoc_9km
++ exgfs_wave_init.sh[42][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.aoc_9km ]]
++ exgfs_wave_init.sh[43]cpreq /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.aoc_9km ww3_grid.inp.aoc_9km
++ cpreq[3]cp /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.aoc_9km ww3_grid.inp.aoc_9km
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[44]echo 'INFO: ww3_grid.inp.aoc_9km copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.aoc_9km).'
+INFO: ww3_grid.inp.aoc_9km copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.aoc_9km).
++ exgfs_wave_init.sh[50][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/aoc_9km.msh ]]
++ exgfs_wave_init.sh[55]echo '/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh aoc_9km'
++ exgfs_wave_init.sh[40]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[41]echo 'INFO: Setting up to generate mod_def file for gsh_15m'
+INFO: Setting up to generate mod_def file for gsh_15m
++ exgfs_wave_init.sh[42][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.gsh_15m ]]
++ exgfs_wave_init.sh[43]cpreq /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.gsh_15m ww3_grid.inp.gsh_15m
++ cpreq[3]cp /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.gsh_15m ww3_grid.inp.gsh_15m
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[44]echo 'INFO: ww3_grid.inp.gsh_15m copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.gsh_15m).'
+INFO: ww3_grid.inp.gsh_15m copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.gsh_15m).
++ exgfs_wave_init.sh[50][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/gsh_15m.msh ]]
++ exgfs_wave_init.sh[55]echo '/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh gsh_15m'
++ exgfs_wave_init.sh[40]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[41]echo 'INFO: Setting up to generate mod_def file for uglo_100km'
+INFO: Setting up to generate mod_def file for uglo_100km
++ exgfs_wave_init.sh[42][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.uglo_100km ]]
++ exgfs_wave_init.sh[43]cpreq /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.uglo_100km ww3_grid.inp.uglo_100km
++ cpreq[3]cp /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.uglo_100km ww3_grid.inp.uglo_100km
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[44]echo 'INFO: ww3_grid.inp.uglo_100km copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.uglo_100km).'
+INFO: ww3_grid.inp.uglo_100km copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.uglo_100km).
++ exgfs_wave_init.sh[50][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/uglo_100km.msh ]]
++ exgfs_wave_init.sh[51]cpreq /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/uglo_100km.msh uglo_100km.msh
++ cpreq[3]cp /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/uglo_100km.msh uglo_100km.msh
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[55]echo '/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh uglo_100km'
++ exgfs_wave_init.sh[40]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[41]echo 'INFO: Setting up to generate mod_def file for wc_10m'
+INFO: Setting up to generate mod_def file for wc_10m
++ exgfs_wave_init.sh[42][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.wc_10m ]]
++ exgfs_wave_init.sh[43]cpreq /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.wc_10m ww3_grid.inp.wc_10m
++ cpreq[3]cp /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.wc_10m ww3_grid.inp.wc_10m
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[44]echo 'INFO: ww3_grid.inp.wc_10m copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.wc_10m).'
+INFO: ww3_grid.inp.wc_10m copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.wc_10m).
++ exgfs_wave_init.sh[50][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/wc_10m.msh ]]
++ exgfs_wave_init.sh[55]echo '/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh wc_10m'
++ exgfs_wave_init.sh[40]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[41]echo 'INFO: Setting up to generate mod_def file for at_10m'
+INFO: Setting up to generate mod_def file for at_10m
++ exgfs_wave_init.sh[42][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.at_10m ]]
++ exgfs_wave_init.sh[43]cpreq /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.at_10m ww3_grid.inp.at_10m
++ cpreq[3]cp /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.at_10m ww3_grid.inp.at_10m
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[44]echo 'INFO: ww3_grid.inp.at_10m copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.at_10m).'
+INFO: ww3_grid.inp.at_10m copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.at_10m).
++ exgfs_wave_init.sh[50][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/at_10m.msh ]]
++ exgfs_wave_init.sh[55]echo '/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh at_10m'
++ exgfs_wave_init.sh[40]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[41]echo 'INFO: Setting up to generate mod_def file for gnh_10m'
+INFO: Setting up to generate mod_def file for gnh_10m
++ exgfs_wave_init.sh[42][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.gnh_10m ]]
++ exgfs_wave_init.sh[43]cpreq /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.gnh_10m ww3_grid.inp.gnh_10m
++ cpreq[3]cp /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.gnh_10m ww3_grid.inp.gnh_10m
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[44]echo 'INFO: ww3_grid.inp.gnh_10m copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.gnh_10m).'
+INFO: ww3_grid.inp.gnh_10m copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.gnh_10m).
++ exgfs_wave_init.sh[50][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/gnh_10m.msh ]]
++ exgfs_wave_init.sh[55]echo '/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh gnh_10m'
++ exgfs_wave_init.sh[40]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[41]echo 'INFO: Setting up to generate mod_def file for glo_30m'
+INFO: Setting up to generate mod_def file for glo_30m
++ exgfs_wave_init.sh[42][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.glo_30m ]]
++ exgfs_wave_init.sh[43]cpreq /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.glo_30m ww3_grid.inp.glo_30m
++ cpreq[3]cp /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.glo_30m ww3_grid.inp.glo_30m
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[44]echo 'INFO: ww3_grid.inp.glo_30m copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.glo_30m).'
+INFO: ww3_grid.inp.glo_30m copied (/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/ww3_grid.inp.glo_30m).
++ exgfs_wave_init.sh[50][[ -f /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/fix/wave/glo_30m.msh ]]
++ exgfs_wave_init.sh[55]echo '/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh glo_30m'
++ exgfs_wave_init.sh[59]/work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/run_mpmd.sh /work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035/mpmd_script
++ bash[8]'[' -z '' ']'
++ bash[9]case "$-" in
++ bash[12]__lmod_vx=x
++ bash[16]'[' -n x ']'
++ bash[16]set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for this output (/apps/other/lmod/lmod/init/bash)
+Shell debugging restarted
++ bash[224]unset __lmod_vx
++ run_mpmd.sh[31]source /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/preamble.sh
+++ preamble.sh[20]set +x
+Begin run_mpmd.sh at 23:17:42
++ run_mpmd.sh[33]cmdfile=/work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035/mpmd_script
++ run_mpmd.sh[36][[ YES != \Y\E\S ]]
++ run_mpmd.sh[46]export OMP_NUM_THREADS=1
++ run_mpmd.sh[46]OMP_NUM_THREADS=1
+++ run_mpmd.sh[49]wc -l
++ run_mpmd.sh[49]nprocs=8
++ run_mpmd.sh[52]mpmd_cmdfile=/work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035/mpmd_cmdfile
++ run_mpmd.sh[53][[ -s /work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035/mpmd_cmdfile ]]
++ run_mpmd.sh[55]cat
+  INFO: Executing MPMD job, STDOUT redirected for each process separately
+  INFO: On failure, logs for each job will be available in /work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035/mpmd.proc_num.out
+  INFO: The proc_num corresponds to the line in '/work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035/mpmd_cmdfile'
++ run_mpmd.sh[61][[ srun -l --export=ALL --hint=nomultithread =~ ^srun.* ]]
++ run_mpmd.sh[65]nm=0
++ run_mpmd.sh[67]IFS=
++ run_mpmd.sh[67]read -r line
++ run_mpmd.sh[68]echo '0 /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh ep_10m'
++ run_mpmd.sh[69](( nm=nm+1 ))
++ run_mpmd.sh[67]IFS=
++ run_mpmd.sh[67]read -r line
++ run_mpmd.sh[68]echo '1 /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh aoc_9km'
++ run_mpmd.sh[69](( nm=nm+1 ))
++ run_mpmd.sh[67]IFS=
++ run_mpmd.sh[67]read -r line
++ run_mpmd.sh[68]echo '2 /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh gsh_15m'
++ run_mpmd.sh[69](( nm=nm+1 ))
++ run_mpmd.sh[67]IFS=
++ run_mpmd.sh[67]read -r line
++ run_mpmd.sh[68]echo '3 /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh uglo_100km'
++ run_mpmd.sh[69](( nm=nm+1 ))
++ run_mpmd.sh[67]IFS=
++ run_mpmd.sh[67]read -r line
++ run_mpmd.sh[68]echo '4 /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh wc_10m'
++ run_mpmd.sh[69](( nm=nm+1 ))
++ run_mpmd.sh[67]IFS=
++ run_mpmd.sh[67]read -r line
++ run_mpmd.sh[68]echo '5 /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh at_10m'
++ run_mpmd.sh[69](( nm=nm+1 ))
++ run_mpmd.sh[67]IFS=
++ run_mpmd.sh[67]read -r line
++ run_mpmd.sh[68]echo '6 /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh gnh_10m'
++ run_mpmd.sh[69](( nm=nm+1 ))
++ run_mpmd.sh[67]IFS=
++ run_mpmd.sh[67]read -r line
++ run_mpmd.sh[68]echo '7 /work2/noaa/global/role-global/GFS_CI_CD/ORION/BUILDS/GITLAB/pr_cases_4210_db43b5a4_5509/global-workflow/ush/wave_grid_moddef.sh glo_30m'
++ run_mpmd.sh[69](( nm=nm+1 ))
++ run_mpmd.sh[67]IFS=
++ run_mpmd.sh[67]read -r line
++ run_mpmd.sh[72]set +e
++ run_mpmd.sh[74]srun -l --export=ALL --hint=nomultithread --multi-prog --output=mpmd.%j.%t.out -n 8 /work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035/mpmd_cmdfile
+srun: error: JobId=21249880 failed to distribute tasks (bind_type:threads,mask_cpu,one_thread) - this should never happen
+srun: error: Task launch for StepId=21249880.0 failed on node orion-24-42: Unable to layout tasks on given cpus
+srun: error: Application launch failed: Unable to layout tasks on given cpus
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: orion-24-43: task 7: Killed
+srun: Terminating StepId=21249880.0
++ run_mpmd.sh[75]err=193
++ run_mpmd.sh[76]set_strict
++ preamble.sh[35][[ YES == \Y\E\S ]]
++ preamble.sh[37]set -eu
++ run_mpmd.sh[103][[ 193 -eq 0 ]]
++ run_mpmd.sh[113]exit 193
++ run_mpmd.sh[1]postamble run_mpmd.sh 1762211862 193
++ preamble.sh[62]set +x
+End run_mpmd.sh at 23:17:43 with error code 193 (time elapsed: 00:00:01)
++ exgfs_wave_init.sh[60]export err=193
++ exgfs_wave_init.sh[60]err=193
++ exgfs_wave_init.sh[61][[ 193 -ne 0 ]]
++ exgfs_wave_init.sh[62]err_exit 'run_mpmd.sh failed!'
++ environment[0]set +eux
+
+    -------------------------------------------------------------
+    -- FATAL ERROR: run_mpmd.sh failed! RETURN CODE 193
+    -- ABNORMAL EXIT at Mon Nov  3 17:17:43 CST 2025 on orion-24-42
+    -------------------------------------------------------------
+    
+
+Currently Loaded Modules:
+  1) intel-oneapi-compilers/2024.2.1  33) bacio/2.4.1
+  2) stack-oneapi/2024.2.1            34) crtm-fix/2.4.0.1_emc
+  3) intel-oneapi-runtime/2024.2.1    35) git-lfs/3.1.2
+  4) intel-oneapi-mpi/2021.13.1       36) crtm/2.4.0.1
+  5) stack-intel-oneapi-mpi/2021.13   37) g2/3.5.1
+  6) glibc/2.34                       38) g2tmpl/1.13.0
+  7) nghttp2/1.63.0                   39) ip/5.1.0
+  8) openssl/3.0.1                    40) sp/2.5.0
+  9) curl/8.10.1                      41) w3emc/2.10.0
+ 10) cmake/3.27.9                     42) gftl/1.14.0
+ 11) libjpeg/2.1.0                    43) gftl-shared/1.9.0
+ 12) jasper/2.0.32                    44) fargparse/1.8.0
+ 13) libpng/1.6.37                    45) yafyaml/1.4.0
+ 14) snappy/1.2.1                     46) pflogger/1.15.0
+ 15) c-blosc/1.21.5                   47) udunits/2.2.28
+ 16) netcdf-c/4.9.2                   48) mapl/2.53.4-esmf-8.8.0
+ 17) netcdf-fortran/4.6.1             49) scotch/7.0.4
+ 18) parallel-netcdf/1.12.3           50) ufs_common
+ 19) parallelio/2.6.2                 51) zlib/1.2.13
+ 20) gettext/0.21                     52) hdf5/1.14.3
+ 21) sqlite/3.46.0                    53) nccmp/1.9.0.1
+ 22) util-linux-uuid/2.40.2           54) bzip2/1.0.8
+ 23) python/3.11.7                    55) libiconv/1.16
+ 24) python-venv/1.0                  56) pigz/2.7
+ 25) py-mpi4py/4.0.1                  57) xz/5.2.7
+ 26) openblas/0.3.24                  58) zstd/1.5.2
+ 27) py-numpy/1.26.4                  59) tar/1.34
+ 28) py-pip/23.1.2                    60) ufs_orion.intel
+ 29) libyaml/0.2.5                    61) prod_util/2.1.1
+ 30) py-pyyaml/6.0.2                  62) g2c/2.1.0
+ 31) esmf/8.8.0                       63) wgrib2/3.6.0
+ 32) fms/2024.02
+
+ 
+
+
+run_mpmd.sh failed! RETURN CODE 193
+/work2/noaa/global/role-global/stmp/ORION/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_db43b5a4-5509/gfs.2021122018/waveinit.253035
+total 58894
+-rw-r----- 1 role-global noaa-hpc        0 Nov  3 17:17 ncepdate
+-rw-r----- 1 role-global noaa-hpc  2902346 Nov  3 17:17 ww3_grid.inp.ep_10m
+-rw-r----- 1 role-global noaa-hpc   673220 Nov  3 17:17 ww3_grid.inp.wc_10m
+-rw-r----- 1 role-global noaa-hpc     6338 Nov  3 17:17 ww3_grid.inp.uglo_100km
+-rw-r----- 1 role-global noaa-hpc  7118530 Nov  3 17:17 ww3_grid.inp.gsh_15m
+-rw-r----- 1 role-global noaa-hpc 49254890 Nov  3 17:17 ww3_grid.inp.aoc_9km
+-rw-r----- 1 role-global noaa-hpc  5680544 Nov  3 17:17 uglo_100km.msh
+-rw-r----- 1 role-global noaa-hpc 14491633 Nov  3 17:17 ww3_grid.inp.gnh_10m
+-rw-r----- 1 role-global noaa-hpc  4613480 Nov  3 17:17 ww3_grid.inp.glo_30m
+-rw-r----- 1 role-global noaa-hpc  1790913 Nov  3 17:17 ww3_grid.inp.at_10m
+-rw-r----- 1 role-global noaa-hpc     1096 Nov  3 17:17 mpmd_script
+-rw-r----- 1 role-global noaa-hpc     1112 Nov  3 17:17 mpmd_cmdfile
+-rw-r----- 1 role-global noaa-hpc        0 Nov  3 17:17 mpmd.21249880.7.out
+cat: OUTPUT.253423: No such file or directory
+slurmstepd: error: *** JOB 21249880 ON orion-24-42 CANCELLED AT 2025-11-03T17:17:44 ***
