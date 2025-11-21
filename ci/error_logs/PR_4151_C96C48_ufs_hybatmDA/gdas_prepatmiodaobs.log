@@ -1,0 +1,1834 @@
+Loading modules quietly...
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) lmod                             50) ectrans/1.5.0
+  2) intel-oneapi-compilers/2024.2.1  51) qhull/2020.2
+  3) stack-oneapi/2024.2.1            52) atlas/0.40.0
+  4) intel-oneapi-mpi/2021.13.1       53) sp/2.5.0
+  5) stack-intel-oneapi-mpi/2021.13   54) gsl-lite/0.37.0
+  6) intel-oneapi-mkl/2024.2.1        55) libjpeg/2.1.0
+  7) glibc/2.34                       56) krb5/1.21.1-1
+  8) intel-oneapi-runtime/2024.2.1    57) libtirpc/1.3.3
+  9) sqlite/3.46.0                    58) hdf/4.2.15
+ 10) util-linux-uuid/2.40.2           59) jedi-cmake/1.4.0
+ 11) python/3.11.7                    60) libpng/1.6.37
+ 12) stack-python/3.11.7              61) libxt/1.3.0
+ 13) pigz/2.8                         62) libxmu/1.2.1
+ 14) zstd/1.5.6                       63) libxpm/3.5.17
+ 15) tar/1.34                         64) libxaw/1.0.16
+ 16) gettext/0.22.5                   65) udunits/2.2.28
+ 17) nghttp2/1.63.0                   66) ncview/2.1.9
+ 18) curl/8.10.1                      67) netcdf-cxx4/4.3.1
+ 19) zlib/1.2.13                      68) json/3.11.3
+ 20) git/2.43.5                       69) rocoto/1.3.7
+ 21) hdf5/1.14.3                      70) bacio/2.4.1
+ 22) parallel-netcdf/1.12.3           71) w3emc/2.10.0
+ 23) snappy/1.2.1                     72) prod_util/2.1.1
+ 24) c-blosc/1.21.5                   73) jasper/2.0.32
+ 25) netcdf-c/4.9.2                   74) g2/3.5.1
+ 26) nccmp/1.9.1.0                    75) ip/5.1.0
+ 27) netcdf-fortran/4.6.1             76) grib-util/1.4.0
+ 28) antlr/2.7.7                      77) py-markupsafe/2.1.3
+ 29) gsl/2.8                          78) py-jinja2/3.1.4
+ 30) nco/5.2.4                        79) py-certifi/2023.7.22
+ 31) parallelio/2.6.2                 80) py-cftime/1.0.3.4
+ 32) wget/1.21.1                      81) py-netcdf4/1.7.1.post2
+ 33) boost/1.84.0                     82) py-pybind11/2.13.5
+ 34) python-venv/1.0                  83) py-setuptools/69.2.0
+ 35) py-numpy/1.26.4                  84) py-pycodestyle/2.11.0
+ 36) bufr/12.1.0                      85) libyaml/0.2.5
+ 37) git-lfs/3.5.1                    86) py-pyyaml/6.0.2
+ 38) cmake/3.27.9                     87) py-scipy/1.14.1
+ 39) ecbuild/3.7.2                    88) py-packaging/24.1
+ 40) openjpeg/2.3.1                   89) py-six/1.16.0
+ 41) eccodes/2.33.0                   90) py-python-dateutil/2.8.2
+ 42) eigen/3.4.0                      91) py-pytz/2023.3
+ 43) openblas/0.3.27                  92) py-tzdata/2023.3
+ 44) eckit/1.28.3                     93) py-pandas/2.2.3
+ 45) fckit/0.13.2                     94) py-xarray/2024.7.0
+ 46) fiat/1.4.1                       95) py-f90nml/1.4.3
+ 47) fms/2024.02                      96) py-pip/23.1.2
+ 48) py-mpi4py/4.0.1                  97) py-click/8.1.7
+ 49) esmf/8.8.0                       98) GDAS/ursa.intel
+
+ 
+
+Package         Version
+--------------- -----------
+certifi         2023.7.22
+cftime          1.0.3.4
+click           8.1.7
+esmpy           8.8.0
+f90nml          1.4.3
+Jinja2          3.1.4
+MarkupSafe      2.1.3
+mpi4py          4.0.1
+netCDF4         1.7.1.post2
+numpy           1.26.4
+packaging       24.1
+pandas          2.2.3
+pip             23.1.2
+pybind11        2.13.5
+pycodestyle     2.11.0
+python-dateutil 2.8.2
+pytz            2023.3
+PyYAML          6.0.2
+scipy           1.14.1
+setuptools      69.2.0
+six             1.16.0
+tzdata          2023.3
+xarray          2024.7.0
+
+[notice] A new release of pip is available: 23.1.2 -> 25.3
+[notice] To update, run: python3 -m pip install --upgrade pip
+Begin /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/jobs/JGLOBAL_ATM_PREP_IODA_OBS at 00:09:30
+++ jjob_header.sh[46]OPTIND=1
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[50]env_job=prepatmiodaobs
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[49]read -ra configs
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[61]shift 4
+++ jjob_header.sh[63][[ -z prepatmiodaobs ]]
+++ jjob_header.sh[71]export DATA=/scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020
+++ jjob_header.sh[71]DATA=/scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020
+++ jjob_header.sh[72][[ YES == \Y\E\S ]]
+++ jjob_header.sh[73]rm -rf /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020
+++ jjob_header.sh[75]mkdir -p /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020
+++ jjob_header.sh[76]cd /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020
+++ jjob_header.sh[85]export pid=1258572
+++ jjob_header.sh[85]pid=1258572
+++ jjob_header.sh[86]export pgmout=OUTPUT.1258572
+++ jjob_header.sh[86]pgmout=OUTPUT.1258572
+++ jjob_header.sh[87]export pgmerr=errfile
+++ jjob_header.sh[87]pgmerr=errfile
+++ jjob_header.sh[90]export pgm=
+++ jjob_header.sh[90]pgm=
+++ jjob_header.sh[96]export cycle=t06z
+++ jjob_header.sh[96]cycle=t06z
+++ jjob_header.sh[97]setpdy.sh
++ setpdy.sh[20]'[' /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020 == /home/role.glopara ']'
++ setpdy.sh[25][[ ! t06z =~ t??z ]]
++ setpdy.sh[30]case $# in
++ setpdy.sh[31]dates_before_PDY=7
++ setpdy.sh[32]dates_after_PDY=7
++ setpdy.sh[50]COMDATEROOT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT
++ setpdy.sh[53]'[' -z 20240224 ']'
++ setpdy.sh[57]sed 's/[0-9]\{8\}/20240224/' /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/date/t06z
+sed: can't read /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/date/t06z: No such file or directory
+++ jjob_header.sh[97]true
+++ jjob_header.sh[98]source ./PDY
+/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/ush/jjob_header.sh: line 98: ./PDY: No such file or directory
+++ jjob_header.sh[98]true
+++ jjob_header.sh[104]export EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_22926afd-5844
+++ jjob_header.sh[104]EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_22926afd-5844
+++ jjob_header.sh[105]for config in "${configs[@]:-''}"
+++ jjob_header.sh[106]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_22926afd-5844/config.base
++++ config.base[6]echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]export machine=URSA
++++ config.base[9]machine=URSA
++++ config.base[12]export RUN_ENVIR=emc
++++ config.base[12]RUN_ENVIR=emc
++++ config.base[15]export ACCOUNT=fv3-cpu
++++ config.base[15]ACCOUNT=fv3-cpu
++++ config.base[16]export QUEUE=batch
++++ config.base[16]QUEUE=batch
++++ config.base[17]export QUEUE_SERVICE=batch
++++ config.base[17]QUEUE_SERVICE=batch
++++ config.base[18]export QUEUE_DTN=batch
++++ config.base[18]QUEUE_DTN=batch
++++ config.base[19]export PARTITION_BATCH=u1-compute
++++ config.base[19]PARTITION_BATCH=u1-compute
++++ config.base[20]export PARTITION_SERVICE=u1-service
++++ config.base[20]PARTITION_SERVICE=u1-service
++++ config.base[21]export PARTITION_DTN=
++++ config.base[21]PARTITION_DTN=
++++ config.base[22]export RESERVATION=
++++ config.base[22]RESERVATION=
++++ config.base[23]export CLUSTERS=
++++ config.base[23]CLUSTERS=
++++ config.base[24]export CLUSTERS_SERVICE=
++++ config.base[24]CLUSTERS_SERVICE=
++++ config.base[25]export CLUSTERS_DTN=
++++ config.base[25]CLUSTERS_DTN=
++++ config.base[28]export HPSS_PROJECT=emc-global
++++ config.base[28]HPSS_PROJECT=emc-global
++++ config.base[31]export HOMEgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow
++++ config.base[31]HOMEgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow
++++ config.base[32]export EXECgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/exec
++++ config.base[32]EXECgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/exec
++++ config.base[33]export FIXgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix
++++ config.base[33]FIXgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix
++++ config.base[34]export PARMgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm
++++ config.base[34]PARMgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm
++++ config.base[35]export SCRgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/scripts
++++ config.base[35]SCRgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/scripts
++++ config.base[36]export USHgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/ush
++++ config.base[36]USHgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/ush
++++ config.base[38]export FIXam=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/am
++++ config.base[38]FIXam=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/am
++++ config.base[39]export FIXaer=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/aer
++++ config.base[39]FIXaer=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/aer
++++ config.base[40]export FIXcpl=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/cpl
++++ config.base[40]FIXcpl=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/cpl
++++ config.base[41]export FIXlut=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/lut
++++ config.base[41]FIXlut=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/lut
++++ config.base[42]export FIXcice=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/cice
++++ config.base[42]FIXcice=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/cice
++++ config.base[43]export FIXmom=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/mom6
++++ config.base[43]FIXmom=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/mom6
++++ config.base[44]export FIXreg2grb2=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/reg2grb2
++++ config.base[44]FIXreg2grb2=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/reg2grb2
++++ config.base[45]export FIXgdas=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/gdas
++++ config.base[45]FIXgdas=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/gdas
++++ config.base[50]export PACKAGEROOT=/scratch3/NCEPDEV/global/role.glopara/nwpara
++++ config.base[50]PACKAGEROOT=/scratch3/NCEPDEV/global/role.glopara/nwpara
++++ config.base[51]export COMROOT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT
++++ config.base[51]COMROOT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT
++++ config.base[52]export COMINsyn=/scratch3/NCEPDEV/global/role.glopara/com/gfs/prod/syndat
++++ config.base[52]COMINsyn=/scratch3/NCEPDEV/global/role.glopara/com/gfs/prod/syndat
++++ config.base[53]export DMPDIR=/scratch3/NCEPDEV/global/role.glopara/dump
++++ config.base[53]DMPDIR=/scratch3/NCEPDEV/global/role.glopara/dump
++++ config.base[57]export COMINecmwf=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ecmwf
++++ config.base[57]COMINecmwf=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ecmwf
++++ config.base[58]export COMINnam=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/nam
++++ config.base[58]COMINnam=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/nam
++++ config.base[59]export COMINukmet=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ukmet
++++ config.base[59]COMINukmet=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ukmet
++++ config.base[62]export HOMEDIR=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[62]HOMEDIR=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[63]export STMP=/scratch4/NCEPDEV/stmp/role.glopara
++++ config.base[63]STMP=/scratch4/NCEPDEV/stmp/role.glopara
++++ config.base[64]export PTMP=/scratch4/NCEPDEV/stmp/role.glopara
++++ config.base[64]PTMP=/scratch4/NCEPDEV/stmp/role.glopara
++++ config.base[65]export NOSCRUB=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[65]NOSCRUB=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[68]export BASE_GIT=/scratch3/NCEPDEV/global/role.glopara/git
++++ config.base[68]BASE_GIT=/scratch3/NCEPDEV/global/role.glopara/git
++++ config.base[71]export BASE_DATA=/scratch3/NCEPDEV/global/role.glopara/data
++++ config.base[71]BASE_DATA=/scratch3/NCEPDEV/global/role.glopara/data
++++ config.base[74]export DO_PREP_SFC=NO
++++ config.base[74]DO_PREP_SFC=NO
++++ config.base[77]export DO_GOES=NO
++++ config.base[77]DO_GOES=NO
++++ config.base[78]export DO_BUFRSND=NO
++++ config.base[78]DO_BUFRSND=NO
++++ config.base[79]export DO_GEMPAK=NO
++++ config.base[79]DO_GEMPAK=NO
++++ config.base[80]export DO_AWIPS=NO
++++ config.base[80]DO_AWIPS=NO
++++ config.base[81]export DO_NPOESS=NO
++++ config.base[81]DO_NPOESS=NO
++++ config.base[82]export DO_TRACKER=YES
++++ config.base[82]DO_TRACKER=YES
++++ config.base[83]export DO_GENESIS=YES
++++ config.base[83]DO_GENESIS=YES
++++ config.base[84]export DO_GENESIS_FSU=NO
++++ config.base[84]DO_GENESIS_FSU=NO
++++ config.base[85]export DO_VERFOZN=YES
++++ config.base[85]DO_VERFOZN=YES
++++ config.base[86]export DO_VERFRAD=YES
++++ config.base[86]DO_VERFRAD=YES
++++ config.base[87]export DO_VMINMON=YES
++++ config.base[87]DO_VMINMON=YES
++++ config.base[88]export DO_ANLSTAT=YES
++++ config.base[88]DO_ANLSTAT=YES
++++ config.base[91]export MODE=cycled
++++ config.base[91]MODE=cycled
++++ config.base[92]export DO_TEST_MODE=NO
++++ config.base[92]DO_TEST_MODE=NO
++++ config.base[101]export FIXgsi=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/gsi
++++ config.base[101]FIXgsi=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/gsi
++++ config.base[102]export HOMEpost=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow
++++ config.base[102]HOMEpost=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow
++++ config.base[103]export HOMEobsproc=/scratch3/NCEPDEV/global/role.glopara/git/obsproc/v
++++ config.base[103]HOMEobsproc=/scratch3/NCEPDEV/global/role.glopara/git/obsproc/v
++++ config.base[106]export NMV=/bin/mv
++++ config.base[106]NMV=/bin/mv
++++ config.base[107]export 'NLN=/bin/ln -sf'
++++ config.base[107]NLN='/bin/ln -sf'
++++ config.base[108]export VERBOSE=YES
++++ config.base[108]VERBOSE=YES
++++ config.base[109]export KEEPDATA=NO
++++ config.base[109]KEEPDATA=NO
++++ config.base[110]export DEBUG_POSTSCRIPT=NO
++++ config.base[110]DEBUG_POSTSCRIPT=NO
++++ config.base[111]export CHGRP_RSTPROD=YES
++++ config.base[111]CHGRP_RSTPROD=YES
++++ config.base[112]export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[112]CHGRP_CMD='chgrp rstprod'
++++ config.base[113]export NCDUMP=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/netcdf-c-4.9.2-idnwcbr/bin/ncdump/bin/ncdump
++++ config.base[113]NCDUMP=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/netcdf-c-4.9.2-idnwcbr/bin/ncdump/bin/ncdump
++++ config.base[114]export NCLEN=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/ush/getncdimlen
++++ config.base[114]NCLEN=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/ush/getncdimlen
++++ config.base[117]export BASE_ENV=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/env
++++ config.base[117]BASE_ENV=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/env
++++ config.base[120]export SDATE=2024022318
++++ config.base[120]SDATE=2024022318
++++ config.base[121]export EDATE=2024022406
++++ config.base[121]EDATE=2024022406
++++ config.base[122]export EXP_WARM_START=.true.
++++ config.base[122]EXP_WARM_START=.true.
++++ config.base[123]export assim_freq=6
++++ config.base[123]assim_freq=6
++++ config.base[124]export PSLOT=C96C48_ufs_hybatmDA_22926afd-5844
++++ config.base[124]PSLOT=C96C48_ufs_hybatmDA_22926afd-5844
++++ config.base[125]export EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_22926afd-5844
++++ config.base[125]EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_22926afd-5844
++++ config.base[126]export ROTDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844
++++ config.base[126]ROTDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844
++++ config.base[127]export DUMP_SUFFIX=
++++ config.base[127]DUMP_SUFFIX=
++++ config.base[128][[ 2024022406 -ge 2019092100 ]]
++++ config.base[128][[ 2024022406 -le 2019110700 ]]
++++ config.base[131]export ARCDIR=/scratch3/NCEPDEV/global/role.glopara/archive/C96C48_ufs_hybatmDA_22926afd-5844
++++ config.base[131]ARCDIR=/scratch3/NCEPDEV/global/role.glopara/archive/C96C48_ufs_hybatmDA_22926afd-5844
++++ config.base[132]export ATARDIR=/NCEPDEV/emc-global/1year/role.glopara/URSA/scratch/C96C48_ufs_hybatmDA_22926afd-5844
++++ config.base[132]ATARDIR=/NCEPDEV/emc-global/1year/role.glopara/URSA/scratch/C96C48_ufs_hybatmDA_22926afd-5844
++++ config.base[133]export 'FETCHDIR={{ FETCHDIR }}'
++++ config.base[133]FETCHDIR='{{ FETCHDIR }}'
++++ config.base[136]export envir=prod
++++ config.base[136]envir=prod
++++ config.base[137]export NET=gfs
++++ config.base[137]NET=gfs
++++ config.base[138]export RUN=gdas
++++ config.base[138]RUN=gdas
++++ config.base[141]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_22926afd-5844/config.com
+++++ config.com[4]echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[38][[ emc == \n\c\o ]]
+++++ config.com[43]COM_OBSPROC_TMPL='${DMPDIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[44]COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[45]COM_TCVITAL_TMPL='${DMPDIR}/${RUN}.${YMD}/${HH}/atmos'
+++++ config.com[47]declare -rx 'COM_OBS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[48]declare -rx COM_OBSPROC_TMPL COM_RTOFS_TMPL
+++++ config.com[50]COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[52]declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[54]declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[55]declare -rx 'COM_OBS_JEDI=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/obs_jedi'
+++++ config.com[57]declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[58]declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[59]declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[60]declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[61]declare -rx 'COM_SNOW_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/snow/anlmon'
+++++ config.com[62]declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[63]declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[64]declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[65]declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[66]declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[67]declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[68]declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[69]declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[70]declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[71]declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[72]declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[73]declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[74]declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[75]declare -rx 'COM_ATMOS_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/anlmon'
+++++ config.com[76]declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[78]declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[79]declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[80]declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[81]declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[82]declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ config.com[83]declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[84]declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[85]declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[87]declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[88]declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[89]declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[90]declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[91]declare -rx 'COM_OCEAN_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/anlmon'
+++++ config.com[92]declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[93]declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[94]declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[95]declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[96]declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[98]declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[99]declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[100]declare -rx 'COM_ICE_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/anlmon'
+++++ config.com[101]declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[102]declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[103]declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[104]declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[105]declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[106]declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[107]declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[109]declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[110]declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[111]declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[112]declare -rx 'COM_CHEM_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/chem/anlmon'
+++++ config.com[114]declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[143]export LOGSCRIPT=
++++ config.base[143]LOGSCRIPT=
++++ config.base[145]export 'REDOUT=1>'
++++ config.base[145]REDOUT='1>'
++++ config.base[146]export 'REDERR=2>'
++++ config.base[146]REDERR='2>'
++++ config.base[148]export SENDECF=NO
++++ config.base[148]SENDECF=NO
++++ config.base[149]export SENDSDM=NO
++++ config.base[149]SENDSDM=NO
++++ config.base[150]export SENDDBN_NTC=NO
++++ config.base[150]SENDDBN_NTC=NO
++++ config.base[151]export SENDDBN=NO
++++ config.base[151]SENDDBN=NO
++++ config.base[152]export DBNROOT=/fakedbn
++++ config.base[152]DBNROOT=/fakedbn
++++ config.base[153]export SENDAWIP=NO
++++ config.base[153]SENDAWIP=NO
++++ config.base[156]export APP=ATM
++++ config.base[156]APP=ATM
++++ config.base[158]shopt -s extglob
++++ config.base[161]case "${RUN}" in
++++ config.base[168]shopt -u extglob
++++ config.base[171]export DO_ATM=YES
++++ config.base[171]DO_ATM=YES
++++ config.base[172]export DO_COUPLED=NO
++++ config.base[172]DO_COUPLED=NO
++++ config.base[173]export DO_WAVE=NO
++++ config.base[173]DO_WAVE=NO
++++ config.base[174]export DO_OCN=NO
++++ config.base[174]DO_OCN=NO
++++ config.base[175]export DO_ICE=NO
++++ config.base[175]DO_ICE=NO
++++ config.base[176]DO_AERO=NO
++++ config.base[177]export DO_PREP_OBS_AERO=NO
++++ config.base[177]DO_PREP_OBS_AERO=NO
++++ config.base[178]aero_fcst_runs=gdas
++++ config.base[179]aero_anl_runs='gdas gfs'
++++ config.base[180]export DO_AERO_FCST=NO
++++ config.base[180]DO_AERO_FCST=NO
++++ config.base[181]export DO_AERO_ANL=NO
++++ config.base[181]DO_AERO_ANL=NO
++++ config.base[182][[ gdas == \g\f\s ]]
++++ config.base[185]export DOBNDPNT_WAVE=NO
++++ config.base[185]DOBNDPNT_WAVE=NO
++++ config.base[188]export FRAC_GRID=.true.
++++ config.base[188]FRAC_GRID=.true.
++++ config.base[189]export DO_NEST=NO
++++ config.base[189]DO_NEST=NO
++++ config.base[190][[ NO == \Y\E\S ]]
++++ config.base[196]export ntiles=6
++++ config.base[196]ntiles=6
++++ config.base[197]export FIXugwd=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/ugwd
++++ config.base[197]FIXugwd=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/ugwd
++++ config.base[198]export FIXorog=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/orog
++++ config.base[198]FIXorog=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/fix/orog
++++ config.base[202]export OPS_RES=C768
++++ config.base[202]OPS_RES=C768
++++ config.base[205]export LEVS=128
++++ config.base[205]LEVS=128
++++ config.base[206]export CASE=C96
++++ config.base[206]CASE=C96
++++ config.base[207]export CASE_ENS=C48
++++ config.base[207]CASE_ENS=C48
++++ config.base[208]export CASE_HIST=C96
++++ config.base[208]CASE_HIST=C96
++++ config.base[209]export OCNRES=500
++++ config.base[209]OCNRES=500
++++ config.base[210]export ICERES=500
++++ config.base[210]ICERES=500
++++ config.base[213]case "${CASE}" in
++++ config.base[218]export waveGRD=uglo_100km
++++ config.base[218]waveGRD=uglo_100km
++++ config.base[232]case "${APP}" in
++++ config.base[267][[ NO == \Y\E\S ]]
++++ config.base[277][[ gdas =~ gdas ]]
++++ config.base[278]export FHCYC=1
++++ config.base[278]FHCYC=1
++++ config.base[279]export FTSFS=10
++++ config.base[279]FTSFS=10
++++ config.base[285]export FHMIN=0
++++ config.base[285]FHMIN=0
++++ config.base[286]export FHMAX=9
++++ config.base[286]FHMAX=9
++++ config.base[287]export FHOUT=3
++++ config.base[287]FHOUT=3
++++ config.base[288]export FHOUT_OCN=3
++++ config.base[288]FHOUT_OCN=3
++++ config.base[289]export FHOUT_ICE=3
++++ config.base[289]FHOUT_ICE=3
++++ config.base[290]export FHOUT_AERO=3
++++ config.base[290]FHOUT_AERO=3
++++ config.base[293]export EUPD_CYC=gdas
++++ config.base[293]EUPD_CYC=gdas
++++ config.base[296]export INTERVAL_GFS=24
++++ config.base[296]INTERVAL_GFS=24
++++ config.base[297]export SDATE_GFS=2024022400
++++ config.base[297]SDATE_GFS=2024022400
++++ config.base[300]export FHMIN_GFS=0
++++ config.base[300]FHMIN_GFS=0
++++ config.base[301]export FHMAX_GFS=120
++++ config.base[301]FHMAX_GFS=120
++++ config.base[303]breakpnts=
++++ config.base[304]export FCST_SEGMENTS=0,120
++++ config.base[304]FCST_SEGMENTS=0,120
++++ config.base[305]export FHOUT_GFS=3
++++ config.base[305]FHOUT_GFS=3
++++ config.base[306]export FHMAX_HF_GFS=48
++++ config.base[306]FHMAX_HF_GFS=48
++++ config.base[307]export FHMAX_HF_GFS=48
++++ config.base[307]FHMAX_HF_GFS=48
++++ config.base[308]export FHOUT_HF_GFS=1
++++ config.base[308]FHOUT_HF_GFS=1
++++ config.base[311]export FHMIN_WAV=0
++++ config.base[311]FHMIN_WAV=0
++++ config.base[312]export FHOUT_WAV=1
++++ config.base[312]FHOUT_WAV=1
++++ config.base[313]export FHMAX_WAV=9
++++ config.base[313]FHMAX_WAV=9
++++ config.base[314]export FHMAX_WAV=9
++++ config.base[314]FHMAX_WAV=9
++++ config.base[315]export FHOUT_WAV_GFS=3
++++ config.base[315]FHOUT_WAV_GFS=3
++++ config.base[316]export FHMAX_WAV_GFS=120
++++ config.base[316]FHMAX_WAV_GFS=120
++++ config.base[317]export FHOUT_HF_WAV=1
++++ config.base[317]FHOUT_HF_WAV=1
++++ config.base[318]export FHMAX_HF_WAV=48
++++ config.base[318]FHMAX_HF_WAV=48
++++ config.base[319]export FHMAX_HF_WAV=48
++++ config.base[319]FHMAX_HF_WAV=48
++++ config.base[322]export FHOUT_OCN_GFS=6
++++ config.base[322]FHOUT_OCN_GFS=6
++++ config.base[323]export FHOUT_ICE_GFS=6
++++ config.base[323]FHOUT_ICE_GFS=6
++++ config.base[326]export ILPOST=1
++++ config.base[326]ILPOST=1
++++ config.base[327]((  FHMAX_HF_GFS < 120  ))
++++ config.base[328]export ILPOST=3
++++ config.base[328]ILPOST=3
++++ config.base[332]export FHMAX_GOES=180
++++ config.base[332]FHMAX_GOES=180
++++ config.base[333]export FHOUT_GOES=3
++++ config.base[333]FHOUT_GOES=3
++++ config.base[334]((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[335]export FHMAX_GOES=120
++++ config.base[335]FHMAX_GOES=120
++++ config.base[339]export restart_interval_gfs=12
++++ config.base[339]restart_interval_gfs=12
++++ config.base[344]export QUILTING=.true.
++++ config.base[344]QUILTING=.true.
++++ config.base[345]export OUTPUT_GRID=gaussian_grid
++++ config.base[345]OUTPUT_GRID=gaussian_grid
++++ config.base[346]export WRITE_DOPOST=.true.
++++ config.base[346]WRITE_DOPOST=.true.
++++ config.base[347]export WRITE_NSFLIP=.true.
++++ config.base[347]WRITE_NSFLIP=.true.
++++ config.base[350]export DOIAU=NO
++++ config.base[350]DOIAU=NO
++++ config.base[351]export IAUFHRS=3,6,9
++++ config.base[351]IAUFHRS=3,6,9
++++ config.base[352]export IAU_FHROT=3
++++ config.base[352]IAU_FHROT=3
++++ config.base[353]export IAU_DELTHRS=6
++++ config.base[353]IAU_DELTHRS=6
++++ config.base[354]export IAU_OFFSET=6
++++ config.base[354]IAU_OFFSET=6
++++ config.base[355]export DOIAU_ENKF=NO
++++ config.base[355]DOIAU_ENKF=NO
++++ config.base[356]export IAUFHRS_ENKF=3,6,9
++++ config.base[356]IAUFHRS_ENKF=3,6,9
++++ config.base[357]export IAU_DELTHRS_ENKF=6
++++ config.base[357]IAU_DELTHRS_ENKF=6
++++ config.base[360]export lobsdiag_forenkf=.true.
++++ config.base[360]lobsdiag_forenkf=.true.
++++ config.base[368]export imp_physics=8
++++ config.base[368]imp_physics=8
++++ config.base[372]export DO_JEDIATMVAR=YES
++++ config.base[372]DO_JEDIATMVAR=YES
++++ config.base[373]export DO_JEDIATMENS=YES
++++ config.base[373]DO_JEDIATMENS=YES
++++ config.base[374]export DO_JEDIOCNVAR=NO
++++ config.base[374]DO_JEDIOCNVAR=NO
++++ config.base[375]export DO_JEDISNOWDA=NO
++++ config.base[375]DO_JEDISNOWDA=NO
++++ config.base[376]export DO_MERGENSST=NO
++++ config.base[376]DO_MERGENSST=NO
++++ config.base[378][[ .true. = \.\t\r\u\e\. ]]
++++ config.base[379]export DO_STARTMEM_FROM_JEDIICE=YES
++++ config.base[379]DO_STARTMEM_FROM_JEDIICE=YES
++++ config.base[385]export DOHYBVAR=YES
++++ config.base[385]DOHYBVAR=YES
++++ config.base[386]export DOHYBVAR_OCN=NO
++++ config.base[386]DOHYBVAR_OCN=NO
++++ config.base[387]export DOLETKF_OCN=NO
++++ config.base[387]DOLETKF_OCN=NO
++++ config.base[388]export NMEM_ENS=2
++++ config.base[388]NMEM_ENS=2
++++ config.base[389]export SMOOTH_ENKF=NO
++++ config.base[389]SMOOTH_ENKF=NO
++++ config.base[390]export l4densvar=.true.
++++ config.base[390]l4densvar=.true.
++++ config.base[391]export lwrite4danl=.true.
++++ config.base[391]lwrite4danl=.true.
++++ config.base[392]export DO_CALC_INCREMENT=NO
++++ config.base[392]DO_CALC_INCREMENT=NO
++++ config.base[393]export USE_BUILD_GSINFO=YES
++++ config.base[393]USE_BUILD_GSINFO=YES
++++ config.base[394]export BUILD_GSINFO_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gsinfo
++++ config.base[394]BUILD_GSINFO_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gsinfo
++++ config.base[397]export NMEM_ENS_GFS=30
++++ config.base[397]NMEM_ENS_GFS=30
++++ config.base[398]export NMEM_ENS_GFS_OFFSET=20
++++ config.base[398]NMEM_ENS_GFS_OFFSET=20
++++ config.base[399]export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[399]DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[402][[ YES = \Y\E\S ]]
++++ config.base[403]export FHMIN_ENKF=3
++++ config.base[403]FHMIN_ENKF=3
++++ config.base[404]export FHMAX_ENKF=9
++++ config.base[404]FHMAX_ENKF=9
++++ config.base[405]export FHMAX_ENKF_GFS=12
++++ config.base[405]FHMAX_ENKF_GFS=12
++++ config.base[406]export FHOUT_ENKF_GFS=3
++++ config.base[406]FHOUT_ENKF_GFS=3
++++ config.base[407][[ .true. = \.\t\r\u\e\. ]]
++++ config.base[408]export FHOUT=1
++++ config.base[408]FHOUT=1
++++ config.base[409]export FHOUT_ENKF=1
++++ config.base[409]FHOUT_ENKF=1
++++ config.base[416][[ YES == \N\O ]]
++++ config.base[424]export ENKF_SPREAD=YES
++++ config.base[424]ENKF_SPREAD=YES
++++ config.base[427][[ gdas == \g\d\a\s ]]
++++ config.base[428]export DO_GSISOILDA=NO
++++ config.base[428]DO_GSISOILDA=NO
++++ config.base[429]export DO_LAND_IAU=.false.
++++ config.base[429]DO_LAND_IAU=.false.
++++ config.base[434]export LSOIL_INCR=2
++++ config.base[434]LSOIL_INCR=2
++++ config.base[437][[ cycled = \c\y\c\l\e\d ]]
++++ config.base[437][[ 2024022318 = \2\0\2\4\0\2\2\4\0\6 ]]
++++ config.base[437][[ NO = \N\O ]]
++++ config.base[438]export IAU_OFFSET=0
++++ config.base[438]IAU_OFFSET=0
++++ config.base[439]export IAU_FHROT=0
++++ config.base[439]IAU_FHROT=0
++++ config.base[440]export IAUFHRS=6,
++++ config.base[440]IAUFHRS=6,
++++ config.base[441]export DO_LAND_IAU=.false.
++++ config.base[441]DO_LAND_IAU=.false.
++++ config.base[444][[ NO = \N\O ]]
++++ config.base[445]export IAUFHRS_ENKF=6,
++++ config.base[445]IAUFHRS_ENKF=6,
++++ config.base[450][[ NO == \Y\E\S ]]
++++ config.base[453]export restart_interval_enkfgdas=6
++++ config.base[453]restart_interval_enkfgdas=6
++++ config.base[456]export restart_interval_enkfgfs=6
++++ config.base[456]restart_interval_enkfgfs=6
++++ config.base[458][[ NO == \Y\E\S ]]
++++ config.base[461]export restart_interval_gdas=6
++++ config.base[461]restart_interval_gdas=6
++++ config.base[465]export DONST=YES
++++ config.base[465]DONST=YES
++++ config.base[466][[ YES = \Y\E\S ]]
++++ config.base[466]export 'FNTSFA=        '
++++ config.base[466]FNTSFA='        '
++++ config.base[469]export nst_anl=.true.
++++ config.base[469]nst_anl=.true.
++++ config.base[472]export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[472]INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[475]export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[475]INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[476]export INCVARS_EFOLD=5
++++ config.base[476]INCVARS_EFOLD=5
++++ config.base[481]export netcdf_diag=.true.
++++ config.base[481]netcdf_diag=.true.
++++ config.base[482]export binary_diag=.false.
++++ config.base[482]binary_diag=.false.
++++ config.base[485]export DO_CA=YES
++++ config.base[485]DO_CA=YES
++++ config.base[488]export DO_METP=YES
++++ config.base[488]DO_METP=YES
++++ config.base[489]export DO_FIT2OBS=YES
++++ config.base[489]DO_FIT2OBS=YES
++++ config.base[492]export FHMAX_FITS=132
++++ config.base[492]FHMAX_FITS=132
++++ config.base[493][[ 132 -gt 120 ]]
++++ config.base[494]export FHMAX_FITS=120
++++ config.base[494]FHMAX_FITS=120
++++ config.base[499]export DO_FETCH_HPSS=NO
++++ config.base[499]DO_FETCH_HPSS=NO
++++ config.base[500]export DO_FETCH_LOCAL=NO
++++ config.base[500]DO_FETCH_LOCAL=NO
++++ config.base[503]export DO_ARCHCOM=YES
++++ config.base[503]DO_ARCHCOM=YES
++++ config.base[504]export ARCHCOM_TO=hpss
++++ config.base[504]ARCHCOM_TO=hpss
++++ config.base[507]export 'CLIENT_GLOBUS_UUID={{ CLIENT_GLOBUS_UUID }}'
++++ config.base[507]CLIENT_GLOBUS_UUID='{{ CLIENT_GLOBUS_UUID }}'
++++ config.base[510][[ YES = \Y\E\S ]]
++++ config.base[511]export DO_FIT2OBS=NO
++++ config.base[511]DO_FIT2OBS=NO
++++ config.base[512]export DO_VERFOZN=NO
++++ config.base[512]DO_VERFOZN=NO
++++ config.base[513]export DO_VERFRAD=NO
++++ config.base[513]DO_VERFRAD=NO
++++ config.base[514]export DO_VMINMON=NO
++++ config.base[514]DO_VMINMON=NO
++++ config.base[519][[ URSA == \U\R\S\A ]]
++++ config.base[520]export DO_METP=NO
++++ config.base[520]DO_METP=NO
++++ config.base[524]export OFFSET_START_HOUR=0
++++ config.base[524]OFFSET_START_HOUR=0
++++ config.base[527]export NUM_SND_COLLECTIVES=9
++++ config.base[527]NUM_SND_COLLECTIVES=9
++++ config.base[529]echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[106]true
+++ jjob_header.sh[107]export err=0
+++ jjob_header.sh[107]err=0
+++ jjob_header.sh[108][[ 0 -ne 0 ]]
+++ jjob_header.sh[105]for config in "${configs[@]:-''}"
+++ jjob_header.sh[106]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_22926afd-5844/config.prepatmiodaobs
++++ config.prepatmiodaobs[6]echo 'BEGIN: config.prepatmiodaobs'
+BEGIN: config.prepatmiodaobs
++++ config.prepatmiodaobs[9]. /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_22926afd-5844/config.resources prepatmiodaobs
+++++ config.resources[10]((  1 != 1  ))
+++++ config.resources[34]step=prepatmiodaobs
+++++ config.resources[36]echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]case ${machine} in
+++++ config.resources[49]max_tasks_per_node=192
+++++ config.resources[50]mem_node_max=360GB
+++++ config.resources[100]export max_tasks_per_node
+++++ config.resources[102]case ${step} in
+++++ config.resources[120]walltime=00:30:00
+++++ config.resources[121]ntasks=1
+++++ config.resources[122]threads_per_task=1
+++++ config.resources[123]tasks_per_node=192
+++++ config.resources[1418][[ -f /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_22926afd-5844/config.resources.URSA ]]
+++++ config.resources[1419]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/EXPDIR/C96C48_ufs_hybatmDA_22926afd-5844/config.resources.URSA
++++++ config.resources.URSA[5]case ${step} in
+++++ config.resources[1423]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1424]run_resource_var=threads_per_task_gdas
+++++ config.resources[1425][[ -n '' ]]
+++++ config.resources[1427][[ -n 0 ]]
+++++ config.resources[1428]export threads_per_task
+++++ config.resources[1423]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1424]run_resource_var=ntasks_gdas
+++++ config.resources[1425][[ -n '' ]]
+++++ config.resources[1427][[ -n 0 ]]
+++++ config.resources[1428]export ntasks
+++++ config.resources[1423]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1424]run_resource_var=tasks_per_node_gdas
+++++ config.resources[1425][[ -n '' ]]
+++++ config.resources[1427][[ -n 0 ]]
+++++ config.resources[1428]export tasks_per_node
+++++ config.resources[1423]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1424]run_resource_var=NTASKS_gdas
+++++ config.resources[1425][[ -n '' ]]
+++++ config.resources[1427][[ -n '' ]]
+++++ config.resources[1423]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1424]run_resource_var=memory_gdas
+++++ config.resources[1425][[ -n '' ]]
+++++ config.resources[1427][[ -n '' ]]
+++++ config.resources[1423]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1424]run_resource_var=walltime_gdas
+++++ config.resources[1425][[ -n '' ]]
+++++ config.resources[1427][[ -n 0 ]]
+++++ config.resources[1428]export walltime
+++++ config.resources[1432]echo 'END: config.resources'
+END: config.resources
++++ config.prepatmiodaobs[11]echo 'END: config.prepatmiodaobs'
+END: config.prepatmiodaobs
+++ jjob_header.sh[106]true
+++ jjob_header.sh[107]export err=0
+++ jjob_header.sh[107]err=0
+++ jjob_header.sh[108][[ 0 -ne 0 ]]
+++ jjob_header.sh[117]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/env/URSA.env prepatmiodaobs
++++ URSA.env[3][[ 1 -ne 1 ]]
++++ URSA.env[10]step=prepatmiodaobs
++++ URSA.env[12]export 'launcher=srun -l --export=ALL --hint=nomultithread --distribution=block:block'
++++ URSA.env[12]launcher='srun -l --export=ALL --hint=nomultithread --distribution=block:block'
++++ URSA.env[13]export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ URSA.env[13]mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ URSA.env[18]export OMP_STACKSIZE=2048000
++++ URSA.env[18]OMP_STACKSIZE=2048000
++++ URSA.env[19]export NTHSTACK=1024000000
++++ URSA.env[19]NTHSTACK=1024000000
++++ URSA.env[22][[ -n 5547837 ]]
++++ URSA.env[23]ulimit -s unlimited
++++ URSA.env[24]ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 1542205
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 66299904
+open files                          (-n) 131072
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) unlimited
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 1542205
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
++++ URSA.env[29][[ -n 1 ]]
++++ URSA.env[29][[ -n 192 ]]
++++ URSA.env[29][[ -n 192 ]]
++++ URSA.env[30]max_threads_per_task=1
++++ URSA.env[31]NTHREADSmax=1
++++ URSA.env[32]NTHREADS1=1
++++ URSA.env[33][[ 1 -gt 1 ]]
++++ URSA.env[36][[ 1 -gt 1 ]]
++++ URSA.env[39]APRUN_default='srun -l --export=ALL --hint=nomultithread --distribution=block:block -n 1'
++++ URSA.env[45][[ prepatmiodaobs = \p\r\e\p ]]
++++ URSA.env[45][[ prepatmiodaobs = \p\r\e\p\b\u\f\r ]]
++++ URSA.env[52][[ prepatmiodaobs = \p\r\e\p\_\e\m\i\s\s\i\o\n\s ]]
++++ URSA.env[56][[ prepatmiodaobs = \w\a\v\e\i\n\i\t ]]
++++ URSA.env[56][[ prepatmiodaobs = \w\a\v\e\p\r\e\p ]]
++++ URSA.env[56][[ prepatmiodaobs = \w\a\v\e\p\o\s\t\s\b\s ]]
++++ URSA.env[56][[ prepatmiodaobs = \w\a\v\e\p\o\s\t\b\n\d\p\n\t ]]
++++ URSA.env[56][[ prepatmiodaobs = \w\a\v\e\p\o\s\t\b\n\d\p\n\t\b\l\l ]]
++++ URSA.env[56][[ prepatmiodaobs = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ URSA.env[56][[ prepatmiodaobs = \w\a\v\e\_\s\t\a\t ]]
++++ URSA.env[56][[ prepatmiodaobs = \w\a\v\e\_\s\t\a\t\_\p\n\t ]]
++++ URSA.env[63][[ prepatmiodaobs = \a\t\m\a\n\l\v\a\r ]]
++++ URSA.env[68][[ prepatmiodaobs = \a\t\m\e\n\s\a\n\l\o\b\s ]]
++++ URSA.env[73][[ prepatmiodaobs = \a\t\m\e\n\s\a\n\l\s\o\l ]]
++++ URSA.env[78][[ prepatmiodaobs = \a\t\m\e\n\s\a\n\l\l\e\t\k\f ]]
++++ URSA.env[83][[ prepatmiodaobs = \a\t\m\e\n\s\a\n\l\f\v\3\i\n\c ]]
++++ URSA.env[88][[ prepatmiodaobs = \a\e\r\o\a\n\l\v\a\r ]]
++++ URSA.env[95][[ prepatmiodaobs = \a\e\r\o\a\n\l\g\e\n\b ]]
++++ URSA.env[100][[ prepatmiodaobs = \a\t\m\a\n\l\f\v\3\i\n\c ]]
++++ URSA.env[105][[ prepatmiodaobs = \a\n\l\s\t\a\t ]]
++++ URSA.env[110][[ prepatmiodaobs = \p\r\e\p\o\b\s\a\e\r\o ]]
++++ URSA.env[115][[ prepatmiodaobs = \s\n\o\w\a\n\l ]]
++++ URSA.env[124][[ prepatmiodaobs = \e\s\n\o\w\a\n\l ]]
++++ URSA.env[133][[ prepatmiodaobs = \m\a\r\i\n\e\b\m\a\t ]]
++++ URSA.env[138][[ prepatmiodaobs = \m\a\r\i\n\e\a\n\l\v\a\r ]]
++++ URSA.env[143][[ prepatmiodaobs = \m\a\r\i\n\e\a\n\l\c\h\k\p\t ]]
++++ URSA.env[150][[ prepatmiodaobs = \m\a\r\i\n\e\a\n\l\e\c\e\n ]]
++++ URSA.env[155][[ prepatmiodaobs = \m\a\r\i\n\e\a\n\l\l\e\t\k\f ]]
++++ URSA.env[160][[ prepatmiodaobs = \e\c\e\n\_\f\v\3\j\e\d\i ]]
++++ URSA.env[166][[ prepatmiodaobs = \a\n\a\l\c\a\l\c\_\f\v\3\j\e\d\i ]]
++++ URSA.env[171][[ prepatmiodaobs = \a\n\a\l ]]
++++ URSA.env[171][[ prepatmiodaobs = \a\n\a\l\c\a\l\c ]]
++++ URSA.env[200][[ prepatmiodaobs = \o\f\f\l\i\n\e\a\n\l ]]
++++ URSA.env[214][[ prepatmiodaobs = \s\f\c\a\n\l ]]
++++ URSA.env[223][[ prepatmiodaobs = \e\o\b\s ]]
++++ URSA.env[235][[ prepatmiodaobs = \e\u\p\d ]]
++++ URSA.env[244][[ prepatmiodaobs = \f\c\s\t ]]
++++ URSA.env[244][[ prepatmiodaobs = \e\f\c\s ]]
++++ URSA.env[252][[ prepatmiodaobs = \u\p\p ]]
++++ URSA.env[257][[ prepatmiodaobs = \a\t\m\o\s\_\p\r\o\d\u\c\t\s ]]
++++ URSA.env[261][[ prepatmiodaobs = \o\c\e\a\n\i\c\e\_\p\r\o\d\u\c\t\s ]]
++++ URSA.env[266][[ prepatmiodaobs = \e\c\e\n ]]
++++ URSA.env[283][[ prepatmiodaobs = \e\s\f\c ]]
++++ URSA.env[297][[ prepatmiodaobs = \e\p\o\s ]]
++++ URSA.env[302][[ prepatmiodaobs = \p\o\s\t\s\n\d ]]
++++ URSA.env[315][[ prepatmiodaobs = \a\w\i\p\s ]]
++++ URSA.env[320][[ prepatmiodaobs = \f\i\t\2\o\b\s ]]
+++ jjob_header.sh[117]true
+++ jjob_header.sh[118]export err=0
+++ jjob_header.sh[118]err=0
+++ jjob_header.sh[119][[ 0 -ne 0 ]]
++ JGLOBAL_ATM_PREP_IODA_OBS[13]YMD=20240224
++ JGLOBAL_ATM_PREP_IODA_OBS[13]HH=06
++ JGLOBAL_ATM_PREP_IODA_OBS[13]declare_from_tmpl -rx COMOUT_OBS:COM_OBS_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMOUT_OBS=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs
++ JGLOBAL_ATM_PREP_IODA_OBS[18]EXSCRIPT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/ush/run_bufr2ioda.py
++ JGLOBAL_ATM_PREP_IODA_OBS[19]/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/ush/run_bufr2ioda.py 2024022406 gdas /scratch3/NCEPDEV/global/role.glopara/dump /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/
+[38;21m2025-11-21 00:09:37,356 - INFO     - run_bufr2ioda.py: BEGIN: __main__.bufr2ioda[0m
+[38;21m2025-11-21 00:09:37,356 - INFO     - run_bufr2ioda.py: Process 2024-02-24 06:00:00 gdas from /scratch3/NCEPDEV/global/role.glopara/dump to /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda[0m
+[38;21m2025-11-21 00:09:37,361 - INFO     - run_bufr2ioda.py: Convert gnssro_paz...[0m
+[38;21m2025-11-21 00:09:37,361 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gnssro_paz.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,368 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_paz_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,368 - INFO     - run_bufr2ioda.py: Convert adpupa_prepbufr...[0m
+[38;21m2025-11-21 00:09:37,368 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_adpupa_prepbufr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,371 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/adpupa_prepbufr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,372 - INFO     - run_bufr2ioda.py: Convert ozone_ompsnp...[0m
+[38;21m2025-11-21 00:09:37,372 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_ozone_ompsnp.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,377 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/ozone_ompsnp_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,377 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_leogeo...[0m
+[38;21m2025-11-21 00:09:37,377 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_leogeo.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,381 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_leogeo_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,381 - INFO     - run_bufr2ioda.py: Convert adpupa...[0m
+[38;21m2025-11-21 00:09:37,381 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_adpupa.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,385 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/adpupa_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,385 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_ahi...[0m
+[38;21m2025-11-21 00:09:37,385 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_ahi.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,389 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_ahi_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,389 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_avhrr...[0m
+[38;21m2025-11-21 00:09:37,389 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_avhrr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,394 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_avhrr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,394 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_viirs...[0m
+[38;21m2025-11-21 00:09:37,394 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_viirs.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,398 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_viirs_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,398 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_goes...[0m
+[38;21m2025-11-21 00:09:37,398 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_goes.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,403 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_goes_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,403 - INFO     - run_bufr2ioda.py: Convert ozone_omi...[0m
+[38;21m2025-11-21 00:09:37,403 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_ozone_omi.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,407 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/ozone_omi_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,407 - INFO     - run_bufr2ioda.py: Convert satwind_scat...[0m
+[38;21m2025-11-21 00:09:37,407 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwind_scat.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,411 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwind_scat_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,412 - INFO     - run_bufr2ioda.py: Convert gnssro_metop...[0m
+[38;21m2025-11-21 00:09:37,412 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gnssro_metop.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,416 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_metop_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,416 - INFO     - run_bufr2ioda.py: Convert gnssro_cosmic2...[0m
+[38;21m2025-11-21 00:09:37,416 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gnssro_cosmic2.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,422 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_cosmic2_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,422 - INFO     - run_bufr2ioda.py: Convert gnssro_geoopt...[0m
+[38;21m2025-11-21 00:09:37,422 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gnssro_geoopt.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,426 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_geoopt_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,426 - INFO     - run_bufr2ioda.py: Convert sevcsr...[0m
+[38;21m2025-11-21 00:09:37,426 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_sevcsr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,431 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/sevcsr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,431 - INFO     - run_bufr2ioda.py: Convert gnssro_s6...[0m
+[38;21m2025-11-21 00:09:37,431 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gnssro_s6.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,435 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_s6_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,436 - INFO     - run_bufr2ioda.py: Convert gnssro_k5...[0m
+[38;21m2025-11-21 00:09:37,436 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gnssro_k5.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,439 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_k5_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,439 - INFO     - run_bufr2ioda.py: Convert gnssro_piq...[0m
+[38;21m2025-11-21 00:09:37,440 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gnssro_piq.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,444 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_piq_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,444 - INFO     - run_bufr2ioda.py: Convert ozone_ompstc...[0m
+[38;21m2025-11-21 00:09:37,444 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_ozone_ompstc.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,448 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/ozone_ompstc_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,448 - INFO     - run_bufr2ioda.py: Convert sfcshp_prepbufr...[0m
+[38;21m2025-11-21 00:09:37,448 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_sfcshp_prepbufr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,452 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/sfcshp_prepbufr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,452 - INFO     - run_bufr2ioda.py: Convert adpsfc_prepbufr...[0m
+[38;21m2025-11-21 00:09:37,452 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_adpsfc_prepbufr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,456 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/adpsfc_prepbufr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,456 - INFO     - run_bufr2ioda.py: Convert conventional_prepbufr_ps...[0m
+[38;21m2025-11-21 00:09:37,456 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_conventional_prepbufr_ps.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,459 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/conventional_prepbufr_ps_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,459 - INFO     - run_bufr2ioda.py: Convert gnssro_grace...[0m
+[38;21m2025-11-21 00:09:37,460 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gnssro_grace.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,464 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_grace_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,464 - INFO     - run_bufr2ioda.py: Convert gnssro_tsx...[0m
+[38;21m2025-11-21 00:09:37,464 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gnssro_tsx.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,468 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_tsx_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,468 - INFO     - run_bufr2ioda.py: Convert gnssro_tdm...[0m
+[38;21m2025-11-21 00:09:37,468 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gnssro_tdm.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,472 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_tdm_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,472 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_modis...[0m
+[38;21m2025-11-21 00:09:37,472 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_modis.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,476 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_modis_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,476 - INFO     - run_bufr2ioda.py: Convert snocvr_bufr...[0m
+[38;21m2025-11-21 00:09:37,476 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_snocvr_bufr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,480 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/snocvr_bufr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,480 - INFO     - run_bufr2ioda.py: Convert satwnd_amv_seviri...[0m
+[38;21m2025-11-21 00:09:37,480 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_satwnd_amv_seviri.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,485 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_seviri_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,485 - INFO     - run_bufr2ioda.py: Convert gnssro_spire...[0m
+[38;21m2025-11-21 00:09:37,485 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gnssro_spire.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,489 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_spire_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,489 - INFO     - run_bufr2ioda.py: Convert gsrcsr...[0m
+[38;21m2025-11-21 00:09:37,489 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gsrcsr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,493 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gsrcsr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,493 - INFO     - run_bufr2ioda.py: Convert acft_profiles_prepbufr...[0m
+[38;21m2025-11-21 00:09:37,493 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_acft_profiles_prepbufr.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,497 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/acft_profiles_prepbufr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,497 - INFO     - run_bufr2ioda.py: Convert gnssro...[0m
+[38;21m2025-11-21 00:09:37,497 - INFO     - gen_bufr2ioda_json.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_gnssro.json as input {'RUN': 'gdas', 'current_cycle': datetime.datetime(2024, 2, 24, 6, 0), 'DMPDIR': PosixPath('/scratch3/NCEPDEV/global/role.glopara/dump'), 'COMOUT_OBS': PosixPath('/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs'), 'PDY': '20240224', 'cyc': '06'}[0m
+[38;21m2025-11-21 00:09:37,504 - INFO     - gen_bufr2ioda_json.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,505 - INFO     - run_bufr2ioda.py: Convert iasi...[0m
+[38;21m2025-11-21 00:09:37,505 - INFO     - gen_bufr2ioda_yaml.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_iasi.yaml as input[0m
+[38;21m2025-11-21 00:09:37,527 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/iasi_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,527 - INFO     - run_bufr2ioda.py: Convert insitu_profile_tesac...[0m
+[38;21m2025-11-21 00:09:37,527 - INFO     - gen_bufr2ioda_yaml.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_insitu_profile_tesac.yaml as input[0m
+[38;21m2025-11-21 00:09:37,531 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_profile_tesac_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,531 - INFO     - run_bufr2ioda.py: Convert insitu_surface_dbuoyb_drifter...[0m
+[38;21m2025-11-21 00:09:37,531 - INFO     - gen_bufr2ioda_yaml.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_insitu_surface_dbuoyb_drifter.yaml as input[0m
+[38;21m2025-11-21 00:09:37,536 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_surface_dbuoyb_drifter_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,536 - INFO     - run_bufr2ioda.py: Convert insitu_surface_trkob...[0m
+[38;21m2025-11-21 00:09:37,536 - INFO     - gen_bufr2ioda_yaml.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_insitu_surface_trkob.yaml as input[0m
+[38;21m2025-11-21 00:09:37,540 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_surface_trkob_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,540 - INFO     - run_bufr2ioda.py: Convert insitu_salt_profile_argo...[0m
+[38;21m2025-11-21 00:09:37,540 - INFO     - gen_bufr2ioda_yaml.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_insitu_salt_profile_argo.yaml as input[0m
+[38;21m2025-11-21 00:09:37,544 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_salt_profile_argo_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,544 - INFO     - run_bufr2ioda.py: Convert insitu_profile_xbtctd...[0m
+[38;21m2025-11-21 00:09:37,545 - INFO     - gen_bufr2ioda_yaml.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_insitu_profile_xbtctd.yaml as input[0m
+[38;21m2025-11-21 00:09:37,549 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_profile_xbtctd_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,549 - INFO     - run_bufr2ioda.py: Convert insitu_profile_bathy...[0m
+[38;21m2025-11-21 00:09:37,549 - INFO     - gen_bufr2ioda_yaml.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_insitu_profile_bathy.yaml as input[0m
+[38;21m2025-11-21 00:09:37,553 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_profile_bathy_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,553 - INFO     - run_bufr2ioda.py: Convert insitu_surface_dbuoyb...[0m
+[38;21m2025-11-21 00:09:37,553 - INFO     - gen_bufr2ioda_yaml.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_insitu_surface_dbuoyb.yaml as input[0m
+[38;21m2025-11-21 00:09:37,558 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_surface_dbuoyb_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,558 - INFO     - run_bufr2ioda.py: Convert insitu_profile_tropical...[0m
+[38;21m2025-11-21 00:09:37,558 - INFO     - gen_bufr2ioda_yaml.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_insitu_profile_tropical.yaml as input[0m
+[38;21m2025-11-21 00:09:37,562 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_profile_tropical_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,562 - INFO     - run_bufr2ioda.py: Convert insitu_temp_profile_argo...[0m
+[38;21m2025-11-21 00:09:37,562 - INFO     - gen_bufr2ioda_yaml.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_insitu_temp_profile_argo.yaml as input[0m
+[38;21m2025-11-21 00:09:37,567 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_temp_profile_argo_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,567 - INFO     - run_bufr2ioda.py: Convert atms...[0m
+[38;21m2025-11-21 00:09:37,567 - INFO     - gen_bufr2ioda_yaml.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_atms.yaml as input[0m
+[38;21m2025-11-21 00:09:37,584 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/atms_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,584 - INFO     - run_bufr2ioda.py: Convert cris...[0m
+[38;21m2025-11-21 00:09:37,584 - INFO     - gen_bufr2ioda_yaml.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_cris.yaml as input[0m
+[38;21m2025-11-21 00:09:37,604 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/cris_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,604 - INFO     - run_bufr2ioda.py: Convert insitu_profile_glider...[0m
+[38;21m2025-11-21 00:09:37,604 - INFO     - gen_bufr2ioda_yaml.py: Using /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/parm/gdas/ioda/bufr2ioda/bufr2ioda_insitu_profile_glider.yaml as input[0m
+[38;21m2025-11-21 00:09:37,608 - INFO     - gen_bufr2ioda_yaml.py: Wrote to /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_profile_glider_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,766 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gnssro_paz.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_paz_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,766 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_ozone_ompsnp.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/ozone_ompsnp_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,766 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_adpupa_prepbufr.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/adpupa_prepbufr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,766 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_adpupa.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/adpupa_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,767 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_leogeo.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_leogeo_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,767 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_avhrr.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_avhrr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,767 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_ahi.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_ahi_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,767 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_viirs.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_viirs_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,767 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_goes.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_goes_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,767 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_ozone_omi.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/ozone_omi_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,769 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwind_scat.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwind_scat_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,769 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gnssro_metop.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_metop_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,769 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gnssro_cosmic2.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_cosmic2_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,769 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gnssro_geoopt.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_geoopt_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,769 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_sevcsr.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/sevcsr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,769 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gnssro_s6.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_s6_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,769 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gnssro_k5.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_k5_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,770 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gnssro_piq.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_piq_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,770 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_ozone_ompstc.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/ozone_ompstc_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,770 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_sfcshp_prepbufr.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/sfcshp_prepbufr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,770 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_conventional_prepbufr_ps.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/conventional_prepbufr_ps_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,770 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_adpsfc_prepbufr.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/adpsfc_prepbufr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,771 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gnssro_grace.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_grace_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,771 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gnssro_tsx.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_tsx_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,771 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gnssro_tdm.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_tdm_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,771 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_modis.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_modis_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,771 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_snocvr_bufr.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/snocvr_bufr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,771 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_satwnd_amv_seviri.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/satwnd_amv_seviri_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,771 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gsrcsr.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gsrcsr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,772 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_acft_profiles_prepbufr.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/acft_profiles_prepbufr_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,772 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gnssro_spire.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_spire_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,773 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gnssro.py -c /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gnssro_2024022406.json[0m
+[38;21m2025-11-21 00:09:37,773 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/iasi_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,773 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_profile_tesac_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,773 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_surface_dbuoyb_drifter_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,773 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_surface_trkob_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,774 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_salt_profile_argo_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,775 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_profile_xbtctd_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,775 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_profile_bathy_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,775 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_surface_dbuoyb_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,775 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_profile_tropical_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,776 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_temp_profile_argo_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,778 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/atms_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,780 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/cris_2024022406.yaml[0m
+[38;21m2025-11-21 00:09:37,780 - INFO     - run_bufr2ioda.py: Executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/build/bin/bufr2ioda.x /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/insitu_profile_glider_2024022406.yaml[0m
+PRE-MAIN-ERROR Exception: Bad parameter: No section named "observations" 
+PRE-MAIN-ERROR Exception: Bad parameter: No section named "observations" 
+PRE-MAIN-ERROR Exception: Bad parameter: No section named "observations" 
+PRE-MAIN-ERROR Exception: Bad parameter: No section named "observations" 
+PRE-MAIN-ERROR Exception: Bad parameter: No section named "observations" 
+PRE-MAIN-ERROR Exception: Bad parameter: No section named "observations" 
+PRE-MAIN-ERROR Exception: Bad parameter: No section named "observations" 
+PRE-MAIN-ERROR Exception: Bad parameter: No section named "observations" 
+PRE-MAIN-ERROR Exception: Bad parameter: No section named "observations" 
+PRE-MAIN-ERROR Exception: Bad parameter: No section named "observations" 
+PRE-MAIN-INFO BufrParser: Parsing file /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/06/atmos/gdas.t06z.atms.tm00.bufr_d
+PRE-MAIN-INFO BufrParser: Parsing file /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/06/atmos/gdas.t06z.crisf4.tm00.bufr_d
+PRE-MAIN-INFO Executing Queries
+PRE-MAIN-INFO Executing Queries
+PRE-MAIN-INFO BufrParser: Parsing file /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/06/atmos/gdas.t06z.mtiasi.tm00.bufr_d
+PRE-MAIN-INFO Executing Queries
+[38;21m2025-11-21 00:09:38,168 - INFO     - bufr2ioda_sevcsr.py: sensor_name = ABI[0m
+[38;21m2025-11-21 00:09:38,168 - INFO     - bufr2ioda_sevcsr.py: sensor_full_name = Advanced Baseline Imager[0m
+[38;21m2025-11-21 00:09:38,168 - INFO     - bufr2ioda_sevcsr.py: sensor_id = 617[0m
+[38;21m2025-11-21 00:09:38,169 - INFO     - bufr2ioda_sevcsr.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,169 - INFO     - bufr2ioda_sevcsr.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,170 - INFO     - bufr2ioda_sevcsr.py: Executing QuerySet to get ResultSet[0m
+[38;21m2025-11-21 00:09:38,173 - INFO     - bufr2ioda_sevcsr.py: sensor_name = SEVIRI[0m
+[38;21m2025-11-21 00:09:38,173 - INFO     - bufr2ioda_sevcsr.py: sensor_full_name = Spinning Enhanced Visible Infra-Red Imager[0m
+[38;21m2025-11-21 00:09:38,173 - INFO     - bufr2ioda_sevcsr.py: sensor_id = 207[0m
+[38;21m2025-11-21 00:09:38,173 - INFO     - bufr2ioda_sevcsr.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,174 - INFO     - bufr2ioda_sevcsr.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,175 - INFO     - bufr2ioda_sevcsr.py: Executing QuerySet to get ResultSet[0m
+PRE-MAIN-ERROR Exception: BadValue: No BUFR messages were found! Please make sure that /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/06/atmos/gdas.t06z.sevcsr.tm00.bufr_d exists and is a valid BUFR file. 
+[38;21m2025-11-21 00:09:38,181 - INFO     - bufr2ioda_sevcsr.py: Return with BadValue: No BUFR messages were found! Please make sure that /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/06/atmos/gdas.t06z.sevcsr.tm00.bufr_d exists and is a valid BUFR file.[0m
+[38;21m2025-11-21 00:09:38,181 - INFO     - bufr2ioda_sevcsr.py: Total running time: 0.010663747787475586 seconds[0m
+Warning: Query String */SIID[1] didn't apply to subset NC021046
+[38;21m2025-11-21 00:09:38,228 - INFO     - BUFR2IODA_satwind_amv_goes.py: sensor_name = ABI[0m
+[38;21m2025-11-21 00:09:38,228 - INFO     - BUFR2IODA_satwind_amv_goes.py: sensor_full_name = Advanced Baseline Imager[0m
+[38;21m2025-11-21 00:09:38,228 - INFO     - BUFR2IODA_satwind_amv_goes.py: sensor_id = 617[0m
+[38;21m2025-11-21 00:09:38,228 - INFO     - BUFR2IODA_satwind_amv_goes.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,228 - INFO     - BUFR2IODA_satwind_amv_goes.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,228 - INFO     - BUFR2IODA_adpupa_prepbufr.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,229 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,229 - INFO     - BUFR2IODA_satwind_amv_goes.py: Executing QuerySet to get ResultSet[0m
+[38;21m2025-11-21 00:09:38,230 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Executing QuerySet to get ResultSet[0m
+[38;21m2025-11-21 00:09:38,231 - INFO     - BUFR2IODA_ozone_ompstc8.py: Processing OMPS TC is the Total Column Ozone derived from UV and near-infrared observations (between 300-380 nm) made by the OMPS Nadir Total Column Mapper S-NPP (50 km) and N-21 (10 km)[0m
+[38;21m2025-11-21 00:09:38,231 - INFO     - BUFR2IODA_ozone_ompstc8.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,231 - INFO     - BUFR2IODA_ozone_ompstc8.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,232 - INFO     - BUFR2IODA_ozone_ompstc8.py: Executing QuerySet to get ResultSet[0m
+[38;21m2025-11-21 00:09:38,232 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_name = AVHRR[0m
+[38;21m2025-11-21 00:09:38,232 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_full_name = Advanced Very High Resolution Radiometer[0m
+[38;21m2025-11-21 00:09:38,232 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_id = 999[0m
+[38;21m2025-11-21 00:09:38,232 - INFO     - BUFR2IODA_satwind_amv_ahi.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,233 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,233 - INFO     - BUFR2IODA_ozone_omi.py: Processing Level-2 retrieved total zone from Ozone Monitoring Instrument (OMI)[0m
+[38;21m2025-11-21 00:09:38,233 - INFO     - BUFR2IODA_ozone_omi.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,233 - INFO     - BUFR2IODA_ozone_omi.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,233 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2025-11-21 00:09:38,233 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_name = MODIS[0m
+[38;21m2025-11-21 00:09:38,234 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_full_name = Moderate Resolution Imaging Spectroradiometer[0m
+[38;21m2025-11-21 00:09:38,234 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_id = 999[0m
+[38;21m2025-11-21 00:09:38,234 - INFO     - BUFR2IODA_satwind_amv_ahi.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,234 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,234 - INFO     - BUFR2IODA_ozone_omi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2025-11-21 00:09:38,234 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2025-11-21 00:09:38,235 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_name = VIIRS[0m
+[38;21m2025-11-21 00:09:38,235 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_full_name = Visible Infrared Imaging Radiometer Suite[0m
+[38;21m2025-11-21 00:09:38,236 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_id = 999[0m
+[38;21m2025-11-21 00:09:38,236 - INFO     - BUFR2IODA_satwind_amv_ahi.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,236 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,236 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2025-11-21 00:09:38,237 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_name = AHI[0m
+[38;21m2025-11-21 00:09:38,238 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_full_name = Advanced Himawari Imager[0m
+[38;21m2025-11-21 00:09:38,238 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_id = 999[0m
+[38;21m2025-11-21 00:09:38,238 - INFO     - BUFR2IODA_satwind_amv_ahi.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,238 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,239 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2025-11-21 00:09:38,240 - INFO     - BUFR2IODA_satwind_scat.py: sensor_name = ASCAT[0m
+[38;21m2025-11-21 00:09:38,240 - INFO     - BUFR2IODA_satwind_scat.py: sensor_full_name = Advanced Scatterometer[0m
+[38;21m2025-11-21 00:09:38,240 - INFO     - BUFR2IODA_satwind_scat.py: sensor_id = 0[0m
+[38;21m2025-11-21 00:09:38,240 - INFO     - BUFR2IODA_satwind_scat.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,241 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_name = LEOGEO[0m
+[38;21m2025-11-21 00:09:38,241 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_full_name = Combined Platform LEO/GEO[0m
+[38;21m2025-11-21 00:09:38,241 - INFO     - BUFR2IODA_ozone_ompsnp.py: Processing OMPS NP is the ozone profile derived from Nadir Profile Spectrometeor in a single ground pixel of 250x250 km at nadir from SNPP; 5 ground pixel of 50x50 km at nadir from JPSS[0m
+[38;21m2025-11-21 00:09:38,241 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_id = 999[0m
+[38;21m2025-11-21 00:09:38,241 - INFO     - BUFR2IODA_satwind_amv_ahi.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,241 - INFO     - BUFR2IODA_ozone_ompsnp.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,241 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,241 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_name = SEVIRI[0m
+[38;21m2025-11-21 00:09:38,241 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_full_name = Spinning Enhanced Visible and InfraRed Imager[0m
+[38;21m2025-11-21 00:09:38,241 - INFO     - BUFR2IODA_satwind_amv_ahi.py: sensor_id = 999[0m
+[38;21m2025-11-21 00:09:38,241 - INFO     - BUFR2IODA_satwind_amv_ahi.py: reference_time = 2024-02-24T06:00:00Z[0m
+[38;21m2025-11-21 00:09:38,241 - INFO     - BUFR2IODA_adpupa.py: DATA_PATH /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/06/atmos/gdas.t06z.adpupa.tm06.bufr_d does not exist[0m
+[38;21m2025-11-21 00:09:38,242 - INFO     - BUFR2IODA_ozone_ompsnp.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,242 - INFO     - BUFR2IODA_satwind_scat.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,242 - INFO     - BUFR2IODA_adpupa.py: Total running time: 0.002752542495727539 seconds[0m
+[38;21m2025-11-21 00:09:38,242 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2025-11-21 00:09:38,242 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Making QuerySet[0m
+[38;21m2025-11-21 00:09:38,242 - INFO     - BUFR2IODA_satwind_scat.py: Executing QuerySet to get ResultSet[0m
+[38;21m2025-11-21 00:09:38,242 - INFO     - BUFR2IODA_ozone_ompsnp.py: Executing QuerySet to get ResultSet[0m
+[38;21m2025-11-21 00:09:38,243 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Executing QuerySet to get ResultSet[0m
+[38;21m2025-11-21 00:09:38,343 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Executing QuerySet: get metadata[0m
+[38;21m2025-11-21 00:09:38,352 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Executing QuerySet Done![0m
+[38;21m2025-11-21 00:09:38,352 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Running time for executing QuerySet to get ResultSet : 0.122283935546875 seconds[0m
+[38;21m2025-11-21 00:09:38,352 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Creating derived variables - dateTime from hrdr[0m
+[38;21m2025-11-21 00:09:38,387 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Running time for creating derived variables : 0.035086870193481445 seconds[0m
+[38;21m2025-11-21 00:09:38,604 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Create output file: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.ADPUPA.tm00.nc[0m
+PRE-MAIN-ERROR Exception: BadValue: No valid BUFR subsets were found from your queries! Please make sure you are querying for valid subsets that exist in /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/06/atmos/gdas.t06z.satwnd.tm00.bufr_d. Otherwise there might be a problem with the BUFR file (no subsets). 
+[38;21m2025-11-21 00:09:38,633 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Return with BadValue: No valid BUFR subsets were found from your queries! Please make sure you are querying for valid subsets that exist in /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/06/atmos/gdas.t06z.satwnd.tm00.bufr_d. Otherwise there might be a problem with the BUFR file (no subsets).[0m
+[38;21m2025-11-21 00:09:38,633 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total running time: 0.4020724296569824 seconds[0m
+Warning: Query String GNAP didn't apply to subset NC005072
+[38;21m2025-11-21 00:09:38,643 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Running time for splitting and output IODA: 0.29044580459594727 seconds[0m
+[38;21m2025-11-21 00:09:38,643 - INFO     - BUFR2IODA_adpupa_prepbufr.py: All Done![0m
+[38;21m2025-11-21 00:09:38,648 - INFO     - BUFR2IODA_adpupa_prepbufr.py: Total running time: 0.42230820655822754 seconds[0m
+[38;21m2025-11-21 00:09:38,688 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Generating Application and Quality Information SEARCH:[0m
+[38;21m2025-11-21 00:09:38,688 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Dimension size of GNAP (4490,4)[0m
+[38;21m2025-11-21 00:09:38,688 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Dimension size of PCCF (4490,4)[0m
+[38;21m2025-11-21 00:09:38,689 - INFO     - BUFR2IODA_satwind_amv_ahi.py: GNAP/PCCF found for column 0[0m
+[38;21m2025-11-21 00:09:38,691 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for executing QuerySet to get ResultSet : 0.45777034759521484 seconds[0m
+[38;21m2025-11-21 00:09:38,691 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Creating derived variables[0m
+[38;21m2025-11-21 00:09:38,692 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for creating derived variables : 0.0006780624389648438 seconds[0m
+[38;21m2025-11-21 00:09:38,692 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2025-11-21 00:09:38,692 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Number of Unique satellite identifiers: 3[0m
+[38;21m2025-11-21 00:09:38,692 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Unique satellite identifiers: [206 209 223][0m
+[38;21m2025-11-21 00:09:38,693 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.satwnd.avhrr_n15.tm00.nc[0m
+[38;21m2025-11-21 00:09:38,704 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.satwnd.avhrr_n18.tm00.nc[0m
+[38;21m2025-11-21 00:09:38,714 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.satwnd.avhrr_n19.tm00.nc[0m
+[38;21m2025-11-21 00:09:38,724 - INFO     - BUFR2IODA_satwind_amv_ahi.py: All Done![0m
+[38;21m2025-11-21 00:09:38,725 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total number of observation processed : 4490[0m
+[38;21m2025-11-21 00:09:38,730 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total running time: 0.500349760055542 seconds[0m
+[38;21m2025-11-21 00:09:38,915 - INFO     - BUFR2IODA_ozone_ompsnp.py: Split data based on satellite id, Create IODA ObsSpace and Write IODA output[0m
+[38;21m2025-11-21 00:09:38,916 - INFO     - BUFR2IODA_ozone_ompsnp.py: Number of Unique satellite identifiers : 2[0m
+[38;21m2025-11-21 00:09:38,916 - INFO     - BUFR2IODA_ozone_ompsnp.py: Unique satellite identifiers: [224 225][0m
+[38;21m2025-11-21 00:09:38,922 - INFO     - BUFR2IODA_ozone_ompsnp.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.ozone.ompsnp_npp.tm00.nc[0m
+[38;21m2025-11-21 00:09:38,936 - INFO     - BUFR2IODA_ozone_ompsnp.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.ozone.ompsnp_n20.tm00.nc[0m
+[38;21m2025-11-21 00:09:38,949 - INFO     - BUFR2IODA_ozone_ompsnp.py: All Done![0m
+[38;21m2025-11-21 00:09:38,949 - INFO     - BUFR2IODA_ozone_ompsnp.py: Total number of observation processed : 0[0m
+[38;21m2025-11-21 00:09:38,952 - INFO     - BUFR2IODA_ozone_ompsnp.py: Total running time : 0.713625431060791 seconds[0m
+[38;21m2025-11-21 00:09:39,496 - INFO     - BUFR2IODA_satwind_scat.py: Creating derived variables[0m
+[38;21m2025-11-21 00:09:39,498 - INFO     - BUFR2IODA_satwind_scat.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2025-11-21 00:09:39,501 - INFO     - BUFR2IODA_satwind_scat.py: Number of Unique satellite identifiers : 2[0m
+[38;21m2025-11-21 00:09:39,501 - INFO     - BUFR2IODA_satwind_scat.py: Unique satellite identifiers : [3 5][0m
+[38;21m2025-11-21 00:09:39,515 - INFO     - BUFR2IODA_satwind_scat.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.scatwnd.ascat_metop-b.tm00.nc[0m
+[38;21m2025-11-21 00:09:39,616 - INFO     - BUFR2IODA_satwind_scat.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.scatwnd.ascat_metop-c.tm00.nc[0m
+[38;21m2025-11-21 00:09:39,700 - INFO     - BUFR2IODA_satwind_scat.py: All Done![0m
+[38;21m2025-11-21 00:09:39,700 - INFO     - BUFR2IODA_satwind_scat.py: Total number of observation processed : 240967[0m
+[38;21m2025-11-21 00:09:39,819 - INFO     - BUFR2IODA_satwind_scat.py: Total processing time : 1.5812206268310547 seconds[0m
+[38;21m2025-11-21 00:09:40,277 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for executing QuerySet to get ResultSet : 2.034966468811035 seconds[0m
+[38;21m2025-11-21 00:09:40,277 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Creating derived variables[0m
+[38;21m2025-11-21 00:09:40,279 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for creating derived variables : 0.0016274452209472656 seconds[0m
+[38;21m2025-11-21 00:09:40,279 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2025-11-21 00:09:40,279 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Number of Unique satellite identifiers: 1[0m
+[38;21m2025-11-21 00:09:40,280 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Unique satellite identifiers: [854][0m
+[38;21m2025-11-21 00:09:40,287 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.satwnd.leogeo_multi.tm00.nc[0m
+[38;21m2025-11-21 00:09:40,381 - INFO     - BUFR2IODA_satwind_amv_ahi.py: All Done![0m
+[38;21m2025-11-21 00:09:40,381 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total number of observation processed : 64365[0m
+[38;21m2025-11-21 00:09:40,482 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total running time: 2.243640184402466 seconds[0m
+Running time for creating derived variables :  0.0009777545928955078 seconds
+[38;21m2025-11-21 00:09:40,508 - INFO     - BUFR2IODA_ozone_omi.py: Split data based on satellite id, Create IODA ObsSpace and Write IODA output[0m
+[38;21m2025-11-21 00:09:40,513 - INFO     - BUFR2IODA_ozone_omi.py: Number of Unique satellite identifiers : 1[0m
+[38;21m2025-11-21 00:09:40,513 - INFO     - BUFR2IODA_ozone_omi.py: Unique satellite identifiers: [785][0m
+[38;21m2025-11-21 00:09:40,518 - INFO     - BUFR2IODA_ozone_omi.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.ozone.omi_aura.tm00.nc[0m
+[38;21m2025-11-21 00:09:40,633 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Generating Application and Quality Information SEARCH:[0m
+[38;21m2025-11-21 00:09:40,633 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Dimension size of GNAP (81332,4)[0m
+[38;21m2025-11-21 00:09:40,633 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Dimension size of PCCF (81332,4)[0m
+[38;21m2025-11-21 00:09:40,636 - INFO     - BUFR2IODA_satwind_amv_ahi.py: GNAP/PCCF found for column 1[0m
+[38;21m2025-11-21 00:09:40,675 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for executing QuerySet to get ResultSet : 2.438321828842163 seconds[0m
+[38;21m2025-11-21 00:09:40,675 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Creating derived variables[0m
+[38;21m2025-11-21 00:09:40,677 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for creating derived variables : 0.0022704601287841797 seconds[0m
+[38;21m2025-11-21 00:09:40,677 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2025-11-21 00:09:40,678 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Number of Unique satellite identifiers: 2[0m
+[38;21m2025-11-21 00:09:40,678 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Unique satellite identifiers: [224 225][0m
+[38;21m2025-11-21 00:09:40,681 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.satwnd.viirs_npp.tm00.nc[0m
+[38;21m2025-11-21 00:09:40,745 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.satwnd.viirs_n20.tm00.nc[0m
+[38;21m2025-11-21 00:09:40,825 - INFO     - BUFR2IODA_satwind_amv_ahi.py: All Done![0m
+[38;21m2025-11-21 00:09:40,826 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total number of observation processed : 81332[0m
+[38;21m2025-11-21 00:09:40,860 - INFO     - BUFR2IODA_ozone_omi.py: All Done![0m
+[38;21m2025-11-21 00:09:40,860 - INFO     - BUFR2IODA_ozone_omi.py: Total number of observation processed : 377641[0m
+[38;21m2025-11-21 00:09:40,912 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total running time: 2.6790688037872314 seconds[0m
+[38;21m2025-11-21 00:09:40,974 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Generating Application and Quality Information SEARCH:[0m
+[38;21m2025-11-21 00:09:40,974 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Dimension size of GNAP (126390,3)[0m
+[38;21m2025-11-21 00:09:40,974 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Dimension size of PCCF (126390,3)[0m
+[38;21m2025-11-21 00:09:40,977 - INFO     - BUFR2IODA_satwind_amv_ahi.py: GNAP/PCCF found for column 1[0m
+[38;21m2025-11-21 00:09:41,043 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for executing QuerySet to get ResultSet : 2.8042538166046143 seconds[0m
+[38;21m2025-11-21 00:09:41,043 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Creating derived variables[0m
+[38;21m2025-11-21 00:09:41,046 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for creating derived variables : 0.0028908252716064453 seconds[0m
+[38;21m2025-11-21 00:09:41,046 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2025-11-21 00:09:41,047 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Number of Unique satellite identifiers: 1[0m
+[38;21m2025-11-21 00:09:41,048 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Unique satellite identifiers: [174][0m
+[38;21m2025-11-21 00:09:41,062 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.satwnd.ahi_h9.tm00.nc[0m
+[38;21m2025-11-21 00:09:41,146 - INFO     - BUFR2IODA_ozone_omi.py: Total running time : 2.9154675006866455 seconds[0m
+[38;21m2025-11-21 00:09:41,264 - INFO     - BUFR2IODA_satwind_amv_ahi.py: All Done![0m
+[38;21m2025-11-21 00:09:41,264 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total number of observation processed : 126390[0m
+[38;21m2025-11-21 00:09:41,350 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total running time: 3.115337371826172 seconds[0m
+[38;21m2025-11-21 00:09:53,810 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for executing QuerySet to get ResultSet : 15.566745042800903 seconds[0m
+[38;21m2025-11-21 00:09:53,811 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Creating derived variables[0m
+[38;21m2025-11-21 00:09:53,819 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Processing time for creating derived variables : 0.008616447448730469 seconds[0m
+[38;21m2025-11-21 00:09:53,819 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2025-11-21 00:09:53,825 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Number of Unique satellite identifiers: 2[0m
+[38;21m2025-11-21 00:09:53,826 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Unique satellite identifiers: [56 57][0m
+[38;21m2025-11-21 00:09:53,843 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.satwnd.seviri_m9.tm00.nc[0m
+[38;21m2025-11-21 00:09:54,314 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.satwnd.seviri_m10.tm00.nc[0m
+[38;21m2025-11-21 00:09:54,672 - INFO     - BUFR2IODA_satwind_amv_ahi.py: All Done![0m
+[38;21m2025-11-21 00:09:54,672 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total number of observation processed : 567054[0m
+[38;21m2025-11-21 00:09:55,311 - INFO     - BUFR2IODA_satwind_amv_ahi.py: Total running time: 17.07191514968872 seconds[0m
+[38;21m2025-11-21 00:10:00,757 - INFO     - BUFR2IODA_ozone_ompstc8.py: Split data based on satellite id, Create IODA ObsSpace and Write IODA output[0m
+[38;21m2025-11-21 00:10:00,774 - INFO     - BUFR2IODA_ozone_ompstc8.py: Number of Unique satellite identifiers : 3[0m
+[38;21m2025-11-21 00:10:00,775 - INFO     - BUFR2IODA_ozone_ompstc8.py: Unique satellite identifiers: [224 225 226][0m
+[38;21m2025-11-21 00:10:00,785 - INFO     - BUFR2IODA_ozone_ompstc8.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.ozone.ompstc_npp.tm00.nc[0m
+[38;21m2025-11-21 00:10:00,846 - INFO     - BUFR2IODA_ozone_ompstc8.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.ozone.ompstc_n20.tm00.nc[0m
+[38;21m2025-11-21 00:10:00,952 - INFO     - BUFR2IODA_ozone_ompstc8.py: Do not find this satellite id in the configuration: satid = 226[0m
+[38;21m2025-11-21 00:10:00,952 - INFO     - BUFR2IODA_ozone_ompstc8.py: All Done![0m
+[38;21m2025-11-21 00:10:00,952 - INFO     - BUFR2IODA_ozone_ompstc8.py: Total number of observation processed : 191590[0m
+[38;21m2025-11-21 00:10:02,867 - INFO     - BUFR2IODA_ozone_ompstc8.py: Total running time : 24.63908815383911 seconds[0m
+[38;21m2025-11-21 00:10:08,708 - INFO     - BUFR2IODA_satwind_amv_goes.py: Processing time for executing QuerySet to get ResultSet : 30.4784517288208 seconds[0m
+[38;21m2025-11-21 00:10:08,709 - INFO     - BUFR2IODA_satwind_amv_goes.py: Creating derived variables[0m
+[38;21m2025-11-21 00:10:08,729 - INFO     - BUFR2IODA_satwind_amv_goes.py: Processing time for creating derived variables : 0.01992940902709961 seconds[0m
+[38;21m2025-11-21 00:10:08,729 - INFO     - BUFR2IODA_satwind_amv_goes.py: Create IODA ObsSpace and Write IODA output based on satellite ID[0m
+[38;21m2025-11-21 00:10:08,742 - INFO     - BUFR2IODA_satwind_amv_goes.py: Number of Unique satellite identifiers: 2[0m
+[38;21m2025-11-21 00:10:08,743 - INFO     - BUFR2IODA_satwind_amv_goes.py: Unique satellite identifiers: [270 272][0m
+[38;21m2025-11-21 00:10:08,767 - INFO     - BUFR2IODA_satwind_amv_goes.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.satwnd.abi_goes-16.tm00.nc[0m
+[38;21m2025-11-21 00:10:09,717 - INFO     - BUFR2IODA_satwind_amv_goes.py: Create output file : /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.satwnd.abi_goes-18.tm00.nc[0m
+[38;21m2025-11-21 00:10:10,962 - INFO     - BUFR2IODA_satwind_amv_goes.py: All Done![0m
+[38;21m2025-11-21 00:10:10,962 - INFO     - BUFR2IODA_satwind_amv_goes.py: Total number of observation processed : 1171433[0m
+[38;21m2025-11-21 00:10:12,074 - INFO     - BUFR2IODA_satwind_amv_goes.py: Total running time: 33.849315881729126 seconds[0m
+PRE-MAIN-INFO Building Bufr Data
+ ... Number of Unique satellite identifiers:  15
+ ... Unique satellite identifiers:  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+ ... mission_said:  [265. 266.]
+ ... Loop through unique satellite identifier ... :  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+Processing output for said:  3
+Processing output for said:  5
+Processing output for said:  42
+Processing output for said:  44
+Processing output for said:  66
+Processing output for said:  269
+Processing output for said:  750
+Processing output for said:  751
+Processing output for said:  752
+Processing output for said:  753
+Processing output for said:  754
+Processing output for said:  755
+Processing output for said:  803
+Processing output for said:  804
+Processing output for said:  825
+ ... dim =  0
+ ... ... Create OUTPUT file: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.gnssro_geoopt.tm00.nc
+ ... Number of Unique satellite identifiers:  15
+ ... Unique satellite identifiers:  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+ ... mission_said:  [42.]
+ ... Loop through unique satellite identifier ... :  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+Processing output for said:  3
+Processing output for said:  5
+Processing output for said:  42
+ ... Split data for satellite mission  tsx
+ ... Create ObsSpace for satid =  42
+ ... size location of sat mission =  16200
+Processing output for said:  44
+Processing output for said:  66
+Processing output for said:  269
+Processing output for said:  750
+Processing output for said:  751
+Processing output for said:  752
+Processing output for said:  753
+Processing output for said:  754
+Processing output for said:  755
+Processing output for said:  803
+Processing output for said:  804
+Processing output for said:  825
+ ... dim =  16200
+ ... ... Create OUTPUT file: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.gnssro_tsx.tm00.nc
+ ... Number of Unique satellite identifiers:  15
+ ... Unique satellite identifiers:  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+ ... mission_said:  [803. 804.]
+ ... Loop through unique satellite identifier ... :  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+Processing output for said:  3
+Processing output for said:  5
+Processing output for said:  42
+Processing output for said:  44
+Processing output for said:  66
+Processing output for said:  269
+Processing output for said:  750
+Processing output for said:  751
+Processing output for said:  752
+Processing output for said:  753
+Processing output for said:  754
+Processing output for said:  755
+Processing output for said:  803
+ ... Split data for satellite mission  grace
+ ... Create ObsSpace for satid =  803
+ ... size location of sat mission =  26100
+Processing output for said:  804
+ ... Split data for satellite mission  grace
+ ... Create ObsSpace for satid =  804
+ ... size location of sat mission =  26100
+Processing output for said:  825
+ ... dim =  26100
+ ... ... Create OUTPUT file: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.gnssro_grace.tm00.nc
+ ... Number of Unique satellite identifiers:  15
+ ... Unique satellite identifiers:  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+ ... mission_said:  [44.]
+ ... Loop through unique satellite identifier ... :  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+Processing output for said:  3
+Processing output for said:  5
+Processing output for said:  42
+Processing output for said:  44
+ ... Split data for satellite mission  paz
+ ... Create ObsSpace for satid =  44
+ ... size location of sat mission =  9000
+Processing output for said:  66
+Processing output for said:  269
+Processing output for said:  750
+Processing output for said:  751
+Processing output for said:  752
+Processing output for said:  753
+Processing output for said:  754
+Processing output for said:  755
+Processing output for said:  803
+Processing output for said:  804
+Processing output for said:  825
+ ... dim =  9000
+ ... ... Create OUTPUT file: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.gnssro_paz.tm00.nc
+ ... Number of Unique satellite identifiers:  15
+ ... Unique satellite identifiers:  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+ ... mission_said:  [66.]
+ ... Loop through unique satellite identifier ... :  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+Processing output for said:  3
+Processing output for said:  5
+Processing output for said:  42
+Processing output for said:  44
+Processing output for said:  66
+ ... Split data for satellite mission  s6
+ ... Create ObsSpace for satid =  66
+ ... size location of sat mission =  55500
+Processing output for said:  269
+Processing output for said:  750
+Processing output for said:  751
+Processing output for said:  752
+Processing output for said:  753
+Processing output for said:  754
+Processing output for said:  755
+Processing output for said:  803
+Processing output for said:  804
+Processing output for said:  825
+ ... dim =  55500
+ ... ... Create OUTPUT file: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.gnssro_s6.tm00.nc
+ ... Number of Unique satellite identifiers:  15
+ ... Unique satellite identifiers:  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+ ... mission_said:  [267. 268.]
+ ... Loop through unique satellite identifier ... :  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+Processing output for said:  3
+Processing output for said:  5
+Processing output for said:  42
+Processing output for said:  44
+Processing output for said:  66
+Processing output for said:  269
+Processing output for said:  750
+Processing output for said:  751
+Processing output for said:  752
+Processing output for said:  753
+Processing output for said:  754
+Processing output for said:  755
+Processing output for said:  803
+Processing output for said:  804
+Processing output for said:  825
+ ... dim =  0
+ ... ... Create OUTPUT file: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.gnssro_piq.tm00.nc
+ ... Number of Unique satellite identifiers:  15
+ ... Unique satellite identifiers:  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+ ... mission_said:  [43.]
+ ... Loop through unique satellite identifier ... :  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+Processing output for said:  3
+Processing output for said:  5
+Processing output for said:  42
+Processing output for said:  44
+Processing output for said:  66
+Processing output for said:  269
+Processing output for said:  750
+Processing output for said:  751
+Processing output for said:  752
+Processing output for said:  753
+Processing output for said:  754
+Processing output for said:  755
+Processing output for said:  803
+Processing output for said:  804
+Processing output for said:  825
+ ... dim =  0
+ ... ... Create OUTPUT file: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.gnssro_tdm.tm00.nc
+ ... Number of Unique satellite identifiers:  15
+ ... Unique satellite identifiers:  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+ ... mission_said:  [3. 4. 5.]
+ ... Loop through unique satellite identifier ... :  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+Processing output for said:  3
+ ... Split data for satellite mission  metop
+ ... Create ObsSpace for satid =  3
+ ... size location of sat mission =  83100
+Processing output for said:  5
+ ... Split data for satellite mission  metop
+ ... Create ObsSpace for satid =  5
+ ... size location of sat mission =  83100
+Processing output for said:  42
+Processing output for said:  44
+Processing output for said:  66
+Processing output for said:  269
+Processing output for said:  750
+Processing output for said:  751
+Processing output for said:  752
+Processing output for said:  753
+Processing output for said:  754
+Processing output for said:  755
+Processing output for said:  803
+Processing output for said:  804
+Processing output for said:  825
+ ... dim =  83100
+ ... ... Create OUTPUT file: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.gnssro_metop.tm00.nc
+ ... Number of Unique satellite identifiers:  15
+ ... Unique satellite identifiers:  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+ ... mission_said:  [825.]
+ ... Loop through unique satellite identifier ... :  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+Processing output for said:  3
+Processing output for said:  5
+Processing output for said:  42
+Processing output for said:  44
+Processing output for said:  66
+Processing output for said:  269
+Processing output for said:  750
+Processing output for said:  751
+Processing output for said:  752
+Processing output for said:  753
+Processing output for said:  754
+Processing output for said:  755
+Processing output for said:  803
+Processing output for said:  804
+Processing output for said:  825
+ ... Split data for satellite mission  k5
+ ... Create ObsSpace for satid =  825
+ ... size location of sat mission =  7500
+ ... dim =  7500
+ ... ... Create OUTPUT file: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.gnssro_k5.tm00.nc
+ ... Number of Unique satellite identifiers:  15
+ ... Unique satellite identifiers:  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+ ... mission_said:  [269.]
+ ... Loop through unique satellite identifier ... :  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+Processing output for said:  3
+Processing output for said:  5
+Processing output for said:  42
+Processing output for said:  44
+Processing output for said:  66
+Processing output for said:  269
+ ... Split data for satellite mission  spire
+ ... Create ObsSpace for satid =  269
+ ... size location of sat mission =  320700
+Processing output for said:  750
+Processing output for said:  751
+Processing output for said:  752
+Processing output for said:  753
+Processing output for said:  754
+Processing output for said:  755
+Processing output for said:  803
+Processing output for said:  804
+Processing output for said:  825
+ ... dim =  320700
+ ... ... Create OUTPUT file: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.gnssro_spire.tm00.nc
+ ... Number of Unique satellite identifiers:  15
+ ... Unique satellite identifiers:  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+ ... mission_said:  [750. 751. 752. 753. 754. 755.]
+ ... Loop through unique satellite identifier ... :  [3 5 42 44 66 269 750 751 752 753 754 755 803 804 825]
+Processing output for said:  3
+Processing output for said:  5
+Processing output for said:  42
+Processing output for said:  44
+Processing output for said:  66
+Processing output for said:  269
+Processing output for said:  750
+ ... Split data for satellite mission  cosmic2
+ ... Create ObsSpace for satid =  750
+ ... size location of sat mission =  444600
+Processing output for said:  751
+ ... Split data for satellite mission  cosmic2
+ ... Create ObsSpace for satid =  751
+ ... size location of sat mission =  444600
+Processing output for said:  752
+ ... Split data for satellite mission  cosmic2
+ ... Create ObsSpace for satid =  752
+ ... size location of sat mission =  444600
+Processing output for said:  753
+ ... Split data for satellite mission  cosmic2
+ ... Create ObsSpace for satid =  753
+ ... size location of sat mission =  444600
+Processing output for said:  754
+ ... Split data for satellite mission  cosmic2
+ ... Create ObsSpace for satid =  754
+ ... size location of sat mission =  444600
+Processing output for said:  755
+ ... Split data for satellite mission  cosmic2
+ ... Create ObsSpace for satid =  755
+ ... size location of sat mission =  444600
+Processing output for said:  803
+Processing output for said:  804
+Processing output for said:  825
+ ... dim =  444600
+ ... ... Create OUTPUT file: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/RUNTESTS/COMROOT/C96C48_ufs_hybatmDA_22926afd-5844/gdas.20240224/06/obs/gdas.t06z.gnssro_cosmic2.tm00.nc
+PRE-MAIN-INFO Exporting Data
+PRE-MAIN-INFO Exporting variable = timestamp
+PRE-MAIN-INFO Exporting variable = latitude
+PRE-MAIN-INFO Exporting variable = longitude
+PRE-MAIN-INFO Exporting variable = satelliteIdentifier
+PRE-MAIN-INFO Exporting variable = satelliteInstrument
+PRE-MAIN-INFO Exporting variable = fieldOfViewNumber
+PRE-MAIN-INFO Exporting variable = heightOfStation
+PRE-MAIN-INFO Exporting variable = solarZenithAngle
+PRE-MAIN-INFO Exporting variable = solarAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorZenithAngle
+PRE-MAIN-INFO Exporting variable = sensorAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorScanAngle
+PRE-MAIN-INFO Exporting variable = sensorChannelNumber
+PRE-MAIN-INFO Exporting variable = remappedBT
+PRE-MAIN-INFO RemappedBrightnessTemperatureVariable: nobs = 777600
+PRE-MAIN-INFO RemappedBrightnessTemperatureVariable: nchn = 22
+ ATMS_Spatial_Average: chechking bt_inout (original) ...
+ minval/maxval bt_inout (original) =    124.6800       313.1900    
+ ATMS_Spatial_Average: minval/maxval scanline =            1        8100
+ ATMS_Spatial_Average: chechking bt_inout (remapped) ...
+ minval/maxval bt_inout (remapped) =    130.0670      9.9999998E+10
+PRE-MAIN-INFO Exporting variable = timestamp
+PRE-MAIN-INFO Exporting variable = latitude
+PRE-MAIN-INFO Exporting variable = longitude
+PRE-MAIN-INFO Exporting variable = satelliteIdentifier
+PRE-MAIN-INFO Exporting variable = satelliteInstrument
+PRE-MAIN-INFO Exporting variable = fieldOfViewNumber
+PRE-MAIN-INFO Exporting variable = heightOfStation
+PRE-MAIN-INFO Exporting variable = solarZenithAngle
+PRE-MAIN-INFO Exporting variable = solarAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorZenithAngle
+PRE-MAIN-INFO Exporting variable = sensorAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorScanAngle
+PRE-MAIN-INFO Exporting variable = sensorChannelNumber
+PRE-MAIN-INFO Exporting variable = remappedBT
+PRE-MAIN-INFO RemappedBrightnessTemperatureVariable: nobs = 762496
+PRE-MAIN-INFO RemappedBrightnessTemperatureVariable: nchn = 22
+ ATMS_Spatial_Average: chechking bt_inout (original) ...
+ minval/maxval bt_inout (original) =    111.5400       330.0200    
+ ATMS_Spatial_Average: minval/maxval scanline =            1        8100
+ ATMS_Spatial_Average: chechking bt_inout (remapped) ...
+ minval/maxval bt_inout (remapped) =    131.7200      9.9999998E+10
+PRE-MAIN-INFO Finished [69.679s]
+PRE-MAIN-INFO Building Bufr Data
+PRE-MAIN-INFO Exporting Data
+PRE-MAIN-INFO Exporting variable = timestamp
+PRE-MAIN-INFO Exporting variable = latitude
+PRE-MAIN-INFO Exporting variable = longitude
+PRE-MAIN-INFO Exporting variable = satelliteId
+PRE-MAIN-INFO Exporting variable = sensorId
+PRE-MAIN-INFO Exporting variable = scanLineNumber
+PRE-MAIN-INFO Exporting variable = gqisFlagQual
+PRE-MAIN-INFO Exporting variable = fieldOfViewNumber
+PRE-MAIN-INFO Exporting variable = sensorScanPosition
+PRE-MAIN-INFO Exporting variable = solarZenithAngle
+PRE-MAIN-INFO Exporting variable = solarAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorZenithAngle
+PRE-MAIN-INFO Exporting variable = sensorAzimuthAngle
+PRE-MAIN-INFO Exporting variable = stationElevation
+PRE-MAIN-INFO Exporting variable = sensorViewAngle
+PRE-MAIN-INFO Exporting variable = sensorChannelNumber
+PRE-MAIN-INFO Exporting variable = fractionOfClearPixelsInFOV
+PRE-MAIN-INFO Exporting variable = spectralRadiance
+PRE-MAIN-INFO Exporting variable = timestamp
+PRE-MAIN-INFO Exporting variable = latitude
+PRE-MAIN-INFO Exporting variable = longitude
+PRE-MAIN-INFO Exporting variable = satelliteId
+PRE-MAIN-INFO Exporting variable = sensorId
+PRE-MAIN-INFO Exporting variable = scanLineNumber
+PRE-MAIN-INFO Exporting variable = gqisFlagQual
+PRE-MAIN-INFO Exporting variable = fieldOfViewNumber
+PRE-MAIN-INFO Exporting variable = sensorScanPosition
+PRE-MAIN-INFO Exporting variable = solarZenithAngle
+PRE-MAIN-INFO Exporting variable = solarAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorZenithAngle
+PRE-MAIN-INFO Exporting variable = sensorAzimuthAngle
+PRE-MAIN-INFO Exporting variable = stationElevation
+PRE-MAIN-INFO Exporting variable = sensorViewAngle
+PRE-MAIN-INFO Exporting variable = sensorChannelNumber
+PRE-MAIN-INFO Exporting variable = fractionOfClearPixelsInFOV
+PRE-MAIN-INFO Exporting variable = spectralRadiance
+PRE-MAIN-INFO Exporting variable = timestamp
+PRE-MAIN-INFO Exporting variable = latitude
+PRE-MAIN-INFO Exporting variable = longitude
+PRE-MAIN-INFO Exporting variable = satelliteId
+PRE-MAIN-INFO Exporting variable = sensorId
+PRE-MAIN-INFO Exporting variable = scanLineNumber
+PRE-MAIN-INFO Exporting variable = gqisFlagQual
+PRE-MAIN-INFO Exporting variable = fieldOfViewNumber
+PRE-MAIN-INFO Exporting variable = sensorScanPosition
+PRE-MAIN-INFO Exporting variable = solarZenithAngle
+PRE-MAIN-INFO Exporting variable = solarAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorZenithAngle
+PRE-MAIN-INFO Exporting variable = sensorAzimuthAngle
+PRE-MAIN-INFO Exporting variable = stationElevation
+PRE-MAIN-INFO Exporting variable = sensorViewAngle
+PRE-MAIN-INFO Exporting variable = sensorChannelNumber
+PRE-MAIN-INFO Exporting variable = fractionOfClearPixelsInFOV
+PRE-MAIN-INFO Exporting variable = spectralRadiance
+PRE-MAIN-INFO Finished [119.355s]
+PRE-MAIN-WARNING   Skipped category metop-a
+PRE-MAIN-INFO Building Bufr Data
+PRE-MAIN-INFO Exporting Data
+PRE-MAIN-INFO Exporting variable = timestamp
+PRE-MAIN-INFO Exporting variable = latitude
+PRE-MAIN-INFO Exporting variable = longitude
+PRE-MAIN-INFO Exporting variable = satelliteId
+PRE-MAIN-INFO Exporting variable = sensorId
+PRE-MAIN-INFO Exporting variable = scanLineNumber
+PRE-MAIN-INFO Exporting variable = fieldOfViewNumber
+PRE-MAIN-INFO Exporting variable = fieldOfRegardNumber
+PRE-MAIN-INFO Exporting variable = sensorScanPosition
+PRE-MAIN-INFO Exporting variable = solarZenithAngle
+PRE-MAIN-INFO Exporting variable = solarAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorZenithAngle
+PRE-MAIN-INFO Exporting variable = sensorAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorViewAngle
+PRE-MAIN-INFO Exporting variable = sensorChannelNumber
+PRE-MAIN-INFO Exporting variable = cloudCoverTotal
+PRE-MAIN-INFO Exporting variable = cloudTopHeight
+PRE-MAIN-INFO Exporting variable = spectralRadiance
+PRE-MAIN-INFO Exporting variable = timestamp
+PRE-MAIN-INFO Exporting variable = latitude
+PRE-MAIN-INFO Exporting variable = longitude
+PRE-MAIN-INFO Exporting variable = satelliteId
+PRE-MAIN-INFO Exporting variable = sensorId
+PRE-MAIN-INFO Exporting variable = scanLineNumber
+PRE-MAIN-INFO Exporting variable = fieldOfViewNumber
+PRE-MAIN-INFO Exporting variable = fieldOfRegardNumber
+PRE-MAIN-INFO Exporting variable = sensorScanPosition
+PRE-MAIN-INFO Exporting variable = solarZenithAngle
+PRE-MAIN-INFO Exporting variable = solarAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorZenithAngle
+PRE-MAIN-INFO Exporting variable = sensorAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorViewAngle
+PRE-MAIN-INFO Exporting variable = sensorChannelNumber
+PRE-MAIN-INFO Exporting variable = cloudCoverTotal
+PRE-MAIN-INFO Exporting variable = cloudTopHeight
+PRE-MAIN-INFO Exporting variable = spectralRadiance
+PRE-MAIN-INFO Exporting variable = timestamp
+PRE-MAIN-INFO Exporting variable = latitude
+PRE-MAIN-INFO Exporting variable = longitude
+PRE-MAIN-INFO Exporting variable = satelliteId
+PRE-MAIN-INFO Exporting variable = sensorId
+PRE-MAIN-INFO Exporting variable = scanLineNumber
+PRE-MAIN-INFO Exporting variable = fieldOfViewNumber
+PRE-MAIN-INFO Exporting variable = fieldOfRegardNumber
+PRE-MAIN-INFO Exporting variable = sensorScanPosition
+PRE-MAIN-INFO Exporting variable = solarZenithAngle
+PRE-MAIN-INFO Exporting variable = solarAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorZenithAngle
+PRE-MAIN-INFO Exporting variable = sensorAzimuthAngle
+PRE-MAIN-INFO Exporting variable = sensorViewAngle
+PRE-MAIN-INFO Exporting variable = sensorChannelNumber
+PRE-MAIN-INFO Exporting variable = cloudCoverTotal
+PRE-MAIN-INFO Exporting variable = cloudTopHeight
+PRE-MAIN-INFO Exporting variable = spectralRadiance
+PRE-MAIN-INFO Finished [216.943s]
+PRE-MAIN-WARNING   Skipped category npp
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/python-3.11.7-tdfobjd/lib/python3.11/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/python-3.11.7-tdfobjd/lib/python3.11/multiprocessing/pool.py", line 51, in starmapstar
+    return list(itertools.starmap(args[0], args[1]))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/ush/run_bufr2ioda.py", line 28, in mp_bufr_converter
+    cmd()
+  File "/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/wxflow/src/wxflow/executable.py", line 230, in __call__
+    raise ProcessError(f"Command exited with status {proc.returncode}:", long_msg)
+wxflow.executable.ProcessError: Command exited with status -9:
+'/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gsrcsr.py' '-c' '/scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gsrcsr_2024022406.json'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/ush/run_bufr2ioda.py", line 119, in <module>
+    bufr2ioda(args.current_cycle, args.RUN, args.DMPDIR, args.config_template_dir, args.COMOUT_OBS)
+  File "/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/wxflow/src/wxflow/logger.py", line 252, in wrapper
+    retval = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/ush/run_bufr2ioda.py", line 108, in bufr2ioda
+    pool.starmap(mp_bufr_converter, zip(exename, config_files))
+  File "/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/python-3.11.7-tdfobjd/lib/python3.11/multiprocessing/pool.py", line 375, in starmap
+    return self._map_async(func, iterable, starmapstar, chunksize).get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/python-3.11.7-tdfobjd/lib/python3.11/multiprocessing/pool.py", line 774, in get
+    raise self._value
+wxflow.executable.ProcessError: Command exited with status -9:
+'/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/bufr2ioda_gsrcsr.py' '-c' '/scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020/gsrcsr_2024022406.json'
++ JGLOBAL_ATM_PREP_IODA_OBS[20]export err=1
++ JGLOBAL_ATM_PREP_IODA_OBS[20]err=1
++ JGLOBAL_ATM_PREP_IODA_OBS[21]set +x
+
+    -------------------------------------------------------------
+    -- FATAL ERROR: Error executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/ush/run_bufr2ioda.py RETURN CODE 1
+    -- ABNORMAL EXIT at Fri Nov 21 00:14:47 UTC 2025 on u01c01
+    -------------------------------------------------------------
+    
+
+Currently Loaded Modules:
+  1) lmod                             50) ectrans/1.5.0
+  2) intel-oneapi-compilers/2024.2.1  51) qhull/2020.2
+  3) stack-oneapi/2024.2.1            52) atlas/0.40.0
+  4) intel-oneapi-mpi/2021.13.1       53) sp/2.5.0
+  5) stack-intel-oneapi-mpi/2021.13   54) gsl-lite/0.37.0
+  6) intel-oneapi-mkl/2024.2.1        55) libjpeg/2.1.0
+  7) glibc/2.34                       56) krb5/1.21.1-1
+  8) intel-oneapi-runtime/2024.2.1    57) libtirpc/1.3.3
+  9) sqlite/3.46.0                    58) hdf/4.2.15
+ 10) util-linux-uuid/2.40.2           59) jedi-cmake/1.4.0
+ 11) python/3.11.7                    60) libpng/1.6.37
+ 12) stack-python/3.11.7              61) libxt/1.3.0
+ 13) pigz/2.8                         62) libxmu/1.2.1
+ 14) zstd/1.5.6                       63) libxpm/3.5.17
+ 15) tar/1.34                         64) libxaw/1.0.16
+ 16) gettext/0.22.5                   65) udunits/2.2.28
+ 17) nghttp2/1.63.0                   66) ncview/2.1.9
+ 18) curl/8.10.1                      67) netcdf-cxx4/4.3.1
+ 19) zlib/1.2.13                      68) json/3.11.3
+ 20) git/2.43.5                       69) rocoto/1.3.7
+ 21) hdf5/1.14.3                      70) bacio/2.4.1
+ 22) parallel-netcdf/1.12.3           71) w3emc/2.10.0
+ 23) snappy/1.2.1                     72) prod_util/2.1.1
+ 24) c-blosc/1.21.5                   73) jasper/2.0.32
+ 25) netcdf-c/4.9.2                   74) g2/3.5.1
+ 26) nccmp/1.9.1.0                    75) ip/5.1.0
+ 27) netcdf-fortran/4.6.1             76) grib-util/1.4.0
+ 28) antlr/2.7.7                      77) py-markupsafe/2.1.3
+ 29) gsl/2.8                          78) py-jinja2/3.1.4
+ 30) nco/5.2.4                        79) py-certifi/2023.7.22
+ 31) parallelio/2.6.2                 80) py-cftime/1.0.3.4
+ 32) wget/1.21.1                      81) py-netcdf4/1.7.1.post2
+ 33) boost/1.84.0                     82) py-pybind11/2.13.5
+ 34) python-venv/1.0                  83) py-setuptools/69.2.0
+ 35) py-numpy/1.26.4                  84) py-pycodestyle/2.11.0
+ 36) bufr/12.1.0                      85) libyaml/0.2.5
+ 37) git-lfs/3.5.1                    86) py-pyyaml/6.0.2
+ 38) cmake/3.27.9                     87) py-scipy/1.14.1
+ 39) ecbuild/3.7.2                    88) py-packaging/24.1
+ 40) openjpeg/2.3.1                   89) py-six/1.16.0
+ 41) eccodes/2.33.0                   90) py-python-dateutil/2.8.2
+ 42) eigen/3.4.0                      91) py-pytz/2023.3
+ 43) openblas/0.3.27                  92) py-tzdata/2023.3
+ 44) eckit/1.28.3                     93) py-pandas/2.2.3
+ 45) fckit/0.13.2                     94) py-xarray/2024.7.0
+ 46) fiat/1.4.1                       95) py-f90nml/1.4.3
+ 47) fms/2024.02                      96) py-pip/23.1.2
+ 48) py-mpi4py/4.0.1                  97) py-click/8.1.7
+ 49) esmf/8.8.0                       98) GDAS/ursa.intel
+
+ 
+
+
+Error executing /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4151_22926afd_5844/global-workflow/ush/run_bufr2ioda.py RETURN CODE 1
+/scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48_ufs_hybatmDA_22926afd-5844/gdas.2024022406/prepatmobs.1258020
+total 200
+-rw-rw-r--+ 1 role.glopara stmp    0 Nov 21 00:09 ncepdate
+-rw-rw-r--+ 1 role.glopara stmp  543 Nov 21 00:09 snocvr_bufr_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp  526 Nov 21 00:09 sfcshp_prepbufr_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1281 Nov 21 00:09 sevcsr_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1075 Nov 21 00:09 satwnd_amv_viirs_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1523 Nov 21 00:09 satwnd_amv_seviri_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1138 Nov 21 00:09 satwnd_amv_modis_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp  878 Nov 21 00:09 satwnd_amv_leogeo_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1569 Nov 21 00:09 satwnd_amv_goes_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1230 Nov 21 00:09 satwnd_amv_avhrr_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1218 Nov 21 00:09 satwnd_amv_ahi_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1333 Nov 21 00:09 satwind_scat_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1750 Nov 21 00:09 ozone_ompstc_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1725 Nov 21 00:09 ozone_ompsnp_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1270 Nov 21 00:09 ozone_omi_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp  473 Nov 21 00:09 insitu_temp_profile_argo_2024022406.yaml
+-rw-rw-r--+ 1 role.glopara stmp  478 Nov 21 00:09 insitu_surface_trkob_2024022406.yaml
+-rw-rw-r--+ 1 role.glopara stmp  503 Nov 21 00:09 insitu_surface_dbuoyb_drifter_2024022406.yaml
+-rw-rw-r--+ 1 role.glopara stmp  503 Nov 21 00:09 insitu_surface_dbuoyb_2024022406.yaml
+-rw-rw-r--+ 1 role.glopara stmp  473 Nov 21 00:09 insitu_salt_profile_argo_2024022406.yaml
+-rw-rw-r--+ 1 role.glopara stmp  479 Nov 21 00:09 insitu_profile_xbtctd_2024022406.yaml
+-rw-rw-r--+ 1 role.glopara stmp  501 Nov 21 00:09 insitu_profile_tropical_2024022406.yaml
+-rw-rw-r--+ 1 role.glopara stmp  473 Nov 21 00:09 insitu_profile_tesac_2024022406.yaml
+-rw-rw-r--+ 1 role.glopara stmp  477 Nov 21 00:09 insitu_profile_glider_2024022406.yaml
+-rw-rw-r--+ 1 role.glopara stmp  480 Nov 21 00:09 insitu_profile_bathy_2024022406.yaml
+-rw-rw-r--+ 1 role.glopara stmp 5716 Nov 21 00:09 iasi_2024022406.yaml
+-rw-rw-r--+ 1 role.glopara stmp 1254 Nov 21 00:09 gsrcsr_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp  862 Nov 21 00:09 gnssro_tsx_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp  886 Nov 21 00:09 gnssro_tdm_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp  829 Nov 21 00:09 gnssro_spire_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp  834 Nov 21 00:09 gnssro_s6_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1091 Nov 21 00:09 gnssro_piq_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp  844 Nov 21 00:09 gnssro_paz_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1488 Nov 21 00:09 gnssro_metop_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp  867 Nov 21 00:09 gnssro_k5_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1152 Nov 21 00:09 gnssro_grace_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 1228 Nov 21 00:09 gnssro_geoopt_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 2505 Nov 21 00:09 gnssro_cosmic2_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 4236 Nov 21 00:09 gnssro_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp 5214 Nov 21 00:09 cris_2024022406.yaml
+-rw-rw-r--+ 1 role.glopara stmp  576 Nov 21 00:09 conventional_prepbufr_ps_2024022406.json
+-rw-r--r--+ 1 role.glopara stmp 1033 Nov 21 00:09 atms_beamwidth.txt
+-rw-rw-r--+ 1 role.glopara stmp 4292 Nov 21 00:09 atms_2024022406.yaml
+-rw-rw-r--+ 1 role.glopara stmp  530 Nov 21 00:09 adpupa_prepbufr_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp  602 Nov 21 00:09 adpupa_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp  526 Nov 21 00:09 adpsfc_prepbufr_2024022406.json
+-rw-rw-r--+ 1 role.glopara stmp  551 Nov 21 00:09 acft_profiles_prepbufr_2024022406.json
+cat: OUTPUT.1258572: No such file or directory
+slurmstepd: error: *** JOB 5547837 ON u01c01 CANCELLED AT 2025-11-21T00:14:47 ***
+slurmstepd: error: Detected 1 oom_kill event in StepId=5547837.batch. Some of the step tasks have been OOM Killed.
