@@ -1,0 +1,47 @@
++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_4259_a9123819_6129/global-workflow/ush/detect_machine.sh
+++ [[ -n gaeac6 ]]
+++ return
++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_4259_a9123819_6129/global-workflow/dev/ush/load_modules.sh upp
+++ [[ hxB == *x* ]]
+++ set_x=YES
+++ [[ NO == \N\O ]]
+++ echo 'Loading modules quietly...'
+Loading modules quietly...
+++ set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_4259_a9123819_6129/global-workflow/modulefiles
+
+The following have been reloaded with a version change:
+  1) PrgEnv-intel/8.5.0 => PrgEnv-intel/8.6.0
+  2) craype/2.7.30 => craype/2.7.34
+  3) libfabric/1.20.1 => libfabric/1.22.0
+
+INFO: gw_upp.gaeac6 module not available, falling back to gw_run.gaeac6
+
+Lmod is automatically replacing "intel/2025.2" with "intel-classic/2023.2.0".
+
+Lmod has detected the following error: The following module(s) are unknown:
+"libfabric/1.20.1"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "libfabric/1.20.1"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+Executing this command requires loading "libfabric/1.20.1" which failed while
+processing the following module(s):
+
+    Module fullname       Module Filename
+    ---------------       ---------------
+    stack-intel/2023.2.0  /ncrc/proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/modulefiles/Core/stack-intel/2023.2.0.lua
+    gw_run.common         /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_4259_a9123819_6129/global-workflow/modulefiles/gw_run.common.lua
+    gw_run.gaeac6         /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_4259_a9123819_6129/global-workflow/modulefiles/gw_run.gaeac6.lua
+While processing the following module(s):
+    Module fullname       Module Filename
+    ---------------       ---------------
+    stack-intel/2023.2.0  /ncrc/proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/modulefiles/Core/stack-intel/2023.2.0.lua
+    gw_run.common         /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_4259_a9123819_6129/global-workflow/modulefiles/gw_run.common.lua
+    gw_run.gaeac6         /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_4259_a9123819_6129/global-workflow/modulefiles/gw_run.gaeac6.lua
+
+FATAL ERROR: Failed to load gw_run.gaeac6
