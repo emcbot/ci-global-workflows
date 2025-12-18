@@ -1,0 +1,965 @@
++ source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/dev/ush/load_modules.sh run
+++ [[ hxB == *x* ]]
+++ set_x=YES
+++ [[ NO == \N\O ]]
+++ echo 'Loading modules quietly...'
+Loading modules quietly...
+++ set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/modulefiles
+
+Currently Loaded Modules:
+  1) lmod                             40) esmf/8.8.0
+  2) intel-oneapi-compilers/2024.2.1  41) antlr/2.7.7
+  3) stack-oneapi/2024.2.1            42) gsl/2.8
+  4) intel-oneapi-mpi/2021.13.1       43) nco/5.2.4
+  5) stack-intel-oneapi-mpi/2021.13   44) bacio/2.4.1
+  6) glibc/2.34                       45) w3emc/2.10.0
+  7) intel-oneapi-runtime/2024.2.1    46) prod_util/2.1.1
+  8) zlib/1.2.13                      47) g2/3.5.1
+  9) pigz/2.8                         48) ip/5.1.0
+ 10) zstd/1.5.6                       49) grib-util/1.4.0
+ 11) tar/1.34                         50) g2tmpl/1.13.0
+ 12) gettext/0.22.5                   51) gsi-ncdiag/1.1.2
+ 13) sqlite/3.46.0                    52) crtm-fix/2.4.0.1_emc
+ 14) util-linux-uuid/2.40.2           53) git-lfs/3.5.1
+ 15) python/3.11.7                    54) crtm/2.4.0.1
+ 16) stack-python/3.11.7              55) bufr/12.1.0
+ 17) nghttp2/1.63.0                   56) py-f90nml/1.4.3
+ 18) curl/8.10.1                      57) py-certifi/2023.7.22
+ 19) cmake/3.27.9                     58) py-cftime/1.0.3.4
+ 20) libjpeg/2.1.0                    59) py-netcdf4/1.7.1.post2
+ 21) jasper/2.0.32                    60) libyaml/0.2.5
+ 22) libpng/1.6.37                    61) py-pyyaml/6.0.2
+ 23) openjpeg/2.3.1                   62) py-markupsafe/2.1.3
+ 24) eccodes/2.33.0                   63) py-jinja2/3.1.4
+ 25) intel-oneapi-mkl/2024.2.1        64) py-pytz/2023.3
+ 26) proj/9.4.1                       65) py-tzdata/2023.3
+ 27) udunits/2.2.28                   66) py-pandas/2.2.3
+ 28) cdo/2.4.4                        67) py-six/1.16.0
+ 29) hdf5/1.14.3                      68) py-python-dateutil/2.8.2
+ 30) snappy/1.2.1                     69) py-packaging/24.1
+ 31) c-blosc/1.21.5                   70) py-setuptools/69.2.0
+ 32) netcdf-c/4.9.2                   71) py-xarray/2024.7.0
+ 33) netcdf-fortran/4.6.1             72) gw_run.common
+ 34) parallel-netcdf/1.12.3           73) g2c/2.1.0
+ 35) parallelio/2.6.2                 74) wgrib2/3.6.0
+ 36) python-venv/1.0                  75) prepobs/1.1.3
+ 37) py-mpi4py/4.0.1                  76) fit2obs/1.1.10
+ 38) py-numpy/1.26.4                  77) imagemagick/7.1.1-29
+ 39) py-pip/23.1.2                    78) gw_run.ursa
+
+ 
+
+++ [[ -d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/sorc/wxflow/src ]]
+++ PYTHONPATH=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/sorc/wxflow/src:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-xarray-2024.7.0-tg53kls/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-setuptools-69.2.0-cge4bsx/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-packaging-24.1-njbyh5r/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-python-dateutil-2.8.2-qlkqzyg/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-six-1.16.0-jkszz2g/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-pandas-2.2.3-uar3v7v/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-tzdata-2023.3-wsjtkwg/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-pytz-2023.3-cfh3tbl/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-jinja2-3.1.4-jhz55wn/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-markupsafe-2.1.3-cct5rgj/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-pyyaml-6.0.2-55i3htn/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-netcdf4-1.7.1.post2-chvc6ro/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-cftime-1.0.3.4-ljy6l3p/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-certifi-2023.7.22-5zcopi6/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-f90nml-1.4.3-7rmrgv7/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/bufr-12.1.0-dxfkpsz/lib64/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/esmf-8.8.0-hdxt3lx/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-pip-23.1.2-sjeblpd/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-numpy-1.26.4-mqxp6yv/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-mpi4py-4.0.1-plc5ydd/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/python-venv-1.0-qgjgfzk/lib/python3.11/site-packages:/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/sorc/wxflow/src:/home/role.glopara/.local/lib/python3.11/site-packages
+++ PYTHONPATH=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/sorc/wxflow/src:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-xarray-2024.7.0-tg53kls/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-setuptools-69.2.0-cge4bsx/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-packaging-24.1-njbyh5r/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-python-dateutil-2.8.2-qlkqzyg/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-six-1.16.0-jkszz2g/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-pandas-2.2.3-uar3v7v/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-tzdata-2023.3-wsjtkwg/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-pytz-2023.3-cfh3tbl/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-jinja2-3.1.4-jhz55wn/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-markupsafe-2.1.3-cct5rgj/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-pyyaml-6.0.2-55i3htn/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-netcdf4-1.7.1.post2-chvc6ro/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-cftime-1.0.3.4-ljy6l3p/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-certifi-2023.7.22-5zcopi6/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-f90nml-1.4.3-7rmrgv7/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/bufr-12.1.0-dxfkpsz/lib64/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/esmf-8.8.0-hdxt3lx/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-pip-23.1.2-sjeblpd/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-numpy-1.26.4-mqxp6yv/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-mpi4py-4.0.1-plc5ydd/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/python-venv-1.0-qgjgfzk/lib/python3.11/site-packages:/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/sorc/wxflow/src:/home/role.glopara/.local/lib/python3.11/site-packages:/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/ush/python
+++ export PYTHONPATH
+++ ulimit -S -s unlimited
+++ unset ulimit_s
+++ [[ NO == \Y\E\S ]]
++ status=0
++ (( status != 0 ))
++ export job=atmos_products
++ job=atmos_products
++ IFS=', '
++ read -r -a fhr_list
++ export FORECAST_HOUR jobid
++ for FORECAST_HOUR in "${fhr_list[@]}"
+++ printf %03d 0
++ fhr3=000
++ jobid=atmos_products_f000.62182
++ /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/dev/jobs/JGLOBAL_ATMOS_PRODUCTS
+Begin /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/dev/jobs/JGLOBAL_ATMOS_PRODUCTS at 21:23:20
+++ jjob_header.sh[46]OPTIND=1
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[50]env_job=atmos_products
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[49]read -ra configs
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[61]shift 4
+++ jjob_header.sh[63][[ -z atmos_products ]]
+++ jjob_header.sh[71]export DATA=/scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.2021122012/atmos_products_f000.62182
+++ jjob_header.sh[71]DATA=/scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.2021122012/atmos_products_f000.62182
+++ jjob_header.sh[72][[ YES == \Y\E\S ]]
+++ jjob_header.sh[73]rm -rf /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.2021122012/atmos_products_f000.62182
+++ jjob_header.sh[75]mkdir -p /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.2021122012/atmos_products_f000.62182
+++ jjob_header.sh[76]cd /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.2021122012/atmos_products_f000.62182
+++ jjob_header.sh[84]export pid=62412
+++ jjob_header.sh[84]pid=62412
+++ jjob_header.sh[85]export pgmout=OUTPUT.62412
+++ jjob_header.sh[85]pgmout=OUTPUT.62412
+++ jjob_header.sh[86]export pgmerr=errfile
+++ jjob_header.sh[86]pgmerr=errfile
+++ jjob_header.sh[89]export pgm=
+++ jjob_header.sh[89]pgm=
+++ jjob_header.sh[94]export cycle=t12z
+++ jjob_header.sh[94]cycle=t12z
+++ jjob_header.sh[95]setpdy.sh
++ setpdy.sh[20]'[' /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.2021122012/atmos_products_f000.62182 == /home/role.glopara ']'
++ setpdy.sh[25][[ ! t12z =~ t??z ]]
++ setpdy.sh[30]case $# in
++ setpdy.sh[31]dates_before_PDY=7
++ setpdy.sh[32]dates_after_PDY=7
++ setpdy.sh[50]COMDATEROOT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT
++ setpdy.sh[53]'[' -z 20211220 ']'
++ setpdy.sh[57]sed 's/[0-9]\{8\}/20211220/' /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT/date/t12z
+sed: can't read /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT/date/t12z: No such file or directory
+++ jjob_header.sh[95]true
+++ jjob_header.sh[96]source ./PDY
+/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/ush/jjob_header.sh: line 96: ./PDY: No such file or directory
+++ jjob_header.sh[96]true
+++ jjob_header.sh[101]export EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_5a190987-6509
+++ jjob_header.sh[101]EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_5a190987-6509
+++ jjob_header.sh[102]for config in "${configs[@]:-''}"
+++ jjob_header.sh[103]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/config.base
++++ config.base[6]echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]export machine=URSA
++++ config.base[9]machine=URSA
++++ config.base[12]export RUN_ENVIR=emc
++++ config.base[12]RUN_ENVIR=emc
++++ config.base[15]export ACCOUNT=fv3-cpu
++++ config.base[15]ACCOUNT=fv3-cpu
++++ config.base[16]export QUEUE=batch
++++ config.base[16]QUEUE=batch
++++ config.base[17]export QUEUE_SERVICE=batch
++++ config.base[17]QUEUE_SERVICE=batch
++++ config.base[18]export QUEUE_DTN=batch
++++ config.base[18]QUEUE_DTN=batch
++++ config.base[19]export PARTITION_BATCH=u1-compute
++++ config.base[19]PARTITION_BATCH=u1-compute
++++ config.base[20]export PARTITION_SERVICE=u1-service
++++ config.base[20]PARTITION_SERVICE=u1-service
++++ config.base[21]export PARTITION_DTN=
++++ config.base[21]PARTITION_DTN=
++++ config.base[22]export RESERVATION=
++++ config.base[22]RESERVATION=
++++ config.base[23]export CLUSTERS=
++++ config.base[23]CLUSTERS=
++++ config.base[24]export CLUSTERS_SERVICE=
++++ config.base[24]CLUSTERS_SERVICE=
++++ config.base[25]export CLUSTERS_DTN=
++++ config.base[25]CLUSTERS_DTN=
++++ config.base[28]export HPSS_PROJECT=emc-global
++++ config.base[28]HPSS_PROJECT=emc-global
++++ config.base[31]export HOMEgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow
++++ config.base[31]HOMEgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow
++++ config.base[32]export EXECgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/exec
++++ config.base[32]EXECgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/exec
++++ config.base[33]export FIXgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix
++++ config.base[33]FIXgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix
++++ config.base[34]export PARMgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/parm
++++ config.base[34]PARMgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/parm
++++ config.base[35]export SCRgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/scripts
++++ config.base[35]SCRgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/scripts
++++ config.base[36]export USHgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/ush
++++ config.base[36]USHgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/ush
++++ config.base[38]export FIXam=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/am
++++ config.base[38]FIXam=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/am
++++ config.base[39]export FIXaer=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/aer
++++ config.base[39]FIXaer=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/aer
++++ config.base[40]export FIXcpl=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/cpl
++++ config.base[40]FIXcpl=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/cpl
++++ config.base[41]export FIXlut=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/lut
++++ config.base[41]FIXlut=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/lut
++++ config.base[42]export FIXcice=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/cice
++++ config.base[42]FIXcice=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/cice
++++ config.base[43]export FIXmom=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/mom6
++++ config.base[43]FIXmom=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/mom6
++++ config.base[44]export FIXreg2grb2=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/reg2grb2
++++ config.base[44]FIXreg2grb2=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/reg2grb2
++++ config.base[45]export FIXgdas=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/gdas
++++ config.base[45]FIXgdas=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/gdas
++++ config.base[50]export PACKAGEROOT=/scratch3/NCEPDEV/global/role.glopara/nwpara
++++ config.base[50]PACKAGEROOT=/scratch3/NCEPDEV/global/role.glopara/nwpara
++++ config.base[51]export COMROOT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT
++++ config.base[51]COMROOT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT
++++ config.base[52]export COMINsyn=/scratch3/NCEPDEV/global/role.glopara/com/gfs/prod/syndat
++++ config.base[52]COMINsyn=/scratch3/NCEPDEV/global/role.glopara/com/gfs/prod/syndat
++++ config.base[53]export DMPDIR=/scratch3/NCEPDEV/global/role.glopara/dump
++++ config.base[53]DMPDIR=/scratch3/NCEPDEV/global/role.glopara/dump
++++ config.base[54]export IODADIR=/scratch3/NCEPDEV/global/role.glopara/dump_ioda
++++ config.base[54]IODADIR=/scratch3/NCEPDEV/global/role.glopara/dump_ioda
++++ config.base[55]export 'USE_IODADIR={{ USE_IODADIR }}'
++++ config.base[55]USE_IODADIR='{{ USE_IODADIR }}'
++++ config.base[59]export COMINecmwf=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ecmwf
++++ config.base[59]COMINecmwf=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ecmwf
++++ config.base[60]export COMINnam=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/nam
++++ config.base[60]COMINnam=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/nam
++++ config.base[61]export COMINukmet=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ukmet
++++ config.base[61]COMINukmet=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ukmet
++++ config.base[64]export HOMEDIR=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[64]HOMEDIR=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[65]export STMP=/scratch4/NCEPDEV/stmp/role.glopara
++++ config.base[65]STMP=/scratch4/NCEPDEV/stmp/role.glopara
++++ config.base[66]export PTMP=/scratch4/NCEPDEV/stmp/role.glopara
++++ config.base[66]PTMP=/scratch4/NCEPDEV/stmp/role.glopara
++++ config.base[67]export NOSCRUB=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[67]NOSCRUB=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[70]export BASE_GIT=/scratch3/NCEPDEV/global/role.glopara/git
++++ config.base[70]BASE_GIT=/scratch3/NCEPDEV/global/role.glopara/git
++++ config.base[73]export BASE_DATA=/scratch3/NCEPDEV/global/role.glopara/data
++++ config.base[73]BASE_DATA=/scratch3/NCEPDEV/global/role.glopara/data
++++ config.base[76]export DO_PREP_SFC=NO
++++ config.base[76]DO_PREP_SFC=NO
++++ config.base[79]export DO_GOES=NO
++++ config.base[79]DO_GOES=NO
++++ config.base[80]export DO_BUFRSND=NO
++++ config.base[80]DO_BUFRSND=NO
++++ config.base[81]export DO_GEMPAK=NO
++++ config.base[81]DO_GEMPAK=NO
++++ config.base[82]export DO_AWIPS=NO
++++ config.base[82]DO_AWIPS=NO
++++ config.base[83]export DO_NPOESS=NO
++++ config.base[83]DO_NPOESS=NO
++++ config.base[84]export DO_TRACKER=YES
++++ config.base[84]DO_TRACKER=YES
++++ config.base[85]export DO_GENESIS=YES
++++ config.base[85]DO_GENESIS=YES
++++ config.base[86]export DO_GENESIS_FSU=NO
++++ config.base[86]DO_GENESIS_FSU=NO
++++ config.base[87]export DO_VERFOZN=YES
++++ config.base[87]DO_VERFOZN=YES
++++ config.base[88]export DO_VERFRAD=YES
++++ config.base[88]DO_VERFRAD=YES
++++ config.base[89]export DO_VMINMON=YES
++++ config.base[89]DO_VMINMON=YES
++++ config.base[90]export DO_ANLSTAT=YES
++++ config.base[90]DO_ANLSTAT=YES
++++ config.base[93]export MODE=cycled
++++ config.base[93]MODE=cycled
++++ config.base[94]export DO_TEST_MODE=NO
++++ config.base[94]DO_TEST_MODE=NO
++++ config.base[103]export FIXgsi=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/gsi
++++ config.base[103]FIXgsi=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/gsi
++++ config.base[104]export HOMEpost=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow
++++ config.base[104]HOMEpost=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow
++++ config.base[105]export HOMEobsproc=/scratch3/NCEPDEV/global/role.glopara/git/obsproc/v1.2.0
++++ config.base[105]HOMEobsproc=/scratch3/NCEPDEV/global/role.glopara/git/obsproc/v1.2.0
++++ config.base[108]export NMV=/bin/mv
++++ config.base[108]NMV=/bin/mv
++++ config.base[109]export 'NLN=/bin/ln -sf'
++++ config.base[109]NLN='/bin/ln -sf'
++++ config.base[110]export VERBOSE=YES
++++ config.base[110]VERBOSE=YES
++++ config.base[111]export KEEPDATA=NO
++++ config.base[111]KEEPDATA=NO
++++ config.base[112]export DEBUG_POSTSCRIPT=NO
++++ config.base[112]DEBUG_POSTSCRIPT=NO
++++ config.base[113]export CHGRP_RSTPROD=YES
++++ config.base[113]CHGRP_RSTPROD=YES
++++ config.base[114]export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[114]CHGRP_CMD='chgrp rstprod'
++++ config.base[115]export NCDUMP=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/netcdf-c-4.9.2-idnwcbr/bin/ncdump
++++ config.base[115]NCDUMP=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/netcdf-c-4.9.2-idnwcbr/bin/ncdump
++++ config.base[116]export NCLEN=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/ush/getncdimlen
++++ config.base[116]NCLEN=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/ush/getncdimlen
++++ config.base[119]export BASE_ENV=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/env
++++ config.base[119]BASE_ENV=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/env
++++ config.base[122]export SDATE=2021122012
++++ config.base[122]SDATE=2021122012
++++ config.base[123]export EDATE=2021122100
++++ config.base[123]EDATE=2021122100
++++ config.base[124]export EXP_WARM_START=.false.
++++ config.base[124]EXP_WARM_START=.false.
++++ config.base[125]export assim_freq=6
++++ config.base[125]assim_freq=6
++++ config.base[126]export PSLOT=C96C48mx500_S2SW_cyc_gfs_5a190987-6509
++++ config.base[126]PSLOT=C96C48mx500_S2SW_cyc_gfs_5a190987-6509
++++ config.base[127]export EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_5a190987-6509
++++ config.base[127]EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_5a190987-6509
++++ config.base[128]export ROTDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_5a190987-6509
++++ config.base[128]ROTDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_5a190987-6509
++++ config.base[129]export DUMP_SUFFIX=
++++ config.base[129]DUMP_SUFFIX=
++++ config.base[130][[ 2021122012 -ge 2019092100 ]]
++++ config.base[130][[ 2021122012 -le 2019110700 ]]
++++ config.base[133]export ARCDIR=/scratch3/NCEPDEV/global/role.glopara/archive/C96C48mx500_S2SW_cyc_gfs_5a190987-6509
++++ config.base[133]ARCDIR=/scratch3/NCEPDEV/global/role.glopara/archive/C96C48mx500_S2SW_cyc_gfs_5a190987-6509
++++ config.base[134]export ATARDIR=/NCEPDEV/emc-global/1year/role.glopara/URSA/scratch/C96C48mx500_S2SW_cyc_gfs_5a190987-6509
++++ config.base[134]ATARDIR=/NCEPDEV/emc-global/1year/role.glopara/URSA/scratch/C96C48mx500_S2SW_cyc_gfs_5a190987-6509
++++ config.base[135]export 'FETCHDIR={{ FETCHDIR }}'
++++ config.base[135]FETCHDIR='{{ FETCHDIR }}'
++++ config.base[138]export envir=prod
++++ config.base[138]envir=prod
++++ config.base[139]export NET=gfs
++++ config.base[139]NET=gfs
++++ config.base[140]export RUN=gdas
++++ config.base[140]RUN=gdas
++++ config.base[143]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/config.com
+++++ config.com[4]echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[38][[ emc == \n\c\o ]]
+++++ config.com[44]COM_OBSPROC_TMPL='${DMPDIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[45]COM_OBSFORGE_TMPL='${IODADIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}'
+++++ config.com[46]COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[47]COM_TCVITAL_TMPL='${DMPDIR}/${RUN}.${YMD}/${HH}/atmos'
+++++ config.com[49]declare -rx 'COM_OBS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[50]declare -rx COM_OBSPROC_TMPL COM_RTOFS_TMPL COM_OBSFORGE_TMPL
+++++ config.com[52]COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[54]declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[56]declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[58]declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[59]declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[60]declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[61]declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[62]declare -rx 'COM_SNOW_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/snow/anlmon'
+++++ config.com[63]declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[64]declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[65]declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[66]declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[67]declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[68]declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[69]declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[70]declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[71]declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[72]declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[73]declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[74]declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[75]declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[76]declare -rx 'COM_ATMOS_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/anlmon'
+++++ config.com[77]declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[79]declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[80]declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[81]declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[82]declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[83]declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ config.com[84]declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[85]declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[86]declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[88]declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[89]declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[90]declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[91]declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[92]declare -rx 'COM_OCEAN_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/anlmon'
+++++ config.com[93]declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[94]declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[95]declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[96]declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[97]declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[99]declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[100]declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[101]declare -rx 'COM_ICE_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/anlmon'
+++++ config.com[102]declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[103]declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[104]declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[105]declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[106]declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[107]declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[108]declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[110]declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[111]declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[112]declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[113]declare -rx 'COM_CHEM_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/chem/anlmon'
+++++ config.com[114]declare -rx 'COM_CHEM_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/input'
+++++ config.com[115]declare -rx 'COM_CHEM_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/restart'
+++++ config.com[117]declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[145]export LOGSCRIPT=
++++ config.base[145]LOGSCRIPT=
++++ config.base[148]export SENDECF=NO
++++ config.base[148]SENDECF=NO
++++ config.base[149]export SENDSDM=NO
++++ config.base[149]SENDSDM=NO
++++ config.base[150]export SENDDBN_NTC=NO
++++ config.base[150]SENDDBN_NTC=NO
++++ config.base[151]export SENDDBN=NO
++++ config.base[151]SENDDBN=NO
++++ config.base[152]export DBNROOT=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/prod-util-2.1.1-nj6lim7/fakedbn
++++ config.base[152]DBNROOT=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/prod-util-2.1.1-nj6lim7/fakedbn
++++ config.base[153]export SENDAWIP=NO
++++ config.base[153]SENDAWIP=NO
++++ config.base[156]export APP=S2SW
++++ config.base[156]APP=S2SW
++++ config.base[158]shopt -s extglob
++++ config.base[161]case "${RUN}" in
++++ config.base[168]shopt -u extglob
++++ config.base[171]export DO_ATM=YES
++++ config.base[171]DO_ATM=YES
++++ config.base[172]export DO_COUPLED=NO
++++ config.base[172]DO_COUPLED=NO
++++ config.base[173]export DO_WAVE=NO
++++ config.base[173]DO_WAVE=NO
++++ config.base[174]export DO_OCN=NO
++++ config.base[174]DO_OCN=NO
++++ config.base[175]export DO_ICE=NO
++++ config.base[175]DO_ICE=NO
++++ config.base[176]DO_AERO=NO
++++ config.base[177]export DO_PREP_OBS_AERO=NO
++++ config.base[177]DO_PREP_OBS_AERO=NO
++++ config.base[178]aero_fcst_runs=gdas
++++ config.base[179]aero_anl_runs='gdas gfs'
++++ config.base[180]export DO_AERO_FCST=NO
++++ config.base[180]DO_AERO_FCST=NO
++++ config.base[181]export DO_AERO_ANL=NO
++++ config.base[181]DO_AERO_ANL=NO
++++ config.base[182][[ gdas == \g\f\s ]]
++++ config.base[185]export DOBNDPNT_WAVE=NO
++++ config.base[185]DOBNDPNT_WAVE=NO
++++ config.base[188]export FRAC_GRID=.true.
++++ config.base[188]FRAC_GRID=.true.
++++ config.base[189]export DO_NEST=NO
++++ config.base[189]DO_NEST=NO
++++ config.base[190][[ NO == \Y\E\S ]]
++++ config.base[196]export ntiles=6
++++ config.base[196]ntiles=6
++++ config.base[197]export FIXugwd=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/ugwd
++++ config.base[197]FIXugwd=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/ugwd
++++ config.base[198]export FIXorog=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/orog
++++ config.base[198]FIXorog=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/fix/orog
++++ config.base[202]export OPS_RES=C768
++++ config.base[202]OPS_RES=C768
++++ config.base[205]export LEVS=128
++++ config.base[205]LEVS=128
++++ config.base[206]export CASE=C96
++++ config.base[206]CASE=C96
++++ config.base[207]export CASE_ENS=C48
++++ config.base[207]CASE_ENS=C48
++++ config.base[208]export CASE_ANL=C96
++++ config.base[208]CASE_ANL=C96
++++ config.base[209]export CASE_HIST=C48
++++ config.base[209]CASE_HIST=C48
++++ config.base[210]export OCNRES=500
++++ config.base[210]OCNRES=500
++++ config.base[211]export ICERES=500
++++ config.base[211]ICERES=500
++++ config.base[214]case "${CASE}" in
++++ config.base[219]export waveGRD=uglo_100km
++++ config.base[219]waveGRD=uglo_100km
++++ config.base[233]case "${APP}" in
++++ config.base[249]export DO_COUPLED=YES
++++ config.base[249]DO_COUPLED=YES
++++ config.base[250]export DO_OCN=YES
++++ config.base[250]DO_OCN=YES
++++ config.base[251]export DO_ICE=YES
++++ config.base[251]DO_ICE=YES
++++ config.base[253][[ S2SW =~ A$ ]]
++++ config.base[257][[ S2SW =~ ^S2SW ]]
++++ config.base[258]export DO_WAVE=YES
++++ config.base[258]DO_WAVE=YES
++++ config.base[268][[ NO == \Y\E\S ]]
++++ config.base[278][[ gdas =~ gdas ]]
++++ config.base[279]export FHCYC=1
++++ config.base[279]FHCYC=1
++++ config.base[280]export FTSFS=10
++++ config.base[280]FTSFS=10
++++ config.base[286]export FHMIN=0
++++ config.base[286]FHMIN=0
++++ config.base[287]export FHMAX=9
++++ config.base[287]FHMAX=9
++++ config.base[288]export FHOUT=3
++++ config.base[288]FHOUT=3
++++ config.base[289]export FHOUT_OCN=3
++++ config.base[289]FHOUT_OCN=3
++++ config.base[290]export FHOUT_ICE=3
++++ config.base[290]FHOUT_ICE=3
++++ config.base[291]export FHOUT_AERO=3
++++ config.base[291]FHOUT_AERO=3
++++ config.base[294]export EUPD_CYC=both
++++ config.base[294]EUPD_CYC=both
++++ config.base[297]export INTERVAL_GFS=6
++++ config.base[297]INTERVAL_GFS=6
++++ config.base[298]export SDATE_GFS=2021122018
++++ config.base[298]SDATE_GFS=2021122018
++++ config.base[301]export FHMIN_GFS=0
++++ config.base[301]FHMIN_GFS=0
++++ config.base[302]export FHMAX_GFS=120
++++ config.base[302]FHMAX_GFS=120
++++ config.base[304]breakpnts=
++++ config.base[305]export FCST_SEGMENTS=0,120
++++ config.base[305]FCST_SEGMENTS=0,120
++++ config.base[306]export FHOUT_GFS=3
++++ config.base[306]FHOUT_GFS=3
++++ config.base[307]export FHMAX_HF_GFS=48
++++ config.base[307]FHMAX_HF_GFS=48
++++ config.base[308]export FHMAX_HF_GFS=48
++++ config.base[308]FHMAX_HF_GFS=48
++++ config.base[309]export FHOUT_HF_GFS=1
++++ config.base[309]FHOUT_HF_GFS=1
++++ config.base[312]export FHMIN_WAV=0
++++ config.base[312]FHMIN_WAV=0
++++ config.base[313]export FHOUT_WAV=1
++++ config.base[313]FHOUT_WAV=1
++++ config.base[314]export FHMAX_WAV=9
++++ config.base[314]FHMAX_WAV=9
++++ config.base[315]export FHMAX_WAV=9
++++ config.base[315]FHMAX_WAV=9
++++ config.base[316]export FHOUT_WAV_GFS=3
++++ config.base[316]FHOUT_WAV_GFS=3
++++ config.base[317]export FHMAX_WAV_GFS=120
++++ config.base[317]FHMAX_WAV_GFS=120
++++ config.base[318]export FHOUT_HF_WAV=1
++++ config.base[318]FHOUT_HF_WAV=1
++++ config.base[319]export FHMAX_HF_WAV=48
++++ config.base[319]FHMAX_HF_WAV=48
++++ config.base[320]export FHMAX_HF_WAV=48
++++ config.base[320]FHMAX_HF_WAV=48
++++ config.base[323]export FHOUT_OCN_GFS=6
++++ config.base[323]FHOUT_OCN_GFS=6
++++ config.base[324]export FHOUT_ICE_GFS=6
++++ config.base[324]FHOUT_ICE_GFS=6
++++ config.base[327]export ILPOST=1
++++ config.base[327]ILPOST=1
++++ config.base[328]((  FHMAX_HF_GFS < 120  ))
++++ config.base[329]export ILPOST=3
++++ config.base[329]ILPOST=3
++++ config.base[333]export FHMAX_GOES=180
++++ config.base[333]FHMAX_GOES=180
++++ config.base[334]export FHOUT_GOES=3
++++ config.base[334]FHOUT_GOES=3
++++ config.base[335]((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[336]export FHMAX_GOES=120
++++ config.base[336]FHMAX_GOES=120
++++ config.base[340]export restart_interval_gfs=12
++++ config.base[340]restart_interval_gfs=12
++++ config.base[345]export QUILTING=.true.
++++ config.base[345]QUILTING=.true.
++++ config.base[346]export OUTPUT_GRID=gaussian_grid
++++ config.base[346]OUTPUT_GRID=gaussian_grid
++++ config.base[347]export WRITE_DOPOST=.true.
++++ config.base[347]WRITE_DOPOST=.true.
++++ config.base[348]export WRITE_NSFLIP=.true.
++++ config.base[348]WRITE_NSFLIP=.true.
++++ config.base[351]export DOIAU=YES
++++ config.base[351]DOIAU=YES
++++ config.base[352]export IAUFHRS=3,6,9
++++ config.base[352]IAUFHRS=3,6,9
++++ config.base[353]export IAU_FHROT=3
++++ config.base[353]IAU_FHROT=3
++++ config.base[354]export IAU_DELTHRS=6
++++ config.base[354]IAU_DELTHRS=6
++++ config.base[355]export IAU_OFFSET=6
++++ config.base[355]IAU_OFFSET=6
++++ config.base[356]export DOIAU_ENKF=YES
++++ config.base[356]DOIAU_ENKF=YES
++++ config.base[357]export IAUFHRS_ENKF=3,6,9
++++ config.base[357]IAUFHRS_ENKF=3,6,9
++++ config.base[358]export IAU_DELTHRS_ENKF=6
++++ config.base[358]IAU_DELTHRS_ENKF=6
++++ config.base[361]export lobsdiag_forenkf=.true.
++++ config.base[361]lobsdiag_forenkf=.true.
++++ config.base[369]export imp_physics=8
++++ config.base[369]imp_physics=8
++++ config.base[373]export DO_JEDIATMVAR=NO
++++ config.base[373]DO_JEDIATMVAR=NO
++++ config.base[374]export DO_JEDIATMENS=NO
++++ config.base[374]DO_JEDIATMENS=NO
++++ config.base[375]export DO_JEDIOCNVAR=YES
++++ config.base[375]DO_JEDIOCNVAR=YES
++++ config.base[376]export DO_JEDISNOWDA=YES
++++ config.base[376]DO_JEDISNOWDA=YES
++++ config.base[377]export DO_MERGENSST=NO
++++ config.base[377]DO_MERGENSST=NO
++++ config.base[379][[ .false. = \.\t\r\u\e\. ]]
++++ config.base[382]export DO_STARTMEM_FROM_JEDIICE=YES
++++ config.base[382]DO_STARTMEM_FROM_JEDIICE=YES
++++ config.base[386]export DOHYBVAR=YES
++++ config.base[386]DOHYBVAR=YES
++++ config.base[387]export DOHYBVAR_OCN=YES
++++ config.base[387]DOHYBVAR_OCN=YES
++++ config.base[388]export DOLETKF_OCN=NO
++++ config.base[388]DOLETKF_OCN=NO
++++ config.base[389]export NMEM_ENS=2
++++ config.base[389]NMEM_ENS=2
++++ config.base[390]export SMOOTH_ENKF=NO
++++ config.base[390]SMOOTH_ENKF=NO
++++ config.base[391]export l4densvar=.true.
++++ config.base[391]l4densvar=.true.
++++ config.base[392]export lwrite4danl=.true.
++++ config.base[392]lwrite4danl=.true.
++++ config.base[393]export DO_CALC_INCREMENT=NO
++++ config.base[393]DO_CALC_INCREMENT=NO
++++ config.base[394]export USE_BUILD_GSINFO=YES
++++ config.base[394]USE_BUILD_GSINFO=YES
++++ config.base[395]export BUILD_GSINFO_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/parm/gsinfo
++++ config.base[395]BUILD_GSINFO_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/parm/gsinfo
++++ config.base[398]export NMEM_ENS_GFS=2
++++ config.base[398]NMEM_ENS_GFS=2
++++ config.base[399]export NMEM_ENS_GFS_OFFSET=0
++++ config.base[399]NMEM_ENS_GFS_OFFSET=0
++++ config.base[400]export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[400]DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[403][[ YES = \Y\E\S ]]
++++ config.base[404]export FHMIN_ENKF=3
++++ config.base[404]FHMIN_ENKF=3
++++ config.base[405]export FHMAX_ENKF=9
++++ config.base[405]FHMAX_ENKF=9
++++ config.base[406]export FHMAX_ENKF_GFS=12
++++ config.base[406]FHMAX_ENKF_GFS=12
++++ config.base[407]export FHOUT_ENKF_GFS=3
++++ config.base[407]FHOUT_ENKF_GFS=3
++++ config.base[408][[ .true. = \.\t\r\u\e\. ]]
++++ config.base[409]export FHOUT=1
++++ config.base[409]FHOUT=1
++++ config.base[410]export FHOUT_ENKF=1
++++ config.base[410]FHOUT_ENKF=1
++++ config.base[417][[ YES == \N\O ]]
++++ config.base[425]export ENKF_SPREAD=YES
++++ config.base[425]ENKF_SPREAD=YES
++++ config.base[428][[ gdas == \g\d\a\s ]]
++++ config.base[429]export DO_GSISOILDA=YES
++++ config.base[429]DO_GSISOILDA=YES
++++ config.base[430]export DO_LAND_IAU=.true.
++++ config.base[430]DO_LAND_IAU=.true.
++++ config.base[435]export LSOIL_INCR=2
++++ config.base[435]LSOIL_INCR=2
++++ config.base[438][[ cycled = \c\y\c\l\e\d ]]
++++ config.base[438][[ 2021122012 = \2\0\2\1\1\2\2\0\1\2 ]]
++++ config.base[438][[ .false. = \.\f\a\l\s\e\. ]]
++++ config.base[439]export IAU_OFFSET=0
++++ config.base[439]IAU_OFFSET=0
++++ config.base[440]export IAU_FHROT=0
++++ config.base[440]IAU_FHROT=0
++++ config.base[441]export IAUFHRS=6,
++++ config.base[441]IAUFHRS=6,
++++ config.base[442]export DO_LAND_IAU=.false.
++++ config.base[442]DO_LAND_IAU=.false.
++++ config.base[445][[ YES = \N\O ]]
++++ config.base[451][[ YES == \Y\E\S ]]
++++ config.base[452]export restart_interval_enkfgdas=3
++++ config.base[452]restart_interval_enkfgdas=3
++++ config.base[457]export restart_interval_enkfgfs=3
++++ config.base[457]restart_interval_enkfgfs=3
++++ config.base[459][[ YES == \Y\E\S ]]
++++ config.base[460]export restart_interval_gdas=3
++++ config.base[460]restart_interval_gdas=3
++++ config.base[466]export DONST=YES
++++ config.base[466]DONST=YES
++++ config.base[467][[ YES = \Y\E\S ]]
++++ config.base[467]export 'FNTSFA=        '
++++ config.base[467]FNTSFA='        '
++++ config.base[470]export nst_anl=.true.
++++ config.base[470]nst_anl=.true.
++++ config.base[473]export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[473]INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[476]export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[476]INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[477]export INCVARS_EFOLD=5
++++ config.base[477]INCVARS_EFOLD=5
++++ config.base[482]export netcdf_diag=.true.
++++ config.base[482]netcdf_diag=.true.
++++ config.base[483]export binary_diag=.false.
++++ config.base[483]binary_diag=.false.
++++ config.base[486]export DO_CA=YES
++++ config.base[486]DO_CA=YES
++++ config.base[489]export DO_METP=YES
++++ config.base[489]DO_METP=YES
++++ config.base[490]export DO_FIT2OBS=YES
++++ config.base[490]DO_FIT2OBS=YES
++++ config.base[493]export FHMAX_FITS=132
++++ config.base[493]FHMAX_FITS=132
++++ config.base[494][[ 132 -gt 120 ]]
++++ config.base[495]export FHMAX_FITS=120
++++ config.base[495]FHMAX_FITS=120
++++ config.base[500]export DO_FETCH_HPSS=NO
++++ config.base[500]DO_FETCH_HPSS=NO
++++ config.base[501]export DO_FETCH_LOCAL=NO
++++ config.base[501]DO_FETCH_LOCAL=NO
++++ config.base[504]export DO_ARCHCOM=YES
++++ config.base[504]DO_ARCHCOM=YES
++++ config.base[505]export ARCHCOM_TO=hpss
++++ config.base[505]ARCHCOM_TO=hpss
++++ config.base[508]export 'CLIENT_GLOBUS_UUID={{ CLIENT_GLOBUS_UUID }}'
++++ config.base[508]CLIENT_GLOBUS_UUID='{{ CLIENT_GLOBUS_UUID }}'
++++ config.base[511][[ NO = \Y\E\S ]]
++++ config.base[520][[ URSA == \U\R\S\A ]]
++++ config.base[521]export DO_METP=NO
++++ config.base[521]DO_METP=NO
++++ config.base[525]export OFFSET_START_HOUR=0
++++ config.base[525]OFFSET_START_HOUR=0
++++ config.base[528]export NUM_SND_COLLECTIVES=9
++++ config.base[528]NUM_SND_COLLECTIVES=9
++++ config.base[531][[ NO == \Y\E\S ]]
++++ config.base[539]echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[103]true
+++ jjob_header.sh[104]export err=0
+++ jjob_header.sh[104]err=0
+++ jjob_header.sh[105][[ 0 -ne 0 ]]
+++ jjob_header.sh[102]for config in "${configs[@]:-''}"
+++ jjob_header.sh[103]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/config.atmos_products
++++ config.atmos_products[6]echo 'BEGIN: config.atmos_products'
+BEGIN: config.atmos_products
++++ config.atmos_products[9]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/config.resources atmos_products
+++++ config.resources[10]((  1 != 1  ))
+++++ config.resources[34]step=atmos_products
+++++ config.resources[36]echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]case ${machine} in
+++++ config.resources[49]max_tasks_per_node=192
+++++ config.resources[50]mem_node_max=360GB
+++++ config.resources[99]export max_tasks_per_node
+++++ config.resources[101]case ${step} in
+++++ config.resources[1023]walltime=00:15:00
+++++ config.resources[1024]ntasks=24
+++++ config.resources[1025]threads_per_task=1
+++++ config.resources[1026]tasks_per_node=24
+++++ config.resources[1027]export is_exclusive=True
+++++ config.resources[1027]is_exclusive=True
+++++ config.resources[1401][[ -f /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/config.resources.URSA ]]
+++++ config.resources[1402]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/config.resources.URSA
++++++ config.resources.URSA[5]case ${step} in
+++++ config.resources[1406]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1407]run_resource_var=threads_per_task_gdas
+++++ config.resources[1408][[ -n '' ]]
+++++ config.resources[1410][[ -n 0 ]]
+++++ config.resources[1411]export threads_per_task
+++++ config.resources[1406]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1407]run_resource_var=ntasks_gdas
+++++ config.resources[1408][[ -n '' ]]
+++++ config.resources[1410][[ -n 0 ]]
+++++ config.resources[1411]export ntasks
+++++ config.resources[1406]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1407]run_resource_var=tasks_per_node_gdas
+++++ config.resources[1408][[ -n '' ]]
+++++ config.resources[1410][[ -n 0 ]]
+++++ config.resources[1411]export tasks_per_node
+++++ config.resources[1406]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1407]run_resource_var=NTASKS_gdas
+++++ config.resources[1408][[ -n '' ]]
+++++ config.resources[1410][[ -n '' ]]
+++++ config.resources[1406]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1407]run_resource_var=memory_gdas
+++++ config.resources[1408][[ -n '' ]]
+++++ config.resources[1410][[ -n '' ]]
+++++ config.resources[1406]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1407]run_resource_var=walltime_gdas
+++++ config.resources[1408][[ -n '' ]]
+++++ config.resources[1410][[ -n 0 ]]
+++++ config.resources[1411]export walltime
+++++ config.resources[1415]echo 'END: config.resources'
+END: config.resources
++++ config.atmos_products[12]export MAX_TASKS=25
++++ config.atmos_products[12]MAX_TASKS=25
++++ config.atmos_products[14][[ gdas == \g\d\a\s ]]
++++ config.atmos_products[15]export FHOUT_PGBS=1
++++ config.atmos_products[15]FHOUT_PGBS=1
++++ config.atmos_products[16]export FLXGF=NO
++++ config.atmos_products[16]FLXGF=NO
++++ config.atmos_products[17]export WGNE=NO
++++ config.atmos_products[17]WGNE=NO
++++ config.atmos_products[18]export FHMAX_WGNE=0
++++ config.atmos_products[18]FHMAX_WGNE=0
++++ config.atmos_products[27]export downset=2
++++ config.atmos_products[27]downset=2
++++ config.atmos_products[28]export paramlista=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/parm/product/gfs.fFFF.paramlist.a.txt
++++ config.atmos_products[28]paramlista=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/parm/product/gfs.fFFF.paramlist.a.txt
++++ config.atmos_products[29]export paramlista_anl=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/parm/product/gfs.anl.paramlist.a.txt
++++ config.atmos_products[29]paramlista_anl=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/parm/product/gfs.anl.paramlist.a.txt
++++ config.atmos_products[30]export paramlista_f000=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/parm/product/gfs.f000.paramlist.a.txt
++++ config.atmos_products[30]paramlista_f000=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/parm/product/gfs.f000.paramlist.a.txt
++++ config.atmos_products[31]export paramlistb=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/parm/product/gfs.fFFF.paramlist.b.txt
++++ config.atmos_products[31]paramlistb=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/parm/product/gfs.fFFF.paramlist.b.txt
++++ config.atmos_products[33]echo 'END: config.atmos_products'
+END: config.atmos_products
+++ jjob_header.sh[103]true
+++ jjob_header.sh[104]export err=0
+++ jjob_header.sh[104]err=0
+++ jjob_header.sh[105][[ 0 -ne 0 ]]
+++ jjob_header.sh[113]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/env/URSA.env atmos_products
++++ URSA.env[3][[ 1 -ne 1 ]]
++++ URSA.env[10]step=atmos_products
++++ URSA.env[12]export 'launcher=srun -l --export=ALL --hint=nomultithread --distribution=block:block'
++++ URSA.env[12]launcher='srun -l --export=ALL --hint=nomultithread --distribution=block:block'
++++ URSA.env[13]export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ URSA.env[13]mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ URSA.env[18]export OMP_STACKSIZE=2048000
++++ URSA.env[18]OMP_STACKSIZE=2048000
++++ URSA.env[19]export NTHSTACK=1024000000
++++ URSA.env[19]NTHSTACK=1024000000
++++ URSA.env[22][[ -n 6485860 ]]
++++ URSA.env[23]ulimit -s unlimited
++++ URSA.env[24]ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 1542205
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 385744896
+open files                          (-n) 131072
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) unlimited
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 1542205
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
++++ URSA.env[29][[ -n 24 ]]
++++ URSA.env[29][[ -n 192 ]]
++++ URSA.env[29][[ -n 24 ]]
++++ URSA.env[30]max_threads_per_task=8
++++ URSA.env[31]NTHREADSmax=1
++++ URSA.env[32]NTHREADS1=1
++++ URSA.env[33][[ 1 -gt 8 ]]
++++ URSA.env[36][[ 1 -gt 8 ]]
++++ URSA.env[39]APRUN_default='srun -l --export=ALL --hint=nomultithread --distribution=block:block -n 24'
++++ URSA.env[45][[ atmos_products = \p\r\e\p ]]
++++ URSA.env[45][[ atmos_products = \p\r\e\p\b\u\f\r ]]
++++ URSA.env[52][[ atmos_products = \p\r\e\p\_\e\m\i\s\s\i\o\n\s ]]
++++ URSA.env[57][[ atmos_products = \w\a\v\e\i\n\i\t ]]
++++ URSA.env[57][[ atmos_products = \w\a\v\e\p\r\e\p ]]
++++ URSA.env[57][[ atmos_products = \w\a\v\e\p\o\s\t\s\b\s ]]
++++ URSA.env[57][[ atmos_products = \w\a\v\e\p\o\s\t\b\n\d\p\n\t ]]
++++ URSA.env[57][[ atmos_products = \w\a\v\e\p\o\s\t\b\n\d\p\n\t\b\l\l ]]
++++ URSA.env[57][[ atmos_products = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ URSA.env[57][[ atmos_products = \w\a\v\e\_\s\t\a\t ]]
++++ URSA.env[57][[ atmos_products = \w\a\v\e\_\s\t\a\t\_\p\n\t ]]
++++ URSA.env[64][[ atmos_products = \a\t\m\a\n\l\v\a\r ]]
++++ URSA.env[69][[ atmos_products = \a\t\m\e\n\s\a\n\l\o\b\s ]]
++++ URSA.env[74][[ atmos_products = \a\t\m\e\n\s\a\n\l\s\o\l ]]
++++ URSA.env[79][[ atmos_products = \a\t\m\e\n\s\a\n\l\l\e\t\k\f ]]
++++ URSA.env[84][[ atmos_products = \a\t\m\e\n\s\a\n\l\f\v\3\i\n\c ]]
++++ URSA.env[89][[ atmos_products = \a\e\r\o\a\n\l\v\a\r ]]
++++ URSA.env[96][[ atmos_products = \a\e\r\o\a\n\l\g\e\n\b ]]
++++ URSA.env[101][[ atmos_products = \a\t\m\a\n\l\f\v\3\i\n\c ]]
++++ URSA.env[106][[ atmos_products = \a\n\l\s\t\a\t ]]
++++ URSA.env[111][[ atmos_products = \s\n\o\w\a\n\l ]]
++++ URSA.env[120][[ atmos_products = \e\s\n\o\w\a\n\l ]]
++++ URSA.env[129][[ atmos_products = \m\a\r\i\n\e\b\m\a\t ]]
++++ URSA.env[134][[ atmos_products = \m\a\r\i\n\e\a\n\l\v\a\r ]]
++++ URSA.env[139][[ atmos_products = \m\a\r\i\n\e\a\n\l\c\h\k\p\t ]]
++++ URSA.env[146][[ atmos_products = \m\a\r\i\n\e\a\n\l\e\c\e\n ]]
++++ URSA.env[151][[ atmos_products = \m\a\r\i\n\e\a\n\l\l\e\t\k\f ]]
++++ URSA.env[156][[ atmos_products = \e\c\e\n\_\f\v\3\j\e\d\i ]]
++++ URSA.env[162][[ atmos_products = \a\n\a\l\c\a\l\c\_\f\v\3\j\e\d\i ]]
++++ URSA.env[167][[ atmos_products = \a\n\a\l ]]
++++ URSA.env[167][[ atmos_products = \a\n\a\l\c\a\l\c ]]
++++ URSA.env[196][[ atmos_products = \a\n\a\l\d\i\a\g ]]
++++ URSA.env[196][[ atmos_products = \e\d\i\a\g ]]
++++ URSA.env[200][[ atmos_products = \o\f\f\l\i\n\e\a\n\l ]]
++++ URSA.env[214][[ atmos_products = \s\f\c\a\n\l ]]
++++ URSA.env[223][[ atmos_products = \e\o\b\s ]]
++++ URSA.env[235][[ atmos_products = \e\u\p\d ]]
++++ URSA.env[244][[ atmos_products = \f\c\s\t ]]
++++ URSA.env[244][[ atmos_products = \e\f\c\s ]]
++++ URSA.env[252][[ atmos_products = \u\p\p ]]
++++ URSA.env[257][[ atmos_products = \a\t\m\o\s\_\p\r\o\d\u\c\t\s ]]
++++ URSA.env[259]export USE_CFP=YES
++++ URSA.env[259]USE_CFP=YES
+++ jjob_header.sh[113]true
+++ jjob_header.sh[114]export err=0
+++ jjob_header.sh[114]err=0
+++ jjob_header.sh[115][[ 0 -ne 0 ]]
++ JGLOBAL_ATMOS_PRODUCTS[10]YMD=20211220
++ JGLOBAL_ATMOS_PRODUCTS[10]HH=12
++ JGLOBAL_ATMOS_PRODUCTS[10]declare_from_tmpl -rx COMIN_ATMOS_ANALYSIS:COM_ATMOS_ANALYSIS_TMPL COMIN_ATMOS_HISTORY:COM_ATMOS_HISTORY_TMPL COMIN_ATMOS_MASTER:COM_ATMOS_MASTER_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMIN_ATMOS_ANALYSIS=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.20211220/12//analysis/atmos
+declare_from_tmpl :: COMIN_ATMOS_HISTORY=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.20211220/12//model/atmos/history
+declare_from_tmpl :: COMIN_ATMOS_MASTER=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.20211220/12//model/atmos/master
++ JGLOBAL_ATMOS_PRODUCTS[15]for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[16]prod_dir=COMOUT_ATMOS_GRIB_0p25
++ JGLOBAL_ATMOS_PRODUCTS[17]GRID=0p25
++ JGLOBAL_ATMOS_PRODUCTS[17]YMD=20211220
++ JGLOBAL_ATMOS_PRODUCTS[17]HH=12
++ JGLOBAL_ATMOS_PRODUCTS[17]declare_from_tmpl -rx COMOUT_ATMOS_GRIB_0p25:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMOUT_ATMOS_GRIB_0p25=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.20211220/12//products/atmos/grib2/0p25
++ JGLOBAL_ATMOS_PRODUCTS[18]mkdir -m 775 -p /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.20211220/12//products/atmos/grib2/0p25
++ JGLOBAL_ATMOS_PRODUCTS[15]for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[16]prod_dir=COMOUT_ATMOS_GRIB_0p50
++ JGLOBAL_ATMOS_PRODUCTS[17]GRID=0p50
++ JGLOBAL_ATMOS_PRODUCTS[17]YMD=20211220
++ JGLOBAL_ATMOS_PRODUCTS[17]HH=12
++ JGLOBAL_ATMOS_PRODUCTS[17]declare_from_tmpl -rx COMOUT_ATMOS_GRIB_0p50:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMOUT_ATMOS_GRIB_0p50=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.20211220/12//products/atmos/grib2/0p50
++ JGLOBAL_ATMOS_PRODUCTS[18]mkdir -m 775 -p /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.20211220/12//products/atmos/grib2/0p50
++ JGLOBAL_ATMOS_PRODUCTS[15]for grid in '0p25' '0p50' '1p00'
++ JGLOBAL_ATMOS_PRODUCTS[16]prod_dir=COMOUT_ATMOS_GRIB_1p00
++ JGLOBAL_ATMOS_PRODUCTS[17]GRID=1p00
++ JGLOBAL_ATMOS_PRODUCTS[17]YMD=20211220
++ JGLOBAL_ATMOS_PRODUCTS[17]HH=12
++ JGLOBAL_ATMOS_PRODUCTS[17]declare_from_tmpl -rx COMOUT_ATMOS_GRIB_1p00:COM_ATMOS_GRIB_GRID_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[39]set +x
+declare_from_tmpl :: COMOUT_ATMOS_GRIB_1p00=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.20211220/12//products/atmos/grib2/1p00
++ JGLOBAL_ATMOS_PRODUCTS[18]mkdir -m 775 -p /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.20211220/12//products/atmos/grib2/1p00
++ JGLOBAL_ATMOS_PRODUCTS[22]export PREFIX=gdas.t12z.
++ JGLOBAL_ATMOS_PRODUCTS[22]PREFIX=gdas.t12z.
++ JGLOBAL_ATMOS_PRODUCTS[26]/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/scripts/exglobal_atmos_products.sh
++ bash[8]'[' -z '' ']'
++ bash[9]case "$-" in
++ bash[12]__lmod_vx=x
++ bash[16]'[' -n x ']'
++ bash[16]set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for this output (/apps/lmod/lmod/init/bash)
+Shell debugging restarted
++ bash[197]unset __lmod_vx
++ exglobal_atmos_products.sh[3]cd /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.2021122012/atmos_products_f000.62182
++ exglobal_atmos_products.sh[7][[ 0 -le 0 ]]
++ exglobal_atmos_products.sh[8][[ 0 -lt 0 ]]
++ exglobal_atmos_products.sh[15][[ 0 -eq 0 ]]
+++ exglobal_atmos_products.sh[16]printf f%03d 0
++ exglobal_atmos_products.sh[16]fhr3=f000
++ exglobal_atmos_products.sh[18]paramlista=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/parm/product/gfs.f000.paramlist.a.txt
+/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4328_5a190987_6509/global-workflow/scripts/exglobal_atmos_products.sh: line 20: paramlistb_f000: unbound variable
++ JGLOBAL_ATMOS_PRODUCTS[27]export err=1
++ JGLOBAL_ATMOS_PRODUCTS[27]err=1
++ JGLOBAL_ATMOS_PRODUCTS[28][[ 1 -ne 0 ]]
++ JGLOBAL_ATMOS_PRODUCTS[29]err_exit
++ preamble.sh[117]set +eux
+
+    -------------------------------------------------------------
+    -- FATAL ERROR: Job atmos_products_f000.62182 failed RETURN CODE 1
+    -- ABNORMAL EXIT at Thu Dec 18 21:23:27 UTC 2025 on u02c02
+    -------------------------------------------------------------
+    
+
+Currently Loaded Modules:
+  1) lmod                             40) esmf/8.8.0
+  2) intel-oneapi-compilers/2024.2.1  41) antlr/2.7.7
+  3) stack-oneapi/2024.2.1            42) gsl/2.8
+  4) intel-oneapi-mpi/2021.13.1       43) nco/5.2.4
+  5) stack-intel-oneapi-mpi/2021.13   44) bacio/2.4.1
+  6) glibc/2.34                       45) w3emc/2.10.0
+  7) intel-oneapi-runtime/2024.2.1    46) prod_util/2.1.1
+  8) zlib/1.2.13                      47) g2/3.5.1
+  9) pigz/2.8                         48) ip/5.1.0
+ 10) zstd/1.5.6                       49) grib-util/1.4.0
+ 11) tar/1.34                         50) g2tmpl/1.13.0
+ 12) gettext/0.22.5                   51) gsi-ncdiag/1.1.2
+ 13) sqlite/3.46.0                    52) crtm-fix/2.4.0.1_emc
+ 14) util-linux-uuid/2.40.2           53) git-lfs/3.5.1
+ 15) python/3.11.7                    54) crtm/2.4.0.1
+ 16) stack-python/3.11.7              55) bufr/12.1.0
+ 17) nghttp2/1.63.0                   56) py-f90nml/1.4.3
+ 18) curl/8.10.1                      57) py-certifi/2023.7.22
+ 19) cmake/3.27.9                     58) py-cftime/1.0.3.4
+ 20) libjpeg/2.1.0                    59) py-netcdf4/1.7.1.post2
+ 21) jasper/2.0.32                    60) libyaml/0.2.5
+ 22) libpng/1.6.37                    61) py-pyyaml/6.0.2
+ 23) openjpeg/2.3.1                   62) py-markupsafe/2.1.3
+ 24) eccodes/2.33.0                   63) py-jinja2/3.1.4
+ 25) intel-oneapi-mkl/2024.2.1        64) py-pytz/2023.3
+ 26) proj/9.4.1                       65) py-tzdata/2023.3
+ 27) udunits/2.2.28                   66) py-pandas/2.2.3
+ 28) cdo/2.4.4                        67) py-six/1.16.0
+ 29) hdf5/1.14.3                      68) py-python-dateutil/2.8.2
+ 30) snappy/1.2.1                     69) py-packaging/24.1
+ 31) c-blosc/1.21.5                   70) py-setuptools/69.2.0
+ 32) netcdf-c/4.9.2                   71) py-xarray/2024.7.0
+ 33) netcdf-fortran/4.6.1             72) gw_run.common
+ 34) parallel-netcdf/1.12.3           73) g2c/2.1.0
+ 35) parallelio/2.6.2                 74) wgrib2/3.6.0
+ 36) python-venv/1.0                  75) prepobs/1.1.3
+ 37) py-mpi4py/4.0.1                  76) fit2obs/1.1.10
+ 38) py-numpy/1.26.4                  77) imagemagick/7.1.1-29
+ 39) py-pip/23.1.2                    78) gw_run.ursa
+
+ 
+
+
+Job atmos_products_f000.62182 failed RETURN CODE 1
+/scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_5a190987-6509/gdas.2021122012/atmos_products_f000.62182
+total 0
+-rw-rw-r--+ 1 role.glopara stmp 0 Dec 18 21:23 ncepdate
+cat: OUTPUT.62412: No such file or directory
+slurmstepd: error: *** JOB 6485860 ON u02c02 CANCELLED AT 2025-12-18T21:23:27 ***
