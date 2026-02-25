@@ -1,0 +1,2136 @@
++ source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/ush/detect_machine.sh
+++ [[ -n hera ]]
+++ return
++ [[ hera == \w\c\o\s\s\2 ]]
++ source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/dev/ush/load_modules.sh run
+++ [[ hxB == *x* ]]
+++ set_x=YES
+++ [[ NO == \N\O ]]
+++ echo 'Loading modules quietly...'
+Loading modules quietly...
+++ set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/modulefiles
+
+Currently Loaded Modules:
+  1) contrib                         42) esmf/8.8.0
+  2) stack-oneapi/2024.2.1           43) antlr/2.7.7
+  3) tbb/2024.2.1                    44) gsl/2.8
+  4) compiler-rt/2024.2.1            45) nco/5.2.4
+  5) intel/2024.2.1                  46) bacio/2.4.1
+  6) impi/2024.2.1                   47) w3emc/2.10.0
+  7) stack-intel-oneapi-mpi/2021.13  48) prod_util/2.1.1
+  8) glibc/2.28                      49) g2/3.5.1
+  9) intel-oneapi-runtime/2024.2.1   50) ip/5.1.0
+ 10) tar/1.26                        51) grib-util/1.4.0
+ 11) gettext/0.22.5                  52) g2tmpl/1.13.0
+ 12) zlib/1.2.11                     53) gsi-ncdiag/1.1.2
+ 13) sqlite/3.46.0                   54) crtm-fix/2.4.0.1_emc
+ 14) util-linux-uuid/2.40.2          55) git-lfs/2.10.0
+ 15) python/3.11.7                   56) crtm/2.4.0.1
+ 16) stack-python/3.11.7             57) bufr/12.1.0
+ 17) nghttp2/1.63.0                  58) py-f90nml/1.4.3
+ 18) curl/8.10.1                     59) py-certifi/2023.7.22
+ 19) cmake/3.27.9                    60) py-cftime/1.0.3.4
+ 20) libjpeg/2.1.0                   61) py-netcdf4/1.7.1.post2
+ 21) jasper/2.0.32                   62) libyaml/0.2.5
+ 22) libpng/1.6.37                   63) py-pyyaml/6.0.2
+ 23) openjpeg/2.3.1                  64) py-markupsafe/2.1.3
+ 24) eccodes/2.33.0                  65) py-jinja2/3.1.4
+ 25) fftw/3.3.10                     66) py-pytz/2023.3
+ 26) proj/9.4.1                      67) py-tzdata/2023.3
+ 27) udunits/2.2.28                  68) py-pandas/2.2.3
+ 28) cdo/2.3.0                       69) py-six/1.16.0
+ 29) hdf5/1.14.3                     70) py-python-dateutil/2.8.2
+ 30) snappy/1.2.1                    71) py-packaging/24.1
+ 31) zstd/1.5.6                      72) py-setuptools/69.2.0
+ 32) c-blosc/1.21.5                  73) py-xarray/2024.7.0
+ 33) netcdf-c/4.9.2                  74) gw_run.common
+ 34) netcdf-fortran/4.6.1            75) hpss/hpss
+ 35) parallel-netcdf/1.12.3          76) gempak/7.17.0
+ 36) parallelio/2.6.2                77) perl/5.38.0
+ 37) python-venv/1.0                 78) prepobs/1.1.3
+ 38) py-mpi4py/4.0.1                 79) fit2obs/1.1.10
+ 39) openblas/0.3.24                 80) imagemagick/7.1.1-11
+ 40) py-numpy/1.26.4                 81) gw_run.hera
+ 41) py-pip/23.1.2
+
+ 
+
+++ ulimit -S -s unlimited
+++ unset ulimit_s
+++ [[ NO == \Y\E\S ]]
++ status=0
++ [[ 0 -ne 0 ]]
++ export job=fcst
++ job=fcst
++ export jobid=fcst.1424682
++ jobid=fcst.1424682
++ /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/dev/jobs/JGLOBAL_FORECAST
+Begin /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/dev/jobs/JGLOBAL_FORECAST at 21:20:36
+++ jjob_header.sh[46]OPTIND=1
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[50]env_job=fcst
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[49]read -ra configs
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[61]shift 4
+++ jjob_header.sh[63][[ -z fcst ]]
+++ jjob_header.sh[71]export DATA=/scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682
+++ jjob_header.sh[71]DATA=/scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682
+++ jjob_header.sh[72][[ YES == \Y\E\S ]]
+++ jjob_header.sh[73]rm -rf /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682
+++ jjob_header.sh[75]mkdir -p /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682
+++ jjob_header.sh[76]cd /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682
+++ jjob_header.sh[84]export pid=1424952
+++ jjob_header.sh[84]pid=1424952
+++ jjob_header.sh[85]export pgmout=OUTPUT.1424952
+++ jjob_header.sh[85]pgmout=OUTPUT.1424952
+++ jjob_header.sh[86]export pgmerr=errfile
+++ jjob_header.sh[86]pgmerr=errfile
+++ jjob_header.sh[89]export pgm=
+++ jjob_header.sh[89]pgm=
+++ jjob_header.sh[94]export cycle=t12z
+++ jjob_header.sh[94]cycle=t12z
+++ jjob_header.sh[95]setpdy.sh
++ setpdy.sh[20]'[' /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682 == /home/role.glopara ']'
++ setpdy.sh[25][[ ! t12z =~ t??z ]]
++ setpdy.sh[30]case $# in
++ setpdy.sh[31]dates_before_PDY=7
++ setpdy.sh[32]dates_after_PDY=7
++ setpdy.sh[50]COMDATEROOT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT
++ setpdy.sh[53]'[' -z 20211220 ']'
++ setpdy.sh[57]sed 's/[0-9]\{8\}/20211220/' /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/date/t12z
+sed: can't read /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/date/t12z: No such file or directory
+++ jjob_header.sh[95]true
+++ jjob_header.sh[96]source ./PDY
+/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/ush/jjob_header.sh: line 96: ./PDY: No such file or directory
+++ jjob_header.sh[96]true
+++ jjob_header.sh[101]export EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/EXPDIR/C96_gcafs_cycled_733bbf3e-9636
+++ jjob_header.sh[101]EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/EXPDIR/C96_gcafs_cycled_733bbf3e-9636
+++ jjob_header.sh[102]for config in "${configs[@]:-''}"
+++ jjob_header.sh[103]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/EXPDIR/C96_gcafs_cycled_733bbf3e-9636/config.base
++++ config.base[6]echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]export machine=HERA
++++ config.base[9]machine=HERA
++++ config.base[12]export RUN_ENVIR=emc
++++ config.base[12]RUN_ENVIR=emc
++++ config.base[15]export ACCOUNT=fv3-cpu
++++ config.base[15]ACCOUNT=fv3-cpu
++++ config.base[16]export QUEUE=batch
++++ config.base[16]QUEUE=batch
++++ config.base[17]export QUEUE_SERVICE=batch
++++ config.base[17]QUEUE_SERVICE=batch
++++ config.base[18]export QUEUE_DTN=batch
++++ config.base[18]QUEUE_DTN=batch
++++ config.base[19]export PARTITION_BATCH=hera
++++ config.base[19]PARTITION_BATCH=hera
++++ config.base[20]export PARTITION_SERVICE=service
++++ config.base[20]PARTITION_SERVICE=service
++++ config.base[21]export PARTITION_DTN=
++++ config.base[21]PARTITION_DTN=
++++ config.base[22]export RESERVATION=
++++ config.base[22]RESERVATION=
++++ config.base[23]export CLUSTERS=
++++ config.base[23]CLUSTERS=
++++ config.base[24]export CLUSTERS_SERVICE=
++++ config.base[24]CLUSTERS_SERVICE=
++++ config.base[25]export CLUSTERS_DTN=
++++ config.base[25]CLUSTERS_DTN=
++++ config.base[28]export HPSS_PROJECT=emc-global
++++ config.base[28]HPSS_PROJECT=emc-global
++++ config.base[31]export HOMEgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow
++++ config.base[31]HOMEgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow
++++ config.base[32]export EXECgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/exec
++++ config.base[32]EXECgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/exec
++++ config.base[33]export FIXgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix
++++ config.base[33]FIXgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix
++++ config.base[34]export PARMgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm
++++ config.base[34]PARMgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm
++++ config.base[35]export SCRgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/scripts
++++ config.base[35]SCRgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/scripts
++++ config.base[36]export USHgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/ush
++++ config.base[36]USHgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/ush
++++ config.base[38]export FIXam=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am
++++ config.base[38]FIXam=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am
++++ config.base[39]export FIXaer=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/aer
++++ config.base[39]FIXaer=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/aer
++++ config.base[40]export FIXcpl=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/cpl
++++ config.base[40]FIXcpl=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/cpl
++++ config.base[41]export FIXlut=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/lut
++++ config.base[41]FIXlut=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/lut
++++ config.base[42]export FIXcice=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/cice
++++ config.base[42]FIXcice=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/cice
++++ config.base[43]export FIXmom=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/mom6
++++ config.base[43]FIXmom=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/mom6
++++ config.base[44]export FIXreg2grb2=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/reg2grb2
++++ config.base[44]FIXreg2grb2=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/reg2grb2
++++ config.base[45]export FIXgdas=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/gdas
++++ config.base[45]FIXgdas=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/gdas
++++ config.base[50]export PACKAGEROOT=/scratch3/NCEPDEV/global/role.glopara/nwpara
++++ config.base[50]PACKAGEROOT=/scratch3/NCEPDEV/global/role.glopara/nwpara
++++ config.base[51]export COMROOT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT
++++ config.base[51]COMROOT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT
++++ config.base[52]export COMINsyn=/scratch3/NCEPDEV/global/role.glopara/com/gfs/prod/syndat
++++ config.base[52]COMINsyn=/scratch3/NCEPDEV/global/role.glopara/com/gfs/prod/syndat
++++ config.base[53]export DMPDIR=/scratch3/NCEPDEV/global/role.glopara/dump
++++ config.base[53]DMPDIR=/scratch3/NCEPDEV/global/role.glopara/dump
++++ config.base[54]export IODADIR=/scratch3/NCEPDEV/global/role.glopara/dump_ioda
++++ config.base[54]IODADIR=/scratch3/NCEPDEV/global/role.glopara/dump_ioda
++++ config.base[55]export USE_IODADIR=YES
++++ config.base[55]USE_IODADIR=YES
++++ config.base[59]export COMINecmwf=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ecmwf
++++ config.base[59]COMINecmwf=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ecmwf
++++ config.base[60]export COMINnam=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/nam
++++ config.base[60]COMINnam=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/nam
++++ config.base[61]export COMINukmet=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ukmet
++++ config.base[61]COMINukmet=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ukmet
++++ config.base[64]export HOMEDIR=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[64]HOMEDIR=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[65]export STMP=/scratch3/NCEPDEV/stmp/role.glopara
++++ config.base[65]STMP=/scratch3/NCEPDEV/stmp/role.glopara
++++ config.base[66]export PTMP=/scratch3/NCEPDEV/stmp/role.glopara
++++ config.base[66]PTMP=/scratch3/NCEPDEV/stmp/role.glopara
++++ config.base[67]export NOSCRUB=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[67]NOSCRUB=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[70]export BASE_GIT=/scratch3/NCEPDEV/global/role.glopara/git_hera
++++ config.base[70]BASE_GIT=/scratch3/NCEPDEV/global/role.glopara/git_hera
++++ config.base[73]export BASE_DATA=/scratch3/NCEPDEV/global/role.glopara/data
++++ config.base[73]BASE_DATA=/scratch3/NCEPDEV/global/role.glopara/data
++++ config.base[76]export DO_GOES=NO
++++ config.base[76]DO_GOES=NO
++++ config.base[77]export DO_BUFRSND=NO
++++ config.base[77]DO_BUFRSND=NO
++++ config.base[78]export DO_GEMPAK=NO
++++ config.base[78]DO_GEMPAK=NO
++++ config.base[79]export DO_AWIPS=NO
++++ config.base[79]DO_AWIPS=NO
++++ config.base[80]export DO_NPOESS=NO
++++ config.base[80]DO_NPOESS=NO
++++ config.base[81]export DO_TRACKER=NO
++++ config.base[81]DO_TRACKER=NO
++++ config.base[82]export DO_GENESIS=NO
++++ config.base[82]DO_GENESIS=NO
++++ config.base[83]export DO_GENESIS_FSU=NO
++++ config.base[83]DO_GENESIS_FSU=NO
++++ config.base[84]export DO_VERFOZN=YES
++++ config.base[84]DO_VERFOZN=YES
++++ config.base[85]export DO_VERFRAD=YES
++++ config.base[85]DO_VERFRAD=YES
++++ config.base[86]export DO_VMINMON=YES
++++ config.base[86]DO_VMINMON=YES
++++ config.base[87]export DO_ANLSTAT=NO
++++ config.base[87]DO_ANLSTAT=NO
++++ config.base[88]export DO_MOS=NO
++++ config.base[88]DO_MOS=NO
++++ config.base[94]export REALTIME=YES
++++ config.base[94]REALTIME=YES
++++ config.base[97]export MODE=cycled
++++ config.base[97]MODE=cycled
++++ config.base[98]export DO_TEST_MODE=NO
++++ config.base[98]DO_TEST_MODE=NO
++++ config.base[107]export FIXgsi=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/gsi
++++ config.base[107]FIXgsi=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/gsi
++++ config.base[108]export HOMEpost=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow
++++ config.base[108]HOMEpost=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow
++++ config.base[109]export HOMEobsproc=/scratch3/NCEPDEV/global/role.glopara/git_hera/obsproc/v1.2.0
++++ config.base[109]HOMEobsproc=/scratch3/NCEPDEV/global/role.glopara/git_hera/obsproc/v1.2.0
++++ config.base[112]export NMV=/bin/mv
++++ config.base[112]NMV=/bin/mv
++++ config.base[113]export 'NLN=/bin/ln -sf'
++++ config.base[113]NLN='/bin/ln -sf'
++++ config.base[114]export VERBOSE=YES
++++ config.base[114]VERBOSE=YES
++++ config.base[115]export KEEPDATA=NO
++++ config.base[115]KEEPDATA=NO
++++ config.base[116]export DEBUG_POSTSCRIPT=NO
++++ config.base[116]DEBUG_POSTSCRIPT=NO
++++ config.base[117]export CHGRP_RSTPROD=YES
++++ config.base[117]CHGRP_RSTPROD=YES
++++ config.base[118]export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[118]CHGRP_CMD='chgrp rstprod'
++++ config.base[119]export NCDUMP=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/netcdf-c-4.9.2-gi2pf6q/bin/ncdump
++++ config.base[119]NCDUMP=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/netcdf-c-4.9.2-gi2pf6q/bin/ncdump
++++ config.base[120]export NCLEN=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/ush/getncdimlen
++++ config.base[120]NCLEN=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/ush/getncdimlen
++++ config.base[123]export BASE_ENV=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/env
++++ config.base[123]BASE_ENV=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/env
++++ config.base[126]export SDATE=2021122012
++++ config.base[126]SDATE=2021122012
++++ config.base[127]export EDATE=2021122100
++++ config.base[127]EDATE=2021122100
++++ config.base[128]export EXP_WARM_START=.false.
++++ config.base[128]EXP_WARM_START=.false.
++++ config.base[129]export assim_freq=6
++++ config.base[129]assim_freq=6
++++ config.base[130]export PSLOT=C96_gcafs_cycled_733bbf3e-9636
++++ config.base[130]PSLOT=C96_gcafs_cycled_733bbf3e-9636
++++ config.base[131]export EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/EXPDIR/C96_gcafs_cycled_733bbf3e-9636
++++ config.base[131]EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/EXPDIR/C96_gcafs_cycled_733bbf3e-9636
++++ config.base[132]export ROTDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636
++++ config.base[132]ROTDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636
++++ config.base[133]export DUMP_SUFFIX=
++++ config.base[133]DUMP_SUFFIX=
++++ config.base[134][[ 2021122012 -ge 2019092100 ]]
++++ config.base[134][[ 2021122012 -le 2019110700 ]]
++++ config.base[137]export ARCDIR=/scratch3/NCEPDEV/global/role.glopara/archive/C96_gcafs_cycled_733bbf3e-9636
++++ config.base[137]ARCDIR=/scratch3/NCEPDEV/global/role.glopara/archive/C96_gcafs_cycled_733bbf3e-9636
++++ config.base[138]export ATARDIR=/NCEPDEV/emc-global/1year/role.glopara/HERA/scratch/C96_gcafs_cycled_733bbf3e-9636
++++ config.base[138]ATARDIR=/NCEPDEV/emc-global/1year/role.glopara/HERA/scratch/C96_gcafs_cycled_733bbf3e-9636
++++ config.base[139]export 'FETCHDIR={{ FETCHDIR }}'
++++ config.base[139]FETCHDIR='{{ FETCHDIR }}'
++++ config.base[142]export envir=prod
++++ config.base[142]envir=prod
++++ config.base[143]export NET=gcafs
++++ config.base[143]NET=gcafs
++++ config.base[144]export RUN=gcdas
++++ config.base[144]RUN=gcdas
++++ config.base[147]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/EXPDIR/C96_gcafs_cycled_733bbf3e-9636/config.com
+++++ config.com[4]echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[38][[ emc == \n\c\o ]]
+++++ config.com[44]COM_OBSPROC_TMPL='${DMPDIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[45]COM_OBSFORGE_TMPL='${IODADIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}'
+++++ config.com[46]COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[47]COM_TCVITAL_TMPL='${DMPDIR}/${RUN}.${YMD}/${HH}/atmos'
+++++ config.com[49]declare -rx 'COM_OBS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[50]declare -rx COM_OBSPROC_TMPL COM_RTOFS_TMPL COM_OBSFORGE_TMPL
+++++ config.com[52]COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[54]declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[56]declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[58]declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[59]declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[60]declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[61]declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[62]declare -rx 'COM_SNOW_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/snow/anlmon'
+++++ config.com[63]declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[64]declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[65]declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[66]declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[67]declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[68]declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[69]declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[70]declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[71]declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[72]declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[73]declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[74]declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[75]declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[76]declare -rx 'COM_ATMOS_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/anlmon'
+++++ config.com[77]declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[79]declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[80]declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[81]declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[82]declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[83]declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ config.com[84]declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[85]declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[86]declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[88]declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[89]declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[90]declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[91]declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[92]declare -rx 'COM_OCEAN_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/anlmon'
+++++ config.com[93]declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[94]declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[95]declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[96]declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[97]declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[99]declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[100]declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[101]declare -rx 'COM_ICE_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/anlmon'
+++++ config.com[102]declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[103]declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[104]declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[105]declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[106]declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[107]declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[108]declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[110]declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[111]declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[112]declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[113]declare -rx 'COM_CHEM_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/chem/anlmon'
+++++ config.com[114]declare -rx 'COM_CHEM_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/input'
+++++ config.com[115]declare -rx 'COM_CHEM_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/restart'
+++++ config.com[117]declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[149]export LOGSCRIPT=
++++ config.base[149]LOGSCRIPT=
++++ config.base[152]export SENDECF=NO
++++ config.base[152]SENDECF=NO
++++ config.base[153]export SENDSDM=NO
++++ config.base[153]SENDSDM=NO
++++ config.base[154]export SENDDBN_NTC=NO
++++ config.base[154]SENDDBN_NTC=NO
++++ config.base[155]export SENDDBN=NO
++++ config.base[155]SENDDBN=NO
++++ config.base[156]export DBNROOT=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/prod-util-2.1.1-jqsffu2/fakedbn
++++ config.base[156]DBNROOT=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/prod-util-2.1.1-jqsffu2/fakedbn
++++ config.base[157]export SENDAWIP=NO
++++ config.base[157]SENDAWIP=NO
++++ config.base[160]export APP=ATMA
++++ config.base[160]APP=ATMA
++++ config.base[162]shopt -s extglob
++++ config.base[165]case "${RUN}" in
++++ config.base[172]shopt -u extglob
++++ config.base[175]export DO_ATM=YES
++++ config.base[175]DO_ATM=YES
++++ config.base[176]export DO_COUPLED=NO
++++ config.base[176]DO_COUPLED=NO
++++ config.base[177]export DO_WAVE=NO
++++ config.base[177]DO_WAVE=NO
++++ config.base[178]export DO_OCN=NO
++++ config.base[178]DO_OCN=NO
++++ config.base[179]export DO_ICE=NO
++++ config.base[179]DO_ICE=NO
++++ config.base[180]DO_AERO=NO
++++ config.base[181]export DO_PREP_OBS_AERO=NO
++++ config.base[181]DO_PREP_OBS_AERO=NO
++++ config.base[182]aero_anl_runs=gcdas
++++ config.base[183]export DO_AERO_FCST=YES
++++ config.base[183]DO_AERO_FCST=YES
++++ config.base[184]export DO_AERO_ANL=NO
++++ config.base[184]DO_AERO_ANL=NO
++++ config.base[185]export DOBNDPNT_WAVE=NO
++++ config.base[185]DOBNDPNT_WAVE=NO
++++ config.base[186]export DO_CHEM_WARMSTART=YES
++++ config.base[186]DO_CHEM_WARMSTART=YES
++++ config.base[187]export FRAC_GRID=.true.
++++ config.base[187]FRAC_GRID=.true.
++++ config.base[188]export DO_NEST=NO
++++ config.base[188]DO_NEST=NO
++++ config.base[189][[ NO == \Y\E\S ]]
++++ config.base[195]export ntiles=6
++++ config.base[195]ntiles=6
++++ config.base[196]export FIXugwd=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd
++++ config.base[196]FIXugwd=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd
++++ config.base[197]export FIXorog=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog
++++ config.base[197]FIXorog=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog
++++ config.base[201]export OPS_RES=C768
++++ config.base[201]OPS_RES=C768
++++ config.base[204]export LEVS=128
++++ config.base[204]LEVS=128
++++ config.base[205]export CASE=C96
++++ config.base[205]CASE=C96
++++ config.base[206]export 'CASE_ENS={{ CASE_ENS }}'
++++ config.base[206]CASE_ENS='{{ CASE_ENS }}'
++++ config.base[207]export CASE_HIST=C96
++++ config.base[207]CASE_HIST=C96
++++ config.base[208]export OCNRES=500
++++ config.base[208]OCNRES=500
++++ config.base[209]export ICERES=500
++++ config.base[209]ICERES=500
++++ config.base[212]case "${CASE}" in
++++ config.base[217]export waveGRD=uglo_100km
++++ config.base[217]waveGRD=uglo_100km
++++ config.base[231]case "${APP}" in
++++ config.base[235]DO_AERO=YES
++++ config.base[266][[ YES == \Y\E\S ]]
++++ config.base[267][[ gcdas =~ gcdas ]]
++++ config.base[268]export DO_AERO_ANL=YES
++++ config.base[268]DO_AERO_ANL=YES
++++ config.base[270]export DO_AERO_FCST=YES
++++ config.base[270]DO_AERO_FCST=YES
++++ config.base[271]export USE_AERO_ANL=YES
++++ config.base[271]USE_AERO_ANL=YES
++++ config.base[275][[ gcdas =~ gdas ]]
++++ config.base[278][[ gcdas =~ gfs ]]
++++ config.base[283]export FHMIN=0
++++ config.base[283]FHMIN=0
++++ config.base[284]export FHMAX=9
++++ config.base[284]FHMAX=9
++++ config.base[285]export FHOUT=3
++++ config.base[285]FHOUT=3
++++ config.base[286]export FHOUT_OCN=3
++++ config.base[286]FHOUT_OCN=3
++++ config.base[287]export FHOUT_ICE=3
++++ config.base[287]FHOUT_ICE=3
++++ config.base[288]export FHOUT_AERO=3
++++ config.base[288]FHOUT_AERO=3
++++ config.base[291]export EUPD_CYC=gfs
++++ config.base[291]EUPD_CYC=gfs
++++ config.base[294]export INTERVAL_GFS=12
++++ config.base[294]INTERVAL_GFS=12
++++ config.base[295]export SDATE_GFS=2021122018
++++ config.base[295]SDATE_GFS=2021122018
++++ config.base[298]export FHMIN_GFS=0
++++ config.base[298]FHMIN_GFS=0
++++ config.base[299]export FHMAX_GFS=120
++++ config.base[299]FHMAX_GFS=120
++++ config.base[301]breakpnts=
++++ config.base[302]export FCST_SEGMENTS=0,120
++++ config.base[302]FCST_SEGMENTS=0,120
++++ config.base[303]export FHOUT_GFS=3
++++ config.base[303]FHOUT_GFS=3
++++ config.base[304]export FHMAX_HF_GFS=0
++++ config.base[304]FHMAX_HF_GFS=0
++++ config.base[305]export FHOUT_HF_GFS=1
++++ config.base[305]FHOUT_HF_GFS=1
++++ config.base[306]export FHOUT_OCN_GFS=6
++++ config.base[306]FHOUT_OCN_GFS=6
++++ config.base[307]export FHOUT_ICE_GFS=6
++++ config.base[307]FHOUT_ICE_GFS=6
++++ config.base[308]export FHMIN_WAV=0
++++ config.base[308]FHMIN_WAV=0
++++ config.base[309]export FHOUT_WAV=3
++++ config.base[309]FHOUT_WAV=3
++++ config.base[310]export FHOUT_WAV_GFS=3
++++ config.base[310]FHOUT_WAV_GFS=3
++++ config.base[311]export FHMAX_HF_WAV=120
++++ config.base[311]FHMAX_HF_WAV=120
++++ config.base[312]export FHOUT_HF_WAV=1
++++ config.base[312]FHOUT_HF_WAV=1
++++ config.base[313]export FHMAX_WAV=9
++++ config.base[313]FHMAX_WAV=9
++++ config.base[314]export FHMAX_WAV_GFS=120
++++ config.base[314]FHMAX_WAV_GFS=120
++++ config.base[315]export FHMAX_HF_GFS=0
++++ config.base[315]FHMAX_HF_GFS=0
++++ config.base[316]export FHMAX_WAV=9
++++ config.base[316]FHMAX_WAV=9
++++ config.base[317]export FHMAX_WAV_GFS=120
++++ config.base[317]FHMAX_WAV_GFS=120
++++ config.base[318]export FHMAX_HF_WAV=120
++++ config.base[318]FHMAX_HF_WAV=120
++++ config.base[321]export ILPOST=1
++++ config.base[321]ILPOST=1
++++ config.base[322]((  FHMAX_HF_GFS < 120  ))
++++ config.base[323]export ILPOST=3
++++ config.base[323]ILPOST=3
++++ config.base[327]export FHMAX_GOES=180
++++ config.base[327]FHMAX_GOES=180
++++ config.base[328]export FHOUT_GOES=3
++++ config.base[328]FHOUT_GOES=3
++++ config.base[329]((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[330]export FHMAX_GOES=120
++++ config.base[330]FHMAX_GOES=120
++++ config.base[334]export restart_interval_gfs=12
++++ config.base[334]restart_interval_gfs=12
++++ config.base[339]export QUILTING=.true.
++++ config.base[339]QUILTING=.true.
++++ config.base[340]export OUTPUT_GRID=gaussian_grid
++++ config.base[340]OUTPUT_GRID=gaussian_grid
++++ config.base[341]export WRITE_DOPOST=.true.
++++ config.base[341]WRITE_DOPOST=.true.
++++ config.base[342]export WRITE_NSFLIP=.true.
++++ config.base[342]WRITE_NSFLIP=.true.
++++ config.base[345]export DOIAU=NO
++++ config.base[345]DOIAU=NO
++++ config.base[346]export IAUFHRS=3,6,9
++++ config.base[346]IAUFHRS=3,6,9
++++ config.base[347]export IAU_FHROT=3
++++ config.base[347]IAU_FHROT=3
++++ config.base[348]export IAU_DELTHRS=6
++++ config.base[348]IAU_DELTHRS=6
++++ config.base[349]export IAU_OFFSET=6
++++ config.base[349]IAU_OFFSET=6
++++ config.base[350]export DOIAU_ENKF=NO
++++ config.base[350]DOIAU_ENKF=NO
++++ config.base[351]export IAUFHRS_ENKF=3,6,9
++++ config.base[351]IAUFHRS_ENKF=3,6,9
++++ config.base[352]export IAU_DELTHRS_ENKF=6
++++ config.base[352]IAU_DELTHRS_ENKF=6
++++ config.base[360]export imp_physics=8
++++ config.base[360]imp_physics=8
++++ config.base[364]export DO_JEDIATMVAR=NO
++++ config.base[364]DO_JEDIATMVAR=NO
++++ config.base[365]export DO_JEDIATMENS=NO
++++ config.base[365]DO_JEDIATMENS=NO
++++ config.base[366]export DO_JEDIATMENS_SPLIT_OBSSOL=YES
++++ config.base[366]DO_JEDIATMENS_SPLIT_OBSSOL=YES
++++ config.base[367]export 'DO_JEDIAEROVAR={{ DO_JEDIAEROVAR }}'
++++ config.base[367]DO_JEDIAEROVAR='{{ DO_JEDIAEROVAR }}'
++++ config.base[368]export DO_JEDIOCNVAR=NO
++++ config.base[368]DO_JEDIOCNVAR=NO
++++ config.base[369]export DO_JEDISNOWDA=NO
++++ config.base[369]DO_JEDISNOWDA=NO
++++ config.base[370]export DO_MERGENSST=NO
++++ config.base[370]DO_MERGENSST=NO
++++ config.base[371]export DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[371]DO_STARTMEM_FROM_JEDIICE=NO
++++ config.base[374]export DOHYBVAR=NO
++++ config.base[374]DOHYBVAR=NO
++++ config.base[375]export DOHYBVAR_OCN=NO
++++ config.base[375]DOHYBVAR_OCN=NO
++++ config.base[376]export DOLETKF_OCN=NO
++++ config.base[376]DOLETKF_OCN=NO
++++ config.base[377]export NMEM_ENS=0
++++ config.base[377]NMEM_ENS=0
++++ config.base[378]export SMOOTH_ENKF=NO
++++ config.base[378]SMOOTH_ENKF=NO
++++ config.base[379]export l4densvar=.true.
++++ config.base[379]l4densvar=.true.
++++ config.base[380]export lwrite4danl=.true.
++++ config.base[380]lwrite4danl=.true.
++++ config.base[381]export DO_CALC_INCREMENT=NO
++++ config.base[381]DO_CALC_INCREMENT=NO
++++ config.base[382]export USE_BUILD_GSINFO=NO
++++ config.base[382]USE_BUILD_GSINFO=NO
++++ config.base[383]export BUILD_GSINFO_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/gsinfo
++++ config.base[383]BUILD_GSINFO_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/gsinfo
++++ config.base[386]export 'NMEM_ENS_GFS={{ NMEM_ENS_GFS }}'
++++ config.base[386]NMEM_ENS_GFS='{{ NMEM_ENS_GFS }}'
++++ config.base[387]export 'NMEM_ENS_GFS_OFFSET={{ NMEM_ENS_GFS_OFFSET }}'
++++ config.base[387]NMEM_ENS_GFS_OFFSET='{{ NMEM_ENS_GFS_OFFSET }}'
++++ config.base[388]export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[388]DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[391][[ NO = \Y\E\S ]]
++++ config.base[405][[ NO == \N\O ]]
++++ config.base[405][[ NO == \Y\E\S ]]
++++ config.base[413]export ENKF_SPREAD=YES
++++ config.base[413]ENKF_SPREAD=YES
++++ config.base[416][[ gcdas == \g\d\a\s ]]
++++ config.base[416][[ gcdas == \e\n\k\f\g\d\a\s ]]
++++ config.base[420]export DO_GSISOILDA=NO
++++ config.base[420]DO_GSISOILDA=NO
++++ config.base[421]export DO_LAND_IAU=.false.
++++ config.base[421]DO_LAND_IAU=.false.
++++ config.base[423]export LSOIL_INCR=2
++++ config.base[423]LSOIL_INCR=2
++++ config.base[426][[ cycled = \c\y\c\l\e\d ]]
++++ config.base[426][[ 2021122012 = \2\0\2\1\1\2\2\0\1\2 ]]
++++ config.base[426][[ .false. = \.\f\a\l\s\e\. ]]
++++ config.base[427]export IAU_OFFSET=0
++++ config.base[427]IAU_OFFSET=0
++++ config.base[428]export IAU_FHROT=0
++++ config.base[428]IAU_FHROT=0
++++ config.base[429]export IAUFHRS=6,
++++ config.base[429]IAUFHRS=6,
++++ config.base[430]export DO_LAND_IAU=.false.
++++ config.base[430]DO_LAND_IAU=.false.
++++ config.base[433][[ NO = \N\O ]]
++++ config.base[433]export IAUFHRS_ENKF=6,
++++ config.base[433]IAUFHRS_ENKF=6,
++++ config.base[437][[ NO == \Y\E\S ]]
++++ config.base[440]export restart_interval_enkfgdas=6
++++ config.base[440]restart_interval_enkfgdas=6
++++ config.base[443]export restart_interval_enkfgfs=6
++++ config.base[443]restart_interval_enkfgfs=6
++++ config.base[445][[ NO == \Y\E\S ]]
++++ config.base[445][[ YES == \Y\E\S ]]
++++ config.base[446]export restart_interval_gdas=3
++++ config.base[446]restart_interval_gdas=3
++++ config.base[452]export DONST=YES
++++ config.base[452]DONST=YES
++++ config.base[453][[ YES = \Y\E\S ]]
++++ config.base[453]export 'FNTSFA=        '
++++ config.base[453]FNTSFA='        '
++++ config.base[456]export nst_anl=.true.
++++ config.base[456]nst_anl=.true.
++++ config.base[459]export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[459]INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[462]export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[462]INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[463]export INCVARS_EFOLD=5
++++ config.base[463]INCVARS_EFOLD=5
++++ config.base[468]export netcdf_diag=.true.
++++ config.base[468]netcdf_diag=.true.
++++ config.base[469]export binary_diag=.false.
++++ config.base[469]binary_diag=.false.
++++ config.base[472]export DO_CA=YES
++++ config.base[472]DO_CA=YES
++++ config.base[475]export DO_METP=NO
++++ config.base[475]DO_METP=NO
++++ config.base[476]export DO_FIT2OBS=YES
++++ config.base[476]DO_FIT2OBS=YES
++++ config.base[479]export FHMAX_FITS=132
++++ config.base[479]FHMAX_FITS=132
++++ config.base[480][[ 132 -gt 120 ]]
++++ config.base[481]export FHMAX_FITS=120
++++ config.base[481]FHMAX_FITS=120
++++ config.base[486]export DO_FETCH_HPSS=NO
++++ config.base[486]DO_FETCH_HPSS=NO
++++ config.base[487]export DO_FETCH_LOCAL=NO
++++ config.base[487]DO_FETCH_LOCAL=NO
++++ config.base[490]export DO_ARCHCOM=YES
++++ config.base[490]DO_ARCHCOM=YES
++++ config.base[491]export ARCHCOM_TO=hpss
++++ config.base[491]ARCHCOM_TO=hpss
++++ config.base[494]export 'CLIENT_GLOBUS_UUID={{ CLIENT_GLOBUS_UUID }}'
++++ config.base[494]CLIENT_GLOBUS_UUID='{{ CLIENT_GLOBUS_UUID }}'
++++ config.base[497][[ NO = \Y\E\S ]]
++++ config.base[504][[ YES = \Y\E\S ]]
++++ config.base[505]export DO_ANLSTAT=YES
++++ config.base[505]DO_ANLSTAT=YES
++++ config.base[510]export OFFSET_START_HOUR=0
++++ config.base[510]OFFSET_START_HOUR=0
++++ config.base[513]export NUM_SND_COLLECTIVES=9
++++ config.base[513]NUM_SND_COLLECTIVES=9
++++ config.base[515]echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[103]true
+++ jjob_header.sh[104]export err=0
+++ jjob_header.sh[104]err=0
+++ jjob_header.sh[105][[ 0 -ne 0 ]]
+++ jjob_header.sh[102]for config in "${configs[@]:-''}"
+++ jjob_header.sh[103]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/EXPDIR/C96_gcafs_cycled_733bbf3e-9636/config.fcst
++++ config.fcst[6]echo 'BEGIN: config.fcst'
+BEGIN: config.fcst
++++ config.fcst[8]export USE_ESMF_THREADING=YES
++++ config.fcst[8]USE_ESMF_THREADING=YES
++++ config.fcst[9][[ YES == \Y\E\S ]]
++++ config.fcst[10]export COPY_FINAL_RESTARTS=YES
++++ config.fcst[10]COPY_FINAL_RESTARTS=YES
++++ config.fcst[17]string='--fv3 C96'
++++ config.fcst[18][[ NO == \Y\E\S ]]
++++ config.fcst[21][[ NO == \Y\E\S ]]
++++ config.fcst[24][[ NO == \Y\E\S ]]
++++ config.fcst[27][[ YES == \Y\E\S ]]
++++ config.fcst[28]string='--fv3 C96 --gocart'
++++ config.fcst[32]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/EXPDIR/C96_gcafs_cycled_733bbf3e-9636/config.ufs --fv3 C96 --gocart
+++++ config.ufs[9]echo 'BEGIN: config.ufs'
+BEGIN: config.ufs
+++++ config.ufs[11]((  3 <= 1  ))
+++++ config.ufs[26]skip_mom6=true
+++++ config.ufs[27]skip_cice6=true
+++++ config.ufs[28]skip_ww3=true
+++++ config.ufs[29]skip_gocart=true
+++++ config.ufs[30]skip_mediator=true
+++++ config.ufs[33]((  3 > 0  ))
+++++ config.ufs[34]key=--fv3
+++++ config.ufs[35]case "${key}" in
+++++ config.ufs[37]fv3_res=C96
+++++ config.ufs[38]shift
+++++ config.ufs[63]shift
+++++ config.ufs[33]((  1 > 0  ))
+++++ config.ufs[34]key=--gocart
+++++ config.ufs[35]case "${key}" in
+++++ config.ufs[56]skip_gocart=false
+++++ config.ufs[63]shift
+++++ config.ufs[33]((  0 > 0  ))
+++++ config.ufs[67][[ true == \f\a\l\s\e ]]
+++++ config.ufs[67][[ true == \f\a\l\s\e ]]
+++++ config.ufs[67][[ true == \f\a\l\s\e ]]
+++++ config.ufs[71][[ NO == \Y\E\S ]]
+++++ config.ufs[84]export grid_type=-1
+++++ config.ufs[84]grid_type=-1
+++++ config.ufs[88]case "${fv3_res}" in
+++++ config.ufs[112][[ NO == \Y\E\S ]]
+++++ config.ufs[135]export nthreads_fv3=1
+++++ config.ufs[135]nthreads_fv3=1
+++++ config.ufs[136]export nthreads_ufs=1
+++++ config.ufs[136]nthreads_ufs=1
+++++ config.ufs[137]export layout_x=2
+++++ config.ufs[137]layout_x=2
+++++ config.ufs[138]export layout_y=2
+++++ config.ufs[138]layout_y=2
+++++ config.ufs[139]export WRITE_GROUP=1
+++++ config.ufs[139]WRITE_GROUP=1
+++++ config.ufs[140]export WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[140]WRTTASK_PER_GROUP_PER_THREAD_PER_TILE=1
+++++ config.ufs[141]export DELTIM=600
+++++ config.ufs[141]DELTIM=600
+++++ config.ufs[142]export xr_cnvcld=.false.
+++++ config.ufs[142]xr_cnvcld=.false.
+++++ config.ufs[143]export cdmbgwd=0.14,1.8,1.0,1.0
+++++ config.ufs[143]cdmbgwd=0.14,1.8,1.0,1.0
+++++ config.ufs[144]export cdmbgwd_gsl=20.0,2.5,1.0,1.0
+++++ config.ufs[144]cdmbgwd_gsl=20.0,2.5,1.0,1.0
+++++ config.ufs[145]export psl_gwd_dx_factor=6.0
+++++ config.ufs[145]psl_gwd_dx_factor=6.0
+++++ config.ufs[146]export knob_ugwp_tauamp=3.0e-3
+++++ config.ufs[146]knob_ugwp_tauamp=3.0e-3
+++++ config.ufs[147]export k_split=1
+++++ config.ufs[147]k_split=1
+++++ config.ufs[148]export n_split=4
+++++ config.ufs[148]n_split=4
+++++ config.ufs[149]export tau=8.0
+++++ config.ufs[149]tau=8.0
+++++ config.ufs[150]export rf_cutoff=300.0
+++++ config.ufs[150]rf_cutoff=300.0
+++++ config.ufs[151]export fv_sg_adj=1800
+++++ config.ufs[151]fv_sg_adj=1800
+++++ config.ufs[344]((  WRTTASK_PER_GROUP_PER_THREAD = WRTTASK_PER_GROUP_PER_THREAD_PER_TILE * 6  ))
+++++ config.ufs[345]export WRTTASK_PER_GROUP_PER_THREAD
+++++ config.ufs[347]((  ntasks_fv3 = layout_x * layout_y * 6  ))
+++++ config.ufs[348][[ NO == \Y\E\S ]]
+++++ config.ufs[351]export ntasks_fv3
+++++ config.ufs[353]((  ntasks_quilt = WRITE_GROUP * WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.ufs[354]export ntasks_quilt
+++++ config.ufs[358]case ${fv3_res} in
+++++ config.ufs[360]zstandard_level=0
+++++ config.ufs[361]ideflate=0
+++++ config.ufs[362]quantize_nsd=0
+++++ config.ufs[363]OUTPUT_FILETYPE_ATM=netcdf
+++++ config.ufs[364]OUTPUT_FILETYPE_SFC=netcdf
+++++ config.ufs[382]export zstandard_level ideflate quantize_nsd
+++++ config.ufs[383]export OUTPUT_FILETYPE_ATM OUTPUT_FILETYPE_SFC
+++++ config.ufs[386]export cpl=.false.
+++++ config.ufs[386]cpl=.false.
+++++ config.ufs[387]export cplflx=.false.
+++++ config.ufs[387]cplflx=.false.
+++++ config.ufs[388]export cplice=.false.
+++++ config.ufs[388]cplice=.false.
+++++ config.ufs[389]export cplchm=.false.
+++++ config.ufs[389]cplchm=.false.
+++++ config.ufs[390]export cplwav=.false.
+++++ config.ufs[390]cplwav=.false.
+++++ config.ufs[391]export cplwav2atm=.false.
+++++ config.ufs[391]cplwav2atm=.false.
+++++ config.ufs[392][[ NO == \Y\E\S ]]
+++++ config.ufs[395]export CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[395]CCPP_SUITE=FV3_GFS_v17_p8_ugwpv1
+++++ config.ufs[397]model_list=atm
+++++ config.ufs[400][[ true == \f\a\l\s\e ]]
+++++ config.ufs[407][[ true == \f\a\l\s\e ]]
+++++ config.ufs[556][[ true == \f\a\l\s\e ]]
+++++ config.ufs[602][[ true == \f\a\l\s\e ]]
+++++ config.ufs[645][[ false == \f\a\l\s\e ]]
+++++ config.ufs[646]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/EXPDIR/C96_gcafs_cycled_733bbf3e-9636/config.aero
++++++ config.aero[9]echo 'BEGIN: config.aero'
+BEGIN: config.aero
++++++ config.aero[20]export AERO_INPUTS_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/chem/Emission_data
++++++ config.aero[20]AERO_INPUTS_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/chem/Emission_data
++++++ config.aero[30]export AERO_DIAG_TABLE=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/fv3/diag_table.aero
++++++ config.aero[30]AERO_DIAG_TABLE=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/fv3/diag_table.aero
++++++ config.aero[31]export AERO_FIELD_TABLE=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/fv3/field_table.aero
++++++ config.aero[31]AERO_FIELD_TABLE=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/fv3/field_table.aero
++++++ config.aero[40]export AERO_CONFIG_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/gocart
++++++ config.aero[40]AERO_CONFIG_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/gocart
++++++ config.aero[49]export 'fscav_aero='\''*:0.3'\'','\''so2:0.0'\'','\''msa:0.0'\'','\''dms:0.0'\'','\''nh3:0.4'\'','\''nh4:0.6'\'','\''bc1:0.6'\'','\''bc2:0.6'\'','\''oc1:0.4'\'','\''oc2:0.4'\'','\''dust1:0.6'\'','\''dust2:0.6'\'', '\''dust3:0.6'\'','\''dust4:0.6'\'','\''dust5:0.6'\'','\''seas1:0.5'\'','\''seas2:0.5'\'','\''seas3:0.5'\'','\''seas4:0.5'\'','\''seas5:0.5'\'''
++++++ config.aero[49]fscav_aero=''\''*:0.3'\'','\''so2:0.0'\'','\''msa:0.0'\'','\''dms:0.0'\'','\''nh3:0.4'\'','\''nh4:0.6'\'','\''bc1:0.6'\'','\''bc2:0.6'\'','\''oc1:0.4'\'','\''oc2:0.4'\'','\''dust1:0.6'\'','\''dust2:0.6'\'', '\''dust3:0.6'\'','\''dust4:0.6'\'','\''dust5:0.6'\'','\''seas1:0.5'\'','\''seas2:0.5'\'','\''seas3:0.5'\'','\''seas4:0.5'\'','\''seas5:0.5'\'''
++++++ config.aero[55]export dnats_aero=2
++++++ config.aero[55]dnats_aero=2
++++++ config.aero[69]export AERO_EMIS_FIRE=gbbepx
++++++ config.aero[69]AERO_EMIS_FIRE=gbbepx
++++++ config.aero[72]export AERO_EMIS_FIRE_VERSION=004
++++++ config.aero[72]AERO_EMIS_FIRE_VERSION=004
++++++ config.aero[80]export AERO_EMIS_FIRE_HIST=1
++++++ config.aero[80]AERO_EMIS_FIRE_HIST=1
++++++ config.aero[83]export FIRE_EMIS_NRT_DIR=
++++++ config.aero[83]FIRE_EMIS_NRT_DIR=
++++++ config.aero[84]export FIRE_EMIS_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/chem/Emission_data/fires_data/GBBEPx/v4
++++++ config.aero[84]FIRE_EMIS_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/chem/Emission_data/fires_data/GBBEPx/v4
++++++ config.aero[99]export NEXUS_CONFIG=gocart
++++++ config.aero[99]NEXUS_CONFIG=gocart
++++++ config.aero[104]export NEXUS_CONFIG_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/chem/nexus/gocart
++++++ config.aero[104]NEXUS_CONFIG_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/chem/nexus/gocart
++++++ config.aero[115]export NEXUS_INPUT_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/chem/Emission_data/nexus
++++++ config.aero[115]NEXUS_INPUT_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/chem/Emission_data/nexus
++++++ config.aero[126]export NEXUS_TSTEP=3600
++++++ config.aero[126]NEXUS_TSTEP=3600
++++++ config.aero[135]export NEXUS_NX=1440
++++++ config.aero[135]NEXUS_NX=1440
++++++ config.aero[139]export NEXUS_NY=720
++++++ config.aero[139]NEXUS_NY=720
++++++ config.aero[143]export NEXUS_XMIN=-180.0
++++++ config.aero[143]NEXUS_XMIN=-180.0
++++++ config.aero[147]export NEXUS_XMAX=180.0
++++++ config.aero[147]NEXUS_XMAX=180.0
++++++ config.aero[151]export NEXUS_YMIN=-90.0
++++++ config.aero[151]NEXUS_YMIN=-90.0
++++++ config.aero[155]export NEXUS_YMAX=90.0
++++++ config.aero[155]NEXUS_YMAX=90.0
++++++ config.aero[159]export NEXUS_NZ=1
++++++ config.aero[159]NEXUS_NZ=1
++++++ config.aero[168]export NEXUS_GRID_NAME=HEMCO_sa_Grid.rc
++++++ config.aero[168]NEXUS_GRID_NAME=HEMCO_sa_Grid.rc
++++++ config.aero[170]export NEXUS_TIME_NAME=HEMCO_sa_Time.rc
++++++ config.aero[170]NEXUS_TIME_NAME=HEMCO_sa_Time.rc
++++++ config.aero[172]export NEXUS_DIAG_NAME=HEMCO_sa_Diag.rc
++++++ config.aero[172]NEXUS_DIAG_NAME=HEMCO_sa_Diag.rc
++++++ config.aero[174]export NEXUS_SPEC_NAME=HEMCO_sa_Spec.rc
++++++ config.aero[174]NEXUS_SPEC_NAME=HEMCO_sa_Spec.rc
++++++ config.aero[176]export NEXUS_CONFIG_NAME=NEXUS_Config.rc
++++++ config.aero[176]NEXUS_CONFIG_NAME=NEXUS_Config.rc
++++++ config.aero[185]export NEXUS_DIAG_PREFIX=NEXUS_DIAG
++++++ config.aero[185]NEXUS_DIAG_PREFIX=NEXUS_DIAG
++++++ config.aero[187]export NEXUS_DIAG_FREQ=Hourly
++++++ config.aero[187]NEXUS_DIAG_FREQ=Hourly
++++++ config.aero[196]export NEXUS_LOGFILE=NEXUS.log
++++++ config.aero[196]NEXUS_LOGFILE=NEXUS.log
++++++ config.aero[207]export NEXUS_DO_MEGAN=.false
++++++ config.aero[207]NEXUS_DO_MEGAN=.false
++++++ config.aero[211]export NEXUS_DO_CEDS2019=.false.
++++++ config.aero[211]NEXUS_DO_CEDS2019=.false.
++++++ config.aero[214]export NEXUS_DO_CEDS2024=.true.
++++++ config.aero[214]NEXUS_DO_CEDS2024=.true.
++++++ config.aero[218]export NEXUS_DO_HTAPv2=.true.
++++++ config.aero[218]NEXUS_DO_HTAPv2=.true.
++++++ config.aero[221]export NEXUS_DO_HTAPv3=.false.
++++++ config.aero[221]NEXUS_DO_HTAPv3=.false.
++++++ config.aero[225]export NEXUS_DO_CAMS=.false.
++++++ config.aero[225]NEXUS_DO_CAMS=.false.
++++++ config.aero[229]export NEXUS_DO_CAMSTEMPO=.true.
++++++ config.aero[229]NEXUS_DO_CAMSTEMPO=.true.
++++++ config.aero[232]echo 'END: config.aero'
+END: config.aero
+++++ config.ufs[647]export cplchm=.true.
+++++ config.ufs[647]cplchm=.true.
+++++ config.ufs[648]model_list=atm.aero
+++++ config.ufs[654]case "${model_list}" in
+++++ config.ufs[659]default_template=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/ufs.configure.atmaero.IN
+++++ config.ufs[685]export ufs_configure_template=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/ufs.configure.atmaero.IN
+++++ config.ufs[685]ufs_configure_template=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/ufs.configure.atmaero.IN
+++++ config.ufs[686]unset model_list default_template
+++++ config.ufs[689]export 'WW3_RSTFLDS= '
+++++ config.ufs[689]WW3_RSTFLDS=' '
+++++ config.ufs[691][[ ! -r /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/ufs.configure.atmaero.IN ]]
+++++ config.ufs[696]echo 'END: config.ufs'
+END: config.ufs
++++ config.fcst[35]case ${RUN} in
++++ config.fcst[53]export FHMAX_HF=0
++++ config.fcst[53]FHMAX_HF=0
++++ config.fcst[54]export FHOUT_HF=0
++++ config.fcst[54]FHOUT_HF=0
++++ config.fcst[62]export MERRA2_6ym=.false.
++++ config.fcst[62]MERRA2_6ym=.false.
++++ config.fcst[65]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/EXPDIR/C96_gcafs_cycled_733bbf3e-9636/config.resources fcst
+++++ config.resources[10]((  1 != 1  ))
+++++ config.resources[36]step=fcst
+++++ config.resources[38]echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[40]case ${machine} in
+++++ config.resources[47]max_tasks_per_node=40
+++++ config.resources[48]mem_node_max=96GB
+++++ config.resources[135]export max_tasks_per_node
+++++ config.resources[137]case ${step} in
+++++ config.resources[800]export is_exclusive=True
+++++ config.resources[800]is_exclusive=True
+++++ config.resources[804][[ YES == \Y\E\S ]]
+++++ config.resources[805]export UFS_THREADS=1
+++++ config.resources[805]UFS_THREADS=1
+++++ config.resources[821]((  ntiles > 6  ))
+++++ config.resources[829][[ YES == \Y\E\S ]]
+++++ config.resources[830]((  FV3THREADS = nthreads_fv3  ))
+++++ config.resources[831]((  FV3PETS = ntasks_fv3 * nthreads_fv3  ))
+++++ config.resources[836]echo 'FV3 using (nthreads, PETS) = (1, 24)'
+FV3 using (nthreads, PETS) = (1, 24)
+++++ config.resources[839]QUILTPETS=0
+++++ config.resources[839]QUILTTHREADS=0
+++++ config.resources[840][[ .true. == \.\t\r\u\e\. ]]
+++++ config.resources[841][[ YES == \Y\E\S ]]
+++++ config.resources[842]((  QUILTTHREADS = nthreads_fv3  ))
+++++ config.resources[843]((  QUILTPETS = ntasks_quilt * nthreads_fv3  ))
+++++ config.resources[848]((  WRTTASK_PER_GROUP = WRTTASK_PER_GROUP_PER_THREAD  ))
+++++ config.resources[849]export WRTTASK_PER_GROUP
+++++ config.resources[851]echo 'QUILT using (nthreads, PETS) = (1, 6)'
+QUILT using (nthreads, PETS) = (1, 6)
+++++ config.resources[854]ATMTHREADS=1
+++++ config.resources[855]((  ATMPETS = FV3PETS + QUILTPETS  ))
+++++ config.resources[856]export ATMPETS ATMTHREADS
+++++ config.resources[857]echo 'FV3ATM using (nthreads, PETS) = (1, 30)'
+FV3ATM using (nthreads, PETS) = (1, 30)
+++++ config.resources[860]NTASKS_TOT=30
+++++ config.resources[867]MEDTHREADS=1
+++++ config.resources[868]MEDPETS=24
+++++ config.resources[869]((  24 > 300  ))
+++++ config.resources[870]export MEDPETS MEDTHREADS
+++++ config.resources[871]echo 'MEDIATOR using (threads, PETS) = (1, 24)'
+MEDIATOR using (threads, PETS) = (1, 24)
+++++ config.resources[874]CHMPETS=0
+++++ config.resources[874]CHMTHREADS=0
+++++ config.resources[875][[ YES == \Y\E\S ]]
+++++ config.resources[877]((  CHMTHREADS = ATMTHREADS  ))
+++++ config.resources[878]((  CHMPETS = FV3PETS  ))
+++++ config.resources[880]echo 'GOCART using (threads, PETS) = (1, 24)'
+GOCART using (threads, PETS) = (1, 24)
+++++ config.resources[882]export CHMPETS CHMTHREADS
+++++ config.resources[885]WAVPETS=0
+++++ config.resources[885]WAVTHREADS=0
+++++ config.resources[886][[ NO == \Y\E\S ]]
+++++ config.resources[897]export WAVPETS WAVTHREADS
+++++ config.resources[900]OCNPETS=0
+++++ config.resources[900]OCNTHREADS=0
+++++ config.resources[901][[ NO == \Y\E\S ]]
+++++ config.resources[912]export OCNPETS OCNTHREADS
+++++ config.resources[915]ICEPETS=0
+++++ config.resources[915]ICETHREADS=0
+++++ config.resources[916][[ NO == \Y\E\S ]]
+++++ config.resources[927]export ICEPETS ICETHREADS
+++++ config.resources[929]echo 'Total PETS for gcdas = 30'
+Total PETS for gcdas = 30
+++++ config.resources[931]declare -x ntasks=30
+++++ config.resources[932]declare -x threads_per_task=1
+++++ config.resources[933]tasks_per_node=40
+++++ config.resources[936][[ gcdas == gdas ]]
+++++ config.resources[936][[ gcdas == gcdas ]]
+++++ config.resources[937]case "${CASE}" in
+++++ config.resources[939]declare -x walltime=00:20:00
+++++ config.resources[981]unset NTASKS_TOT
+++++ config.resources[1398][[ -f /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/EXPDIR/C96_gcafs_cycled_733bbf3e-9636/config.resources.HERA ]]
+++++ config.resources[1399]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/EXPDIR/C96_gcafs_cycled_733bbf3e-9636/config.resources.HERA
++++++ config.resources.HERA[6]case ${step} in
+++++ config.resources[1403]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1404]run_resource_var=threads_per_task_gcdas
+++++ config.resources[1405][[ -n '' ]]
+++++ config.resources[1407][[ -n 0 ]]
+++++ config.resources[1408]export threads_per_task
+++++ config.resources[1403]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1404]run_resource_var=ntasks_gcdas
+++++ config.resources[1405][[ -n '' ]]
+++++ config.resources[1407][[ -n 0 ]]
+++++ config.resources[1408]export ntasks
+++++ config.resources[1403]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1404]run_resource_var=tasks_per_node_gcdas
+++++ config.resources[1405][[ -n '' ]]
+++++ config.resources[1407][[ -n 0 ]]
+++++ config.resources[1408]export tasks_per_node
+++++ config.resources[1403]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1404]run_resource_var=NTASKS_gcdas
+++++ config.resources[1405][[ -n '' ]]
+++++ config.resources[1407][[ -n '' ]]
+++++ config.resources[1403]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1404]run_resource_var=memory_gcdas
+++++ config.resources[1405][[ -n '' ]]
+++++ config.resources[1407][[ -n '' ]]
+++++ config.resources[1403]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime
+++++ config.resources[1404]run_resource_var=walltime_gcdas
+++++ config.resources[1405][[ -n '' ]]
+++++ config.resources[1407][[ -n 0 ]]
+++++ config.resources[1408]export walltime
+++++ config.resources[1412]echo 'END: config.resources'
+END: config.resources
++++ config.fcst[66]export domains_stack_size=16000000
++++ config.fcst[66]domains_stack_size=16000000
++++ config.fcst[69][[ YES == \Y\E\S ]]
++++ config.fcst[70]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/EXPDIR/C96_gcafs_cycled_733bbf3e-9636/config.nsst
+++++ config.nsst[6]echo 'BEGIN: config.nsst'
+BEGIN: config.nsst
+++++ config.nsst[11]export NST_MODEL=2
+++++ config.nsst[11]NST_MODEL=2
+++++ config.nsst[14][[ NO == \Y\E\S ]]
+++++ config.nsst[14][[ NO == \Y\E\S ]]
+++++ config.nsst[19]export NST_SPINUP=0
+++++ config.nsst[19]NST_SPINUP=0
+++++ config.nsst[20]cdate=2021122012
+++++ config.nsst[21]((  cdate < 2017072000  ))
+++++ config.nsst[26]export NST_RESV=0
+++++ config.nsst[26]NST_RESV=0
+++++ config.nsst[29]export ZSEA1=0
+++++ config.nsst[29]ZSEA1=0
+++++ config.nsst[30]export ZSEA2=0
+++++ config.nsst[30]ZSEA2=0
+++++ config.nsst[32]export NST_GSI=3
+++++ config.nsst[32]NST_GSI=3
+++++ config.nsst[36]export NSTINFO=0
+++++ config.nsst[36]NSTINFO=0
+++++ config.nsst[37]((  NST_GSI > 0  ))
+++++ config.nsst[37]export NSTINFO=4
+++++ config.nsst[37]NSTINFO=4
+++++ config.nsst[39]echo 'END: config.nsst'
+END: config.nsst
++++ config.fcst[73]export esmf_profile=.false.
++++ config.fcst[73]esmf_profile=.false.
++++ config.fcst[74]export esmf_logkind=ESMF_LOGKIND_MULTI_ON_ERROR
++++ config.fcst[74]esmf_logkind=ESMF_LOGKIND_MULTI_ON_ERROR
++++ config.fcst[79]export FORECASTSH=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/scripts/exglobal_forecast.sh
++++ config.fcst[79]FORECASTSH=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/scripts/exglobal_forecast.sh
++++ config.fcst[81]export FCSTEXEC=gcafs_model.x
++++ config.fcst[81]FCSTEXEC=gcafs_model.x
++++ config.fcst[85]export TYPE=nh
++++ config.fcst[85]TYPE=nh
++++ config.fcst[86]export MONO=non-mono
++++ config.fcst[86]MONO=non-mono
++++ config.fcst[89]export h2o_phys=.true.
++++ config.fcst[89]h2o_phys=.true.
++++ config.fcst[92]export new_o3forc=YES
++++ config.fcst[92]new_o3forc=YES
++++ config.fcst[94]export gwd_opt=2
++++ config.fcst[94]gwd_opt=2
++++ config.fcst[99]((  gwd_opt == 1  ))
++++ config.fcst[109]((  gwd_opt == 2  ))
++++ config.fcst[125]export knob_ugwp_version=1
++++ config.fcst[125]knob_ugwp_version=1
++++ config.fcst[126]export do_ugwp=.false.
++++ config.fcst[126]do_ugwp=.false.
++++ config.fcst[127]export do_tofd=.false.
++++ config.fcst[127]do_tofd=.false.
++++ config.fcst[128]export do_ugwp_v0=.false.
++++ config.fcst[128]do_ugwp_v0=.false.
++++ config.fcst[129]export do_ugwp_v1=.true.
++++ config.fcst[129]do_ugwp_v1=.true.
++++ config.fcst[130]export do_ugwp_v0_orog_only=.false.
++++ config.fcst[130]do_ugwp_v0_orog_only=.false.
++++ config.fcst[131]export do_ugwp_v0_nst_only=.false.
++++ config.fcst[131]do_ugwp_v0_nst_only=.false.
++++ config.fcst[132]export do_gsl_drag_ls_bl=.true.
++++ config.fcst[132]do_gsl_drag_ls_bl=.true.
++++ config.fcst[133]export do_gsl_drag_ss=.false.
++++ config.fcst[133]do_gsl_drag_ss=.false.
++++ config.fcst[134]export do_gsl_drag_tofd=.true.
++++ config.fcst[134]do_gsl_drag_tofd=.true.
++++ config.fcst[135]export do_gwd_opt_psl=.true.
++++ config.fcst[135]do_gwd_opt_psl=.true.
++++ config.fcst[136]export do_ugwp_v1_orog_only=.false.
++++ config.fcst[136]do_ugwp_v1_orog_only=.false.
+++++ config.fcst[137]bc
+++++ config.fcst[137]echo 128/2.35
++++ config.fcst[137]launch_level=54
++++ config.fcst[138]export launch_level
++++ config.fcst[142]export d2_bg_k1=0.20
++++ config.fcst[142]d2_bg_k1=0.20
++++ config.fcst[143]export d2_bg_k2=0.04
++++ config.fcst[143]d2_bg_k2=0.04
++++ config.fcst[144]export dz_min=6
++++ config.fcst[144]dz_min=6
++++ config.fcst[145]export n_sponge=42
++++ config.fcst[145]n_sponge=42
++++ config.fcst[148]export hybedmf=.false.
++++ config.fcst[148]hybedmf=.false.
++++ config.fcst[149][[ FV3_GFS_v17_p8_ugwpv1 == \F\V\3\_\g\l\o\b\a\l\_\n\e\s\t* ]]
++++ config.fcst[152]export satmedmf=.true.
++++ config.fcst[152]satmedmf=.true.
++++ config.fcst[154]export isatmedmf=1
++++ config.fcst[154]isatmedmf=1
++++ config.fcst[155]tbf=
++++ config.fcst[156][[ .true. == \.\t\r\u\e\. ]]
++++ config.fcst[156]tbf=_satmedmf
++++ config.fcst[159]export progsigma=.true.
++++ config.fcst[159]progsigma=.true.
++++ config.fcst[160]tbp=
++++ config.fcst[161][[ .true. == \.\t\r\u\e\. ]]
++++ config.fcst[161]tbp=_progsigma
++++ config.fcst[164][[ YES == \Y\E\S ]]
++++ config.fcst[165][[ gcdas =~ gfs ]]
++++ config.fcst[165][[ gcdas == \g\c\a\f\s ]]
++++ config.fcst[165][[ gcdas == \g\c\d\a\s ]]
++++ config.fcst[166]export IAER=2011
++++ config.fcst[166]IAER=2011
++++ config.fcst[173]export iovr_lw=3
++++ config.fcst[173]iovr_lw=3
++++ config.fcst[174]export iovr_sw=3
++++ config.fcst[174]iovr_sw=3
++++ config.fcst[175]export iovr=3
++++ config.fcst[175]iovr=3
++++ config.fcst[176]export icliq_sw=2
++++ config.fcst[176]icliq_sw=2
++++ config.fcst[177]export isubc_sw=2
++++ config.fcst[177]isubc_sw=2
++++ config.fcst[178]export isubc_lw=2
++++ config.fcst[178]isubc_lw=2
++++ config.fcst[181]export do_RRTMGP=.false.
++++ config.fcst[181]do_RRTMGP=.false.
++++ config.fcst[182]export doGP_cldoptics_LUT=.false.
++++ config.fcst[182]doGP_cldoptics_LUT=.false.
++++ config.fcst[183]export doGP_lwscat=.false.
++++ config.fcst[183]doGP_lwscat=.false.
++++ config.fcst[187]export iopt_sfc=3
++++ config.fcst[187]iopt_sfc=3
++++ config.fcst[188]export iopt_trs=2
++++ config.fcst[188]iopt_trs=2
++++ config.fcst[191]export dnats=0
++++ config.fcst[191]dnats=0
++++ config.fcst[192]export cal_pre=.true.
++++ config.fcst[192]cal_pre=.true.
++++ config.fcst[193]export do_sat_adj=.false.
++++ config.fcst[193]do_sat_adj=.false.
++++ config.fcst[194]export random_clds=.true.
++++ config.fcst[194]random_clds=.true.
++++ config.fcst[196]case ${imp_physics} in
++++ config.fcst[208]export ncld=2
++++ config.fcst[208]ncld=2
++++ config.fcst[209]export FIELD_TABLE=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/fv3/field_table_thompson_noaero_tke_progsigma
++++ config.fcst[209]FIELD_TABLE=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/fv3/field_table_thompson_noaero_tke_progsigma
++++ config.fcst[210]export nwat=6
++++ config.fcst[210]nwat=6
++++ config.fcst[212]export cal_pre=.false.
++++ config.fcst[212]cal_pre=.false.
++++ config.fcst[213]export random_clds=.false.
++++ config.fcst[213]random_clds=.false.
++++ config.fcst[214]export effr_in=.true.
++++ config.fcst[214]effr_in=.true.
++++ config.fcst[215]export ltaerosol=.false.
++++ config.fcst[215]ltaerosol=.false.
++++ config.fcst[216]export lradar=.true.
++++ config.fcst[216]lradar=.true.
++++ config.fcst[217]export ttendlim=-999
++++ config.fcst[217]ttendlim=-999
++++ config.fcst[218]export dt_inner=300
++++ config.fcst[218]dt_inner=300
++++ config.fcst[219]export sedi_semi=.true.
++++ config.fcst[219]sedi_semi=.true.
++++ config.fcst[220][[ .true. == .true. ]]
++++ config.fcst[220]export dt_inner=600
++++ config.fcst[220]dt_inner=600
++++ config.fcst[221][[ dt_inner -gt 300 ]]
++++ config.fcst[221]export dt_inner=300
++++ config.fcst[221]dt_inner=300
++++ config.fcst[222]export decfl=10
++++ config.fcst[222]decfl=10
++++ config.fcst[224]export hord_mt_nh_nonmono=5
++++ config.fcst[224]hord_mt_nh_nonmono=5
++++ config.fcst[225]export hord_xx_nh_nonmono=5
++++ config.fcst[225]hord_xx_nh_nonmono=5
++++ config.fcst[226]export hord_dp_nh_nonmono=-5
++++ config.fcst[226]hord_dp_nh_nonmono=-5
++++ config.fcst[227]export vtdm4_nh_nonmono=0.02
++++ config.fcst[227]vtdm4_nh_nonmono=0.02
++++ config.fcst[228]export nord=2
++++ config.fcst[228]nord=2
++++ config.fcst[229]export dddmp=0.1
++++ config.fcst[229]dddmp=0.1
++++ config.fcst[230]export d4_bg=0.12
++++ config.fcst[230]d4_bg=0.12
++++ config.fcst[232][[ FV3_GFS_v17_p8_ugwpv1 == \F\V\3\_\g\l\o\b\a\l\_\n\e\s\t* ]]
++++ config.fcst[270]export DO_SPPT=NO
++++ config.fcst[270]DO_SPPT=NO
++++ config.fcst[271]export DO_SKEB=NO
++++ config.fcst[271]DO_SKEB=NO
++++ config.fcst[272]export DO_SHUM=NO
++++ config.fcst[272]DO_SHUM=NO
++++ config.fcst[273]export DO_LAND_PERT=NO
++++ config.fcst[273]DO_LAND_PERT=NO
++++ config.fcst[274]export DO_OCN_SPPT=NO
++++ config.fcst[274]DO_OCN_SPPT=NO
++++ config.fcst[275]export DO_OCN_PERT_EPBL=NO
++++ config.fcst[275]DO_OCN_PERT_EPBL=NO
++++ config.fcst[278]export cplmode=ufs.frac
++++ config.fcst[278]cplmode=ufs.frac
++++ config.fcst[279][[ .true. == \.\f\a\l\s\e\. ]]
++++ config.fcst[282]export psm_bc=1
++++ config.fcst[282]psm_bc=1
++++ config.fcst[284]export min_lakeice=0.15
++++ config.fcst[284]min_lakeice=0.15
++++ config.fcst[285]export min_seaice=0.15
++++ config.fcst[285]min_seaice=0.15
++++ config.fcst[286]export use_cice_alb=.false.
++++ config.fcst[286]use_cice_alb=.false.
++++ config.fcst[288]export FSICL=0
++++ config.fcst[288]FSICL=0
++++ config.fcst[289]export FSICS=0
++++ config.fcst[289]FSICS=0
++++ config.fcst[292][[ gcdas =~ gdas ]]
++++ config.fcst[292][[ gcdas =~ gcdas ]]
++++ config.fcst[295]export DIAG_TABLE=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/fv3/diag_table_da
++++ config.fcst[295]DIAG_TABLE=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/fv3/diag_table_da
++++ config.fcst[298]export restart_interval=3
++++ config.fcst[298]restart_interval=3
++++ config.fcst[301]export adjust_dry_mass=.true.
++++ config.fcst[301]adjust_dry_mass=.true.
++++ config.fcst[327]export CHECK_LAND_RESTART_OROG=YES
++++ config.fcst[327]CHECK_LAND_RESTART_OROG=YES
++++ config.fcst[333]echo 'END: config.fcst'
+END: config.fcst
+++ jjob_header.sh[103]true
+++ jjob_header.sh[104]export err=0
+++ jjob_header.sh[104]err=0
+++ jjob_header.sh[105][[ 0 -ne 0 ]]
+++ jjob_header.sh[113]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/env/HERA.env fcst
++++ HERA.env[3][[ 1 -ne 1 ]]
++++ HERA.env[10]step=fcst
++++ HERA.env[12]export 'launcher=srun -l --export=ALL --hint=nomultithread'
++++ HERA.env[12]launcher='srun -l --export=ALL --hint=nomultithread'
++++ HERA.env[13]export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ HERA.env[13]mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ HERA.env[23]export OMP_STACKSIZE=2048000
++++ HERA.env[23]OMP_STACKSIZE=2048000
++++ HERA.env[24]export NTHSTACK=1024000000
++++ HERA.env[24]NTHSTACK=1024000000
++++ HERA.env[28][[ -n 21988270 ]]
++++ HERA.env[29]ulimit -s unlimited
++++ HERA.env[30]ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 379936
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) 94208000
+open files                      (-n) 131072
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 379936
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
++++ HERA.env[35][[ -n 30 ]]
++++ HERA.env[35][[ -n 40 ]]
++++ HERA.env[35][[ -n 40 ]]
++++ HERA.env[36]max_threads_per_task=1
++++ HERA.env[37]NTHREADSmax=1
++++ HERA.env[38]NTHREADS1=1
++++ HERA.env[39][[ 1 -gt 1 ]]
++++ HERA.env[42][[ 1 -gt 1 ]]
++++ HERA.env[45]APRUN_default='srun -l --export=ALL --hint=nomultithread -n 30'
++++ HERA.env[51][[ fcst = \p\r\e\p ]]
++++ HERA.env[51][[ fcst = \p\r\e\p\b\u\f\r ]]
++++ HERA.env[58][[ fcst = \p\r\e\p\_\e\m\i\s\s\i\o\n\s ]]
++++ HERA.env[63][[ fcst = \w\a\v\e\i\n\i\t ]]
++++ HERA.env[63][[ fcst = \w\a\v\e\p\r\e\p ]]
++++ HERA.env[63][[ fcst = \w\a\v\e\p\o\s\t\s\b\s ]]
++++ HERA.env[63][[ fcst = \w\a\v\e\p\o\s\t\b\n\d\p\n\t ]]
++++ HERA.env[63][[ fcst = \w\a\v\e\p\o\s\t\b\n\d\p\n\t\b\l\l ]]
++++ HERA.env[63][[ fcst = \w\a\v\e\p\o\s\t\p\n\t ]]
++++ HERA.env[63][[ fcst = \w\a\v\e\_\s\t\a\t ]]
++++ HERA.env[63][[ fcst = \w\a\v\e\_\s\t\a\t\_\p\n\t ]]
++++ HERA.env[70][[ fcst = \a\t\m\a\n\l\v\a\r ]]
++++ HERA.env[75][[ fcst = \a\t\m\e\n\s\a\n\l\o\b\s ]]
++++ HERA.env[80][[ fcst = \a\t\m\e\n\s\a\n\l\s\o\l ]]
++++ HERA.env[85][[ fcst = \a\t\m\e\n\s\a\n\l\l\e\t\k\f ]]
++++ HERA.env[90][[ fcst = \a\t\m\e\n\s\a\n\l\f\v\3\i\n\c ]]
++++ HERA.env[95][[ fcst = \a\e\r\o\a\n\l\v\a\r ]]
++++ HERA.env[102][[ fcst = \a\e\r\o\a\n\l\g\e\n\b ]]
++++ HERA.env[107][[ fcst = \a\t\m\a\n\l\f\v\3\i\n\c ]]
++++ HERA.env[112][[ fcst = \a\n\l\s\t\a\t ]]
++++ HERA.env[117][[ fcst = \s\n\o\w\a\n\l ]]
++++ HERA.env[126][[ fcst = \e\s\n\o\w\a\n\l ]]
++++ HERA.env[135][[ fcst = \m\a\r\i\n\e\b\m\a\t ]]
++++ HERA.env[140][[ fcst = \m\a\r\i\n\e\a\n\l\v\a\r ]]
++++ HERA.env[145][[ fcst = \m\a\r\i\n\e\a\n\l\c\h\k\p\t ]]
++++ HERA.env[152][[ fcst = \m\a\r\i\n\e\a\n\l\e\c\e\n ]]
++++ HERA.env[156][[ fcst = \m\a\r\i\n\e\a\n\l\l\e\t\k\f ]]
++++ HERA.env[161][[ fcst = \e\c\e\n\_\f\v\3\j\e\d\i ]]
++++ HERA.env[167][[ fcst = \a\n\a\l\c\a\l\c\_\f\v\3\j\e\d\i ]]
++++ HERA.env[172][[ fcst = \a\n\a\l ]]
++++ HERA.env[172][[ fcst = \a\n\a\l\c\a\l\c ]]
++++ HERA.env[207][[ fcst = \a\n\a\l\d\i\a\g ]]
++++ HERA.env[207][[ fcst = \e\d\i\a\g ]]
++++ HERA.env[211][[ fcst = \o\f\f\l\i\n\e\a\n\l ]]
++++ HERA.env[225][[ fcst = \s\f\c\a\n\l ]]
++++ HERA.env[234][[ fcst = \e\o\b\s ]]
++++ HERA.env[246][[ fcst = \e\u\p\d ]]
++++ HERA.env[255][[ fcst = \f\c\s\t ]]
++++ HERA.env[257]((  nnodes = (ntasks+tasks_per_node-1)/tasks_per_node  ))
++++ HERA.env[258]((  ufs_ntasks = nnodes*tasks_per_node  ))
++++ HERA.env[260]export 'APRUN_UFS=srun -l --export=ALL --hint=nomultithread -n 40'
++++ HERA.env[260]APRUN_UFS='srun -l --export=ALL --hint=nomultithread -n 40'
++++ HERA.env[261]unset nnodes ufs_ntasks
++++ HERA.env[264]export USE_CFP=YES
++++ HERA.env[264]USE_CFP=YES
+++ jjob_header.sh[113]true
+++ jjob_header.sh[114]export err=0
+++ jjob_header.sh[114]err=0
+++ jjob_header.sh[115][[ 0 -ne 0 ]]
++ JGLOBAL_FORECAST[14]PYTHONPATH=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/ush/python:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-xarray-2024.7.0-nr2r4w7/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-setuptools-69.2.0-3bicdrp/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-packaging-24.1-s5f4sht/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-python-dateutil-2.8.2-dpeprvm/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-six-1.16.0-ylu7viw/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-pandas-2.2.3-zawd5aa/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-tzdata-2023.3-ujpb6vp/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-pytz-2023.3-kaipii3/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-jinja2-3.1.4-cp4ll3w/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-markupsafe-2.1.3-hmnvocr/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-pyyaml-6.0.2-wfsmd4u/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-netcdf4-1.7.1.post2-fkwt32b/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-cftime-1.0.3.4-uh5aezs/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-certifi-2023.7.22-ipq4liu/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-f90nml-1.4.3-ak7epam/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/bufr-12.1.0-fq4hmqe/lib64/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/esmf-8.8.0-34zepjk/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-pip-23.1.2-b2ymdff/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-numpy-1.26.4-kjne5y2/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/py-mpi4py-4.0.1-zvii3bg/lib/python3.11/site-packages:/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/python-venv-1.0-bup6e5g/lib/python3.11/site-packages:/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/sorc/wxflow/src:/home/role.glopara/.local/lib/python3.11/site-packages
++ JGLOBAL_FORECAST[15]export PYTHONPATH
++ JGLOBAL_FORECAST[18]export DATArestart=/scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart
++ JGLOBAL_FORECAST[18]DATArestart=/scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart
++ JGLOBAL_FORECAST[19][[ ! -d /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart ]]
++ JGLOBAL_FORECAST[20]export DATAoutput=/scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/output
++ JGLOBAL_FORECAST[20]DATAoutput=/scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/output
++ JGLOBAL_FORECAST[21][[ ! -d /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/output ]]
++ JGLOBAL_FORECAST[29]rCDUMP=gcdas
++ JGLOBAL_FORECAST[30]export rCDUMP=gcdas
++ JGLOBAL_FORECAST[30]rCDUMP=gcdas
+++ JGLOBAL_FORECAST[34]date --utc -d '20211220 12 - 6 hours' +%Y%m%d%H
++ JGLOBAL_FORECAST[34]GDATE=2021122006
++ JGLOBAL_FORECAST[35]declare -rx GDATE
++ JGLOBAL_FORECAST[37]declare -rx gPDY=20211220
++ JGLOBAL_FORECAST[38]declare -rx gcyc=06
++ JGLOBAL_FORECAST[41]YMD=20211220
++ JGLOBAL_FORECAST[41]HH=12
++ JGLOBAL_FORECAST[41]declare_from_tmpl -rx COMIN_ATMOS_INPUT:COM_ATMOS_INPUT_TMPL COMOUT_CONF:COM_CONF_TMPL COMOUT_ATMOS_RESTART:COM_ATMOS_RESTART_TMPL COMIN_ATMOS_RESTART:COM_ATMOS_RESTART_TMPL COMOUT_ATMOS_HISTORY:COM_ATMOS_HISTORY_TMPL COMOUT_ATMOS_MASTER:COM_ATMOS_MASTER_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[40]set +x
+declare_from_tmpl :: COMIN_ATMOS_INPUT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/atmos/input
+declare_from_tmpl :: COMOUT_CONF=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//conf
+declare_from_tmpl :: COMOUT_ATMOS_RESTART=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/atmos/restart
+declare_from_tmpl :: COMIN_ATMOS_RESTART=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/atmos/restart
+declare_from_tmpl :: COMOUT_ATMOS_HISTORY=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/atmos/history
+declare_from_tmpl :: COMOUT_ATMOS_MASTER=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/atmos/master
++ JGLOBAL_FORECAST[49]RUN=gcdas
++ JGLOBAL_FORECAST[49]YMD=20211220
++ JGLOBAL_FORECAST[49]HH=06
++ JGLOBAL_FORECAST[49]declare_from_tmpl -rx COMIN_ATMOS_RESTART_PREV:COM_ATMOS_RESTART_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[40]set +x
+declare_from_tmpl :: COMIN_ATMOS_RESTART_PREV=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/06//model/atmos/restart
++ JGLOBAL_FORECAST[53][[ gcdas =~ gcafs ]]
++ JGLOBAL_FORECAST[53][[ gcdas =~ gcdas ]]
++ JGLOBAL_FORECAST[54]YMD=20211220
++ JGLOBAL_FORECAST[54]HH=12
++ JGLOBAL_FORECAST[54]RUN=gcdas
++ JGLOBAL_FORECAST[54]declare_from_tmpl -rx COMIN_ATMOS_ANALYSIS:COM_ATMOS_ANALYSIS_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[40]set +x
+declare_from_tmpl :: COMIN_ATMOS_ANALYSIS=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//analysis/atmos
++ JGLOBAL_FORECAST[62][[ NO == \Y\E\S ]]
++ JGLOBAL_FORECAST[71][[ NO == \Y\E\S ]]
++ JGLOBAL_FORECAST[83][[ NO == \Y\E\S ]]
++ JGLOBAL_FORECAST[93][[ YES == \Y\E\S ]]
++ JGLOBAL_FORECAST[94]YMD=20211220
++ JGLOBAL_FORECAST[94]HH=12
++ JGLOBAL_FORECAST[94]declare_from_tmpl -rx COMOUT_CHEM_HISTORY:COM_CHEM_HISTORY_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[40]set +x
+declare_from_tmpl :: COMOUT_CHEM_HISTORY=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/chem/history
++ JGLOBAL_FORECAST[96]YMD=20211220
++ JGLOBAL_FORECAST[96]HH=12
++ JGLOBAL_FORECAST[96]RUN=gcdas
++ JGLOBAL_FORECAST[96]declare_from_tmpl -rx COMIN_TRACER_RESTART:COM_ATMOS_RESTART_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[40]set +x
+declare_from_tmpl :: COMIN_TRACER_RESTART=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/atmos/restart
++ JGLOBAL_FORECAST[98]YMD=20211220
++ JGLOBAL_FORECAST[98]HH=12
++ JGLOBAL_FORECAST[98]declare_from_tmpl -rx COMIN_CHEM_INPUT:COM_CHEM_INPUT_TMPL
++ bash_utils.sh[39][[ NO == \N\O ]]
++ bash_utils.sh[40]set +x
+declare_from_tmpl :: COMIN_CHEM_INPUT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/chem/input
++ JGLOBAL_FORECAST[105]/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/scripts/exglobal_forecast.sh
++ bash[8]'[' -z '' ']'
++ bash[9]case "$-" in
++ bash[12]__lmod_vx=x
++ bash[16]'[' -n x ']'
++ bash[16]set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for this output (/apps/lmod/lmod/init/bash)
+Shell debugging restarted
++ bash[184]unset __lmod_vx
++ exglobal_forecast.sh[81]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/ush/forecast_predet.sh
++ exglobal_forecast.sh[82]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/ush/forecast_det.sh
++ exglobal_forecast.sh[83]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/ush/forecast_postdet.sh
++ exglobal_forecast.sh[84]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/ush/parsing_ufs_configure.sh
++ exglobal_forecast.sh[86]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/ush/atparse.bash
++ exglobal_forecast.sh[89]cpl=.false.
++ exglobal_forecast.sh[90]cplflx=.false.
++ exglobal_forecast.sh[91]cplwav=.false.
++ exglobal_forecast.sh[92]cplchm=.true.
++ exglobal_forecast.sh[93]cplice=.false.
++ exglobal_forecast.sh[95]OCNTIM=1800
++ exglobal_forecast.sh[96]DELTIM=600
++ exglobal_forecast.sh[97]ICETIM=600
++ exglobal_forecast.sh[99]CPL_SLOW=1800
++ exglobal_forecast.sh[100]CPL_FAST=600
++ exglobal_forecast.sh[102]echo 'MAIN: Loading common variables before determination of run type'
+MAIN: Loading common variables before determination of run type
++ exglobal_forecast.sh[103]common_predet
++ forecast_predet.sh[92]echo 'SUB common_predet: Defining variables for shared through model components'
+SUB common_predet: Defining variables for shared through model components
++ forecast_predet.sh[94]RUN=gcdas
++ forecast_predet.sh[95]rCDUMP=gcdas
++ forecast_predet.sh[97]ENSMEM=000
++ forecast_predet.sh[98]MEMBER=0
++ forecast_predet.sh[101]half_window=3
++ forecast_predet.sh[102]current_cycle=2021122012
+++ forecast_predet.sh[103]date --utc -d '20211220 12 - 6 hours' +%Y%m%d%H
++ forecast_predet.sh[103]previous_cycle=2021122006
+++ forecast_predet.sh[104]date --utc -d '20211220 12 + 6 hours' +%Y%m%d%H
++ forecast_predet.sh[104]next_cycle=2021122018
+++ forecast_predet.sh[105]date --utc -d '20211220 12 - 3 hours' +%Y%m%d%H
++ forecast_predet.sh[105]current_cycle_begin=2021122009
+++ forecast_predet.sh[106]date --utc -d '20211220 12 + 3 hours' +%Y%m%d%H
++ forecast_predet.sh[106]current_cycle_end=2021122015
+++ forecast_predet.sh[107]date --utc -d '20211220 18 - 3 hours' +%Y%m%d%H
++ forecast_predet.sh[107]next_cycle_begin=2021122015
+++ forecast_predet.sh[108]date --utc -d '20211220 12 + 9 hours' +%Y%m%d%H
++ forecast_predet.sh[108]forecast_end_cycle=2021122021
++ forecast_predet.sh[111][[ NO == \Y\E\S ]]
++ forecast_predet.sh[115]model_start_date_current_cycle=2021122012
++ forecast_predet.sh[116][[ YES == \Y\E\S ]]
++ forecast_predet.sh[118]model_start_date_next_cycle=2021122015
++ forecast_predet.sh[124]FHMIN=0
++ forecast_predet.sh[125]FHMAX=9
++ forecast_predet.sh[126]FHOUT=3
++ forecast_predet.sh[127]FHMAX_HF=0
++ forecast_predet.sh[128]FHOUT_HF=0
++ forecast_predet.sh[130]mkdir -p /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//conf
++ forecast_predet.sh[132]cd /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682
++ forecast_predet.sh[132]true
++ forecast_predet.sh[133]err=0
++ forecast_predet.sh[134][[ 0 -ne 0 ]]
++ forecast_predet.sh[140]mkdir -p /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT
++ exglobal_forecast.sh[105]echo 'MAIN: Loading variables before determination of run type'
+MAIN: Loading variables before determination of run type
++ exglobal_forecast.sh[106]FV3_predet
++ forecast_predet.sh[146]echo 'SUB FV3_predet: Defining variables for FV3'
+SUB FV3_predet: Defining variables for FV3
++ forecast_predet.sh[148][[ ! -d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/atmos/history ]]
++ forecast_predet.sh[149][[ ! -d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/atmos/master ]]
++ forecast_predet.sh[150][[ ! -d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/atmos/restart ]]
++ forecast_predet.sh[151][[ ! -d /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/output/FV3ATM_OUTPUT ]]
++ forecast_predet.sh[152][[ ! -d /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART ]]
++ forecast_predet.sh[156]/bin/ln -sf /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/output/FV3ATM_OUTPUT /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/FV3ATM_OUTPUT
++ forecast_predet.sh[157]/bin/ln -sf /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/RESTART
++ forecast_predet.sh[159]FHZERO=6
++ forecast_predet.sh[160]FHCYC=24
++ forecast_predet.sh[164]FV3_OUTPUT_FH=
++ forecast_predet.sh[165]local fhr=0
++ forecast_predet.sh[166][[ 0 -gt 0 ]]
+++ forecast_predet.sh[170]seq -s ' ' 0 3 9
++ forecast_predet.sh[170]FV3_OUTPUT_FH=' 0 3 6 9'
++ forecast_predet.sh[172][[ 0 -eq 3 ]]
++ forecast_predet.sh[175]FV3_OUTPUT_FH_NML=' 0 3 6 9'
++ forecast_predet.sh[179]IAUFHRS=6,
++ forecast_predet.sh[180]IAU_DELTHRS=6
++ forecast_predet.sh[185]res=96
++ forecast_predet.sh[186]resh=96
++ forecast_predet.sh[187]resp=97
++ forecast_predet.sh[188]npx=97
++ forecast_predet.sh[189]npy=97
++ forecast_predet.sh[190]npz=127
++ forecast_predet.sh[191]io_layout=1,1
++ forecast_predet.sh[195]JCAP_CASE=190
++ forecast_predet.sh[196]LONB_CASE=384
++ forecast_predet.sh[197]LATB_CASE=192
++ forecast_predet.sh[199]JCAP_CASE_HIST=190
++ forecast_predet.sh[200]LONB_CASE_HIST=384
++ forecast_predet.sh[201]LATB_CASE_HIST=192
++ forecast_predet.sh[203]JCAP=190
++ forecast_predet.sh[204]LONB=384
++ forecast_predet.sh[205]LATB=192
++ forecast_predet.sh[207]LONB_IMO=384
++ forecast_predet.sh[208]LATB_JMO=192
++ forecast_predet.sh[218]NST_MODEL=2
++ forecast_predet.sh[219]NST_SPINUP=0
++ forecast_predet.sh[220]NST_RESV=0
++ forecast_predet.sh[221]ZSEA1=0
++ forecast_predet.sh[222]ZSEA2=0
++ forecast_predet.sh[223]nstf_name=2,0,0,0,0
++ forecast_predet.sh[224]nst_anl=.true.
++ forecast_predet.sh[230]blocksize=32
++ forecast_predet.sh[233]filtered_terrain=.true.
++ forecast_predet.sh[234]gfs_dwinds=.true.
++ forecast_predet.sh[237]no_dycore=.false.
++ forecast_predet.sh[238]dycore_only=.false.
++ forecast_predet.sh[239]chksum_debug=.false.
++ forecast_predet.sh[240]print_freq=6
++ forecast_predet.sh[246]na_init=1
++ forecast_predet.sh[248]local suite_file=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/sorc/ufs_model.fd/UFSATM/ccpp/suites/suite_FV3_GFS_v17_p8_ugwpv1.xml
++ forecast_predet.sh[249][[ ! -f /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/sorc/ufs_model.fd/UFSATM/ccpp/suites/suite_FV3_GFS_v17_p8_ugwpv1.xml ]]
++ forecast_predet.sh[255]local num_noahmpdrv
+++ forecast_predet.sh[256]grep -c noahmpdrv /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/sorc/ufs_model.fd/UFSATM/ccpp/suites/suite_FV3_GFS_v17_p8_ugwpv1.xml
++ forecast_predet.sh[256]num_noahmpdrv=1
++ forecast_predet.sh[257][[ 1 -gt 0 ]]
++ forecast_predet.sh[258]lsm=2
++ forecast_predet.sh[259]lheatstrg=.false.
++ forecast_predet.sh[260]landice=.false.
++ forecast_predet.sh[261]iopt_dveg=4
++ forecast_predet.sh[262]iopt_crs=2
++ forecast_predet.sh[263]iopt_btr=1
++ forecast_predet.sh[264]iopt_run=1
++ forecast_predet.sh[265]iopt_sfc=3
++ forecast_predet.sh[266]iopt_frz=1
++ forecast_predet.sh[267]iopt_inf=1
++ forecast_predet.sh[268]iopt_rad=3
++ forecast_predet.sh[269]iopt_alb=1
++ forecast_predet.sh[270]iopt_snf=4
++ forecast_predet.sh[271]iopt_tbot=2
++ forecast_predet.sh[272]iopt_stc=3
++ forecast_predet.sh[273]IALB=2
++ forecast_predet.sh[274]IEMS=2
++ forecast_predet.sh[295][[ nh == \n\h ]]
++ forecast_predet.sh[296]hydrostatic=.false.
++ forecast_predet.sh[297]phys_hydrostatic=.false.
++ forecast_predet.sh[298]use_hydro_pressure=.false.
++ forecast_predet.sh[299]make_nh=.true.
++ forecast_predet.sh[300]pass_full_omega_to_physics_in_non_hydrostatic_mode=.true.
++ forecast_predet.sh[309]consv_te=1.
++ forecast_predet.sh[310][[ NO == \Y\E\S ]]
++ forecast_predet.sh[315]consv_te=1.
++ forecast_predet.sh[316]k_split=1
++ forecast_predet.sh[320]n_split=4
++ forecast_predet.sh[322][[ non- == \m\o\n\o ]]
++ forecast_predet.sh[339]d_con=1.
++ forecast_predet.sh[340]do_vort_damp=.true.
++ forecast_predet.sh[341][[ nh == \n\h ]]
++ forecast_predet.sh[342]hord_mt=5
++ forecast_predet.sh[343]hord_xx=5
++ forecast_predet.sh[344]hord_dp=-5
++ forecast_predet.sh[352][[ non- != \m\o\n\o ]]
++ forecast_predet.sh[352][[ nh == \n\h ]]
++ forecast_predet.sh[353]vtdm4=0.02
++ forecast_predet.sh[359]nggps_ic=.true.
++ forecast_predet.sh[360]ncep_ic=.false.
++ forecast_predet.sh[361]external_ic=.true.
++ forecast_predet.sh[362]mountain=.false.
++ forecast_predet.sh[363]warm_start=.false.
++ forecast_predet.sh[364]read_increment=.false.
++ forecast_predet.sh[365]res_latlon_dynamics='""'
++ forecast_predet.sh[366]increment_file_on_native_grid=.false.
++ forecast_predet.sh[369]do_skeb=.false.
++ forecast_predet.sh[370]do_shum=.false.
++ forecast_predet.sh[371]do_sppt=.false.
++ forecast_predet.sh[372]do_ca=.false.
++ forecast_predet.sh[373]ISEED=0
++ forecast_predet.sh[374]local imem=
++ forecast_predet.sh[375]local base_seed=20211220120000
++ forecast_predet.sh[377][[ NO == \Y\E\S ]]
++ forecast_predet.sh[382][[ NO == \Y\E\S ]]
++ forecast_predet.sh[387][[ NO == \Y\E\S ]]
++ forecast_predet.sh[392][[ YES == \Y\E\S ]]
++ forecast_predet.sh[393]do_ca=.true.
++ forecast_predet.sh[394]ISEED_CA=1251518101
++ forecast_predet.sh[397][[ NO == \Y\E\S ]]
++ forecast_predet.sh[410]FNGLAC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_glacier.2x2.grb
++ forecast_predet.sh[411]FNMXIC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_maxice.2x2.grb
++ forecast_predet.sh[412]FNTSFC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/RTGSST.1982.2012.monthly.clim.grb
++ forecast_predet.sh[413]FNSNOC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_snoclim.1.875.grb
++ forecast_predet.sh[414]FNZORC=igbp
++ forecast_predet.sh[415]FNAISC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/IMS-NIC.blended.ice.monthly.clim.grb
++ forecast_predet.sh[416]FNALBC2=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/sfc/C96.mx500.facsf.tileX.nc
++ forecast_predet.sh[417]FNTG3C=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/sfc/C96.mx500.substrate_temperature.tileX.nc
++ forecast_predet.sh[418]FNVEGC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/sfc/C96.mx500.vegetation_greenness.tileX.nc
++ forecast_predet.sh[419]FNMSKH=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_slmask.t1534.3072.1536.grb
++ forecast_predet.sh[420]FNVMNC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/sfc/C96.mx500.vegetation_greenness.tileX.nc
++ forecast_predet.sh[421]FNVMXC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/sfc/C96.mx500.vegetation_greenness.tileX.nc
++ forecast_predet.sh[422]FNSLPC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/sfc/C96.mx500.slope_type.tileX.nc
++ forecast_predet.sh[423]FNALBC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/sfc/C96.mx500.snowfree_albedo.tileX.nc
++ forecast_predet.sh[424]FNVETC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/sfc/C96.mx500.vegetation_type.tileX.nc
++ forecast_predet.sh[425]FNSOTC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/sfc/C96.mx500.soil_type.tileX.nc
++ forecast_predet.sh[426]FNSOCC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/sfc/C96.mx500.soil_color.tileX.nc
++ forecast_predet.sh[427]FNABSC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/sfc/C96.mx500.maximum_snow_albedo.tileX.nc
++ forecast_predet.sh[428]FNSMCC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_soilmgldas.statsgo.t190.384.192.grb
++ forecast_predet.sh[431][[ ! -f /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_soilmgldas.statsgo.t190.384.192.grb ]]
++ forecast_predet.sh[432]FNSMCC=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_soilmgldas.statsgo.t1534.3072.1536.grb
++ forecast_predet.sh[436][[ .false. == \.\f\a\l\s\e\. ]]
++ forecast_predet.sh[437]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_mosaic.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/grid_spec.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_mosaic.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/grid_spec.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[443]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/ugwp_limb_tau.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/ugwp_limb_tau.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/ugwp_limb_tau.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/ugwp_limb_tau.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[446]local tt
++ forecast_predet.sh[447](( tt = 1 ))
++ forecast_predet.sh[447](( tt <= ntiles ))
++ forecast_predet.sh[448]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile1.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data.tile1.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile1.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data.tile1.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[449]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_grid.tile1.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/C96_grid.tile1.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_grid.tile1.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/C96_grid.tile1.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[450]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile1.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ls.tile1.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile1.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ls.tile1.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[451]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile1.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ss.tile1.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile1.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ss.tile1.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[447](( tt++ ))
++ forecast_predet.sh[447](( tt <= ntiles ))
++ forecast_predet.sh[448]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile2.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data.tile2.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile2.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data.tile2.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[449]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_grid.tile2.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/C96_grid.tile2.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_grid.tile2.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/C96_grid.tile2.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[450]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile2.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ls.tile2.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile2.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ls.tile2.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[451]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile2.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ss.tile2.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile2.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ss.tile2.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[447](( tt++ ))
++ forecast_predet.sh[447](( tt <= ntiles ))
++ forecast_predet.sh[448]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile3.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data.tile3.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile3.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data.tile3.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[449]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_grid.tile3.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/C96_grid.tile3.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_grid.tile3.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/C96_grid.tile3.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[450]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile3.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ls.tile3.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile3.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ls.tile3.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[451]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile3.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ss.tile3.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile3.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ss.tile3.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[447](( tt++ ))
++ forecast_predet.sh[447](( tt <= ntiles ))
++ forecast_predet.sh[448]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile4.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data.tile4.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile4.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data.tile4.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[449]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_grid.tile4.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/C96_grid.tile4.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_grid.tile4.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/C96_grid.tile4.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[450]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile4.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ls.tile4.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile4.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ls.tile4.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[451]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile4.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ss.tile4.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile4.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ss.tile4.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[447](( tt++ ))
++ forecast_predet.sh[447](( tt <= ntiles ))
++ forecast_predet.sh[448]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile5.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data.tile5.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile5.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data.tile5.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[449]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_grid.tile5.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/C96_grid.tile5.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_grid.tile5.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/C96_grid.tile5.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[450]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile5.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ls.tile5.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile5.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ls.tile5.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[451]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile5.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ss.tile5.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile5.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ss.tile5.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[447](( tt++ ))
++ forecast_predet.sh[447](( tt <= ntiles ))
++ forecast_predet.sh[448]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile6.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data.tile6.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96.mx500_oro_data.tile6.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data.tile6.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[449]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_grid.tile6.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/C96_grid.tile6.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/orog/C96/C96_grid.tile6.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/C96_grid.tile6.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[450]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile6.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ls.tile6.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ls.tile6.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ls.tile6.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[451]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile6.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ss.tile6.nc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/ugwd/C96/C96_oro_data_ss.tile6.nc /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/INPUT/oro_data_ss.tile6.nc
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[447](( tt++ ))
++ forecast_predet.sh[447](( tt <= ntiles ))
++ forecast_predet.sh[453][[ NO == \Y\E\S ]]
++ forecast_predet.sh[462]local noahmptablefile=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/noahmptable.tbl
++ forecast_predet.sh[463]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/noahmptable.tbl /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/noahmptable.tbl
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/noahmptable.tbl /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/noahmptable.tbl
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[466](( imp_physics == 8 ))
++ forecast_predet.sh[467]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/CCN_ACTIVATE.BIN /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/CCN_ACTIVATE.BIN
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/CCN_ACTIVATE.BIN /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/CCN_ACTIVATE.BIN
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[468]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/freezeH2O.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/freezeH2O.dat
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/freezeH2O.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/freezeH2O.dat
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[469]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/qr_acr_qgV2.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/qr_acr_qgV2.dat
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/qr_acr_qgV2.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/qr_acr_qgV2.dat
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[470]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/qr_acr_qsV2.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/qr_acr_qsV2.dat
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/qr_acr_qsV2.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/qr_acr_qsV2.dat
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[473][[ YES == \Y\E\S ]]
++ forecast_predet.sh[474][[ McCormack == \M\c\C\o\r\m\a\c\k\-\e\m\p\i\r\i\c\a\l\-\s\h\-\o\z\h ]]
++ forecast_predet.sh[477]O3FORC=ozprdlos_2015_new_sbuvO3_tclm15_nuchem.f77
++ forecast_predet.sh[482]H2OFORC=global_h2o_pltc.f77
++ forecast_predet.sh[483]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/ozprdlos_2015_new_sbuvO3_tclm15_nuchem.f77 /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/global_o3prdlos.f77
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/ozprdlos_2015_new_sbuvO3_tclm15_nuchem.f77 /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/global_o3prdlos.f77
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[484]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_h2o_pltc.f77 /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/global_h2oprdlos.f77
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_h2o_pltc.f77 /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/global_h2oprdlos.f77
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[488]ISOL=2
++ forecast_predet.sh[490]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_solarconstant_noaa_an.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/solarconstant_noaa_an.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_solarconstant_noaa_an.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/solarconstant_noaa_an.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[491]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_sfc_emissivity_idx.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/sfc_emissivity_idx.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_sfc_emissivity_idx.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/sfc_emissivity_idx.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[494]IAER=2011
++ forecast_predet.sh[495]MERRA2_6ym=.false.
++ forecast_predet.sh[497](( IAER == 1011 ))
++ forecast_predet.sh[520]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_climaeropac_global.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/aerosol.dat
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_climaeropac_global.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/aerosol.dat
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[521](( IAER > 0 ))
++ forecast_predet.sh[522]local file
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1850-1859.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1850-1859.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1850-1859.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1850-1859.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1850-1859.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1860-1869.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1860-1869.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1860-1869.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1860-1869.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1860-1869.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1870-1879.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1870-1879.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1870-1879.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1870-1879.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1870-1879.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1880-1889.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1880-1889.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1880-1889.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1880-1889.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1880-1889.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1890-1899.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1890-1899.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1890-1899.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1890-1899.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1890-1899.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1900-1909.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1900-1909.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1900-1909.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1900-1909.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1900-1909.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1910-1919.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1910-1919.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1910-1919.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1910-1919.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1910-1919.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1920-1929.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1920-1929.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1920-1929.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1920-1929.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1920-1929.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1930-1939.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1930-1939.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1930-1939.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1930-1939.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1930-1939.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1940-1949.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1940-1949.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1940-1949.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1940-1949.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1940-1949.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1950-1959.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1950-1959.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1950-1959.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1950-1959.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1950-1959.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1960-1969.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1960-1969.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1960-1969.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1960-1969.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1960-1969.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1970-1979.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1970-1979.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1970-1979.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1970-1979.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1970-1979.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1980-1989.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1980-1989.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1980-1989.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1980-1989.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1980-1989.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[523]for file in "${FIXgfs}/am/global_volcanic_aerosols"*
+++ forecast_predet.sh[524]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/volcanic_aerosols_1990-1999.txt
++ forecast_predet.sh[524]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1990-1999.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1990-1999.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_volcanic_aerosols_1990-1999.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/volcanic_aerosols_1990-1999.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[528]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/lut/optics_BC.v1_3.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/optics_BC.dat
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/lut/optics_BC.v1_3.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/optics_BC.dat
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[529]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/lut/optics_OC.v1_3.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/optics_OC.dat
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/lut/optics_OC.v1_3.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/optics_OC.dat
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[530]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/lut/optics_DU.v15_3.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/optics_DU.dat
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/lut/optics_DU.v15_3.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/optics_DU.dat
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[531]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/lut/optics_SS.v3_3.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/optics_SS.dat
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/lut/optics_SS.v3_3.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/optics_SS.dat
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[532]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/lut/optics_SU.v1_3.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/optics_SU.dat
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/lut/optics_SU.v1_3.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/optics_SU.dat
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[535]ICO2=2
++ forecast_predet.sh[537]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_co2historicaldata_glob.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_glob.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/global_co2historicaldata_glob.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_glob.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[538]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/co2monthlycyc.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2monthlycyc.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/co2monthlycyc.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2monthlycyc.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[541]local co2dir
++ forecast_predet.sh[542]co2dir=fix_co2_proj
++ forecast_predet.sh[543][[ '' == \Y\E\S ]]
++ forecast_predet.sh[546](( ICO2 > 0 ))
++ forecast_predet.sh[547]local file
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2009.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2009.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2009.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2009.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2009.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2010.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2010.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2010.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2010.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2010.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2011.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2011.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2011.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2011.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2011.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2012.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2012.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2012.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2012.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2012.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2013.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2013.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2013.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2013.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2013.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2014.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2014.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2014.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2014.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2014.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2015.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2015.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2015.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2015.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2015.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2016.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2016.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2016.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2016.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2016.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2017.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2017.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2017.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2017.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2017.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2018.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2018.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2018.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2018.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2018.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2019.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2019.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2019.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2019.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2019.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2020.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2020.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2020.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2020.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2020.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2021.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2021.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2021.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2021.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2021.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2022.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2022.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2022.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2022.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2022.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2023.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2023.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2023.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2023.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2023.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2024.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2024.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2024.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2024.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2024.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2025.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2025.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2025.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2025.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2025.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[548]for file in "${FIXgfs}/am/${co2dir}/global_co2historicaldata"*
+++ forecast_predet.sh[549]basename /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/co2historicaldata_2026.txt
++ forecast_predet.sh[549]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2026.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2026.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/fix/am/fix_co2_proj/global_co2historicaldata_2026.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/co2historicaldata_2026.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[554][[ .true. == \.\t\r\u\e\. ]]
++ forecast_predet.sh[555]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/params_grib2_tbl_new /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/params_grib2_tbl_new
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/params_grib2_tbl_new /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/params_grib2_tbl_new
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[556]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/post_itag_gfs /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/itag
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/post_itag_gfs /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/itag
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[558]case ${NET} in
++ forecast_predet.sh[564]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/gcafs/postxconfig-NT-gcafs.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/postxconfig-NT.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/gcafs/postxconfig-NT-gcafs.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/postxconfig-NT.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[565]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/gcafs/postxconfig-NT-gcafs.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/postxconfig-NT_FH00.txt
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/gcafs/postxconfig-NT-gcafs.txt /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/postxconfig-NT_FH00.txt
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[566]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/post_itag_gcafs /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/itag
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/ufs/post_itag_gcafs /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/itag
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[567]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/optics_luts_DUST_nasa.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/.
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/optics_luts_DUST_nasa.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/.
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[568]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/optics_luts_NITR_nasa.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/.
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/optics_luts_NITR_nasa.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/.
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[569]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/optics_luts_SALT_nasa.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/.
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/optics_luts_SALT_nasa.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/.
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[570]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/optics_luts_SOOT_nasa.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/.
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/optics_luts_SOOT_nasa.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/.
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[571]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/optics_luts_SUSO_nasa.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/.
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/optics_luts_SUSO_nasa.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/.
++ cpreq[4]'[' 0 -ne 0 ']'
++ forecast_predet.sh[572]cpreq /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/optics_luts_WASO_nasa.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/.
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/global-workflow/parm/post/optics_luts_WASO_nasa.dat /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/.
++ cpreq[4]'[' 0 -ne 0 ']'
++ exglobal_forecast.sh[107][[ .false. == \.\t\r\u\e\. ]]
++ exglobal_forecast.sh[110][[ .false. == \.\t\r\u\e\. ]]
++ exglobal_forecast.sh[113][[ .false. == \.\t\r\u\e\. ]]
++ exglobal_forecast.sh[116][[ .false. == \.\t\r\u\e\. ]]
++ exglobal_forecast.sh[119][[ .true. == \.\t\r\u\e\. ]]
++ exglobal_forecast.sh[120]GOCART_predet
++ forecast_predet.sh[757]echo 'SUB GOCART_predet: GOCART before run type determination'
+SUB GOCART_predet: GOCART before run type determination
++ forecast_predet.sh[759][[ ! -d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/chem/history ]]
++ forecast_predet.sh[762]GOCART_MAX=9
++ forecast_predet.sh[766]/bin/ln -sf /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/chem/input /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682/ChemInput
++ exglobal_forecast.sh[122]echo 'MAIN: Variables before determination of run type loaded'
+MAIN: Variables before determination of run type loaded
++ exglobal_forecast.sh[124]echo 'MAIN: Determining run type'
+MAIN: Determining run type
++ exglobal_forecast.sh[125]UFS_det
++ forecast_det.sh[6]echo 'SUB UFS_det: Run type determination for UFS'
+SUB UFS_det: Run type determination for UFS
++ forecast_det.sh[9][[ -f /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/06//model/atmos/restart/20211220.120000.coupler.res ]]
++ forecast_det.sh[14][[ .false. == \.\f\a\l\s\e\. ]]
++ forecast_det.sh[19][[ ! -f /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/atmos/input/gfs_ctrl.nc ]]
++ forecast_det.sh[25]DOIAU=NO
++ forecast_det.sh[26]IAU_OFFSET=0
++ forecast_det.sh[27]model_start_date_current_cycle=2021122012
++ forecast_det.sh[29]DO_LAND_IAU=.false.
++ forecast_det.sh[36]RERUN=NO
++ forecast_det.sh[39][[ gcdas =~ gdas ]]
++ forecast_det.sh[39][[ gcdas == \e\n\k\f\g\f\s ]]
++ forecast_det.sh[45]local file_array nrestarts
++ forecast_det.sh[46]mapfile -t file_array
+++ forecast_det.sh[46]find /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART -name '????????.??0000.coupler.res'
+++ forecast_det.sh[46]sort
++ forecast_det.sh[47]nrestarts=3
++ forecast_det.sh[48][[ 3 -eq 0 ]]
++ forecast_det.sh[52]echo 'Found 3 restarts in '\''/scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART'\'' to check for RERUN'
+Found 3 restarts in '/scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART' to check for RERUN
++ forecast_det.sh[53]ls -1 /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART/20211220.150000.coupler.res /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART/20211220.180000.coupler.res /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART/20211220.210000.coupler.res
+/scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART/20211220.150000.coupler.res
+/scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART/20211220.180000.coupler.res
+/scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART/20211220.210000.coupler.res
++ forecast_det.sh[57]local ii filepath filename
++ forecast_det.sh[58]local rdate seconds
++ forecast_det.sh[59]local fv3_rst_ok cmeps_rst_ok mom6_rst_ok cice6_rst_ok ww3_rst_ok
++ forecast_det.sh[60]local hdate hdatep1 fhout_ocn_by_2
++ forecast_det.sh[61](( ii = nrestarts - 1 ))
++ forecast_det.sh[61](( ii >= 0 ))
++ forecast_det.sh[63]filepath=/scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART/20211220.210000.coupler.res
+++ forecast_det.sh[64]basename /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART/20211220.210000.coupler.res
++ forecast_det.sh[64]filename=20211220.210000.coupler.res
++ forecast_det.sh[65]rdate=2021122021
++ forecast_det.sh[68]fv3_rst_ok=YES
++ forecast_det.sh[69]cmeps_rst_ok=YES
++ forecast_det.sh[70]mom6_rst_ok=YES
++ forecast_det.sh[71]cice6_rst_ok=YES
++ forecast_det.sh[72]ww3_rst_ok=YES
++ forecast_det.sh[75][[ ! -f /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART/20211220.210000.coupler.res ]]
++ forecast_det.sh[81][[ .false. == \.\t\r\u\e\. ]]
++ forecast_det.sh[115][[ .false. == \.\t\r\u\e\. ]]
++ forecast_det.sh[122][[ .false. == \.\t\r\u\e\. ]]
++ forecast_det.sh[129][[ YES == \Y\E\S ]]
++ forecast_det.sh[130][[ YES == \Y\E\S ]]
++ forecast_det.sh[131][[ YES == \Y\E\S ]]
++ forecast_det.sh[132][[ YES == \Y\E\S ]]
++ forecast_det.sh[133][[ YES == \Y\E\S ]]
++ forecast_det.sh[134]RERUN=YES
++ forecast_det.sh[135]RERUN_DATE=2021122021
++ forecast_det.sh[138][[ 2021122021 -ge 2021122021 ]]
++ forecast_det.sh[139]echo 'FATAL ERROR Warm start detected, but restart date (2021122021) is at/after model end date (2021122021)'
+FATAL ERROR Warm start detected, but restart date (2021122021) is at/after model end date (2021122021)
++ forecast_det.sh[140]exit 1
++ JGLOBAL_FORECAST[106]export err=1
++ JGLOBAL_FORECAST[106]err=1
++ JGLOBAL_FORECAST[107][[ 1 -ne 0 ]]
++ JGLOBAL_FORECAST[108]err_exit
++ preamble.sh[117]set +eux
+
+    -------------------------------------------------------------
+    -- FATAL ERROR: Job fcst.1424682 failed RETURN CODE 1
+    -- ABNORMAL EXIT at Wed Feb 25 21:21:06 UTC 2026 on h12c56
+    -------------------------------------------------------------
+    
+
+Currently Loaded Modules:
+  1) contrib                         42) esmf/8.8.0
+  2) stack-oneapi/2024.2.1           43) antlr/2.7.7
+  3) tbb/2024.2.1                    44) gsl/2.8
+  4) compiler-rt/2024.2.1            45) nco/5.2.4
+  5) intel/2024.2.1                  46) bacio/2.4.1
+  6) impi/2024.2.1                   47) w3emc/2.10.0
+  7) stack-intel-oneapi-mpi/2021.13  48) prod_util/2.1.1
+  8) glibc/2.28                      49) g2/3.5.1
+  9) intel-oneapi-runtime/2024.2.1   50) ip/5.1.0
+ 10) tar/1.26                        51) grib-util/1.4.0
+ 11) gettext/0.22.5                  52) g2tmpl/1.13.0
+ 12) zlib/1.2.11                     53) gsi-ncdiag/1.1.2
+ 13) sqlite/3.46.0                   54) crtm-fix/2.4.0.1_emc
+ 14) util-linux-uuid/2.40.2          55) git-lfs/2.10.0
+ 15) python/3.11.7                   56) crtm/2.4.0.1
+ 16) stack-python/3.11.7             57) bufr/12.1.0
+ 17) nghttp2/1.63.0                  58) py-f90nml/1.4.3
+ 18) curl/8.10.1                     59) py-certifi/2023.7.22
+ 19) cmake/3.27.9                    60) py-cftime/1.0.3.4
+ 20) libjpeg/2.1.0                   61) py-netcdf4/1.7.1.post2
+ 21) jasper/2.0.32                   62) libyaml/0.2.5
+ 22) libpng/1.6.37                   63) py-pyyaml/6.0.2
+ 23) openjpeg/2.3.1                  64) py-markupsafe/2.1.3
+ 24) eccodes/2.33.0                  65) py-jinja2/3.1.4
+ 25) fftw/3.3.10                     66) py-pytz/2023.3
+ 26) proj/9.4.1                      67) py-tzdata/2023.3
+ 27) udunits/2.2.28                  68) py-pandas/2.2.3
+ 28) cdo/2.3.0                       69) py-six/1.16.0
+ 29) hdf5/1.14.3                     70) py-python-dateutil/2.8.2
+ 30) snappy/1.2.1                    71) py-packaging/24.1
+ 31) zstd/1.5.6                      72) py-setuptools/69.2.0
+ 32) c-blosc/1.21.5                  73) py-xarray/2024.7.0
+ 33) netcdf-c/4.9.2                  74) gw_run.common
+ 34) netcdf-fortran/4.6.1            75) hpss/hpss
+ 35) parallel-netcdf/1.12.3          76) gempak/7.17.0
+ 36) parallelio/2.6.2                77) perl/5.38.0
+ 37) python-venv/1.0                 78) prepobs/1.1.3
+ 38) py-mpi4py/4.0.1                 79) fit2obs/1.1.10
+ 39) openblas/0.3.24                 80) imagemagick/7.1.1-11
+ 40) py-numpy/1.26.4                 81) gw_run.hera
+ 41) py-pip/23.1.2
+
+ 
+
+
+Job fcst.1424682 failed RETURN CODE 1
+/scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/fcst.1424682
+total 340021
+-rw-rw-r--+ 1 role.glopara stmp         0 Feb 25 21:20 ncepdate
+lrwxrwxrwx  1 role.glopara stmp       132 Feb 25 21:20 RESTART -> /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/restart/FV3_RESTART
+lrwxrwxrwx  1 role.glopara stmp       133 Feb 25 21:20 FV3ATM_OUTPUT -> /scratch3/NCEPDEV/stmp/role.glopara/RUNDIRS/C96_gcafs_cycled_733bbf3e-9636/gcdas.2021122012/gcdasfcst.2021122012/output/FV3ATM_OUTPUT
+-rw-r--r--+ 1 role.glopara stmp      4868 Feb 25 21:20 ugwp_limb_tau.nc
+drwxrwsr-x+ 2 role.glopara stmp      4096 Feb 25 21:20 INPUT
+-rw-r--r--+ 1 role.glopara stmp  33118944 Feb 25 21:20 qr_acr_qsV2.dat
+-rw-r--r--+ 1 role.glopara stmp  68077680 Feb 25 21:20 qr_acr_qgV2.dat
+-rw-r--r--+ 1 role.glopara stmp     69015 Feb 25 21:20 noahmptable.tbl
+-rw-r--r--+ 1 role.glopara stmp 254944848 Feb 25 21:20 freezeH2O.dat
+-rw-r--r--+ 1 role.glopara stmp     35288 Feb 25 21:20 CCN_ACTIVATE.BIN
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1880-1889.txt
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1870-1879.txt
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1860-1869.txt
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1850-1859.txt
+-rw-r--r--+ 1 role.glopara stmp      7973 Feb 25 21:21 solarconstant_noaa_an.txt
+-rw-r--r--+ 1 role.glopara stmp     65679 Feb 25 21:21 sfc_emissivity_idx.txt
+-rw-r--r--+ 1 role.glopara stmp   1114844 Feb 25 21:21 global_o3prdlos.f77
+-rw-r--r--+ 1 role.glopara stmp    778256 Feb 25 21:21 global_h2oprdlos.f77
+-rw-r--r--+ 1 role.glopara stmp   3135393 Feb 25 21:21 aerosol.dat
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1970-1979.txt
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1960-1969.txt
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1950-1959.txt
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1940-1949.txt
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1930-1939.txt
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1920-1929.txt
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1910-1919.txt
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1900-1909.txt
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1890-1899.txt
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1990-1999.txt
+-rw-r--r--+ 1 role.glopara stmp      2689 Feb 25 21:21 volcanic_aerosols_1980-1989.txt
+-rw-r--r--+ 1 role.glopara stmp    101749 Feb 25 21:21 optics_SU.dat
+-rw-r--r--+ 1 role.glopara stmp    502753 Feb 25 21:21 optics_SS.dat
+-rw-r--r--+ 1 role.glopara stmp    202000 Feb 25 21:21 optics_OC.dat
+-rw-r--r--+ 1 role.glopara stmp    461637 Feb 25 21:21 optics_DU.dat
+-rw-r--r--+ 1 role.glopara stmp    202000 Feb 25 21:21 optics_BC.dat
+-rw-r--r--+ 1 role.glopara stmp     27302 Feb 25 21:21 co2monthlycyc.txt
+-rw-r--r--+ 1 role.glopara stmp      9037 Feb 25 21:21 co2historicaldata_glob.txt
+-rw-r--r--+ 1 role.glopara stmp     24629 Feb 25 21:21 co2historicaldata_2009.txt
+-rw-r--r--+ 1 role.glopara stmp     24484 Feb 25 21:21 co2historicaldata_2017.txt
+-rw-r--r--+ 1 role.glopara stmp     24484 Feb 25 21:21 co2historicaldata_2016.txt
+-rw-r--r--+ 1 role.glopara stmp     24484 Feb 25 21:21 co2historicaldata_2015.txt
+-rw-r--r--+ 1 role.glopara stmp     24629 Feb 25 21:21 co2historicaldata_2014.txt
+-rw-r--r--+ 1 role.glopara stmp     24629 Feb 25 21:21 co2historicaldata_2013.txt
+-rw-r--r--+ 1 role.glopara stmp     24629 Feb 25 21:21 co2historicaldata_2012.txt
+-rw-r--r--+ 1 role.glopara stmp     24629 Feb 25 21:21 co2historicaldata_2011.txt
+-rw-r--r--+ 1 role.glopara stmp     24629 Feb 25 21:21 co2historicaldata_2010.txt
+-rw-r--r--+ 1 role.glopara stmp     24484 Feb 25 21:21 co2historicaldata_2026.txt
+-rw-r--r--+ 1 role.glopara stmp     24484 Feb 25 21:21 co2historicaldata_2025.txt
+-rw-r--r--+ 1 role.glopara stmp     24484 Feb 25 21:21 co2historicaldata_2024.txt
+-rw-r--r--+ 1 role.glopara stmp     24484 Feb 25 21:21 co2historicaldata_2023.txt
+-rw-r--r--+ 1 role.glopara stmp     24484 Feb 25 21:21 co2historicaldata_2022.txt
+-rw-r--r--+ 1 role.glopara stmp     24484 Feb 25 21:21 co2historicaldata_2021.txt
+-rw-r--r--+ 1 role.glopara stmp     24484 Feb 25 21:21 co2historicaldata_2020.txt
+-rw-r--r--+ 1 role.glopara stmp     24484 Feb 25 21:21 co2historicaldata_2019.txt
+-rw-r--r--+ 1 role.glopara stmp     24484 Feb 25 21:21 co2historicaldata_2018.txt
+-rw-r--r--+ 1 role.glopara stmp     25182 Feb 25 21:21 postxconfig-NT_FH00.txt
+-rw-r--r--+ 1 role.glopara stmp     25182 Feb 25 21:21 postxconfig-NT.txt
+-rw-r--r--+ 1 role.glopara stmp     44024 Feb 25 21:21 params_grib2_tbl_new
+-rw-r--r--+ 1 role.glopara stmp     20544 Feb 25 21:21 optics_luts_WASO_nasa.dat
+-rw-r--r--+ 1 role.glopara stmp     10272 Feb 25 21:21 optics_luts_SUSO_nasa.dat
+-rw-r--r--+ 1 role.glopara stmp     20544 Feb 25 21:21 optics_luts_SOOT_nasa.dat
+-rw-r--r--+ 1 role.glopara stmp     51360 Feb 25 21:21 optics_luts_SALT_nasa.dat
+-rw-r--r--+ 1 role.glopara stmp     30816 Feb 25 21:21 optics_luts_NITR_nasa.dat
+-rw-r--r--+ 1 role.glopara stmp     51360 Feb 25 21:21 optics_luts_DUST_nasa.dat
+-rw-r--r--+ 1 role.glopara stmp       348 Feb 25 21:21 itag
+lrwxrwxrwx  1 role.glopara stmp       178 Feb 25 21:21 ChemInput -> /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/HERA/BUILDS/GITLAB/pr_cases_4575_733bbf3e_9636/RUNTESTS/COMROOT/C96_gcafs_cycled_733bbf3e-9636/gcdas.20211220/12//model/chem/input
+cat: OUTPUT.1424952: No such file or directory
+[2026-02-25T21:21:07.261] error: *** JOB 21988270 ON h12c56 CANCELLED AT 2026-02-25T21:21:07 DUE to SIGNAL Terminated ***
+_______________________________________________________________
+Start Epilog on node h12c56 for job 21988270 :: Wed Feb 25 21:21:10 UTC 2026
+Job 21988270 finished for user role.glopara in partition hera with exit code 0:0
+_______________________________________________________________
+End Epilogue Wed Feb 25 21:21:10 UTC 2026
