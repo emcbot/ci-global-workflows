@@ -1,0 +1,1216 @@
+Loading modules quietly...
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Currently Loaded Modules:
+  1) lmod                             40) esmf/8.8.0
+  2) intel-oneapi-compilers/2024.2.1  41) antlr/2.7.7
+  3) stack-oneapi/2024.2.1            42) gsl/2.8
+  4) intel-oneapi-mpi/2021.13.1       43) nco/5.2.4
+  5) stack-intel-oneapi-mpi/2021.13   44) bacio/2.4.1
+  6) glibc/2.34                       45) w3emc/2.10.0
+  7) intel-oneapi-runtime/2024.2.1    46) prod_util/2.1.1
+  8) zlib/1.2.13                      47) g2/3.5.1
+  9) pigz/2.8                         48) ip/5.1.0
+ 10) zstd/1.5.6                       49) grib-util/1.4.0
+ 11) tar/1.34                         50) g2tmpl/1.13.0
+ 12) gettext/0.22.5                   51) gsi-ncdiag/1.1.2
+ 13) sqlite/3.46.0                    52) crtm-fix/2.4.0.1_emc
+ 14) util-linux-uuid/2.40.2           53) git-lfs/3.5.1
+ 15) python/3.11.7                    54) crtm/2.4.0.1
+ 16) stack-python/3.11.7              55) bufr/12.1.0
+ 17) nghttp2/1.63.0                   56) py-f90nml/1.4.3
+ 18) curl/8.10.1                      57) py-certifi/2023.7.22
+ 19) cmake/3.27.9                     58) py-cftime/1.0.3.4
+ 20) libjpeg/2.1.0                    59) py-netcdf4/1.7.1.post2
+ 21) jasper/2.0.32                    60) libyaml/0.2.5
+ 22) libpng/1.6.37                    61) py-pyyaml/6.0.2
+ 23) openjpeg/2.3.1                   62) py-markupsafe/2.1.3
+ 24) eccodes/2.33.0                   63) py-jinja2/3.1.4
+ 25) intel-oneapi-mkl/2024.2.1        64) py-pytz/2023.3
+ 26) proj/9.4.1                       65) py-tzdata/2023.3
+ 27) udunits/2.2.28                   66) py-pandas/2.2.3
+ 28) cdo/2.4.4                        67) py-six/1.16.0
+ 29) hdf5/1.14.3                      68) py-python-dateutil/2.8.2
+ 30) snappy/1.2.1                     69) py-packaging/24.1
+ 31) c-blosc/1.21.5                   70) py-setuptools/69.2.0
+ 32) netcdf-c/4.9.2                   71) py-xarray/2024.7.0
+ 33) netcdf-fortran/4.6.1             72) gw_run.common
+ 34) parallel-netcdf/1.12.3           73) g2c/2.1.0
+ 35) parallelio/2.6.2                 74) wgrib2/3.6.0
+ 36) python-venv/1.0                  75) prepobs/1.1.3
+ 37) py-mpi4py/4.0.1                  76) fit2obs/1.1.10
+ 38) py-numpy/1.26.4                  77) imagemagick/7.1.1-29
+ 39) py-pip/23.1.2                    78) gw_run.ursa
+
+ 
+
+Begin /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/dev/job_cards/rocoto/prep.sh at 22:21:57
+++ jjob_header.sh[46]OPTIND=1
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[50]env_job=prep
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[48]case "${option}" in
+++ jjob_header.sh[49]read -ra configs
+++ jjob_header.sh[47]getopts c:e: option
+++ jjob_header.sh[61]shift 4
+++ jjob_header.sh[63][[ -z prep ]]
+++ jjob_header.sh[71]export DATA=/scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C48_gsienkf_atmDA_733bbf3e-9637/gdas.2024022400/prep.3157550
+++ jjob_header.sh[71]DATA=/scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C48_gsienkf_atmDA_733bbf3e-9637/gdas.2024022400/prep.3157550
+++ jjob_header.sh[72][[ YES == \Y\E\S ]]
+++ jjob_header.sh[73]rm -rf /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C48_gsienkf_atmDA_733bbf3e-9637/gdas.2024022400/prep.3157550
+++ jjob_header.sh[75]mkdir -p /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C48_gsienkf_atmDA_733bbf3e-9637/gdas.2024022400/prep.3157550
+++ jjob_header.sh[76]cd /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C48_gsienkf_atmDA_733bbf3e-9637/gdas.2024022400/prep.3157550
+++ jjob_header.sh[84]export pid=3157550
+++ jjob_header.sh[84]pid=3157550
+++ jjob_header.sh[85]export pgmout=OUTPUT.3157550
+++ jjob_header.sh[85]pgmout=OUTPUT.3157550
+++ jjob_header.sh[86]export pgmerr=errfile
+++ jjob_header.sh[86]pgmerr=errfile
+++ jjob_header.sh[89]export pgm=
+++ jjob_header.sh[89]pgm=
+++ jjob_header.sh[94]export cycle=t00z
+++ jjob_header.sh[94]cycle=t00z
+++ jjob_header.sh[95]setpdy.sh
++ setpdy.sh[20]'[' /scratch4/NCEPDEV/stmp/role.glopara/RUNDIRS/C48_gsienkf_atmDA_733bbf3e-9637/gdas.2024022400/prep.3157550 == /home/role.glopara ']'
++ setpdy.sh[25][[ ! t00z =~ t??z ]]
++ setpdy.sh[30]case $# in
++ setpdy.sh[31]dates_before_PDY=7
++ setpdy.sh[32]dates_after_PDY=7
++ setpdy.sh[50]COMDATEROOT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT
++ setpdy.sh[53]'[' -z 20240224 ']'
++ setpdy.sh[57]sed 's/[0-9]\{8\}/20240224/' /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/date/t00z
+sed: can't read /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/date/t00z: No such file or directory
+++ jjob_header.sh[95]true
+++ jjob_header.sh[96]source ./PDY
+/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/ush/jjob_header.sh: line 96: ./PDY: No such file or directory
+++ jjob_header.sh[96]true
+++ jjob_header.sh[101]export EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/EXPDIR/C48_gsienkf_atmDA_733bbf3e-9637
+++ jjob_header.sh[101]EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/EXPDIR/C48_gsienkf_atmDA_733bbf3e-9637
+++ jjob_header.sh[102]for config in "${configs[@]:-''}"
+++ jjob_header.sh[103]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/EXPDIR/C48_gsienkf_atmDA_733bbf3e-9637/config.base
++++ config.base[6]echo 'BEGIN: config.base'
+BEGIN: config.base
++++ config.base[9]export machine=URSA
++++ config.base[9]machine=URSA
++++ config.base[12]export RUN_ENVIR=emc
++++ config.base[12]RUN_ENVIR=emc
++++ config.base[15]export ACCOUNT=fv3-cpu
++++ config.base[15]ACCOUNT=fv3-cpu
++++ config.base[16]export QUEUE=batch
++++ config.base[16]QUEUE=batch
++++ config.base[17]export QUEUE_SERVICE=batch
++++ config.base[17]QUEUE_SERVICE=batch
++++ config.base[18]export QUEUE_DTN=batch
++++ config.base[18]QUEUE_DTN=batch
++++ config.base[19]export PARTITION_BATCH=u1-compute
++++ config.base[19]PARTITION_BATCH=u1-compute
++++ config.base[20]export PARTITION_SERVICE=u1-service
++++ config.base[20]PARTITION_SERVICE=u1-service
++++ config.base[21]export PARTITION_DTN=
++++ config.base[21]PARTITION_DTN=
++++ config.base[22]export RESERVATION=
++++ config.base[22]RESERVATION=
++++ config.base[23]export CLUSTERS=
++++ config.base[23]CLUSTERS=
++++ config.base[24]export CLUSTERS_SERVICE=
++++ config.base[24]CLUSTERS_SERVICE=
++++ config.base[25]export CLUSTERS_DTN=
++++ config.base[25]CLUSTERS_DTN=
++++ config.base[28]export HPSS_PROJECT=emc-global
++++ config.base[28]HPSS_PROJECT=emc-global
++++ config.base[31]export HOMEgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow
++++ config.base[31]HOMEgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow
++++ config.base[32]export EXECgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/exec
++++ config.base[32]EXECgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/exec
++++ config.base[33]export FIXgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix
++++ config.base[33]FIXgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix
++++ config.base[34]export PARMgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/parm
++++ config.base[34]PARMgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/parm
++++ config.base[35]export SCRgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/scripts
++++ config.base[35]SCRgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/scripts
++++ config.base[36]export USHgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/ush
++++ config.base[36]USHgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/ush
++++ config.base[38]export FIXam=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/am
++++ config.base[38]FIXam=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/am
++++ config.base[39]export FIXaer=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/aer
++++ config.base[39]FIXaer=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/aer
++++ config.base[40]export FIXcpl=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/cpl
++++ config.base[40]FIXcpl=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/cpl
++++ config.base[41]export FIXlut=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/lut
++++ config.base[41]FIXlut=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/lut
++++ config.base[42]export FIXcice=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/cice
++++ config.base[42]FIXcice=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/cice
++++ config.base[43]export FIXmom=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/mom6
++++ config.base[43]FIXmom=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/mom6
++++ config.base[44]export FIXreg2grb2=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/reg2grb2
++++ config.base[44]FIXreg2grb2=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/reg2grb2
++++ config.base[45]export FIXgdas=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/gdas
++++ config.base[45]FIXgdas=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/gdas
++++ config.base[50]export PACKAGEROOT=/scratch3/NCEPDEV/global/role.glopara/nwpara
++++ config.base[50]PACKAGEROOT=/scratch3/NCEPDEV/global/role.glopara/nwpara
++++ config.base[51]export COMROOT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT
++++ config.base[51]COMROOT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT
++++ config.base[52]export COMINsyn=/scratch3/NCEPDEV/global/role.glopara/com/gfs/prod/syndat
++++ config.base[52]COMINsyn=/scratch3/NCEPDEV/global/role.glopara/com/gfs/prod/syndat
++++ config.base[53]export DMPDIR=/scratch3/NCEPDEV/global/role.glopara/dump
++++ config.base[53]DMPDIR=/scratch3/NCEPDEV/global/role.glopara/dump
++++ config.base[54]export IODADIR=/scratch3/NCEPDEV/global/role.glopara/dump_ioda
++++ config.base[54]IODADIR=/scratch3/NCEPDEV/global/role.glopara/dump_ioda
++++ config.base[55]export USE_IODADIR=NO
++++ config.base[55]USE_IODADIR=NO
++++ config.base[59]export COMINecmwf=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ecmwf
++++ config.base[59]COMINecmwf=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ecmwf
++++ config.base[60]export COMINnam=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/nam
++++ config.base[60]COMINnam=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/nam
++++ config.base[61]export COMINukmet=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ukmet
++++ config.base[61]COMINukmet=/scratch3/NCEPDEV/global/role.glopara/data/external_gempak/ukmet
++++ config.base[64]export HOMEDIR=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[64]HOMEDIR=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[65]export STMP=/scratch4/NCEPDEV/stmp/role.glopara
++++ config.base[65]STMP=/scratch4/NCEPDEV/stmp/role.glopara
++++ config.base[66]export PTMP=/scratch4/NCEPDEV/stmp/role.glopara
++++ config.base[66]PTMP=/scratch4/NCEPDEV/stmp/role.glopara
++++ config.base[67]export NOSCRUB=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[67]NOSCRUB=/scratch3/NCEPDEV/global/role.glopara
++++ config.base[70]export BASE_GIT=/scratch3/NCEPDEV/global/role.glopara/git
++++ config.base[70]BASE_GIT=/scratch3/NCEPDEV/global/role.glopara/git
++++ config.base[73]export BASE_DATA=/scratch3/NCEPDEV/global/role.glopara/data
++++ config.base[73]BASE_DATA=/scratch3/NCEPDEV/global/role.glopara/data
++++ config.base[76]export DO_PREP_SFC=NO
++++ config.base[76]DO_PREP_SFC=NO
++++ config.base[79]export DO_GOES=NO
++++ config.base[79]DO_GOES=NO
++++ config.base[80]export DO_BUFRSND=NO
++++ config.base[80]DO_BUFRSND=NO
++++ config.base[81]export DO_GEMPAK=NO
++++ config.base[81]DO_GEMPAK=NO
++++ config.base[82]export DO_AWIPS=NO
++++ config.base[82]DO_AWIPS=NO
++++ config.base[83]export DO_NPOESS=NO
++++ config.base[83]DO_NPOESS=NO
++++ config.base[84]export DO_TRACKER=YES
++++ config.base[84]DO_TRACKER=YES
++++ config.base[85]export DO_GENESIS=YES
++++ config.base[85]DO_GENESIS=YES
++++ config.base[86]export DO_GENESIS_FSU=NO
++++ config.base[86]DO_GENESIS_FSU=NO
++++ config.base[87]export DO_VERFOZN=YES
++++ config.base[87]DO_VERFOZN=YES
++++ config.base[88]export DO_VERFRAD=YES
++++ config.base[88]DO_VERFRAD=YES
++++ config.base[89]export DO_VMINMON=YES
++++ config.base[89]DO_VMINMON=YES
++++ config.base[90]export DO_ANLSTAT=YES
++++ config.base[90]DO_ANLSTAT=YES
++++ config.base[93]export MODE=cycled
++++ config.base[93]MODE=cycled
++++ config.base[94]export DO_TEST_MODE=NO
++++ config.base[94]DO_TEST_MODE=NO
++++ config.base[103]export FIXgsi=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/gsi
++++ config.base[103]FIXgsi=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/gsi
++++ config.base[104]export HOMEpost=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow
++++ config.base[104]HOMEpost=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow
++++ config.base[105]export HOMEobsproc=/scratch3/NCEPDEV/global/role.glopara/git/obsproc/v1.2.0
++++ config.base[105]HOMEobsproc=/scratch3/NCEPDEV/global/role.glopara/git/obsproc/v1.2.0
++++ config.base[108]export NMV=/bin/mv
++++ config.base[108]NMV=/bin/mv
++++ config.base[109]export 'NLN=/bin/ln -sf'
++++ config.base[109]NLN='/bin/ln -sf'
++++ config.base[110]export VERBOSE=YES
++++ config.base[110]VERBOSE=YES
++++ config.base[111]export KEEPDATA=NO
++++ config.base[111]KEEPDATA=NO
++++ config.base[112]export DEBUG_POSTSCRIPT=NO
++++ config.base[112]DEBUG_POSTSCRIPT=NO
++++ config.base[113]export CHGRP_RSTPROD=YES
++++ config.base[113]CHGRP_RSTPROD=YES
++++ config.base[114]export 'CHGRP_CMD=chgrp rstprod'
++++ config.base[114]CHGRP_CMD='chgrp rstprod'
++++ config.base[115]export NCDUMP=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/netcdf-c-4.9.2-idnwcbr/bin/ncdump
++++ config.base[115]NCDUMP=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/netcdf-c-4.9.2-idnwcbr/bin/ncdump
++++ config.base[116]export NCLEN=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/ush/getncdimlen
++++ config.base[116]NCLEN=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/ush/getncdimlen
++++ config.base[119]export BASE_ENV=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/env
++++ config.base[119]BASE_ENV=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/env
++++ config.base[122]export SDATE=2024022318
++++ config.base[122]SDATE=2024022318
++++ config.base[123]export EDATE=2024022406
++++ config.base[123]EDATE=2024022406
++++ config.base[124]export EXP_WARM_START=.true.
++++ config.base[124]EXP_WARM_START=.true.
++++ config.base[125]export assim_freq=6
++++ config.base[125]assim_freq=6
++++ config.base[126]export PSLOT=C48_gsienkf_atmDA_733bbf3e-9637
++++ config.base[126]PSLOT=C48_gsienkf_atmDA_733bbf3e-9637
++++ config.base[127]export EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/EXPDIR/C48_gsienkf_atmDA_733bbf3e-9637
++++ config.base[127]EXPDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/EXPDIR/C48_gsienkf_atmDA_733bbf3e-9637
++++ config.base[128]export ROTDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637
++++ config.base[128]ROTDIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637
++++ config.base[129]export DUMP_SUFFIX=
++++ config.base[129]DUMP_SUFFIX=
++++ config.base[130][[ 2024022400 -ge 2019092100 ]]
++++ config.base[130][[ 2024022400 -le 2019110700 ]]
++++ config.base[133]export ARCDIR=/scratch3/NCEPDEV/global/role.glopara/archive/C48_gsienkf_atmDA_733bbf3e-9637
++++ config.base[133]ARCDIR=/scratch3/NCEPDEV/global/role.glopara/archive/C48_gsienkf_atmDA_733bbf3e-9637
++++ config.base[134]export ATARDIR=/NCEPDEV/emc-global/1year/role.glopara/URSA/scratch/C48_gsienkf_atmDA_733bbf3e-9637
++++ config.base[134]ATARDIR=/NCEPDEV/emc-global/1year/role.glopara/URSA/scratch/C48_gsienkf_atmDA_733bbf3e-9637
++++ config.base[135]export 'FETCHDIR={{ FETCHDIR }}'
++++ config.base[135]FETCHDIR='{{ FETCHDIR }}'
++++ config.base[138]export envir=prod
++++ config.base[138]envir=prod
++++ config.base[139]export NET=gfs
++++ config.base[139]NET=gfs
++++ config.base[140]export RUN=gdas
++++ config.base[140]RUN=gdas
++++ config.base[143]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/EXPDIR/C48_gsienkf_atmDA_733bbf3e-9637/config.com
+++++ config.com[4]echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ config.com[38][[ emc == \n\c\o ]]
+++++ config.com[44]COM_OBSPROC_TMPL='${DMPDIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ config.com[45]COM_OBSFORGE_TMPL='${IODADIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}'
+++++ config.com[46]COM_RTOFS_TMPL='${DMPDIR}'
+++++ config.com[47]COM_TCVITAL_TMPL='${DMPDIR}/${RUN}.${YMD}/${HH}/atmos'
+++++ config.com[49]declare -rx 'COM_OBS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ config.com[50]declare -rx COM_OBSPROC_TMPL COM_RTOFS_TMPL COM_OBSFORGE_TMPL
+++++ config.com[52]COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ config.com[54]declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ config.com[56]declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ config.com[58]declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ config.com[59]declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ config.com[60]declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ config.com[61]declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ config.com[62]declare -rx 'COM_SNOW_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/snow/anlmon'
+++++ config.com[63]declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ config.com[64]declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ config.com[65]declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ config.com[66]declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ config.com[67]declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ config.com[68]declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ config.com[69]declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ config.com[70]declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ config.com[71]declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ config.com[72]declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ config.com[73]declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ config.com[74]declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ config.com[75]declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ config.com[76]declare -rx 'COM_ATMOS_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/anlmon'
+++++ config.com[77]declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ config.com[79]declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ config.com[80]declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ config.com[81]declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ config.com[82]declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ config.com[83]declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ config.com[84]declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ config.com[85]declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ config.com[86]declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ config.com[88]declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ config.com[89]declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ config.com[90]declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ config.com[91]declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ config.com[92]declare -rx 'COM_OCEAN_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/anlmon'
+++++ config.com[93]declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ config.com[94]declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ config.com[95]declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ config.com[96]declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ config.com[97]declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ config.com[99]declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ config.com[100]declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ config.com[101]declare -rx 'COM_ICE_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/anlmon'
+++++ config.com[102]declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ config.com[103]declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ config.com[104]declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ config.com[105]declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ config.com[106]declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ config.com[107]declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ config.com[108]declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ config.com[110]declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ config.com[111]declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ config.com[112]declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ config.com[113]declare -rx 'COM_CHEM_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/chem/anlmon'
+++++ config.com[114]declare -rx 'COM_CHEM_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/input'
+++++ config.com[115]declare -rx 'COM_CHEM_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/restart'
+++++ config.com[117]declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ config.base[145]export LOGSCRIPT=
++++ config.base[145]LOGSCRIPT=
++++ config.base[148]export SENDECF=NO
++++ config.base[148]SENDECF=NO
++++ config.base[149]export SENDSDM=NO
++++ config.base[149]SENDSDM=NO
++++ config.base[150]export SENDDBN_NTC=NO
++++ config.base[150]SENDDBN_NTC=NO
++++ config.base[151]export SENDDBN=NO
++++ config.base[151]SENDDBN=NO
++++ config.base[152]export DBNROOT=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/prod-util-2.1.1-nj6lim7/fakedbn
++++ config.base[152]DBNROOT=/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/prod-util-2.1.1-nj6lim7/fakedbn
++++ config.base[153]export SENDAWIP=NO
++++ config.base[153]SENDAWIP=NO
++++ config.base[156]export APP=ATM
++++ config.base[156]APP=ATM
++++ config.base[158]shopt -s extglob
++++ config.base[161]case "${RUN}" in
++++ config.base[168]shopt -u extglob
++++ config.base[171]export DO_ATM=YES
++++ config.base[171]DO_ATM=YES
++++ config.base[172]export DO_COUPLED=NO
++++ config.base[172]DO_COUPLED=NO
++++ config.base[173]export DO_WAVE=NO
++++ config.base[173]DO_WAVE=NO
++++ config.base[174]export DO_OCN=NO
++++ config.base[174]DO_OCN=NO
++++ config.base[175]export DO_ICE=NO
++++ config.base[175]DO_ICE=NO
++++ config.base[176]DO_AERO=NO
++++ config.base[177]export DO_PREP_OBS_AERO=NO
++++ config.base[177]DO_PREP_OBS_AERO=NO
++++ config.base[178]aero_fcst_runs=gdas
++++ config.base[179]aero_anl_runs='gdas gfs'
++++ config.base[180]export DO_AERO_FCST=NO
++++ config.base[180]DO_AERO_FCST=NO
++++ config.base[181]export DO_AERO_ANL=NO
++++ config.base[181]DO_AERO_ANL=NO
++++ config.base[182][[ gdas == \g\f\s ]]
++++ config.base[185]export DOBNDPNT_WAVE=NO
++++ config.base[185]DOBNDPNT_WAVE=NO
++++ config.base[188]export FRAC_GRID=.true.
++++ config.base[188]FRAC_GRID=.true.
++++ config.base[189]export DO_NEST=NO
++++ config.base[189]DO_NEST=NO
++++ config.base[190][[ NO == \Y\E\S ]]
++++ config.base[196]export ntiles=6
++++ config.base[196]ntiles=6
++++ config.base[197]export FIXugwd=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/ugwd
++++ config.base[197]FIXugwd=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/ugwd
++++ config.base[198]export FIXorog=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/orog
++++ config.base[198]FIXorog=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/orog
++++ config.base[202]export OPS_RES=C768
++++ config.base[202]OPS_RES=C768
++++ config.base[205]export LEVS=128
++++ config.base[205]LEVS=128
++++ config.base[206]export CASE=C96
++++ config.base[206]CASE=C96
++++ config.base[207]export CASE_ENS=C48
++++ config.base[207]CASE_ENS=C48
++++ config.base[208]export CASE_ANL=C48
++++ config.base[208]CASE_ANL=C48
++++ config.base[209]export CASE_HIST=C96
++++ config.base[209]CASE_HIST=C96
++++ config.base[210]export OCNRES=500
++++ config.base[210]OCNRES=500
++++ config.base[211]export ICERES=500
++++ config.base[211]ICERES=500
++++ config.base[214]case "${CASE}" in
++++ config.base[219]export waveGRD=uglo_100km
++++ config.base[219]waveGRD=uglo_100km
++++ config.base[233]case "${APP}" in
++++ config.base[268][[ NO == \Y\E\S ]]
++++ config.base[278][[ gdas =~ gdas ]]
++++ config.base[279]export FHCYC=1
++++ config.base[279]FHCYC=1
++++ config.base[280]export FTSFS=10
++++ config.base[280]FTSFS=10
++++ config.base[286]export FHMIN=0
++++ config.base[286]FHMIN=0
++++ config.base[287]export FHMAX=9
++++ config.base[287]FHMAX=9
++++ config.base[288]export FHOUT=3
++++ config.base[288]FHOUT=3
++++ config.base[289]export FHOUT_OCN=3
++++ config.base[289]FHOUT_OCN=3
++++ config.base[290]export FHOUT_ICE=3
++++ config.base[290]FHOUT_ICE=3
++++ config.base[291]export FHOUT_AERO=3
++++ config.base[291]FHOUT_AERO=3
++++ config.base[294]export EUPD_CYC=gdas
++++ config.base[294]EUPD_CYC=gdas
++++ config.base[297]export INTERVAL_GFS=0
++++ config.base[297]INTERVAL_GFS=0
++++ config.base[298]export SDATE_GFS=2024022400
++++ config.base[298]SDATE_GFS=2024022400
++++ config.base[301]export FHMIN_GFS=0
++++ config.base[301]FHMIN_GFS=0
++++ config.base[302]export FHMAX_GFS=120
++++ config.base[302]FHMAX_GFS=120
++++ config.base[304]breakpnts=
++++ config.base[305]export FCST_SEGMENTS=0,120
++++ config.base[305]FCST_SEGMENTS=0,120
++++ config.base[306]export FHOUT_GFS=3
++++ config.base[306]FHOUT_GFS=3
++++ config.base[307]export FHMAX_HF_GFS=48
++++ config.base[307]FHMAX_HF_GFS=48
++++ config.base[308]export FHMAX_HF_GFS=48
++++ config.base[308]FHMAX_HF_GFS=48
++++ config.base[309]export FHOUT_HF_GFS=1
++++ config.base[309]FHOUT_HF_GFS=1
++++ config.base[312]export FHMIN_WAV=0
++++ config.base[312]FHMIN_WAV=0
++++ config.base[313]export FHOUT_WAV=1
++++ config.base[313]FHOUT_WAV=1
++++ config.base[314]export FHMAX_WAV=9
++++ config.base[314]FHMAX_WAV=9
++++ config.base[315]export FHMAX_WAV=9
++++ config.base[315]FHMAX_WAV=9
++++ config.base[316]export FHOUT_WAV_GFS=3
++++ config.base[316]FHOUT_WAV_GFS=3
++++ config.base[317]export FHMAX_WAV_GFS=120
++++ config.base[317]FHMAX_WAV_GFS=120
++++ config.base[318]export FHOUT_HF_WAV=1
++++ config.base[318]FHOUT_HF_WAV=1
++++ config.base[319]export FHMAX_HF_WAV=48
++++ config.base[319]FHMAX_HF_WAV=48
++++ config.base[320]export FHMAX_HF_WAV=48
++++ config.base[320]FHMAX_HF_WAV=48
++++ config.base[323]export FHOUT_OCN_GFS=6
++++ config.base[323]FHOUT_OCN_GFS=6
++++ config.base[324]export FHOUT_ICE_GFS=6
++++ config.base[324]FHOUT_ICE_GFS=6
++++ config.base[327]export ILPOST=1
++++ config.base[327]ILPOST=1
++++ config.base[328]((  FHMAX_HF_GFS < 120  ))
++++ config.base[329]export ILPOST=3
++++ config.base[329]ILPOST=3
++++ config.base[333]export FHMAX_GOES=180
++++ config.base[333]FHMAX_GOES=180
++++ config.base[334]export FHOUT_GOES=3
++++ config.base[334]FHOUT_GOES=3
++++ config.base[335]((  FHMAX_GOES > FHMAX_GFS  ))
++++ config.base[336]export FHMAX_GOES=120
++++ config.base[336]FHMAX_GOES=120
++++ config.base[340]export restart_interval_gfs=12
++++ config.base[340]restart_interval_gfs=12
++++ config.base[345]export QUILTING=.true.
++++ config.base[345]QUILTING=.true.
++++ config.base[346]export OUTPUT_GRID=gaussian_grid
++++ config.base[346]OUTPUT_GRID=gaussian_grid
++++ config.base[347]export WRITE_DOPOST=.true.
++++ config.base[347]WRITE_DOPOST=.true.
++++ config.base[348]export WRITE_NSFLIP=.true.
++++ config.base[348]WRITE_NSFLIP=.true.
++++ config.base[351]export DOIAU=NO
++++ config.base[351]DOIAU=NO
++++ config.base[352]export IAUFHRS=3,6,9
++++ config.base[352]IAUFHRS=3,6,9
++++ config.base[353]export IAU_FHROT=3
++++ config.base[353]IAU_FHROT=3
++++ config.base[354]export IAU_DELTHRS=6
++++ config.base[354]IAU_DELTHRS=6
++++ config.base[355]export IAU_OFFSET=6
++++ config.base[355]IAU_OFFSET=6
++++ config.base[356]export DOIAU_ENKF=NO
++++ config.base[356]DOIAU_ENKF=NO
++++ config.base[357]export IAUFHRS_ENKF=3,6,9
++++ config.base[357]IAUFHRS_ENKF=3,6,9
++++ config.base[358]export IAU_DELTHRS_ENKF=6
++++ config.base[358]IAU_DELTHRS_ENKF=6
++++ config.base[366]export imp_physics=8
++++ config.base[366]imp_physics=8
++++ config.base[370]export DO_JEDIATMVAR=NO
++++ config.base[370]DO_JEDIATMVAR=NO
++++ config.base[371]export DO_JEDIATMENS=NO
++++ config.base[371]DO_JEDIATMENS=NO
++++ config.base[372]export DO_JEDIATMENS_SPLIT_OBSSOL=YES
++++ config.base[372]DO_JEDIATMENS_SPLIT_OBSSOL=YES
++++ config.base[373]export DO_JEDIOCNVAR=NO
++++ config.base[373]DO_JEDIOCNVAR=NO
++++ config.base[374]export DO_JEDISNOWDA=NO
++++ config.base[374]DO_JEDISNOWDA=NO
++++ config.base[375]export DO_MERGENSST=NO
++++ config.base[375]DO_MERGENSST=NO
++++ config.base[377][[ .true. = \.\t\r\u\e\. ]]
++++ config.base[378]export DO_STARTMEM_FROM_JEDIICE=YES
++++ config.base[378]DO_STARTMEM_FROM_JEDIICE=YES
++++ config.base[384]export DOHYBVAR=YES
++++ config.base[384]DOHYBVAR=YES
++++ config.base[385]export DOHYBVAR_OCN=NO
++++ config.base[385]DOHYBVAR_OCN=NO
++++ config.base[386]export DOLETKF_OCN=NO
++++ config.base[386]DOLETKF_OCN=NO
++++ config.base[387]export NMEM_ENS=2
++++ config.base[387]NMEM_ENS=2
++++ config.base[388]export SMOOTH_ENKF=NO
++++ config.base[388]SMOOTH_ENKF=NO
++++ config.base[389]export l4densvar=.true.
++++ config.base[389]l4densvar=.true.
++++ config.base[390]export lwrite4danl=.true.
++++ config.base[390]lwrite4danl=.true.
++++ config.base[391]export DO_CALC_INCREMENT=NO
++++ config.base[391]DO_CALC_INCREMENT=NO
++++ config.base[392]export USE_BUILD_GSINFO=YES
++++ config.base[392]USE_BUILD_GSINFO=YES
++++ config.base[393]export BUILD_GSINFO_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/parm/gsinfo
++++ config.base[393]BUILD_GSINFO_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/parm/gsinfo
++++ config.base[396]export NMEM_ENS_GFS=30
++++ config.base[396]NMEM_ENS_GFS=30
++++ config.base[397]export NMEM_ENS_GFS_OFFSET=20
++++ config.base[397]NMEM_ENS_GFS_OFFSET=20
++++ config.base[398]export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[398]DO_CALC_INCREMENT_ENKF_GFS=NO
++++ config.base[399]export DOENKFONLY_ATM=YES
++++ config.base[399]DOENKFONLY_ATM=YES
++++ config.base[400][[ YES = \Y\E\S ]]
++++ config.base[400][[ NO = \Y\E\S ]]
++++ config.base[405][[ YES = \Y\E\S ]]
++++ config.base[406]export FHMIN_ENKF=3
++++ config.base[406]FHMIN_ENKF=3
++++ config.base[407]export FHMAX_ENKF=9
++++ config.base[407]FHMAX_ENKF=9
++++ config.base[408]export FHMAX_ENKF_GFS=12
++++ config.base[408]FHMAX_ENKF_GFS=12
++++ config.base[409]export FHOUT_ENKF_GFS=3
++++ config.base[409]FHOUT_ENKF_GFS=3
++++ config.base[410][[ .true. = \.\t\r\u\e\. ]]
++++ config.base[411]export FHOUT=1
++++ config.base[411]FHOUT=1
++++ config.base[412]export FHOUT_ENKF=1
++++ config.base[412]FHOUT_ENKF=1
++++ config.base[419][[ YES == \N\O ]]
++++ config.base[427]export ENKF_SPREAD=YES
++++ config.base[427]ENKF_SPREAD=YES
++++ config.base[430][[ gdas == \g\d\a\s ]]
++++ config.base[431]export DO_GSISOILDA=NO
++++ config.base[431]DO_GSISOILDA=NO
++++ config.base[432]export DO_LAND_IAU=.false.
++++ config.base[432]DO_LAND_IAU=.false.
++++ config.base[437]export LSOIL_INCR=2
++++ config.base[437]LSOIL_INCR=2
++++ config.base[440][[ cycled = \c\y\c\l\e\d ]]
++++ config.base[440][[ 2024022318 = \2\0\2\4\0\2\2\4\0\0 ]]
++++ config.base[440][[ NO = \N\O ]]
++++ config.base[441]export IAU_OFFSET=0
++++ config.base[441]IAU_OFFSET=0
++++ config.base[442]export IAU_FHROT=0
++++ config.base[442]IAU_FHROT=0
++++ config.base[443]export IAUFHRS=6,
++++ config.base[443]IAUFHRS=6,
++++ config.base[444]export DO_LAND_IAU=.false.
++++ config.base[444]DO_LAND_IAU=.false.
++++ config.base[447][[ NO = \N\O ]]
++++ config.base[448]export IAUFHRS_ENKF=6,
++++ config.base[448]IAUFHRS_ENKF=6,
++++ config.base[453][[ NO == \Y\E\S ]]
++++ config.base[456]export restart_interval_enkfgdas=6
++++ config.base[456]restart_interval_enkfgdas=6
++++ config.base[459]export restart_interval_enkfgfs=6
++++ config.base[459]restart_interval_enkfgfs=6
++++ config.base[461][[ NO == \Y\E\S ]]
++++ config.base[464]export restart_interval_gdas=6
++++ config.base[464]restart_interval_gdas=6
++++ config.base[468]export DONST=YES
++++ config.base[468]DONST=YES
++++ config.base[469][[ YES = \Y\E\S ]]
++++ config.base[469]export 'FNTSFA=        '
++++ config.base[469]FNTSFA='        '
++++ config.base[472]export nst_anl=.true.
++++ config.base[472]nst_anl=.true.
++++ config.base[475]export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[475]INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[478]export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[478]INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ config.base[479]export INCVARS_EFOLD=5
++++ config.base[479]INCVARS_EFOLD=5
++++ config.base[484]export netcdf_diag=.true.
++++ config.base[484]netcdf_diag=.true.
++++ config.base[485]export binary_diag=.false.
++++ config.base[485]binary_diag=.false.
++++ config.base[488]export DO_CA=YES
++++ config.base[488]DO_CA=YES
++++ config.base[491]export DO_METP=YES
++++ config.base[491]DO_METP=YES
++++ config.base[492]export DO_FIT2OBS=YES
++++ config.base[492]DO_FIT2OBS=YES
++++ config.base[495]export FHMAX_FITS=132
++++ config.base[495]FHMAX_FITS=132
++++ config.base[496][[ 132 -gt 120 ]]
++++ config.base[497]export FHMAX_FITS=120
++++ config.base[497]FHMAX_FITS=120
++++ config.base[502]export DO_FETCH_HPSS=NO
++++ config.base[502]DO_FETCH_HPSS=NO
++++ config.base[503]export DO_FETCH_LOCAL=NO
++++ config.base[503]DO_FETCH_LOCAL=NO
++++ config.base[506]export DO_ARCHCOM=YES
++++ config.base[506]DO_ARCHCOM=YES
++++ config.base[507]export ARCHCOM_TO=hpss
++++ config.base[507]ARCHCOM_TO=hpss
++++ config.base[510]export 'CLIENT_GLOBUS_UUID={{ CLIENT_GLOBUS_UUID }}'
++++ config.base[510]CLIENT_GLOBUS_UUID='{{ CLIENT_GLOBUS_UUID }}'
++++ config.base[513][[ NO = \Y\E\S ]]
++++ config.base[522][[ URSA == \U\R\S\A ]]
++++ config.base[523]export DO_METP=NO
++++ config.base[523]DO_METP=NO
++++ config.base[526][[ YES == \Y\E\S ]]
++++ config.base[527]export RECENTER_ENKF=NO
++++ config.base[527]RECENTER_ENKF=NO
++++ config.base[528]export DO_VERFOZN=NO
++++ config.base[528]DO_VERFOZN=NO
++++ config.base[529]export DO_VERFRAD=NO
++++ config.base[529]DO_VERFRAD=NO
++++ config.base[530]export DO_VMINMON=NO
++++ config.base[530]DO_VMINMON=NO
++++ config.base[531]export DO_METP=NO
++++ config.base[531]DO_METP=NO
++++ config.base[532]export DO_FIT2OBS=NO
++++ config.base[532]DO_FIT2OBS=NO
++++ config.base[533]export DO_TRACKER=NO
++++ config.base[533]DO_TRACKER=NO
++++ config.base[534]export DO_GENESIS=NO
++++ config.base[534]DO_GENESIS=NO
++++ config.base[538]export OFFSET_START_HOUR=0
++++ config.base[538]OFFSET_START_HOUR=0
++++ config.base[541]export NUM_SND_COLLECTIVES=9
++++ config.base[541]NUM_SND_COLLECTIVES=9
++++ config.base[544][[ NO == \Y\E\S ]]
++++ config.base[552]echo 'END: config.base'
+END: config.base
+++ jjob_header.sh[103]true
+++ jjob_header.sh[104]export err=0
+++ jjob_header.sh[104]err=0
+++ jjob_header.sh[105][[ 0 -ne 0 ]]
+++ jjob_header.sh[102]for config in "${configs[@]:-''}"
+++ jjob_header.sh[103]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/EXPDIR/C48_gsienkf_atmDA_733bbf3e-9637/config.prep
++++ config.prep[6]echo 'BEGIN: config.prep'
+BEGIN: config.prep
++++ config.prep[9]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/EXPDIR/C48_gsienkf_atmDA_733bbf3e-9637/config.resources prep
+++++ config.resources[10]((  1 != 1  ))
+++++ config.resources[34]step=prep
+++++ config.resources[36]echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ config.resources[38]case ${machine} in
+++++ config.resources[49]max_tasks_per_node=192
+++++ config.resources[50]mem_node_max=360GB
+++++ config.resources[95]export max_tasks_per_node
+++++ config.resources[97]case ${step} in
+++++ config.resources[107]walltime=00:30:00
+++++ config.resources[108]ntasks=14
+++++ config.resources[109]tasks_per_node=14
+++++ config.resources[110]threads_per_task=1
+++++ config.resources[111]memory=360GB
+++++ config.resources[1409][[ -f /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/EXPDIR/C48_gsienkf_atmDA_733bbf3e-9637/config.resources.URSA ]]
+++++ config.resources[1410]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/EXPDIR/C48_gsienkf_atmDA_733bbf3e-9637/config.resources.URSA
++++++ config.resources.URSA[5]case ${step} in
+++++ config.resources[1414]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ config.resources[1415]run_resource_var=threads_per_task_gdas
+++++ config.resources[1416][[ -n '' ]]
+++++ config.resources[1418][[ -n 0 ]]
+++++ config.resources[1419]export threads_per_task
+++++ config.resources[1414]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ config.resources[1415]run_resource_var=ntasks_gdas
+++++ config.resources[1416][[ -n '' ]]
+++++ config.resources[1418][[ -n 0 ]]
+++++ config.resources[1419]export ntasks
+++++ config.resources[1414]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ config.resources[1415]run_resource_var=tasks_per_node_gdas
+++++ config.resources[1416][[ -n '' ]]
+++++ config.resources[1418][[ -n 0 ]]
+++++ config.resources[1419]export tasks_per_node
+++++ config.resources[1414]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ config.resources[1415]run_resource_var=NTASKS_gdas
+++++ config.resources[1416][[ -n '' ]]
+++++ config.resources[1418][[ -n '' ]]
+++++ config.resources[1414]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ config.resources[1415]run_resource_var=memory_gdas
+++++ config.resources[1416][[ -n '' ]]
+++++ config.resources[1418][[ -n 0 ]]
+++++ config.resources[1419]export memory
+++++ config.resources[1414]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ config.resources[1415]run_resource_var=walltime_gdas
+++++ config.resources[1416][[ -n '' ]]
+++++ config.resources[1418][[ -n 0 ]]
+++++ config.resources[1419]export walltime
+++++ config.resources[1414]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ config.resources[1415]run_resource_var=is_exclusive_gdas
+++++ config.resources[1416][[ -n '' ]]
+++++ config.resources[1418][[ -n '' ]]
+++++ config.resources[1414]for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ config.resources[1415]run_resource_var=prepost_gdas
+++++ config.resources[1416][[ -n '' ]]
+++++ config.resources[1418][[ -n '' ]]
+++++ config.resources[1423]echo 'END: config.resources'
+END: config.resources
++++ config.prep[11]export cdate10=2024022400
++++ config.prep[11]cdate10=2024022400
++++ config.prep[14]export PROCESS_TROPCY=NO
++++ config.prep[14]PROCESS_TROPCY=NO
++++ config.prep[15]export TROPCYQCRELOSH=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/scripts/exglobal_atmos_tropcy_qc_reloc.sh
++++ config.prep[15]TROPCYQCRELOSH=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/scripts/exglobal_atmos_tropcy_qc_reloc.sh
++++ config.prep[16]export COMINsyn=/scratch3/NCEPDEV/global/role.glopara/com/gfs/prod/syndat
++++ config.prep[16]COMINsyn=/scratch3/NCEPDEV/global/role.glopara/com/gfs/prod/syndat
++++ config.prep[19][[ YES == \Y\E\S ]]
++++ config.prep[20]export PROCESS_TROPCY=NO
++++ config.prep[20]PROCESS_TROPCY=NO
++++ config.prep[25]export MAKE_PREPBUFR=YES
++++ config.prep[25]MAKE_PREPBUFR=YES
++++ config.prep[26][[ YES != \Y\E\S ]]
++++ config.prep[39]export PRVT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/gsi/prepobs_errtable.global
++++ config.prep[39]PRVT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/fix/gsi/prepobs_errtable.global
++++ config.prep[42][[ emc == \e\m\c ]]
++++ config.prep[43][[ 2024022400 -ge 2019021900 ]]
++++ config.prep[43][[ 2024022400 -lt 2019110706 ]]
++++ config.prep[48][[ 2024022400 -ge 2019110706 ]]
++++ config.prep[48][[ 2024022400 -lt 2020040718 ]]
++++ config.prep[67][[ 2024022400 -ge 2020102200 ]]
++++ config.prep[68]export 'DTYPS_nsst=sfcshp tesac bathy trkob'
++++ config.prep[68]DTYPS_nsst='sfcshp tesac bathy trkob'
++++ config.prep[75]export 'SOURCE_BIASCOR={{ SOURCE_BIASCOR }}'
++++ config.prep[75]SOURCE_BIASCOR='{{ SOURCE_BIASCOR }}'
++++ config.prep[76]export 'COPY_BIASCOR_SOURCE={{ COPY_BIASCOR_SOURCE }}'
++++ config.prep[76]COPY_BIASCOR_SOURCE='{{ COPY_BIASCOR_SOURCE }}'
++++ config.prep[77]export 'COPY_BIASCOR_STATIC={{ COPY_BIASCOR_STATIC }}'
++++ config.prep[77]COPY_BIASCOR_STATIC='{{ COPY_BIASCOR_STATIC }}'
++++ config.prep[78]export 'CONVERT_BIASCOR={{ CONVERT_BIASCOR }}'
++++ config.prep[78]CONVERT_BIASCOR='{{ CONVERT_BIASCOR }}'
++++ config.prep[80]echo 'END: config.prep'
+END: config.prep
+++ jjob_header.sh[103]true
+++ jjob_header.sh[104]export err=0
+++ jjob_header.sh[104]err=0
+++ jjob_header.sh[105][[ 0 -ne 0 ]]
+++ jjob_header.sh[113]source /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/env/URSA.env prep
++++ URSA.env[3][[ 1 -ne 1 ]]
++++ URSA.env[10]step=prep
++++ URSA.env[12]export 'launcher=srun -l --export=ALL --hint=nomultithread --distribution=block:block'
++++ URSA.env[12]launcher='srun -l --export=ALL --hint=nomultithread --distribution=block:block'
++++ URSA.env[13]export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ URSA.env[13]mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ URSA.env[18]export OMP_STACKSIZE=2048000
++++ URSA.env[18]OMP_STACKSIZE=2048000
++++ URSA.env[19]export NTHSTACK=1024000000
++++ URSA.env[19]NTHSTACK=1024000000
++++ URSA.env[22][[ -n 9098312 ]]
++++ URSA.env[23]ulimit -s unlimited
++++ URSA.env[24]ulimit -a
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) unlimited
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 1540977
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 377487360
+open files                          (-n) 131072
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) unlimited
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 1540977
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
++++ URSA.env[29][[ -n 14 ]]
++++ URSA.env[29][[ -n 192 ]]
++++ URSA.env[29][[ -n 14 ]]
++++ URSA.env[30]max_threads_per_task=13
++++ URSA.env[31]NTHREADSmax=1
++++ URSA.env[32]NTHREADS1=1
++++ URSA.env[33][[ 1 -gt 13 ]]
++++ URSA.env[36][[ 1 -gt 13 ]]
++++ URSA.env[39]APRUN_default='srun -l --export=ALL --hint=nomultithread --distribution=block:block -n 14'
++++ URSA.env[45][[ prep = \p\r\e\p ]]
++++ URSA.env[47]export POE=NO
++++ URSA.env[47]POE=NO
++++ URSA.env[48]export BACK=NO
++++ URSA.env[48]BACK=NO
++++ URSA.env[49]export sys_tp=URSA
++++ URSA.env[49]sys_tp=URSA
++++ URSA.env[50]export 'launcher_PREP=srun --hint=nomultithread'
++++ URSA.env[50]launcher_PREP='srun --hint=nomultithread'
+++ jjob_header.sh[113]true
+++ jjob_header.sh[114]export err=0
+++ jjob_header.sh[114]err=0
+++ jjob_header.sh[115][[ 0 -ne 0 ]]
++ prep.sh[17]RUN_local=gdas
+++ prep.sh[23]date --utc -d '20240224 00 - 6 hours' +%Y%m%d%H
++ prep.sh[23]GDATE=2024022318
++ prep.sh[25]gPDY=20240223
++ prep.sh[26]gcyc=18
++ prep.sh[27]GDUMP=gdas
++ prep.sh[29]export OPREFIX=gdas.t00z.
++ prep.sh[29]OPREFIX=gdas.t00z.
++ prep.sh[31]declare -rx COMIN_OBS=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs
++ prep.sh[32]declare -rx COMOUT_OBS=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs
++ prep.sh[33]declare -rx COMINobsproc=/scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos
++ prep.sh[34]declare -rx COMINobsforge=/scratch3/NCEPDEV/global/role.glopara/dump_ioda/gdas.20240224/00
++ prep.sh[35]declare -rx COMIN_TCVITAL=/scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos
++ prep.sh[36]declare -rx COMOUT_ATMOS_ANALYSIS=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/analysis/atmos
++ prep.sh[38]declare -rx COMOUT_OBS_PREV=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240223/18/obs
++ prep.sh[39]declare -rx COMINobsproc_PREV=/scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240223/18/atmos
++ prep.sh[40]declare -rx COMOUT_ATMOS_ANALYSIS_PREV=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240223/18/analysis/atmos
++ prep.sh[42]mkdir -p /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs
++ prep.sh[46][[ NO == \Y\E\S ]]
++ prep.sh[54][[ gdas == \g\c\d\a\s ]]
++ prep.sh[60]/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/ush/getdump.sh 20240224 00 gdas /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs
++ bash[8]'[' -z '' ']'
++ bash[9]case "$-" in
++ bash[12]__lmod_vx=x
++ bash[16]'[' -n x ']'
++ bash[16]set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for this output (/apps/lmod/lmod/init/bash)
+Shell debugging restarted
++ bash[197]unset __lmod_vx
++ getdump.sh[3]COMPONENT=atmos
++ getdump.sh[5]YMD=20240224
++ getdump.sh[6]HH=00
++ getdump.sh[7]RUN=gdas
++ getdump.sh[8]SOURCE_DIR=/scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos
++ getdump.sh[9]TARGET_DIR=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs
++ getdump.sh[11]DUMP_SUFFIX=
++ getdump.sh[14][[ ! -s /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos ]]
++ getdump.sh[20][[ ! -s /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs ]]
++ getdump.sh[25]prefix=gdas.t00z.
++ getdump.sh[28]cd /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos
++ getdump.sh[29][[ -s gdas.t00z.updated.status.tm00.bufr_d ]]
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.1bamua.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.1bamua.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.1bamua.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.1bamua.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.1bhrs4.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.1bhrs4.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.1bhrs4.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.1bhrs4.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.1bmhs.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.1bmhs.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.1bmhs.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.1bmhs.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.NPR.SNWN.SP.S1200.MESH16.grb /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.NPR.SNWN.SP.S1200.MESH16.grb
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.NPR.SNWN.SP.S1200.MESH16.grb /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.NPR.SNWN.SP.S1200.MESH16.grb
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.NPR.SNWS.SP.S1200.MESH16.grb /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.NPR.SNWS.SP.S1200.MESH16.grb
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.NPR.SNWS.SP.S1200.MESH16.grb /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.NPR.SNWS.SP.S1200.MESH16.grb
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.adpsfc.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.adpsfc.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.adpsfc.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.adpsfc.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.adpupa.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.adpupa.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.adpupa.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.adpupa.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ahicsr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ahicsr.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ahicsr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ahicsr.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.aircar.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.aircar.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.aircar.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.aircar.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.aircft.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.aircft.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.aircft.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.aircft.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.airsev.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.airsev.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.airsev.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.airsev.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.amsr2.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.amsr2.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.amsr2.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.amsr2.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ascatt.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ascatt.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ascatt.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ascatt.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ascatw.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ascatw.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ascatw.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ascatw.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.atms.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.atms.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.atms.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.atms.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.atmsdb.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.atmsdb.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.atmsdb.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.atmsdb.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.avcsam.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.avcsam.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.avcsam.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.avcsam.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.avcspm.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.avcspm.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.avcspm.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.avcspm.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.bathy.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.bathy.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.bathy.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.bathy.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.crisf4.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.crisf4.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.crisf4.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.crisf4.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.crsfdb.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.crsfdb.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.crsfdb.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.crsfdb.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.dump_alert_flag.tm00 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.dump_alert_flag.tm00
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.dump_alert_flag.tm00 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.dump_alert_flag.tm00
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.engicegrb /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.engicegrb
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.engicegrb /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.engicegrb
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.esamua.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.esamua.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.esamua.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.esamua.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.esatms.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.esatms.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.esatms.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.esatms.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.eshrs3.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.eshrs3.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.eshrs3.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.eshrs3.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.esiasi.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.esiasi.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.esiasi.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.esiasi.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.esmhs.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.esmhs.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.esmhs.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.esmhs.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.geoimr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.geoimr.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.geoimr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.geoimr.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.gmi1cr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.gmi1cr.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.gmi1cr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.gmi1cr.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.gome.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.gome.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.gome.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.gome.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.gpsipw.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.gpsipw.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.gpsipw.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.gpsipw.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.gpsro.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.gpsro.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.gpsro.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.gpsro.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.gsrasr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.gsrasr.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.gsrasr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.gsrasr.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.gsrcsr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.gsrcsr.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.gsrcsr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.gsrcsr.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.hdob.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.hdob.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.hdob.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.hdob.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.iasidb.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.iasidb.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.iasidb.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.iasidb.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.imssnow96.asc /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.imssnow96.asc
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.imssnow96.asc /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.imssnow96.asc
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.imssnow96.grib2 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.imssnow96.grib2
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.imssnow96.grib2 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.imssnow96.grib2
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.mtiasi.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.mtiasi.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.mtiasi.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.mtiasi.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.nsstbufr /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.nsstbufr
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.nsstbufr /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.nsstbufr
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.omi.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.omi.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.omi.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.omi.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ompslp.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ompslp.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ompslp.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ompslp.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ompsn8.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ompsn8.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ompsn8.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ompsn8.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ompst8.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ompst8.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ompst8.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ompst8.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.osbuv8.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.osbuv8.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.osbuv8.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.osbuv8.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.prepbufr /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.prepbufr
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.prepbufr /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.prepbufr
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.prepbufr.acft_profiles /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.prepbufr.acft_profiles
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.prepbufr.acft_profiles /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.prepbufr.acft_profiles
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.proflr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.proflr.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.proflr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.proflr.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.rassda.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.rassda.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.rassda.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.rassda.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.rtgssthr.grb /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.rtgssthr.grb
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.rtgssthr.grb /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.rtgssthr.grb
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.rtgssthr.grib2 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.rtgssthr.grib2
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.rtgssthr.grib2 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.rtgssthr.grib2
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.saldrn.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.saldrn.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.saldrn.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.saldrn.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.saphir.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.saphir.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.saphir.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.saphir.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.satwnd.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.satwnd.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.satwnd.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.satwnd.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.seaice.5min.blend.grb /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.seaice.5min.blend.grb
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.seaice.5min.blend.grb /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.seaice.5min.blend.grb
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.seaice.5min.grb /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.seaice.5min.grb
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.seaice.5min.grb /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.seaice.5min.grb
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.seaice.5min.grib2 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.seaice.5min.grib2
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.seaice.5min.grib2 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.seaice.5min.grib2
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.sevasr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.sevasr.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.sevasr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.sevasr.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.sevcsr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.sevcsr.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.sevcsr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.sevcsr.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.sfcshp.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.sfcshp.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.sfcshp.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.sfcshp.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.sfcsno.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.sfcsno.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.sfcsno.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.sfcsno.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.snocvr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.snocvr.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.snocvr.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.snocvr.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.snogrb_t1534.3072.1536 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.snogrb_t1534.3072.1536
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.snogrb_t1534.3072.1536 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.snogrb_t1534.3072.1536
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ssmisu.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ssmisu.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.ssmisu.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.ssmisu.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.sstvcw.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.sstvcw.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.sstvcw.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.sstvcw.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.sstvpw.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.sstvpw.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.sstvpw.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.sstvpw.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.status.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.status.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.status.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.status.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.subpfl.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.subpfl.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.subpfl.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.subpfl.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.syndata.tcvitals.tm00 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.syndata.tcvitals.tm00
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.syndata.tcvitals.tm00 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.syndata.tcvitals.tm00
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.tesac.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.tesac.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.tesac.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.tesac.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.tideg.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.tideg.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.tideg.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.tideg.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.trkob.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.trkob.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.trkob.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.trkob.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.updated.status.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.updated.status.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.updated.status.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.updated.status.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[30]for file in "${prefix}"*
++ getdump.sh[31]cpreq /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.vadwnd.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.vadwnd.tm00.bufr_d
++ cpreq[3]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.vadwnd.tm00.bufr_d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.vadwnd.tm00.bufr_d
++ cpreq[4]'[' 0 -ne 0 ']'
++ getdump.sh[38]exit 0
++ prep.sh[61]status=0
++ prep.sh[62][[ 0 -ne 0 ]]
++ prep.sh[67][[ ! -s /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240223/18/atmos/gdas.t18z.updated.status.tm00.bufr_d ]]
+++ prep.sh[75]find /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs -xtype l
+++ prep.sh[75]wc -l
++ prep.sh[75][[ 0 -ge 1 ]]
+++ prep.sh[78]find /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240223/18/atmos -xtype l
+++ prep.sh[78]wc -l
++ prep.sh[78][[ 0 -ge 1 ]]
++ prep.sh[89][[ NO == \Y\E\S ]]
++ prep.sh[108]cpfs /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.syndata.tcvitals.tm00 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/
++ cpfs[3]'[' 2 -ne 2 ']'
++ cpfs[8]'[' /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/ = . -o /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/ = ./ ']'
++ cpfs[10]'[' -d /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/ ']'
+++ cpfs[11]basename /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.syndata.tcvitals.tm00
++ cpfs[11]cpdstfile=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.syndata.tcvitals.tm00
++ cpfs[16]cp /scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos/gdas.t00z.syndata.tcvitals.tm00 /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.syndata.tcvitals.tm00.cptmp
++ cpfs[18]'[' 0 -ne 0 ']'
++ cpfs[22]/contrib/spack-stack/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/prod-util-2.1.1-nj6lim7/bin/fsync_file /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.syndata.tcvitals.tm00.cptmp
++ cpfs[23]'[' 0 -ne 0 ']'
++ cpfs[27]mv /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.syndata.tcvitals.tm00.cptmp /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.syndata.tcvitals.tm00
++ cpfs[28]'[' 0 -ne 0 ']'
++ prep.sh[114][[ gdas == \g\d\a\s ]]
++ prep.sh[114][[ {{ COPY_BIASCOR_SOURCE }} == \Y\E\S ]]
++ prep.sh[122][[ gdas == \g\d\a\s ]]
++ prep.sh[122][[ {{ COPY_BIASCOR_STATIC }} == \Y\E\S ]]
++ prep.sh[133]rm -f /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.prepbufr
++ prep.sh[134]rm -f /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.prepbufr.acft_profiles
++ prep.sh[135]rm -f /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.nsstbufr
++ prep.sh[137]declare -rx COMIN_ATMOS_HISTORY_GDAS=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/model/atmos/history
++ prep.sh[138]declare -rx COMIN_ATMOS_HISTORY_GFS=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gfs.20240224/00/model/atmos/history
++ prep.sh[140]export job=jgdas_prep_00
++ prep.sh[140]job=jgdas_prep_00
++ prep.sh[143]export COMINtcvital=/scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos
++ prep.sh[143]COMINtcvital=/scratch3/NCEPDEV/global/role.glopara/dump/gdas.20240224/00/atmos
++ prep.sh[144]export COMIN=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs
++ prep.sh[144]COMIN=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs
++ prep.sh[145]export COMOUT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs
++ prep.sh[145]COMOUT=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs
++ prep.sh[146]export COMINgdas=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/model/atmos/history
++ prep.sh[146]COMINgdas=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/model/atmos/history
++ prep.sh[147]export COMINgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gfs.20240224/00/model/atmos/history
++ prep.sh[147]COMINgfs=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gfs.20240224/00/model/atmos/history
++ prep.sh[149]export COMSP=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.
++ prep.sh[149]COMSP=/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/RUNTESTS/COMROOT/C48_gsienkf_atmDA_733bbf3e-9637/gdas.20240224/00/obs/gdas.t00z.
++ prep.sh[151][[ YES == \Y\E\S ]]
++ prep.sh[152]MEMDIR=ensstat
++ prep.sh[152]RUN=enkfgdas
++ prep.sh[152]YMD=20240223
++ prep.sh[152]HH=18
++ prep.sh[152]declare_from_tmpl -rx COMIN_ATMOS_HISTORY_ENS_STAT_PREV:COM_ATMOS_HISTORY_TMPL
+/scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/dev/job_cards/rocoto/prep.sh: line 152: declare_from_tmpl: command not found
++ prep.sh[1]postamble /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/dev/job_cards/rocoto/prep.sh 1772058117 127
++ preamble.sh[70]set +x
+End /scratch3/NCEPDEV/global/role.glopara/GFS_CI_CD/URSA/BUILDS/GITLAB/pr_cases_4555_733bbf3e_9637/global-workflow/dev/job_cards/rocoto/prep.sh at 22:22:21 with error code 127 (time elapsed: 00:00:24)
