@@ -1,0 +1,1387 @@
++ /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/dev/job_cards/rocoto/waveinit.sh
++ source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/dev/ush/load_modules.sh ufswm
+++ [[ hxB == *x* ]]
+++ set_x=YES
+++ [[ NO == \N\O ]]
+++ echo 'Loading modules quietly...'
+Loading modules quietly...
+++ set +x
+
+Currently Loaded Modules:
+  1) stack-oneapi/2024.2.1              33) py-mpi4py/4.0.1
+  2) ncarenv/24.12                 (S)  34) intel-tbb/2021.12.0
+  3) craype/2.7.31                      35) intel-oneapi-mkl/2024.2.2
+  4) intel/2024.2.1                     36) py-numpy/1.26.4
+  5) libfabric/1.15.2.0                 37) py-pip/23.1.2
+  6) cray-mpich/8.1.29                  38) libyaml/0.2.5
+  7) stack-cray-mpich/8.1.29            39) py-pyyaml/6.0.2
+  8) glibc/2.31                         40) esmf/8.8.0
+  9) intel-oneapi-runtime/2024.2.1      41) fms/2024.02
+ 10) mbedtls/3.6.2                      42) bacio/2.4.1
+ 11) nghttp2/1.63.0                     43) crtm-fix/2.4.0.1_emc
+ 12) zlib/1.2.11                        44) git-lfs/3.5.1
+ 13) curl/8.10.1                        45) crtm/2.4.0.1
+ 14) cmake/3.27.9                       46) g2/3.5.1
+ 15) tar/1.34                           47) g2tmpl/1.13.0
+ 16) gettext/0.22.5                     48) ip/5.1.0
+ 17) sqlite/3.46.0                      49) sp/2.5.0
+ 18) util-linux-uuid/2.40.2             50) w3emc/2.10.0
+ 19) python/3.11.7                      51) gftl/1.14.0
+ 20) stack-python/3.11.7                52) gftl-shared/1.9.0
+ 21) libjpeg/2.1.0                      53) fargparse/1.8.0
+ 22) jasper/2.0.32                      54) yafyaml/1.4.0
+ 23) libpng/1.6.37                      55) pflogger/1.15.0
+ 24) hdf5/1.14.3                        56) udunits/2.2.28
+ 25) snappy/1.2.1                       57) mapl/2.53.4-esmf-8.8.0
+ 26) zstd/1.5.6                         58) scotch/7.0.4
+ 27) c-blosc/1.21.5                     59) ufs_common
+ 28) netcdf-c/4.9.2                     60) nccmp/1.9.0.1
+ 29) netcdf-fortran/4.6.1               61) ufs_derecho.intel
+ 30) parallel-netcdf/1.12.3             62) prod_util/2.1.1
+ 31) parallelio/2.6.2                   63) g2c/2.1.0
+ 32) python-venv/1.0                    64) wgrib2/3.6.0
+
+  Where:
+   S:  Module is Sticky, requires --force to unload or purge
+
+ 
+
++ source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/jjob_header.sh -e waveinit -c 'base wave waveinit'
++++ basename /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/dev/jobs/JGLOBAL_WAVE_INIT
+++ _calling_script=JGLOBAL_WAVE_INIT
+++ source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/err_exit.sh
++++ declare -xf err_exit
+++ OPTIND=1
+++ getopts c:e: option
+++ case "${option}" in
+++ env_job=waveinit
+++ getopts c:e: option
+++ case "${option}" in
+++ read -ra configs
+++ getopts c:e: option
+++ shift 4
+++ [[ -z waveinit ]]
+++ export EXPDIR=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653
+++ EXPDIR=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653
+++ for config in "${configs[@]:-''}"
+++ source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/config.base
++++ echo 'BEGIN: config.base'
+BEGIN: config.base
++++ export machine=DERECHO
++++ machine=DERECHO
++++ export RUN_ENVIR=emc
++++ RUN_ENVIR=emc
++++ export ACCOUNT=nral0032
++++ ACCOUNT=nral0032
++++ export QUEUE=develop
++++ QUEUE=develop
++++ export QUEUE_SERVICE=develop
++++ QUEUE_SERVICE=develop
++++ export QUEUE_EXCLUSIVE=main
++++ QUEUE_EXCLUSIVE=main
++++ export QUEUE_DTN=develop
++++ QUEUE_DTN=develop
++++ export 'PARTITION_BATCH={{ PARTITION_BATCH }}'
++++ PARTITION_BATCH='{{ PARTITION_BATCH }}'
++++ export PARTITION_SERVICE=
++++ PARTITION_SERVICE=
++++ export PARTITION_EXCLUSIVE=
++++ PARTITION_EXCLUSIVE=
++++ export PARTITION_DTN=
++++ PARTITION_DTN=
++++ export RESERVATION=
++++ RESERVATION=
++++ export CLUSTERS=
++++ CLUSTERS=
++++ export CLUSTERS_SERVICE=
++++ CLUSTERS_SERVICE=
++++ export CLUSTERS_EXCLUSIVE=
++++ CLUSTERS_EXCLUSIVE=
++++ export CLUSTERS_DTN=
++++ CLUSTERS_DTN=
++++ export 'HPSS_PROJECT={{ HPSS_PROJECT }}'
++++ HPSS_PROJECT='{{ HPSS_PROJECT }}'
++++ export HOMEglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow
++++ HOMEglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow
++++ export EXECglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/exec
++++ EXECglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/exec
++++ export FIXglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix
++++ FIXglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix
++++ export PARMglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/parm
++++ PARMglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/parm
++++ export SCRglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/scripts
++++ SCRglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/scripts
++++ export USHglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush
++++ USHglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush
++++ export FIXam=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/am
++++ FIXam=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/am
++++ export FIXaer=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/aer
++++ FIXaer=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/aer
++++ export FIXcpl=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/cpl
++++ FIXcpl=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/cpl
++++ export FIXlut=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/lut
++++ FIXlut=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/lut
++++ export FIXcice=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/cice
++++ FIXcice=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/cice
++++ export FIXmom=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/mom6
++++ FIXmom=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/mom6
++++ export FIXreg2grb2=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/reg2grb2
++++ FIXreg2grb2=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/reg2grb2
++++ export FIXgdas=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/gdas
++++ FIXgdas=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/gdas
++++ export PACKAGEROOT=/lustre/desc1/p/nral0032/global/data/nwpara
++++ PACKAGEROOT=/lustre/desc1/p/nral0032/global/data/nwpara
++++ export COMROOT=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/COMROOT
++++ COMROOT=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/COMROOT
++++ export DCOMROOT=/lfs/h1/ops/prod/dcom
++++ DCOMROOT=/lfs/h1/ops/prod/dcom
++++ export COMINsyn=/lustre/desc1/p/nral0032/global/data/syndat
++++ COMINsyn=/lustre/desc1/p/nral0032/global/data/syndat
++++ export DMPDIR=/lustre/desc1/p/nral0032/global/dump_nr
++++ DMPDIR=/lustre/desc1/p/nral0032/global/dump_nr
++++ export IODADIR=/lustre/desc1/p/nral0032/global/dump_ioda_nr
++++ IODADIR=/lustre/desc1/p/nral0032/global/dump_ioda_nr
++++ export 'USE_IODADIR={{ USE_IODADIR }}'
++++ USE_IODADIR='{{ USE_IODADIR }}'
++++ export COMINecmwf=/lustre/desc1/p/nral0032/global/data/external_gempak/ecmwf
++++ COMINecmwf=/lustre/desc1/p/nral0032/global/data/external_gempak/ecmwf
++++ export COMINnam=/lustre/desc1/p/nral0032/global/data/external_gempak/nam
++++ COMINnam=/lustre/desc1/p/nral0032/global/data/external_gempak/nam
++++ export COMINukmet=/lustre/desc1/p/nral0032/global/data/external_gempak/ukmet
++++ COMINukmet=/lustre/desc1/p/nral0032/global/data/external_gempak/ukmet
++++ export HOMEDIR=/gpfs/csfs1/work/epicufsrt
++++ HOMEDIR=/gpfs/csfs1/work/epicufsrt
++++ export STMP=/lustre/desc1/scratch/epicufsrt/stmp
++++ STMP=/lustre/desc1/scratch/epicufsrt/stmp
++++ export PTMP=/lustre/desc1/scratch/epicufsrt/ptmp
++++ PTMP=/lustre/desc1/scratch/epicufsrt/ptmp
++++ export NOSCRUB=/gpfs/csfs1/work/epicufsrt
++++ NOSCRUB=/gpfs/csfs1/work/epicufsrt
++++ export BASE_GIT=/lustre/desc1/p/nral0032/global/global_externals
++++ BASE_GIT=/lustre/desc1/p/nral0032/global/global_externals
++++ export BASE_DATA=/lustre/desc1/p/nral0032/global/data
++++ BASE_DATA=/lustre/desc1/p/nral0032/global/data
++++ export DO_PREP_SFC=NO
++++ DO_PREP_SFC=NO
++++ export DO_GOES=NO
++++ DO_GOES=NO
++++ export DO_BUFRSND=NO
++++ DO_BUFRSND=NO
++++ export DO_GEMPAK=NO
++++ DO_GEMPAK=NO
++++ export DO_AWIPS=NO
++++ DO_AWIPS=NO
++++ export DO_NPOESS=NO
++++ DO_NPOESS=NO
++++ export DO_TRACKER=YES
++++ DO_TRACKER=YES
++++ export DO_GENESIS=YES
++++ DO_GENESIS=YES
++++ export DO_GENESIS_FSU=NO
++++ DO_GENESIS_FSU=NO
++++ export DO_VERFOZN=YES
++++ DO_VERFOZN=YES
++++ export DO_VERFRAD=YES
++++ DO_VERFRAD=YES
++++ export DO_VMINMON=YES
++++ DO_VMINMON=YES
++++ export DO_ANLSTAT=NO
++++ DO_ANLSTAT=NO
++++ export DO_GSI_ANLSTAT=NO
++++ DO_GSI_ANLSTAT=NO
++++ export MODE=cycled
++++ MODE=cycled
++++ export DO_TEST_MODE=NO
++++ DO_TEST_MODE=NO
++++ export FIXgsi=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/gsi
++++ FIXgsi=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/gsi
++++ export HOMEpost=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow
++++ HOMEpost=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow
++++ export HOMEobsproc=/lustre/desc1/p/nral0032/global/global_externals/obsproc/v1.2.0
++++ HOMEobsproc=/lustre/desc1/p/nral0032/global/global_externals/obsproc/v1.2.0
++++ export NMV=/bin/mv
++++ NMV=/bin/mv
++++ export 'NLN=/bin/ln -sf'
++++ NLN='/bin/ln -sf'
++++ export VERBOSE=YES
++++ VERBOSE=YES
++++ export DEBUG_POSTSCRIPT=NO
++++ DEBUG_POSTSCRIPT=NO
++++ export CHGRP_RSTPROD=NO
++++ CHGRP_RSTPROD=NO
++++ export 'CHGRP_CMD={{ CHGRP_CMD }}'
++++ CHGRP_CMD='{{ CHGRP_CMD }}'
++++ export NCDUMP=/glade/work/epicufsrt/contrib/spack-stack/derecho/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/netcdf-c-4.9.2-jcobreh/bin/ncdump
++++ NCDUMP=/glade/work/epicufsrt/contrib/spack-stack/derecho/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/netcdf-c-4.9.2-jcobreh/bin/ncdump
++++ export NCLEN=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/getncdimlen
++++ NCLEN=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/getncdimlen
++++ export BASE_ENV=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/env
++++ BASE_ENV=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/env
++++ export SDATE=2021122012
++++ SDATE=2021122012
++++ export EDATE=2021122100
++++ EDATE=2021122100
++++ export EXP_WARM_START=.false.
++++ EXP_WARM_START=.false.
++++ export assim_freq=6
++++ assim_freq=6
++++ export PSLOT=C96C48mx500_S2SW_cyc_gfs_a75a926a-17653
++++ PSLOT=C96C48mx500_S2SW_cyc_gfs_a75a926a-17653
++++ export EXPDIR=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653
++++ EXPDIR=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653
++++ export ROTDIR=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653
++++ ROTDIR=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653
++++ export DUMP_SUFFIX=
++++ DUMP_SUFFIX=
++++ [[ 2021122012 -ge 2019092100 ]]
++++ [[ 2021122012 -le 2019110700 ]]
++++ export ARCDIR=/gpfs/csfs1/work/epicufsrt/archive/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653
++++ ARCDIR=/gpfs/csfs1/work/epicufsrt/archive/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653
++++ export ATARDIR=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/COMROOT/ARCHIVE/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653
++++ ATARDIR=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/COMROOT/ARCHIVE/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653
++++ export 'FETCHDIR={{ FETCHDIR }}'
++++ FETCHDIR='{{ FETCHDIR }}'
++++ export NET=gfs
++++ NET=gfs
++++ export RUN=gdas
++++ RUN=gdas
++++ source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/config.com
+++++ echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ [[ emc == \n\c\o ]]
+++++ COM_OBSPROC_TMPL='${DMPDIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ COM_OBSFORGE_TMPL='${IODADIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}'
+++++ COM_RTOFS_TMPL='${DMPDIR}'
+++++ COM_TCVITAL_TMPL='${DMPDIR}/${RUN}.${YMD}/${HH}/atmos'
+++++ declare -rx 'COM_OBS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ declare -rx COM_OBSPROC_TMPL COM_RTOFS_TMPL COM_OBSFORGE_TMPL
+++++ COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ declare -rx 'COM_SNOW_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/snow/anlmon'
+++++ declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ declare -rx 'COM_ATMOS_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/anlmon'
+++++ declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ declare -rx 'COM_WAVE_PREP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/prep'
+++++ declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ declare -rx 'COM_OCEAN_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/anlmon'
+++++ declare -rx 'COM_OCEAN_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean/letkf'
+++++ declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ declare -rx 'COM_ICE_LETKF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice/letkf'
+++++ declare -rx 'COM_ICE_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/anlmon'
+++++ declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ declare -rx 'COM_CHEM_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/chem/anlmon'
+++++ declare -rx 'COM_CHEM_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/input'
+++++ declare -rx 'COM_CHEM_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/restart'
+++++ declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ export LOGSCRIPT=
++++ LOGSCRIPT=
++++ export SENDSDM=NO
++++ SENDSDM=NO
++++ export SENDAWIP=NO
++++ SENDAWIP=NO
++++ export APP=S2SW
++++ APP=S2SW
++++ shopt -s extglob
++++ case "${RUN}" in
++++ shopt -u extglob
++++ export DO_ATM=YES
++++ DO_ATM=YES
++++ export DO_COUPLED=NO
++++ DO_COUPLED=NO
++++ export DO_WAVE=NO
++++ DO_WAVE=NO
++++ export DO_OCN=NO
++++ DO_OCN=NO
++++ export DO_ICE=NO
++++ DO_ICE=NO
++++ DO_AERO=NO
++++ export DO_PREP_OBS_AERO=NO
++++ DO_PREP_OBS_AERO=NO
++++ aero_fcst_runs=gdas
++++ aero_anl_runs='gdas gfs'
++++ export DO_AERO_FCST=NO
++++ DO_AERO_FCST=NO
++++ export DO_AERO_ANL=NO
++++ DO_AERO_ANL=NO
++++ [[ gdas == \g\f\s ]]
++++ export DOBNDPNT_WAVE=NO
++++ DOBNDPNT_WAVE=NO
++++ export FRAC_GRID=.true.
++++ FRAC_GRID=.true.
++++ export DO_NEST=NO
++++ DO_NEST=NO
++++ [[ NO == \Y\E\S ]]
++++ export ntiles=6
++++ ntiles=6
++++ export FIXugwd=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/ugwd
++++ FIXugwd=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/ugwd
++++ export FIXorog=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/orog
++++ FIXorog=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/orog
++++ export OPS_RES=C768
++++ OPS_RES=C768
++++ export LEVS=128
++++ LEVS=128
++++ export CASE=C96
++++ CASE=C96
++++ export CASE_ENS=C48
++++ CASE_ENS=C48
++++ export CASE_ANL=C96
++++ CASE_ANL=C96
++++ export CASE_HIST=C48
++++ CASE_HIST=C48
++++ export OCNRES=500
++++ OCNRES=500
++++ export ICERES=500
++++ ICERES=500
++++ case "${CASE}" in
++++ export waveGRD=uglo_100km
++++ waveGRD=uglo_100km
++++ case "${APP}" in
++++ export DO_COUPLED=YES
++++ DO_COUPLED=YES
++++ export DO_OCN=YES
++++ DO_OCN=YES
++++ export DO_ICE=YES
++++ DO_ICE=YES
++++ [[ S2SW =~ A$ ]]
++++ [[ S2SW =~ ^S2SW ]]
++++ export DO_WAVE=YES
++++ DO_WAVE=YES
++++ [[ NO == \Y\E\S ]]
++++ [[ gdas =~ gdas ]]
++++ export FHCYC=1
++++ FHCYC=1
++++ export FTSFS=10
++++ FTSFS=10
++++ export FHMIN=0
++++ FHMIN=0
++++ export FHMAX=9
++++ FHMAX=9
++++ export FHOUT=3
++++ FHOUT=3
++++ export FHOUT_OCN=3
++++ FHOUT_OCN=3
++++ export FHOUT_ICE=3
++++ FHOUT_ICE=3
++++ export FHOUT_AERO=3
++++ FHOUT_AERO=3
++++ export EUPD_CYC=both
++++ EUPD_CYC=both
++++ export INTERVAL_GFS=6
++++ INTERVAL_GFS=6
++++ export SDATE_GFS=2021122018
++++ SDATE_GFS=2021122018
++++ export FHMIN_GFS=0
++++ FHMIN_GFS=0
++++ export FHMAX_GFS=120
++++ FHMAX_GFS=120
++++ breakpnts=
++++ export FCST_SEGMENTS=0,120
++++ FCST_SEGMENTS=0,120
++++ export FHOUT_GFS=3
++++ FHOUT_GFS=3
++++ export FHMAX_HF_GFS=48
++++ FHMAX_HF_GFS=48
++++ export FHMAX_HF_GFS=48
++++ FHMAX_HF_GFS=48
++++ export FHOUT_HF_GFS=1
++++ FHOUT_HF_GFS=1
++++ export FHMIN_WAV=0
++++ FHMIN_WAV=0
++++ export FHOUT_WAV=1
++++ FHOUT_WAV=1
++++ export FHMAX_WAV=9
++++ FHMAX_WAV=9
++++ export FHMAX_WAV=9
++++ FHMAX_WAV=9
++++ export FHOUT_WAV_GFS=3
++++ FHOUT_WAV_GFS=3
++++ export FHMAX_WAV_GFS=120
++++ FHMAX_WAV_GFS=120
++++ export FHOUT_HF_WAV=1
++++ FHOUT_HF_WAV=1
++++ export FHMAX_HF_WAV=48
++++ FHMAX_HF_WAV=48
++++ export FHMAX_HF_WAV=48
++++ FHMAX_HF_WAV=48
++++ export FHOUT_OCN_GFS=6
++++ FHOUT_OCN_GFS=6
++++ export FHOUT_ICE_GFS=6
++++ FHOUT_ICE_GFS=6
++++ export ILPOST=1
++++ ILPOST=1
++++ ((  FHMAX_HF_GFS < 120  ))
++++ export ILPOST=3
++++ ILPOST=3
++++ export FHMAX_GOES=180
++++ FHMAX_GOES=180
++++ export FHOUT_GOES=3
++++ FHOUT_GOES=3
++++ ((  FHMAX_GOES > FHMAX_GFS  ))
++++ export FHMAX_GOES=120
++++ FHMAX_GOES=120
++++ export restart_interval_gfs=12
++++ restart_interval_gfs=12
++++ export QUILTING=.true.
++++ QUILTING=.true.
++++ export OUTPUT_GRID=gaussian_grid
++++ OUTPUT_GRID=gaussian_grid
++++ export WRITE_DOPOST=.true.
++++ WRITE_DOPOST=.true.
++++ export WRITE_NSFLIP=.true.
++++ WRITE_NSFLIP=.true.
++++ export DOIAU=YES
++++ DOIAU=YES
++++ export IAUFHRS=3,6,9
++++ IAUFHRS=3,6,9
++++ export IAU_FHROT=3
++++ IAU_FHROT=3
++++ export IAU_DELTHRS=6
++++ IAU_DELTHRS=6
++++ export IAU_OFFSET=6
++++ IAU_OFFSET=6
++++ export DOIAU_ENKF=YES
++++ DOIAU_ENKF=YES
++++ export IAUFHRS_ENKF=3,6,9
++++ IAUFHRS_ENKF=3,6,9
++++ export IAU_DELTHRS_ENKF=6
++++ IAU_DELTHRS_ENKF=6
++++ export imp_physics=8
++++ imp_physics=8
++++ export DO_JEDIATMVAR=NO
++++ DO_JEDIATMVAR=NO
++++ export DO_JEDIATMENS=NO
++++ DO_JEDIATMENS=NO
++++ export DO_JEDIATMENS_SPLIT_OBSSOL=YES
++++ DO_JEDIATMENS_SPLIT_OBSSOL=YES
++++ export DO_JEDIOCNVAR=YES
++++ DO_JEDIOCNVAR=YES
++++ export DO_JEDISNOWDA=YES
++++ DO_JEDISNOWDA=YES
++++ export DO_MERGENSST=NO
++++ DO_MERGENSST=NO
++++ [[ .false. = \.\t\r\u\e\. ]]
++++ export DO_STARTMEM_FROM_JEDIICE=YES
++++ DO_STARTMEM_FROM_JEDIICE=YES
++++ export DOHYBVAR=YES
++++ DOHYBVAR=YES
++++ export DOHYBVAR_OCN=YES
++++ DOHYBVAR_OCN=YES
++++ export DOLETKF_OCN=NO
++++ DOLETKF_OCN=NO
++++ export NMEM_ENS=2
++++ NMEM_ENS=2
++++ export SMOOTH_ENKF=NO
++++ SMOOTH_ENKF=NO
++++ export l4densvar=.true.
++++ l4densvar=.true.
++++ export lwrite4danl=.true.
++++ lwrite4danl=.true.
++++ export DO_CALC_INCREMENT=NO
++++ DO_CALC_INCREMENT=NO
++++ export USE_BUILD_GSINFO=YES
++++ USE_BUILD_GSINFO=YES
++++ export BUILD_GSINFO_DIR=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/parm/gsinfo
++++ BUILD_GSINFO_DIR=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/parm/gsinfo
++++ export NMEM_ENS_GFS=2
++++ NMEM_ENS_GFS=2
++++ export NMEM_ENS_GFS_OFFSET=0
++++ NMEM_ENS_GFS_OFFSET=0
++++ export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ DO_CALC_INCREMENT_ENKF_GFS=NO
++++ export DOENKFONLY_ATM=NO
++++ DOENKFONLY_ATM=NO
++++ [[ NO = \Y\E\S ]]
++++ [[ YES = \Y\E\S ]]
++++ export FHMIN_ENKF=3
++++ FHMIN_ENKF=3
++++ export FHMAX_ENKF=9
++++ FHMAX_ENKF=9
++++ export FHMAX_ENKF_GFS=12
++++ FHMAX_ENKF_GFS=12
++++ export FHOUT_ENKF_GFS=3
++++ FHOUT_ENKF_GFS=3
++++ [[ .true. = \.\t\r\u\e\. ]]
++++ export FHOUT=1
++++ FHOUT=1
++++ export FHOUT_ENKF=1
++++ FHOUT_ENKF=1
++++ [[ YES == \N\O ]]
++++ export ENKF_SPREAD=YES
++++ ENKF_SPREAD=YES
++++ [[ gdas == \g\d\a\s ]]
++++ export DO_GSISOILDA=YES
++++ DO_GSISOILDA=YES
++++ export DO_LAND_IAU=.true.
++++ DO_LAND_IAU=.true.
++++ export LSOIL_INCR=2
++++ LSOIL_INCR=2
++++ [[ cycled = \c\y\c\l\e\d ]]
++++ [[ 2021122012 = \2\0\2\1\1\2\2\0\1\2 ]]
++++ [[ .false. = \.\f\a\l\s\e\. ]]
++++ export IAU_OFFSET=0
++++ IAU_OFFSET=0
++++ export IAU_FHROT=0
++++ IAU_FHROT=0
++++ export IAUFHRS=6,
++++ IAUFHRS=6,
++++ export DO_LAND_IAU=.false.
++++ DO_LAND_IAU=.false.
++++ [[ YES = \N\O ]]
++++ [[ YES == \Y\E\S ]]
++++ export restart_interval_enkfgdas=3
++++ restart_interval_enkfgdas=3
++++ export restart_interval_enkfgfs=3
++++ restart_interval_enkfgfs=3
++++ [[ YES == \Y\E\S ]]
++++ export restart_interval_gdas=3
++++ restart_interval_gdas=3
++++ export DONST=YES
++++ DONST=YES
++++ [[ YES = \Y\E\S ]]
++++ export 'FNTSFA=        '
++++ FNTSFA='        '
++++ export nst_anl=.true.
++++ nst_anl=.true.
++++ export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ export INCVARS_EFOLD=5
++++ INCVARS_EFOLD=5
++++ export netcdf_diag=.true.
++++ netcdf_diag=.true.
++++ export binary_diag=.false.
++++ binary_diag=.false.
++++ export DO_CA=YES
++++ DO_CA=YES
++++ case "${machine}" in
++++ export DO_METP=NO
++++ DO_METP=NO
++++ export DO_FIT2OBS=YES
++++ DO_FIT2OBS=YES
++++ export FHMAX_FITS=132
++++ FHMAX_FITS=132
++++ [[ 132 -gt 120 ]]
++++ export FHMAX_FITS=120
++++ FHMAX_FITS=120
++++ export DO_FETCH_HPSS=NO
++++ DO_FETCH_HPSS=NO
++++ export DO_FETCH_LOCAL=NO
++++ DO_FETCH_LOCAL=NO
++++ export DO_ARCHCOM=NO
++++ DO_ARCHCOM=NO
++++ export ARCHCOM_TO=local
++++ ARCHCOM_TO=local
++++ export 'CLIENT_GLOBUS_UUID={{ CLIENT_GLOBUS_UUID }}'
++++ CLIENT_GLOBUS_UUID='{{ CLIENT_GLOBUS_UUID }}'
++++ [[ NO = \Y\E\S ]]
++++ [[ NO = \Y\E\S ]]
++++ [[ YES = \Y\E\S ]]
++++ export DO_ANLSTAT=YES
++++ DO_ANLSTAT=YES
++++ [[ NO == \Y\E\S ]]
++++ export OFFSET_START_HOUR=0
++++ OFFSET_START_HOUR=0
++++ export NUM_SND_COLLECTIVES=9
++++ NUM_SND_COLLECTIVES=9
++++ export MOM6_INTERP_ICS=NO
++++ MOM6_INTERP_ICS=NO
++++ [[ NO == \Y\E\S ]]
++++ echo 'END: config.base'
+END: config.base
+++ true
+++ export err=0
+++ err=0
+++ [[ 0 -ne 0 ]]
+++ for config in "${configs[@]:-''}"
+++ source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/config.wave
++++ echo 'BEGIN: config.wave'
+BEGIN: config.wave
++++ export RUNRSTwave=gdas
++++ RUNRSTwave=gdas
++++ export MESH_WAV=mesh.uglo_100km.nc
++++ MESH_WAV=mesh.uglo_100km.nc
++++ case "${waveGRD}" in
++++ export 'waveinterpGRD=at_10m ep_10m wc_10m glo_30m aoc_9km gnh_10m gsh_15m'
++++ waveinterpGRD='at_10m ep_10m wc_10m glo_30m aoc_9km gnh_10m gsh_15m'
++++ export wavepostGRD=
++++ wavepostGRD=
++++ export waveuoutpGRD=uglo_100km
++++ waveuoutpGRD=uglo_100km
++++ export WAVEWND_DID=
++++ WAVEWND_DID=
++++ export WAVEWND_FID=
++++ WAVEWND_FID=
++++ [[ gdas == \g\f\s ]]
++++ export WAVHINDH=0
++++ WAVHINDH=0
++++ export FHMAX_WAV_IBP=180
++++ FHMAX_WAV_IBP=180
++++ ((  FHMAX_WAV < FHMAX_WAV_IBP  ))
++++ export FHMAX_WAV_IBP=9
++++ FHMAX_WAV_IBP=9
++++ export DTFLD_WAV=3600
++++ DTFLD_WAV=3600
++++ export DTPNT_WAV=3600
++++ DTPNT_WAV=3600
++++ export FHINCP_WAV=1
++++ FHINCP_WAV=1
++++ export 'OUTPARS_WAV=WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR'
++++ OUTPARS_WAV='WND CUR ICE HS T01 T02 DIR FP DP PHS PTP PDIR'
++++ [[ gdas == \g\d\a\s ]]
++++ export WAVNCYC=4
++++ WAVNCYC=4
++++ export WAVHCYC=6
++++ WAVHCYC=6
++++ export FHMAX_WAV_CUR=48
++++ FHMAX_WAV_CUR=48
++++ export RSTTYPE_WAV=T
++++ RSTTYPE_WAV=T
++++ [[ gdas != gfs ]]
++++ export DT_1_RST_WAV=10800
++++ DT_1_RST_WAV=10800
++++ export DT_2_RST_WAV=43200
++++ DT_2_RST_WAV=43200
++++ export RSTIOFF_WAV=0
++++ RSTIOFF_WAV=0
++++ export RUNMEM=-1
++++ RUNMEM=-1
++++ ((  RUNMEM == -1  ))
++++ export waveMEMB=
++++ waveMEMB=
++++ export WW3ATMINP=CPL
++++ WW3ATMINP=CPL
++++ [[ YES == \Y\E\S ]]
++++ export WW3ICEINP=CPL
++++ WW3ICEINP=CPL
++++ export WAVEICE_FID=
++++ WAVEICE_FID=
++++ [[ YES == \Y\E\S ]]
++++ export WW3CURINP=CPL
++++ WW3CURINP=CPL
++++ export WAVECUR_FID=
++++ WAVECUR_FID=
++++ export WW3ATMIENS=F
++++ WW3ATMIENS=F
++++ export WW3ICEIENS=F
++++ WW3ICEIENS=F
++++ export WW3CURIENS=F
++++ WW3CURIENS=F
++++ export GOFILETYPE=1
++++ GOFILETYPE=1
++++ export POFILETYPE=1
++++ POFILETYPE=1
++++ export FUNIPNT=T
++++ FUNIPNT=T
++++ export IOSRV=1
++++ IOSRV=1
++++ export FPNTPROC=T
++++ FPNTPROC=T
++++ export FGRDPROC=F
++++ FGRDPROC=F
++++ export FLAGMASKCOMP=F
++++ FLAGMASKCOMP=F
++++ export FLAGMASKOUT=F
++++ FLAGMASKOUT=F
++++ echo 'END: config.wave'
+END: config.wave
+++ true
+++ export err=0
+++ err=0
+++ [[ 0 -ne 0 ]]
+++ for config in "${configs[@]:-''}"
+++ source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/config.waveinit
++++ echo 'BEGIN: config.waveinit'
+BEGIN: config.waveinit
++++ source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/config.resources waveinit
+++++ ((  1 != 1  ))
+++++ step=waveinit
+++++ echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ case ${machine} in
+++++ max_tasks_per_node=128
+++++ mem_node_max=230GB
+++++ export max_tasks_per_node
+++++ case ${step} in
+++++ walltime=00:10:00
+++++ ntasks=12
+++++ threads_per_task=1
+++++ tasks_per_node=128
+++++ NTASKS=12
+++++ memory=4GB
+++++ [[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/config.resources.DERECHO ]]
+++++ source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/EXPDIR/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/config.resources.DERECHO
++++++ step=waveinit
++++++ case ${step} in
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=threads_per_task_gdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export threads_per_task
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=ntasks_gdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export ntasks
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=tasks_per_node_gdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export tasks_per_node
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=NTASKS_gdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export NTASKS
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=memory_gdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export memory
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=walltime_gdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export walltime
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=is_exclusive_gdas
+++++ [[ -n '' ]]
+++++ [[ -n '' ]]
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=prepost_gdas
+++++ [[ -n '' ]]
+++++ [[ -n '' ]]
+++++ echo 'END: config.resources'
+END: config.resources
++++ export sigMODE=init
++++ sigMODE=init
++++ echo 'END: config.waveinit'
+END: config.waveinit
+++ true
+++ export err=0
+++ err=0
+++ [[ 0 -ne 0 ]]
+++ source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/env/DERECHO.env waveinit
++++ [[ 1 -ne 1 ]]
++++ step=waveinit
++++ export 'launcher=mpiexec -l'
++++ launcher='mpiexec -l'
++++ export mpmd_opt=-configfile
++++ mpmd_opt=-configfile
++++ export OMP_STACKSIZE=2048000
++++ OMP_STACKSIZE=2048000
++++ export NTHSTACK=1024000000
++++ NTHSTACK=1024000000
++++ export FI_CXI_RX_MATCH_MODE=hybrid
++++ FI_CXI_RX_MATCH_MODE=hybrid
++++ ulimit -s unlimited
++++ ulimit -a
+core file size          (blocks, -c) unlimited
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 1028326
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) 4194304
+open files                      (-n) 16384
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 1028326
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
++++ [[ -n 12 ]]
++++ [[ -n 128 ]]
++++ [[ -n 128 ]]
++++ max_threads_per_task=1
++++ NTHREADSmax=1
++++ NTHREADS1=1
++++ [[ 1 -gt 1 ]]
++++ [[ 1 -gt 1 ]]
++++ APRUN_default='mpiexec -l -n 12'
++++ case ${step} in
++++ export USE_CFP=YES
++++ USE_CFP=YES
++++ [[ waveinit == \w\a\v\e\p\r\e\p ]]
++++ export 'wavempexec=mpiexec -l'
++++ wavempexec='mpiexec -l'
++++ export wave_mpmd=-configfile
++++ wave_mpmd=-configfile
+++ true
+++ export err=0
+++ err=0
+++ [[ 0 -ne 0 ]]
++ source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/jjob_standard_vars.sh
++++ date +%s
+++ start_time=1779111791
+++ export start_time
++++ date -d@1779111791 -u +%H:%M:%S
+++ _start_time_human=13:43:11
+++ _calling_script=JGLOBAL_WAVE_INIT
+++ echo 'Begin JGLOBAL_WAVE_INIT at 13:43:11'
+Begin JGLOBAL_WAVE_INIT at 13:43:11
+++ declare -x 'PS4=+ $(basename ${BASH_SOURCE[0]:-${FUNCNAME[0]:-"Unknown"}})[${LINENO}]'
+++ jjob_standard_vars.sh[46]export USHglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush
+++ jjob_standard_vars.sh[46]USHglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush
+++ jjob_standard_vars.sh[47]export FIXglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix
+++ jjob_standard_vars.sh[47]FIXglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix
+++ jjob_standard_vars.sh[48]export PARMglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/parm
+++ jjob_standard_vars.sh[48]PARMglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/parm
+++ jjob_standard_vars.sh[49]export SCRIPTSglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/scripts
+++ jjob_standard_vars.sh[49]SCRIPTSglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/scripts
+++ jjob_standard_vars.sh[54]export pid=42066
+++ jjob_standard_vars.sh[54]pid=42066
+++ jjob_standard_vars.sh[55]export pgmout=OUTPUT.42066
+++ jjob_standard_vars.sh[55]pgmout=OUTPUT.42066
+++ jjob_standard_vars.sh[56]export pgmerr=errfile
+++ jjob_standard_vars.sh[56]pgmerr=errfile
+++ jjob_standard_vars.sh[57]export pgm=
+++ jjob_standard_vars.sh[57]pgm=
+++ jjob_standard_vars.sh[62]export envir=prod
+++ jjob_standard_vars.sh[62]envir=prod
+++ jjob_standard_vars.sh[63]export KEEPDATA=NO
+++ jjob_standard_vars.sh[63]KEEPDATA=NO
+++ jjob_standard_vars.sh[64]export SENDECF=NO
+++ jjob_standard_vars.sh[64]SENDECF=NO
+++ jjob_standard_vars.sh[65]export SENDDBN=NO
+++ jjob_standard_vars.sh[65]SENDDBN=NO
+++ jjob_standard_vars.sh[66]export SENDDBN_NTC=NO
+++ jjob_standard_vars.sh[66]SENDDBN_NTC=NO
+++ jjob_standard_vars.sh[67]export DBNROOT=/glade/work/epicufsrt/contrib/spack-stack/derecho/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/prod-util-2.1.1-rk65ntz/fakedbn
+++ jjob_standard_vars.sh[67]DBNROOT=/glade/work/epicufsrt/contrib/spack-stack/derecho/spack-stack-1.9.2/envs/ue-oneapi-2024.2.1/install/oneapi/2024.2.1/prod-util-2.1.1-rk65ntz/fakedbn
+++ jjob_standard_vars.sh[72]export DATA=/lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252
+++ jjob_standard_vars.sh[72]DATA=/lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252
+++ jjob_standard_vars.sh[78]export cycle=t12z
+++ jjob_standard_vars.sh[78]cycle=t12z
++ JGLOBAL_WAVE_INIT[12]source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/jjob_shell_setup.sh
+++ jjob_shell_setup.sh[27]export USHglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush
+++ jjob_shell_setup.sh[27]USHglobal=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush
+++ jjob_shell_setup.sh[28]export start_time=1779111791
+++ jjob_shell_setup.sh[28]start_time=1779111791
+++ jjob_shell_setup.sh[29]export _calling_script=JGLOBAL_WAVE_INIT
+++ jjob_shell_setup.sh[29]_calling_script=JGLOBAL_WAVE_INIT
+++ jjob_shell_setup.sh[34]source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wait_for_file.sh
++++ wait_for_file.sh[48]declare -xf wait_for_file
+++ jjob_shell_setup.sh[35]source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/dataroot_com_path.sh
++++ dataroot_com_path.sh[48]declare -xf dataroot_com_path
+++ jjob_shell_setup.sh[36]source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/timer.sh
++++ timer.sh[28][[ -z '' ]]
++++ timer.sh[29]_GW_TIMER_STACK=()
++++ timer.sh[29]declare -xa _GW_TIMER_STACK
++++ timer.sh[30]_GW_LABEL_STACK=()
++++ timer.sh[30]declare -xa _GW_LABEL_STACK
++++ timer.sh[89]declare -xf tick
++++ timer.sh[90]declare -xf tock
++++ timer.sh[93][[ /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/timer.sh == \/\g\l\a\d\e\/\d\e\r\e\c\h\o\/\s\c\r\a\t\c\h\/\e\p\i\c\u\f\s\r\t\/\G\F\S\_\C\I\_\C\D\/\D\E\R\E\C\H\O\/\G\i\t\l\a\b\/\B\U\I\L\D\/\p\r\_\c\a\s\e\s\_\4\9\1\9\_\a\7\5\a\9\2\6\a\_\1\7\6\5\3\/\g\l\o\b\a\l\-\w\o\r\k\f\l\o\w\/\d\e\v\/\j\o\b\s\/\J\G\L\O\B\A\L\_\W\A\V\E\_\I\N\I\T ]]
+++ jjob_shell_setup.sh[37]source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/err_exit.sh
++++ err_exit.sh[81]declare -xf err_exit
+++ jjob_shell_setup.sh[38]shopt -s nullglob
+++ jjob_shell_setup.sh[43]export SHELLOPTS
+++ jjob_shell_setup.sh[47]source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/setup_data_dir.sh /lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252
++++ setup_data_dir.sh[15]dir_to_create_=/lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252
++++ setup_data_dir.sh[16][[ YES == \Y\E\S ]]
++++ setup_data_dir.sh[17]rm -rf /lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252
++++ setup_data_dir.sh[19]mkdir -p /lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252
++++ setup_data_dir.sh[20]cd /lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252
+++ jjob_shell_setup.sh[50]set -x
+++ jjob_shell_setup.sh[56]trap '/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/postamble.sh 1779111791' EXIT
+++ jjob_shell_setup.sh[62]setpdy.sh
++ setpdy.sh[20]'[' /lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252 == /glade/u/home/epicufsrt ']'
++ setpdy.sh[25][[ ! t12z =~ t??z ]]
++ setpdy.sh[30]case $# in
++ setpdy.sh[31]dates_before_PDY=7
++ setpdy.sh[32]dates_after_PDY=7
++ setpdy.sh[50]COMDATEROOT=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/COMROOT
++ setpdy.sh[53]'[' -z 20211220 ']'
++ setpdy.sh[57]sed 's/[0-9]\{8\}/20211220/' /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/COMROOT/date/t12z
+sed: can't read /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/COMROOT/date/t12z: No such file or directory
+++ setpdy.sh[62]finddate.sh 20211220 s-7
++ finddate.sh[19]set +x
++ setpdy.sh[62]DATElne_minus='20211219 20211218 20211217 20211216 20211215 20211214 20211213'
++ setpdy.sh[63]export err=0
++ setpdy.sh[63]err=0
++ setpdy.sh[63]err_chk
++ err_chk[13]'[' -z 0 ']'
++ err_chk[14]'[' 0 -eq 0 ']'
++ err_chk[14]echo ' completed cleanly'
+ completed cleanly
++ err_chk[14]exit
+++ setpdy.sh[65]finddate.sh 20211220 s+7
++ finddate.sh[19]set +x
++ setpdy.sh[65]DATElne_plus='20211221 20211222 20211223 20211224 20211225 20211226 20211227'
++ setpdy.sh[66]export err=0
++ setpdy.sh[66]err=0
++ setpdy.sh[66]err_chk
++ err_chk[13]'[' -z 0 ']'
++ err_chk[14]'[' 0 -eq 0 ']'
++ err_chk[14]echo ' completed cleanly'
+ completed cleanly
++ err_chk[14]exit
++ setpdy.sh[69]'[' -f PDY ']'
+++ setpdy.sh[70]seq 7 -1 1
++ setpdy.sh[70]for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72]echo 'export PDYm7=20211213'
++ setpdy.sh[70]for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72]echo 'export PDYm6=20211214'
++ setpdy.sh[70]for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72]echo 'export PDYm5=20211215'
++ setpdy.sh[70]for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72]echo 'export PDYm4=20211216'
++ setpdy.sh[70]for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72]echo 'export PDYm3=20211217'
++ setpdy.sh[70]for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72]echo 'export PDYm2=20211218'
++ setpdy.sh[70]for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72]echo 'export PDYm1=20211219'
++ setpdy.sh[74]echo 'export PDY=20211220'
+++ setpdy.sh[75]seq 7
++ setpdy.sh[75]for d in $(seq $dates_after_PDY)
++ setpdy.sh[77]echo 'export PDYp1=20211221'
++ setpdy.sh[75]for d in $(seq $dates_after_PDY)
++ setpdy.sh[77]echo 'export PDYp2=20211222'
++ setpdy.sh[75]for d in $(seq $dates_after_PDY)
++ setpdy.sh[77]echo 'export PDYp3=20211223'
++ setpdy.sh[75]for d in $(seq $dates_after_PDY)
++ setpdy.sh[77]echo 'export PDYp4=20211224'
++ setpdy.sh[75]for d in $(seq $dates_after_PDY)
++ setpdy.sh[77]echo 'export PDYp5=20211225'
++ setpdy.sh[75]for d in $(seq $dates_after_PDY)
++ setpdy.sh[77]echo 'export PDYp6=20211226'
++ setpdy.sh[75]for d in $(seq $dates_after_PDY)
++ setpdy.sh[77]echo 'export PDYp7=20211227'
++ setpdy.sh[80]chmod u+x PDY
++ setpdy.sh[82]echo 'Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.'
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_shell_setup.sh[63]source ./PDY
++++ PDY[1]export PDYm7=20211213
++++ PDY[1]PDYm7=20211213
++++ PDY[2]export PDYm6=20211214
++++ PDY[2]PDYm6=20211214
++++ PDY[3]export PDYm5=20211215
++++ PDY[3]PDYm5=20211215
++++ PDY[4]export PDYm4=20211216
++++ PDY[4]PDYm4=20211216
++++ PDY[5]export PDYm3=20211217
++++ PDY[5]PDYm3=20211217
++++ PDY[6]export PDYm2=20211218
++++ PDY[6]PDYm2=20211218
++++ PDY[7]export PDYm1=20211219
++++ PDY[7]PDYm1=20211219
++++ PDY[8]export PDY=20211220
++++ PDY[8]PDY=20211220
++++ PDY[9]export PDYp1=20211221
++++ PDY[9]PDYp1=20211221
++++ PDY[10]export PDYp2=20211222
++++ PDY[10]PDYp2=20211222
++++ PDY[11]export PDYp3=20211223
++++ PDY[11]PDYp3=20211223
++++ PDY[12]export PDYp4=20211224
++++ PDY[12]PDYp4=20211224
++++ PDY[13]export PDYp5=20211225
++++ PDY[13]PDYp5=20211225
++++ PDY[14]export PDYp6=20211226
++++ PDY[14]PDYp6=20211226
++++ PDY[15]export PDYp7=20211227
++++ PDY[15]PDYp7=20211227
++ JGLOBAL_WAVE_INIT[15]source /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/set_strict.sh
+++ set_strict.sh[13][[ YES == \Y\E\S ]]
+++ set_strict.sh[15]set -eu
+++ set_strict.sh[17]set -o pipefail
++ JGLOBAL_WAVE_INIT[17]export MP_PULSE=0
++ JGLOBAL_WAVE_INIT[17]MP_PULSE=0
++ JGLOBAL_WAVE_INIT[21][[ 10#-1 -ge 0 ]]
++ JGLOBAL_WAVE_INIT[26]declare -rx COMOUT=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.20211220/12
++ JGLOBAL_WAVE_INIT[28]declare -rx COMOUT_WAVE_PREP=/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.20211220/12/model/wave/prep
++ JGLOBAL_WAVE_INIT[30]mkdir -p /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/RUNTESTS/COMROOT/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.20211220/12/model/wave/prep
++ JGLOBAL_WAVE_INIT[33]export 'wavempexec=mpiexec -l'
++ JGLOBAL_WAVE_INIT[33]wavempexec='mpiexec -l'
++ JGLOBAL_WAVE_INIT[34]export wave_mpmd=-configfile
++ JGLOBAL_WAVE_INIT[34]wave_mpmd=-configfile
++ JGLOBAL_WAVE_INIT[37]/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/scripts/exgfs_wave_init.sh
++ exgfs_wave_init.sh[23]cat
+
+Preparing input files :
+-----------------------
++ exgfs_wave_init.sh[33]declare -A grdALL
++ exgfs_wave_init.sh[34]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[36]grdALL["${grd}"]=uglo_100km
++ exgfs_wave_init.sh[34]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[36]grdALL["${grd}"]=uglo_100km
++ exgfs_wave_init.sh[34]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[36]grdALL["${grd}"]=at_10m
++ exgfs_wave_init.sh[34]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[36]grdALL["${grd}"]=ep_10m
++ exgfs_wave_init.sh[34]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[36]grdALL["${grd}"]=wc_10m
++ exgfs_wave_init.sh[34]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[36]grdALL["${grd}"]=glo_30m
++ exgfs_wave_init.sh[34]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[36]grdALL["${grd}"]=aoc_9km
++ exgfs_wave_init.sh[34]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[36]grdALL["${grd}"]=gnh_10m
++ exgfs_wave_init.sh[34]for grd in ${WAVECUR_FID} ${WAVEICE_FID} ${WAVEWND_FID} ${waveuoutpGRD} ${waveGRD} ${wavepostGRD} ${waveinterpGRD}
++ exgfs_wave_init.sh[36]grdALL["${grd}"]=gsh_15m
++ exgfs_wave_init.sh[39]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[40]echo 'INFO: Setting up to generate mod_def file for gsh_15m'
+INFO: Setting up to generate mod_def file for gsh_15m
++ exgfs_wave_init.sh[41][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.gsh_15m ]]
++ exgfs_wave_init.sh[42]cpreq /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.gsh_15m ww3_grid.inp.gsh_15m
++ cpreq[3]cp /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.gsh_15m ww3_grid.inp.gsh_15m
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[43]echo 'INFO: ww3_grid.inp.gsh_15m copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.gsh_15m).'
+INFO: ww3_grid.inp.gsh_15m copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.gsh_15m).
++ exgfs_wave_init.sh[49][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/gsh_15m.msh ]]
++ exgfs_wave_init.sh[54]echo '/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh gsh_15m'
++ exgfs_wave_init.sh[39]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[40]echo 'INFO: Setting up to generate mod_def file for aoc_9km'
+INFO: Setting up to generate mod_def file for aoc_9km
++ exgfs_wave_init.sh[41][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.aoc_9km ]]
++ exgfs_wave_init.sh[42]cpreq /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.aoc_9km ww3_grid.inp.aoc_9km
++ cpreq[3]cp /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.aoc_9km ww3_grid.inp.aoc_9km
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[43]echo 'INFO: ww3_grid.inp.aoc_9km copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.aoc_9km).'
+INFO: ww3_grid.inp.aoc_9km copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.aoc_9km).
++ exgfs_wave_init.sh[49][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/aoc_9km.msh ]]
++ exgfs_wave_init.sh[54]echo '/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh aoc_9km'
++ exgfs_wave_init.sh[39]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[40]echo 'INFO: Setting up to generate mod_def file for uglo_100km'
+INFO: Setting up to generate mod_def file for uglo_100km
++ exgfs_wave_init.sh[41][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.uglo_100km ]]
++ exgfs_wave_init.sh[42]cpreq /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.uglo_100km ww3_grid.inp.uglo_100km
++ cpreq[3]cp /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.uglo_100km ww3_grid.inp.uglo_100km
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[43]echo 'INFO: ww3_grid.inp.uglo_100km copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.uglo_100km).'
+INFO: ww3_grid.inp.uglo_100km copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.uglo_100km).
++ exgfs_wave_init.sh[49][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/uglo_100km.msh ]]
++ exgfs_wave_init.sh[50]cpreq /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/uglo_100km.msh uglo_100km.msh
++ cpreq[3]cp /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/uglo_100km.msh uglo_100km.msh
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[54]echo '/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh uglo_100km'
++ exgfs_wave_init.sh[39]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[40]echo 'INFO: Setting up to generate mod_def file for glo_30m'
+INFO: Setting up to generate mod_def file for glo_30m
++ exgfs_wave_init.sh[41][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.glo_30m ]]
++ exgfs_wave_init.sh[42]cpreq /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.glo_30m ww3_grid.inp.glo_30m
++ cpreq[3]cp /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.glo_30m ww3_grid.inp.glo_30m
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[43]echo 'INFO: ww3_grid.inp.glo_30m copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.glo_30m).'
+INFO: ww3_grid.inp.glo_30m copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.glo_30m).
++ exgfs_wave_init.sh[49][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/glo_30m.msh ]]
++ exgfs_wave_init.sh[54]echo '/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh glo_30m'
++ exgfs_wave_init.sh[39]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[40]echo 'INFO: Setting up to generate mod_def file for gnh_10m'
+INFO: Setting up to generate mod_def file for gnh_10m
++ exgfs_wave_init.sh[41][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.gnh_10m ]]
++ exgfs_wave_init.sh[42]cpreq /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.gnh_10m ww3_grid.inp.gnh_10m
++ cpreq[3]cp /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.gnh_10m ww3_grid.inp.gnh_10m
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[43]echo 'INFO: ww3_grid.inp.gnh_10m copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.gnh_10m).'
+INFO: ww3_grid.inp.gnh_10m copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.gnh_10m).
++ exgfs_wave_init.sh[49][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/gnh_10m.msh ]]
++ exgfs_wave_init.sh[54]echo '/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh gnh_10m'
++ exgfs_wave_init.sh[39]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[40]echo 'INFO: Setting up to generate mod_def file for at_10m'
+INFO: Setting up to generate mod_def file for at_10m
++ exgfs_wave_init.sh[41][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.at_10m ]]
++ exgfs_wave_init.sh[42]cpreq /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.at_10m ww3_grid.inp.at_10m
++ cpreq[3]cp /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.at_10m ww3_grid.inp.at_10m
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[43]echo 'INFO: ww3_grid.inp.at_10m copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.at_10m).'
+INFO: ww3_grid.inp.at_10m copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.at_10m).
++ exgfs_wave_init.sh[49][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/at_10m.msh ]]
++ exgfs_wave_init.sh[54]echo '/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh at_10m'
++ exgfs_wave_init.sh[39]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[40]echo 'INFO: Setting up to generate mod_def file for ep_10m'
+INFO: Setting up to generate mod_def file for ep_10m
++ exgfs_wave_init.sh[41][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.ep_10m ]]
++ exgfs_wave_init.sh[42]cpreq /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.ep_10m ww3_grid.inp.ep_10m
++ cpreq[3]cp /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.ep_10m ww3_grid.inp.ep_10m
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[43]echo 'INFO: ww3_grid.inp.ep_10m copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.ep_10m).'
+INFO: ww3_grid.inp.ep_10m copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.ep_10m).
++ exgfs_wave_init.sh[49][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ep_10m.msh ]]
++ exgfs_wave_init.sh[54]echo '/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh ep_10m'
++ exgfs_wave_init.sh[39]for grdID in "${grdALL[@]}"
++ exgfs_wave_init.sh[40]echo 'INFO: Setting up to generate mod_def file for wc_10m'
+INFO: Setting up to generate mod_def file for wc_10m
++ exgfs_wave_init.sh[41][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.wc_10m ]]
++ exgfs_wave_init.sh[42]cpreq /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.wc_10m ww3_grid.inp.wc_10m
++ cpreq[3]cp /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.wc_10m ww3_grid.inp.wc_10m
++ cpreq[4]'[' 0 -ne 0 ']'
++ exgfs_wave_init.sh[43]echo 'INFO: ww3_grid.inp.wc_10m copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.wc_10m).'
+INFO: ww3_grid.inp.wc_10m copied (/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/ww3_grid.inp.wc_10m).
++ exgfs_wave_init.sh[49][[ -f /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/fix/wave/wc_10m.msh ]]
++ exgfs_wave_init.sh[54]echo '/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh wc_10m'
++ exgfs_wave_init.sh[58]/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/run_mpmd.sh /lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_script
++ run_mpmd.sh[35]cmdfile=/lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_script
++ run_mpmd.sh[38][[ mpiexec -l =~ ^srun.* ]]
++ run_mpmd.sh[40][[ mpiexec -l =~ ^mpiexec.* ]]
++ run_mpmd.sh[41]_mpmd_launcher=mpiexec
++ run_mpmd.sh[49][[ mpiexec == \u\n\s\u\p\p\o\r\t\e\d ]]
++ run_mpmd.sh[52]echo 'INFO: Detected launcher '\''mpiexec'\'', will attempt to run in MPMD mode if USE_CFP is set to YES'
+INFO: Detected launcher 'mpiexec', will attempt to run in MPMD mode if USE_CFP is set to YES
++ run_mpmd.sh[53][[ -z 128 ]]
++ run_mpmd.sh[53][[ -z 12 ]]
++ run_mpmd.sh[57]USE_CFP=YES
++ run_mpmd.sh[58]max_tasks_per_node=12
++ run_mpmd.sh[63][[ YES != \Y\E\S ]]
++ run_mpmd.sh[74][[ DERECHO == \D\E\R\E\C\H\O ]]
++ run_mpmd.sh[75]wrapper_script=stdout_wrapper.sh
++ run_mpmd.sh[76]rm -f stdout_wrapper.sh
++ run_mpmd.sh[77]cat
++ run_mpmd.sh[84]chmod 755 stdout_wrapper.sh
++ run_mpmd.sh[88]export OMP_NUM_THREADS=1
++ run_mpmd.sh[88]OMP_NUM_THREADS=1
++ run_mpmd.sh[91]mpmd_cmdfile=/lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_cmdfile
++ run_mpmd.sh[92]rm -f '/lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_cmdfile*'
++ run_mpmd.sh[182]cat
+INFO: Executing MPMD job, STDOUT and STDERR redirected for each process separately
+INFO: On failure, logs for each job will be available in /lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd.proc_num.out
+INFO: The proc_num corresponds to the line in '/lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_script'
+++ run_mpmd.sh[189]wc -l
++ run_mpmd.sh[189]nm=8
++ run_mpmd.sh[193][[ 8 -gt 12 ]]
++ run_mpmd.sh[202]chunk_size=8
++ run_mpmd.sh[206]chunk_num=1
++ run_mpmd.sh[207]err=0
++ run_mpmd.sh[208](( i = 0 ))
++ run_mpmd.sh[208](( i < nm ))
++ run_mpmd.sh[209]chunk_file=/lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_cmdfile.chunk1
++ run_mpmd.sh[210]chunk_mpmd /lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_script 8 1 /lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_cmdfile.chunk1
++ run_mpmd.sh[105]local mpmd_file=/lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_script
++ run_mpmd.sh[106]local chunk_sz=8
++ run_mpmd.sh[107]local chunk_num=1
++ run_mpmd.sh[108]local chunk_file=/lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_cmdfile.chunk1
++ run_mpmd.sh[109][[ ! -s /lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_script ]]
++ run_mpmd.sh[114][[ -f /lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_cmdfile.chunk1 ]]
++ run_mpmd.sh[120]local _start_line=1
++ run_mpmd.sh[121]local _end_line=8
++ run_mpmd.sh[124][[ mpiexec == \m\p\i\e\x\e\c ]]
++ run_mpmd.sh[125]echo '#!/usr/bin/bash'
++ run_mpmd.sh[128]local _counter=1
++ run_mpmd.sh[129]IFS=
++ run_mpmd.sh[129]read -r line
++ run_mpmd.sh[130][[ 1 -ge 1 ]]
++ run_mpmd.sh[130][[ 1 -le 8 ]]
++ run_mpmd.sh[131]local i=0
++ run_mpmd.sh[133][[ mpiexec == \s\r\u\n ]]
++ run_mpmd.sh[135][[ mpiexec == \m\p\i\e\x\e\c ]]
++ run_mpmd.sh[138][[ DERECHO == \D\E\R\E\C\H\O ]]
++ run_mpmd.sh[139]echo '-n 1 stdout_wrapper.sh /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh gsh_15m mpmd.0.out'
++ run_mpmd.sh[144]err=0
++ run_mpmd.sh[145][[ 0 -ne 0 ]]
++ run_mpmd.sh[150](( _counter = _counter + 1 ))
++ run_mpmd.sh[129]IFS=
++ run_mpmd.sh[129]read -r line
++ run_mpmd.sh[130][[ 2 -ge 1 ]]
++ run_mpmd.sh[130][[ 2 -le 8 ]]
++ run_mpmd.sh[131]local i=1
++ run_mpmd.sh[133][[ mpiexec == \s\r\u\n ]]
++ run_mpmd.sh[135][[ mpiexec == \m\p\i\e\x\e\c ]]
++ run_mpmd.sh[138][[ DERECHO == \D\E\R\E\C\H\O ]]
++ run_mpmd.sh[139]echo '-n 1 stdout_wrapper.sh /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh aoc_9km mpmd.1.out'
++ run_mpmd.sh[144]err=0
++ run_mpmd.sh[145][[ 0 -ne 0 ]]
++ run_mpmd.sh[150](( _counter = _counter + 1 ))
++ run_mpmd.sh[129]IFS=
++ run_mpmd.sh[129]read -r line
++ run_mpmd.sh[130][[ 3 -ge 1 ]]
++ run_mpmd.sh[130][[ 3 -le 8 ]]
++ run_mpmd.sh[131]local i=2
++ run_mpmd.sh[133][[ mpiexec == \s\r\u\n ]]
++ run_mpmd.sh[135][[ mpiexec == \m\p\i\e\x\e\c ]]
++ run_mpmd.sh[138][[ DERECHO == \D\E\R\E\C\H\O ]]
++ run_mpmd.sh[139]echo '-n 1 stdout_wrapper.sh /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh uglo_100km mpmd.2.out'
++ run_mpmd.sh[144]err=0
++ run_mpmd.sh[145][[ 0 -ne 0 ]]
++ run_mpmd.sh[150](( _counter = _counter + 1 ))
++ run_mpmd.sh[129]IFS=
++ run_mpmd.sh[129]read -r line
++ run_mpmd.sh[130][[ 4 -ge 1 ]]
++ run_mpmd.sh[130][[ 4 -le 8 ]]
++ run_mpmd.sh[131]local i=3
++ run_mpmd.sh[133][[ mpiexec == \s\r\u\n ]]
++ run_mpmd.sh[135][[ mpiexec == \m\p\i\e\x\e\c ]]
++ run_mpmd.sh[138][[ DERECHO == \D\E\R\E\C\H\O ]]
++ run_mpmd.sh[139]echo '-n 1 stdout_wrapper.sh /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh glo_30m mpmd.3.out'
++ run_mpmd.sh[144]err=0
++ run_mpmd.sh[145][[ 0 -ne 0 ]]
++ run_mpmd.sh[150](( _counter = _counter + 1 ))
++ run_mpmd.sh[129]IFS=
++ run_mpmd.sh[129]read -r line
++ run_mpmd.sh[130][[ 5 -ge 1 ]]
++ run_mpmd.sh[130][[ 5 -le 8 ]]
++ run_mpmd.sh[131]local i=4
++ run_mpmd.sh[133][[ mpiexec == \s\r\u\n ]]
++ run_mpmd.sh[135][[ mpiexec == \m\p\i\e\x\e\c ]]
++ run_mpmd.sh[138][[ DERECHO == \D\E\R\E\C\H\O ]]
++ run_mpmd.sh[139]echo '-n 1 stdout_wrapper.sh /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh gnh_10m mpmd.4.out'
++ run_mpmd.sh[144]err=0
++ run_mpmd.sh[145][[ 0 -ne 0 ]]
++ run_mpmd.sh[150](( _counter = _counter + 1 ))
++ run_mpmd.sh[129]IFS=
++ run_mpmd.sh[129]read -r line
++ run_mpmd.sh[130][[ 6 -ge 1 ]]
++ run_mpmd.sh[130][[ 6 -le 8 ]]
++ run_mpmd.sh[131]local i=5
++ run_mpmd.sh[133][[ mpiexec == \s\r\u\n ]]
++ run_mpmd.sh[135][[ mpiexec == \m\p\i\e\x\e\c ]]
++ run_mpmd.sh[138][[ DERECHO == \D\E\R\E\C\H\O ]]
++ run_mpmd.sh[139]echo '-n 1 stdout_wrapper.sh /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh at_10m mpmd.5.out'
++ run_mpmd.sh[144]err=0
++ run_mpmd.sh[145][[ 0 -ne 0 ]]
++ run_mpmd.sh[150](( _counter = _counter + 1 ))
++ run_mpmd.sh[129]IFS=
++ run_mpmd.sh[129]read -r line
++ run_mpmd.sh[130][[ 7 -ge 1 ]]
++ run_mpmd.sh[130][[ 7 -le 8 ]]
++ run_mpmd.sh[131]local i=6
++ run_mpmd.sh[133][[ mpiexec == \s\r\u\n ]]
++ run_mpmd.sh[135][[ mpiexec == \m\p\i\e\x\e\c ]]
++ run_mpmd.sh[138][[ DERECHO == \D\E\R\E\C\H\O ]]
++ run_mpmd.sh[139]echo '-n 1 stdout_wrapper.sh /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh ep_10m mpmd.6.out'
++ run_mpmd.sh[144]err=0
++ run_mpmd.sh[145][[ 0 -ne 0 ]]
++ run_mpmd.sh[150](( _counter = _counter + 1 ))
++ run_mpmd.sh[129]IFS=
++ run_mpmd.sh[129]read -r line
++ run_mpmd.sh[130][[ 8 -ge 1 ]]
++ run_mpmd.sh[130][[ 8 -le 8 ]]
++ run_mpmd.sh[131]local i=7
++ run_mpmd.sh[133][[ mpiexec == \s\r\u\n ]]
++ run_mpmd.sh[135][[ mpiexec == \m\p\i\e\x\e\c ]]
++ run_mpmd.sh[138][[ DERECHO == \D\E\R\E\C\H\O ]]
++ run_mpmd.sh[139]echo '-n 1 stdout_wrapper.sh /glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/wave_grid_moddef.sh wc_10m mpmd.7.out'
++ run_mpmd.sh[144]err=0
++ run_mpmd.sh[145][[ 0 -ne 0 ]]
++ run_mpmd.sh[150](( _counter = _counter + 1 ))
++ run_mpmd.sh[129]IFS=
++ run_mpmd.sh[129]read -r line
++ run_mpmd.sh[153]return 0
++ run_mpmd.sh[211]err=0
++ run_mpmd.sh[212][[ 0 -ne 0 ]]
++ run_mpmd.sh[216]chmod 755 /lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_cmdfile.chunk1
+++ run_mpmd.sh[218]grep -v -c '^ *#'
++ run_mpmd.sh[218]n_mpmd_tasks=8
++ run_mpmd.sh[219][[ mpiexec == \s\r\u\n ]]
++ run_mpmd.sh[224][[ mpiexec == \m\p\i\e\x\e\c ]]
++ run_mpmd.sh[227][[ DERECHO == \D\E\R\E\C\H\O ]]
++ run_mpmd.sh[229]mpiexec -l -configfile /lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252/mpmd_cmdfile.chunk1
+Can't find executable stdout_wrapper.sh
++ exgfs_wave_init.sh[59]export err=127
++ exgfs_wave_init.sh[59]err=127
++ exgfs_wave_init.sh[60][[ 127 -ne 0 ]]
++ exgfs_wave_init.sh[61]err_exit 'run_mpmd.sh failed!'
++ environment[0]set +eux
+
+    -------------------------------------------------------------
+    -- FATAL ERROR: run_mpmd.sh failed! RETURN CODE 127
+    -- ABNORMAL EXIT at Mon May 18 07:43:15 AM MDT 2026 on dec2439
+    -------------------------------------------------------------
+    
+
+Currently Loaded Modules:
+  1) stack-oneapi/2024.2.1              33) py-mpi4py/4.0.1
+  2) ncarenv/24.12                 (S)  34) intel-tbb/2021.12.0
+  3) craype/2.7.31                      35) intel-oneapi-mkl/2024.2.2
+  4) intel/2024.2.1                     36) py-numpy/1.26.4
+  5) libfabric/1.15.2.0                 37) py-pip/23.1.2
+  6) cray-mpich/8.1.29                  38) libyaml/0.2.5
+  7) stack-cray-mpich/8.1.29            39) py-pyyaml/6.0.2
+  8) glibc/2.31                         40) esmf/8.8.0
+  9) intel-oneapi-runtime/2024.2.1      41) fms/2024.02
+ 10) mbedtls/3.6.2                      42) bacio/2.4.1
+ 11) nghttp2/1.63.0                     43) crtm-fix/2.4.0.1_emc
+ 12) zlib/1.2.11                        44) git-lfs/3.5.1
+ 13) curl/8.10.1                        45) crtm/2.4.0.1
+ 14) cmake/3.27.9                       46) g2/3.5.1
+ 15) tar/1.34                           47) g2tmpl/1.13.0
+ 16) gettext/0.22.5                     48) ip/5.1.0
+ 17) sqlite/3.46.0                      49) sp/2.5.0
+ 18) util-linux-uuid/2.40.2             50) w3emc/2.10.0
+ 19) python/3.11.7                      51) gftl/1.14.0
+ 20) stack-python/3.11.7                52) gftl-shared/1.9.0
+ 21) libjpeg/2.1.0                      53) fargparse/1.8.0
+ 22) jasper/2.0.32                      54) yafyaml/1.4.0
+ 23) libpng/1.6.37                      55) pflogger/1.15.0
+ 24) hdf5/1.14.3                        56) udunits/2.2.28
+ 25) snappy/1.2.1                       57) mapl/2.53.4-esmf-8.8.0
+ 26) zstd/1.5.6                         58) scotch/7.0.4
+ 27) c-blosc/1.21.5                     59) ufs_common
+ 28) netcdf-c/4.9.2                     60) nccmp/1.9.0.1
+ 29) netcdf-fortran/4.6.1               61) ufs_derecho.intel
+ 30) parallel-netcdf/1.12.3             62) prod_util/2.1.1
+ 31) parallelio/2.6.2                   63) g2c/2.1.0
+ 32) python-venv/1.0                    64) wgrib2/3.6.0
+
+  Where:
+   S:  Module is Sticky, requires --force to unload or purge
+
+ 
+
+
+run_mpmd.sh failed! RETURN CODE 127
+/lustre/desc1/scratch/epicufsrt/stmp/RUNDIRS/C96C48mx500_S2SW_cyc_gfs_a75a926a-17653/gdas.2021122012/waveinit.41252
+total 69640
+-rwxr--r-- 1 epicufsrt ncar      328 May 18 07:43 PDY
+-rw-r--r-- 1 epicufsrt ncar        0 May 18 07:43 ncepdate
+-rw-r--r-- 1 epicufsrt ncar   673220 May 18 07:43 ww3_grid.inp.wc_10m
+-rw-r--r-- 1 epicufsrt ncar     6338 May 18 07:43 ww3_grid.inp.uglo_100km
+-rw-r--r-- 1 epicufsrt ncar  7118530 May 18 07:43 ww3_grid.inp.gsh_15m
+-rw-r--r-- 1 epicufsrt ncar 14491633 May 18 07:43 ww3_grid.inp.gnh_10m
+-rw-r--r-- 1 epicufsrt ncar  4613480 May 18 07:43 ww3_grid.inp.glo_30m
+-rw-r--r-- 1 epicufsrt ncar  2902346 May 18 07:43 ww3_grid.inp.ep_10m
+-rw-r--r-- 1 epicufsrt ncar  1790913 May 18 07:43 ww3_grid.inp.at_10m
+-rw-r--r-- 1 epicufsrt ncar 49254890 May 18 07:43 ww3_grid.inp.aoc_9km
+-rw-r--r-- 1 epicufsrt ncar  5680544 May 18 07:43 uglo_100km.msh
+-rw-r--r-- 1 epicufsrt ncar     1128 May 18 07:43 mpmd_script
+-rwxr-xr-x 1 epicufsrt ncar      153 May 18 07:43 stdout_wrapper.sh
+-rwxr-xr-x 1 epicufsrt ncar     1416 May 18 07:43 mpmd_cmdfile.chunk1
+cat: OUTPUT.42066: No such file or directory
+++ JGLOBAL_WAVE_INIT[1]/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/ush/postamble.sh 1779111791
++ postamble.sh[22]set +x
+End JGLOBAL_WAVE_INIT at 13:43:15 with error code 0 (time elapsed: 00:00:04)
+/glade/derecho/scratch/epicufsrt/GFS_CI_CD/DERECHO/Gitlab/BUILD/pr_cases_4919_a75a926a_17653/global-workflow/dev/jobs/JGLOBAL_WAVE_INIT: line 1: 42401 Terminated              "${SCRglobal}/exgfs_wave_init.sh"
