@@ -1,0 +1,1329 @@
++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/dev/ush/load_modules.sh dtn
+++ [[ hxB == *x* ]]
+++ set_x=YES
+++ [[ NO == \N\O ]]
+++ echo 'Loading modules quietly...'
+Loading modules quietly...
+++ set +x
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+INFO: gw_dtn.gaeac6 module not available, falling back to gw_run.gaeac6
+
+Lmod is automatically replacing "intel/2025.2" with "intel-classic/2023.2.0".
+
+
+The following have been reloaded with a version change:
+  1) PrgEnv-intel/8.6.0 => PrgEnv-intel/8.5.0
+  2) cray-mpich/8.1.32 => cray-mpich/8.1.30
+  3) craype/2.7.34 => craype/2.7.30
+
+
+Currently Loaded Modules:
+  1) craype-x86-genoa                45) python-venv/1.0
+  2) perftools-base/25.03.0          46) py-mpi4py/4.0.1
+  3) xpmem/2.11.5-1.3_g73ade43320bc  47) openblas/0.3.24
+  4) cray-pmi/6.1.15                 48) py-numpy/1.26.4
+  5) CmrsEnv/default                 49) py-pip/23.1.2
+  6) TimeZoneEDT/default             50) esmf/8.8.0
+  7) Core/24.11                      51) antlr/2.7.7
+  8) DefApps                         52) gsl/2.8
+  9) cray-dsmml/0.3.1                53) nco/5.2.4
+ 10) PrgEnv-intel/8.5.0              54) bacio/2.4.1
+ 11) intel-classic/2023.2.0          55) w3emc/2.10.0
+ 12) craype/2.7.30                   56) prod_util/2.1.1
+ 13) stack-intel/2023.2.0            57) g2/3.5.1
+ 14) libfabric/1.22.0                58) ip/5.1.0
+ 15) craype-network-ofi              59) grib-util/1.4.0
+ 16) cray-mpich/8.1.30               60) g2tmpl/1.13.0
+ 17) stack-cray-mpich/8.1.30         61) gsi-ncdiag/1.1.2
+ 18) gettext/0.20.2                  62) crtm-fix/2.4.0.1_emc
+ 19) glibc/2.31                      63) git-lfs/2.11.0
+ 20) zlib/1.2.13                     64) crtm/2.4.0.1
+ 21) sqlite/3.46.0                   65) bufr/12.1.0
+ 22) util-linux-uuid/2.40.2          66) py-f90nml/1.4.3
+ 23) python/3.11.7                   67) py-certifi/2023.7.22
+ 24) stack-python/3.11.7             68) py-cftime/1.0.3.4
+ 25) cmake/3.27.9                    69) py-netcdf4/1.7.1.post2
+ 26) libjpeg/2.1.0                   70) libyaml/0.2.5
+ 27) jasper/2.0.32                   71) py-pyyaml/6.0.2
+ 28) libpng/1.6.37                   72) py-markupsafe/2.1.3
+ 29) openjpeg/2.3.1                  73) py-jinja2/3.1.4
+ 30) eccodes/2.33.0                  74) py-pytz/2023.3
+ 31) fftw/3.3.10                     75) py-tzdata/2023.3
+ 32) nghttp2/1.63.0                  76) py-pandas/2.2.3
+ 33) curl/8.10.1                     77) py-six/1.16.0
+ 34) proj/9.4.1                      78) py-python-dateutil/2.8.2
+ 35) udunits/2.2.28                  79) py-packaging/24.1
+ 36) cdo/2.3.0                       80) py-setuptools/69.2.0
+ 37) hdf5/1.14.3                     81) py-xarray/2024.7.0
+ 38) snappy/1.2.1                    82) gw_run.common
+ 39) zstd/1.5.6                      83) perlbrew/5.38.2
+ 40) c-blosc/1.21.5                  84) prepobs/1.1.3
+ 41) netcdf-c/4.9.2                  85) fit2obs/1.1.10
+ 42) netcdf-fortran/4.6.1            86) hsi/9.3
+ 43) parallel-netcdf/1.12.3          87) gw_run.gaeac6
+ 44) parallelio/2.6.2
+
+ 
+
+++ [[ -d /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/sorc/wxflow/src ]]
+++ PYTHONPATH=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/sorc/wxflow/src:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-xarray-2024.7.0-v7pxjmr/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-setuptools-69.2.0-q5x6352/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-packaging-24.1-acctrjw/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-python-dateutil-2.8.2-adj27qi/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-six-1.16.0-t2uhjfg/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-pandas-2.2.3-4bngjxo/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-tzdata-2023.3-t2nvl22/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-pytz-2023.3-wutyxsa/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-jinja2-3.1.4-pvwvqnp/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-markupsafe-2.1.3-3mredvv/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-pyyaml-6.0.2-4bqqjxa/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-netcdf4-1.7.1.post2-c25ja2t/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-cftime-1.0.3.4-t5euxp3/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-certifi-2023.7.22-5i3gpxz/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-f90nml-1.4.3-egb7j6f/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/bufr-12.1.0-3p4a2dt/lib64/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/esmf-8.8.0-yzvp7jx/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-pip-23.1.2-nlzr4dk/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-numpy-1.26.4-oqfay67/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-mpi4py-4.0.1-xqxmfsx/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/python-venv-1.0-7sbmn7s/lib/python3.11/site-packages
+++ PYTHONPATH=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/sorc/wxflow/src:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-xarray-2024.7.0-v7pxjmr/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-setuptools-69.2.0-q5x6352/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-packaging-24.1-acctrjw/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-python-dateutil-2.8.2-adj27qi/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-six-1.16.0-t2uhjfg/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-pandas-2.2.3-4bngjxo/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-tzdata-2023.3-t2nvl22/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-pytz-2023.3-wutyxsa/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-jinja2-3.1.4-pvwvqnp/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-markupsafe-2.1.3-3mredvv/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-pyyaml-6.0.2-4bqqjxa/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-netcdf4-1.7.1.post2-c25ja2t/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-cftime-1.0.3.4-t5euxp3/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-certifi-2023.7.22-5i3gpxz/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-f90nml-1.4.3-egb7j6f/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/bufr-12.1.0-3p4a2dt/lib64/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/esmf-8.8.0-yzvp7jx/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-pip-23.1.2-nlzr4dk/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-numpy-1.26.4-oqfay67/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-mpi4py-4.0.1-xqxmfsx/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/python-venv-1.0-7sbmn7s/lib/python3.11/site-packages:/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python
+++ export PYTHONPATH
+++ ulimit -S -s 1048576
+++ unset ulimit_s
+++ [[ NO == \Y\E\S ]]
++ status=0
++ [[ 0 -ne 0 ]]
++ export job=earc_tars
++ job=earc_tars
++ export jobid=earc_tars.240834
++ jobid=earc_tars.240834
++ /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/dev/jobs/JGLOBAL_ENKF_ARCHIVE_TARS
++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/jjob_header.sh -e earc_tars -c 'base arch_tars earc_tars earc_groups'
++++ basename /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/dev/jobs/JGLOBAL_ENKF_ARCHIVE_TARS
+++ _calling_script=JGLOBAL_ENKF_ARCHIVE_TARS
+++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/err_exit.sh
++++ declare -xf err_exit
+++ pgm=JGLOBAL_ENKF_ARCHIVE_TARS
+++ export pgm
+++ OPTIND=1
+++ getopts c:e: option
+++ case "${option}" in
+++ env_job=earc_tars
+++ getopts c:e: option
+++ case "${option}" in
+++ read -ra configs
+++ getopts c:e: option
+++ shift 4
+++ [[ -z earc_tars ]]
+++ export EXPDIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053
+++ EXPDIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053
+++ for config in "${configs[@]:-''}"
+++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053/config.base
++++ echo 'BEGIN: config.base'
+BEGIN: config.base
++++ export machine=GAEAC6
++++ machine=GAEAC6
++++ export RUN_ENVIR=emc
++++ RUN_ENVIR=emc
++++ export STRICT=NO
++++ STRICT=NO
++++ export ACCOUNT=drsa-precip4
++++ ACCOUNT=drsa-precip4
++++ export QUEUE=normal
++++ QUEUE=normal
++++ export QUEUE_SERVICE=normal
++++ QUEUE_SERVICE=normal
++++ export QUEUE_EXCLUSIVE=normal
++++ QUEUE_EXCLUSIVE=normal
++++ export QUEUE_DTN=hpss
++++ QUEUE_DTN=hpss
++++ export PARTITION_BATCH=batch
++++ PARTITION_BATCH=batch
++++ export PARTITION_SERVICE=batch
++++ PARTITION_SERVICE=batch
++++ export PARTITION_EXCLUSIVE=
++++ PARTITION_EXCLUSIVE=
++++ export PARTITION_DTN=dtn_f5_f6
++++ PARTITION_DTN=dtn_f5_f6
++++ export RESERVATION=
++++ RESERVATION=
++++ export CLUSTERS=c6
++++ CLUSTERS=c6
++++ export CLUSTERS_SERVICE=c6
++++ CLUSTERS_SERVICE=c6
++++ export CLUSTERS_EXCLUSIVE=c6
++++ CLUSTERS_EXCLUSIVE=c6
++++ export CLUSTERS_DTN=es
++++ CLUSTERS_DTN=es
++++ export HPSS_PROJECT=emc-global
++++ HPSS_PROJECT=emc-global
++++ export HOMEglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow
++++ HOMEglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow
++++ export EXECglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/exec
++++ EXECglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/exec
++++ export FIXglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix
++++ FIXglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix
++++ export PARMglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/parm
++++ PARMglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/parm
++++ export SCRglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/scripts
++++ SCRglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/scripts
++++ export USHglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush
++++ USHglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush
++++ export FIXam=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/am
++++ FIXam=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/am
++++ export FIXaer=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/aer
++++ FIXaer=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/aer
++++ export FIXcpl=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/cpl
++++ FIXcpl=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/cpl
++++ export FIXlut=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/lut
++++ FIXlut=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/lut
++++ export FIXcice=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/cice
++++ FIXcice=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/cice
++++ export FIXmom=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/mom6
++++ FIXmom=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/mom6
++++ export FIXreg2grb2=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/reg2grb2
++++ FIXreg2grb2=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/reg2grb2
++++ export FIXgdas=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/gdas
++++ FIXgdas=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/gdas
++++ export PACKAGEROOT=/gpfs/f6/drsa-precip3/world-shared/role.glopara/nwpara
++++ PACKAGEROOT=/gpfs/f6/drsa-precip3/world-shared/role.glopara/nwpara
++++ export COMROOT=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT
++++ COMROOT=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT
++++ export DCOMROOT=/lfs/h1/ops/prod/dcom
++++ DCOMROOT=/lfs/h1/ops/prod/dcom
++++ export COMINsyn=/gpfs/f6/drsa-precip3/world-shared/role.glopara/com/syndat
++++ COMINsyn=/gpfs/f6/drsa-precip3/world-shared/role.glopara/com/syndat
++++ export DMPDIR=/gpfs/f6/drsa-precip3/world-shared/role.glopara/dump
++++ DMPDIR=/gpfs/f6/drsa-precip3/world-shared/role.glopara/dump
++++ export IODADIR=/gpfs/f6/drsa-precip3/world-shared/role.glopara/dump_ioda
++++ IODADIR=/gpfs/f6/drsa-precip3/world-shared/role.glopara/dump_ioda
++++ export 'USE_IODADIR={{ USE_IODADIR }}'
++++ USE_IODADIR='{{ USE_IODADIR }}'
++++ export 'COMINnam={{ COMINnam }}'
++++ COMINnam='{{ COMINnam }}'
++++ export HOMEDIR=/gpfs/f6/drsa-precip4/world-shared/role.glopara
++++ HOMEDIR=/gpfs/f6/drsa-precip4/world-shared/role.glopara
++++ export STMP=/gpfs/f6/drsa-precip4/world-shared/role.glopara
++++ STMP=/gpfs/f6/drsa-precip4/world-shared/role.glopara
++++ export PTMP=/gpfs/f6/drsa-precip4/world-shared/role.glopara
++++ PTMP=/gpfs/f6/drsa-precip4/world-shared/role.glopara
++++ export NOSCRUB=/gpfs/f6/drsa-precip4/world-shared/role.glopara
++++ NOSCRUB=/gpfs/f6/drsa-precip4/world-shared/role.glopara
++++ export BASE_GIT=/gpfs/f6/drsa-precip3/world-shared/role.glopara/git
++++ BASE_GIT=/gpfs/f6/drsa-precip3/world-shared/role.glopara/git
++++ export BASE_DATA=/gpfs/f6/drsa-precip3/world-shared/role.glopara/data
++++ BASE_DATA=/gpfs/f6/drsa-precip3/world-shared/role.glopara/data
++++ export DO_PREP_SFC=NO
++++ DO_PREP_SFC=NO
++++ export DO_GOES=NO
++++ DO_GOES=NO
++++ export DO_BUFRSND=NO
++++ DO_BUFRSND=NO
++++ export DO_GEMPAK=NO
++++ DO_GEMPAK=NO
++++ export DO_AWIPS=NO
++++ DO_AWIPS=NO
++++ export DO_NPOESS=NO
++++ DO_NPOESS=NO
++++ export DO_TRACKER=YES
++++ DO_TRACKER=YES
++++ export DO_GENESIS=YES
++++ DO_GENESIS=YES
++++ export DO_GENESIS_FSU=NO
++++ DO_GENESIS_FSU=NO
++++ export DO_VERFOZN=YES
++++ DO_VERFOZN=YES
++++ export DO_VERFRAD=YES
++++ DO_VERFRAD=YES
++++ export DO_VMINMON=YES
++++ DO_VMINMON=YES
++++ export DO_ANLSTAT=NO
++++ DO_ANLSTAT=NO
++++ export DO_GSI_ANLSTAT=NO
++++ DO_GSI_ANLSTAT=NO
++++ export MODE=cycled
++++ MODE=cycled
++++ export DO_TEST_MODE=NO
++++ DO_TEST_MODE=NO
++++ export DO_METP=YES
++++ DO_METP=YES
++++ [[ GAEAC6 == \H\E\R\A ]]
++++ [[ GAEAC6 == \O\R\I\O\N ]]
++++ [[ GAEAC6 == \D\E\R\E\C\H\O ]]
++++ export FIXgsi=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/gsi
++++ FIXgsi=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/gsi
++++ export HOMEpost=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow
++++ HOMEpost=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow
++++ export HOMEobsproc=/gpfs/f6/drsa-precip3/world-shared/role.glopara/git/obsproc/v1.2.0
++++ HOMEobsproc=/gpfs/f6/drsa-precip3/world-shared/role.glopara/git/obsproc/v1.2.0
++++ export NMV=mv
++++ NMV=mv
++++ export 'NLN=ln -sf'
++++ NLN='ln -sf'
++++ export CHGRP_RSTPROD=YES
++++ CHGRP_RSTPROD=YES
++++ export 'CHGRP_CMD=chgrp rstprod'
++++ CHGRP_CMD='chgrp rstprod'
++++ export NCDUMP=/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/netcdf-c-4.9.2-rq4wo2g/bin/ncdump
++++ NCDUMP=/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/netcdf-c-4.9.2-rq4wo2g/bin/ncdump
++++ export NCLEN=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/getncdimlen.py
++++ NCLEN=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/getncdimlen.py
++++ export VERBOSE=YES
++++ VERBOSE=YES
++++ export CAT_MPMD_LOGS=YES
++++ CAT_MPMD_LOGS=YES
++++ export DEBUG_POSTSCRIPT=NO
++++ DEBUG_POSTSCRIPT=NO
++++ export CHECK_DEAD_LINKS=NO
++++ CHECK_DEAD_LINKS=NO
++++ export BASE_ENV=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/env
++++ BASE_ENV=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/env
++++ export SDATE=2022051506
++++ SDATE=2022051506
++++ export EDATE=2022051518
++++ EDATE=2022051518
++++ export EXP_WARM_START=.true.
++++ EXP_WARM_START=.true.
++++ export assim_freq=6
++++ assim_freq=6
++++ export PSLOT=C96C48_hybatmsoilDA_b9bff5d6-114053
++++ PSLOT=C96C48_hybatmsoilDA_b9bff5d6-114053
++++ export EXPDIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053
++++ EXPDIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053
++++ export ROTDIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053
++++ ROTDIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053
++++ export DUMP_SUFFIX=
++++ DUMP_SUFFIX=
++++ [[ 2022051512 -ge 2019092100 ]]
++++ [[ 2022051512 -le 2019110700 ]]
++++ export ARCDIR=/gpfs/f6/drsa-precip4/world-shared/role.glopara/archive/C96C48_hybatmsoilDA_b9bff5d6-114053
++++ ARCDIR=/gpfs/f6/drsa-precip4/world-shared/role.glopara/archive/C96C48_hybatmsoilDA_b9bff5d6-114053
++++ export ATARDIR=/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053
++++ ATARDIR=/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053
++++ export 'FETCHDIR={{ FETCHDIR }}'
++++ FETCHDIR='{{ FETCHDIR }}'
++++ export NET=gfs
++++ NET=gfs
++++ export RUN=enkfgdas
++++ RUN=enkfgdas
++++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053/config.com
+++++ echo 'BEGIN: config.com'
+BEGIN: config.com
+++++ [[ emc == \n\c\o ]]
+++++ COM_OBSPROC_TMPL='${DMPDIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}/atmos'
+++++ COM_OBSFORGE_TMPL='${IODADIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}'
+++++ COM_RTOFS_TMPL='${DMPDIR}'
+++++ COM_TCVITAL_TMPL='${DMPDIR}/${RUN}.${YMD}/${HH}/atmos'
+++++ declare -rx 'COM_OBS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/obs'
+++++ declare -rx COM_OBSPROC_TMPL COM_RTOFS_TMPL COM_OBSFORGE_TMPL
+++++ COM_BASE='${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}'
+++++ declare -rx 'COM_TOP_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}'
+++++ declare -rx 'COM_CONF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf'
+++++ declare -rx 'COM_ATMOS_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input'
+++++ declare -rx 'COM_ATMOS_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart'
+++++ declare -rx 'COM_ATMOS_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos'
+++++ declare -rx 'COM_SNOW_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow'
+++++ declare -rx 'COM_SNOW_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/snow/anlmon'
+++++ declare -rx 'COM_ATMOS_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history'
+++++ declare -rx 'COM_ATMOS_MASTER_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master'
+++++ declare -rx 'COM_ATMOS_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2'
+++++ declare -rx 'COM_ATMOS_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}'
+++++ declare -rx 'COM_ATMOS_BUFR_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr'
+++++ declare -rx 'COM_ATMOS_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}'
+++++ declare -rx 'COM_ATMOS_GENESIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital'
+++++ declare -rx 'COM_ATMOS_TRACK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks'
+++++ declare -rx 'COM_ATMOS_GOES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim'
+++++ declare -rx 'COM_ATMOS_IMAGERY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery'
+++++ declare -rx 'COM_ATMOS_OZNMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon'
+++++ declare -rx 'COM_ATMOS_RADMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon'
+++++ declare -rx 'COM_ATMOS_MINMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon'
+++++ declare -rx 'COM_ATMOS_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/anlmon'
+++++ declare -rx 'COM_ATMOS_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo'
+++++ declare -rx 'COM_WAVE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart'
+++++ declare -rx 'COM_WAVE_INIT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/init'
+++++ declare -rx 'COM_WAVE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history'
+++++ declare -rx 'COM_WAVE_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded'
+++++ declare -rx 'COM_WAVE_GRID_RES_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}'
+++++ declare -rx 'COM_WAVE_STATION_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station'
+++++ declare -rx 'COM_WAVE_GEMPAK_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak'
+++++ declare -rx 'COM_WAVE_WMO_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo'
+++++ declare -rx 'COM_OCEAN_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history'
+++++ declare -rx 'COM_OCEAN_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart'
+++++ declare -rx 'COM_OCEAN_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input'
+++++ declare -rx 'COM_OCEAN_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean'
+++++ declare -rx 'COM_OCEAN_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/anlmon'
+++++ declare -rx 'COM_OCEAN_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean'
+++++ declare -rx 'COM_OCEAN_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf'
+++++ declare -rx 'COM_OCEAN_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2'
+++++ declare -rx 'COM_OCEAN_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}'
+++++ declare -rx 'COM_ICE_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice'
+++++ declare -rx 'COM_ICE_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/anlmon'
+++++ declare -rx 'COM_ICE_BMATRIX_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice'
+++++ declare -rx 'COM_ICE_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input'
+++++ declare -rx 'COM_ICE_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history'
+++++ declare -rx 'COM_ICE_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart'
+++++ declare -rx 'COM_ICE_NETCDF_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf'
+++++ declare -rx 'COM_ICE_GRIB_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2'
+++++ declare -rx 'COM_ICE_GRIB_GRID_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}'
+++++ declare -rx 'COM_CHEM_HISTORY_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history'
+++++ declare -rx 'COM_CHEM_ANALYSIS_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem'
+++++ declare -rx 'COM_CHEM_BMAT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix'
+++++ declare -rx 'COM_CHEM_ANLMON_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/chem/anlmon'
+++++ declare -rx 'COM_CHEM_INPUT_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/input'
+++++ declare -rx 'COM_CHEM_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/restart'
+++++ declare -rx 'COM_MED_RESTART_TMPL=${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart'
++++ export LOGSCRIPT=
++++ LOGSCRIPT=
++++ export SENDSDM=NO
++++ SENDSDM=NO
++++ export SENDAWIP=NO
++++ SENDAWIP=NO
++++ export APP=ATM
++++ APP=ATM
++++ shopt -s extglob
++++ case "${RUN}" in
++++ APP=ATM
++++ shopt -u extglob
++++ export DO_ATM=YES
++++ DO_ATM=YES
++++ export DO_COUPLED=NO
++++ DO_COUPLED=NO
++++ export DO_WAVE=NO
++++ DO_WAVE=NO
++++ export DO_OCN=NO
++++ DO_OCN=NO
++++ export DO_ICE=NO
++++ DO_ICE=NO
++++ DO_AERO=NO
++++ export DO_PREP_OBS_AERO=NO
++++ DO_PREP_OBS_AERO=NO
++++ aero_fcst_runs=gdas
++++ aero_anl_runs='gdas gfs'
++++ export DO_AERO_FCST=NO
++++ DO_AERO_FCST=NO
++++ export DO_AERO_ANL=NO
++++ DO_AERO_ANL=NO
++++ [[ enkfgdas == \g\f\s ]]
++++ export DOBNDPNT_WAVE=NO
++++ DOBNDPNT_WAVE=NO
++++ export FRAC_GRID=.true.
++++ FRAC_GRID=.true.
++++ export DO_NEST=NO
++++ DO_NEST=NO
++++ [[ NO == \Y\E\S ]]
++++ export ntiles=6
++++ ntiles=6
++++ export FIXugwd=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/ugwd
++++ FIXugwd=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/ugwd
++++ export FIXorog=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/orog
++++ FIXorog=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix/orog
++++ export OPS_RES=C768
++++ OPS_RES=C768
++++ export LEVS=128
++++ LEVS=128
++++ export CASE=C96
++++ CASE=C96
++++ export CASE_ENS=C48
++++ CASE_ENS=C48
++++ export CASE_ANL=C96
++++ CASE_ANL=C96
++++ export CASE_HIST=C96
++++ CASE_HIST=C96
++++ export OCNRES=500
++++ OCNRES=500
++++ export ICERES=500
++++ ICERES=500
++++ case "${CASE}" in
++++ export waveGRD=uglo_100km
++++ waveGRD=uglo_100km
++++ case "${APP}" in
++++ [[ NO == \Y\E\S ]]
++++ [[ enkfgdas =~ gdas ]]
++++ export FHCYC=1
++++ FHCYC=1
++++ export FTSFS=10
++++ FTSFS=10
++++ export FHMIN=0
++++ FHMIN=0
++++ export FHMAX=9
++++ FHMAX=9
++++ export FHOUT=3
++++ FHOUT=3
++++ export FHOUT_OCN=3
++++ FHOUT_OCN=3
++++ export FHOUT_ICE=3
++++ FHOUT_ICE=3
++++ export FHOUT_AERO=3
++++ FHOUT_AERO=3
++++ export EUPD_CYC=gdas
++++ EUPD_CYC=gdas
++++ export INTERVAL_GFS=24
++++ INTERVAL_GFS=24
++++ export SDATE_GFS=2022051512
++++ SDATE_GFS=2022051512
++++ export FHMIN_GFS=0
++++ FHMIN_GFS=0
++++ export FHMAX_GFS=120
++++ FHMAX_GFS=120
++++ breakpnts=
++++ export FCST_SEGMENTS=0,120
++++ FCST_SEGMENTS=0,120
++++ export FHOUT_GFS=3
++++ FHOUT_GFS=3
++++ export FHMAX_HF_GFS=48
++++ FHMAX_HF_GFS=48
++++ export FHMAX_HF_GFS=48
++++ FHMAX_HF_GFS=48
++++ export FHOUT_HF_GFS=1
++++ FHOUT_HF_GFS=1
++++ export FHMIN_WAV=0
++++ FHMIN_WAV=0
++++ export FHOUT_WAV=1
++++ FHOUT_WAV=1
++++ export FHMAX_WAV=9
++++ FHMAX_WAV=9
++++ export FHMAX_WAV=9
++++ FHMAX_WAV=9
++++ export FHOUT_WAV_GFS=3
++++ FHOUT_WAV_GFS=3
++++ export FHMAX_WAV_GFS=120
++++ FHMAX_WAV_GFS=120
++++ export FHOUT_HF_WAV=1
++++ FHOUT_HF_WAV=1
++++ export FHMAX_HF_WAV=48
++++ FHMAX_HF_WAV=48
++++ export FHMAX_HF_WAV=48
++++ FHMAX_HF_WAV=48
++++ export FHOUT_OCN_GFS=6
++++ FHOUT_OCN_GFS=6
++++ export FHOUT_ICE_GFS=6
++++ FHOUT_ICE_GFS=6
++++ export ILPOST=1
++++ ILPOST=1
++++ ((  FHMAX_HF_GFS < 120  ))
++++ export ILPOST=3
++++ ILPOST=3
++++ export FHMAX_GOES=180
++++ FHMAX_GOES=180
++++ export FHOUT_GOES=3
++++ FHOUT_GOES=3
++++ ((  FHMAX_GOES > FHMAX_GFS  ))
++++ export FHMAX_GOES=120
++++ FHMAX_GOES=120
++++ export restart_interval_gfs=12
++++ restart_interval_gfs=12
++++ export QUILTING=.true.
++++ QUILTING=.true.
++++ export OUTPUT_GRID=gaussian_grid
++++ OUTPUT_GRID=gaussian_grid
++++ export WRITE_DOPOST=.true.
++++ WRITE_DOPOST=.true.
++++ export WRITE_NSFLIP=.true.
++++ WRITE_NSFLIP=.true.
++++ export DOIAU=YES
++++ DOIAU=YES
++++ export IAUFHRS=3,6,9
++++ IAUFHRS=3,6,9
++++ export IAU_FHROT=3
++++ IAU_FHROT=3
++++ export IAU_DELTHRS=6
++++ IAU_DELTHRS=6
++++ export IAU_OFFSET=6
++++ IAU_OFFSET=6
++++ export DOIAU_ENKF=YES
++++ DOIAU_ENKF=YES
++++ export IAUFHRS_ENKF=3,6,9
++++ IAUFHRS_ENKF=3,6,9
++++ export IAU_DELTHRS_ENKF=6
++++ IAU_DELTHRS_ENKF=6
++++ export imp_physics=8
++++ imp_physics=8
++++ export DO_JEDIATMVAR=NO
++++ DO_JEDIATMVAR=NO
++++ export DO_JEDIATMENS=NO
++++ DO_JEDIATMENS=NO
++++ export DO_JEDIATMENS_SPLIT_OBSSOL=YES
++++ DO_JEDIATMENS_SPLIT_OBSSOL=YES
++++ export DO_JEDIOCNVAR=NO
++++ DO_JEDIOCNVAR=NO
++++ export DO_JEDISNOWDA=YES
++++ DO_JEDISNOWDA=YES
++++ export DO_MERGENSST=NO
++++ DO_MERGENSST=NO
++++ [[ .true. = \.\t\r\u\e\. ]]
++++ export DO_STARTMEM_FROM_JEDIICE=YES
++++ DO_STARTMEM_FROM_JEDIICE=YES
++++ export DOHYBVAR=YES
++++ DOHYBVAR=YES
++++ export DOHYBVAR_OCN=NO
++++ DOHYBVAR_OCN=NO
++++ export DOLETKF_OCN=NO
++++ DOLETKF_OCN=NO
++++ export DOLETKF_OCN_INC=NO
++++ DOLETKF_OCN_INC=NO
++++ export NMEM_ENS=2
++++ NMEM_ENS=2
++++ export SMOOTH_ENKF=NO
++++ SMOOTH_ENKF=NO
++++ export l4densvar=.true.
++++ l4densvar=.true.
++++ export lwrite4danl=.true.
++++ lwrite4danl=.true.
++++ export DO_CALC_INCREMENT=NO
++++ DO_CALC_INCREMENT=NO
++++ export USE_BUILD_GSINFO=YES
++++ USE_BUILD_GSINFO=YES
++++ export BUILD_GSINFO_DIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/parm/gsinfo
++++ BUILD_GSINFO_DIR=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/parm/gsinfo
++++ export NMEM_ENS_GFS=30
++++ NMEM_ENS_GFS=30
++++ export NMEM_ENS_GFS_OFFSET=20
++++ NMEM_ENS_GFS_OFFSET=20
++++ export DO_CALC_INCREMENT_ENKF_GFS=NO
++++ DO_CALC_INCREMENT_ENKF_GFS=NO
++++ export DOENKFONLY_ATM=NO
++++ DOENKFONLY_ATM=NO
++++ [[ NO = \Y\E\S ]]
++++ [[ YES = \Y\E\S ]]
++++ export FHMIN_ENKF=3
++++ FHMIN_ENKF=3
++++ export FHMAX_ENKF=9
++++ FHMAX_ENKF=9
++++ export FHMAX_ENKF_GFS=12
++++ FHMAX_ENKF_GFS=12
++++ export FHOUT_ENKF_GFS=3
++++ FHOUT_ENKF_GFS=3
++++ [[ .true. = \.\t\r\u\e\. ]]
++++ export FHOUT=1
++++ FHOUT=1
++++ export FHOUT_ENKF=1
++++ FHOUT_ENKF=1
++++ [[ YES == \N\O ]]
++++ export ENKF_SPREAD=YES
++++ ENKF_SPREAD=YES
++++ export DO_WDQMS=NO
++++ DO_WDQMS=NO
++++ [[ enkfgdas == \g\d\a\s ]]
++++ [[ enkfgdas == \e\n\k\f\g\d\a\s ]]
++++ export DO_GSISOILDA=YES
++++ DO_GSISOILDA=YES
++++ export DO_LAND_IAU=.true.
++++ DO_LAND_IAU=.true.
++++ export LSOIL_INCR=2
++++ LSOIL_INCR=2
++++ [[ cycled = \c\y\c\l\e\d ]]
++++ [[ 2022051506 = \2\0\2\2\0\5\1\5\1\2 ]]
++++ [[ YES = \N\O ]]
++++ [[ cycled = \f\o\r\e\c\a\s\t\-\o\n\l\y ]]
++++ [[ YES = \N\O ]]
++++ [[ YES == \Y\E\S ]]
++++ export restart_interval_enkfgdas=3
++++ restart_interval_enkfgdas=3
++++ export restart_interval_enkfgfs=3
++++ restart_interval_enkfgfs=3
++++ [[ YES == \Y\E\S ]]
++++ export restart_interval_gdas=3
++++ restart_interval_gdas=3
++++ export DONST=YES
++++ DONST=YES
++++ [[ YES = \Y\E\S ]]
++++ export 'FNTSFA=        '
++++ FNTSFA='        '
++++ export nst_anl=.true.
++++ nst_anl=.true.
++++ export 'INCREMENTS_TO_ZERO='\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ INCREMENTS_TO_ZERO=''\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ export 'INCVARS_ZERO_STRAT='\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ INCVARS_ZERO_STRAT=''\''sphum_inc'\'','\''liq_wat_inc'\'','\''icmr_inc'\'','\''rwmr_inc'\'','\''snmr_inc'\'','\''grle_inc'\'''
++++ export INCVARS_EFOLD=5
++++ INCVARS_EFOLD=5
++++ export netcdf_diag=.true.
++++ netcdf_diag=.true.
++++ export binary_diag=.false.
++++ binary_diag=.false.
++++ export DO_CA=YES
++++ DO_CA=YES
++++ export DO_FIT2OBS=YES
++++ DO_FIT2OBS=YES
++++ export FHMAX_FITS=132
++++ FHMAX_FITS=132
++++ [[ 132 -gt 120 ]]
++++ export FHMAX_FITS=120
++++ FHMAX_FITS=120
++++ export DO_FETCH_HPSS=NO
++++ DO_FETCH_HPSS=NO
++++ export DO_FETCH_LOCAL=NO
++++ DO_FETCH_LOCAL=NO
++++ export DO_ARCHCOM=YES
++++ DO_ARCHCOM=YES
++++ export ARCHCOM_TO=hpss
++++ ARCHCOM_TO=hpss
++++ export 'CLIENT_GLOBUS_UUID={{ CLIENT_GLOBUS_UUID }}'
++++ CLIENT_GLOBUS_UUID='{{ CLIENT_GLOBUS_UUID }}'
++++ [[ NO = \Y\E\S ]]
++++ [[ NO = \Y\E\S ]]
++++ [[ NO = \Y\E\S ]]
++++ [[ YES = \Y\E\S ]]
++++ export DO_ANLSTAT=YES
++++ DO_ANLSTAT=YES
++++ [[ NO == \Y\E\S ]]
++++ export OFFSET_START_HOUR=0
++++ OFFSET_START_HOUR=0
++++ export NUM_SND_COLLECTIVES=9
++++ NUM_SND_COLLECTIVES=9
++++ export MOM6_INTERP_ICS=NO
++++ MOM6_INTERP_ICS=NO
++++ [[ NO == \Y\E\S ]]
++++ echo 'END: config.base'
+END: config.base
+++ true
+++ export err=0
+++ err=0
+++ [[ 0 -ne 0 ]]
+++ for config in "${configs[@]:-''}"
+++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053/config.arch_tars
++++ echo 'BEGIN: config.arch_tars'
+BEGIN: config.arch_tars
++++ . /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053/config.resources arch_tars
+++++ ((  1 != 1  ))
+++++ step=arch_tars
+++++ echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ case ${machine} in
+++++ max_tasks_per_node=192
+++++ mem_node_max=384GB
+++++ export max_tasks_per_node
+++++ case ${step} in
+++++ walltime=06:00:00
+++++ ntasks=1
+++++ tasks_per_node=1
+++++ threads_per_task=1
+++++ memory=4096M
+++++ [[ -f /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053/config.resources.GAEAC6 ]]
+++++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053/config.resources.GAEAC6
++++++ unset memory
++++++ unset memory_enkfgdas
++++++ case ${step} in
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=threads_per_task_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export threads_per_task
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=ntasks_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export ntasks
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=tasks_per_node_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export tasks_per_node
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=NTASKS_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n '' ]]
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=memory_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n '' ]]
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=walltime_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export walltime
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=is_exclusive_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n '' ]]
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=prepost_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n '' ]]
+++++ echo 'END: config.resources'
+END: config.resources
++++ export ARCH_CYC=00
++++ ARCH_CYC=00
++++ export ARCH_WARMICFREQ=4
++++ ARCH_WARMICFREQ=4
++++ export ARCH_FCSTICFREQ=1
++++ ARCH_FCSTICFREQ=1
++++ export ARCH_EXPDIR=YES
++++ ARCH_EXPDIR=YES
++++ export ARCH_EXPDIR_FREQ=0
++++ ARCH_EXPDIR_FREQ=0
++++ export ARCH_HASHES=YES
++++ ARCH_HASHES=YES
++++ export ARCH_DIFFS=NO
++++ ARCH_DIFFS=NO
++++ export ARCH_MARINE_ENS=NO
++++ ARCH_MARINE_ENS=NO
++++ export ARCH_GAUSSIAN=YES
++++ ARCH_GAUSSIAN=YES
++++ export ARCH_GAUSSIAN_FHMAX=0
++++ ARCH_GAUSSIAN_FHMAX=0
++++ [[ -n 120 ]]
++++ export ARCH_GAUSSIAN_FHMAX=24
++++ ARCH_GAUSSIAN_FHMAX=24
++++ export ARCH_GAUSSIAN_FHINC=3
++++ ARCH_GAUSSIAN_FHINC=3
++++ [[ hpss == \g\l\o\b\u\s\_\h\p\s\s ]]
++++ echo 'END: config.arch_tars'
+END: config.arch_tars
+++ true
+++ export err=0
+++ err=0
+++ [[ 0 -ne 0 ]]
+++ for config in "${configs[@]:-''}"
+++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053/config.earc_tars
++++ echo 'BEGIN: config.earc_tars'
+BEGIN: config.earc_tars
++++ . /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053/config.resources arch_tars
+++++ ((  1 != 1  ))
+++++ step=arch_tars
+++++ echo 'BEGIN: config.resources'
+BEGIN: config.resources
+++++ case ${machine} in
+++++ max_tasks_per_node=192
+++++ mem_node_max=384GB
+++++ export max_tasks_per_node
+++++ case ${step} in
+++++ walltime=06:00:00
+++++ ntasks=1
+++++ tasks_per_node=1
+++++ threads_per_task=1
+++++ memory=4096M
+++++ [[ -f /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053/config.resources.GAEAC6 ]]
+++++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053/config.resources.GAEAC6
++++++ unset memory
++++++ unset memory_enkfgdas
++++++ case ${step} in
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=threads_per_task_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export threads_per_task
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=ntasks_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export ntasks
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=tasks_per_node_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export tasks_per_node
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=NTASKS_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n '' ]]
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=memory_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n '' ]]
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=walltime_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n 0 ]]
+++++ export walltime
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=is_exclusive_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n '' ]]
+++++ for resource_var in threads_per_task ntasks tasks_per_node NTASKS memory walltime is_exclusive prepost
+++++ run_resource_var=prepost_enkfgdas
+++++ [[ -n '' ]]
+++++ [[ -n '' ]]
+++++ echo 'END: config.resources'
+END: config.resources
++++ export RMOLDSTD_ENKF=144
++++ RMOLDSTD_ENKF=144
++++ export RMOLDEND_ENKF=24
++++ RMOLDEND_ENKF=24
++++ [[ hpss == \g\l\o\b\u\s\_\h\p\s\s ]]
++++ echo 'END: config.earc_tars'
+END: config.earc_tars
+++ true
+++ export err=0
+++ err=0
+++ [[ 0 -ne 0 ]]
+++ for config in "${configs[@]:-''}"
+++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/EXPDIR/C96C48_hybatmsoilDA_b9bff5d6-114053/config.earc_groups
++++ case "${CASE_ENS}" in
++++ export NMEM_EARCGRP=80
++++ NMEM_EARCGRP=80
+++ true
+++ export err=0
+++ err=0
+++ [[ 0 -ne 0 ]]
+++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/env/GAEAC6.env earc_tars
++++ [[ 1 -ne 1 ]]
++++ step=earc_tars
++++ export 'launcher=srun -l --export=ALL --distribution=block:block'
++++ launcher='srun -l --export=ALL --distribution=block:block'
++++ export 'mpmd_opt=--multi-prog --output=mpmd.%j.%t.out'
++++ mpmd_opt='--multi-prog --output=mpmd.%j.%t.out'
++++ export OMP_STACKSIZE=2048000
++++ OMP_STACKSIZE=2048000
++++ export NTHSTACK=1024000000
++++ NTHSTACK=1024000000
++++ export FI_CXI_RX_MATCH_MODE=hybrid
++++ FI_CXI_RX_MATCH_MODE=hybrid
++++ ulimit -s unlimited
++++ ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 2056456
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) 33554432
+open files                      (-n) 50000
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 2055931
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
++++ [[ -n 1 ]]
++++ [[ -n 192 ]]
++++ [[ -n 1 ]]
++++ max_threads_per_task=192
++++ NTHREADSmax=1
++++ NTHREADS1=1
++++ [[ 1 -gt 192 ]]
++++ [[ 1 -gt 192 ]]
++++ APRUN_default='srun -l --export=ALL --distribution=block:block -n 1'
++++ case ${step} in
++++ echo 'WARNING: The job step earc_tars does not specify GAEAC6-specific resources'
+WARNING: The job step earc_tars does not specify GAEAC6-specific resources
+++ true
+++ export err=0
+++ err=0
+++ [[ 0 -ne 0 ]]
++ source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/jjob_standard_vars.sh
++++ date +%s
+++ start_time=1791403002
+++ export start_time
++++ date -d@1791403002 -u +%H:%M:%S
+++ _start_time_human=19:56:42
+++ _calling_script=JGLOBAL_ENKF_ARCHIVE_TARS
+++ echo 'Begin JGLOBAL_ENKF_ARCHIVE_TARS at 19:56:42'
+Begin JGLOBAL_ENKF_ARCHIVE_TARS at 19:56:42
+++ declare -x 'PS4=+ $(basename ${BASH_SOURCE[0]:-${FUNCNAME[0]:-"Unknown"}})[${LINENO}] ${SECONDS}s: '
+++ jjob_standard_vars.sh[46] 0s: export USHglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush
+++ jjob_standard_vars.sh[46] 0s: USHglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush
+++ jjob_standard_vars.sh[47] 0s: export FIXglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix
+++ jjob_standard_vars.sh[47] 0s: FIXglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/fix
+++ jjob_standard_vars.sh[48] 0s: export PARMglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/parm
+++ jjob_standard_vars.sh[48] 0s: PARMglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/parm
+++ jjob_standard_vars.sh[49] 0s: export SCRIPTSglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/scripts
+++ jjob_standard_vars.sh[49] 0s: SCRIPTSglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/scripts
+++ jjob_standard_vars.sh[54] 0s: export pid=240903
+++ jjob_standard_vars.sh[54] 0s: pid=240903
+++ jjob_standard_vars.sh[55] 0s: export pgmout=OUTPUT.240903
+++ jjob_standard_vars.sh[55] 0s: pgmout=OUTPUT.240903
+++ jjob_standard_vars.sh[56] 0s: export pgmerr=errfile
+++ jjob_standard_vars.sh[56] 0s: pgmerr=errfile
+++ jjob_standard_vars.sh[61] 0s: export envir=para
+++ jjob_standard_vars.sh[61] 0s: envir=para
+++ jjob_standard_vars.sh[62] 0s: export KEEPDATA=NO
+++ jjob_standard_vars.sh[62] 0s: KEEPDATA=NO
+++ jjob_standard_vars.sh[63] 0s: export SENDECF=NO
+++ jjob_standard_vars.sh[63] 0s: SENDECF=NO
+++ jjob_standard_vars.sh[64] 0s: export SENDDBN=NO
+++ jjob_standard_vars.sh[64] 0s: SENDDBN=NO
+++ jjob_standard_vars.sh[65] 0s: export DBNLOG=NO
+++ jjob_standard_vars.sh[65] 0s: DBNLOG=NO
+++ jjob_standard_vars.sh[66] 0s: export NODBNFCHK=NO
+++ jjob_standard_vars.sh[66] 0s: NODBNFCHK=NO
+++ jjob_standard_vars.sh[67] 0s: export SENDDBN_NTC=
+++ jjob_standard_vars.sh[67] 0s: SENDDBN_NTC=
+++ jjob_standard_vars.sh[68] 0s: export DBNROOT=/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/prod-util-2.1.1-dufpund/fakedbn
+++ jjob_standard_vars.sh[68] 0s: DBNROOT=/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/prod-util-2.1.1-dufpund/fakedbn
+++ jjob_standard_vars.sh[73] 0s: export DATA=/gpfs/f6/drsa-precip4/world-shared/role.glopara/RUNDIRS/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.2022051512/earc_tars.240834
+++ jjob_standard_vars.sh[73] 0s: DATA=/gpfs/f6/drsa-precip4/world-shared/role.glopara/RUNDIRS/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.2022051512/earc_tars.240834
+++ jjob_standard_vars.sh[79] 0s: export cycle=t12z
+++ jjob_standard_vars.sh[79] 0s: cycle=t12z
++ JGLOBAL_ENKF_ARCHIVE_TARS[12] 0s: source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/jjob_shell_setup.sh
+++ jjob_shell_setup.sh[27] 0s: export USHglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush
+++ jjob_shell_setup.sh[27] 0s: USHglobal=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush
+++ jjob_shell_setup.sh[28] 0s: export start_time=1791403002
+++ jjob_shell_setup.sh[28] 0s: start_time=1791403002
+++ jjob_shell_setup.sh[29] 0s: export _calling_script=JGLOBAL_ENKF_ARCHIVE_TARS
+++ jjob_shell_setup.sh[29] 0s: _calling_script=JGLOBAL_ENKF_ARCHIVE_TARS
+++ jjob_shell_setup.sh[34] 0s: source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/wait_for_file.sh
++++ wait_for_file.sh[48] 0s: declare -xf wait_for_file
+++ jjob_shell_setup.sh[35] 0s: source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/dataroot_com_path.sh
++++ dataroot_com_path.sh[48] 0s: declare -xf dataroot_com_path
+++ jjob_shell_setup.sh[36] 0s: source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/timer.sh
++++ timer.sh[28] 0s: [[ -z '' ]]
++++ timer.sh[29] 0s: _GW_TIMER_STACK=()
++++ timer.sh[29] 0s: declare -xa _GW_TIMER_STACK
++++ timer.sh[30] 0s: _GW_LABEL_STACK=()
++++ timer.sh[30] 0s: declare -xa _GW_LABEL_STACK
++++ timer.sh[89] 0s: declare -xf tick
++++ timer.sh[90] 0s: declare -xf tock
++++ timer.sh[93] 0s: [[ /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/timer.sh == \/\g\p\f\s\/\f\6\/\d\r\s\a\-\p\r\e\c\i\p\3\/\w\o\r\l\d\-\s\h\a\r\e\d\/\g\l\o\b\a\l\/\C\I\/\G\I\T\L\A\B\/\p\r\_\c\a\s\e\s\_\5\3\1\9\_\b\9\b\f\f\5\d\6\_\1\1\4\0\5\3\/\g\l\o\b\a\l\-\w\o\r\k\f\l\o\w\/\d\e\v\/\j\o\b\s\/\J\G\L\O\B\A\L\_\E\N\K\F\_\A\R\C\H\I\V\E\_\T\A\R\S ]]
+++ jjob_shell_setup.sh[37] 0s: source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/err_exit.sh
++++ err_exit.sh[81] 0s: declare -xf err_exit
+++ jjob_shell_setup.sh[38] 0s: shopt -s nullglob
+++ jjob_shell_setup.sh[43] 0s: export SHELLOPTS
+++ jjob_shell_setup.sh[47] 0s: source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/setup_data_dir.sh /gpfs/f6/drsa-precip4/world-shared/role.glopara/RUNDIRS/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.2022051512/earc_tars.240834
++++ setup_data_dir.sh[15] 0s: dir_to_create_=/gpfs/f6/drsa-precip4/world-shared/role.glopara/RUNDIRS/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.2022051512/earc_tars.240834
++++ setup_data_dir.sh[16] 0s: [[ YES == \Y\E\S ]]
++++ setup_data_dir.sh[17] 0s: rm -rf /gpfs/f6/drsa-precip4/world-shared/role.glopara/RUNDIRS/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.2022051512/earc_tars.240834
++++ setup_data_dir.sh[19] 0s: mkdir -p /gpfs/f6/drsa-precip4/world-shared/role.glopara/RUNDIRS/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.2022051512/earc_tars.240834
++++ setup_data_dir.sh[20] 0s: cd /gpfs/f6/drsa-precip4/world-shared/role.glopara/RUNDIRS/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.2022051512/earc_tars.240834
+++ jjob_shell_setup.sh[50] 0s: set -x
+++ jjob_shell_setup.sh[56] 0s: trap '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/postamble.sh 1791403002' EXIT
+++ jjob_shell_setup.sh[62] 0s: setpdy.sh
++ setpdy.sh[20] 0s: '[' /gpfs/f6/drsa-precip4/world-shared/role.glopara/RUNDIRS/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.2022051512/earc_tars.240834 == /ncrc/home1/role.glopara ']'
++ setpdy.sh[25] 0s: [[ ! t12z =~ t??z ]]
++ setpdy.sh[30] 0s: case $# in
++ setpdy.sh[31] 0s: dates_before_PDY=7
++ setpdy.sh[32] 0s: dates_after_PDY=7
++ setpdy.sh[50] 0s: COMDATEROOT=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT
++ setpdy.sh[53] 0s: '[' -z 20220515 ']'
++ setpdy.sh[57] 0s: sed 's/[0-9]\{8\}/20220515/' /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/date/t12z
+sed: can't read /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/date/t12z: No such file or directory
+++ setpdy.sh[62] 0s: finddate.sh 20220515 s-7
++ finddate.sh[19] 0s: set +x
++ setpdy.sh[62] 0s: DATElne_minus='20220514 20220513 20220512 20220511 20220510 20220509 20220508'
++ setpdy.sh[63] 0s: export err=0
++ setpdy.sh[63] 0s: err=0
++ setpdy.sh[63] 0s: err_chk
++ err_chk[13] 0s: '[' -z 0 ']'
++ err_chk[14] 0s: '[' 0 -eq 0 ']'
++ err_chk[14] 0s: echo 'JGLOBAL_ENKF_ARCHIVE_TARS completed cleanly'
+JGLOBAL_ENKF_ARCHIVE_TARS completed cleanly
++ err_chk[14] 0s: exit
+++ setpdy.sh[65] 0s: finddate.sh 20220515 s+7
++ finddate.sh[19] 0s: set +x
++ setpdy.sh[65] 0s: DATElne_plus='20220516 20220517 20220518 20220519 20220520 20220521 20220522'
++ setpdy.sh[66] 0s: export err=0
++ setpdy.sh[66] 0s: err=0
++ setpdy.sh[66] 0s: err_chk
++ err_chk[13] 1s: '[' -z 0 ']'
++ err_chk[14] 1s: '[' 0 -eq 0 ']'
++ err_chk[14] 1s: echo 'JGLOBAL_ENKF_ARCHIVE_TARS completed cleanly'
+JGLOBAL_ENKF_ARCHIVE_TARS completed cleanly
++ err_chk[14] 1s: exit
++ setpdy.sh[69] 1s: '[' -f PDY ']'
+++ setpdy.sh[70] 1s: seq 7 -1 1
++ setpdy.sh[70] 1s: for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72] 1s: echo 'export PDYm7=20220508'
++ setpdy.sh[70] 1s: for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72] 1s: echo 'export PDYm6=20220509'
++ setpdy.sh[70] 1s: for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72] 1s: echo 'export PDYm5=20220510'
++ setpdy.sh[70] 1s: for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72] 1s: echo 'export PDYm4=20220511'
++ setpdy.sh[70] 1s: for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72] 1s: echo 'export PDYm3=20220512'
++ setpdy.sh[70] 1s: for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72] 1s: echo 'export PDYm2=20220513'
++ setpdy.sh[70] 1s: for d in $(seq $dates_before_PDY -1 1)
++ setpdy.sh[72] 1s: echo 'export PDYm1=20220514'
++ setpdy.sh[74] 1s: echo 'export PDY=20220515'
+++ setpdy.sh[75] 1s: seq 7
++ setpdy.sh[75] 1s: for d in $(seq $dates_after_PDY)
++ setpdy.sh[77] 1s: echo 'export PDYp1=20220516'
++ setpdy.sh[75] 1s: for d in $(seq $dates_after_PDY)
++ setpdy.sh[77] 1s: echo 'export PDYp2=20220517'
++ setpdy.sh[75] 1s: for d in $(seq $dates_after_PDY)
++ setpdy.sh[77] 1s: echo 'export PDYp3=20220518'
++ setpdy.sh[75] 1s: for d in $(seq $dates_after_PDY)
++ setpdy.sh[77] 1s: echo 'export PDYp4=20220519'
++ setpdy.sh[75] 1s: for d in $(seq $dates_after_PDY)
++ setpdy.sh[77] 1s: echo 'export PDYp5=20220520'
++ setpdy.sh[75] 1s: for d in $(seq $dates_after_PDY)
++ setpdy.sh[77] 1s: echo 'export PDYp6=20220521'
++ setpdy.sh[75] 1s: for d in $(seq $dates_after_PDY)
++ setpdy.sh[77] 1s: echo 'export PDYp7=20220522'
++ setpdy.sh[80] 1s: chmod u+x PDY
++ setpdy.sh[82] 1s: echo 'Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.'
+Source PDY script to export PDYm7, ..., PDY, ..., PDYp7 variables.
+++ jjob_shell_setup.sh[63] 1s: source ./PDY
++++ PDY[1] 1s: export PDYm7=20220508
++++ PDY[1] 1s: PDYm7=20220508
++++ PDY[2] 1s: export PDYm6=20220509
++++ PDY[2] 1s: PDYm6=20220509
++++ PDY[3] 1s: export PDYm5=20220510
++++ PDY[3] 1s: PDYm5=20220510
++++ PDY[4] 1s: export PDYm4=20220511
++++ PDY[4] 1s: PDYm4=20220511
++++ PDY[5] 1s: export PDYm3=20220512
++++ PDY[5] 1s: PDYm3=20220512
++++ PDY[6] 1s: export PDYm2=20220513
++++ PDY[6] 1s: PDYm2=20220513
++++ PDY[7] 1s: export PDYm1=20220514
++++ PDY[7] 1s: PDYm1=20220514
++++ PDY[8] 1s: export PDY=20220515
++++ PDY[8] 1s: PDY=20220515
++++ PDY[9] 1s: export PDYp1=20220516
++++ PDY[9] 1s: PDYp1=20220516
++++ PDY[10] 1s: export PDYp2=20220517
++++ PDY[10] 1s: PDYp2=20220517
++++ PDY[11] 1s: export PDYp3=20220518
++++ PDY[11] 1s: PDYp3=20220518
++++ PDY[12] 1s: export PDYp4=20220519
++++ PDY[12] 1s: PDYp4=20220519
++++ PDY[13] 1s: export PDYp5=20220520
++++ PDY[13] 1s: PDYp5=20220520
++++ PDY[14] 1s: export PDYp6=20220521
++++ PDY[14] 1s: PDYp6=20220521
++++ PDY[15] 1s: export PDYp7=20220522
++++ PDY[15] 1s: PDYp7=20220522
++ JGLOBAL_ENKF_ARCHIVE_TARS[15] 1s: source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/set_strict.sh
+++ set_strict.sh[13] 1s: [[ NO == \Y\E\S ]]
+++ set_strict.sh[20] 1s: set -o pipefail
+++ set_strict.sh[22] 1s: trap 'echo "WARNING: command exited with status $? at line ${LINENO} of ${BASH_SOURCE[0]:-${0}}" >&2' ERR
++ JGLOBAL_ENKF_ARCHIVE_TARS[21] 1s: PYTHONPATH=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python:/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/sorc/wxflow/src:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-xarray-2024.7.0-v7pxjmr/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-setuptools-69.2.0-q5x6352/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-packaging-24.1-acctrjw/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-python-dateutil-2.8.2-adj27qi/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-six-1.16.0-t2uhjfg/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-pandas-2.2.3-4bngjxo/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-tzdata-2023.3-t2nvl22/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-pytz-2023.3-wutyxsa/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-jinja2-3.1.4-pvwvqnp/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-markupsafe-2.1.3-3mredvv/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-pyyaml-6.0.2-4bqqjxa/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-netcdf4-1.7.1.post2-c25ja2t/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-cftime-1.0.3.4-t5euxp3/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-certifi-2023.7.22-5i3gpxz/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-f90nml-1.4.3-egb7j6f/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/bufr-12.1.0-3p4a2dt/lib64/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/esmf-8.8.0-yzvp7jx/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-pip-23.1.2-nlzr4dk/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-numpy-1.26.4-oqfay67/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/py-mpi4py-4.0.1-xqxmfsx/lib/python3.11/site-packages:/autofs/ncrc-svm1_proj/epic/spack-stack/c6/spack-stack-1.9.2/envs/ue-intel-2023.2.0/install/intel/2023.2.0/python-venv-1.0-7sbmn7s/lib/python3.11/site-packages:/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python
++ JGLOBAL_ENKF_ARCHIVE_TARS[22] 1s: export PYTHONPATH
++ JGLOBAL_ENKF_ARCHIVE_TARS[24] 1s: declare -rx COMIN_ATMOS_ANALYSIS_ENSSTAT=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos
++ JGLOBAL_ENKF_ARCHIVE_TARS[25] 1s: declare -rx COMIN_ATMOS_HISTORY_ENSSTAT=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history
++ JGLOBAL_ENKF_ARCHIVE_TARS[26] 1s: declare -rx COMIN_ICE_ANALYSIS_ENSSTAT=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/ice
++ JGLOBAL_ENKF_ARCHIVE_TARS[27] 1s: declare -rx COMIN_OCEAN_ANALYSIS_ENSSTAT=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/ocean
++ JGLOBAL_ENKF_ARCHIVE_TARS[28] 1s: declare -rx COMIN_SNOW_ANALYSIS_ENSSTAT=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow
++ JGLOBAL_ENKF_ARCHIVE_TARS[29] 1s: declare -rx COMIN_CONF=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/conf
++ JGLOBAL_ENKF_ARCHIVE_TARS[31] 1s: declare -rx COMIN_ATMOS_HISTORY=/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/gdas.20220515/12/model/atmos/history
++ JGLOBAL_ENKF_ARCHIVE_TARS[33] 1s: mkdir -p /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/conf
++ JGLOBAL_ENKF_ARCHIVE_TARS[40] 1s: export -n SHELLOPTS
++ JGLOBAL_ENKF_ARCHIVE_TARS[41] 1s: source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/unset_strict.sh
+++ unset_strict.sh[8] 1s: set +eu
+++ unset_strict.sh[9] 1s: set +o pipefail
++ JGLOBAL_ENKF_ARCHIVE_TARS[42] 1s: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/scripts/exglobal_enkf_earc_tars.py
+2026-10-07 15:56:44,799 - INFO     - root        : BEGIN: __main__.main: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/scripts/exglobal_enkf_earc_tars.py
+2026-10-07 15:56:44,799 - DEBUG    - root        : (  )
+2026-10-07 15:56:44,814 - DEBUG    - task        : current cycle: 2022-05-15 12:00:00
+2026-10-07 15:56:44,814 - DEBUG    - task        : previous cycle: 2022-05-15 06:00:00
+2026-10-07 15:56:44,815 - INFO     - archive_tar_vars: Collected 115 archive tar variables
+2026-10-07 15:56:44,815 - DEBUG    - archive_tar_vars: Archive variables: ['ATARDIR', 'current_cycle', 'RUN', 'PDY', 'PSLOT', 'NET', 'MODE', 'PARMglobal', 'ROTDIR', 'SDATE', 'DO_ARCHCOM', 'ARCHCOM_TO', 'ARCDIR', 'DOHYBVAR', 'DOIAU', 'DO_CA', 'assim_freq', 'IAUFHRS', 'DO_JEDISNOWDA', 'DO_GSISOILDA', 'DO_LAND_IAU', 'DOHYBVAR_OCN', 'DOLETKF_OCN', 'DOLETKF_OCN_INC', 'NMEM_ENS', 'ARCH_MARINE_ENS', 'DO_OCN', 'ARCH_CYC', 'ARCH_WARMICFREQ', 'ARCH_FCSTICFREQ', 'ENSGRP', 'NMEM_EARCGRP', 'NMEM_ENS_GFS', 'DO_CALC_INCREMENT_ENKF_GFS', 'DO_JEDIATMENS', 'DO_JEDIATMENS_SPLIT_OBSSOL', 'DO_CALC_INCREMENT', 'DOENKFONLY_ATM', 'FHMIN_ENKF', 'FHMAX_ENKF_GFS', 'FHOUT_ENKF_GFS', 'FHMAX_ENKF', 'FHOUT_ENKF', 'ENKF_SPREAD', 'DOIAU_ENKF', 'IAU_OFFSET', 'IAUFHRS_ENKF', 'restart_interval_enkfgdas', 'restart_interval_enkfgfs', 'COM_SNOW_ANALYSIS_TMPL', 'COM_ATMOS_RADMON_TMPL', 'COM_ICE_GRIB_TMPL', 'COM_RTOFS_TMPL', 'COM_ATMOS_GRIB_GRID_TMPL', 'COM_ICE_RESTART_TMPL', 'COM_ICE_ANLMON_TMPL', 'COM_SNOW_ANLMON_TMPL', 'COM_ICE_NETCDF_TMPL', 'COM_ATMOS_GRIB_TMPL', 'COMIN_ATMOS_HISTORY_ENSSTAT', 'COM_WAVE_RESTART_TMPL', 'COM_ATMOS_RESTART_TMPL', 'COM_ATMOS_BUFR_TMPL', 'COM_CHEM_HISTORY_TMPL', 'COM_OBSPROC_TMPL', 'COM_WAVE_GEMPAK_TMPL', 'COMIN_CONF', 'COM_ICE_ANALYSIS_TMPL', 'COMIN_SNOW_ANALYSIS_ENSSTAT', 'COM_ATMOS_ANLMON_TMPL', 'COM_CHEM_BMAT_TMPL', 'COM_WAVE_HISTORY_TMPL', 'COM_CHEM_INPUT_TMPL', 'COM_CHEM_RESTART_TMPL', 'COM_OBS_TMPL', 'COM_ATMOS_ANALYSIS_TMPL', 'COM_WAVE_WMO_TMPL', 'COM_ATMOS_MASTER_TMPL', 'COM_ICE_HISTORY_TMPL', 'COM_OCEAN_RESTART_TMPL', 'COM_ICE_BMATRIX_TMPL', 'COM_ATMOS_GEMPAK_TMPL', 'COM_TOP_TMPL', 'COM_OCEAN_NETCDF_TMPL', 'COM_CHEM_ANALYSIS_TMPL', 'COM_WAVE_INIT_TMPL', 'COMIN_ICE_ANALYSIS_ENSSTAT', 'COM_WAVE_GRID_RES_TMPL', 'COM_OCEAN_ANALYSIS_TMPL', 'COM_ATMOS_HISTORY_TMPL', 'COM_OCEAN_BMATRIX_TMPL', 'COM_ATMOS_GOES_TMPL', 'COM_ATMOS_MINMON_TMPL', 'COM_ATMOS_IMAGERY_TMPL', 'COMIN_OCEAN_ANALYSIS_ENSSTAT', 'COM_ICE_INPUT_TMPL', 'COM_OBSFORGE_TMPL', 'COM_OCEAN_GRIB_GRID_TMPL', 'COM_WAVE_GRID_TMPL', 'COM_OCEAN_INPUT_TMPL', 'COM_ICE_GRIB_GRID_TMPL', 'COM_ATMOS_INPUT_TMPL', 'COM_MED_RESTART_TMPL', 'COM_ATMOS_OZNMON_TMPL', 'COM_ATMOS_WMO_TMPL', 'COMIN_ATMOS_HISTORY', 'COM_OCEAN_GRIB_TMPL', 'COM_OCEAN_ANLMON_TMPL', 'COM_CHEM_ANLMON_TMPL', 'COM_ATMOS_GENESIS_TMPL', 'COMIN_ATMOS_ANALYSIS_ENSSTAT', 'COM_WAVE_STATION_TMPL', 'COM_CONF_TMPL', 'COM_ATMOS_TRACK_TMPL', 'COM_OCEAN_HISTORY_TMPL']
+2026-10-07 15:56:44,815 - DEBUG    - archive_tar_vars: Calculated 3 restart prefixes (interval=3H, FHMAX=9H)
+2026-10-07 15:56:44,815 - DEBUG    - archive_tar_vars: Restart prefixes: ['20220515.150000', '20220515.180000', '20220515.210000']
+2026-10-07 15:56:44,815 - DEBUG    - archive_tar_vars: EnKF variables: ['anl_YMD', 'anl_HH', 'fhout', 'fhmin', 'fhmax', 'do_calc_increment', 'nmem_ens', 'restart_interval', 'is_gdas', 'is_gfs', 'enkf_epos_ngrps', 'restart_prefixes', 'archive_increments', 'archive_ics', 'save_warm_start_forecast', 'save_warm_start_cycled']
+2026-10-07 15:56:44,816 - DEBUG    - archive_tar_vars: Cycle variables: ['cycle_HH', 'cycle_YMDH', 'cycle_YMD', 'cycle_fv3time', 'assim_freq', 'iaufhrs_str', 'anl_YMD', 'anl_HH', 'fhout', 'fhmin', 'fhmax', 'do_calc_increment', 'nmem_ens', 'restart_interval', 'is_gdas', 'is_gfs', 'enkf_epos_ngrps', 'restart_prefixes', 'archive_increments', 'archive_ics', 'save_warm_start_forecast', 'save_warm_start_cycled']
+2026-10-07 15:56:44,816 - DEBUG    - archive_tar_vars: Extracted COMIN_ATMOS_HISTORY: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/gdas.20220515/12/model/atmos/history
+2026-10-07 15:56:44,816 - DEBUG    - archive_tar_vars: Extracted COMIN_ATMOS_HISTORY_ENSSTAT: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history
+2026-10-07 15:56:44,816 - DEBUG    - archive_tar_vars: Extracted COMIN_ATMOS_ANALYSIS_ENSSTAT: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos
+2026-10-07 15:56:44,816 - DEBUG    - archive_tar_vars: Extracted COMIN_SNOW_ANALYSIS_ENSSTAT: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow
+2026-10-07 15:56:44,816 - DEBUG    - archive_tar_vars: Extracted COMIN_OCEAN_ANALYSIS_ENSSTAT: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/ocean
+2026-10-07 15:56:44,816 - DEBUG    - archive_tar_vars: Extracted COMIN_ICE_ANALYSIS_ENSSTAT: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/ice
+2026-10-07 15:56:44,816 - DEBUG    - archive_tar_vars: Extracted COMIN_CONF: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/conf
+2026-10-07 15:56:44,816 - INFO     - archive_tar_vars: Extracted 7 absolute ensemble statistics COM paths (will convert to relative after YAML rendering)
+2026-10-07 15:56:44,816 - DEBUG    - archive_tar_vars: Ensemble COM paths: {'COMIN_ATMOS_HISTORY': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/gdas.20220515/12/model/atmos/history', 'COMIN_ATMOS_HISTORY_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history', 'COMIN_ATMOS_ANALYSIS_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos', 'COMIN_SNOW_ANALYSIS_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow', 'COMIN_OCEAN_ANALYSIS_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/ocean', 'COMIN_ICE_ANALYSIS_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/ice', 'COMIN_CONF': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/conf'}
+2026-10-07 15:56:44,816 - INFO     - archive_tar_vars: Collected 136 variables for YAML templates
+2026-10-07 15:56:44,816 - DEBUG    - archive_tar_vars: arch_dict keys: ['ATARDIR', 'current_cycle', 'RUN', 'PDY', 'PSLOT', 'NET', 'MODE', 'PARMglobal', 'ROTDIR', 'SDATE', 'DO_ARCHCOM', 'ARCHCOM_TO', 'ARCDIR', 'DOHYBVAR', 'DOIAU', 'DO_CA', 'assim_freq', 'IAUFHRS', 'DO_JEDISNOWDA', 'DO_GSISOILDA', 'DO_LAND_IAU', 'DOHYBVAR_OCN', 'DOLETKF_OCN', 'DOLETKF_OCN_INC', 'NMEM_ENS', 'ARCH_MARINE_ENS', 'DO_OCN', 'ARCH_CYC', 'ARCH_WARMICFREQ', 'ARCH_FCSTICFREQ', 'ENSGRP', 'NMEM_EARCGRP', 'NMEM_ENS_GFS', 'DO_CALC_INCREMENT_ENKF_GFS', 'DO_JEDIATMENS', 'DO_JEDIATMENS_SPLIT_OBSSOL', 'DO_CALC_INCREMENT', 'DOENKFONLY_ATM', 'FHMIN_ENKF', 'FHMAX_ENKF_GFS', 'FHOUT_ENKF_GFS', 'FHMAX_ENKF', 'FHOUT_ENKF', 'ENKF_SPREAD', 'DOIAU_ENKF', 'IAU_OFFSET', 'IAUFHRS_ENKF', 'restart_interval_enkfgdas', 'restart_interval_enkfgfs', 'COM_SNOW_ANALYSIS_TMPL', 'COM_ATMOS_RADMON_TMPL', 'COM_ICE_GRIB_TMPL', 'COM_RTOFS_TMPL', 'COM_ATMOS_GRIB_GRID_TMPL', 'COM_ICE_RESTART_TMPL', 'COM_ICE_ANLMON_TMPL', 'COM_SNOW_ANLMON_TMPL', 'COM_ICE_NETCDF_TMPL', 'COM_ATMOS_GRIB_TMPL', 'COMIN_ATMOS_HISTORY_ENSSTAT', 'COM_WAVE_RESTART_TMPL', 'COM_ATMOS_RESTART_TMPL', 'COM_ATMOS_BUFR_TMPL', 'COM_CHEM_HISTORY_TMPL', 'COM_OBSPROC_TMPL', 'COM_WAVE_GEMPAK_TMPL', 'COMIN_CONF', 'COM_ICE_ANALYSIS_TMPL', 'COMIN_SNOW_ANALYSIS_ENSSTAT', 'COM_ATMOS_ANLMON_TMPL', 'COM_CHEM_BMAT_TMPL', 'COM_WAVE_HISTORY_TMPL', 'COM_CHEM_INPUT_TMPL', 'COM_CHEM_RESTART_TMPL', 'COM_OBS_TMPL', 'COM_ATMOS_ANALYSIS_TMPL', 'COM_WAVE_WMO_TMPL', 'COM_ATMOS_MASTER_TMPL', 'COM_ICE_HISTORY_TMPL', 'COM_OCEAN_RESTART_TMPL', 'COM_ICE_BMATRIX_TMPL', 'COM_ATMOS_GEMPAK_TMPL', 'COM_TOP_TMPL', 'COM_OCEAN_NETCDF_TMPL', 'COM_CHEM_ANALYSIS_TMPL', 'COM_WAVE_INIT_TMPL', 'COMIN_ICE_ANALYSIS_ENSSTAT', 'COM_WAVE_GRID_RES_TMPL', 'COM_OCEAN_ANALYSIS_TMPL', 'COM_ATMOS_HISTORY_TMPL', 'COM_OCEAN_BMATRIX_TMPL', 'COM_ATMOS_GOES_TMPL', 'COM_ATMOS_MINMON_TMPL', 'COM_ATMOS_IMAGERY_TMPL', 'COMIN_OCEAN_ANALYSIS_ENSSTAT', 'COM_ICE_INPUT_TMPL', 'COM_OBSFORGE_TMPL', 'COM_OCEAN_GRIB_GRID_TMPL', 'COM_WAVE_GRID_TMPL', 'COM_OCEAN_INPUT_TMPL', 'COM_ICE_GRIB_GRID_TMPL', 'COM_ATMOS_INPUT_TMPL', 'COM_MED_RESTART_TMPL', 'COM_ATMOS_OZNMON_TMPL', 'COM_ATMOS_WMO_TMPL', 'COMIN_ATMOS_HISTORY', 'COM_OCEAN_GRIB_TMPL', 'COM_OCEAN_ANLMON_TMPL', 'COM_CHEM_ANLMON_TMPL', 'COM_ATMOS_GENESIS_TMPL', 'COMIN_ATMOS_ANALYSIS_ENSSTAT', 'COM_WAVE_STATION_TMPL', 'COM_CONF_TMPL', 'COM_ATMOS_TRACK_TMPL', 'COM_OCEAN_HISTORY_TMPL', 'cycle_HH', 'cycle_YMDH', 'cycle_YMD', 'cycle_fv3time', 'iaufhrs_str', 'anl_YMD', 'anl_HH', 'fhout', 'fhmin', 'fhmax', 'do_calc_increment', 'nmem_ens', 'restart_interval', 'is_gdas', 'is_gfs', 'enkf_epos_ngrps', 'restart_prefixes', 'archive_increments', 'archive_ics', 'save_warm_start_forecast', 'save_warm_start_cycled']
+2026-10-07 15:56:44,816 - INFO     - archive     : BEGIN: pygfs.task.archive.configure_tars: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:44,817 - DEBUG    - archive     : ( Archive object, {'ATARDIR': '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053', 'current_cycle': datetime.datetime(2022, 5, 15, 12, 0), 'RUN': 'enkfgdas', 'PDY': datetime.datetime(2022, 5, 15, 0, 0), 'PSLOT': 'C96C48_hybatmsoilDA_b9bff5d6-114053', 'NET': 'gfs', 'MODE': 'cycled', 'PARMglobal': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/parm', 'ROTDIR': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053', 'SDATE': datetime.datetime(2022, 5, 15, 6, 0), 'DO_ARCHCOM': True, 'ARCHCOM_TO': 'hpss', 'ARCDIR': '/gpfs/f6/drsa-precip4/world-shared/role.glopara/archive/C96C48_hybatmsoilDA_b9bff5d6-114053', 'DOHYBVAR': True, 'DOIAU': True, 'DO_CA': True, 'assim_freq': '6', 'IAUFHRS': [3, 6, 9], 'DO_JEDISNOWDA': True, 'DO_GSISOILDA': True, 'DO_LAND_IAU': True, 'DOHYBVAR_OCN': False, 'DOLETKF_OCN': False, 'DOLETKF_OCN_INC': False, 'NMEM_ENS': 2, 'ARCH_MARINE_ENS': False, 'DO_OCN': False, 'ARCH_CYC': 0, 'ARCH_WARMICFREQ': 4, 'ARCH_FCSTICFREQ': 1, 'ENSGRP': 0, 'NMEM_EARCGRP': 80, 'NMEM_ENS_GFS': 30, 'DO_CALC_INCREMENT_ENKF_GFS': False, 'DO_JEDIATMENS': False, 'DO_JEDIATMENS_SPLIT_OBSSOL': True, 'DO_CALC_INCREMENT': False, 'DOENKFONLY_ATM': False, 'FHMIN_ENKF': 3, 'FHMAX_ENKF_GFS': 12, 'FHOUT_ENKF_GFS': 3, 'FHMAX_ENKF': 9, 'FHOUT_ENKF': 1, 'ENKF_SPREAD': True, 'DOIAU_ENKF': True, 'IAU_OFFSET': 6, 'IAUFHRS_ENKF': [3, 6, 9], 'restart_interval_enkfgdas': 3, 'restart_interval_enkfgfs': 3, 'COM_SNOW_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow', 'COM_ATMOS_RADMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon', 'COM_ICE_GRIB_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2', 'COM_RTOFS_TMPL': '${DMPDIR}', 'COM_ATMOS_GRIB_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}', 'COM_ICE_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart', 'COM_ICE_ANLMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/anlmon', 'COM_SNOW_ANLMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/snow/anlmon', 'COM_ICE_NETCDF_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf', 'COM_ATMOS_GRIB_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2', 'COMIN_ATMOS_HISTORY_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history', 'COM_WAVE_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart', 'COM_ATMOS_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart', 'COM_ATMOS_BUFR_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr', 'COM_CHEM_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history', 'COM_OBSPROC_TMPL': '${DMPDIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}/atmos', 'COM_WAVE_GEMPAK_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak', 'COMIN_CONF': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/conf', 'COM_ICE_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice', 'COMIN_SNOW_ANALYSIS_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow', 'COM_ATMOS_ANLMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/anlmon', 'COM_CHEM_BMAT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix', 'COM_WAVE_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history', 'COM_CHEM_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/input', 'COM_CHEM_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/restart', 'COM_OBS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/obs', 'COM_ATMOS_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos', 'COM_WAVE_WMO_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo', 'COM_ATMOS_MASTER_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master', 'COM_ICE_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history', 'COM_OCEAN_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart', 'COM_ICE_BMATRIX_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice', 'COM_ATMOS_GEMPAK_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}', 'COM_TOP_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}', 'COM_OCEAN_NETCDF_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf', 'COM_CHEM_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem', 'COM_WAVE_INIT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/init', 'COMIN_ICE_ANALYSIS_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/ice', 'COM_WAVE_GRID_RES_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}', 'COM_OCEAN_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean', 'COM_ATMOS_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history', 'COM_OCEAN_BMATRIX_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean', 'COM_ATMOS_GOES_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim', 'COM_ATMOS_MINMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon', 'COM_ATMOS_IMAGERY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery', 'COMIN_OCEAN_ANALYSIS_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/ocean', 'COM_ICE_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input', 'COM_OBSFORGE_TMPL': '${IODADIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}', 'COM_OCEAN_GRIB_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}', 'COM_WAVE_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded', 'COM_OCEAN_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input', 'COM_ICE_GRIB_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}', 'COM_ATMOS_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input', 'COM_MED_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart', 'COM_ATMOS_OZNMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon', 'COM_ATMOS_WMO_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo', 'COMIN_ATMOS_HISTORY': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/gdas.20220515/12/model/atmos/history', 'COM_OCEAN_GRIB_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2', 'COM_OCEAN_ANLMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/anlmon', 'COM_CHEM_ANLMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/chem/anlmon', 'COM_ATMOS_GENESIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital', 'COMIN_ATMOS_ANALYSIS_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos', 'COM_WAVE_STATION_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station', 'COM_CONF_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf', 'COM_ATMOS_TRACK_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks', 'COM_OCEAN_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history', 'cycle_HH': '12', 'cycle_YMDH': '2022051512', 'cycle_YMD': '20220515', 'cycle_fv3time': '20220515.120000', 'iaufhrs_str': ['003', '006', '009'], 'anl_YMD': '20220515', 'anl_HH': '09', 'fhout': 1, 'fhmin': 3, 'fhmax': 9, 'do_calc_increment': False, 'nmem_ens': 2, 'restart_interval': 3, 'is_gdas': True, 'is_gfs': False, 'enkf_epos_ngrps': 7, 'restart_prefixes': ['20220515.150000', '20220515.180000', '20220515.210000'], 'archive_increments': False, 'archive_ics': False, 'save_warm_start_forecast': False, 'save_warm_start_cycled': False} )
+2026-10-07 15:56:44,883 - INFO     - archive     : BEGIN: pygfs.task.archive._process_additional_datasets: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:44,883 - DEBUG    - archive     : ( Archive object, {'ATARDIR': '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053', 'current_cycle': datetime.datetime(2022, 5, 15, 12, 0), 'RUN': 'enkfgdas', 'PDY': datetime.datetime(2022, 5, 15, 0, 0), 'PSLOT': 'C96C48_hybatmsoilDA_b9bff5d6-114053', 'NET': 'gfs', 'MODE': 'cycled', 'PARMglobal': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/parm', 'ROTDIR': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053', 'SDATE': datetime.datetime(2022, 5, 15, 6, 0), 'DO_ARCHCOM': True, 'ARCHCOM_TO': 'hpss', 'ARCDIR': '/gpfs/f6/drsa-precip4/world-shared/role.glopara/archive/C96C48_hybatmsoilDA_b9bff5d6-114053', 'DOHYBVAR': True, 'DOIAU': True, 'DO_CA': True, 'assim_freq': '6', 'IAUFHRS': [3, 6, 9], 'DO_JEDISNOWDA': True, 'DO_GSISOILDA': True, 'DO_LAND_IAU': True, 'DOHYBVAR_OCN': False, 'DOLETKF_OCN': False, 'DOLETKF_OCN_INC': False, 'NMEM_ENS': 2, 'ARCH_MARINE_ENS': False, 'DO_OCN': False, 'ARCH_CYC': 0, 'ARCH_WARMICFREQ': 4, 'ARCH_FCSTICFREQ': 1, 'ENSGRP': 0, 'NMEM_EARCGRP': 80, 'NMEM_ENS_GFS': 30, 'DO_CALC_INCREMENT_ENKF_GFS': False, 'DO_JEDIATMENS': False, 'DO_JEDIATMENS_SPLIT_OBSSOL': True, 'DO_CALC_INCREMENT': False, 'DOENKFONLY_ATM': False, 'FHMIN_ENKF': 3, 'FHMAX_ENKF_GFS': 12, 'FHOUT_ENKF_GFS': 3, 'FHMAX_ENKF': 9, 'FHOUT_ENKF': 1, 'ENKF_SPREAD': True, 'DOIAU_ENKF': True, 'IAU_OFFSET': 6, 'IAUFHRS_ENKF': [3, 6, 9], 'restart_interval_enkfgdas': 3, 'restart_interval_enkfgfs': 3, 'COM_SNOW_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/snow', 'COM_ATMOS_RADMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/radmon', 'COM_ICE_GRIB_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2', 'COM_RTOFS_TMPL': '${DMPDIR}', 'COM_ATMOS_GRIB_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2/${GRID}', 'COM_ICE_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/restart', 'COM_ICE_ANLMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/anlmon', 'COM_SNOW_ANLMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/snow/anlmon', 'COM_ICE_NETCDF_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/netcdf', 'COM_ATMOS_GRIB_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/grib2', 'COMIN_ATMOS_HISTORY_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history', 'COM_WAVE_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/restart', 'COM_ATMOS_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/restart', 'COM_ATMOS_BUFR_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/bufr', 'COM_CHEM_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/history', 'COM_OBSPROC_TMPL': '${DMPDIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}/atmos', 'COM_WAVE_GEMPAK_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gempak', 'COMIN_CONF': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/conf', 'COM_ICE_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ice', 'COMIN_SNOW_ANALYSIS_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow', 'COM_ATMOS_ANLMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/anlmon', 'COM_CHEM_BMAT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem/bmatrix', 'COM_WAVE_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/history', 'COM_CHEM_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/input', 'COM_CHEM_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/chem/restart', 'COM_OBS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/obs', 'COM_ATMOS_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/atmos', 'COM_WAVE_WMO_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/wmo', 'COM_ATMOS_MASTER_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/master', 'COM_ICE_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/history', 'COM_OCEAN_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/restart', 'COM_ICE_BMATRIX_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ice', 'COM_ATMOS_GEMPAK_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/gempak/${GRID}', 'COM_TOP_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}', 'COM_OCEAN_NETCDF_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/netcdf', 'COM_CHEM_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/chem', 'COM_WAVE_INIT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/wave/init', 'COMIN_ICE_ANALYSIS_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/ice', 'COM_WAVE_GRID_RES_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded/${GRDRESNAME}', 'COM_OCEAN_ANALYSIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/analysis/ocean', 'COM_ATMOS_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/history', 'COM_OCEAN_BMATRIX_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/bmatrix/ocean', 'COM_ATMOS_GOES_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/goes_sim', 'COM_ATMOS_MINMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/minmon', 'COM_ATMOS_IMAGERY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/imagery', 'COMIN_OCEAN_ANALYSIS_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/ocean', 'COM_ICE_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ice/input', 'COM_OBSFORGE_TMPL': '${IODADIR}/${RUN}${DUMP_SUFFIX}.${YMD}/${HH}', 'COM_OCEAN_GRIB_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2/${GRID}', 'COM_WAVE_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/gridded', 'COM_OCEAN_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/input', 'COM_ICE_GRIB_GRID_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ice/grib2/${GRID}', 'COM_ATMOS_INPUT_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/atmos/input', 'COM_MED_RESTART_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/med/restart', 'COM_ATMOS_OZNMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/oznmon', 'COM_ATMOS_WMO_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/wmo', 'COMIN_ATMOS_HISTORY': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/gdas.20220515/12/model/atmos/history', 'COM_OCEAN_GRIB_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/grib2', 'COM_OCEAN_ANLMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/ocean/anlmon', 'COM_CHEM_ANLMON_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/chem/anlmon', 'COM_ATMOS_GENESIS_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/genesis_vital', 'COMIN_ATMOS_ANALYSIS_ENSSTAT': '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos', 'COM_WAVE_STATION_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/wave/station', 'COM_CONF_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/conf', 'COM_ATMOS_TRACK_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/products/atmos/cyclone/tracks', 'COM_OCEAN_HISTORY_TMPL': '${ROTDIR}/${RUN}.${YMD}/${HH}/${MEMDIR}/model/ocean/history', 'cycle_HH': '12', 'cycle_YMDH': '2022051512', 'cycle_YMD': '20220515', 'cycle_fv3time': '20220515.120000', 'iaufhrs_str': ['003', '006', '009'], 'anl_YMD': '20220515', 'anl_HH': '09', 'fhout': 1, 'fhmin': 3, 'fhmax': 9, 'do_calc_increment': False, 'nmem_ens': 2, 'restart_interval': 3, 'is_gdas': True, 'is_gfs': False, 'enkf_epos_ngrps': 7, 'restart_prefixes': ['20220515.150000', '20220515.180000', '20220515.210000'], 'archive_increments': False, 'archive_ics': False, 'save_warm_start_forecast': False, 'save_warm_start_cycled': False, 'TARBALL_TYPE': None, 'glob': <function glob at 0x1514e24c94e0>, 'path_exists': <function exists at 0x1514e2cec360>, 'archive_expdir': False}, {'datasets': {'enkf': {'name': 'ENKF', 'target': '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar', 'required': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc'], 'optional': ['enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar']}}} )
+2026-10-07 15:56:44,884 - INFO     - archive     : BEGIN: pygfs.task.archive._convert_dataset_paths_to_relative: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:44,884 - DEBUG    - archive     : ( {'name': 'ENKF', 'target': '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar', 'required': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc'], 'optional': ['enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar']}, '/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053' )
+2026-10-07 15:56:44,884 - DEBUG    - archive     : Converted dataset 'ENKF' paths to relative
+2026-10-07 15:56:44,884 - INFO     - archive     :   END: pygfs.task.archive._convert_dataset_paths_to_relative: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:44,884 - DEBUG    - archive     :  returning: {'name': 'ENKF', 'target': '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar', 'required': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc'], 'optional': ['enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar']}
+2026-10-07 15:56:44,884 - INFO     - archive     : BEGIN: pygfs.task.archive._create_fileset: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:44,884 - DEBUG    - archive     : ( {'name': 'ENKF', 'target': '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar', 'required': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc'], 'optional': ['enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar']} )
+2026-10-07 15:56:44,919 - INFO     - archive     :   END: pygfs.task.archive._create_fileset: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:44,919 - DEBUG    - archive     :  returning: ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar']
+2026-10-07 15:56:44,919 - INFO     - archive     : BEGIN: pygfs.task.archive._has_rstprod: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:44,919 - DEBUG    - archive     : ( ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar'] )
+2026-10-07 15:56:44,926 - INFO     - archive     :   END: pygfs.task.archive._has_rstprod: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:44,926 - DEBUG    - archive     :  returning: True
+2026-10-07 15:56:44,926 - INFO     - archive     :   END: pygfs.task.archive._process_additional_datasets: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:44,927 - DEBUG    - archive     :  returning: [{'name': 'ENKF', 'target': '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar', 'required': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc'], 'optional': ['enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar'], 'fileset': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar'], 'has_rstprod': True}]
+2026-10-07 15:56:44,927 - INFO     - archive     : BEGIN: pygfs.task.archive._create_datasets_yaml: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:44,927 - DEBUG    - archive     : ( Archive object, [{'name': 'ENKF', 'target': '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar', 'required': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc'], 'optional': ['enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar'], 'fileset': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar'], 'has_rstprod': True}], 0 )
+2026-10-07 15:56:44,927 - DEBUG    - archive     : Writing the dataset YAML to /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/RUNTESTS/COMROOT/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.20220515/12/ensstat/conf/backup_tarballs_group0.yaml
+2026-10-07 15:56:44,927 - DEBUG    - archive     : YAML contents: 
+{'ENKF': {'target': '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar', 'has_rstprod': True}}
+2026-10-07 15:56:44,931 - INFO     - archive     :   END: pygfs.task.archive._create_datasets_yaml: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:44,931 - DEBUG    - archive     :  returning: None
+2026-10-07 15:56:44,931 - INFO     - archive     :   END: pygfs.task.archive.configure_tars: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:44,932 - DEBUG    - archive     :  returning: [{'name': 'ENKF', 'target': '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar', 'required': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc'], 'optional': ['enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar'], 'fileset': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar'], 'has_rstprod': True}]
+2026-10-07 15:56:44,932 - INFO     - archive     : BEGIN: pygfs.task.archive.execute_backup_dataset: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:44,932 - DEBUG    - archive     : ( Archive object, {'name': 'ENKF', 'target': '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar', 'required': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc'], 'optional': ['enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar'], 'fileset': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar'], 'has_rstprod': True} )
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+Using dtn08.ncrc.gov for data hostname
+HTAR: a   logs/2022051512/enkfgdas_fcst_mem001.log
+HTAR: a   logs/2022051512/enkfgdas_fcst_mem002.log
+HTAR: a   logs/2022051512/enkfgdas_epos000.log
+HTAR: a   logs/2022051512/enkfgdas_epos001.log
+HTAR: a   logs/2022051512/enkfgdas_epos002.log
+HTAR: a   logs/2022051512/enkfgdas_epos003.log
+HTAR: a   logs/2022051512/enkfgdas_epos004.log
+HTAR: a   logs/2022051512/enkfgdas_epos005.log
+HTAR: a   logs/2022051512/enkfgdas_epos006.log
+HTAR: a   logs/2022051512/enkfgdas_echgres.log
+HTAR: a   logs/2022051512/enkfgdas_esfc_regrid.log
+HTAR: a   logs/2022051512/enkfgdas_esfc_gcycle.log
+HTAR: a   logs/2022051512/enkfgdas_ecen000.log
+HTAR: a   logs/2022051512/enkfgdas_ecen001.log
+HTAR: a   logs/2022051512/enkfgdas_ecen002.log
+HTAR: a   logs/2022051512/enkfgdas_eobs.log
+HTAR: a   logs/2022051512/enkfgdas_ediag.log
+HTAR: a   logs/2022051512/enkfgdas_eupd.log
+HTAR: a   gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc
+HTAR: a   gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc
+HTAR: a   gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc
+HTAR: a   enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar
+HTAR: a   /tmp/HTAR_CF_CHK_241391_1791403005
+HTAR Create complete for /NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar. 5500283392 bytes written for 48 member files, max threads: 4 Transfer time: 11.948 seconds (460.335 MB/s) wallclock/user/sys: 12.484 1.744 6.620 seconds
+HTAR: HTAR SUCCESSFUL
+2026-10-07 15:56:58,412 - INFO     - archive     : BEGIN: pygfs.task.archive._protect_rstprod: /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py
+2026-10-07 15:56:58,412 - DEBUG    - archive     : ( Archive object, {'name': 'ENKF', 'target': '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar', 'required': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc'], 'optional': ['enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar'], 'fileset': ['logs/2022051512/enkfgdas_fcst_mem001.log', 'logs/2022051512/enkfgdas_fcst_mem002.log', 'logs/2022051512/enkfgdas_epos000.log', 'logs/2022051512/enkfgdas_epos001.log', 'logs/2022051512/enkfgdas_epos002.log', 'logs/2022051512/enkfgdas_epos003.log', 'logs/2022051512/enkfgdas_epos004.log', 'logs/2022051512/enkfgdas_epos005.log', 'logs/2022051512/enkfgdas_epos006.log', 'logs/2022051512/enkfgdas_echgres.log', 'logs/2022051512/enkfgdas_esfc_regrid.log', 'logs/2022051512/enkfgdas_esfc_gcycle.log', 'logs/2022051512/enkfgdas_ecen000.log', 'logs/2022051512/enkfgdas_ecen001.log', 'logs/2022051512/enkfgdas_ecen002.log', 'logs/2022051512/enkfgdas_eobs.log', 'logs/2022051512/enkfgdas_ediag.log', 'logs/2022051512/enkfgdas_eupd.log', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f003.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f006.nc', 'gdas.20220515/12/model/atmos/history/gdas.t12z.ensres.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f003.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f006.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensmean.sfc.f009.nc', 'enkfgdas.20220515/12/ensstat/model/atmos/history/enkfgdas.t12z.ensspread.atm.f009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.enkfstat.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.gsistat_ensmean.txt', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.cnvstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.radstat_ensmean.tar', 'enkfgdas.20220515/12/ensstat/analysis/snow/enkfgdas.t12z.snow_analysis.ioda_hofx.ensmean.tar.gz', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile1.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile2.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile3.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile4.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile5.nc', 'enkfgdas.20220515/12/ensstat/analysis/snow/20220515.120000.snow_increment.sfc_data.tile6.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.sfc.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i003.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i006.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.ensmean_increment.atm.i009.nc', 'enkfgdas.20220515/12/ensstat/analysis/atmos/enkfgdas.t12z.oznstat_ensmean.tar'], 'has_rstprod': True} )
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+/usw/hpss/9.3/bin/hsi_9.3-GAEA-RHEL9: symbol lookup error: /usw/hpss/9.3/bin/hsi_9.3-GAEA-RHEL9: undefined symbol: stdscr
+###WARNING  hsi returned non-zero exit status.
+            127 = /usw/hpss/9.3/bin/hsi_9.3-GAEA-RHEL9 -q -e -q -e chgrp rstprod /NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+/usw/hpss/9.3/bin/hsi_9.3-GAEA-RHEL9: symbol lookup error: /usw/hpss/9.3/bin/hsi_9.3-GAEA-RHEL9: undefined symbol: stdscr
+###WARNING  hsi returned non-zero exit status.
+            127 = /usw/hpss/9.3/bin/hsi_9.3-GAEA-RHEL9 -q -e -q -e rm /NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar
+Traceback (most recent call last):
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py", line 458, in _protect_rstprod
+    self.chgrp_cmd("rstprod", atardir_set.target)
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/wxflow/hsi.py", line 236, in chgrp
+    output = self._hsi(arg_list)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/wxflow/hsi.py", line 83, in _hsi
+    output = self.exe(*arg_list, output=str.split, error=str.split,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/wxflow/executable.py", line 230, in __call__
+    raise ProcessError(f"Command exited with status {proc.returncode}:", long_msg)
+wxflow.executable.ProcessError: Command exited with status 127:
+'/usw/hpss/9.3/bin/hsi' '-q' '-e' '-q' '-e' 'chgrp' 'rstprod' '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar'
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+/usw/hpss/9.3/bin/hsi_9.3-GAEA-RHEL9: symbol lookup error: /usw/hpss/9.3/bin/hsi_9.3-GAEA-RHEL9: undefined symbol: stdscr
+###WARNING  hsi returned non-zero exit status.
+            127 = /usw/hpss/9.3/bin/hsi_9.3-GAEA-RHEL9 -q -e -q -e chgrp rstprod /NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py", line 466, in _protect_rstprod
+    self.rm_cmd(atardir_set.target)
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/wxflow/hsi.py", line 282, in rm
+    output = self._hsi(arg_list, ignore_errors=[72])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/wxflow/hsi.py", line 83, in _hsi
+    output = self.exe(*arg_list, output=str.split, error=str.split,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/wxflow/executable.py", line 230, in __call__
+    raise ProcessError(f"Command exited with status {proc.returncode}:", long_msg)
+wxflow.executable.ProcessError: Command exited with status 127:
+'/usw/hpss/9.3/bin/hsi' '-q' '-e' '-q' '-e' 'rm' '/NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar'
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+/usw/hpss/9.3/bin/hsi_9.3-GAEA-RHEL9: symbol lookup error: /usw/hpss/9.3/bin/hsi_9.3-GAEA-RHEL9: undefined symbol: stdscr
+###WARNING  hsi returned non-zero exit status.
+            127 = /usw/hpss/9.3/bin/hsi_9.3-GAEA-RHEL9 -q -e -q -e rm /NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/scripts/exglobal_enkf_earc_tars.py", line 42, in <module>
+    main()
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/wxflow/logger.py", line 278, in wrapper
+    retval = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/scripts/exglobal_enkf_earc_tars.py", line 35, in main
+    archive.execute_backup_dataset(atardir_set)
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/wxflow/logger.py", line 278, in wrapper
+    retval = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py", line 370, in execute_backup_dataset
+    self._protect_rstprod(atardir_set)
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/wxflow/logger.py", line 278, in wrapper
+    retval = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/python/pygfs/task/archive.py", line 468, in _protect_rstprod
+    raise RuntimeError(f"FATAL ERROR: Failed to protect {atardir_set.target}!\n"
+RuntimeError: FATAL ERROR: Failed to protect /NCEPDEV/emc-global/1year/role.glopara/GAEAC6/scratch/C96C48_hybatmsoilDA_b9bff5d6-114053/2022051512/enkfgdas.tar!
+Please verify that it has been deleted!!
+++ JGLOBAL_ENKF_ARCHIVE_TARS[42] 16s: echo 'WARNING: command exited with status 1 at line 42 of /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/dev/jobs/JGLOBAL_ENKF_ARCHIVE_TARS'
+WARNING: command exited with status 1 at line 42 of /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/dev/jobs/JGLOBAL_ENKF_ARCHIVE_TARS
++ JGLOBAL_ENKF_ARCHIVE_TARS[43] 16s: export err=1
++ JGLOBAL_ENKF_ARCHIVE_TARS[43] 16s: err=1
++ JGLOBAL_ENKF_ARCHIVE_TARS[44] 16s: source /gpfs/f6/drsa-precip3/world-shared/global/CI/GITLAB/pr_cases_5319_b9bff5d6_114053/global-workflow/ush/set_strict.sh
+++ set_strict.sh[13] 16s: [[ NO == \Y\E\S ]]
+++ set_strict.sh[20] 16s: set -o pipefail
+++ set_strict.sh[22] 16s: trap 'echo "WARNING: command exited with status $? at line ${LINENO} of ${BASH_SOURCE[0]:-${0}}" >&2' ERR
++ JGLOBAL_ENKF_ARCHIVE_TARS[45] 16s: [[ 1 -ne 0 ]]
++ JGLOBAL_ENKF_ARCHIVE_TARS[46] 16s: err_exit 'Failed to archive the ensemble COM structure'
++ err_exit.sh[19] 16s: set +eux
+
+    -------------------------------------------------------------
+    -- FATAL ERROR: Failed to archive the ensemble COM structure, ERROR IN JGLOBAL_ENKF_ARCHIVE_TARS RETURN CODE 1
+    -- ABNORMAL EXIT at Wed Oct  7 03:56:58 PM EDT 2026 on dtn08
+    -------------------------------------------------------------
+    
+
+Currently Loaded Modules:
+  1) craype-x86-genoa                45) python-venv/1.0
+  2) perftools-base/25.03.0          46) py-mpi4py/4.0.1
+  3) xpmem/2.11.5-1.3_g73ade43320bc  47) openblas/0.3.24
+  4) cray-pmi/6.1.15                 48) py-numpy/1.26.4
+  5) CmrsEnv/default                 49) py-pip/23.1.2
+  6) TimeZoneEDT/default             50) esmf/8.8.0
+  7) Core/24.11                      51) antlr/2.7.7
+  8) DefApps                         52) gsl/2.8
+  9) cray-dsmml/0.3.1                53) nco/5.2.4
+ 10) PrgEnv-intel/8.5.0              54) bacio/2.4.1
+ 11) intel-classic/2023.2.0          55) w3emc/2.10.0
+ 12) craype/2.7.30                   56) prod_util/2.1.1
+ 13) stack-intel/2023.2.0            57) g2/3.5.1
+ 14) libfabric/1.22.0                58) ip/5.1.0
+ 15) craype-network-ofi              59) grib-util/1.4.0
+ 16) cray-mpich/8.1.30               60) g2tmpl/1.13.0
+ 17) stack-cray-mpich/8.1.30         61) gsi-ncdiag/1.1.2
+ 18) gettext/0.20.2                  62) crtm-fix/2.4.0.1_emc
+ 19) glibc/2.31                      63) git-lfs/2.11.0
+ 20) zlib/1.2.13                     64) crtm/2.4.0.1
+ 21) sqlite/3.46.0                   65) bufr/12.1.0
+ 22) util-linux-uuid/2.40.2          66) py-f90nml/1.4.3
+ 23) python/3.11.7                   67) py-certifi/2023.7.22
+ 24) stack-python/3.11.7             68) py-cftime/1.0.3.4
+ 25) cmake/3.27.9                    69) py-netcdf4/1.7.1.post2
+ 26) libjpeg/2.1.0                   70) libyaml/0.2.5
+ 27) jasper/2.0.32                   71) py-pyyaml/6.0.2
+ 28) libpng/1.6.37                   72) py-markupsafe/2.1.3
+ 29) openjpeg/2.3.1                  73) py-jinja2/3.1.4
+ 30) eccodes/2.33.0                  74) py-pytz/2023.3
+ 31) fftw/3.3.10                     75) py-tzdata/2023.3
+ 32) nghttp2/1.63.0                  76) py-pandas/2.2.3
+ 33) curl/8.10.1                     77) py-six/1.16.0
+ 34) proj/9.4.1                      78) py-python-dateutil/2.8.2
+ 35) udunits/2.2.28                  79) py-packaging/24.1
+ 36) cdo/2.3.0                       80) py-setuptools/69.2.0
+ 37) hdf5/1.14.3                     81) py-xarray/2024.7.0
+ 38) snappy/1.2.1                    82) gw_run.common
+ 39) zstd/1.5.6                      83) perlbrew/5.38.2
+ 40) c-blosc/1.21.5                  84) prepobs/1.1.3
+ 41) netcdf-c/4.9.2                  85) fit2obs/1.1.10
+ 42) netcdf-fortran/4.6.1            86) hsi/9.3
+ 43) parallel-netcdf/1.12.3          87) gw_run.gaeac6
+ 44) parallelio/2.6.2
+
+ 
+
+
+Failed to archive the ensemble COM structure, ERROR IN JGLOBAL_ENKF_ARCHIVE_TARS RETURN CODE 1
+/gpfs/f6/drsa-precip4/world-shared/role.glopara/RUNDIRS/C96C48_hybatmsoilDA_b9bff5d6-114053/enkfgdas.2022051512/earc_tars.240834
+total 1
+-rw-r--r-- 1 role.glopara drsa-precip4   0 Oct  7 15:56 ncepdate
+-rwxr--r-- 1 role.glopara drsa-precip4 328 Oct  7 15:56 PDY
+cat: OUTPUT.240903: No such file or directory
+[2026-10-07T15:56:59.642] error: *** JOB 75651375 ON dtn08 CANCELLED AT 2026-10-07T15:56:59 DUE to SIGNAL Terminated ***
